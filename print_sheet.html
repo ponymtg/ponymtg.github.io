@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Print sheet</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="third_party/bootstrap-3.3.6-dist/css/bootstrap.css" />
+    </head>
+    <body style="margin:1% 2.5%">
+        <h1>Print sheet</h1>
+        <div class="container-fluid" style="margin:32px 0">
+            <div class="row">
+                <div class="btn-group" role="group">
+                    <button id="generatePrintSheet" class="btn btn-primary" title="Generate a printable sheet containing all listed cards." disabled>
+                        <span class="glyphicon glyphicon-file" style="margin-right:8px"></span>Create print sheet
+                    </button>
+                    <div class="btn-group" role="group">
+                        <button
+                            id="addSetToPrintSheet"
+                            class="btn btn-default dropdown-toggle"
+                            type="button"
+                            data-toggle="dropdown"
+                            title="Add all cards from a particular set to the print sheet."
+                        >
+                            <span class="glyphicon glyphicon-plus" style="margin-right:8px"></span>Add set
+                            <span class="caret"></span>
+                        </button>
+                        <ul id="addSetMenu" class="dropdown-menu">
+                        </ul>
+                    </div>
+                    <button id="clearPrintSheet" class="btn btn-default" title="Remove all cards from the print sheet." disabled>
+                        <span class="glyphicon glyphicon-remove" style="margin-right:8px"></span>Clear print sheet
+                    </button>
+                </div>
+            </div>
+        </div>
+                
+        <div id="printSheetCardList"></div>
+    </body>
+</html>
+<script src="third_party/blueimp/md5.min.js"></script>
+<script src="third_party/jquery/jquery-1.9.1.min.js"></script>
+<script src="third_party/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="data/js/ficg_cards.js"></script>
+<script src="data/js/ipu_cards.js"></script>
+<script src="data/js/cards.js"></script>
+<script src="js/main.js"></script>
+<script src="js/print_sheet.js"></script>

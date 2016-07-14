@@ -1,0 +1,4166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cockatrice_carddatabase version="2">
+    <sets>
+      <set>
+        <name>IPU</name>
+        <longname>Friendship is Magic the Gathering</longname>
+      </set>
+    </sets>
+  
+  
+    <cards>
+
+      <card>
+        <name>Fluttershy</name>
+        <set picURL="http://fc07.deviantart.net/fs70/f/2012/200/0/9/fluttershy_by_sorden-d3k3b0o.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>1GG</manacost>
+        <type>Legendary Creature - Pegasus Pony Druid</type>
+        <pt>0/3</pt>
+        <tablerow>2</tablerow>
+        <text>Reach
+Whenever a Critter enters the battlefield under your control or you gain control of a Critter, put a +1/+1 counter on Fluttershy.
+{T}: Put a 0/1 green Critter creature token onto the battlefield.
+{1BB}: Transform Fluttershy unless a player who controls a Critter has you choose and gain control of a Critter he or she controls.
+</text>
+      </card>
+
+      <card>
+        <name>Fluttershy Scorned</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/200/a/7/fluttershy_scorned_by_sorden-d57vas6.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <manacost></manacost>
+        <type>Legendary Creature - Pegasus Pony Druid</type>
+        <pt>3/0</pt>
+        <tablerow>2</tablerow>
+        <text>Trample, reach
+At end of combat, if a creature dealt damage by Fluttershy Scorned this turn died, transform Fluttershy Scorned.
+</text>
+      </card>
+
+      <card>
+        <name>Pinkie Pie</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/200/e/f/pinkie_pie_by_sorden-d3k3ns4.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>1RR</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever I block or become blocked, or the target of a spell or ability, put a colorless snack token onto the battlefield and flip three coins!
+I also have haste and persist as long as you're singing...
+Win 0 flips -- Oh no! Remove all +1/+1 counters from me and transform me!
+Win 1 flip -- Look at the top three cards of target player's library.
+Win 2 flips -- You may move all counters on me onto another creature, then exile me. If you do, you may return me to the battlefield at any time you could cast an instant. (You're not casting me, so it's free!)
+Win 3 flips -- Proliferate, then move a counter from any number of creatures to any number of other creatures, then       proliferate again! Whee!
+</text>
+      </card>
+
+      <card>
+        <name>Pinkie Pie Forsaken</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/200/0/3/pinkie_pie_forsaken_by_sorden-d57v9lo.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost></manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>0/4</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever a player completes a sentence in his or her normal voice, any other player may say 'A-ha!'s If a player does, the caught player discards a card. Then that player loses 1 life for each card in his or her graveyard unless he or she comments on how those cards betrayed and abandoned their owner.
+At the beginning of your upkeep, if a player has six or more cards in his or her hand, transform Pinkie Pie Forsaken.
+</text>
+      </card>
+
+      <card>
+        <name>Twilight Sparkle</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/340/c/4/twilight_sparkle_by_sorden-d3k6bfr.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <manacost>1WU</manacost>
+        <type>Legendary Creature - Unicorn Pony Wizard</type>
+        <pt>0/1</pt>
+        <tablerow>2</tablerow>
+        <text>When Twilight Sparkle enters the battlefield, put a +1/+1 counter on each legendary creature you and your teammates control.
+At the beginning of each end step, if a counter was placed on a creature you or a teammate control this turn, draw a card. If not, you may pay {B}. If you do, transform Twilight Sparkle.
+</text>
+      </card>
+
+      <card>
+        <name>Twilight Sparkle Unhinged</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/200/2/3/twilight_unhinged_by_sorden-d57v8eb.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Legendary Creature - Unicorn Pony Wizard</type>
+        <pt>1/0</pt>
+        <tablerow>2</tablerow>
+        <text>At the beginning of each upkeep, put a -1/-1 counter on another target creature. If that creature dies this way, transform Twilight Sparkle Unhinged.</text>
+      </card>
+
+      <card>
+        <name>Applejack</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/200/d/c/applejack_by_sorden-d3k2rn8.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <manacost>1GW</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>Vigilance, persist
+When Applejack enters the battlefield, put three colorless snack tokens onto the battlefield.
+{T}, Sacrifice a snack: Put a +1/+1 counter on each other creature you and your teammates control.
+</text>
+      </card>
+
+      <card>
+        <name>Rainbow Dash</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/200/b/b/rainbow_dash_by_sorden-d3k5z5l.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>R</color>
+        <manacost>1BR</manacost>
+        <type>Legendary Creature - Pegasus Pony</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>Flying, first strike, haste
+Rainbow Dash has double strike as long as you control three or more Fans.
+Whenever you cast a Fan spell, you may pay {G/W}. If you do, put a +1/+1 counter on Rainbow Dash.
+</text>
+      </card>
+
+      <card>
+        <name>Rarity</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/200/c/6/rarity_by_sorden-d3k5zgo.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <manacost>1RW</manacost>
+        <type>Legendary Creature - Unicorn Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Glamor
+Rarity can't be blocked by creatures without glamor.
+Whenever Rarity becomes tapped, you may reveal cards from the top of your library until you reveal an Attire card. Put that card into your hand and the revealed cards on the  bottom of your library in a random order.
+</text>
+      </card>
+
+
+
+      <card>
+        <name>The Queen of the Changelings</name>
+        <set picURL="http://fc04.deviantart.net/fs70/f/2012/204/3/3/queen_chrysalis_by_sorden-d58ckfd.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost>3UB</manacost>
+        <type>Legendary Creature - Shapeshifter</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>When The Queen of the Changelings enters the battlefield, you may exile target nontoken creature or nontoken planeswalker.
+If you do, The Queen of the Changelings becomes a copy of the exiled card, except she gains 'When this permanent leaves the battlefield, return it to the battlefield transformed, then return the exiled card to the battlefield under its owner's control.'
+ </text>
+      </card>
+
+      <card>
+        <name>Chrysalis Unmasked</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/211/e/9/chrysalis_unmasked_by_sorden-d58ckl5.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost></manacost>
+        <type>Planeswalker - Chrysalis</type>
+        <pt>5</pt>
+        <tablerow>1</tablerow>
+        <text>Whenever a +1/+1 counter is removed from a creature on the battlefield, put a loyalty counter on Chrysalis Unmasked. (Moving removes counters.)
++1: Move a counter from target permanent onto another target permanent.
+-3: Remove all counters from target creature. Gain control of that creature for as long as you control Chrysalis Unmasked.
+-10: Put ten 2/2 black and blue Shapeshifter creature tokens with flying and changeling named Changeling Invader onto the battlefield.
+</text>
+      </card>
+
+      <card>
+        <name>Nightmare Moon</name>
+        <set picURL="http://fc04.deviantart.net/fs70/f/2012/200/6/0/nightmare_moon_by_sorden-d3k3m5u.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>3BB</manacost>
+        <type>Planeswalker - Luna</type>
+        <pt>4</pt>
+        <tablerow>1</tablerow>
+        <text>If Nightmare Moon would leave the battlefield while she still has loyalty counters on her, you may transform her instead.
++1: Target player sacrifices a nonblack, nontoken permanent. All permanents it shared a card type with become black.
+0: Gain control of target black permanent until the end of your next turn. It becomes colorless.
+-7: Gain control of all black permanents.
+</text>
+      </card>
+
+      <card>
+        <name>Princess Luna</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/200/0/b/princess_luna_by_sorden-d57v5lx.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>B</color>
+        <manacost></manacost>
+        <type>Planeswalker - Luna</type>
+        <tablerow>2</tablerow>
+        <text>Whenever you a +1/+1 counter on a creature or sacrifice a snack, you may put a loyalty counter on Princess Luna.
+0: Tap or untap all black permanents target player controls.
+-2: Put a 1/1 colorless Pony Foal creature token onto the battlefield for each black permanent target player controls.
+</text>
+      </card>
+
+      <card>
+        <name>Spike</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/200/e/5/spike_by_sorden-d3k654q.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <manacost>RG</manacost>
+        <type>Legendary Creature - Dragon Advisor</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>When an artifact enters the battlefield for the third time in a turn, transform Spike.
+{T}: Exile target artifact, enchantment or snack you control, then return it to the battlefield under target player's control.
+</text>
+      </card>
+
+      <card>
+        <name>Spike Insatiable</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/201/3/2/spike_insatiable_by_sorden-d57vc65.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <manacost></manacost>
+        <type>Legendary Creature - Dragon Berserker</type>
+        <pt>5/5</pt>
+        <tablerow>2</tablerow>
+        <text>Spike Insatiable attacks each turn if able. 
+Whenever Spike Insatiable attacks, each player exiles an artifact, enchantment or snack he or she controls. If a player can't, return the cards exiled that way to the battlefield under your control at end of combat.
+At the beginning of each upkeep, if a player controls no artifacts, enchantments and/or snacks, transform Spike Insatiable.
+</text>
+      </card>
+
+      <card>
+        <name>Ursa Minor</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/201/e/b/ursa_minor_by_sorden-d3k6cj3.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <manacost>2BBGG</manacost>
+        <type>Creature - Giant Bear Critter</type>
+        <pt>6/6</pt>
+        <tablerow>2</tablerow>
+        <text>When Ursa Minor dies, if a source an opponent controls targeted or damaged Ursa Minor this turn, return it to the battlefield transformed under your control at the beginning of the next end step.</text>
+      </card>
+
+      <card>
+        <name>Ursa Major</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/201/7/c/ursa_major_by_sorden-d57z5mc.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>B</color>
+        <manacost></manacost>
+        <type>Creature - Giant Bear Critter</type>
+        <pt>12/12</pt>
+        <tablerow>2</tablerow>
+        <text>Annihilator 3 (Whenever this creature attacks, defending player sacrifices three permanents.)
+Ursa Major attacks each turn if able.
+</text>
+      </card>
+
+
+
+      <card>
+        <name>Derpy Hooves // Ditzy Doo</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/200/8/5/derpy_hooves___ditzy_doo_by_sorden-d3k38qb.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <color>W</color>
+        <manacost>1{R/G/W}{R/G/W} // 1{R/G/W}{R/G/W}</manacost>
+        <type>Legendary Creature - Pegasus Pony</type>
+        <pt>2/2</pt>
+        <tablerow>3</tablerow>
+        <text>Flying
+
+When Derpy Hooves enters the battlefield, target player puts a 1/1 colorless Pony Foal creature token onto the battlefield.
+
+{1GW}: Exile target artifact. That artifact's controller puts a colorless snack token onto the battlefield.
+---
+Flying
+
+When Ditzy Doo enters the battlefield, target player puts two colorless snack tokens onto the battlefield.
+
+{1RR}: Ditzy Doo deals 1 damage to target creature or player.
+</text>
+      </card>
+
+      <card>
+        <name>The Elements of Harmony</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/203/7/d/elements_of_harmony_by_sorden-d3k39jt.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <color>B</color>
+        <color>R</color>
+        <color>G</color>
+        <manacost>{3/W}{3/U}{3/B}{3/R}{3/G}</manacost>
+        <type>Legendary Artifact</type>
+        <tablerow>0</tablerow>
+        <text>The Elements of Harmony cost 1 less to cast for each +1/+1 counter on creatures you control.
+
+The Elements of Harmony are indestructible.
+
+Tap six untapped creatures you control: Exile target permanent.
+</text>
+      </card>
+
+      <card>
+        <name>Princess Celestia</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/200/9/a/princess_celestia_by_sorden-d3k33p5.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <color>U</color>
+        <manacost>1RWWU</manacost>
+        <type>Planeswalker - Celestia</type>
+        <pt>5</pt>
+        <tablerow>1</tablerow>
+        <text>Whenever a nonland permanent you or your teammates control becomes tapped for the first time in a turn, you may untap it.
++2: Tap target permanent. Its controller discards a card at random then draws a card.
+-4: Tap all creatures, then tap them again at the beginning of their controller's next upkeep.
+-6: Exile all tapped non-land permanents.
+</text>
+      </card>
+
+      <card>
+        <name>Discord</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/200/f/6/discord_by_sorden-d4af260.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>R</color>
+        <manacost>3BR</manacost>
+        <type>Planeswalker - Discord</type>
+        <pt>3</pt>
+        <tablerow>1</tablerow>
+        <text>Whenever a creature attacks Discord, put a -1/-1 counter on it.
++1: Put a -1/-1 counter on target creature.
+0: Target opponent discards a card. If he or she can't, Discord deals 3 damage to that player.
+-5: Each creature with a -1/-1 counter on it fights another target creature.
+</text>
+      </card>
+
+      <card>
+        <name>Princess Cadance</name>
+        <set picURL="http://fc07.deviantart.net/fs70/f/2012/204/a/c/princess_cadance_by_sorden-d58cj3f.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <manacost>2GW</manacost>
+        <type>Planeswalker - Cadance</type>
+        <pt>6</pt>
+        <tablerow>1</tablerow>
+        <text>+1: Put +1/+1 counter on target creature.
++1: Put a 1/1 colorless Pony Foal creature token onto the battlefield.
+-9: Double the number of +1/+1 counters on any number of target creatures.
+</text>
+      </card>
+
+      <card>
+        <name>Shining Armor</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/204/1/9/shining_armor_by_sorden-d58cj8g.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>2WW</manacost>
+        <type>Legendary Creature - Unicorn Pony Knight</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Shining Armor enters the battlefield with a +1/+1 counter on him.
+If a source would deal damage to you, a teammate, or a permanent you or your teammates control, for each +1/+1 counter on Shining Armor, prevent 1 damage that source would deal to that permanent or player.
+</text>
+      </card>
+
+      <card>
+        <name>Cerberus</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/201/3/6/cerberus_by_sorden-d4t1f3p.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>B</color>
+        <manacost>3WWWBBB</manacost>
+        <type>Legendary Creature - Demon Hound Critter</type>
+        <pt>9/9</pt>
+        <tablerow>2</tablerow>
+        <text>Vigilance
+Cerberus can block up to two additional creatures.
+At the beginning of each opponent's upkeep, put target creature card from that player's graveyard onto the battlefield under your control.
+You may cast Cerberus from your graveyard.
+</text>
+      </card>
+
+      <card>
+        <name>Mare Do Well</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/200/5/1/mare_do_well_by_sorden-d4hrnmr.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <color>W</color>
+        <color>U</color>
+        <manacost>RGWU</manacost>
+        <type>Legendary Creature - Unicorn Pegasus Earth Pony</type>
+        <pt>4/4</pt>
+        <tablerow>2</tablerow>
+        <text>Flash, flying, vigilance, hexproof, haste
+
+Champion a legendary Pony
+When Mare Do Well enters the battlefield, you may tap or untap up to four other target artifacts and/or creatures.
+4: Return Mare Do Well to her owner's hand.
+</text>
+      </card>
+
+      <card>
+        <name>Friendship Is Magic</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/203/f/8/friendship_is_magic_by_sorden-d40ge52.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>6</manacost>
+        <type>Legendary Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Friendship is Magic enters the battlefield, put a +1/+1 counter on each of up to six target creatures.
+Each legendary creature you or your teammates control with a +1/+1 counter on it is indestructible.
+</text>
+      </card>
+
+      <card>
+        <name>The Sun</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/199/5/4/the_sun_by_sorden-d4tz07w.png" picURLHq="" picURLSt="">IPU</set>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add one mana of any color to your mana pool.
+Whenever you tap The Sun for mana, untap all nonland permanents your opponents control.
+{6}, {T}, Sacrifice The Sun: Untap all nonland permanents you and your teammates control.
+</text>
+      </card>
+
+      <card>
+        <name>The Moon</name>
+        <set picURL="http://fc00.deviantart.net/fs71/f/2012/199/9/4/the_moon_by_sorden-d48u0rn.png" picURLHq="" picURLSt="">IPU</set>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>{T}: choose a mana color that is in your or in a teammates mana pool. Add one mana of that color to your mana pool.
+{6}, {T}, Sacrifice The Moon: Until end of turn, if a card would be put into its owner's graveyard, hand, or library, exile it instead. Cards can't leave exile this turn.
+</text>
+      </card>
+
+      <card>
+        <name>The Rainbow Factory</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/204/f/c/the_rainbow_factory_by_sorden-d4tuhu7.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <color>G</color>
+        <manacost>{2/U}{2/R}{2/G}</manacost>
+        <type>Legendary Artifact - Equestrian Fortification</type>
+        <tablerow>0</tablerow>
+        <text>Whenever fortified land becomes tapped, sacrifice a permanent. If you do, add one mana of each of the sacrificed permanent's colors to your mana pool, then target player loses 1 life for each mana produced this way.
+Fortify {2/B}{2/B}
+</text>
+      </card>
+
+
+
+      <card>
+        <name>Sonic Rainboom</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/204/e/3/sonic_rainboom_by_sorden-d3k64l9.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <color>B</color>
+        <color>R</color>
+        <color>G</color>
+        <manacost>WUBRG</manacost>
+        <type>Tribal Sorcery - Pegasus Pony</type>
+        <tablerow>3</tablerow>
+        <text>Rainbow Dash Feat -- If you control a creature with the words 'Rainbow Dash's in its name, you may pay {1}{B}{R} rather than pay Sonic Rainboom's mana cost.
+Search your library for up to five Fan and/or legendary creature cards, reveal them, and put them into your hand. Then shuffle your library.
+</text>
+      </card>
+
+      <card>
+        <name>Chief Thunderhooves</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/340/d/b/chief_thunderhooves_by_sorden-d3k342e.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <color>W</color>
+        <manacost>3RGW</manacost>
+        <type>Legendary Creature - Buffalo Warrior</type>
+        <pt>5/5</pt>
+        <tablerow>2</tablerow>
+        <text>First strike, vigilance, provoke, haste
+When Chief Thunderhooves enters the battlefield, Buffalo creatures you and your teammates control get +1/+1 and gain trample until end of turn.
+GGG, Sacrifice a snack: Return Chief Thunderhooves from your graveyard to the battlefield.
+</text>
+      </card>
+
+      <card>
+        <name>The Cutie Mark Crusaders</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/201/6/9/the_cutie_mark_crusaders_by_sorden-d3k692g.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <color>G</color>
+        <manacost>URG</manacost>
+        <type>Legendary Creature - Pony Foal</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>Trample, haste
+Whenever a counter is put on The Cutie Mark Crusaders, they gain all abilities of target non-Foal creature until end of turn.
+At the beginning of each end step, move all counters from The Cutie Mark Crusaders onto one or more other target creatures.
+</text>
+      </card>
+
+      <card>
+        <name>The Incredible Iron Will</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/201/d/d/iron_will_by_sorden-d4sna4a.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>B</color>
+        <color>R</color>
+        <manacost>3WBR</manacost>
+        <type>Legendary Creature - Minotaur Advisor</type>
+        <pt>5/4</pt>
+        <tablerow>2</tablerow>
+        <text>First strike, trample, wither
+
+Whenever The Incredible Iron Will deals combat damage to a player, distribute that many +1/+1 counters among any number of other target creatures.
+
+{T}: Other creatures you and your teammates control gain first strike, trample and wither until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Taken By The Swarm</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/204/2/8/taken_by_the_swarm_by_sorden-d4fwwld.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <color>W</color>
+        <manacost>1BGW</manacost>
+        <type>Tribal Sorcery - Parasprite Critter</type>
+        <tablerow>3</tablerow>
+        <text>Put a 1/1 black and green Parasprite Critter token with flying onto the battlefield for each counter on target permanent.
+Exile that permanent
+</text>
+      </card>
+
+      <card>
+        <name>Top Dogs</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/341/a/a/top_dogs_by_sorden-d58ciqo.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>R</color>
+        <color>G</color>
+        <manacost>BRG</manacost>
+        <type>Legendary Creature - Hound Rogue</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>Sacrifice a land: Add one mana of any color to your mana pool.
+{B}{B}: Each player sacrifices a creature.
+{R}{R}: Each player discards his or her hand, then draws that many cards.
+{G}{G}: Each player puts a permanent card from his or her graveyard onto the battlefield.
+</text>
+      </card>
+
+      <card>
+        <name>Twists And Turns</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/203/7/b/twists_and_turns_by_sorden-d4ra4wv.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <color>R</color>
+        <manacost>4UBR</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>At the beginning of your end step, you may put a -1/-1 counter on target creature.
+Sacrifice Twists and Turns: Gain control of each creature with a -1/-1 counter on it for as long as it has a -1/-1 counter on it.
+</text>
+      </card>
+
+      <card>
+        <name>Post Ponies!</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/203/d/2/post_ponies_by_sorden-d4h6e1w.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <color>G</color>
+        <manacost>4URG</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Post Ponies! enters the battlefield, if it's not a token, each of your teammates puts a token that's a copy of Post Ponies! onto the battlefield.
+
+At the beginning of your upkeep, choose a legendary permanent and/or a planeswalker at random, then put a token that's a copy of that permanent onto the battlefield. It's a Fan Art artifact in addition to its other types.
+
+The 'legend rule' and the 'planeswalker uniqueness rule' don't apply.
+</text>
+      </card>
+
+
+
+      <card>
+        <name>Hoity-Toity</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/201/c/f/hoity_toity_by_sorden-d3lbuo8.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <manacost>3WU</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>1/3</pt>
+        <tablerow>2</tablerow>
+        <text>Vigilance, Glamor
+Other creatures with glamor you control get +1/+1.
+{T}: Target creature without glamor gets -2/-0 and loses all abilities until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Ponyville Construction Crew</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/201/a/a/ponyville_construction_crew_by_sorden-d4rx6po.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <manacost>3WU</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>4/4</pt>
+        <tablerow>2</tablerow>
+        <text>When Ponyville Construction Crew enters the battlefield, you may search your library for an artifact card and reveal that card. Shuffle your library, then put that card on top of it.
+Whenever Ponyville Construction Crew becomes tapped, you may attach target Fortification you control to target land you control.
+</text>
+      </card>
+
+      <card>
+        <name>Twist</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/201/5/d/twist_by_sorden-d4o86cg.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <manacost>WU</manacost>
+        <type>Legendary Creature- Pony Foal</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>{T}: Put a colorless snack token onto the battlefield.</text>
+      </card>
+
+      <card>
+        <name>However Pinkie Pie Does It</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/204/7/4/however_pinkie_pie_does_it_by_sorden-d4cpsbc.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <manacost>3WU</manacost>
+        <type>Tribal Instant - Earth Pony</type>
+        <tablerow>3</tablerow>
+        <text>Pinkie Pie Feat -- If you control a creature with the words 'Pinkie Pie' in its name, you may pay {1}{R}{R} rather than pay However Pinkie Pie Does It's mana cost.
+
+Roll a six-sided die. Exile that number of target permanents, then return those cards to the battlefield under their owner's control. If creatures you own would enter the battlefield this way during your declare blockers step, you may have any number of those creatures enter the battlefield blocking an attacking creature instead. (They can block creatures they couldn't block normally.)
+</text>
+      </card>
+
+      <card>
+        <name>Selfish Desire</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/201/6/7/selfish_desire_by_sorden-d3k61f8.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost>3UB</manacost>
+        <type>Enchantment Creature - Illusion</type>
+        <pt>2/4</pt>
+        <tablerow>2</tablerow>
+        <text>Flash
+When Selfish Desire enters the battlefield, you may change the target of target spell or ability to Selfish Desire.
+Whenever a source deals damage to Selfish Desire, that source's controller loses that much life and gains control of Selfish Desire.
+</text>
+      </card>
+
+      <card>
+        <name>Windigo Herd</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/201/9/8/windigo_herd_by_sorden-d4joasx.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost>2UB</manacost>
+        <type>Creature - Elemental Spirit</type>
+        <pt>*/*</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+Windigo Herd's power and toughness are each equal to the number of -1/-1 counters on other creatures on the battlefield.
+{1}{U}{B}: Tap target creature with a -1/-1 counter on it and put another -1/-1 counter on that creature.
+</text>
+      </card>
+
+      <card>
+        <name>Gummy</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/201/8/0/gummy_by_sorden-d3k3eko.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <manacost>1RG</manacost>
+        <type>Legendary Creature - Alligator Critter</type>
+        <pt>0/1</pt>
+        <tablerow>2</tablerow>
+        <text>Provoke
+Gummy is indestructible.
+</text>
+      </card>
+
+      <card>
+        <name>Pound Cake And Pumpkin Cake</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/201/3/7/pound_cake_and_pumpkin_cake_by_sorden-d4si8az.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <manacost>RG</manacost>
+        <type>Legendary Creature - Pony Foal</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Reach, Haste
+Pound Cake and Pumpkin Cake have protection from their own colors.
+{T}: Pound Cake and Pumpkin Cake deal 1 damage to each creature that shares a color with them.
+{U}: Exchange the colors of two target creatures until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Lighten the Burden</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/203/6/0/share_the_burden_by_sorden-d4r6clz.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>B</color>
+        <manacost>2WB</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Lighten the Burden enters the battlefield, put a +1/+1 counter on each of two target creatures.
+Whenever a +1/+1 counter is placed on a creature you or your teammates control, you may remove a counter from another target creature.
+</text>
+      </card>
+
+      <card>
+        <name>Prince Blueblood</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/201/4/e/prince_blueblood_by_sorden-d3k5yhw.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>B</color>
+        <manacost>2WB</manacost>
+        <type>Legendary Creature - Unicorn Pony</type>
+        <pt>1/4</pt>
+        <tablerow>2</tablerow>
+        <text>All damage that would be dealt to a player by other creatures is dealt to Prince Blueblood instead.
+Whenever Prince Blueblood is dealt damage, target player loses 1 life and you gain 1 life.
+</text>
+      </card>
+
+      <card>
+        <name>Meany-Pants's Counsel</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/203/b/5/meany_pants___counsel_by_sorden-d40glc4.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <manacost>3BG</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Meany-Pants' Counsel enters the battlefield put a -1/-1 counter on each of two target creatures.
+Creatures your opponents control with counters on them block each turn if able.
+</text>
+      </card>
+
+      <card>
+        <name>Opalescence</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/201/0/d/opalescence_by_sorden-d48ys2j.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <manacost>1BG</manacost>
+        <type>Legendary Creature - Cat Critter</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Flash, Wither, Haste
+Sacrifice another Critter: Regenerate Opalescence
+{T}: Opalescence fights another creature. (Each deals damage equal to its power to the other)
+{3}: Opalescence fights another target creature. Any player may activate this ability.
+</text>
+      </card>
+
+      <card>
+        <name>Cheerilee</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/201/c/3/cheerilee_by_sorden-d4fqmst.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>U</color>
+        <manacost>GU</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever you draw a card outside of your draw step, you may pay {G}. If you do, put a +1/+1 counter on target Foal.
+Whenever you place a +1/+1 counter on a Foal, you may pay {U}{U}. If you do, draw a card.
+</text>
+      </card>
+
+      <card>
+        <name>Super-Natural Succor</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/203/f/9/super_natural_succor_by_sorden-d40glpj.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>U</color>
+        <manacost>2GU</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Super Natural Succor enters the battlefield, put a +1/+1 counter on each of two target creatures.
+Each creature you or your teammates control with a counter on it has hexproof.
+Whenever a +1/+1 counter is placed on a creature, you may regenerate it.
+</text>
+      </card>
+
+      <card>
+        <name>Tank</name>
+        <set picURL="http://fc00.deviantart.net/fs71/f/2012/201/1/8/tank_by_sorden-d4grafi.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>U</color>
+        <manacost>2GU</manacost>
+        <type>Legendary Creature - Tortoise Critter</type>
+        <pt>1/4</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever Tank attacks or blocks, each player proliferates. Tank doesn't untap during your next untap step.
+Tank has flying and vigilance as long as he has a +1/+1 counter on him and is indestructible as long as he has a -1/-1 counter on him.
+Persist
+</text>
+      </card>
+
+      <card>
+        <name>Vanquish the Ursa</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/340/d/6/vanquish_the_ursa_by_sorden-d4q3sm5.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>U</color>
+        <manacost>3GU</manacost>
+        <type>Tribal Sorcery - Unicorn Pony</type>
+        <tablerow>3</tablerow>
+        <text>Twilight Sparkle Feat -- If you control a creature with the words 'Twilight Sparkle' in its name, you may pay {1}{W}{U} rather than pay Vanquish the Ursa's mana cost.
+The owner of target creature shuffles it into his or her library, then draws a card. If that creature’s power is 5 or greater, put a +1/+1 counter on each Pony creature you and your teammates control.
+</text>
+      </card>
+
+      <card>
+        <name>The Serpent Of Everfree Forest</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/201/2/2/the_serpent_of_everfree_forest_by_sorden-d4qtiy0.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <manacost>3UR</manacost>
+        <type>Legendary Creature - Serpent</type>
+        <pt>5/5</pt>
+        <tablerow>2</tablerow>
+        <text>Glamor, islandwalk
+Whenever The Serpent of Everfree Forest is dealt damage, tap him. He doesn't untap during your next untap step.
+Whenever a +1/+1 counter is placed on The Serpent of Everfree Forest, untap him.
+</text>
+      </card>
+
+
+      <card>
+        <name>The Wonderbolts</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/201/c/1/the_wonderbolts_by_sorden-d41hwa3.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <manacost>XX2UR</manacost>
+        <type>Creature - Pegasus Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>When you cast The Wonderbolt, put X tokens that are a copy of The Wonderbolts onto the battlefield.
+Flying, Haste
+{2}{G}{U}: Target player puts a token that is a copy of The Wonderbolts onto the battlefield.
+</text>
+      </card>
+
+      <card>
+        <name>It Was Under 'E'!</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/203/3/a/it_was_under_e__by_sorden-d4qmigq.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <manacost>2UR</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When It Was Under 'E'! enters the battlefield, proliferate, then move a counter from target creature onto another target creature.
+Each creature you and your teammates control with a counter on it has '{T}: Target player puts the top card of his or her library into his or her graveyard. If that card is an instant or sorcery card, you may have that player put it into his or her hand instead.'
+</text>
+      </card>
+
+      <card>
+        <name>Race To The Finish</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/203/3/d/race_to_the_finish_by_sorden-d40gkw6.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <manacost>4RW</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Race to the Finish enters the battlefield, put a +1/+1 counter on target creature and a -1/-1 counter on another target creature.
+Each creature you or your teammates control with a counter on it has double strike.
+</text>
+      </card>
+
+
+
+      <card>
+        <name>Bog Hydra</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/201/c/d/bog_hydra_by_sorden-d3k2xjd.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost>4{U/B}{U/B}{U/B}{U/B}</manacost>
+        <type>Creature - Hydra</type>
+        <pt>4/4</pt>
+        <tablerow>2</tablerow>
+        <text>Bog Hydra enters the battlefield with four +1/+1 counters on it.
+Whenever a Pony leaves the battlefield, you may put a +1/+1 counter on Bog Hydra.
+{G}, Remove a +1/+1 counter from Bog Hydra: Bog Hydra gets +2/+2 and gains hexproof and trample until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>The Truth Not Always Be Pleasant</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/204/d/7/truth_not_always_be_pleasant_by_sorden-d4bzw5t.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost>3{U/B}{U/B}</manacost>
+        <type>Tribal Sorcery - Earth Pony</type>
+        <tablerow>3</tablerow>
+        <text>Applejack Feat -- If you control a creature with the word 'Applejack' in its name, you may pay {1}{G}{W} rather than pay The Truth Not Always Be Pleasant's mana cost.
+Target player draws a card for each creature with a +1/+1 counter on it on the battlefield, then discards a card for each creature with a -1/-1 counter on it on the battlefield.
+</text>
+      </card>
+
+      <card>
+        <name>Renounce The Friendless</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/204/3/c/renounce_the_friendless_by_sorden-d4l2l6d.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>B</color>
+        <manacost>3{W/B}{W/B}</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Destroy each creature without a +1/+1 counter on it.</text>
+      </card>
+
+      <card>
+        <name>Hush Now // Quiet Now</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/204/d/e/hush_now___quiet_now_by_sorden-d4644ii.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>W</color>
+        <color>U</color>
+        <color>G</color>
+        <manacost>1{B/W} // 1GU</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Tap each artifact and creature with an activated or triggered ability your opponents control.
+---
+Untap each artifact and creature with an activated or triggered ability you and your teammates control. Those permanents gain hexproof until end of turn.</text>
+      </card>
+
+      <card>
+        <name>A Magical Place // With So Many Wonders</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/204/1/d/magical_place___many_wonders_by_sorden-d4681nv.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <color>U</color>
+        <color>R</color>
+        <manacost>2{B/G} // 2UR</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Put cards from the top of your library into your graveyard until you put a land card into your graveyard this way. Then return target land card or target Critter creature from your graveyard to the battlefield tapped.
+---
+Exile the top six cards of your library face-down. Target opponent looks at these cards and separates them into three piles of one, two and three cards. Put one pile into your hand and the rest into your graveyard.</text>
+      </card>
+
+      <card>
+        <name>Winter // Wrap Up</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/204/5/5/winter___wrap_up_by_sorden-d46fszi.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>G</color>
+        <color>W</color>
+        <color>R</color>
+        <manacost>5{U/G} // 5RW</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Tap each artifact, creature and land that isn't enchanted, equipped or fortified.
+---
+Until end of turn, creatures you and your teammates control have '{T}: Exile target permanent. Its controller exiles the top card of his or her library, then puts it onto the battlefield if it's a permanent card.'
+</text>
+      </card>
+
+      <card>
+        <name>Giggle At // The Ghostly</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/340/f/9/giggle_at___the_ghostly_by_sorden-d460ycv.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <color>W</color>
+        <color>B</color>
+        <manacost>{U/R} // WB</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Switch target creature's power and toughness until end of turn. That creature attacks this turn if able
+---
+Target creature’s power becomes equal to its toughness until end of turn. It can’t block or be blocked until end of turn.</text>
+      </card>
+
+      <card>
+        <name>Thread By Thread // Stitching It Together</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/204/3/d/thread___stitching_by_sorden-d46bxie.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <color>B</color>
+        <color>G</color>
+        <manacost>3{R/W} // 3BG</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Put an Attire card from your hand onto the battlefield, then attach any number of Attires you control to any number of target creatures you control.
+---
+Sacrifice any number of permanents, then return an artifact or enchantment from any graveyard to the battlefield under your control for each permanent sacrificed this way.
+</text>
+      </card>
+
+
+
+      <card>
+        <name>Critter Stampede</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/204/e/1/critter_stampede_by_sorden-d47th0k.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>5R</manacost>
+        <type>Tribal Sorcery - Critter</type>
+        <tablerow>3</tablerow>
+        <text>Critter Stampede deals X damage to each creature without flying and each player, where X is the number of Critter creatures on the battlefield.</text>
+      </card>
+
+      <card>
+        <name>Philomena</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/201/c/6/philomena_by_sorden-d4fiylz.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>1R</manacost>
+        <type>Legendary Creature - Bird Critter</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Haste
+Philomena attacks each turn if able and is indestructible.
+When Philomena dies, return her to the battlefield transformed under your control at the beginning of the next end step.
+</text>
+      </card>
+
+      <card>
+        <name>Philomena Reborn</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/201/a/a/philomeena_reborn_by_sorden-d57ziqq.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost></manacost>
+        <type>Legendary Creature - Phoenix</type>
+        <pt>3/1</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+When Philomena Reborn dies, return her from her owner's graveyard to her owner's hand at the beginning of the next end step.
+</text>
+      </card>
+
+      <card>
+        <name>Reclusive Gemhoarder</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/201/5/e/reclusive_gemhoarder_by_sorden-d3k3by4.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>4RR</manacost>
+        <type>Creature - Dragon Critter</type>
+        <pt>4/5</pt>
+        <tablerow>2</tablerow>
+        <text>Flying, trample
+Whenever you draw a card or an opponent discards a card, Reclusive Gemhoarder gets +1/+0 until end of turn.
+{2/G}{2/G}{2/G}{2/G}: Draw X cards, where X is the amount of colors among permanents you control.
+</text>
+      </card>
+
+      <card>
+        <name>Spitfire and Soarin'</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/201/8/e/spitfire_and_soarin_by_sorden-d48k7st.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>4RR</manacost>
+        <type>Legendary Creature - Pegasus Pony</type>
+        <pt>4/4</pt>
+        <tablerow>2</tablerow>
+        <text>Flying, haste
+Whenever Spitfire and Soarin' deal combat damage to a player, destroy target snack that player controls and put a +1/+1 counter on each attacking Pegasus creature. (This doesn't increase damage that has already been dealt.)
+</text>
+      </card>
+
+      <card>
+        <name>Bloomberg</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/201/f/9/bloomberg_by_sorden-d3k2wvd.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>1G</manacost>
+        <type>Legendary Creature - Plant</type>
+        <pt>0/4</pt>
+        <tablerow>2</tablerow>
+        <text>Defender
+Whenever Bloomberg is dealt damage, put a colorless snack token onto the battlefield.
+</text>
+      </card>
+
+
+
+      <card>
+        <name>Little Strongheart</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/201/0/8/little_strongheart_by_sorden-d3k3gph.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>2W</manacost>
+        <type>Legendary Creature - Buffalo Scout</type>
+        <pt>1/2</pt>
+        <tablerow>2</tablerow>
+        <text>Flash
+Little Strongheart has haste as long as you control a red creature and vigilance as long as you control a green creature.
+{T}: Remove target attacking creature from combat.
+</text>
+      </card>
+
+      <card>
+        <name>Sheriff Silverstar</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/201/2/b/sheriff_silverstar_by_sorden-d4p8aox.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>2W</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>First strike, vigilance
+{W}{W}, Sacrifice a snack, {T}: Sheriff Silverstar deals X damage to target attacking or blocking creature, where X is the number of snacks you control.
+{G}{U}, Tap an untapped Earth Pony you control: Put a colorless snack token onto the battlefield.
+</text>
+      </card>
+
+      <card>
+        <name>Raid the Fridge</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/204/d/6/raid_the_fridge_by_sorden-d4csxnp.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>3UU</manacost>
+        <type>Tribal Sorcery - Pegasus Pony</type>
+        <tablerow>3</tablerow>
+        <text>Derpy Hooves or Ditzy Doo Feat -- If a creature with the words 'Derpy Hooves' or 'Ditzy Doo' in its name attacked and wasn't blocked this turn, you may pay 1{R/G/W}{R/G/W} rather than pay Raid the Fridge's mana cost.
+Choose up to one nontoken snack and up to one real life snack target player controls. Gain control of those snacks and all snack tokens that player controls. (Those effects last indefinitely.)
+</text>
+      </card>
+
+      <card>
+        <name>The Stare</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/203/3/9/the_stare_by_sorden-d3k6ago.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>3UU</manacost>
+        <type>Tribal Enchantment - Pegasus Pony Aura</type>
+        <tablerow>1</tablerow>
+        <text>Flash, enchant Pony creature you control
+Fluttershy Feat -- If The Stare is targeting a creature with the word 'Fluttershy' in its name, you may pay {1}{G}{G} rather than pay The Stare's mana cost.
+Prevent all combat damage that would be dealt to enchanted creature by Critters and vice-versa.
+Whenever enchanted creature blocks or becomes blocked by a Critter, gain control of that Critter for as long as you control The Stare.
+</text>
+      </card>
+
+      <card>
+        <name>Expert Whining</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/203/1/d/expert_whining_by_sorden-d41f67y.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>3BB  </manacost>
+        <type>Tribal Enchantment - Unicorn Pony Aura</type>
+        <tablerow>1</tablerow>
+        <text>Enchant Pony creature you control
+Rarity Feat -- If Expert Whining is targeting a creature with the word 'Rarity' in its name, you may pay {1}{R}{W} rather than pay Expert Whining's mana cost.
+Whenever enchanted creature becomes tapped, creatures your opponents control get -1/-1 until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Gilda</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/201/0/2/gilda_by_sorden-d3k3cg9.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>3B</manacost>
+        <type>Legendary Creature - Griffin Rogue</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>Flying, intimidate, wither
+Gilda can't block.
+Whenever Gilda attacks, she deals 1 damage to each nonattacking creature you control.
+{3}{R}: Gilda deals 1 damage to target creature or player.
+</text>
+      </card>
+
+      <card>
+        <name>The Great And Powerful Trixie</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/201/7/9/the_great_and_powerful_trixie_by_sorden-d3k6a3f.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>B</manacost>
+        <type>Legendary Creature - Unicorn Pony Wizard</type>
+        <pt>7/7</pt>
+        <tablerow>2</tablerow>
+        <text>Provoke
+Whenever The Great and Powerful Trixie attacks or blocks, she gets -6/-6 until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Roaming Sootbelcher</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/201/b/9/roaming_sootbelcher_by_sorden-d3k61z1.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>4BB</manacost>
+        <type>Creature - Dragon Critter</type>
+        <pt>5/5</pt>
+        <tablerow>2</tablerow>
+        <text>Flying, wither
+Whenever another creature dies, Roaming Sootbelcher gets +1/+0 until end of turn.
+{2/R}{2/R}{2/R}{2/R}: Roaming Sootbelcher deals X damage to each nonblack creature, where X is the number of basic land types among lands you control.
+</text>
+      </card>
+
+      <card>
+        <name>Spirit Of Nightmares Past</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/201/7/e/spirit_of_nightmares_past_by_sorden-d4pxahc.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>3BB</manacost>
+        <type>Legendary Creature - Spirit Illusion</type>
+        <pt> </pt>
+        <tablerow>2</tablerow>
+        <text>Intimidate
+Spirit of Nightmares Past's power and toughness are each equal to the number of Pony cards in all graveyards.
+All Pony creatures get -1/-1 as long as a planeswalker card is in a graveyard.
+</text>
+      </card>
+
+
+
+      <card>
+        <name>Ancient Ruins</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/340/3/2/ancient_ruins_by_sorden-d3k2lw3.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>Champion a permanent without a champion
+{T}: Add {U}, {B}, or {R} to your mana pool.
+{U}{B}{R},{T}, Sacrifice Ancient Ruins: Choose a permanent type. Target player puts the top six cards of his or her library into his or her graveyard. Return a card of the chosen type at random from that player’s graveyard to the battlefield under your control.
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Appleloosa</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/340/5/1/appleloosa_by_sorden-d3k2tqr.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>Champion a permanent without a champion
+{T}: Add {G}, {W}, or {U} to your mana pool.
+{G}{W}{U}, {T}, Sacrifice Appleloosa: Put any number of Pony and/or Buffalo creature cards with total converted mana cost 6 or less from your hand onto the battlefield. If one of those cards is an Earth Pony, untap and regenerate all creatures you and your teammates control.
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Canterlot Academy</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/340/2/b/canterlot_academy_by_sorden-d3k30vl.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>Champion a permanent without a champion
+{T}: Add {W}, {U}, or {B} to your mana pool.
+{W}{U}{B}, {T}, Sacrifice Canterlot Academy: Draw a card for each Unicorn spell cast this turn. Then target creature gets -X/-X until end of turn and you gain X life, where X is the number of cards in your hand.
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Canterlot Palace</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/199/d/2/canterlot_palace_by_sorden-d3k31jn.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>Champion a permanent without a champion
+{T}: Add {R}, {W}, or {U} to your mana pool.
+{R}{W}{U}, {T}, Sacrifice Canterlot Palace: Untap up to one target Pony creature you control and tap up to one target Pony creature target opponent controls. Canterlot Palace deals 3 damage to up to one non-Pony creature that player controls.
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Cloudsdale</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/199/8/0/cloudsdale_by_sorden-d3k34gf.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>Champion a permanent without a champion
+{T}: Add {U}, {R}, or {G} to your mana pool.
+{U}{R}{G}, {T}, Sacrifice Cloudsdale: Up to two target creatures gain flying until end of turn. Creatures with flying you control gain provoke until end of turn.
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Dragon Mountain</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/199/9/7/dragon_mountain_by_sorden-d3k393s.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>Champion a permanent without a champion
+{T}: Add {B}, {R}, or {G} to your mana pool.
+{B}{R}{G}, {T}, Sacrifice Dragon Mountain: Put a 5/5 black red and green Dragon Critter creature token with flying named Dormant Dragon onto the battlefield tapped. It has 'This doesn't untap during your untap step' and 'Whenever this is dealt damage, untap it.'
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Everfree Forest</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/199/5/3/everfree_forest_by_sorden-d3k3ack.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>Champion a permanent without a champion
+{T}: Add {B}, {G}, or {W} to your mana pool.
+{B}{G}{W}, {T}, Sacrifice Everfree Forest: Up to one target Pony creature gets -2/-2 until end of turn and up to one target non-Pony creature gets +2/+2 and gains first strike until end of turn.
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Froggy Bottom Bog</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/340/d/0/froggy_bottom_bog_by_sorden-d3k3b72.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>Champion a permanent without a champion
+{T}: Add {G}, {U} or {B} to your mana pool
+{G}{U}{B}, {T}, Sacrifice Froggy Bottom Bog: Prevent all combat damage that would be dealt this turn. Return target tapped creature to its owner’s hand. Then that player discards a card at random.
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Manehattan</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/199/b/3/manehattan_by_sorden-d3k3j78.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>Champion a permanent without a champion
+{T}: Add {W}, {B}, or {R} to your mana pool.
+{W}{B}{R}, {T}, Sacrifice Manehattan: Gain control of target creature you own. That creature gains double strike, lifelink and haste until end of turn.
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Stampeding Grounds</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/199/d/b/stampeding_grounds_by_sorden-d3k66fh.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>Champion a permanent without a champion
+{T}: Add {R}, {G}, or {W} to your mana pool.
+{R}{G}{W}, {T}, Sacrifice Stampeding Grounds: Up to two target creatures get +2/+2 until end of turn. Untap each of those creatures that is a Pony. Each of those creatures that is a Buffalo gains trample until end of turn.
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Nuclear Rainboom</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/204/b/1/nuclear_rainboom_by_sorden-d4d4vh8.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <color>B</color>
+        <color>R</color>
+        <color>G</color>
+        <manacost>{2/W}{2/U}{2/B}{2/R}{2/G}</manacost>
+        <type>Tribal Instant - Pegasus Pony</type>
+        <tablerow>3</tablerow>
+        <text>Return a target artifact, creature, or enchantment to its owner's hand for each Island you control, then each opponent discards a card for each swamp you control.
+Destroy all artifacts with converted mana cost equal to or less than the number of Forests you control. Repeat the process for creatures and Mountains, and for Enchantments and Plains
+</text>
+      </card>
+
+      <card>
+        <name>Imaginary Friend</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/201/e/9/imaginary_friend_by_sorden-d3k3fy1.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost>{2/U}{2/U}{2/B}</manacost>
+        <type>Artifact Creature - Illusion</type>
+        <pt>1/5</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever Imaginary Friend deals combat damage to a creature, return that creature to its owner's hand at the end of combat. That creature's controller gains control of Imaginary Friend.
+Whenever Imaginary Friend deals combat damage to a player, that player discards a card.
+</text>
+      </card>
+
+      <card>
+        <name>Ornate Collar</name>
+        <set picURL="http://fc04.deviantart.net/fs70/f/2012/203/f/4/ornate_collar_by_sorden-d4c5xvj.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>{2/W}{2/W}</manacost>
+        <type>Artifact - Attire Equipment</type>
+        <tablerow>0</tablerow>
+        <text>Equipped creature has vigilance and glamor.
+You can't lose control of equipped creature.
+Equip {2/U}{2/R}
+</text>
+      </card>
+
+      <card>
+        <name>Ponyville Market</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/204/0/2/ponyville_market_by_sorden-d4sbc5r.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>1</manacost>
+        <type>Artifact - Equestrian Fortification</type>
+        <tablerow>0</tablerow>
+        <text>Whenever fortified land becomes tapped, each player chooses three nonland permanents he or she controls and owns, and a target opponent. That opponent chooses one of those permanents, then gains control of that permanent.
+Fortify {2/U}{2/B}{2/R}
+</text>
+      </card>
+
+      <card>
+        <name>Smarty Pants</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/203/5/f/smarty_pants_by_sorden-d4hciuq.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>R</color>
+        <manacost>{2/B}{2/B}{2/R}{2/R}</manacost>
+        <type>Legendary Artifact - Equipment</type>
+        <tablerow>0</tablerow>
+        <text>Equipped creature has trample, provoke, and wither. It attacks each turn if able.
+At the beginning of your combat phase, attach Smarty Pants to target creature you control with a -1/-1 counter on it.
+At the end of combat, defending player gains control of Smarty Pants unless equipped creature dealt combat damage to that player this turn.
+</text>
+      </card>
+
+      <card>
+        <name>Tom The Boulder</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/203/9/6/tom_the_boulder_by_sorden-d4c3qmy.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Legendary Artifact - Equipment</type>
+        <tablerow>0</tablerow>
+        <text>Equipped creature gets -2/-2.
+When equipped creature dies, target opponent gains control of Tom the Boulder.
+At the beginning of your end step, if Tom the Boulder isn't attached to a creature, you lose 2 life.
+Equip {2/B}{2/B}
+</text>
+      </card>
+
+      <card>
+        <name>Mary Sue Original Character</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/201/c/9/mary_sue_original_character_by_sorden-d4imqv6.png" picURLHq="" picURLSt="">IPU</set>
+        <color></color>
+        <manacost>7</manacost>
+        <type>Artifact Creature - Pony Fan Art</type>
+        <pt>7/7</pt>
+        <tablerow>2</tablerow>
+        <text>Affinity for legendary Ponies (This spell costs 1 less to cast for each legendary Pony you control.)
+Mary Sue Original Character has all creature types and all abilities of all legendary Pony creatures on the battlefield in addition to its other types and abilities.
+Whenever a source would deal damage to Mary Sue Original Character, that source gains wither until end of turn.
+</text>
+      </card>
+
+<!--      
+      <card>
+        <name>Lyra's Bench</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/203/3/3/lyra__s_bench_by_sorden-d49o764.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>5</manacost>
+        <type>Tribal Artifact - Unicorn Pony</type>
+        <tablerow>0</tablerow>
+        <text>When Lyra's Bench enters the battlefield, put a special Lyra creature token onto the battlefield.
+The tops of your opponents' libraries are part of the battlefield for Lyra.
+Whenever a Lyra token loses contact to a player's library through no fault of that player's opponents, that player exiles that token and the top half of his or her library, rounding down.
+</text>
+      </card>
+-->
+
+
+
+      <card>
+        <name>Bouncin' Barkeep</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/340/2/2/bouncing_barkeep_by_sorden-d4s4l39.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <manacost>1WU</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever a player sacrifices a snack you may pay {1}. If you do, exile another target creature that player controls and return that card to the battlefield under its owner's control at the beginning of the next end step.
+</text>
+      </card>
+
+      <card>
+        <name>Celestial Guidance</name>
+        <set picURL="http://fc00.deviantart.net/fs71/f/2012/203/9/a/celestial_guidance_by_sorden-d40gihw.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <manacost>2WU</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Celestial Guidance enters the battlefield, proliferate, then move a counter from target creature onto another target creature.
+Whenever a creature you or your teammates control with a counter on it attacks, its controller may scry 1.
+</text>
+      </card>
+
+      <card>
+        <name>Owlowicious</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/201/a/4/owlowiscious_by_sorden-d4boqcx.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <manacost>WU</manacost>
+        <type>Legendary Creature - Bird Critter Advisor</type>
+        <pt>1/2</pt>
+        <tablerow>2</tablerow>
+        <text>Flying, vigilance
+Whenever Owlowiscious attacks or blocks, you may draw a card, then discard a card.
+</text>
+      </card>
+
+      <card>
+        <name>Lunar Whisperings</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/203/6/f/lunar_whisperings_by_sorden-d40ghya.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost>2UB</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Lunar Whisperings enters the battlefield, put a -1/-1 counter on each of two target creatures.
+Whenever a creature an opponent controls with a counter on it blocks, you may fateseal 1. (To fateseal 1, look at the top card of an opponent's library, then you may put it on the bottom of that player's library.)
+</text>
+      </card>
+
+      <card>
+        <name>Share the Pain</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/204/a/8/share_the_pain_by_sorden-d58ch0x.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>R</color>
+        <manacost>2BR</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Share the Pain enters the battlefield, put a +1/+1 counter on target creature and a -1/-1 counter on another target creature.
+Whenever a creature an opponent controls with a counter on it is dealt damage for the first time in a turn, its controller has it deal damage equal to its power to another creature he or she controls.
+</text>
+      </card>
+
+      <card>
+        <name>Screwball</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/201/6/6/screwball_by_sorden-d4icafw.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>R</color>
+        <manacost>2BR</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>Fyling
+Wehn Scrawbell etners the bittlefeald, tagert pylear discrads a crad at rodnam.
+</text>
+      </card>	  
+	  
+      <card>
+        <name>Crush The Common Foe</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/203/6/3/crush_the_common_foe_by_sorden-d40gg91.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <manacost>4RG</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Crush the Common Foe enters the battlefield, put a +1/+1 counter on each of two target creatures.
+Each creature you or your teammates control with a counter on it has provoke.
+</text>
+      </card>
+
+      <card>
+        <name>That Fandom Is Fast</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/203/f/d/that_fandom_is_fast_by_sorden-d4tl2kz.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <manacost>1RG</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>Whenever a player casts a Pony spell, you may pay {1}. If you do, put a 0/2 colorless Pony Fan Art artifact creature token onto the battlefield.
+Sacrifice an Art: Target creature gains first strike and haste until end of turn.
+</text>
+      </card>	  
+	  
+      <card>
+        <name>Big Macintosh</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/201/e/0/big_macintosh_by_sorden-d4g1w9c.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <manacost>3GW</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>4/4</pt>
+        <tablerow>2</tablerow>
+        <text>Vigilance, persist
+{T}: Remove a -1/-1 counter from another target creature and untap it.
+</text>
+      </card>
+
+      <card>
+        <name>Care For Big And Small</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/203/8/e/care_for_big_and_small_by_sorden-d40gj2u.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <manacost>3GW</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Care for Big and Small enters the battlefield, put a +1/+1 counter on each of two target creatures.
+Whenever a creature you or your teammates control with a counter on it attacks, its controller puts a 1/1 colorless Pony Foal and a 0/1 green Critter token onto the battlefield.
+</text>
+      </card>
+
+      <card>
+        <name>Cherry Jubilee</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/201/8/6/cherry_jubilee_by_sorden-d4rhfvb.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <manacost>1GW</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>Snack spells you and your teammates cast cost {1} less to cast.
+Activated abilities of snacks you and your teammates control cost {1} less to activate.
+</text>
+      </card>
+
+      <card>
+        <name>Tender Loving Care</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/203/5/7/tender_loving_care_by_sorden-d41qwdu.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <manacost>3GW</manacost>
+        <type>Tribal Enchantment - Pegasus Pony</type>
+        <tablerow>1</tablerow>
+        <text>Fluttershy Feat — If you control a creature with the word 'Fluttershy' in its name, you may pay {1}{G}{G} rather than pay Tender Loving Care's mana cost.
+Critter creatures you and your teammates control get +1/+1.
+Creature tokens you and your teammates control control get +1/+1.
+</text>
+      </card>
+
+      <card>
+        <name>Winona</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/201/9/e/winona_by_sorden-d4eulyi.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <manacost>GW</manacost>
+        <type>Legendary Creature - Hound Critter</type>
+        <pt>1/3</pt>
+        <tablerow>2</tablerow>
+        <text>Vigilance, protection from Critters
+Whenever Winona blocks or becomes blocked, put a 0/1 green Critter creature token onto the battlefield.
+</text>
+      </card>
+
+      <card>
+        <name>Filthy Rich</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/201/f/c/filthy_rich_by_sorden-d4rnjzw.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>B</color>
+        <manacost>1WB</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/3</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever another creature with a counter on it leaves the battlefield, you may put a +1/+1 counter on Filthy Rich.
+When Filthy Rich leaves the battlefield, you may move all counters from Filthy Rich onto any number of target creatures.
+</text>
+      </card>
+
+      <card>
+        <name>Angel</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/201/2/d/angel_by_sorden-d3k2mup.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <manacost>BG</manacost>
+        <type>Legendary Creature - Rabbit Critter</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>Intimidate, protection from Ponies.
+Whenever Angel deals combat damage to a player, you may remove a +1/+1 counter from target creature that player controls.
+</text>
+      </card>
+
+	        <card>
+        <name>Whatever It Is Pinkie Pie Does</name>
+        <set picURL="http://fc00.deviantart.net/fs71/f/2012/340/4/9/whatever_it_is_pinkie_pie_does_by_sorden-d4opuol.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>3BG</manacost>
+        <type>Tribal Instant - Earth Pony</type>
+        <tablerow>3</tablerow>
+        <text>Pinkie Pie Feat -- If you control a creature with the words 'Pinkie Pie' in its name, you may pay {1}{R}{R} rather than pay Whatever It Is Pinkie Pie Does' mana cost.
+Choose a card in any hand, library, graveyard or in exile, then play it without paying its mana cost. (Face-down cards and hand cards aren’t revealed until you cast them.)
+At the beginning of your next end step, absolutely exile it from this freaking match forever.
+</text>
+      </card>
+	  
+      <card>
+        <name>Hayseed Turniptruck</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/201/0/e/hayseed_turniptruck_by_sorden-d4oyrmk.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>U</color>
+        <manacost>2GU</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Flash
+When Hayseed Turniptruck enters the battlefield, counter all other activated and/or triggered abilities.
+</text>
+      </card>
+
+	  <card>
+        <name>Skyra</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/201/3/0/skyra_by_sorden-d4ts5uc.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>U</color>
+        <manacost>GU</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>1/2</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+When Skyra enters the battlefield, any number of target Unicorn Pony creatures become a copy of Skyra until end of turn.
+T: Put a +1/+1 counter on another target Pegasus Pony creature.
+</text>
+      </card>
+	  
+      <card>
+        <name>Quarray Eel</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/201/1/c/quarray_eel_by_sorden-d4mo2eb.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <manacost>2UR</manacost>
+        <type>Creature - Wurm Fish Critter</type>
+        <pt>4/1</pt>
+        <tablerow>2</tablerow>
+        <text>Flash, first strike
+Quarray Eel has hexproof during your opponents' turns.
+Quarray Eel attacks each turn if able.
+</text>
+      </card>
+
+      <card>
+        <name>Fancypants And Consort</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/340/c/1/fancypants_and_consort_by_sorden-d4j9mjg.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <manacost>2RW</manacost>
+        <type>Legendary Creature - Unicorn Pony</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>Vigilance, haste
+Glamor (Whenever this creature attacks, you may tap target creature with equal or lower power. Whenever this creature blocks, you may have target creature with equal or lower toughness not untap during its controller's next untap step.)
+</text>
+      </card>
+
+      <card>
+        <name>Photo Finish</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/340/4/4/photo_finish_by_sorden-d3ksqo5.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <manacost>1RW</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>{T}: Another target creature gains glamor until end of turn. (Whenever a glamorous creature attacks, you may tap target creature with equal or lower power. Whenever a glamorous creature blocks, you may have target creature with equal or lower toughness not untap during its controller’s next untap step.)</text>
+      </card>
+
+      <card>
+        <name>Sapphire Shores</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/340/2/0/sapphire_shores_by_sorden-d3lmhpx.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <manacost>1RW</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>3/2</pt>
+        <tablerow>2</tablerow>
+        <text>Glamor (Whenever this creature attacks, you may tap target creature with equal or lower power. Whenever this creature blocks, you may have target creature with equal or lower toughness not untap during its controller's next untap step.)
+As long as Sapphire Shores is equipped, she has glamor. (More glamor impresses more creatures.)
+</text>
+      </card>
+
+ 
+
+      <card>
+        <name>The Mayor Of Ponyville</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/201/2/5/the_mayor_of_ponyville_by_sorden-d4mrtm9.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <manacost>1{W/U}</manacost>
+        <type>Legendary Creature - Earth Pony Advisor</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{2}{W}: Tap target creature.
+{2}{B}: Target creature doesn't untap during its controller's next untap step.
+</text>
+      </card>
+
+      <card>
+        <name>Diamond Tiara And Silver Spoon</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/201/f/e/diamond_tiara_and_silver_spoon_by_sorden-d41txut.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost>1{U/B}</manacost>
+        <type>Legendary Creature - Pony Foal</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{3}{U}: Target opponent returns a Foal he or she controls to its owner's hand. If he or she can't, return target creature that player controls to its owner's hand instead.
+{3}{B}: Target opponent discards a card. He or she loses 2 life unless that card is a Foal. Activate this ability only any time you could cast a sorcery.
+</text>
+      </card>
+
+      <card>
+        <name>The Flim Flam Brothers</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/201/2/6/the_flim_flam_brothers_by_sorden-d4p3pi3.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>R</color>
+        <manacost>1{B/R}</manacost>
+        <type>Legendary Creature - Unicorn Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{4}{B}: Each player sacrifices a land. Put a colorless snack token onto the battlefield for each land sacrificed this way.
+{4}{R}, Sacrifice four snacks: Gain control of target land.
+</text>
+      </card>
+	    
+      <card>
+        <name>Snips And Snails</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/340/0/4/snips_and_snails_by_sorden-d4n0z67.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>R</color>
+        <manacost>1{G/R}</manacost>
+        <type>Legendary Creature - Pony Foal Fan</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{3}{R}: All creatures attack this turn if able.
+{3}{G}: All creatures block this turn if able.
+</text>
+      </card>
+
+      <card>
+        <name>Mr. And Mrs. Cake</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/201/3/f/mr__and_mrs__cake_by_sorden-d47m6gf.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <manacost>1{G/W}</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{2}{G}, Sacrifice a nontoken snack: Put three colorless snack tokens onto the battlefield.
+{2}{W}, Sacrifice two snacks: Search your library for a snack card, reveal it, put it into your hand, then shuffle your library.
+</text>
+      </card>
+
+      <card>
+        <name>The Oranges</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/201/c/3/the_oranges_by_sorden-d4n3sa0.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>B</color>
+        <manacost>1{W/B}</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{2}{W}: Gain control of target creature token. (This effect lasts indefinitely)
+{2}{B}: Creatures you control with power less than The Oranges' power gain wither until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Mr. Greenhooves</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/201/4/c/mr__greenhooves_by_sorden-d4ndu9q.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <manacost>1{B/G}</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{2}{B}: Destroy target snack.
+{2}{G}: Put a +1/+1 counter on target Critter creature.
+</text>
+      </card>
+
+      <card>
+        <name>Parasprite Infestation</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/203/2/2/parasprite_infestation_by_sorden-d3k3mh5.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <manacost>1{B/G}{B/G}</manacost>
+        <type>Tribal Enchantment - Parasprite Critter</type>
+        <tablerow>1</tablerow>
+        <text>Whenever a noncreature permanent is put into a graveyard from the battlefield, you may pay {B/G}. If you do, put a black and green 1/1 Parasprite Critter creature token with flying onto the battlefield.
+{1}{B}{G}: Each player sacrifices a snack. If a player can't, that player sacrifices a permanent instead.
+</text>
+      </card>
+
+	        <card>
+        <name>Zecora</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/201/c/6/zecora_by_sorden-d3k6fmd.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>U</color>
+        <manacost>1{G/U}</manacost>
+        <type>Legendary Creature - Zebra Pony Shaman</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{1}{G}: Regenerate target creature.
+{1}{U}: Target creature gains hexproof until end of turn.
+</text>
+      </card>
+	  
+      <card>
+        <name>Geared Up For Adventure</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/203/9/b/geared_up_for_adventure_by_sorden-d4azlrs.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>U</color>
+        <manacost>{G/U}</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>Untap each permanent you and your teammates control that is enchanted, equipped, or fortified during each opponent's untap step.</text>
+      </card>
+
+      <card>
+        <name>Idea!</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/204/1/c/idea_by_sorden-d3l7zrx.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>U</color>
+        <manacost>3{G/U}{G/U}</manacost>
+        <type>Tribal Sorcery - Unicorn Pony</type>
+        <tablerow>3</tablerow>
+        <text>Rarity Feat – If you control a creature with the word 'Rarity' in its name, you may pay {1}{W}{R} rather than pay Idea!'s mana cost.
+Draw a card for each tapped creature target player controls.
+</text>
+      </card>
+
+      <card>
+        <name>Spa Sisters</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/201/d/d/spa_sisters_by_sorden-d4n8fe7.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <manacost>1{U/R}</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{1}{U}: Move a counter from target creature you or a teammate controls onto Spa Sisters
+{1}{R}: Move a counter from Spa Sisters onto target creature.
+</text>
+      </card>
+
+      <card>
+        <name>Jet Set And Upper Crust</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/201/8/f/jet_set_and_upper_crust_by_sorden-d4jfyvu.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <manacost>1{R/W}</manacost>
+        <type>Legendary Creature - Unicorn Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{1}{R}: Jet Set and Upper Crust deal 1 damage to target creature without glamor.
+{1}{W}: Target creature loses glamor until end of turn. Jet Set and Upper Crust gain glamor until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Pony // Pokey</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/204/c/6/pony___pokey_by_sorden-d45gw17.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <color>B</color>
+        <color>R</color>
+        <manacost>{W/U} // BR</manacost>
+        <type>Tribal Instant - Pony Foal</type>
+        <tablerow>3</tablerow>
+        <text>Target player puts a 1/1 colorless Pony Foal creature token onto the battlefield.
+---
+Destroy target artifact, then distribute an amount of -1/-1 counters equal to that artifact’s converted mana cost among any number of target Foals.
+</text>
+      </card>
+	  
+	        <card>
+        <name>My Little Pony // Shared Its Magic With Me</name>
+        <set picURL="http://fc07.deviantart.net/fs70/f/2012/204/0/9/mlp___shared_its_magic_by_sorden-d45nh9m.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <color>R</color>
+        <color>G</color>
+        <manacost>3{U/B} // 3RG</manacost>
+        <type>Sorcery</type>
+       <tablerow>3</tablerow>
+        <text>Target creature becomes a 1/1 Pony and you gain control of that creature until the end of your next turn.
+---
+Gain control of all artifacts and non-Aura enchantments target player controls until the end of your next turn.
+</text>
+      </card>
+
+      <card>
+        <name>Evil // Enchantress</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/204/9/4/evil___enchantress_by_sorden-d45l7bb.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>R</color>
+        <color>W</color>
+        <color>G</color>
+        <manacost>1{B/R} // 1GW</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Choose a color. Each player sacrifices a creature of that color at random.
+---
+Choose a color. Each player sacrifices an enchantment of that color. Draw a card for each enchantment sacrificed this way.
+</text>
+      </card>
+	  
+	  <card>
+        <name>At The Gala! // At The Gala...</name>
+        <set picURL="http://fc04.deviantart.net/fs70/f/2012/204/a/0/at_the_gala___at_the_gala_by_sorden-d429nzf.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <color>W</color>
+        <color>U</color>
+        <manacost>3{R/G} // 3WU</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>At the Gala! can't be countered.
+Spells and abilities can't be countered this turn.
+Add three mana in any combination of colors to your mana pool.
+---
+Counter all other spells.
+Players can't cast spells this turn.
+Nonland abilities can't be activated this turn.
+</text>
+      </card>
+
+	        <card>
+        <name>Where The Grass Is // What's For Dinner</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/204/6/6/grass___dinner_by_sorden-d42eky7.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <color>U</color>
+        <color>B</color>
+        <manacost>{G/W} // UB</manacost>
+        <type>Sorcery</type>
+       <tablerow>3</tablerow>
+        <text>Search your library for a basic land card, reveal it, shuffle your library the put it on top of your library.
+If an opponent controls more snacks than you, draw a card.
+---
+Exile the top two cards of your library, then put one of those cards into your hand unless you sacrifice a snack. If you do, repeat the process.
+</text>
+      </card>
+
+
+	  
+      <card>
+        <name>Braeburn</name>
+        <set picURL="http://fc07.deviantart.net/fs70/f/2012/203/4/e/braeburn_by_sorden-d4p5uav.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>3G</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>2/4</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever Braeburn becomes tapped, reveal the top card of your library. If it's a land card, put it onto the battlefield tapped.
+Landfall – Whenever a land enters the battlefield under your control, all creatures able to block Braeburn do so.
+</text>
+      </card>
+
+      <card>
+        <name>Fowl Cockatrice</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/203/6/8/fowl_cockatrice_by_sorden-d3kczir.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>4GG</manacost>
+        <type>Creature - Cockatrice Critter</type>
+        <pt>3/5</pt>
+        <tablerow>2</tablerow>
+        <text>Bird offering (You may cast this card any time you could cast an instant by sacrificing a Bird and paying the difference in mana costs between this and the sacrificed Bird. Mana cost includes color.)
+Deathtouch, reach</text>
+      </card>
+
+      <card>
+        <name>Scheduled Storm</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/204/f/a/scheduled_storm_by_sorden-d4ca12g.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>XG</manacost>
+        <type>Tribal Sorcery - Pegasus Pony</type>
+        <tablerow>3</tablerow>
+        <text>Prevent all damage Scheduled Storm would deal to tapped Pegasus Ponies you and your teammates control.
+Scheduled Storm deals X damage to each creature with flying.</text>
+      </card>
+
+      <card>
+        <name>Welcome Party</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/203/0/e/welcome_party_by_sorden-d4lgwhm.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>G</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>Whenever a creature enters the battlefield under your control, you may move a counter from any number of creatures you control to that creature.</text>
+      </card>
+
+	  
+	  
+      <card>
+        <name>Apple Barrage</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/204/e/8/apple_barrage_by_sorden-d4dtq0u.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>3RR</manacost>
+        <type>Tribal Sorcery - Earth Pony</type>
+        <tablerow>3</tablerow>
+        <text>Applejack Feat – If you control a creature with the word 'Applejack' in its name, you may pay {1}{G}{W} rather than pay Apple Barrage's mana cost.
+Put three colorless snacks onto the battlefield. Apple Barrage deals 1 damage for each snack you control divided as you choose among up to X target creatures, where X is the number of Earth Ponies you control.
+</text>
+      </card>
+
+      <card>
+        <name>Panic-Prone Party Ponies</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/203/e/c/panic_prone_party_ponies_by_sorden-d4ld3fm.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>3RR</manacost>
+        <type>Creature - Pony</type>
+        <pt>4/2</pt>
+        <tablerow>2</tablerow>
+        <text>Panic-Prone Party Ponies can't block.
+Panic-Prone Party Ponies has double strike as long as it has a -1/-1 counter on it.
+Persist
+</text>
+      </card>
+
+      <card>
+        <name>Pipsqueak</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/203/b/7/pipsqueak_by_sorden-d4ptu12.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>R</manacost>
+        <type>Legendary Creature - Pony Foal Fan</type>
+        <pt>1/2</pt>
+        <tablerow>2</tablerow>
+        <text>At the beginning of each upkeep, put a +1/+1 counter on Pipsqueak if a -1/-1 counter was placed on a creature last turn.</text>
+      </card>
+
+      <card>
+        <name>Twiliportation</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/204/d/c/twiliportation_by_sorden-d4bx657.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>3RR</manacost>
+        <type>Tribal Instant - Unicorn Pony</type>
+        <tablerow>3</tablerow>
+        <text>Twilight Sparkle Feat – If you control a creature with the words 'Twilight Sparkle' in its name, you may pay {1}{W}{U} rather than pay Twiliportation's mana cost.
+You may exile any number of blocked creatures you control and own, then return them to the battlefield tapped and attacking. (They can't be blocked again normally.)
+</text>
+      </card>
+
+      <card>
+        <name>DJ Pon3</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/204/7/6/dj_pon3_by_sorden-d4ggvid.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+       <manacost>R</manacost>
+        <type>Legendary Creature - Unicorn Pony</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>{T}: Tap target creature. DJ Pon3 deals 1 damage to that creature. Activate this ability only any time you could cast a sorcery.
+</text>
+      </card>	  
+
+      <card>
+        <name>Facehoof</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/204/8/b/facehoof_by_sorden-d4ebasd.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>3R</manacost>
+        <type>Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>Whenever you cast Facehoof or another bronze-bordered or silver-bordered spell, you may have target creature you control deal damage equal to its power to itself and another target creature or player.
+</text>
+      </card>
+	  
+	  
+	  
+      <card>
+        <name>In Ten Seconds Flat</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/340/7/4/in_ten_seconds_flat_by_sorden-d4m39xe.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>3UU</manacost>
+        <type>Tribal Enchantment - Pegasus Pony</type>
+        <tablerow>1</tablerow>
+        <text>Rainbow Dash Feat — If you control a creature with the words “Rainbow Dash” in its name, you may pay {1}{B}{R} rather than pay In Ten Seconds Flat’s mana cost.
+You may cast Pony spells as though they had flash.
+Whenever a creature enters the battlefield under your control, you may return another target nonland permanent to its owner’s hand if the amount of colors it has is less than the amount of colors of that creature.
+</text>
+      </card>
+
+      <card>
+        <name>Puppeteer The Prone</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/203/c/4/puppeteer_the_prone_by_sorden-d4nkrek.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>3U</manacost>
+        <type>Enchantment - Aura</type>
+        <tablerow>1</tablerow>
+        <text>Enchant Creature
+You control enchanted creature as long as it has a -1/-1 counter on it.
+</text>
+      </card>
+
+      <card>
+        <name>Cutie Mark Failure</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/204/4/7/cutie_mark_failure_by_sorden-d47xlts.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>2BB</manacost>
+        <type>Tribal Sorcery - Pony</type>
+        <tablerow>3</tablerow>
+        <text>Tap target permanent. If it’s double- faced, transform it. Then, if it’s a Pony creature, all creatures get -X/-X until end of turn, where X is equal to that Pony’s power.
+</text>
+      </card>
+
+      <card>
+        <name>Haunted Oak</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/203/8/f/haunted_oak_by_sorden-d47948l.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>2BB</manacost>
+        <type>Creature - Plant Horror</type>
+        <pt>0/4</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever another creature dies put a +1/+1 counter on Haunted Oak.
+{B}{B},{T}: Put a -1/-1 counter on target Pony creature.
+</text>
+      </card>
+
+      <card>
+        <name>Manehattan Snob</name>
+        <set picURL="http://fc07.deviantart.net/fs70/f/2012/203/8/7/manehattan_snob_by_sorden-d3k3ihh.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>1BB</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>When Manehattan Snob enters the battlefield, you may put a -1/-1 counter on target creature.
+Whenever a creature with a -1/-1 counter leaves the battlefield, proliferate.
+</text>
+      </card>
+
+	  <card>
+        <name>Muffin Mail</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/204/9/c/muffin_mail_by_sorden-d4cvo6b.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>3BB</manacost>
+        <type>Tribal Sorcery - Pegasus Pony</type>
+        <tablerow>3</tablerow>
+        <text>Derpy Hooves or Ditzy Doo Feat -- If a creature with the words 'Derpy Hooves' or 'Ditzy Doo' in its name attacked and wasn’t blocked this turn, you may pay {1}{R/G/W}{R/G/W} rather than pay Muffin Mail's mana cost.
+Sacrifice up to two snacks. For each snack sacrificed this way, a target player exiles a nontoken permanent he or she controls, then puts a colorless snack token onto the battlefield.
+</text>
+      </card>
+  
+  
+  
+      <card>
+        <name>Canterlot Noble</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/203/7/6/canterlot_noble_by_sorden-d3k318u.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>3W</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>0/3</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever an artifact or creature becomes tapped, you may have that permanent's controller gain 1 life.
+{U},{T}: Untap target artifact or creature.
+</text>
+      </card>
+
+      <card>
+        <name>Granny Smith</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/203/1/f/granny_smith_by_sorden-d4nhgmb.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>W</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Foal creatures you and your teammates control get +1/+1 for each +1/+1 counter on Granny Smith.
+</text>
+      </card>
+
+      <card>
+        <name>The Pie Family</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/203/4/0/the_pie_family_by_sorden-d4ov994.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>4W</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>4/4</pt>
+        <tablerow>2</tablerow>
+        <text>When The Pie Family enters the battlefield, you may search your library for a card named A Rock, put it onto the battlefield, then shuffle your library.
+Whenever you sacrifice a snack, untap The Pie Family and it gains lifelink until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Octavia</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/204/0/d/octavia_by_sorden-d4gepa7.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>W</manacost>
+        <type>Legendary Creature - Earth Pony</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>{T}: Untap another target creature. Prevent the next 1 damage that would be dealt to that creature this turn.
+</text>
+      </card>	  
+	  
+      <card>
+        <name>So Awesome!</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/203/8/3/so_awesome_by_sorden-d4hy3bt.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>5W</manacost>
+        <type>Tribal Enchantment - Fan</type>
+        <tablerow>1</tablerow>
+        <text>Creatures you and your teammates control have lifelink.
+Whenever a legendary permanent or a planeswalker enters the battlefield under your or a teammate’s control, put two +1/+1 counters on each Fan creature you and your teammates control.
+</text>
+      </card>
+
+	  
+	  
+      <card>
+        <name>Appleloosan Arsenal</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/340/c/d/appleloosan_arsenal_by_sorden-d4loyfa.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>3</manacost>
+        <type>Snack Artifact</type>
+        <tablerow>0</tablerow>
+        <text>When Appleloosan Arsenal enters the battlefield, put two colorless snack tokens onto the battlefield.
+{3}, {T}, Sacrifice a snack: Choose two target creatures. Put a +1/+1 counter on each of those creatures that is a Pony and a -1/-1 counter on each of those that isn't.
+{T}, Sacrifice Appleloosan Arsenal: Proliferate.
+</text>
+      </card>
+      
+      <card>
+        <name>Artful Dress</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/340/b/0/artful_dress_by_sorden-d3k2vau.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <manacost>{2/R}{2/W}</manacost>
+        <type>Artifact - Attire Equipment </type>
+        <tablerow>0</tablerow>
+        <text>Equipped creature gets +1/+1 and has glamor. (Whenever this creature attacks, you may tap target creature with equal or lower power. Whenever this creature blocks, you may have target creature with equal or lower toughness not untap during its controller’s next untap step.)
+Equip {2/R}{2/W}
+</text>
+      </card>
+
+      <card>
+        <name>Discordant Realm</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/199/9/b/discordant_realm_by_sorden-d4dmstk.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add one mana of any color to your mana pool.
+Whenever you tap Discordant Realm for mana, put a -1/-1 counter on target creature you control.
+</text>
+        <cipt>1</cipt>
+      </card>
+
+      <card>
+        <name>Gala Buffet</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/340/1/0/gala_buffet_by_sorden-d4lsxgx.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>3</manacost>
+        <type>Snack Artifact</type>
+        <tablerow>0</tablerow>
+        <text>When Gala Buffet enters the battlefield, put two colorless snack tokens onto the battlefield.
+{3}, {T}, Sacrifice a snack: Reveal cards from the top of your library until you reveal a legendary card. Put that card into your hand and all other cards revealed this way on the bottom of your library at random.
+{T}, Sacrifice Gala Buffet: Add one mana of any color to your mana pool for each creature you control.
+</text>
+      </card>
+
+      <card>
+        <name>Nightmare Nightcrawlers</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/203/9/3/nightmare_nightcrawlers_by_sorden-d4l9b6y.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>{2/G}{2/G}{2/G}</manacost>
+        <type>Artifact Creature - Spider Critter</type>
+        <pt>2/4</pt>
+        <tablerow>2</tablerow>
+        <text>Reach, persist
+Nightmare Nightcrawlers has vigilance as long as it has a -1/-1 counter on it.
+</text>
+      </card>
+
+      <card>
+        <name>Ponyville Schoolhouse</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/204/1/d/ponyville_schoolhouse_by_sorden-d41yn38.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Fortification</type>
+        <tablerow>0</tablerow>
+        <text>Whenever fortified land becomes tapped, each player with more cards in hand than target player puts a 1/1 colorless Pony Foal creature token onto the battlefield.
+Fortify {3} ({3}: Attach to target land you control. Fortify only as a sorcery. This card enters the battlefield unattached and stays on the battlefield if the land leaves)
+</text>
+      </card>
+
+      <card>
+        <name>Shadowbolt Costume</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/204/b/d/shadowbolt_costume_by_sorden-d4fu8tn.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Attire Equipment</type>
+        <tablerow>0</tablerow>
+        <text>Whenever equipped creature becomes tapped, it deals 1 damage to target creature or player.
+Equipped creature has lifelink as long as it has a +1/+1 counter on it, and wither as long as it has a -1/-1 counter on it.
+Equip {3}
+</text>
+      </card>
+
+      <card>
+        <name>Sisterhooves Setup</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/340/5/9/sisterhooves_setup_by_sorden-d4lwgbq.png" picURLHq="" picURLSt="">IPU</set>
+       <manacost>3</manacost>
+        <type>Snack Artifact</type>
+        <tablerow>0</tablerow>
+        <text>When Sisterhooves Setup enters the battlefield, put two colorless snack tokens onto the battlefield.
+{3}, {T}, Sacrifice a snack: Reveal a Pony card from your hand. You may cast that card without paying its mana cost and as though it had flash.
+{T}, Sacrifice Sisterhooves Setup: Put a 1/1 colorless Pony Foal creature token onto the battlefield for each non-Foal Pony you control.
+</text>
+      </card>
+
+      <card>
+        <name>Twenty Percent Cooler Dress</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/340/1/5/twenty_percent_cooler_dress_by_sorden-d3k6b0d.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>1</manacost>
+        <type>Artifact - Attire Equipment</type>
+        <tablerow>0</tablerow>
+        <text>Equipped creature has intimidate and protection from creatures with glamor.
+Equip {2}
+</text>
+      </card>
+
+      <card>
+        <name>Brony</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/340/6/7/brony_by_sorden-d3k2yct.png" picURLHq="" picURLSt="">IPU</set>
+        <color></color>
+        <manacost>3</manacost>
+        <type>Creature - Human Fan</type>
+        <pt>0/2</pt>
+        <tablerow>2</tablerow>
+        <text>{W}, {T}: Prevent all damage that would be dealt to target Pony creature this turn.
+{U}, {T}: Reveal the top card of target player’s library. If that card is a Pony card, draw a card.
+{B}, {T}: Put target Pony card from your graveyard on top of your library.
+{R}, {T}: Target Pony creature gets +2/-1 until end of turn.
+{G}, {T}: Put a colorless 0/2 Pony Fan Art artifact creature token onto the battlefield.
+</text>
+      </card>
+
+      <card>
+        <name>Original Character</name>
+        <set picURL="http://fc04.deviantart.net/fs70/f/2012/203/e/a/original_character_by_sorden-d4iil19.png" picURLHq="" picURLSt="">IPU</set>
+        <color></color>
+        <manacost>4</manacost>
+        <type>Artifact Creature - Fan Art</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>As Original Character enters the battlefield, choose one — Unicorn Pony, Pegasus Pony or Earth Pony. It’s the chosen types in addition to its other types.
+Original Character has '{1}, {T}: Tap target artifact or creature' as long as it’s a Unicorn Pony, flying as long as it’s a Pegasus Pony and persist as long as it’s an Earth Pony.
+</text>
+      </card>
+
+      <card>
+        <name>Stop Breaking the Fourth Wall!</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/204/3/d/stop_breaking_the_fourth_wall_by_sorden-d3k670s.png" picURLHq="" picURLSt="">IPU</set>
+        <color></color>
+        <manacost>3</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Exile up to one target bronze-bordered or silver-bordered spell if {U} was spent to cast Stop Breaking the Fourth Wall!
+Exile up to one target bronze-bordered or silver-bordered permanent if {W} and {B} were spent to cast Stop Breaking the Fourth Wall!
+(Do both if {W}{U}{B} was spent.)
+</text>
+      </card>
+
+      <card>
+        <name>The Hubble</name>
+        <set picURL="http://fc04.deviantart.net/fs70/f/2012/203/9/3/the_hubble_by_sorden-d3ngn23.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>{2/U}{2/U}</manacost>
+        <type>Legendary Artifact Creature - Illusion</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>At the beginning of your upkeep, draw a card for each legendary permanent on the battlefield, then shuffle The Hubble into its owner’s library.
+</text>
+      </card>
+	  
+
+
+      <card>
+        <name>Continuity, Schmontinuity</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/204/3/d/stop_breaking_the_fourth_wall_by_sorden-d3k670s.png" picURLHq="" picURLSt="">IPU</set>
+        <color></color>
+        <manacost>3</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Exile up to one target bronze-bordered or silver-bordered spell if {U} was spent to cast Stop Breaking the Fourth Wall!
+Exile up to one target bronze-bordered or silver-bordered permanent if {W} and {B} were spent to cast Stop Breaking the Fourth Wall!
+(Do both if {W}{U}{B} was spent.)
+</text>
+      </card>	  
+
+      <card>
+        <name>Royal Guard Pegasus</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/203/6/4/royal_guard_pegasus_by_sorden-d3k5ztp.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>U</color>
+        <manacost>1{W/U}{W/U}</manacost>
+        <type>Creature - Pegasus Pony Soldier</type>
+        <pt>2/3</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+Royal Guard Pegasus has vigilance as long as you control another Pegasus or Soldier.
+</text>
+      </card>
+	  
+      <card>
+        <name>Ravenous Changeling</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/204/6/b/ravenous_changeling_by_sorden-d58cfhg.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost>2UB</manacost>
+        <type>Creature - Shapeshifter</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Flying, Changeling (This card is every creature type at all times.)
+When Ravenous Changeling enters the battlefield, move a +1/+1 counter from target creature onto Ravenous Changeling.
+</text>
+      </card>
+
+      <card>
+        <name>Pigasus Herd</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/204/7/0/pigasus_herd_by_sorden-d58cflu.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>B</color>
+        <manacost>1{U/B}{U/B}</manacost>
+        <type>Creature - Shapeshifter</type>
+        <pt>3/2</pt>
+        <tablerow>2</tablerow>
+        <text>Discard a card: Pigasus Herd gains flying and protection from black-bordered until end of turn.
+</text>
+      </card>	  
+	  
+      <card>
+        <name>You Must</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/204/a/0/you_must_by_sorden-d4czqww.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>R</color>
+        <manacost>1BR</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
+When you lose control of that creature this turn, put a -1/-1 counter on it.
+</text>
+      </card>
+
+      <card>
+        <name>Swarm Of The Century</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/204/6/5/swarm_of_the_century_by_sorden-d4f9kd4.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>R</color>
+        <manacost>3{B/R}</manacost>
+        <type>Tribal Sorcery - Parasprite Critter</type>
+        <tablerow>3</tablerow>
+        <text>Destroy target land. Its controller sacrifices a snack.
+Put a 1/1 black and green Parasprite Critter token with flying onto the battlefield for each snack that was sacrificed this turn.
+</text>
+      </card>
+
+      <card>
+        <name>Ardent Greenhorn</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/340/5/3/ardent_greenhorn_by_sorden-d4ek908.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <manacost>RG</manacost>
+        <type>Creature - Buffalo Warrior</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever a player casts an Earth Pony spell, Ardent Greenhorn gains provoke until the end of next turn. (Whenever this creature attacks, you may have target creature defending player controls untap and block it if able.)</text>
+      </card>
+
+	  <card>
+        <name>Cutie Mark Carpenters</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/204/6/9/cutie_mark_carpenters_by_sorden-d410huh.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>G</color>
+        <manacost>{R/G}</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Target creature gains haste and trample until end of turn.
+Whenever that creature deals damage to a player this turn, you may destroy target artifact that player controls.</text>
+      </card>
+	  
+      <card>
+        <name>Call Of The Cutie</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/204/4/3/call_of_the_cutie_by_sorden-d425hzb.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <manacost>XGW</manacost>
+        <type>Tribal Instant - Pony Foal</type>
+        <tablerow>3</tablerow>
+        <text>Put X 1/1 colorless Pony Foal creature tokens onto the battlefield.</text>
+      </card>
+
+<card>
+        <name>Ngh!</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/204/7/1/ngh_by_sorden-d3k32mv.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>W</color>
+        <manacost>1{G/W}</manacost>
+        <type>Tribal Instant - Pony</type>
+        <tablerow>3</tablerow>
+        <text>Target creature gains '{T}: Destroy target artifact or enchantment until end of turn.'
+If it's a Pony, untap it whenever it's dealt damage this turn.
+</text>
+      </card>	  
+	  
+      <card>
+        <name>Widdle Puddytat</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/203/6/1/widdle_puddytat_by_sorden-d4plzwn.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>B</color>
+        <manacost>WB</manacost>
+        <type>Creature - Cat Critter Fan</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Protection from legendary creatures
+Wither (This creature deals damage in the form of -1/-1 counters.)
+</text>
+      </card>
+    
+      <card>
+        <name>Royal Nightguard</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/203/7/8/royal_nightguard_by_sorden-d4gyv8l.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <color>B</color>
+        <manacost>2{W/B}{W/B}</manacost>
+        <type>Creature - Pegasus Pony Soldier</type>
+        <pt>3/2</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+Royal Nightguard has lifelink as long as you control another Pegasus or Soldier.
+</text>
+      </card>
+     
+	  <card>
+        <name>Bunnylope Herd</name>
+        <set picURL="http://fc07.deviantart.net/fs70/f/2012/340/b/b/bunnylope_herd_by_sorden-d4t8ff0.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <manacost>1BG</manacost>
+        <type>Creature - Rabbit Critter Mutant</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever a player casts a bronze- bordered or silver-bordered spell, regenerate Bunnylope Herd. It gains trample until the end of next turn.
+Sacrifice a Critter: Put a +1/+1 counter on Bunnylope Herd.
+</text>
+      </card>
+	  
+      <card>
+        <name>Nest Of Snakes</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/203/e/f/nest_of_snakes_by_sorden-d41dqm3.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <color>G</color>
+        <manacost>1{B/G}</manacost>
+        <type>Creature - Snake Critter</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>{1}{B/G}: Regenerate Nest of Snakes</text>
+      </card>
+
+	  <card>
+        <name>Appleloosan Settler</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/203/e/c/appleloosan_settlers_by_sorden-d3k2sq0.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>U</color>
+        <manacost>1GU</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>0/0</pt>
+        <tablerow>2</tablerow>
+        <text>Appleloosan Settler enters the battlefield with a +1/+1 counter on it.
+Landfall – Whenever a land enters the battlefield under your control, proliferate. (You may choose any number of permanents and/or players with counters on them, then give each another counter of a kind already there.)</text>
+      </card>
+	  
+	  <card>
+        <name>Caramel</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/203/7/c/caramel_and_toffee_by_sorden-d4p3ftm.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <color>U</color>
+        <manacost>2{G/U}</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>1/3</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever this creature transforms into Caramel, he gains hexproof until end of turn.
+{1}{R/W}: Transform Caramel.</text>
+      </card>
+	  
+	  <card>
+        <name>Toffee</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/203/6/c/toffee_by_sorden-d5877ei.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <manacost></manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>3/1</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever this creature transforms into Toffee, she gains first strike until end of turn.
+{1}{G/U}: Transform Toffee.</text>
+      </card>
+	  
+	  <card>
+        <name>Berry Punch</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/203/6/c/toffee_by_sorden-d5877ei.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <manacost>1UR</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>1/4</pt>
+        <tablerow>2</tablerow>
+        <text>Berry Punch doesn’t untap during your untap step.
+Whenever you sacrifice a snack, untap Berry Punch and you may switch her power and toughness until end of turn.</text>
+      </card>
+	  
+      <card>
+        <name>Phantasmal Pilferer</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/204/9/6/phantasmal_pilferer_by_sorden-d58cfu3.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <color>R</color>
+        <manacost>3{U/R}{U/R}</manacost>
+        <type>Creature - Illusion</type>
+        <pt>4/4</pt>
+        <tablerow>2</tablerow>
+        <text>When Phantasmal Pilferer enters the battlefield, you may discard a card. If you do, draw two cards, then discard a card.</text>
+      </card>
+
+      <card>
+        <name>Diligent Fashionista</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/340/0/8/diligent_fashionista_by_sorden-d4qw8wi.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <manacost>RW</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>When Diligent Fashionista enters the battlefield, up to two target creatures gain glamor and haste until the beginning of your next upkeep. (Whenever a glamorous creature attacks, you may tap target creature with equal or lower power. Whenever a glamorous creature blocks you may have target creature with equal or lower toughness not untap during its controller's next untap step.)</text>
+      </card>
+
+      <card>
+        <name>Royal Guard Unicorn</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/203/8/6/royal_guard_unicorn_by_sorden-d3k60ks.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <color>W</color>
+        <manacost>{R/W}{R/W}</manacost>
+        <type>Creature - Unicorn Pony Soldier</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>First strike
+Royal Guard Unicorn has protection from red and white as long as you control another Unicorn or Soldier.</text>
+      </card>
+
+	  
+	  
+      <card>
+        <name>Angry Bees</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/203/3/3/angry_bees_by_sorden-d41mgeb.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>G</manacost>
+        <type>Creature - Insect Critter</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Reach
+Wither (This creature deals damage to creatures in the form of -1/-1 counters.)</text>
+      </card>
+
+      <card>
+        <name>Beholden Bear</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/203/6/6/beholden_bear_by_sorden-d4u0usg.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>1G</manacost>
+        <type>Creature - Bear Critter Fan</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever a legendary permanent enters the battlefield, you gain 2 life.</text>
+      </card>
+
+      <card>
+        <name>Buffalo Brave</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/340/c/8/buffalo_brave_by_sorden-d3k2ysi.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>3G</manacost>
+        <type>Creature - Buffao Warrior</type>
+        <pt>3/4</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever a player casts an Earth Pony spell, Buffalo Brave gains vigilance until the end of next turn.</text>
+      </card>
+
+      <card>
+        <name>Cupcakes, Cupcakes, Cupcakes!</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/204/0/d/cupcakes_cupcakes_cupcakes_by_sorden-d3k36eb.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>1G</manacost>
+        <type>Snack Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Cupcakes, Cupcakes, Cupcakes! Enters the battlefield, put two colorless snack tokens onto the battlefield.
+{2}, Sacrifice a snack: Creatures you and your teammates control get +1/+1 until end of turn. Activate this only during a players main phase.
+</text>
+      </card>
+
+      <card>
+        <name>Dredge Dogs</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/341/4/4/dredge_dogs_by_sorden-d58cf79.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>4G</manacost>
+        <type>Creature - Hound</type>
+        <pt>5/4</pt>
+        <tablerow>2</tablerow>
+        <text>When Dredge Dogs enters the battlefield, you may have each player put a permanent card from his or her graveyard onto the battlefield.</text>
+      </card>
+
+      <card>
+        <name>Errant Chicken</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/203/9/d/errant_chicken_by_sorden-d3khcpm.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>2G</manacost>
+        <type>Creature - Bird Critter</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>When Errant Chicken leaves the battlefield, you may search your library for a land card and put it onto the battlefield tapped under target player's control. If you do, shuffle your library.</text>
+      </card>
+
+      <card>
+        <name>Flock Of Sheep</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/203/4/a/flock_of_sheep_by_sorden-d4sxu5h.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>4G</manacost>
+        <type>Creature - Sheep Critter</type>
+        <pt>4/4</pt>
+        <tablerow>2</tablerow>
+        <text>Flock of Sheep can't be blocked except by two or more creatures.</text>
+      </card>
+
+      <card>
+        <name>Foalish Admirer</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/203/5/2/foalish_admirer_by_sorden-d4jugl5.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>G</manacost>
+        <type>Creature - Pony Foal Fan</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>{T}, Reveal a legendary card from your hand: Add one mana of any of the revealed cards colors to your mana pool.</text>
+      </card>
+
+      <card>
+        <name>Skittish Cow Herd</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/203/0/a/skittish_cow_herd_by_sorden-d4mkew6.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>5G</manacost>
+        <type>Creature - Cow Critter Fan</type>
+        <pt>5/5</pt>
+        <tablerow>2</tablerow>
+        <text>Skittish Cow Herd has vigilance and trample as long as it has a +1/+1 counter on it.</text>
+      </card>
+
+      <card>
+        <name>Startled Skunks</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/203/a/c/startled_skunks_by_sorden-d4ep3wn.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>3G</manacost>
+        <type>Creature - Critter</type>
+        <pt>3/2</pt>
+        <tablerow>2</tablerow>
+        <text>Flash, Hexproof</text>
+      </card>
+
+      <card>
+        <name>Timberwolf Pack</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/203/e/0/timberwolf_pack_by_sorden-d4su8hf.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>3G</manacost>
+        <type>Creature - Elemental Wolf Critter</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Intimidate
+Whenever Timberwolf Pack attacks, it gets +1/+1 until end of turn for each Forest defending player controls.
+</text>
+      </card>
+
+      <card>
+        <name>Very Best Friends</name>
+        <set picURL="http://fc00.deviantart.net/fs71/f/2012/204/4/3/very_best_friends_by_sorden-d48d1m1.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>1G</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Put a +1/+1 counter on each of two target creatures. (+1/+1 counters and -1/-1 counters remove each other.)</text>
+      </card>
+
+    <card>
+        <name>Brohoof</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/204/5/0/brohoof_by_sorden-d4thhb8.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>G</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Target creature gets +2/+2 until end of turn.
+If that creature is a Fan, you may have another target Fan creature get +2/+2 until end of turn.</text>
+      </card>	  
+
+      <card>
+        <name>Hugh Jelly</name>
+        <set picURL="http://fc04.deviantart.net/fs70/f/2012/203/6/5/hugh_jelly_by_sorden-d4rdqod.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>1G</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>0/3</pt>
+        <tablerow>2</tablerow>
+        <text>When Hugh Jelly enters the battlefield, you may search your library for a card named Zap Apple Jam, put it onto the battlefield, then shuffle you library.
+</text>
+      </card>
+	  
+      <card>
+        <name>Leafing the Dream</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/203/f/9/leafing_the_dream_by_sorden-d3li8o7.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+        <manacost>1G</manacost>
+        <type>Enchantment - Aura</type>
+        <tablerow>1</tablerow>
+        <text>Enchant creature
+Enchanted creature is a 0/4 Pony Plant creature with defender and no other abilities.
+</text>
+      </card>
+
+
+	  
+      <card>
+        <name>Buffalo Raider</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/340/d/c/buffalo_raider_by_sorden-d3k30kp.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>4R</manacost>
+        <type>Creature - Buffalo Warrior</type>
+        <pt>4/3</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever a player casts an Earth Pony spell, Buffalo Raider gains first strike until the end of next turn.</text>
+      </card>
+
+      <card>
+        <name>Canterlot Maredame</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/340/a/e/canterlot_maredame_by_sorden-d4iwr52.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>2R</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>3/1</pt>
+        <tablerow>2</tablerow>
+        <text>Glamor (Whenever this creature attacks, you may tap target creature with equal or lower power. Whenever this creature blocks, you may have target creature with equal or lower toughness not untap during its controller's next untap step)</text>
+      </card>
+
+      <card>
+        <name>Dig Dogs</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/341/0/7/dig_dogs_by_sorden-d4pca6i.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>2R</manacost>
+        <type>Creature - Hound</type>
+        <pt>2/3</pt>
+        <tablerow>2</tablerow>
+        <text>When Dig Dogs enters the battlefield, you may have each player discard his or her hand then draw that many cards.</text>
+      </card>
+
+      <card>
+        <name>Fervent Shipper</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/203/5/f/fervent_shipper_by_sorden-d4qe2io.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>R</manacost>
+        <type>Creature - Pony Foal Fan</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Fervent Shipper gets +2/+2 and haste as long as you control exactly two legendary creatures.</text>
+      </card>
+
+      <card>
+        <name>Former Admirer</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/203/7/1/former_admirer_by_sorden-d4qi4un.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>2R</manacost>
+        <type>Creature - Unicorn Pony Fan</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever a player discards a legendary card, Former Admirer deals 1 damage to target creature or player.
+{T}, Discard a card: Draw a card.</text>
+      </card>
+
+      <card>
+        <name>Friendly Rivalry</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/204/0/7/friendly_rivalry_by_sorden-d48d1c3.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>1R</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Put a +1/+1 counter on target creature and a -1/-1 counter on another target creature.  (+1/+1 counters and -1/-1 counters remove each other.)</text>
+      </card>
+
+      <card>
+        <name>Grateful Manticore</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/203/7/2/grateful_manticore_by_sorden-d3w00dj.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>3R</manacost>
+        <type>Creature - Manticore Critter Fan</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>Grateful Manticore has trample and must be blocked if able as long as it has a +1/+1 counter on it.</text>
+      </card>
+
+      <card>
+        <name>Hot Sauce Cupcakes</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/204/b/3/hot_sauce_cupcakes_by_sorden-d3k3ez1.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>1R</manacost>
+        <type>Snack Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Hot Sauce Cupcakes enters the battlefield, put two colorless snack tokens onto the battlefield.
+{1}, Sacrifice a snack: Hot Sauce Cupcakes deals 1 damage to target creature or player.</text>
+      </card>
+
+      <card>
+        <name>Muffin-Mad Mob</name>
+        <set picURL="http://fc07.deviantart.net/fs70/f/2012/203/8/0/muffin_mad_mob_by_sorden-d4sqxmf.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>4RR</manacost>
+        <type>Creature - Pony</type>
+        <pt>4/4</pt>
+        <tablerow>2</tablerow>
+        <text>Trample
+Whenever Muffin-Mad Mob attacks, each player sacrifices a snack.
+Whenever a player sacrifices a snack, Muffin-Mad Mob gets +1/+0 until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Lily</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/203/2/e/lily_by_sorden-d4o4i21.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>1R</manacost>
+        <type>Creature - Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever a player casts a spell, tap Lily.
+</text>
+      </card>
+
+      <card>
+        <name>Rule 34</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/204/a/3/rule_34_by_sorden-d3k60xm.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>RR</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Rule 34 deals 3 damage to target creature. If that creature is legendary, Rule 34 deals 4 damage to that creature’s controller.</text>
+      </card>	  
+	  
+      <card>
+        <name>Buffalo Ballet Brigade</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/203/b/5/buffalo_ballet_brigade_by_sorden-d4awaju.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>2R</manacost>
+        <type>Creature - Buffalo</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>Haste
+At the beginning of your end step, return Buffalo Ballet Brigade to its owner’s hand.
+</text>
+      </card>	  
+
+      <card>
+        <name>Taste The Rainbow</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/204/8/3/taste_the_rainbow_by_sorden-d3k67tk.png" picURLHq="" picURLSt="">IPU</set>
+        <color>R</color>
+        <manacost>R</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Taste the Rainbow deals X damage to target creature or player, where X is the number of colours among permanents you control.
+        </text>
+      </card>
+	  
+	  
+	  
+      <card>
+        <name>Buzzing Buzzard</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/203/b/3/buzzing_buzzard_by_sorden-d4hkrte.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>4B</manacost>
+        <type>Creature - Bird Critter</type>
+        <pt>4/1</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+When Buzzing Buzzard leaves the battlefield, remove a counter from each of any number of target permanents.
+</text>
+      </card>
+
+      <card>
+        <name>Clingy Pests</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/203/1/5/clingy_pests_by_sorden-d4m70y9.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>2B</manacost>
+        <type>Creature - Parasprite Critter Fan</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Clingy Pests has flying and persist as long as it has a +1/+1 counter on it. (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)</text>
+      </card>
+
+      <card>
+        <name>Discordant Touch</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/204/6/5/discordant_touch_by_sorden-d4l5wa9.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>1B</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Remove all +1/+1 counters from target creature, then put a -1/-1 counter on that creature.</text>
+      </card>
+
+      <card>
+        <name>Disgrace</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/204/c/9/disgrace_by_sorden-d3k38yb.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>B</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Destroy target creature with a -1/-1 counter on it.</text>
+      </card>
+
+	  <card>
+        <name>Dread Dogs</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/341/9/5/dread_dogs_by_sorden-d4pgaey.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>3B</manacost>
+        <type>Creature - Hound</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>When Dread Dogs enters the battlefield, you may have each player sacrifice a creature.</text>
+      </card>
+	  
+      <card>
+        <name>Foalsnatcher</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/203/c/7/foalsnatcher_by_sorden-d4ppxup.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>1B</manacost>
+        <type>Creature - Plant Horror</type>
+        <pt>1/4</pt>
+        <tablerow>2</tablerow>
+        <text>Defender
+Wither (This deals damage in the form of -1/-1 counters.)
+</text>
+      </card>
+
+      <card>
+        <name>Gobble The Goodies</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/340/e/4/gobble_the_goodies_by_sorden-d4m00oo.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>1B</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Each player sacrifices half the snacks he or she controls, rounded up.
+Gain 1 life for each snack that was sacrificed this turn.
+</text>
+      </card>
+
+      <card>
+        <name>Greedy Pig</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/204/a/2/greedy_pig_by_sorden-d58cecu.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>B</manacost>
+        <type>Creature - Boar Critter</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>When Greedy Pig enters the battlefield, target player sacrifices a snack.</text>
+      </card>
+
+      <card>
+        <name>Harass</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/204/7/8/harass_by_sorden-d48d1g0.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>1B</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Put a -1/-1 counter on each of two target creatures. (+1/+1 counters and -1/-1 counters remove each other.)</text>
+      </card>
+
+      <card>
+        <name>Nimble Ferrets</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/340/d/d/nimble_ferrets_by_sorden-d58cerk.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>1B</manacost>
+        <type>Creature - Ferret Critter</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>Nimble Ferrets can’t be blocked by creatures whose toughness is greater than their power.</text>
+      </card>
+
+      <card>
+        <name>Party Of One</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/204/d/8/party_of_one_by_sorden-d3k3msy.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>1B</manacost>
+        <type>Snack Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Party of One enters the battlefield, put two colorless snack tokens onto the battlefield.
+{2}, Sacrifice a snack: Target player discards a card from his or her hand. Activate this ability only any time you could cast a sorcery.
+</text>
+      </card>
+
+      <card>
+        <name>Ponyrazzi</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/203/9/6/ponyrazzi_by_sorden-d4qpr8k.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>3B</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>2/4</pt>
+        <tablerow>2</tablerow>
+        <text>Whenever Ponyrazzi becomes tapped, you may put a -1/-1 counter on target tapped creature.</text>
+      </card>
+
+      <card>
+        <name>Zombie Pony</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/203/b/8/zombie_pony_by_sorden-d3k6gis.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>2B</manacost>
+        <type>Creature - Zombie Pony</type>
+        <pt>3/2</pt>
+        <tablerow>2</tablerow>
+        <text>Intimidate
+When a counter is placed on Zombie Pony, sacrifice it.
+</text>
+      </card>
+
+      <card>
+        <name>Corrupted Countenance</name>
+        <set picURL="http://fc05.deviantart.net/fs71/f/2012/203/a/d/corrupted_countenance_by_sorden-d4q111o.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>5B</manacost>
+        <type>Creature - Pony Fan Art</type>
+        <pt>5/3</pt>
+        <tablerow>2</tablerow>
+        <text>At the beginning of each end step, if a legendary creature died that turn, you may return Corrupted Countenance from your graveyard to your hand.
+</text>
+      </card>
+
+      <card>
+        <name>Grimdark Fanfic</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/204/e/2/grimdark_fanfic_by_sorden-d3k3e0o.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+        <manacost>3B</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Destroy target creature.
+Put a colorless snack token onto the battlefield.
+</text>
+      </card>
+
+	  
+	  
+      <card>
+        <name>Affectionate Flamingo</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/203/f/6/affectionate_flamingo_by_sorden-d4majsh.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>U</manacost>
+        <type>Creature - Bird Critter Fan</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Affectionate Flamingo has flying and hexproof as long as it has a +1/+1 counter on it.</text>
+      </card>
+
+      <card>
+        <name>Appleloosan Armament Bakers</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/203/4/c/appleloosan_armament_bakers_by_sorden-d4sdvzv.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>2U</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>0/2</pt>
+        <tablerow>2</tablerow>
+        <text>When Appleloosan Armament Bakers enters the battlefield, you may search your library for a card named Pie, put it onto the battlefield, then shuffle your library.
+{T}: Target creature gets -2/-0 until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Awesome Owl</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/203/f/d/awesome_owl_by_sorden-d4tds0r.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>1U</manacost>
+        <type>Creature - Bird Critter Fan</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+When Awesome Owl enters the battlefield, you may reveal a legendary card from your hand. If you do, draw a card.
+</text>
+      </card>
+
+      <card>
+        <name>Canterlot Scholar</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/340/d/e/canterlot_scholar_by_sorden-d3k32d4.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>1U</manacost>
+        <type>Creature - Unicorn Pony Wizard</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>When you cast Canterlot Scholar, scry 2.
+Whenever a player casts a Unicorn spell, scry 2.
+(To scry 2, look at the top two cards of your library. Put any number of them on the bottom of your library in any order and the rest on top in any order.)</text>
+      </card>
+
+      <card>
+        <name>Regal Eagle</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/340/f/7/regal_eagle_by_sorden-d4ton5m.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>3U</manacost>
+        <type>Creature - Bird Critter Fan</type>
+        <pt>3/2</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+Regal Eagle has first strike as long as you control a white legendary permanent or a red legendary permanent.
+</text>
+      </card>
+
+      <card>
+        <name>Cyclopean Squid</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/203/3/7/cyclopean_squid_by_sorden-d4t45fk.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>2U</manacost>
+        <type>Creature - Squid Critter</type>
+        <pt>3/3</pt>
+        <tablerow>2</tablerow>
+        <text>Cyclopean Squid can't attack or block unless defending player controls an Island or a Foal.</text>
+      </card>
+
+      <card>
+        <name>Friendship By The Book</name>
+        <set picURL="http://fc00.deviantart.net/fs71/f/2012/204/f/1/friendship_by_the_book_by_sorden-d48d16n.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>1U</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Proliferate. (You choose any number of permanents and/or players with counters on them, then give each another counter of a kind already there.)
+Move a counter from target creature onto another target creature.
+</text>
+      </card>
+
+      <card>
+        <name>Neighsay</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/204/5/c/neighsay_by_sorden-d3k3lev.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>1U</manacost>
+        <type>Tribal Instant - Unicorn Pony</type>
+        <tablerow>3</tablerow>
+        <text>Counter target activated or triggered ability. If a Pony's ability is countered this way, draw a card.</text>
+      </card>
+
+      <card>
+        <name>Rainbow Crash</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/204/2/1/rainbow_crash_by_sorden-d3k5yvr.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>U</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Return target nonland permanent to its owners hand if the amount of colours it has is less than the amount of colours among permanents you control.</text>
+      </card>
+
+      <card>
+        <name>Surprise!</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/204/b/2/surprise_by_sorden-d4lksk2.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>U</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Counter target noncreature spell unless its controller pays {X}, where X is the number of creatures you control with +1/+1 counters on them.</text>
+      </card>
+
+      <card>
+        <name>Too Much Pie</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/204/f/b/too_much_pie_by_sorden-d3k6aqe.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>1U</manacost>
+        <type>Snack Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Too Much Pie enters the battlefield, put two colorless snack tokens onto the battlefield.
+{3}, Sacrifice a snack: Return target creature to its owner's hand.
+</text>
+      </card>
+
+	        <card>
+        <name>Colgate</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/203/a/3/colgate_by_sorden-d4nsjck.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>U</manacost>
+        <type>Creature - Bird Critter Fan</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>When Colgate enters the battlefield, remove up to three counters from target permanent.</text>
+      </card>
+	  
+	        <card>
+        <name>Doctor Hooves</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/203/1/2/doctor_hooves_by_sorden-d4nup17.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>U</manacost>
+        <type>Creature - Bird Critter Fan</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>When Doctor Hooves enters the battlefield, proliferate. (You may choose any number of permanents and/or players with counters on them, then give each another counter of a kind already there.)
+Persist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner’s control with a -1/-1 counter on it.)</text>
+      </card>
+	  
+      <card>
+        <name>Executive Veto</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/204/c/4/executive_veto_by_sorden-d3k3al7.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+        <manacost>U</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Counter target Pony spell.</text>
+      </card>
+
+	  
+	  
+      <card>
+        <name>Baked Bads</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/204/8/d/baked_bads_by_sorden-d3k2vss.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>1W</manacost>
+        <type>Snack Enchantment</type>
+        <tablerow>1</tablerow>
+        <text>When Baked Bads enters the battlefield, put two colorless snack tokens onto the battlefield.
+{1}, Sacrifice a snack: Tap target creature.
+</text>
+      </card>
+
+	  <card>
+        <name>Banish From Equestria</name>
+        <set picURL="http://fc00.deviantart.net/fs71/f/2012/204/4/9/banish_from_equestria_by_sorden-d3k2wl9.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>WW</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Put target creature or enchantment into its owner’s library second from the top.</text>
+      </card>
+	  
+      <card>
+        <name>Birthday Pony</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/203/8/d/birthday_pony_by_sorden-d4s7tuw.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>3W</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>2/4</pt>
+        <tablerow>2</tablerow>
+        <text>Lifelink
+When Birthday Pony enters the battlefield, you may search your library for a card named Cake, put it onto the battlefield, then shuffle your library.
+</text>
+      </card>
+
+      <card>
+        <name>Canterlot Cavelier</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/340/0/a/canterlot_cavalier_by_sorden-d4j3d41.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>1W</manacost>
+        <type>Creature - Unicorn Pony</type>
+        <pt>1/3</pt>
+        <tablerow>2</tablerow>
+        <text>Glamor (Whenever this creature attacks, you may tap target creature with equal or lower power. Whenever this creature blocks, you may have target creature with equal or lower toughness not untap during its controller's next untap step)</text>
+      </card>
+
+      <card>
+        <name>Canterlot Porter</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/203/e/8/canterlot_porter_by_sorden-d4r0wia.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>4W</manacost>
+        <type>Creature - Unicorn Pony</type>
+        <pt>3/5</pt>
+        <tablerow>2</tablerow>
+        <text>When Canterlot Porter enters the battlefield, you may attach any number of target Equipments you control to it.</text>
+      </card>
+
+      <card>
+        <name>Common Travails</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/204/3/5/common_travails_by_sorden-d58cdei.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>1W</manacost>
+        <type>Sorcery</type>
+        <tablerow>3</tablerow>
+        <text>Put a +1/+1 counter on each tapped creature you control.</text>
+      </card>
+
+      <card>
+        <name>Cooped Chickens</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/203/d/0/cooped_chickens_by_sorden-d3khcgb.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>W</manacost>
+        <type>Creature - Bird Critter</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>When Cooped Chickens leaves the battlefield, you gain 2 life for each counter on it.</text>
+      </card>
+
+      <card>
+        <name>Fight For Your Friendship</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/204/1/5/fight_for_your_friendship_by_sorden-d4eg0vx.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>1W</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Remove all -1/-1 counters from target creature, then put a +1/+1 counter on that creature.</text>
+      </card>
+
+      <card>
+        <name>Gossamer Wings</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/340/0/7/gossamer_wings_by_sorden-d3k3d6i.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>W</manacost>
+        <type>Enchantment - Aura</type>
+        <tablerow>1</tablerow>
+        <text>Enchant creature
+Enchanted creature has flying and glamor (Whenever this creature attacks, you may tap target creature with equal or lower power. Whenever this creature blocks, you may have target creature with equal or lower toughness not untap during its controller's next untap step)
+</text>
+      </card>
+
+      <card>
+        <name>Grumpy Goat</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/203/2/3/grumpy_goat_by_sorden-d4mepgg.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>1W</manacost>
+        <type>Creature - Goat Critter Fan</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>Grumpy Goat has first strike and vigilance as long as it has a +1/+1 counter on it.</text>
+      </card>
+
+      <card>
+        <name>Indignant Waiter</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/203/e/1/indignant_waiter_by_sorden-d4s0v42.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>2W</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>{W}: Search your library for a snack card, reveal it, and put it into your hand. Then shuffle Indignant Waiter into your library.
+</text>
+      </card>
+
+      <card>
+        <name>Shattered Dreams</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/204/d/7/shattered_dreams_by_sorden-d4eyly6.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>2W</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>Destroy all enchantments that share a color with target creature.</text>
+      </card>
+
+      <card>
+        <name>Sisterhooves Siblings</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/203/a/3/sisterhooves_siblings_by_sorden-d4rl3aw.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>2W</manacost>
+        <type>Creature - Unicorn Pony</type>
+        <pt>1/2</pt>
+        <tablerow>2</tablerow>
+        <text>When Sisterhooves Siblings enters the battlefield, put a 1/1 colorless Pony Foal creature token onto the battlefield.
+{T}: Target Foal creature gets +1/+2 until end of turn.
+</text>
+      </card>
+
+      <card>
+        <name>Carrot Top</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/203/d/1/carrot_top_by_sorden-d4e835d.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>1W</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>When Carrot Top enters the battlefield, target player puts a colorless snack token onto the battlefield.
+</text>
+      </card>
+
+	  <card>
+        <name>Love and Tolerate</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/204/d/7/love_and_tolerate_by_sorden-d4cixm3.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>2W</manacost>
+        <type>Instant</type>
+        <tablerow>3</tablerow>
+        <text>All creatures target player controls gain protection from non-Ponies until end of turn.</text>
+      </card>
+	  
+      <card>
+        <name>Nurse Redheart</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/203/1/f/nurse_redheart_by_sorden-d4nz3j6.png" picURLHq="" picURLSt="">IPU</set>
+        <color>W</color>
+        <manacost>3W</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Flash
+When Nurse Redheart enters the battlefield, you may remove a -1/-1 counter from any number of target creatures.
+</text>
+      </card>	  
+	  
+	  
+	  
+      <card>
+        <name>A Rock</name>
+        <set picURL="http://fc00.deviantart.net/fs71/f/2012/203/6/d/a_rock_by_sorden-d3kk6tr.png" picURLHq="" picURLSt="">IPU</set>
+       <manacost>1</manacost>
+        <type>Artifact - Equestrian Landmark</type>
+        <tablerow>0</tablerow>
+        <text>A Rock is indestructible (Effects that say 'destroy' don't destroy it.)
+When a legendary pony enters the battlefield under your control, you may sacrifice A Rock. If you do, add one mana of any color to your mana pool and draw a card. (Put A Rock into your graveyard when you sacrifice it.)
+</text>
+      </card>
+
+      <card>
+        <name>Adoring Fans</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/340/8/c/adoring_fans_by_sorden-d4q83hy.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>4</manacost>
+        <type>Creature - Pony Fan</type>
+        <pt>*/*</pt>
+        <tablerow>2</tablerow>
+        <text>Adoring Fans’ power and toughness are each equal to the number of Fans you control.
+Whenever a player casts a Fan spell, you may put a +1/+1 counter on target legendary creature.
+</text>
+      </card>
+
+      <card>
+        <name>Amicable Letter</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/203/9/a/amicable_letter_by_sorden-d3k2k84.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact</type>
+        <tablerow>0</tablerow>
+        <text>{2/G}{2/U}{T}: Draw a card.
+At the beginning of your end step, target opponent gains control of Amicable Letter.
+</text>
+      </card>
+
+      <card>
+        <name>Cake</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/204/5/1/cake_by_sorden-d4obqy4.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>1</manacost>
+        <type>Snack</type>
+        <tablerow>0</tablerow>
+        <text>When Cake enters or leaves the battlefield, put a colorless snack token onto the battlefield and gain 2 life.
+</text>
+      </card>
+
+      <card>
+        <name>Clony</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/203/a/1/clony_by_sorden-d3k34ao.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Creature - Pony</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>When Clony enters the battlefield, you may search your library for a card with the same name as a nonlegendary Pony creature on the battlefield, reveal it, and put it into your hand. If you do, shuffle your library.</text>
+      </card>
+
+      <card>
+        <name>Cloudsdale Worker</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/340/3/4/cloudsdale_worker_by_sorden-d3k35f2.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>3</manacost>
+        <type>Creature - Pegasus Pony</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+When you cast Cloudsdale Worker, add {U}, {R}, or {G} to your mana pool.
+Whenever a player casts a Pegasus Spell, add {U}, {R}, or {G} to your mana pool.
+</text>
+      </card>
+
+      <card>
+        <name>Dangerous Creature</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/203/7/3/dangerous_creature_by_sorden-d3kzz7b.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>3</manacost>
+        <type>Artifact Creature - Construct</type>
+        <pt>4/2</pt>
+        <tablerow>2</tablerow>
+        <text>Champion a Pony (When this enters the battlefield, sacrifice it unless you exile another permanent you control that is a Pony. When this leaves the battlefield, return that card to the battlefield.)
+When Dangerous Creature champions a Pony, put a +1/+1 counter on it if the championed Pony is a Foal.
+</text>
+      </card>
+
+      <card>
+        <name>Twinkling Balloon</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/203/6/b/twinkling_balloon_by_sorden-d4e48nk.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact</type>
+        <tablerow>0</tablerow>
+        <text>{T}, Tap an untapped creature you control: That creature and target creature gain flying until end of turn</text>
+      </card>
+
+      <card>
+        <name>Map To Ancient Ruins</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/203/3/f/map_to_ancient_ruins_by_sorden-d4dbmpn.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Map</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool. If a land or an Equestrian artifact entered the battlefield this turn, you may add {U}, {B}, or {R} to your mana pool instead.
+</text>
+      </card>
+
+      <card>
+        <name>Map To Appleloosa</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/203/2/3/map_to_appleloosa_by_sorden-d4d8p3a.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Map</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool. If a land or an Equestrian artifact entered the battlefield this turn, you may add {G}, {W}, or {U} to your mana pool instead.</text>
+      </card>
+
+      <card>
+        <name>Map To Canterlot Academy</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/203/c/7/map_to_canterlot_academy_by_sorden-d4d8p9m.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Map</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool. If a land or an Equestrian artifact entered the battlefield this turn, you may add {W}, {U}, or {B} to your mana pool instead.</text>
+      </card>
+
+      <card>
+        <name>Map To Canterlot Palace</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/203/a/a/map_to_canterlot_palace_by_sorden-d4devf8.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Map</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool. If a land or an Equestrian artifact entered the battlefield this turn, you may add {R}, {W}, or {U} to your mana pool instead.
+</text>
+      </card>
+
+      <card>
+        <name>Map To Cloudsdale</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/203/3/f/map_to_cloudsdale_by_sorden-d4dl2mg.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Map</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool. If a land or an Equestrian artifact entered the battlefield this turn, you may add {U}, {R}, or {G} to your mana pool instead.</text>
+      </card>
+
+      <card>
+        <name>Map To Dragon Mountain</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/203/f/0/map_to_dragon_mountain_by_sorden-d4dbmte.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Map</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool. If a land or an Equestrian artifact entered the battlefield this turn, you may add {B}, {R}, or {G} to your mana pool instead.</text>
+      </card>
+
+      <card>
+        <name>Map To Everfree Forest</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/203/d/3/map_to_everfree_forest_by_sorden-d4dl2py.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Map</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool. If a land or an Equestrian artifact entered the battlefield this turn, you may add {B}, {G}, or {W} to your mana pool instead.
+</text>
+      </card>
+
+      <card>
+        <name>Map To Froggy Bottom Bog</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/203/a/4/map_to_froggy_bottom_bog_by_sorden-d4di3y3.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Map</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool. If a land or an Equestrian artifact entered the battlefield this turn, you may add {G}, {U}, or {B} to your mana pool instead.
+</text>
+      </card>
+
+      <card>
+        <name>Map To Manehattan</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/203/d/e/map_to_manehattan_by_sorden-d4di40t.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Map</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool. If a land or an Equestrian artifact entered the battlefield this turn, you may add {W}, {B}, or {R} to your mana pool instead.</text>
+      </card>
+
+      <card>
+        <name>Map To Stampeding Grounds</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/203/0/d/map_to_stampeding_grounds_by_sorden-d4devc6.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Equestrian Map</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool. If a land or an Equestrian artifact entered the battlefield this turn, you may add {R}, {G}, or {W} to your mana pool instead.</text>
+      </card>
+
+      <card>
+        <name>Nightmare Night Costume</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/203/1/e/nightmare_night_costume_by_sorden-d4f2q4b.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>1</manacost>
+        <type>Artifact - Attire Equipment</type>
+        <tablerow>0</tablerow>
+        <text>Equipped creature gets +1/+1
+Whenever equipped creature deals combat damage to a player, that playerchooses a snack he or she controls. You gain control of that snack
+Equip {2}       
+</text>
+      </card>
+
+      <card>
+        <name>Party Cannon</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/204/b/e/party_cannon_by_sorden-d4oljwd.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>3</manacost>
+        <type>Snack Artifact</type>
+        <tablerow>0</tablerow>
+        <text>Snack Artifact
+When Party Cannon enters the battlefield, put two colorless snack tokens onto the battlefield.
+{T}, Sacrifice a snack: Put a +1/+1 counter on target creature.
+</text>
+      </card>
+
+      <card>
+        <name>Pie</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/204/4/c/pie_by_sorden-d4of6dp.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>1</manacost>
+        <type>Snack</type>
+        <tablerow>0</tablerow>
+        <text>When Pie enters or leaves the battlefield, put a colorless snack token onto the battlefield and untap target creature.
+</text>
+      </card>
+
+      <card>
+        <name>Ponyville</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/199/9/f/ponyville_by_sorden-d3k5xsf.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>{T}: Add 1 to your mana pool
+{T}: Add one mana of any color to your mana pool. Spend this mana only to cast Pony spells or activate abilities of Ponies
+</text>
+      </card>
+
+      <card>
+        <name>Ponyville Town Hall</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/204/f/e/ponyville_town_hall_by_sorden-d4rru0z.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>1</manacost>
+        <type>Artifact - Equestrian Fortification</type>
+        <tablerow>0</tablerow>
+        <text>Whenever fortified land becomes tapped, put a +1/+1 counter on each Pony Creature that entered the battlefield this turn.
+Fortify {3} ({3}: Attach to target land you control. Fortify only as a sorcery. This card enters the battlefield unattached and stays on the battlefield if the land leaves.)
+</text>
+      </card>
+
+      <card>
+        <name>Saddlebags</name>
+        <set picURL="http://fc03.deviantart.net/fs71/f/2012/204/0/6/saddlebags_by_sorden-d3lew2a.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>0</manacost>
+        <type>Artifact - Attire Equipment</type>
+        <tablerow>0</tablerow>
+        <text>Equipped creature gets +0/+2.
+Sacrifice two snacks: Regenerate equipped creature.
+Equip {2}
+</text>
+      </card>
+
+	        <card>
+        <name>Sneaky-Suit</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/340/c/a/sneaky_suit_by_sorden-d58cd0c.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>2</manacost>
+        <type>Artifact - Attire Equipment</type>
+        <tablerow>0</tablerow>
+        <text>Equipped creature gets +2/+0 and has '{T}: Target opponent reveals the top card of his or her library. Then, if the revealed card isn’t a creature card, untap this creature and it gains protection from creatures that opponent controls until end of turn.'
+Equip {4}
+</text>
+      </card>
+	  
+      <card>
+        <name>Sweet Apple Acres</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/199/0/b/sweet_apple_acres_by_sorden-d3k67iu.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Land</type>
+        <tablerow>0</tablerow>
+        <text>When Sweet Apple Acres enters the battlefield, you may pay 3. If you do, put three colorless snack tokens onto the battlefield.
+{T}: Add 1 to your mana pool.
+{T}: Sacrifice a snack: Add one mana of any color to your mana pool.
+</text>
+      </card>
+
+      <card>
+        <name>Zap Apple Jam</name>
+        <set picURL="http://fc04.deviantart.net/fs71/f/2012/204/c/d/zap_apple_jam_by_sorden-d4ojcel.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>1</manacost>
+        <type>Snack</type>
+        <tablerow>0</tablerow>
+        <text>When Zap Apple Jam enters or leaves the battlefield, put a colorless snack token onto the battlefield and target land becomes the basic land type of your choice until end of turn.
+</text>
+      </card>
+
+<!--      
+      <card>
+        <name>Bon Bon</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/203/8/7/bon_bon_by_sorden-d587qg1.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost>4</manacost>
+        <type>Creature - Earth Pony</type>
+        <pt>2/1</pt>
+        <tablerow>2</tablerow>
+        <text>When Bon Bon enters the battlefield, put a special Lyra creature token onto the battlefield.
+</text>
+      </card>
+-->
+
+	  
+	  
+      <card>
+        <name>Plains A</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/204/7/d/basic_plains_a_by_sorden-d58ca7d.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Plains</type>
+        <tablerow>0</tablerow>
+        <text>W</text>
+      </card>
+	  
+      <card>
+        <name>Plains B</name>
+        <set picURL="http://fc04.deviantart.net/fs70/f/2012/204/1/8/basic_plains_b_by_sorden-d58cai6.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Plains</type>
+        <tablerow>0</tablerow>
+        <text>W</text>
+      </card>	  
+	  
+      <card>
+        <name>Plains C</name>
+        <set picURL="http://fc07.deviantart.net/fs70/f/2012/204/0/9/basc_plains_c_by_sorden-d58capv.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Plains</type>
+        <tablerow>0</tablerow>
+        <text>W</text>
+      </card>	 
+
+	        <card>
+        <name>Island A</name>
+        <set picURL="http://fc07.deviantart.net/fs71/f/2012/204/6/a/basic_island_a_by_sorden-d58cata.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Island</type>
+        <tablerow>0</tablerow>
+        <text>U</text>
+      </card>
+	  
+      <card>
+        <name>Island B</name>
+        <set picURL="http://fc01.deviantart.net/fs71/f/2012/204/1/a/basic_island_b_by_sorden-d58cb0k.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Island</type>
+        <tablerow>0</tablerow>
+        <text>U</text>
+      </card>	  
+	  
+      <card>
+        <name>Island C</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/204/c/1/basic_island_c_by_sorden-d58cb3x.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Island</type>
+        <tablerow>0</tablerow>
+        <text>U</text>
+      </card>	  
+	  
+      <card>
+        <name>Swamp A</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/204/4/2/basic_swamp_a_by_sorden-d58cb91.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Swamp</type>
+        <tablerow>0</tablerow>
+        <text>B</text>
+      </card>
+	  
+	  <card>
+        <name>Swamp B</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/204/b/4/basic_swamp_b_by_sorden-d58cbcu.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Swamp</type>
+        <tablerow>0</tablerow>
+        <text>B</text>
+      </card>
+	  
+	  <card>
+        <name>Swamp C</name>
+        <set picURL="http://fc02.deviantart.net/fs70/f/2012/204/7/d/basic_swamp_c_by_sorden-d58cbgk.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Swamp</type>
+        <tablerow>0</tablerow>
+        <text>B</text>
+      </card>
+	  
+      <card>
+        <name>Mountain A</name>
+        <set picURL="http://fc07.deviantart.net/fs70/f/2012/204/2/b/basic_mountain_a_by_sorden-d58cbkc.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Mountain</type>
+        <tablerow>0</tablerow>
+        <text>R</text>
+      </card>
+	  
+      <card>
+        <name>Mountain B</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/204/2/2/basic_mountain_b_by_sorden-d58cbo5.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Mountain</type>
+        <tablerow>0</tablerow>
+        <text>R</text>
+      </card>	  
+	  
+      <card>
+        <name>Mountain C</name>
+        <set picURL="http://fc09.deviantart.net/fs70/f/2012/204/0/2/basic_mountain_c_by_sorden-d58cbqn.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Mountain</type>
+        <tablerow>0</tablerow>
+        <text>R</text>
+      </card>	  
+	  
+      <card>
+        <name>Forest A</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/204/f/9/basic_forest_a_by_sorden-d58cbti.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Forest</type>
+        <tablerow>0</tablerow>
+        <text>G</text>
+      </card>
+
+      <card>
+        <name>Forest B</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/204/d/e/basic_forest_b_by_sorden-d58cbxe.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Forest</type>
+        <tablerow>0</tablerow>
+        <text>G</text>
+      </card>	  
+	  
+      <card>
+        <name>Forest C</name>
+        <set picURL="http://fc00.deviantart.net/fs71/f/2012/204/6/0/basic_forest_c_by_sorden-d58cc0e.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Basic Land - Forest</type>
+        <tablerow>0</tablerow>
+        <text>G</text>
+      </card>
+
+
+
+      <card>
+        <name>Dormant Dragon</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/204/6/6/dormant_dragon_token_by_sorden-d3ngkfm.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+		<color>R</color>
+		<color>G</color>
+		<manacost></manacost>
+        <type>Creature - Dragon</type>
+        <pt>5/5</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+Dormant Dragon doesn’t untap during your untap step.
+Whenever Dormant Dragon is dealt damage, untap it.
+</text>
+      </card>
+	  
+      <card>
+        <name>Parasprite A</name>
+        <set picURL="http://fc02.deviantart.net/fs71/f/2012/204/5/4/parasprite_token_a_by_sorden-d3wzdf7.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+		<color>G</color>
+        <manacost></manacost>
+        <type>Creature - Parasprite Critter</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+</text>
+      </card>
+	  
+	  <card>
+        <name>Parasprite B</name>
+        <set picURL="http://fc01.deviantart.net/fs70/f/2012/204/3/a/parasprite_token_b_by_sorden-d3wzb3b.png" picURLHq="" picURLSt="">IPU</set>
+        <color>B</color>
+		<color>G</color>
+        <manacost></manacost>
+        <type>Creature - Dragon</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+</text>
+      </card>
+	  
+      <card>
+        <name>Changeling Invader</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/204/e/9/changeling_invader_by_sorden-d58clhu.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+		<color>B</color>
+        <manacost></manacost>
+        <type>Creature - Shapeshifter</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>Flying
+</text>
+      </card>
+	  
+      <card>
+        <name>The Wonderbolts</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/204/b/a/the_wonderbolts_token_by_sorden-d41hvhz.png" picURLHq="" picURLSt="">IPU</set>
+        <color>U</color>
+		<color>B</color>
+        <manacost></manacost>
+        <type>Creature - Pegasus Pony</type>
+        <pt>2/2</pt>
+        <tablerow>2</tablerow>
+        <text>(This token is a copy of a creature named The Wonderbolts and has the same mana cost, colors and abilities.)
+</text>
+      </card>
+	  
+      <card>
+        <name>Critter A</name>
+        <set picURL="http://fc06.deviantart.net/fs71/f/2012/204/6/1/critter_token_a_by_sorden-d3lnh0a.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+	    <manacost></manacost>
+        <type>Creature - Critter</type>
+        <pt>0/1</pt>
+        <tablerow>2</tablerow>
+        <text>
+</text>
+      </card>
+	  
+      <card>
+        <name>Critter B</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/204/8/8/critter_token_b_by_sorden-d4fzx26.png" picURLHq="" picURLSt="">IPU</set>
+        <color>G</color>
+		<manacost></manacost>
+        <type>Creature - Critter</type>
+        <pt>0/1</pt>
+        <tablerow>2</tablerow>
+        <text>
+</text>
+      </card>
+
+
+
+<!--	  
+      <card>
+        <name>Lyra</name>
+        <set picURL="http://fc08.deviantart.net/fs71/f/2012/203/8/5/lyra_by_sorden-d587q4u.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Creature - Unicorn Pony</type>
+        <pt>1/2</pt>
+        <tablerow>2</tablerow>
+        <text>When Lyra enters the battlefield, fold her along the dotted lines into a “Z” shape.
+Your opponents can’t touch Lyra with their hands.
+</text>
+      </card>
+-->
+	  
+      <card>
+        <name>Snack A</name>
+        <set picURL="http://fc00.deviantart.net/fs70/f/2012/204/2/1/apple_token_by_sorden-d3k2oxu.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Snack</type>
+        <tablerow>0</tablerow>
+        <text>
+</text>
+      </card>
+
+      <card>
+        <name>Snack B</name>
+        <set picURL="http://fc08.deviantart.net/fs70/f/2012/204/7/4/cupcake_token_by_sorden-d3k368n.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Snack</type>
+        <tablerow>0</tablerow>
+        <text>
+</text>
+      </card>
+
+      <card>
+        <name>Snack C</name>
+        <set picURL="http://fc05.deviantart.net/fs70/f/2012/204/4/3/muffin_token_by_sorden-d3k3ka8.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Snack</type>
+        <tablerow>0</tablerow>
+        <text>
+</text>
+      </card>
+
+      <card>
+        <name>Pony Foal A</name>
+        <set picURL="http://fc09.deviantart.net/fs71/f/2012/204/d/4/pony_foal_token_a_by_sorden-d3k5xf5.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Creature - Pony Foal</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>
+</text>
+      </card>
+
+      <card>
+        <name>Pony Foal B</name>
+        <set picURL="http://fc06.deviantart.net/fs70/f/2012/204/c/8/pony_foal_token_b_by_sorden-d4fy7pq.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Creature - Pony Foal</type>
+        <pt>1/1</pt>
+        <tablerow>2</tablerow>
+        <text>
+</text>
+      </card>
+
+      <card>
+        <name>Pony Fan Art A</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2011/323/3/7/pony_fan_art_token_a_by_sorden-d3k5x97.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Creature - Pony Fan Art</type>
+        <pt>0/2</pt>
+        <tablerow>2</tablerow>
+        <text>
+</text>
+      </card>
+
+      <card>
+        <name>Pony Fan Art B</name>
+        <set picURL="http://fc03.deviantart.net/fs70/f/2012/204/9/b/pony_fan_art_token_b_by_sorden-d4faeaq.png" picURLHq="" picURLSt="">IPU</set>
+        <manacost></manacost>
+        <type>Creature - Pony Fan Art</type>
+        <pt>0/2</pt>
+        <tablerow>2</tablerow>
+        <text>
+</text>
+      </card>	  
+
+
+	  
+<!--
+Special thanks to       
+***********************************************************      
+|   __    __  _                                       _   |
+|  / / /\ \ \| |__    __ _  _ __    ___  __      __  / \  |
+|  \ \/  \/ /| '_ \  / _` || '_ \  / _ \ \ \ /\ / / /  /  |
+|   \  /\  / | | | || (_| || |_) || (_) | \ V  V / /\_/   |
+|    \/  \/  |_| |_| \__,_|| .__/  \___/   \_/\_/  \/     |
+|                          |_|                            |
+***********************************************************
+and Rytch the Mad for setting up the original Cockatrice database for my MLP: FiMtG set!
+-Invisible Pink Unicorn
+--> 
+      
+</cards>
+</cockatrice_carddatabase>

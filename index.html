@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>PonyMTG</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/main.css"/ >
+        <link rel="stylesheet" href="third_party/bootstrap-3.3.6-dist/css/bootstrap.css" />
+    </head>
+    <body>
+        <div style="text-align:center;padding:32px">
+            <div class="btn-group" role="group" style="box-shadow:0px 0px 8px rgba(0,0,0,0.25)">
+                <a href="about.html" target="_blank" class="btn btn-default ">
+                    <span class="glyphicon glyphicon-blackboard" style="margin-right:8px"></span>About
+                </a>
+                <a href="sets.html" target="_blank" class="btn btn-default ">
+                    <span class="glyphicon glyphicon-th-list" style="margin-right:8px"></span>Sets
+                </a>
+                <a href="print_sheet.html" target="_blank" class="btn btn-default " id="printSheetLink">
+                    <span class="glyphicon glyphicon-file" style="margin-right:8px"></span>Print sheet
+                </a>
+                <a href="cockatrice1.html" target="_blank" class="btn btn-default ">
+                    <span class="glyphicon glyphicon-modal-window" style="margin-right:8px"></span>Cockatrice
+                </a>
+                <a href="ficg_boosters.html" target="_blank" class="btn btn-default ">
+                    <img src="images/ficg_star.svg" style="height:16px" /> FiCG boosters
+                </a>
+                <a id="randomCard" class="btn btn-default ">
+                    <span class="glyphicon glyphicon-random" style="margin-right:8px"></span>Random card
+                </a>
+            </div>
+        </div>
+        <div id="container">
+            <div id="title"><img src="images/ponymtg_logo.png" style="width:30%" /></div>
+            
+            <div id="tagline"></div>
+            <input id="searchField" type="text" /><input id="searchButton" type="button" value="Search" /><a id="advancedSearchLink" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus" style="margin-right:8px"></span>Search options</a>
+            <div id="advancedSearch">
+            </div>
+            <div id="results">
+            </div>
+        </div>
+    </body>
+</html>
+<script src="third_party/blueimp/md5.min.js"></script>
+<script src="data/js/ficg_cards.js"></script>
+<script src="data/js/ipu_cards.js"></script>
+<script src="data/js/cards.js"></script>
+<script src="js/main.js"></script>
+<script src="js/index.js"></script>

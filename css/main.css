@@ -1,0 +1,615 @@
+html {
+    /*background-color:#f0f0f0;*/
+    /*color:#000000;*/
+    /*height:100%;*/
+    font-family:sans-serif;
+}
+
+body {
+    /*height:90%;*/
+    /*margin:0px;*/
+    /*padding:0px;*/
+}
+
+/**
+ * The main container for all application-related things.
+ */
+#container {
+    height:90%;
+    margin:0 32px;
+    padding:0px;
+    text-align:center;
+}
+
+/**
+ * A class used for simple "button-like" clickable links.
+ */
+.link {
+    display:inline-block;
+    text-align:center;
+    width:20%;
+    text-decoration:none;
+    background-color:#d0d0d0;
+    color:#101010;
+    padding:2px;
+    margin:4px;
+}
+
+.link:hover {
+    text-decoration:none;
+    background-color:#e8e8e8;
+    color:#202020;
+    cursor: pointer;
+}
+/**
+ * The large logotype that appears on the home screen.
+ */
+#title {
+    font-size:6em;
+}
+
+/**
+ * The clickable "reference" on the home screen (the asterisk).
+ */
+#titleReference {
+    font-size:1em;
+    color: #0040ff;
+    vertical-align:top;
+}
+
+/**
+ * The tagline that appears under the logotype on the home screen.
+ */
+#tagline {
+    font-size:0.9em;
+    margin:4px;
+    text-align:center;
+}
+
+/**
+ * The card search text field.
+ */
+#searchField {
+    margin:64px 0px 32px 0px;
+    font-size:1em;
+    width:75%;
+    text-align:center;
+}
+
+/**
+ * The card search text button
+ */
+#searchButton {
+    margin:4px;
+    font-size:1em;
+    text-align:center;
+}
+
+/**
+ * The advanced search container box.
+ */
+#advancedSearch {
+    width:75%;
+    margin:0px auto 0px auto;
+    text-align:center;
+}
+
+table.advancedSearchTable {
+    background-color:#e0e0e0;
+    margin:0px auto 32px auto;
+    border-radius: 8px;
+}
+
+td.searchByCardProperty {
+    font-size:0.9em;
+    text-align:left;
+    width:100%;
+    height:32px;
+}
+
+td.filterBySet {
+    font-size:0.9em;
+    text-align:left;
+    width:100%;
+}
+
+/**
+ * Pagination controls.
+ */
+table.paginationControl {
+    width:75%;
+    margin:8px auto;
+    padding:4px;
+    text-align:center;
+    border-radius:8px;
+    background-color: #e0e0e0;
+}
+td.paginationPreviousPage {
+    width: 25%;
+    border-radius:4px;
+    background-color: #b0b0b0;
+    margin:4px;
+    padding:4px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+td.paginationPreviousPage:hover {
+    background-color: #d0d0d0;
+}
+td.paginationPageNumber {
+    font-size: 1.1em;
+    font-weight:bold;
+    width: 50%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+td.paginationNextPage {
+    width: 25%;
+    border-radius:4px;
+    background-color: #b0b0b0;
+    margin:4px;
+    padding:4px;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+    width: 30%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+td.paginationNextPage:hover {
+    background-color: #d0d0d0;
+}
+
+/**
+ * The card results container.
+ */
+#results {
+    width:75%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+
+/**
+ * The table used to hold a single card result (contains two cells: one for the card, one for the card's info).
+ */
+table.cardTable {
+    width:75%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/**
+ * The table cell which holds information about a card.
+ */
+td.cardInfo {
+    width:75%;
+    vertical-align:top;
+    border:1px solid #808080;
+    border-radius:4px;
+    background-color: #e0e0e0;
+}
+
+/**
+ * The cell containing the name of a particular card property (eg. "Name").
+ */
+td.cardPropertyName {
+    width:25%;
+    font-weight:bold;
+    vertical-align:top;
+    text-align:right;
+    padding:0.25em 1em;
+}
+
+/**
+ * The cell containing the value of a particular card property.
+ */
+td.cardPropertyValue {
+    width:75%;
+    vertical-align:top;
+    text-align:left;
+    padding:0.25em 1em;
+}
+
+/**
+ * A set of specific font faces to use on proxy cards. We don't want to leave the choice of font up to the browser, as
+ * we need to ensure that proxy cards render consistently across all browsers. We're using the Liberation font, which is
+ * an open source font very close to Times New Roman.
+ */
+@font-face {
+    font-family: proxyFont;
+    src: url(../fonts/liberation/LiberationSerif-Regular.ttf);
+}
+@font-face {
+    font-family: proxyFont;
+    font-weight: bold;
+    src: url(../fonts/liberation/LiberationSerif-Bold.ttf);
+}
+@font-face {
+    font-family: proxyFont;
+    font-style: italic;
+    src: url(../fonts/liberation/LiberationSerif-Italic.ttf);
+}
+@font-face {
+    font-family: proxyFont;
+    font-weight: bold;
+    font-style: italic;
+    src: url(../fonts/liberation/LiberationSerif-BoldItalic.ttf);
+}
+
+/**
+ * A container for a faux-Magic card. Emulates the thick rounded border of a Magic card. We have to be very specific in
+ * our style definitions for this class, especially when it comes to fonts and dimensions. If we're not, then it's
+ * possible that other browsers or stylesheets will make the proxy use their style choices instead, and we don't want
+ * that; we want proxies to look practically the same across all browsers and devices.
+ */
+.proxy {
+    /* font-family: "Times New Roman", Times, serif; */
+    /** Use the loaded proxyFont that we defined earlier, to ensure that all browsers use the same font. */
+    font-family: proxyFont;
+    margin: 0 auto;
+    /**
+     * Give the proxy a dark, rounded border. The actual thickness of the border will be decided when the proxy is
+     * generated, as it depends on the scale that the proxy is generated at.
+     */
+    border: solid #202020;
+    border-radius: 16px;
+    /**
+     * Default to a light gray background. This will be overridden with an appropriate card color by the proxy
+     * generator.
+     */
+    background-color: #e0e0e0;
+    color: #101010;
+    /**
+     * If the card contents would overflow off the bottom of the page, we have to simply cut them off; we can't resize
+     * the proxy as it has to meet specific card dimension criteria, and we can't add a scroll bar because these cards
+     * need to be printable.
+     */
+    overflow: hidden;
+    /** Default the line height to normal, so that it can't be overridden by other styles (eg. Bootstrap). */
+    line-height: normal;
+    /**
+     * Default the box sizing to `content-box`. `box-sizing` is a CSS style which changes the way browsers interpret the
+     * width and height of a block element; specifically, it deals with whether or not borders and padding are included
+     * in the width and height. By default, it is `content-box` (don't include borders and padding), which is what the
+     * app expects (that's why, when generating the proxy, we calculate the width and height ourselves by adding up the
+     * dimensions of content, borders, and padding).
+     *
+     * However, for some reason Bootstrap prefers to set this to `border-box`, which _does_ include borders and padding.
+     * Presumably Bootstrap needs that in order to work, but it messes up the dimensions of displayed proxies (which
+     * must have fixed dimensions). Therefore, we explicitly set this style to its default for proxies.
+     */
+    box-sizing: content-box;
+}
+
+/**
+ * The `cardColor` classes all define appropriate background colors for specific types of card.
+ */
+.cardColorWhite {
+    background-color: #f8f8f0;
+}
+.cardColorBlue {
+    background-color: #60a8f0;
+}
+.cardColorBlack {
+    background-color: #383838;
+}
+.cardColorRed {
+    background-color: #e04840;
+}
+.cardColorGreen {
+    background-color: #90c080;
+}
+.cardColorMulticolored {
+    background: linear-gradient(135deg, #b08010, #ffd060 50%, #b08010);
+}
+.cardColorColorless {
+    background-color: #c0c0c0;
+}
+.cardColorHybridWhiteBlue {
+    background: linear-gradient(90deg, #f8f8f8, #f8f8f8 30%, #60a8f0 70%, #60a8f0);
+}
+.cardColorHybridWhiteBlack {
+    background: linear-gradient(90deg, #f8f8f8, #f8f8f8 30%, #383838 70%, #383838);
+}
+.cardColorHybridWhiteRed {
+    background: linear-gradient(90deg, #f8f8f8, #f8f8f8 30%, #e04840 70%, #e04840);
+}
+.cardColorHybridWhiteGreen {
+    background: linear-gradient(90deg, #f8f8f8, #f8f8f8 30%, #90c080 70%, #90c080);
+}
+.cardColorHybridBlueBlack {
+    background: linear-gradient(90deg, #60a8f0, #60a8f0 30%, #383838 70%, #383838);
+}
+.cardColorHybridBlueRed {
+    background: linear-gradient(90deg, #60a8f0, #60a8f0 30%, #e04840 70%, #e04840);
+}
+.cardColorHybridBlueGreen {
+    background: linear-gradient(90deg, #60a8f0, #60a8f0 30%, #90c080 70%, #90c080);
+}
+.cardColorHybridBlackRed {
+    background: linear-gradient(90deg, #383838, #383838 30%, #e04840 70%, #e04840);
+}
+.cardColorHybridBlackGreen {
+    background: linear-gradient(90deg, #383838, #383838 30%, #90c080 70%, #90c080);
+}
+.cardColorHybridRedGreen {
+    background: linear-gradient(90deg, #e04840, #e04840 30%, #90c080 70%, #90c080);
+}
+.cardColorUndefined {
+    background-color: #808080;
+}
+
+/**
+ * Decoration for a string to make it resemble a mana symbol, ie. rounded border, slight drop shadow. The color is not
+ * decided at this point.
+ */
+.manaDecoration {
+    border: 0px solid #000000;
+    border-radius: 100%;
+    padding:1px 4px;
+    box-shadow: 0px 2px 0px #000000;
+    font-size:0.8em;
+    font-weight:bold;
+}
+
+/**
+ * The next set of styles change the background and foreground colors of something to look like a mana symbol. The color
+ * values are taken directly from the official mana symbols.
+ */
+.manaDecorationWhite {
+    background-color: #fffcd6;
+    color: #211e15;
+}
+.manaDecorationBlue {
+    background-color: #aae2fb;
+    color: #051922;
+}
+.manaDecorationBlack {
+    background-color: #ccc2c0;
+    color: #120c0e;
+}
+.manaDecorationRed {
+    background-color: #faaa8f;
+    color: #200001;
+}
+.manaDecorationGreen {
+    background-color: #9bd3ae;
+    color: #01170b;
+}
+.manaDecorationHybridWhiteBlue {
+    background: linear-gradient(135deg, #fffcd6, #fffcd6 50%, #aae2fb 50%, #aae2fb);
+}
+.manaDecorationHybridWhiteBlack {
+    background: linear-gradient(135deg, #fffcd6, #fffcd6 50%, #ccc2c0 50%, #ccc2c0);
+}
+.manaDecorationHybridWhiteRed {
+    background: linear-gradient(135deg, #fffcd6, #fffcd6 50%, #faaa8f 50%, #faaa8f);
+}
+.manaDecorationHybridWhiteGreen {
+    background: linear-gradient(135deg, #fffcd6, #fffcd6 50%, #9bd3ae 50%, #9bd3ae);
+}
+.manaDecorationHybridBlueBlack {
+    background: linear-gradient(135deg, #aae2fb, #aae2fb 50%, #ccc2c0 50%, #ccc2c0);
+}
+.manaDecorationHybridBlueRed {
+    background: linear-gradient(135deg, #aae2fb, #aae2fb 50%, #faaa8f 50%, #faaa8f);
+}
+.manaDecorationHybridBlueGreen {
+    background: linear-gradient(135deg, #aae2fb, #aae2fb 50%, #9bd3ae 50%, #9bd3ae);
+}
+.manaDecorationHybridBlackRed {
+    background: linear-gradient(135deg, #ccc2c0, #ccc2c0 50%, #faaa8f 50%, #faaa8f);
+}
+.manaDecorationHybridBlackGreen {
+    background: linear-gradient(135deg, #ccc2c0, #ccc2c0 50%, #9bd3ae 50%, #9bd3ae);
+}
+.manaDecorationHybridRedGreen {
+    background: linear-gradient(135deg, #faaa8f, #faaa8f 50%, #9bd3ae 50%, #9bd3ae);
+}
+.manaDecorationGeneric {
+    background-color: #cac5c0;
+    color: #0d0f0f;
+}
+.manaDecorationColorless {
+    background-color: #cac5c0;
+    color: #0d0f0f;
+}
+.manaDecorationUndefined {
+    background-color: #808080;
+    color: #000000;
+}
+
+/**
+ * The name-and-cost line of a proxy card (usually appears at the top of a Magic card).
+ */
+.card-name-cost-line {
+    background-color: rgba(240, 240, 240, 0.75);
+    color: #101010;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    padding: 2px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/**
+ * The name of a proxy card (appears within the name-and-cost line, floated to the left).
+ */
+.card-name {
+    color: #101010;
+    font-weight: bold;
+    float:left;
+}
+
+/**
+ * The name of a proxy card if it's a token. This is styled a little more fancily than a regular card's name.
+ */
+.card-name-token {
+    color: #ffd010;
+    background-color: #110800;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    font-size:1.2em;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+/**
+ * The mana cost of a proxy card (appears within the name-and-cost line, floated to the right).
+ */
+.card-cost {
+    text-align: right;
+    vertical-align:middle;
+}
+
+/**
+ * The type line of a proxy card, which contains the supertype and subtype, as well as (usually) a set symbol, which
+ * will be colored according to the card's rarity.
+ */
+
+.card-type-line {
+    background-color: rgba(240, 240, 240, 0.75);
+    color:#101010;
+    font-size:0.8em;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    padding: 2px;
+    text-align:left;
+    margin: 4px 0px;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/**
+ * The rules text and flavor text for a proxy card.
+ */
+.card-text {
+    background-color: rgba(240, 240, 240, 0.75);
+    border: 1px solid #000000;
+    border-radius: 2px;
+    padding:8px;
+    text-align:left;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+/**
+ * An alternate style for the card text box, to be used on planeswalker cards.
+ */
+.card-text-planeswalker {
+    border-radius: 0px 32px;
+}
+
+
+/**
+ * The power and toughness box for a proxy card. This is usually a small rounded box containing something like "1/1",
+ * which appears in the bottom-right of a creature card.
+ */
+.card-power-toughness {
+    background-color: rgba(240, 240, 240, 0.75);
+    text-align: center;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #000000;
+    float:right;
+    margin:4px;
+    padding:2px 4px;
+    width:15%;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+/**
+ * The loyalty box for a proxy card. This is usually a dark, angular box containing an integer, which appears in the
+ * bottom right of a planeswalker card.
+ */
+.card-loyalty {
+    background-color: rgba(16, 16, 16, 1);
+    color: #f0f0f0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 1px 1px 16px 16px;
+    border: 2px solid #e0e0e0;
+    float:right;
+    margin:4px;
+    padding:2px 4px;
+    width:15%;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+/**
+ * A hover style to make the booster packs pop out a bit when you hover over them.
+ */
+#boosterPackImage:hover {
+    transform:scale(1.05);
+}
+
+/*
+#setsTable {
+    border-spacing: 0;
+    background-color: #ffffff;
+    font-size:0.9em;
+}
+
+#setsTable th {
+    border: 1px solid #c0c0c0;
+    padding:4px;
+    background-color: #e0e0e0;
+}
+
+#setsTable td {
+    border: 1px solid #c0c0c0;
+    padding:4px;
+    text-align:left;
+}
+*/
+#xmlContainer {
+    width:50%;
+    height:50%;
+    margin:32px auto 64px auto;
+    padding:32px;
+    text-align: center;
+}
+
+#xmlTextarea {
+    width:100%;
+    height:100%;
+}
+
+/***********************************************************************************************************************
+ * Bootstrap tweaks
+ *
+ * Sometimes Bootstrap's default style conflicts with our desired layout, so in certain cases, we will tweak Bootstrap
+ * styles to work a little better with our intended design.
+***********************************************************************************************************************/
+
+/**
+ * By default, the `dt` element in a description list is 160px wide, which is a bit too wide when we use it inside the
+ * card results table. So, we shrink it a little.
+ */
+/*
+#results dl.dl-horizontal dt {
+    width:80px;
+}
+*/
+/**
+ * Since we shrunk the `dt` element above, we also have to decrease the left margin on the `dd` element so that it still
+ * lines up correctly.
+ */
+/*
+#results dl.dl-horizontal dd {
+    margin-left:100px;
+}
+*/
