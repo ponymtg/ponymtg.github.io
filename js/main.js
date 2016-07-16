@@ -138,6 +138,18 @@ var global = {
             'url': 'http://uwoodward.deviantart.com/gallery/?catpath=%2F&sort=popularity',
             'notes': 'A <i>Fallout: Equestria</i>-based set.'
         },
+        '5moo2': {
+            'path': '5moo2/cards',
+            'creator': '5moo2',
+            'url': 'https://www.reddit.com/r/mylittlemagic/comments/1swk5w/here_are_some_pony_cards_that_i_have_been_working/',
+            'notes': 'Originally posted on the r/mylittlepony subreddit in 2013.'
+        },
+        'ArixOrdragc': {
+            'path': 'ArixOrdragc/cards',
+            'creator': 'ArixOrdragc',
+            'url': 'http://arixordragc.deviantart.com/gallery/30843345/My-Little-Pony-Friendship-is-Magic',
+            'notes': 'ArixOrdragc advises that this collection wasn\'t intended to be a proper set, and is most likely not balanced.'
+        },
         'Friendship is Card Games': {
             'creator': 'FanOfMostEverything',
             'url': 'http://www.fimfiction.net/blog/406600/gathered-friendship-the-ficg-index',
@@ -1252,6 +1264,9 @@ function getCardMonocolor(card) {
  * property names.
  */
 function getSearchByChoices() {
+    // This is currently disabled; for now, only allow searching by name.
+    return ['name'];
+/*
     var choices = [];
 
     for (var i=0; i < global.lists.searchableCardProperties.length; i++) {
@@ -1264,6 +1279,7 @@ function getSearchByChoices() {
     }
 
     return choices;
+*/
 }
 
 function getFilterBySetChoices() {
@@ -1362,7 +1378,7 @@ function generateAdvancedSearchElement() {
     var advancedSearchInformationAlert = document.createElement('div');
     advancedSearchInformationAlert.className = 'alert alert-warning';
     advancedSearchInformationAlert.innerHTML = '<strong>NOTE:</strong> PonyMTG does not yet have full property listings for all cards (many cards, for example, only have a name, set, and image). This means that advanced filters won\'t be useful on cards which have incomplete listings.';
-
+/*
     // First, do the "Search by card property" section. This will be a list of all card properties that we want to allow
     // the user to search by.
     var searchByCardPropertyPanelElement = document.createElement('div');
@@ -1393,7 +1409,7 @@ function generateAdvancedSearchElement() {
             true
         )
     );
-
+*/
     // Second section: Filter the results by a specific set or sets.
     var filterBySetPanelElement = document.createElement('div');
     filterBySetPanelElement.className = 'panel panel-default';
@@ -1401,6 +1417,7 @@ function generateAdvancedSearchElement() {
     filterBySetHeaderElement.className = 'panel-heading';
     var filterBySetBodyElement = document.createElement('div');
     filterBySetBodyElement.className = 'panel-body';
+    filterBySetBodyElement.style.textAlign = 'left';
 
     // Generate checkboxes for all known sets.
     var data = [];
@@ -1482,9 +1499,10 @@ function generateAdvancedSearchElement() {
 
     // Finally, add all sections to the advanced search table.
     advancedSearchPanelElement.appendChild(advancedSearchInformationAlert);
-    searchByCardPropertyPanelElement.appendChild(searchByCardPropertyHeaderElement);
-    searchByCardPropertyPanelElement.appendChild(searchByCardPropertyBodyElement);
-    advancedSearchPanelElement.appendChild(searchByCardPropertyPanelElement);
+
+    //searchByCardPropertyPanelElement.appendChild(searchByCardPropertyHeaderElement);
+    //searchByCardPropertyPanelElement.appendChild(searchByCardPropertyBodyElement);
+    //advancedSearchPanelElement.appendChild(searchByCardPropertyPanelElement);
 
     filterBySetPanelElement.appendChild(filterBySetHeaderElement);
     filterBySetPanelElement.appendChild(filterBySetBodyElement);

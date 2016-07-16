@@ -6,6 +6,9 @@
 * Added a warning to the advanced search box to note that it's not yet 100% useful.
 * Changed the container for result card images from `col-md-3` to `col-md-5`, which avoids an issue of the image
 overlapping the info box at some screen widths (due to the fact that card images are not permitted to resize).
+* Removed the "Search by" panel.
+* Added card set: "5moo2"
+* Added card set: "ArixOrdragc"
 
 ## 0.2.1
 
