@@ -1008,7 +1008,7 @@ function displayResults(cards) {
     foundCardsMessageElement.className = 'alert alert-warning';
     var foundCardsMessage = global.text.search.noResults+'.';
     if (cards.length > 0) {
-        foundCardsMessageElement.className = 'alert alert-info';
+        foundCardsMessageElement.className = 'alert alert-success';
         foundCardsMessage = global.text.search.foundResults.replace('{NUMBER_OF_RESULTS}', '<strong>'+cards.length+'</strong>') + '.';
         if (cards.length === 1) {
             foundCardsMessage = foundCardsMessage.replace('cards.', 'card.');
@@ -1361,6 +1361,10 @@ function generateAdvancedSearchElement() {
     advancedSearchPanelElement.id = global.advancedSearchIdPrefix+'_table';
     advancedSearchPanelElement.style.display = 'none';
 
+    var advancedSearchInformationAlert = document.createElement('div');
+    advancedSearchInformationAlert.className = 'alert alert-warning';
+    advancedSearchInformationAlert.innerHTML = '<strong>NOTE:</strong> PonyMTG does not yet have full property listings for all cards (many cards, for example, only have a name, set, and image). This means that advanced filters won\'t be useful on cards which have incomplete listings.';
+
     // First, do the "Search by card property" section. This will be a list of all card properties that we want to allow
     // the user to search by.
     var searchByCardPropertyPanelElement = document.createElement('div');
@@ -1479,6 +1483,7 @@ function generateAdvancedSearchElement() {
     filterByManaTypeBodyElement.appendChild(filterByManaTypeCheckboxListElement);
 
     // Finally, add all sections to the advanced search table.
+    advancedSearchPanelElement.appendChild(advancedSearchInformationAlert);
     searchByCardPropertyPanelElement.appendChild(searchByCardPropertyHeaderElement);
     searchByCardPropertyPanelElement.appendChild(searchByCardPropertyBodyElement);
     advancedSearchPanelElement.appendChild(searchByCardPropertyPanelElement);
