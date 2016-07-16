@@ -4,7 +4,8 @@
 * Added favicon.
 * Added Bootstrap styles to pages that didn't have them yet.
 * Added a warning to the advanced search box to note that it's not yet 100% useful.
-* Increased the width of the results container to 100%, which looks better on mobile devices.
+* Changed the container for result card images from `col-md-3` to `col-md-5`, which avoids an issue of the image
+overlapping the info box at some screen widths (due to the fact that card images are not permitted to resize).
 
 ## 0.2.1
 

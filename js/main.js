@@ -1589,8 +1589,9 @@ function generateCardTableElement(cards) {
         var cardInfoPanel = document.createElement('div');
         cardInfoPanel.style.minHeight = getCardHeightFromCardWidth(global.dimensions.displayCard.width)+'px';
         cardInfoPanel.style.marginBottom = '4px';
-        cardImagePanel.className = 'col-md-4';
-        cardInfoPanel.className = 'panel panel-default col-md-8';
+        cardImagePanel.className = 'col-md-5';
+        cardInfoPanel.className = 'panel panel-default col-md-7';
+        cardInfoPanel.style.boxShadow = '2px 2px 4px rgba(0,0,0,0.25)';
 
         // Check to see if we have an image for this card.
         var cardImageLinkElement = undefined;

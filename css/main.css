@@ -94,90 +94,11 @@ body {
     text-align:center;
 }
 
-table.advancedSearchTable {
-    background-color:#e0e0e0;
-    margin:0px auto 32px auto;
-    border-radius: 8px;
-}
-
-td.searchByCardProperty {
-    font-size:0.9em;
-    text-align:left;
-    width:100%;
-    height:32px;
-}
-
-td.filterBySet {
-    font-size:0.9em;
-    text-align:left;
-    width:100%;
-}
-
-/**
- * Pagination controls.
- */
-table.paginationControl {
-    width:75%;
-    margin:8px auto;
-    padding:4px;
-    text-align:center;
-    border-radius:8px;
-    background-color: #e0e0e0;
-}
-td.paginationPreviousPage {
-    width: 25%;
-    border-radius:4px;
-    background-color: #b0b0b0;
-    margin:4px;
-    padding:4px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
-}
-td.paginationPreviousPage:hover {
-    background-color: #d0d0d0;
-}
-td.paginationPageNumber {
-    font-size: 1.1em;
-    font-weight:bold;
-    width: 50%;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-td.paginationNextPage {
-    width: 25%;
-    border-radius:4px;
-    background-color: #b0b0b0;
-    margin:4px;
-    padding:4px;
-    box-shadow: 2px 2px 0px rgba(0,0,0,0.5);
-    width: 30%;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer;
-}
-td.paginationNextPage:hover {
-    background-color: #d0d0d0;
-}
-
 /**
  * The card results container.
  */
 #results {
-    width:100%;
+    width:75%;
     margin-left:auto;
     margin-right:auto;
     text-align:center;
