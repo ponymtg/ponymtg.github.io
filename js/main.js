@@ -1516,7 +1516,7 @@ function generateAdvancedSearchElement() {
 }
 
 /**
- * Returns an elements containing a list of checkboxes. `data` must be an array of objects representing the checkboxes
+ * Returns an element containing a list of checkboxes. `data` must be an array of objects representing the checkboxes
  * that should be created, each of which must have an `idSuffix` property and a `label` property, and may optionally
  * contain a `title` property for title (mouseover) text. Checkboxes will be created with an id of `idPrefix`+`idSuffix`.
  *
@@ -1604,11 +1604,15 @@ function generateCardTableElement(cards) {
         cardPanelRow.className = 'row';
 
         var cardImagePanel = document.createElement('div');
-        var cardInfoPanel = document.createElement('div');
-        cardInfoPanel.style.minHeight = getCardHeightFromCardWidth(global.dimensions.displayCard.width)+'px';
-        cardInfoPanel.style.marginBottom = '4px';
         cardImagePanel.className = 'col-md-5';
-        cardInfoPanel.className = 'panel panel-default col-md-7';
+
+        var cardInfoPanelContainer = document.createElement('div');
+        cardInfoPanelContainer.className = 'col-md-7';
+        cardInfoPanelContainer.style.minHeight = getCardHeightFromCardWidth(global.dimensions.displayCard.width)+'px';
+        cardInfoPanelContainer.style.marginBottom = '4px';
+
+        var cardInfoPanel = document.createElement('div');
+        cardInfoPanel.className = 'panel panel-default';
         cardInfoPanel.style.boxShadow = '2px 2px 4px rgba(0,0,0,0.25)';
 
         // Check to see if we have an image for this card.
@@ -1642,6 +1646,10 @@ function generateCardTableElement(cards) {
         }
 
         // Assemble relevant properties of the card into an information table.
+
+        var cardInfoPanelHeading = document.createElement('div');
+        cardInfoPanelHeading.className = 'panel-heading';
+        cardInfoPanelHeading.innerHTML = card.name;
 
         var cardInfoPanelBody = document.createElement('div');
         cardInfoPanelBody.className = 'panel-body';
@@ -1699,11 +1707,11 @@ function generateCardTableElement(cards) {
         }
         cardInfoPanelBody.appendChild(cardPropertiesDescriptionList);
 
-        var cardOptionsContainer = document.createElement('div');
+        var cardInfoPanelFooter = document.createElement('div');
 
         var cardHyperlinkUrl = window.location.pathname+'?hash='+card.derivedProperties.hash;
-        cardOptionsContainer.style.fontSize = '0.9em';
-        cardOptionsContainer.style.textAlign = 'right';
+        cardInfoPanelFooter.className = 'panel-footer';
+        cardInfoPanelFooter.style.textAlign = 'right';
 
         // Create the "Add to print sheet" button. For this button, we would like to include some indication of whether
         // or not the user has already added the card to the print sheet (and how many they have added). Therefore, we
@@ -1748,11 +1756,8 @@ function generateCardTableElement(cards) {
         cardLink.target = '_blank'; 
         cardLink.innerHTML = '<span class="glyphicon glyphicon-link"></span> Link'; 
 
-        cardOptionsContainer.appendChild(addToPrintSheetLink);
-        cardOptionsContainer.appendChild(cardLink);
-
-        cardInfoPanelBody.appendChild(cardOptionsContainer);
-
+        cardInfoPanelFooter.appendChild(addToPrintSheetLink);
+        cardInfoPanelFooter.appendChild(cardLink);
 
         if (cardImageLinkElement !== undefined) {
             cardImagePanel.appendChild(cardImageLinkElement);
@@ -1761,8 +1766,11 @@ function generateCardTableElement(cards) {
             cardImagePanel.appendChild(cardProxyElement);
         }
         cardPanelRow.appendChild(cardImagePanel);
+        cardInfoPanel.appendChild(cardInfoPanelHeading);
         cardInfoPanel.appendChild(cardInfoPanelBody);
-        cardPanelRow.appendChild(cardInfoPanel);
+        cardInfoPanel.appendChild(cardInfoPanelFooter);
+        cardInfoPanelContainer.appendChild(cardInfoPanel);
+        cardPanelRow.appendChild(cardInfoPanelContainer);
         cardPanel.appendChild(cardPanelRow);
     }
 

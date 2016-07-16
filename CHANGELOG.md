@@ -7,6 +7,7 @@
 * Changed the container for result card images from `col-md-3` to `col-md-5`, which avoids an issue of the image
 overlapping the info box at some screen widths (due to the fact that card images are not permitted to resize).
 * Removed the "Search by" panel.
+* Improved the styling of the search field and the card info panels.
 * Added card set: "5moo2"
 * Added card set: "ArixOrdragc"
 

@@ -62,28 +62,10 @@ body {
  */
 #tagline {
     font-size:0.9em;
-    margin:4px;
+    margin:4px 4px 64px 4px;
     text-align:center;
 }
 
-/**
- * The card search text field.
- */
-#searchField {
-    margin:64px 0px 32px 0px;
-    font-size:1em;
-    width:75%;
-    text-align:center;
-}
-
-/**
- * The card search text button
- */
-#searchButton {
-    margin:4px;
-    font-size:1em;
-    text-align:center;
-}
 
 /**
  * The advanced search container box.

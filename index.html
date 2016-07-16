@@ -34,7 +34,16 @@
             <div id="title"><img src="images/ponymtg_logo.png" style="width:30%" /></div>
             
             <div id="tagline"></div>
-            <input id="searchField" type="text" /><input id="searchButton" type="button" value="Search" /><a id="advancedSearchLink" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-plus" style="margin-right:8px"></span>Search options</a>
+            <div class="input-group" style="margin:32px auto;width:75%">
+                <input id="searchField" type="text" class="form-control" />
+                <span class="input-group-btn">
+                    <button id="searchButton" class="btn btn-primary" />Search</button>
+                    <button id="advancedSearchLink" class="btn btn-default">
+                        <span class="glyphicon glyphicon-plus" style="margin-right:8px"></span>
+                        Search options
+                    </button>
+                </span>
+            </div>
             <div id="advancedSearch">
             </div>
             <div id="results">
