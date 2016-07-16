@@ -4,6 +4,8 @@
         <title>Cockatrice</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="third_party/bootstrap-3.3.6-dist/css/bootstrap.css" />
+        <link rel="icon" type="image/x-icon" href="images/icons/ponymtg_icon.png" />
     </head>
     <body style="width:75%;margin:1% auto">
         <h1 style="text-align:center">Get a PonyMTG card data file for Cockatrice</h1>
@@ -21,7 +23,7 @@
                 <option value="">Choose a set...</option>
                 <option value="[All PonyMTG sets]">[All PonyMTG sets]</strong></option>
             </select>
-            <input id="generateCockatriceFile" type="button" value="Generate Cockatrice file" disabled="disabled"/>
+            <input id="generateCockatriceFile" type="button" value="Generate Cockatrice file" disabled="disabled" class="btn btn-default"/>
         </p>
         <p>
             <strong>Note:</strong> The generated file may modify the names of cards to ensure uniqueness (usually, by

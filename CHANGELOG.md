@@ -1,3 +1,9 @@
+## 1.0.0
+
+* First release!
+* Added favicon.
+* Added Bootstrap styles to pages that didn't have them yet.
+
 ## 0.2.1
 
 * Fixed a really tricky page-jump bug that occurs when the app displays proxy card results.
