@@ -8,6 +8,7 @@
 overlapping the info box at some screen widths (due to the fact that card images are not permitted to resize).
 * Removed the "Search by" panel.
 * Improved the styling of the search field and the card info panels.
+* Reworded the About page and added a disclaimer.
 * Added card set: "5moo2"
 * Added card set: "ArixOrdragc"
 
