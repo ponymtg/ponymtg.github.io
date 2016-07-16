@@ -1,3 +1,7 @@
+## 0.2.1
+
+* Fixed a really tricky page-jump bug that occurs when the app displays proxy card results.
+
 ## 0.2.0
 
 * Complete site-wide overhaul of stylings to Bootstrap.

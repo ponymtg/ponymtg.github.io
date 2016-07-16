@@ -960,8 +960,41 @@ function getCardsFilteredByManaType(cards, manaTypes) {
  * Generate and display a table of the card data objects in `cards`, in the "results" section of the application.
  */
 function displayResults(cards) {
-    // Clear existing results.
-    emptyElement(global.elements.results);
+    // Normally, if we were about to refresh the contents of a container element, we would empty it out first by
+    // deleting all its child nodes. However, our application happens to utilize a particular behavior that will prevent
+    // this approach from working correctly.
+    //
+    // The problem we have is that when we generate proxy cards (the imageless placeholder cards that we construct
+    // ourselves), we make use of the `offsetHeight` function as part of a clever hack to ensure that their text is
+    // correctly sized.
+    //
+    // `offsetHeight` just happens to be one of a number of commands that forces `browser reflow`; that is, when called,
+    // it will force the browser to recalculate its layout.
+    //
+    // This causes an unexpected issue. If we empty the results container first, then call `offsetHeight`, the page
+    // actually jumps to a different position! This is because the browser recalculated its layout, discovered that the
+    // results container was empty, and therefore scrolled up (because the page now ends earlier).
+    //
+    // So, when the results container is refilled, it looks like the page jumps up, which is unacceptable from a UI
+    // point of view.
+    //
+    // What this means is that we cannot empty out the results container first. So here is the solution; we don't.
+    // Instead, what we do is, we store a list of every child node in the results container at the time that we want to
+    // clear it. Then, we perform whatever actions are needed to add the new result set in. Then, because we made a
+    // record of every node we wanted to clear, we remove them one-by-one. Because the container was never emptied while
+    // `offsetHeight` was being called, the page does not jump.
+    //
+    // In essence, we are deferring the emptying of the div to the end of this function, instead of doing it at the
+    // beginning.
+
+    // Store a list of all child nodes in the results element. We specifically build an array of those elements; we
+    // can't just use `childNodes`, because that is a live collection, which changes when we change the DOM. We want a
+    // static record of the result element's contents at this very specific time.
+    var resultsChildNodes = [];
+    for (var i=0; i < global.elements.results.childNodes.length; i++) {
+        var resultsChildNode = global.elements.results.childNodes[i];
+        resultsChildNodes.push(resultsChildNode);
+    }
     
     // Remove the title and tagline, they're only needed on the home screen.
     //global.elements.title.parentNode.removeChild(global.elements.title);
@@ -1002,6 +1035,11 @@ function displayResults(cards) {
             // user changes pages.
             global.elements.results.appendChild(generatePaginationControlElement('paginationControlBottom', 'paginationControlTop'));
         }
+    }
+
+    // Now that we have added the new result set, we can get rid of the old one.
+    for (var i=0; i < resultsChildNodes.length; i++) {
+        global.elements.results.removeChild(resultsChildNodes[i]);
     }
 }
 
@@ -1942,30 +1980,6 @@ function generateProxyElement(
         proxyTextElement.innerHTML = cardText;
 
         proxyTextElement.style.fontSize = estimateProxyCardTextFontSize(cardText, cardWidth)+'px';
-/*
-        // If the mass of the text on this card is above a certain threshold, shrink it down a bit. The exact amount of
-        // shrinkage is proportional to how much over the threshold it is.
-
-        // Check to see how massive the text is. If it's above a certain threshold, shrink it a bit.
-        var cardTextMass = calculateHtmlMass(cardText);
-        //console.log(cardProperties.name+': '+cardTextMass);
-        if (cardTextMass > global.values.textMassThreshold) {
-            // The amount of mass by which the card's text exceeds the threshold.
-            var excessTextMass = cardTextMass - global.values.textMassThreshold;
-            // The size (in px) that will be deducted from the standard text size.
-            var textShrinkAmount = excessTextMass * global.values.textShrinkageCoefficient;
-            // The newly shrunken card text size.
-            var shrunkenTextSize = global.dimensions.proxy.fontSize - textShrinkAmount;
-
-            // Set a lower limit on how much the text can shrink (it's possible, if there's enough text, that the text
-            // size could go negative, which doesn't make sense to a browser.
-            if (shrunkenTextSize < global.values.textSizeLowerLimit) {
-                shrunkenTextSize = global.values.textSizeLowerLimit;
-            }
-
-            proxyTextElement.style.fontSize = shrunkenTextSize+'px';
-        }
-*/
     }
 
     proxyTypeLineElement.className = 'card-type-line';
@@ -2076,7 +2090,8 @@ function generateProxyElement(
  */
 function estimateProxyCardTextFontSize(html, cardWidth) {
     var dummyElement = document.createElement('div');
-    document.querySelector('body').appendChild(dummyElement);
+    var attachmentSelector = 'body';
+    document.querySelector(attachmentSelector).appendChild(dummyElement);
     
     dummyElement.style.position = 'absolute';
     dummyElement.style.visibility = 'hidden';
@@ -2106,7 +2121,7 @@ function estimateProxyCardTextFontSize(html, cardWidth) {
         bestFontSize = i;
     }
 
-    document.querySelector('body').removeChild(dummyElement);
+    document.querySelector(attachmentSelector).removeChild(dummyElement);
     return bestFontSize;
 }
 
