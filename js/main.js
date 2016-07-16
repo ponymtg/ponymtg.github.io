@@ -1,9 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                                    //
-// PonyMTG (it's a working title) by hawthornbunny                                                                    //
-//                                                                                                                    //
-// Email: hawthornrabbit@gmail.com                                                                                    //
-// Fimfiction: http://www.fimfiction.net/user/hawthornbunny                                                           //
+// The main PonyMTG class. Contains the majority of the functionality, and sets up all global variables used by the   //
+// application.                                                                                                       //
 //                                                                                                                    //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1577,22 +1575,22 @@ function generateCheckboxListElement(idPrefix, data, optionWidth, addSelectAll) 
  * known, relevant properties of the card.
  */
 function generateCardTableElement(cards) {
-    var cardTable = document.createElement('div');
-    cardTable.className = 'container-fluid';
+    var cardPanel = document.createElement('div');
+    cardPanel.className = 'container-fluid';
 
     for (var i=0; i < cards.length; i++) {
         var card = cards[i];
 
-        // Create a table row for this card result. Card image on the left, card information on the right.
-        var cardTableRow = document.createElement('div');
-        cardTableRow.className = 'row';
+        // Create a row for this card result. Card image on the left, card information on the right.
+        var cardPanelRow = document.createElement('div');
+        cardPanelRow.className = 'row';
 
-        var cardTableCellImage = document.createElement('div');
-        var cardTableCellInfo = document.createElement('div');
-        cardTableCellInfo.style.minHeight = getCardHeightFromCardWidth(global.dimensions.displayCard.width)+'px';
-        cardTableCellInfo.style.marginBottom = '4px';
-        cardTableCellImage.className = 'col-md-3';
-        cardTableCellInfo.className = 'panel panel-default col-md-9';
+        var cardImagePanel = document.createElement('div');
+        var cardInfoPanel = document.createElement('div');
+        cardInfoPanel.style.minHeight = getCardHeightFromCardWidth(global.dimensions.displayCard.width)+'px';
+        cardInfoPanel.style.marginBottom = '4px';
+        cardImagePanel.className = 'col-md-4';
+        cardInfoPanel.className = 'panel panel-default col-md-8';
 
         // Check to see if we have an image for this card.
         var cardImageLinkElement = undefined;
@@ -1626,8 +1624,8 @@ function generateCardTableElement(cards) {
 
         // Assemble relevant properties of the card into an information table.
 
-        var cardTableCellInfoBody = document.createElement('div');
-        cardTableCellInfoBody.className = 'panel-body';
+        var cardInfoPanelBody = document.createElement('div');
+        cardInfoPanelBody.className = 'panel-body';
 
         // Create a description list for this property.
         var cardPropertiesDescriptionList = document.createElement('dl');
@@ -1680,7 +1678,7 @@ function generateCardTableElement(cards) {
             cardPropertiesDescriptionList.appendChild(cardPropertyNameElement);
             cardPropertiesDescriptionList.appendChild(cardPropertyValueElement);
         }
-        cardTableCellInfoBody.appendChild(cardPropertiesDescriptionList);
+        cardInfoPanelBody.appendChild(cardPropertiesDescriptionList);
 
         var cardOptionsContainer = document.createElement('div');
 
@@ -1734,22 +1732,22 @@ function generateCardTableElement(cards) {
         cardOptionsContainer.appendChild(addToPrintSheetLink);
         cardOptionsContainer.appendChild(cardLink);
 
-        cardTableCellInfoBody.appendChild(cardOptionsContainer);
+        cardInfoPanelBody.appendChild(cardOptionsContainer);
 
 
         if (cardImageLinkElement !== undefined) {
-            cardTableCellImage.appendChild(cardImageLinkElement);
+            cardImagePanel.appendChild(cardImageLinkElement);
         }
         else if (cardProxyElement !== undefined) {
-            cardTableCellImage.appendChild(cardProxyElement);
+            cardImagePanel.appendChild(cardProxyElement);
         }
-        cardTableRow.appendChild(cardTableCellImage);
-        cardTableCellInfo.appendChild(cardTableCellInfoBody);
-        cardTableRow.appendChild(cardTableCellInfo);
-        cardTable.appendChild(cardTableRow);
+        cardPanelRow.appendChild(cardImagePanel);
+        cardInfoPanel.appendChild(cardInfoPanelBody);
+        cardPanelRow.appendChild(cardInfoPanel);
+        cardPanel.appendChild(cardPanelRow);
     }
 
-    return cardTable;
+    return cardPanel;
 }
 
 /**

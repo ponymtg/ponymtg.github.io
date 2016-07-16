@@ -4,6 +4,7 @@
 * Added favicon.
 * Added Bootstrap styles to pages that didn't have them yet.
 * Added a warning to the advanced search box to note that it's not yet 100% useful.
+* Increased the width of the results container to 100%, which looks better on mobile devices.
 
 ## 0.2.1
 

@@ -177,51 +177,10 @@ td.paginationNextPage:hover {
  * The card results container.
  */
 #results {
-    width:75%;
+    width:100%;
     margin-left:auto;
     margin-right:auto;
     text-align:center;
-}
-
-/**
- * The table used to hold a single card result (contains two cells: one for the card, one for the card's info).
- */
-table.cardTable {
-    width:75%;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-/**
- * The table cell which holds information about a card.
- */
-td.cardInfo {
-    width:75%;
-    vertical-align:top;
-    border:1px solid #808080;
-    border-radius:4px;
-    background-color: #e0e0e0;
-}
-
-/**
- * The cell containing the name of a particular card property (eg. "Name").
- */
-td.cardPropertyName {
-    width:25%;
-    font-weight:bold;
-    vertical-align:top;
-    text-align:right;
-    padding:0.25em 1em;
-}
-
-/**
- * The cell containing the value of a particular card property.
- */
-td.cardPropertyValue {
-    width:75%;
-    vertical-align:top;
-    text-align:left;
-    padding:0.25em 1em;
 }
 
 /**
