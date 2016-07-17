@@ -87,12 +87,14 @@ function refreshPrintSheetTable() {
         document.querySelector('#clearPrintSheet').disabled = true;
         var noCardsMessagePanel = document.createElement('div');
         noCardsMessagePanel.className = 'panel panel-warning';
+        noCardsMessagePanel.style.width = '50%';
+        noCardsMessagePanel.style.margin = '0 auto';
         var noCardsMessageHeading = document.createElement('div');
         noCardsMessageHeading.className = 'panel-heading';
-        noCardsMessageHeading.innerHTML= 'You haven\'t added any cards yet';
+        noCardsMessageHeading.innerHTML = '<span class="glyphicon glyphicon-warning-sign"></span> You haven\'t added any cards yet';
         var noCardsMessageBody = document.createElement('div');
         noCardsMessageBody.className = 'panel-body';
-        noCardsMessageBody.innerHTML = 'To create a print sheet, use the <a href="index.html">search functionality</a> to find cards that you want, and press "Add to print sheet". The cards will be here when you return to this page.<br /><br />If you just want every card from a particular set, use the "Add set" button above. Be warned that some sets contain a large number of cards, which may affect the performance of this page and may take a while to generate the print sheet for.';
+        noCardsMessageBody.innerHTML = 'To build a print sheet, use the <a href="index.html">search functionality</a> to find cards that you want, and press <strong>"Add to print sheet"</strong>. The cards will be here when you return to this page.<br /><br />Alternatively, if you just want to get a print sheet for every card from a particular set, use the <strong>"Add set"</strong> button above.<br /><br />When you\'ve added all the cards that you want, press <strong>"Create print sheet"</strong> to generate a printable sheet of those cards.<br /><br />Be warned that some sets contain a large number of cards, which may affect the performance of this page and the print sheet generator.';
         noCardsMessagePanel.appendChild(noCardsMessageHeading);
         noCardsMessagePanel.appendChild(noCardsMessageBody);
         global.elements.printSheetCardList.appendChild(noCardsMessagePanel);

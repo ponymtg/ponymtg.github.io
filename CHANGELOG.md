@@ -1,3 +1,11 @@
+## 1.0.1
+* Added a local visit counter and tips panel.
+* Reworded the advice panel on the Print sheets page.
+* Added a "View card image" button.
+* Added card set: "MtG: Fallout Equestria".
+* Added card set: "Friendship the Gathering: Unseen Invasion".
+* Added card set: "Friendship the Gathering: Finest Hour".
+
 ## 1.0.0
 
 * First release!
@@ -9,8 +17,8 @@ overlapping the info box at some screen widths (due to the fact that card images
 * Removed the "Search by" panel.
 * Improved the styling of the search field and the card info panels.
 * Reworded the About page and added a disclaimer.
-* Added card set: "5moo2"
-* Added card set: "ArixOrdragc"
+* Added card set: "5moo2".
+* Added card set: "ArixOrdragc".
 
 ## 0.2.1
 

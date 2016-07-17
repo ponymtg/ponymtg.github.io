@@ -150,6 +150,24 @@ var global = {
             'url': 'http://arixordragc.deviantart.com/gallery/30843345/My-Little-Pony-Friendship-is-Magic',
             'notes': 'ArixOrdragc advises that this collection wasn\'t intended to be a proper set, and is most likely not balanced.'
         },
+        'MtG: Fallout Equestria': {
+            'path': 'zepheniah/MtG: Fallout Equestria/cards',
+            'creator': 'zepheniah',
+            'url': 'http://zepheniah.deviantart.com/gallery/36545871/MtG-Fallout-Equestria',
+            'notes': 'A <i>Fallout: Equestria</i>-based set.'
+        },
+        'Friendship the Gathering: Unseen Invasion': {
+            'path': 'Zhantora/Unseen Invasion/cards',
+            'creator': 'Zhantora',
+            'url': 'http://zhantora.deviantart.com/gallery/37593818/Friendship-the-Gathering-Unseen-Invasion',
+            'notes': 'The first of two <i>Friendship the Gathering</i> sets by Zhantora. This set precedes <i>Finest Hour</i>.'
+        },
+        'Friendship the Gathering: Finest Hour': {
+            'path': 'Zhantora/Finest Hour/cards',
+            'creator': 'Zhantora',
+            'url': 'http://zhantora.deviantart.com/gallery/37680326/Friendship-the-Gathering-Finest-Hour',
+            'notes': 'The second of two <i>Friendship the Gathering</i> sets by Zhantora. This set follows <i>Unseen Invasion</i>.'
+        },
         'Friendship is Card Games': {
             'creator': 'FanOfMostEverything',
             'url': 'http://www.fimfiction.net/blog/406600/gathered-friendship-the-ficg-index',
@@ -513,6 +531,7 @@ var global = {
                 'Canterlot',
                 'Celestia',
                 'Chrysalis',
+                'Cloudsdale',
                 'Derpy',
                 'Discord',
                 'Fluttershy',
@@ -532,26 +551,16 @@ var global = {
             'foundResults': 'Found {NUMBER_OF_RESULTS} cards',
             'noResults': 'No cards found',
         },
+        'tips': [
+            'Searching on an empty string (ie. don\'t type anything in) will return everything. You can combine this with the "Search in sets" option to view all cards in a particular set.',
+        ],
     },
     /** Various useful values. */
     'values': {
-        /** The "masses" of various units of text (how much they contribute to the total mass of a card's text). */
-        'textMasses': {
-            'character': 1,
-            'newline': 35
-        },
         /**
-         * The threshold above which we'll shrink down card text to prevent it spilling off the bottom of a proxy card.
+         * How often tips should be displayed on the main page. A value of 5 means "every 5 visits".
          */
-        'textMassThreshold': 350,
-        /**
-         * A coefficient that determines much text shrinks the further it goes over the text mass threshold.
-         */
-        'textShrinkageCoefficient': 0.012,
-        /**
-         * The lower limit on card text size. We won't shrink any smaller than this.
-         */
-        'textSizeLowerLimit': 11,
+        'tipFrequency': 5,
     },
     /** Information about how to paginate the results set, including the current page that the user is viewing. */
     'pagination': {
@@ -648,8 +657,6 @@ function getInformation(cards) {
     information.overall = {};
     information.overall.numberOfCards = cards.length; 
 
-    var imagelessCardWithGreatestTextMass = undefined;
-    var greatestImagelessCardTextMass = 0;
     var cardWithLongestText = undefined;
     var longestCardTextLength = 0;
     for (var i=0; i < cards.length; i++) {
@@ -659,18 +666,10 @@ function getInformation(cards) {
                 longestCardTextLength = card.text.length;
                 cardWithLongestText = card;
             }
-            if (card.image === undefined) {
-                var cardTextMass = calculateHtmlMass(card.text);
-                if (cardTextMass > greatestImagelessCardTextMass) {
-                    greatestImagelessCardTextMass = cardTextMass;
-                    imagelessCardWithGreatestTextMass = card;
-                }
-            }
         }
     }
     information.cardWithLongestText = cardWithLongestText;
     information.longestCardTextLength = longestCardTextLength;
-    information.imagelessCardWithGreatestTextMass = imagelessCardWithGreatestTextMass;
 
     // Get a list of all distinct sets that the supplied cards belong to.
     information.sets = [];
@@ -1619,7 +1618,12 @@ function generateCardTableElement(cards) {
         var cardImageLinkElement = undefined;
         var cardImageElement = undefined;
         var cardProxyElement = undefined;
-        if (card.image !== undefined) {
+        var isCardImageLocatable =
+            card.image !== undefined
+            && global.sets[card.set] !== undefined
+            && global.sets[card.set].path !== undefined
+        ;
+        if (isCardImageLocatable) {
             // If a card image is available, create the card image element and set its source to the appropriate image
             // URL.
             var cardImageLinkElement = document.createElement('a');
@@ -1722,17 +1726,17 @@ function generateCardTableElement(cards) {
             printSheetCardQuantity = 0;
         }
 
-        var addToPrintSheetLink = document.createElement('button');
-        addToPrintSheetLink.className = 'btn btn-default';
-        var addToPrintSheetLinkText = '<span class="glyphicon glyphicon-file"></span> Add to print sheet'; 
-        addToPrintSheetLink.innerHTML = addToPrintSheetLinkText;
+        var addToPrintSheetButton = document.createElement('button');
+        addToPrintSheetButton.className = 'btn btn-default';
+        var addToPrintSheetButtonText = '<span class="glyphicon glyphicon-file"></span> Add to print sheet'; 
+        addToPrintSheetButton.innerHTML = addToPrintSheetButtonText;
         if (printSheetCardQuantity > 0) {
-            addToPrintSheetLink.innerHTML += ' <span class="badge">'+printSheetCardQuantity+'</span>'; 
+            addToPrintSheetButton.innerHTML += ' <span class="badge">'+printSheetCardQuantity+'</span>'; 
         }
-        addToPrintSheetLink.ponymtg = {};
-        addToPrintSheetLink.ponymtg.hash = card.derivedProperties.hash;
-        addToPrintSheetLink.ponymtg.quantity = printSheetCardQuantity;
-        addToPrintSheetLink.onclick = function(e) {
+        addToPrintSheetButton.ponymtg = {};
+        addToPrintSheetButton.ponymtg.hash = card.derivedProperties.hash;
+        addToPrintSheetButton.ponymtg.quantity = printSheetCardQuantity;
+        addToPrintSheetButton.onclick = function(e) {
             // Add the card to the print sheet and increment the number on the button's badge.
             // NOTE: Use `currentTarget`, not `target`! `target` identifies the element that was clicked on; however,
             // this is not _necessarily_ the button itself. Buttons can contain child elements such as images and icons;
@@ -1743,12 +1747,20 @@ function generateCardTableElement(cards) {
             // case, `onclick`).
             addCardToPrintSheet(e.currentTarget.ponymtg.hash);
             e.currentTarget.ponymtg.quantity++;
-            e.currentTarget.innerHTML = addToPrintSheetLinkText+' <span class="badge">'+e.currentTarget.ponymtg.quantity+'</span>';
+            e.currentTarget.innerHTML = addToPrintSheetButtonText+' <span class="badge">'+e.currentTarget.ponymtg.quantity+'</span>';
 
             // Also increment the number on the main print sheets button in the navbar.
             var printSheetCountBadge = document.querySelector('#printSheetCountBadge');
             printSheetCountBadge.innerHTML = getNumberOfCardsInPrintSheet();
         };
+
+        var cardImageLink = document.createElement('a');
+        cardImageLink.className = 'btn btn-default';
+        if (isCardImageLocatable) {
+            cardImageLink.href = getCardImageUrl(card); 
+            cardImageLink.target = '_blank'; 
+            cardImageLink.innerHTML = '<span class="glyphicon glyphicon-picture"></span> View card image'; 
+        }
 
         var cardLink = document.createElement('a');
         cardLink.className = 'btn btn-default';
@@ -1756,7 +1768,10 @@ function generateCardTableElement(cards) {
         cardLink.target = '_blank'; 
         cardLink.innerHTML = '<span class="glyphicon glyphicon-link"></span> Link'; 
 
-        cardInfoPanelFooter.appendChild(addToPrintSheetLink);
+        cardInfoPanelFooter.appendChild(addToPrintSheetButton);
+        if (isCardImageLocatable) {
+            cardInfoPanelFooter.appendChild(cardImageLink);
+        }
         cardInfoPanelFooter.appendChild(cardLink);
 
         if (cardImageLinkElement !== undefined) {
@@ -2557,6 +2572,30 @@ function getUniqueCardNames(sets) {
         }
     }
     return uniqueCardNamesBySet;
+}
+
+function generateTipPanel(text) {
+    var tipPanel = document.createElement('div');
+    tipPanel.className = 'panel panel-info';
+    tipPanel.style.width = '50%';
+    tipPanel.style.margin = '0 auto';
+
+    var tipPanelHeading = document.createElement('div');
+    tipPanelHeading.className = 'panel-heading';
+    tipPanelHeading.innerHTML = ' Tip';
+
+    var infoGlyphicon = document.createElement('span');
+    infoGlyphicon.className = 'glyphicon glyphicon-info-sign';
+
+    var tipPanelBody = document.createElement('div');
+    tipPanelBody.className = 'panel-body';
+    tipPanelBody.innerHTML = text;
+
+    tipPanelHeading.insertBefore(infoGlyphicon, tipPanelHeading.firstChild);
+    tipPanel.appendChild(tipPanelHeading);
+    tipPanel.appendChild(tipPanelBody);
+    
+    return tipPanel;
 }
 
 /**

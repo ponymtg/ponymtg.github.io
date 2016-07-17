@@ -111,6 +111,22 @@ function initialize() {
     // Generate and add the advanced search control box.
     global.elements.advancedSearch.appendChild(generateAdvancedSearchElement());
 
+    // Increment a simple visit counter in local storage. We'll use this to decide when to bother the user with tips.
+    var visitCount = localStorage.getItem('visitCount');
+    if (visitCount === null) {
+        visitCount = 0;
+    }
+    visitCount++;
+    localStorage.setItem('visitCount', visitCount);
+
+    // Based on the number of times the user has visited, decide whether or not to show them a tip, and if so, which
+    // tip.
+
+    if (visitCount % global.values.tipFrequency === 1) {
+        var tipIndexToShow = Math.floor(visitCount / global.values.tipFrequency) % global.text.tips.length;
+        global.elements.results.appendChild(generateTipPanel(global.text.tips[tipIndexToShow]));
+    }
+
     // Default to search by name only.
     //var searchByNameCheckbox = document.querySelector('#'+global.advancedSearchIdPrefix+'_searchByCardProperty_name');
     //searchByNameCheckbox.checked = true;
