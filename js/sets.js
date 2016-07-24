@@ -86,7 +86,7 @@ function getSetsTableElement(sets) {
             notesTableCellElement.innerHTML = setDetails.notes;
         }
 
-        cockatriceTableCellElement.innerHTML = '<a href="cockatrice2.html?set='+setName+'" target="blank" class="btn btn-default">Get Cockatrice File</a>';
+        cockatriceTableCellElement.innerHTML = '<a href="cockatrice2.html?set='+setName+'" target="blank" class="btn btn-default"><span class="glyphicon glyphicon-modal-window"></span> Get Cockatrice File</a>';
         cockatriceTableCellElement.style.textAlign = 'center';
 
         tableRowElement.appendChild(nameTableCellElement);

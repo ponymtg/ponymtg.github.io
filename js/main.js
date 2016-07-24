@@ -5,6 +5,10 @@
 //                                                                                                                    //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Global definitions
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /**
  * Global object that can be used by all functions. Configuration and common definitions are stored here.
  */
@@ -167,6 +171,11 @@ var global = {
             'creator': 'Zhantora',
             'url': 'http://zhantora.deviantart.com/gallery/37680326/Friendship-the-Gathering-Finest-Hour',
             'notes': 'The second of two <i>Friendship the Gathering</i> sets by Zhantora. This set follows <i>Unseen Invasion</i>.'
+        },
+        'PONI MTG': {
+            'path': 'vonBelfry/PONI MTG/cards',
+            'creator': 'vonBelfry',
+            'url': 'http://vonbelfry.deviantart.com/gallery/33446713/PONI-MTG',
         },
         'Friendship is Card Games': {
             'creator': 'FanOfMostEverything',
@@ -590,6 +599,9 @@ var global = {
     'urlParameters': {}
 };
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Function definitions
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
  * Initiate a search and display the results. This function is called when you press enter in the search field, or click
@@ -764,9 +776,13 @@ function getMatchingCards(regex, cards) {
 function getFilteredCards(cards) {
     var filteredCards = cards;
 
+    var onlyShowCardsWithImages = document.querySelector('#'+global.advancedSearchIdPrefix+'_generalOptions_onlyShowCardsWithImages').checked;
     var filterBySetChoices = getFilterBySetChoices();
     var filterByManaTypeChoices = getFilterByManaTypeChoices();
 
+    if (onlyShowCardsWithImages) {
+        filteredCards = getCardsForWhichPropertiesExist(cards, ['image']);    
+    }
     filteredCards = getCardsFilteredBySet(filteredCards, filterBySetChoices);
     filteredCards = getCardsFilteredByManaType(filteredCards, filterByManaTypeChoices);
 
@@ -821,6 +837,26 @@ function getCardsFilteredByProperties(cards, properties) {
         }
         filteredCards.push(card);
     }
+    return filteredCards;
+}
+
+function getCardsForWhichPropertiesExist(cards, propertyNames) {
+    var filteredCards = [];
+    for (var i=0; i < cards.length; i++) {
+        var card = cards[i];
+        var cardHasAllProperties = true;
+        for (var j=0; j < propertyNames.length; j++) {
+            var propertyName = propertyNames[j];
+            if (card[propertyName] === undefined) {
+                cardHasAllProperties = false;
+                continue;
+            }
+        }
+        if (cardHasAllProperties) {
+            filteredCards.push(card);
+        }
+    }
+
     return filteredCards;
 }
 
@@ -977,7 +1013,7 @@ function displayResults(cards) {
     // ourselves), we make use of the `offsetHeight` function as part of a clever hack to ensure that their text is
     // correctly sized.
     //
-    // `offsetHeight` just happens to be one of a number of commands that forces `browser reflow`; that is, when called,
+    // `offsetHeight` just happens to be one of a number of commands that forces _browser reflow_; that is, when called,
     // it will force the browser to recalculate its layout.
     //
     // This causes an unexpected issue. If we empty the results container first, then call `offsetHeight`, the page
@@ -1374,6 +1410,8 @@ function generateAdvancedSearchElement() {
     advancedSearchPanelElement.id = global.advancedSearchIdPrefix+'_table';
     advancedSearchPanelElement.style.display = 'none';
 
+    // Display a warning that PonyMTG's search functions won't be useful for cards which don't have all their properties
+    // set.
     var advancedSearchInformationAlert = document.createElement('div');
     advancedSearchInformationAlert.className = 'alert alert-warning';
     advancedSearchInformationAlert.innerHTML = '<strong>NOTE:</strong> PonyMTG does not yet have full property listings for all cards (many cards, for example, only have a name, set, and image). This means that advanced filters won\'t be useful on cards which have incomplete listings.';
@@ -1409,6 +1447,32 @@ function generateAdvancedSearchElement() {
         )
     );
 */
+    // First section: General options.
+    var generalOptionsPanel = document.createElement('div');
+    generalOptionsPanel.className = 'panel panel-default';
+    var generalOptionsHeading = document.createElement('div');
+    generalOptionsHeading.className = 'panel-heading';
+    generalOptionsHeading.innerHTML = 'General options';
+    var generalOptionsBody = document.createElement('div');
+    generalOptionsBody.className = 'panel-body';
+    generalOptionsBody.style.textAlign = 'left';
+
+    var generalOptionsCheckboxListData = [
+        {
+            'idSuffix': '_onlyShowCardsWithImages',
+            'label': 'Only show cards that have images',
+        },
+    ];
+
+    generalOptionsBody.appendChild(
+        generateCheckboxListElement(
+            global.advancedSearchIdPrefix+'_generalOptions',
+            generalOptionsCheckboxListData,
+            '20%',
+            false
+        )
+    );
+
     // Second section: Filter the results by a specific set or sets.
     var filterBySetPanelElement = document.createElement('div');
     filterBySetPanelElement.className = 'panel panel-default';
@@ -1502,6 +1566,10 @@ function generateAdvancedSearchElement() {
     //searchByCardPropertyPanelElement.appendChild(searchByCardPropertyHeaderElement);
     //searchByCardPropertyPanelElement.appendChild(searchByCardPropertyBodyElement);
     //advancedSearchPanelElement.appendChild(searchByCardPropertyPanelElement);
+
+    generalOptionsPanel.appendChild(generalOptionsHeading);
+    generalOptionsPanel.appendChild(generalOptionsBody);
+    advancedSearchPanelElement.appendChild(generalOptionsPanel);
 
     filterBySetPanelElement.appendChild(filterBySetHeaderElement);
     filterBySetPanelElement.appendChild(filterBySetBodyElement);

@@ -119,7 +119,7 @@ function refreshPrintSheetTable() {
 
             var decreaseQuantityElement = document.createElement('a');
             decreaseQuantityElement.className = 'btn btn-primary';
-            decreaseQuantityGlyphicon = document.createElement('span');
+            var decreaseQuantityGlyphicon = document.createElement('span');
             decreaseQuantityGlyphicon.className = 'glyphicon glyphicon-minus';
             decreaseQuantityElement.appendChild(decreaseQuantityGlyphicon);
             decreaseQuantityElement.ponymtg = {};
@@ -141,7 +141,7 @@ function refreshPrintSheetTable() {
 
             var increaseQuantityElement = document.createElement('a');
             increaseQuantityElement.className = 'btn btn-primary';
-            increaseQuantityGlyphicon = document.createElement('span');
+            var increaseQuantityGlyphicon = document.createElement('span');
             increaseQuantityGlyphicon.className = 'glyphicon glyphicon-plus';
             increaseQuantityElement.appendChild(increaseQuantityGlyphicon);
             increaseQuantityElement.ponymtg = {};

@@ -1,4 +1,12 @@
+## 1.0.2
+
+* Made the About page look slightly less terrible.
+* Added a new advanced search section for General options.
+* Added an "Only show cards which have images" option.
+* Added card set: "PONI MTG".
+
 ## 1.0.1
+
 * Added a local visit counter and tips panel.
 * Reworded the advice panel on the Print sheets page.
 * Added a "View card image" button.
