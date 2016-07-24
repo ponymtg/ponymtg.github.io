@@ -16327,7 +16327,7 @@ var CARDS = [
     },
     {
         'name': '\'Sanguine\' Trueblood',
-        'image': '__sanguine___trueblood_by_zepheniah-d4wyxbk.jpg',
+        'image': 'sanguine___trueblood_by_zepheniah-d4wyxbk.jpg',
         'set': 'MtG: Fallout Equestria',
         'creator': 'zepheniah',
     },
