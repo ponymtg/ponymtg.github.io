@@ -75,10 +75,11 @@ var global = {
             'creator': 'Sorden',
             'url': 'http://sorden.deviantart.com/gallery/',
         },
-        'Derpibooru 7220': {
-            'path': 'Derpibooru 7220/cards',
+        'Phil Srobeighn': {
+            'path': 'Phil Srobeighn/cards',
+            'creator': 'Phil Srobeighn',
             'url': 'https://derpibooru.org/7220',
-            'notes': 'This set was posted on Derpibooru in 2012, without any creator attribution.'
+            'notes': 'This set was created by Derpibooru user Phil Srobeighn and posted on Derpibooru in 2012.'
         },
         'alternatepony': {
             'path': 'alternatepony/cards',
