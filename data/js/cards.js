@@ -1390,7 +1390,7 @@ var CARDS = [
         'name': 'Arcanim of Lauren\'s Light',
         'image': 'Arcanim of Laurens Light.jpg',
         'cost': '4W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Alicorn',
         'pt': '4/4',
         'text': 'Flying, Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\n2W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nWhen Arcanim of Lauren\'s Light enters the battlefield, prevent all damage that would be dealt to and dealt by it this turn.',
@@ -1402,7 +1402,7 @@ var CARDS = [
         'name': 'Arcknight Ascendant',
         'image': 'Arcknight Ascendant.jpg',
         'cost': '3WWW',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Alicorn Knight',
         'pt': '6/6',
         'text': 'Flying, Vigilance, Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nWhenever Arcknight Ascendant blocks or is blocked, you may pay 1WW. If you do, destroy target creature that is attacking or blocking you. You get a Quest counter.',
@@ -1425,7 +1425,7 @@ var CARDS = [
         'name': 'Beacon Station Expedition',
         'image': 'Beacon Station Expedition.jpg',
         'cost': '1W',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': 'Quest — At the beginning of each upkeep, if you gained at least 3 life last turn, you get a Quest counter.\n\nT, Pay 3 Quest counters: Sacrifice Beacon Station Expedition, then search your library for an enchantment, put it into your hand, and shuffle your library.',
         'flavorText': 'The Skylights signaled passage to airships of old.',
@@ -1447,7 +1447,7 @@ var CARDS = [
         'name': 'Celestia, the Light Eternal',
         'image': 'Celestia the Light Eternal.jpg',
         'cost': '2WW',
-        'supertype': 'Planeswalker'
+        'supertype': 'Planeswalker',
         'subtype': 'Celestia',
         'text': '+2: White creatures you control have Lifelink and Vigilance until end of turn.\n\n-3: Put two 2/2 white Earthpony Knight creature tokens with Vigilance named "Solar Guard" onto the battlefield.\n\n-7: You get Celestia\'s "Ascension" emblem.',
         'artist': 'Noben',
@@ -1458,7 +1458,7 @@ var CARDS = [
         'name': 'Cloak of Storms',
         'image': 'Cloak of Storms.jpg',
         'cost': '1WW',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant creature\n\nEnchanted creature gets +1/+1 for each enchantment and each creature you control.\n\nIf Cloak of Storms would enter the graveyard, instead return it to its owner\'s hand.',
         'flavorText': 'The crafting of cloud armor was a lost art from a previous age, rediscovered when the Great Archive of Canterlot was reopened.',
@@ -1470,7 +1470,7 @@ var CARDS = [
         'name': 'Cloudpuncher Cadet',
         'image': 'Cloudpuncher Cadet.jpg',
         'cost': 'W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus',
         'pt': '1/1',
         'text': '1W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nW: Cloudpuncher Cadet has Flying until end of turn.',
@@ -1482,7 +1482,7 @@ var CARDS = [
         'name': 'Cloudpuncher Veteran',
         'image': 'Cloudpuncher Veteran.jpg',
         'cost': '2W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
         'pt': '1/1',
         'text': 'Double Strike\n\nWW: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nW: Cloudpuncher Veteran has Flying until end of turn.',
@@ -1494,7 +1494,7 @@ var CARDS = [
         'name': 'Cloudsdale Champion',
         'image': 'Cloudsdale Champion.jpg',
         'cost': '1W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
         'pt': '1/1',
         'text': 'Flying\n\nWhenever another Pegasus enters the battlefield under your control and whenever you get a Quest counter, put a +1/+1 counter on Cloudsdale Champion.',
@@ -1507,7 +1507,7 @@ var CARDS = [
         'name': 'Conjured Armor',
         'image': 'Conjured Armor.jpg',
         'cost': '1W',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant Creature\n\nEnchanted creature gets +1/+3.\n\nConjured Armor and enchanted creature each have Arcane Shield 1. (Opponents must pay 1 to target Conjured Armor and enchanted creature.)',
         'artist': 'Makkon',
@@ -1529,7 +1529,7 @@ var CARDS = [
         'name': 'Flight Aptitude',
         'image': 'Flight Aptitude.jpg',
         'cost': 'W',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant creature\n\nEnchanted creature gets +1/+1 for each enchantment you control.\n\n1W: Enchanted creature has Flying until end of turn.',
         'flavorText': '"...Let me show you \'fast enough.\'"             — Rainbow Dash',
@@ -1541,7 +1541,7 @@ var CARDS = [
         'name': 'Fluttershy, the Good',
         'image': 'Fluttershy the Good.jpg',
         'cost': '2W',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Pegasus',
         'pt': '0/3',
         'text': 'W, Pay 1 Quest counter: Prevent all damage that would be dealt to and dealt by target creature this turn.\n\nQuest — At the beginning of each upkeep, if you attacked or blocked with at least 3 creatures last turn, you get a Quest counter.\n\nQuest Level X — At the beginning of your upkeep, you gain X life.',
@@ -1564,7 +1564,7 @@ var CARDS = [
         'name': 'Lauren, Author of Worlds',
         'image': 'Lauren Author of Worlds.jpg',
         'cost': '3WW',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Alicorn God',
         'pt': '4/6',
         'text': 'Arcane Shield 3, Lifelink\n\n3W: Put a 1/1 white Pegasus creature token with Flying onto the battlefield. You get a Quest counter.\n\nQuest Level 7 — Permanents you control have "1W: This permanent has Indestructible until end of turn. You gain 2 life."',
@@ -1588,7 +1588,7 @@ var CARDS = [
         'name': 'Lauren\'s Lightbringer',
         'image': 'Laurens Lightbringer.jpg',
         'cost': '3W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Shaman',
         'pt': '1/4',
         'text': 'W: Lauren\'s Lightbringer has Flying until end of turn.\n\nWhenever Lauren\'s Lightbringer or another creature enters the battlefield, prevent all damage that would be dealt to and dealt by target creature you control this turn.',
@@ -1600,7 +1600,7 @@ var CARDS = [
         'name': 'Pegassistance',
         'image': 'Pegassistance.jpg',
         'cost': '3W',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant creature\n\nEnchanted creature has Lifelink.\n\nWhenever enchanted creature attacks, it gets +1/+1 for each other attacking creature until end of turn.',
         'flavorText': '"That is, um, if you don\'t mind..."             — Fluttershy',
@@ -1612,7 +1612,7 @@ var CARDS = [
         'name': 'Pegasus Adventurer',
         'image': 'Pegasus Adventurer.jpg',
         'cost': '2WW',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus',
         'pt': '2/3',
         'text': 'Flying, Vigilance\n\nWhen you cast Pegasus Adventurer, you get a Quest counter.',
@@ -1625,7 +1625,7 @@ var CARDS = [
         'name': 'Pegasus Lightweaver',
         'image': 'Pegasus Lightweaver.jpg',
         'cost': '3W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Shaman',
         'pt': '1/4',
         'text': 'W: Pegasus Lightweaver has Flying until end of turn.\n\nWhenever you cast an enchantment spell, you may draw a card.',
@@ -1638,7 +1638,7 @@ var CARDS = [
         'name': 'Pegasus Skyvillager',
         'image': 'Pegasus Skyvillager.jpg',
         'cost': 'W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus',
         'pt': '2/1',
         'text': 'Flying\n\nPegasus Skyvillager can\'t attack or block alone.',
@@ -1651,7 +1651,7 @@ var CARDS = [
         'name': 'Pegasus Vanguard',
         'image': 'Pegasus Vanguard.jpg',
         'cost': '2W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
         'pt': '2/2',
         'text': 'WWW: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nW: Pegasus Vanguard has Flying until end of turn.',
@@ -1685,7 +1685,7 @@ var CARDS = [
         'name': 'Purehearted Alicorn',
         'image': 'Purehearted Alicorn.jpg',
         'cost': '3W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Alicorn',
         'pt': '3/3',
         'text': 'Flying\n\nArcane Shield 2 (Opponents must pay 2 to target this card.)',
@@ -1698,7 +1698,7 @@ var CARDS = [
         'name': 'Quest for Lauren\'s Song',
         'image': 'Quest for Laurens Song.jpg',
         'cost': '3W',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if you attacked or blocked with at least four creatures last turn, you get a Quest counter.\n\nT, Pay 4 Quest counters: You gain 2 life for each land and each creature on the battlefield.',
         'artist': 'Huussii',
@@ -1709,7 +1709,7 @@ var CARDS = [
         'name': 'Rain Warden',
         'image': 'Rain Warden.jpg',
         'cost': 'W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Shaman',
         'pt': '0/2',
         'text': 'W: Rain Warden has Flying until end of turn.\n\nWhenever another creature enters the battlefield under your control, you gain 1 life.',
@@ -1721,7 +1721,7 @@ var CARDS = [
         'name': 'Rainshower',
         'image': 'Rainshower.jpg',
         'cost': '1W',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant creature\n\nFlash\n\nPrevent all damage that would be dealt to and dealt by enchanted creature.',
         'flavorText': '"Oh, um, I\'m sorry... I can get you a towel, uh, if you don\'t mind."\n\n— Fluttershy',
@@ -1733,7 +1733,7 @@ var CARDS = [
         'name': 'Return of the Pentarch',
         'image': 'Return of the Pentarch.jpg',
         'cost': '1WW',
-        'supertype': 'Legendary Enchantment'
+        'supertype': 'Legendary Enchantment',
         'subtype': 'Quest',
         'text': 'Indestructible\n\nQuest — At the beginning of each upkeep, if you spent at least 4 last turn, you get a Quest counter.\n\nQuest Level 10 — 1W, T: If you have at least 10 Quest counters, search your library for a Legendary or Alicorn creature, put it into your hand, then shuffle your library.',
         'artist': 'AquaGalaxy',
@@ -1744,7 +1744,7 @@ var CARDS = [
         'name': 'Seal of the Sun',
         'image': 'Seal of the Sun.jpg',
         'cost': 'WW',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant creature\n\nIf you control enchanted creature, it gets +1/+1 and has Arcane Shield 1 (Opponents must pay 1 to target enchanted creature.)\n\nIf you don\'t control enchanted creature, it can\'t attack or block and Seal of the Sun has Arcane Shield 1 (Opponents must pay 1 to target this enchantment.)',
         'artist': 'Mrs1989',
@@ -1755,7 +1755,7 @@ var CARDS = [
         'name': 'Search for Truth',
         'image': 'Search for Truth.jpg',
         'cost': '1WW',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': '3: Return Search for Truth to your hand.\n\nQuest — At the beginning of each upkeep, if a spell or ability you control prevented damage last turn, you get a Quest counter.\n\nQuest Level 6 — If you have at least six Quest counters, Search for Truth becomes a 4/4 white Alicorn creature with Lifelink and Vigilance.',
         'artist': 'AquaGalaxy',
@@ -1766,7 +1766,7 @@ var CARDS = [
         'name': 'Skycouncil Elder',
         'image': 'Skycouncil Elder.jpg',
         'cost': '2W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus',
         'pt': '1/3',
         'text': 'Flying\n\nWhen Skycouncil Elder enters the battlefield, look at the top 3 cards of your library, then put them back in any order.',
@@ -1779,7 +1779,7 @@ var CARDS = [
         'name': 'Skyguard Captain',
         'image': 'Skyguard Captain.jpg',
         'cost': '4W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
         'pt': '1/1',
         'text': 'W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nWhen you cast Skyguard Captain from your hand, put four 1/1 white Pegasus creature tokens with Flying onto the battlefield.',
@@ -1791,7 +1791,7 @@ var CARDS = [
         'name': 'Skyguard Militia',
         'image': 'Skyguard Militia.jpg',
         'cost': '1W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
         'pt': '2/1',
         'text': 'First Strike\n\nW: Skyguard Militia has Flying until end of turn.',
@@ -1825,7 +1825,7 @@ var CARDS = [
         'name': 'Sunflight Cloudshaper',
         'image': 'Sunflight Cloudshaper.jpg',
         'cost': '2W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Shaman',
         'pt': '2/2',
         'text': 'W: Sunflight Cloudshaper has Flying until end of turn.\n\nPlains you control have "T: Prevent the next 1 damage that would be dealt to you or target creature you control this turn."',
@@ -1838,7 +1838,7 @@ var CARDS = [
         'name': 'Sunflight Corsair',
         'image': 'Sunflight Corsair.jpg',
         'cost': '1WW',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
         'pt': '1/3',
         'text': 'Flying, Vigilance\n\nArcane Shield 1 (Opponents must pay 1 to target this card.)',
@@ -1851,7 +1851,7 @@ var CARDS = [
         'name': 'Sunflight Crusader',
         'image': 'Sunflight Crusader.jpg',
         'cost': '2WW',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
         'pt': '3/3',
         'text': 'Flying, Lifelink\n\n3WWW: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nWhen you pay Sunflight Crusader\'s Airstrike cost, it enters the battlefield with a +1/+1 counter for each creature you control.             ',
@@ -1884,7 +1884,7 @@ var CARDS = [
         'name': 'Weather Team Captain',
         'image': 'Weather Team Captain.jpg',
         'cost': 'WW',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
         'pt': '1/1',
         'text': 'Flying\n\nOther Pegasus creatures you control get +1/+1.\n\n1WW: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)',
@@ -1896,7 +1896,7 @@ var CARDS = [
         'name': 'Weather Worker',
         'image': 'Weather Worker.jpg',
         'cost': '1W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus',
         'pt': '1/1',
         'text': 'Flying\n\n2W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nWhen Weather Worker enters the battlefield, you may destroy target enchantment.',
@@ -1908,7 +1908,7 @@ var CARDS = [
         'name': 'Wind Elemental',
         'image': 'Wind Elemental.jpg',
         'cost': '1W',
-        'supertype': 'Enchantment Creature'
+        'supertype': 'Enchantment Creature',
         'subtype': 'Elemental',
         'pt': '0/2',
         'text': 'Quest Level 3 — If you have at least 3 Quest counters, Wind Elemental gets +1/+1 and has Vigilance.',
@@ -1932,7 +1932,7 @@ var CARDS = [
         'name': 'Windshear Weathermage',
         'image': 'Windshear Weathermage.jpg',
         'cost': 'W',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus',
         'pt': '0/2',
         'text': 'Flying\n\n1W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nWhen Windshear Weathermage enters the battlefield, exile another target nonland permanent until end of turn.',
@@ -1944,7 +1944,7 @@ var CARDS = [
         'name': 'Wonderbolt Squad',
         'image': 'Wonderbolt Squad.jpg',
         'cost': '3WW',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
         'pt': '3/3',
         'text': '2W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nFlying, Vigilance',
@@ -1957,7 +1957,7 @@ var CARDS = [
         'name': 'Academic Curiosity',
         'image': 'Academic Curiosity.jpg',
         'cost': 'U',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant creature\n\nWhen you cast Academic Curiosity, draw a card.\n\nWhenever enchanted creature deals damage to a player, draw a card.',
         'flavorText': '"Ooh, what\'s that? How does it work? Can I borrow it?" — Twilight Sparkle',
@@ -1969,7 +1969,7 @@ var CARDS = [
         'name': 'Arc-Matrix Gestalt',
         'image': 'Arc-Matrix Gestalt.jpg',
         'cost': 'U',
-        'supertype': 'Enchantment Creature'
+        'supertype': 'Enchantment Creature',
         'subtype': 'Illusion',
         'pt': '0/3',
         'text': 'Defender, Flying\n\nIf Arc-Matrix Gestalt would die from damage, instead that damage is reduced to 1 and it is dealt to you.',
@@ -1993,7 +1993,7 @@ var CARDS = [
         'name': 'Archive Adjucator',
         'image': 'Archive Adjucator.jpg',
         'cost': '2U',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Advisor',
         'pt': '1/3',
         'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, you may pay 1. If you do, target player puts the top three cards of his or her library into his or her graveyard.',
@@ -2028,7 +2028,7 @@ var CARDS = [
         'name': 'Argent Battlemage',
         'image': 'Argent Battlemage.jpg',
         'cost': '4U',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
         'pt': '2/4',
         'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, another target creature you control gets +2/+0 and has Flying until end of turn.',
@@ -2063,7 +2063,7 @@ var CARDS = [
         'name': 'Canterlot Archiveologist',
         'image': 'Canterlot Archiveologist.jpg',
         'cost': '2U',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Advisor',
         'pt': '1/2',
         'text': 'Flash\n\nWhen Canterlot Archiveologist enters the battlefield, you may return target noncreature, nonartifact spell from your graveyard to your hand.',
@@ -2087,7 +2087,7 @@ var CARDS = [
         'name': 'Cryothaumic Construct',
         'image': 'Cryothaumic Construct.jpg',
         'cost': 'U',
-        'supertype': 'Enchantment Creature'
+        'supertype': 'Enchantment Creature',
         'subtype': 'Illusion',
         'pt': '0/4',
         'text': 'When Cryothaumic Construct becomes the target of a spell or ability, sacrifice it.\n\nWhen Cryothaumic Construct dies, you may draw a card.',
@@ -2100,7 +2100,7 @@ var CARDS = [
         'name': 'Darkspire Shadowcaster',
         'image': 'Darkspire Shadowcaster.jpg',
         'cost': '1U',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
         'pt': '1/2',
         'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, you may pay 3. If you do, target creature can\'t be blocked this turn.',
@@ -2145,7 +2145,7 @@ var CARDS = [
         'name': 'Librarian of the Infinite',
         'image': 'Librarian of the Infinite.jpg',
         'cost': '1U',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Advisor',
         'pt': '1/2',
         'text': 'T: Exile a noncreature, nonartifact card from your hand, then draw a card.\n\nT: Return a card exiled with Librarian of the Infinite to your hand.',
@@ -2169,7 +2169,7 @@ var CARDS = [
         'name': 'Master Arcanomancer',
         'image': 'Master Arcanomancer.jpg',
         'cost': '3UU',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
         'pt': '1/4',
         'text': 'Flash\n\nSpellwright — Whenever you cast a noncreature, nonartifact spell, you may exile an instant or sorcery card from your hand or the graveyard.\n\nT: Until end of turn, you may cast spells exiled with Master Arcanomancer as though they were in your hand. They cost 1 less to cast.',
@@ -2214,7 +2214,7 @@ var CARDS = [
         'name': 'Nimbus of Knowledge',
         'image': 'Nimbus of Knowledge.jpg',
         'cost': '3U',
-        'supertype': 'Enchantment Creature'
+        'supertype': 'Enchantment Creature',
         'subtype': 'Illusion',
         'pt': '1/3',
         'text': 'Flash\n\nWhen Nimbus of Knowledge enters the battlefield, look at the top three cards of your library, then put them back in any order.\n\nWhenever you would draw a card, you may instead Scry 3.',
@@ -2248,7 +2248,7 @@ var CARDS = [
         'name': 'Quest for Titan\'s First Law',
         'image': 'Quest for Titans First Law.jpg',
         'cost': '3U',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if you countered a spell last turn, you get a Quest counter.\n\nT, Pay 4 Quest counters: Until end of turn, whenever an opponent casts a spell, counter it.',
         'artist': 'CigarsCigarettes',
@@ -2259,7 +2259,7 @@ var CARDS = [
         'name': 'Rain Elemental',
         'image': 'Rain Elemental.jpg',
         'cost': 'U',
-        'supertype': 'Enchantment Creature'
+        'supertype': 'Enchantment Creature',
         'subtype': 'Elemental',
         'pt': '0/3',
         'text': 'Quest Level 3 — T: If you have at least 3 Quest counters, tap target creature.',
@@ -2283,7 +2283,7 @@ var CARDS = [
         'name': 'Royal Archive Expedition',
         'image': 'Royal Archive Expedition.jpg',
         'cost': '2U',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': 'Quest — At the beginning of each upkeep, if you drew at least three cards last turn, you get a Quest counter.\n\nT, Pay 3 Quest counters: Sacrifice Royal Archive Expedition, then search your library for a nonpermanent spell, put it into your hand, and shuffle your library.',
         'flavorText': 'The Great Archive was reopened as a last resort.',
@@ -2295,7 +2295,7 @@ var CARDS = [
         'name': 'Search for Wisdom',
         'image': 'Search for Wisdom.jpg',
         'cost': '1UU',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': '3: Return Search for Wisdom to your hand.\n\nQuest — At the beginning of each upkeep, if you drew at least two cards last turn, you get a Quest counter.\n\nQuest Level 6 — As long as you have at least six Quest counters, Search for Wisdom becomes a 4/4 blue Alicorn creature with Flying.',
         'artist': 'Bakuel',
@@ -2306,7 +2306,7 @@ var CARDS = [
         'name': 'Seeker of Secrets',
         'image': 'Seeker of Secrets.jpg',
         'cost': '2U',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn',
         'pt': '1/3',
         'text': 'When Seeker of Secrets enters the battlefield, look at the top three cards of target player\'s library, then put them back in any order.',
@@ -2319,7 +2319,7 @@ var CARDS = [
         'name': 'South Sea Dragon',
         'image': 'South Sea Dragon.jpg',
         'cost': '3UUU',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Dragon',
         'pt': '6/6',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nEach other creature can\'t attack or block unless its controller pays 1 or 1 Quest counter.\n\nPay 1 Quest counter: The next spell you cast this turn costs 1 less to cast.',
@@ -2353,7 +2353,7 @@ var CARDS = [
         'name': 'Telekinetomancer',
         'image': 'Telekinetomancer.jpg',
         'cost': '2UU',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
         'pt': '2/3',
         'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, you may tap target creature.',
@@ -2377,7 +2377,7 @@ var CARDS = [
         'name': 'Titan, Scion of Order',
         'image': 'Titan Scion of Order.jpg',
         'cost': '3UU',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Alicorn God',
         'pt': '3/7',
         'text': 'Arcane Shield 3, Flash\n\n1UU: Copy target instant or sorcery spell you control. You may choose new targets for the copy. You get a Quest counter.\n\nQuest Level 7 — Counter the first spell cast during each turn. If a spell you control is countered this way, draw a card.',
@@ -2400,7 +2400,7 @@ var CARDS = [
         'name': 'Titan\'s Isomancer',
         'image': 'Titans Isomancer.jpg',
         'cost': '2U',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
         'pt': '2/2',
         'text': '3, T: Counter target spell that targets a permanent you control.',
@@ -2413,7 +2413,7 @@ var CARDS = [
         'name': 'Tome Thief',
         'image': 'Tome Thief.jpg',
         'cost': 'UU',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn',
         'pt': '1/2',
         'text': 'Whenever Tome Thief deals combat damage to a player, that player puts the top card of their library into their graveyard, and you may draw a card.',
@@ -2426,7 +2426,7 @@ var CARDS = [
         'name': 'Twilight Sparkle, the Studious',
         'image': 'Twilight Sparkle the Studious.jpg',
         'cost': '2U',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Unicorn',
         'pt': '2/2',
         'text': 'Flash, Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\n2U, Pay 1 Quest counter: Draw a card.\n\nQuest — At the beginning of each upkeep, if you cast a noncreature, nonartifact spell last turn, you get a Quest counter.\n\nQuest Level X — Instant and sorcery spells you control cost X less to cast.',
@@ -2438,7 +2438,7 @@ var CARDS = [
         'name': 'Unicorn Adventurer',
         'image': 'Unicorn Adventurer.jpg',
         'cost': '2UU',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn',
         'pt': '2/4',
         'text': 'Flash\n\nWhen you cast Unicorn Adventurer, you get a Quest counter.',
@@ -2451,7 +2451,7 @@ var CARDS = [
         'name': 'Unicorn Aeromancer',
         'image': 'Unicorn Aeromancer.jpg',
         'cost': '3U',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
         'pt': '2/3',
         'text': 'U: Another target creature you control gains Flying until end of turn.',
@@ -2464,7 +2464,7 @@ var CARDS = [
         'name': 'Unicorn Shieldwright',
         'image': 'Unicorn Shieldwright.jpg',
         'cost': '2UU',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
         'pt': '1/4',
         'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, target nonland permanent you control has Arcane Shield 2 until end of turn. (Opponents must pay 2 to target that permanent.)',
@@ -2476,7 +2476,7 @@ var CARDS = [
         'name': 'Spell Wright',
         'image': 'Spell Wright.jpg',
         'cost': '1U',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
         'pt': '1/2',
         'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, you may pay 1U. If you do, draw a card.',
@@ -2521,7 +2521,7 @@ var CARDS = [
         'name': 'Batpony Adventurer',
         'image': 'Batpony Adventurer.jpg',
         'cost': '2BB',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony',
         'pt': '2/3',
         'text': 'First Strike, Lifelink\n\nWhen you cast Batpony Adventurer, you get a Quest counter.',
@@ -2534,7 +2534,7 @@ var CARDS = [
         'name': 'Batpony Blackguard',
         'image': 'Batpony Blackguard.jpg',
         'cost': 'BB',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony Rogue',
         'pt': '2/3',
         'text': 'Intimidate, Lifelink\n\nAt the beginning of your upkeep, you lose 2 life.',
@@ -2547,7 +2547,7 @@ var CARDS = [
         'name': 'Bite Mark',
         'image': 'Bite Mark.jpg',
         'cost': 'B',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant creature\n\nEnchanted creature gets -1/-1 and has Deathtouch.',
         'flavorText': 'The curse that defines a Batpony incurs a deep and terrible hunger for the lifeforce of mortal creatures.',
@@ -2581,7 +2581,7 @@ var CARDS = [
         'name': 'Contagion',
         'image': 'Contagion.jpg',
         'cost': '1BB',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant creature\n\nEnchanted creature gets -3/-3.\n\nWhen enchanted creature leaves the battlefield, return Contagion to your hand.',
         'flavorText': '"Hangovers are a disease."\n\n— Spike',
@@ -2658,7 +2658,7 @@ var CARDS = [
         'name': 'Forgotten Cave Expedition',
         'image': 'Forgotten Cave Expedition.jpg',
         'cost': '3B',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': 'Quest — At the beginning of each upkeep, if an opponent put at least two card into the graveyard last turn, you get a Quest counter.\n\nT, Pay 3 Quest counters: Sacrifice Forgotten Cave Expedition, then search your library for a card, put it into your hand, and shuffle your library.',
         'artist': 'AssassinMonkey',
@@ -2691,7 +2691,7 @@ var CARDS = [
         'name': 'Luna, the Dream Warden',
         'image': 'Luna the Dream Warden.jpg',
         'cost': '2BB',
-        'supertype': 'Planeswalker'
+        'supertype': 'Planeswalker',
         'subtype': 'Luna',
         'text': '+1: Each opponent loses 1 life and you gain that much life.\n\n-X: Target creature gets -X/-X until the beginning of your next upkeep.\n\n-6: You get Luna\'s "Nightveil" emblem.',
         'artist': 'PonyKillerX',
@@ -2703,7 +2703,7 @@ var CARDS = [
         'name': 'Nocturnal Fragment',
         'image': 'Nocturnal Fragment.jpg',
         'cost': '2B',
-        'supertype': 'Enchantment Creature'
+        'supertype': 'Enchantment Creature',
         'subtype': 'Nightmare',
         'pt': '2/2',
         'text': 'When Nocturnal Fragment enters the battlefield, look at the top 3 cards of your library, then put them back in any order.',
@@ -2716,7 +2716,7 @@ var CARDS = [
         'name': 'Oceanus\' Dreamtwister',
         'image': 'Oceanus Dreamtwister.jpg',
         'cost': '2B',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony Cleric',
         'pt': '2/2',
         'text': 'Whenever you reduce a creature\'s toughness, you gain 1 life.\n\n1B, T: Target creature gets -2/-1 until end of turn.',
@@ -2729,7 +2729,7 @@ var CARDS = [
         'name': 'Oceanus, Fell Guardian',
         'image': 'Oceanus Fell Guardian.jpg',
         'cost': '3BB',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Alicorn God',
         'pt': '6/4',
         'text': 'Arcane Shield 3, Vigilance\n\n1B, Sacrifice a creature: Gain life equal to its toughness and put a 2/2 black Nightmare creature token onto the battlefield. You get a Quest counter.\n\nQuest Level 7 — Opponents can\'t gain life. At the beginning of your upkeep, target player loses 2 life.',
@@ -2763,7 +2763,7 @@ var CARDS = [
         'name': 'Quest for Oceanus\' Last Joke',
         'image': 'Quest for Oceanus Last Joke.jpg',
         'cost': '3B',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if at least two permanents were destroyed as an effect of a spell or ability you control last turn, you get a Quest counter.\n\nT, Pay 4 Quest counters: Each player\'s life total becomes 1.',
         'artist': 'Rujhe',
@@ -2774,7 +2774,7 @@ var CARDS = [
         'name': 'Red-Eyed Batpony',
         'image': 'Red-Eyed Batpony.jpg',
         'cost': 'B',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony Rogue',
         'pt': '1/1',
         'text': 'Intimidate',
@@ -2787,7 +2787,7 @@ var CARDS = [
         'name': 'Shade Elemental',
         'image': 'Shade Elemental.jpg',
         'cost': 'B',
-        'supertype': 'Enchantment Creature'
+        'supertype': 'Enchantment Creature',
         'subtype': 'Elemental',
         'pt': '1/1',
         'text': 'Quest Level 3 — If you have at least 3 Quest counters, Shade Elemental has Deathtouch and can\'t block.',
@@ -2800,7 +2800,7 @@ var CARDS = [
         'name': 'Shadowborn Batpony',
         'image': 'Shadowborn Batpony.jpg',
         'cost': 'B',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony',
         'pt': '1/1',
         'text': 'B, Sacrifice Shadowborn Batpony: Put a 2/2 black Nightmare creature token onto the battlefield under your control.',
@@ -2813,7 +2813,7 @@ var CARDS = [
         'name': 'Shadowform Raider',
         'image': 'Shadowform Raider.jpg',
         'cost': '1BB',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony Rogue',
         'pt': '1/3',
         'text': 'Deathtouch\n\n1BB: Regenerate Shadowform Raider.',
@@ -2836,7 +2836,7 @@ var CARDS = [
         'name': 'Spectral Caveguard',
         'image': 'Spectral Caveguard.jpg',
         'cost': '2BB',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony Soldier',
         'pt': '3/3',
         'text': 'Intimidate\n\nWhen Spectral Caveguard attacks, it gains First Strike until end of turn.',
@@ -2849,7 +2849,7 @@ var CARDS = [
         'name': 'Spectre of Living Shadow',
         'image': 'Spectre of Living Shadow.jpg',
         'cost': 'BBB',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony',
         'pt': '5/3',
         'text': 'When Spectre of Living Shadow enters the battlefield, you lose 3 life.\n\nWhen Spectre of Living Shadow leaves the battlefield, its owner may pay BB. If he or she does, return it to the battlefield under its owner\'s control.',
@@ -2862,7 +2862,7 @@ var CARDS = [
         'name': 'To Steal From Eternity',
         'image': 'To Steal From Eternity.jpg',
         'cost': '3BB',
-        'supertype': 'Legendary Enchantment'
+        'supertype': 'Legendary Enchantment',
         'subtype': 'Quest',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if you lost life without being dealt damage last turn, you get a Quest counter.\n\nBBB, T, Pay 3 Quest counters: Put a 4/3 black Alicorn Nightmare creature token with "Other creatures get -2/-1" onto the battlefield.',
         'artist': 'FoxInShadow',
@@ -2873,7 +2873,7 @@ var CARDS = [
         'name': 'Veil of Shadows',
         'image': 'Veil of Shadows.jpg',
         'cost': 'B',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant creature\n\nEnchanted creature gets +1/+1 and has Intimidate.\n\nWhen enchanted creature deals combat damage to a player, return Veil of Shadows to its owner\'s hand.',
         'artist': 'TwinTails, Inc.',
@@ -2904,7 +2904,7 @@ var CARDS = [
         'name': 'Alchemical Flask',
         'image': 'Alchemical Flask.jpg',
         'cost': '1R',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Equipment',
         'text': 'At the beginning of each upkeep, put a Charge counter on equipped creature.\n\nT: Equipped creature deals damage equal to the number of Charge counters on it to target creature or player, then unattach Alchemical Flask.\n\nEquip 1R (Equip only as a sorcery.)',
         'artist': 'DoomSp0rk',
@@ -2915,7 +2915,7 @@ var CARDS = [
         'name': 'Ash Mountain Hellkite',
         'image': 'Ash Mountain Hellkite.jpg',
         'cost': '5RR',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Dragon',
         'pt': '5/5',
         'text': 'Flying\n\nWhen you cast Ash Mountain Hellkite, you get a Quest counter.\n\nWhenever a red source you control would deal damage to a target, it deals an additional 2 damage.',
@@ -2939,7 +2939,7 @@ var CARDS = [
         'name': 'Azo, the Fleet-of-Hoof',
         'image': 'Azo the Fleet-of-Hoof.jpg',
         'cost': '1RR',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Zebra Warrior',
         'pt': '*/*',
         'text': 'Azo enters the battlefield with four Charge counters.\n\nAzo\'s power and toughness are each equal to the number of Charge counters on creatures you control.\n\nR, Remove a Charge counter from Azo: Target creature can\'t block this turn.',
@@ -2951,7 +2951,7 @@ var CARDS = [
         'name': 'Balefire Seeker',
         'image': 'Balefire Seeker.jpg',
         'cost': '3R',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
         'pt': '1/4',
         'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nBalefire Seeker gets +2/-1 for each Charge counter on it.',
@@ -2995,7 +2995,7 @@ var CARDS = [
         'name': 'Blaze Elemental',
         'image': 'Blaze Elemental.jpg',
         'cost': '1R',
-        'supertype': 'Enchantment Creature'
+        'supertype': 'Enchantment Creature',
         'subtype': 'Elemental',
         'pt': '2/1',
         'text': 'Quest Level 3 — As long as you have at least 3 Quest counters, Blaze Elemental gets +1/+0 and has Menace.',
@@ -3029,7 +3029,7 @@ var CARDS = [
         'name': 'Bondfire Animus',
         'image': 'Bondfire Animus.jpg',
         'cost': '4R',
-        'supertype': 'Artifact Creature'
+        'supertype': 'Artifact Creature',
         'subtype': 'Spirit Construct',
         'pt': '5/1',
         'text': 'Damage dealt by Bondfire Animus can\'t be prevented. Creatures dealt damage by it can\'t be regenerated that turn.',
@@ -3053,7 +3053,7 @@ var CARDS = [
         'name': 'Cinder Ruins Expedition',
         'image': 'Cinder Ruins Expedition.jpg',
         'cost': '1R',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': 'Quest — At the beginning of each upkeep, if you dealt at least 3 noncombat damage last turn, you get a Quest counter.\n\nT, Pay 3 Quest counters: Sacrifice Cinder Ruins Expedition, then search your library for an artifact, put it into your hand, and shuffle your library.',
         'flavorText': 'Secrets lie in the forgotten seat of Keris\' power',
@@ -3086,7 +3086,7 @@ var CARDS = [
         'name': 'Fireblood Zealot',
         'image': 'Fireblood Zealot.jpg',
         'cost': 'R',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
         'pt': '1/1',
         'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nRemove a Charge counter from Fireblood Zealot: It gets +1/+1 until end of turn. (Use this ability only as a sorcery.)',
@@ -3098,7 +3098,7 @@ var CARDS = [
         'name': 'Fleethoof Interceptor',
         'image': 'Fleethoof Interceptor.jpg',
         'cost': '1R',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
         'pt': '2/1',
         'text': 'First Strike',
@@ -3111,7 +3111,7 @@ var CARDS = [
         'name': 'Fleethoof Prodigy',
         'image': 'Fleethoof Prodigy.jpg',
         'cost': '2R',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
         'pt': '3/2',
         'text': 'When Fleethoof Prodigy enters the battlefield or attacks, put a Charge counter on it.\n\nRemove a Charge counter from Fleethoof Prodigy: Target creature can\'t block Fleethoof Prodigy this turn.',
@@ -3123,7 +3123,7 @@ var CARDS = [
         'name': 'Fleethoof Sensei',
         'image': 'Fleethoof Sensei.jpg',
         'cost': '2R',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Sage',
         'pt': '3/1',
         'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nIf Fleethoof Sensei has at least three Charge counters, it has Double Strike.',
@@ -3147,7 +3147,7 @@ var CARDS = [
         'name': 'Keris, Mother of Invention',
         'image': 'Keris Mother of Invention.jpg',
         'cost': '3RR',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Alicorn God',
         'pt': '7/3',
         'text': 'Arcane Shield 3, First Strike\n\n1R, Discard a card: Scry X, where X is that card\'s converted mana cost, then draw a card. You get a Quest counter.\n\nQuest Level 7 — Whenever a red card enters your graveyard, Keris deals 2 damage to target player.',
@@ -3160,7 +3160,7 @@ var CARDS = [
         'name': 'Kylara Scout',
         'image': 'Kylara Scout.jpg',
         'cost': 'R',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra',
         'pt': '1/1',
         'text': 'Haste',
@@ -3173,7 +3173,7 @@ var CARDS = [
         'name': 'Kylara Thoughtkeeper',
         'image': 'Kylara Thoughtkeeper.jpg',
         'cost': '2R',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Shaman',
         'pt': '2/2',
         'text': 'Haste\n\nWhen Kylara Thoughtkeeper enters the battlefield, look at the top 3 cards of your library, then put them back in any order.',
@@ -3219,7 +3219,7 @@ var CARDS = [
         'name': 'Mbolo Potionkeeper',
         'image': 'Mbolo Potionkeeper.jpg',
         'cost': '2RR',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Shaman',
         'pt': '3/3',
         'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nT: Mbolo Potionkeeper deals damage equal to the number of Charge counters on it to target creature.',
@@ -3231,7 +3231,7 @@ var CARDS = [
         'name': 'Rage Drinker',
         'image': 'Rage Drinker.jpg',
         'cost': 'RR',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
         'pt': '2/2',
         'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nAs long as Rage Drinker is attacking, it gets +1/+1 for each Charge counter on it.',
@@ -3243,7 +3243,7 @@ var CARDS = [
         'name': 'Mbolo Warrior',
         'image': 'Mbolo Warrior.jpg',
         'cost': '1RR',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
         'pt': '3/1',
         'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nRemove a Charge counter from Mbolo Warrior: Until end of turn, it has Menace.',
@@ -3297,7 +3297,7 @@ var CARDS = [
         'name': 'Quest for Keris\' Balefire',
         'image': 'Quest for Keris Balefire.jpg',
         'cost': '3R',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if you dealt at least 4 noncombat damage last turn, you get a Quest counter.\n\nT, Pay 4 Quest counters: Until end of turn, if a red source you control would deal damage, it deals double that damage instead.',
         'artist': 'Makkon',
@@ -3308,7 +3308,7 @@ var CARDS = [
         'name': 'Search for Focus',
         'image': 'Search for Focus.jpg',
         'cost': '1RR',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': '3: Return Search for Focus to your hand.\n\nQuest — At the beginning of each upkeep, if you cast an artifact spell last turn, you get a Quest counter.\n\nQuest Level 6 — As long as you have at least six Quest counters, Search for Focus becomes a 4/4 red Spirit creature with First Strike and Menace.',
         'artist': 'RubleGun',
@@ -3361,7 +3361,7 @@ var CARDS = [
         'name': 'Warden of Keris',
         'image': 'Warden of Keris.jpg',
         'cost': '2R',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Shaman',
         'pt': '3/1',
         'text': 'Mountains you control have "1, T: Put a Charge counter on target creature you control."\n\nWarden of Keris gets +0/+1 for each Charge counter on it.',
@@ -3374,7 +3374,7 @@ var CARDS = [
         'name': 'Xanthe, the Wanderer',
         'image': 'Xanthe the Wanderer.jpg',
         'cost': '2R',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Zebra',
         'pt': '3/1',
         'text': 'First Strike, Haste\n\n1R, Pay 1 Quest counter: Xanthe deals 2 damage to target creature or player.\n\nQuest — At the beginning of each upkeep, if damage was dealt to you last turn, you get a Quest counter.\n\nQuest Level X — At the beginning of your upkeep, discard X cards, then draw that many cards.',
@@ -3386,7 +3386,7 @@ var CARDS = [
         'name': 'Zebra Adventurer',
         'image': 'Zebra Adventurer.jpg',
         'cost': '2RR',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra',
         'pt': '3/2',
         'text': 'First Strike, Haste\n\nWhen you cast Zebra Adventurer, you get a Quest counter.',
@@ -3399,7 +3399,7 @@ var CARDS = [
         'name': 'Zebra Firekeeper',
         'image': 'Zebra Firekeeper.jpg',
         'cost': 'R',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Shaman',
         'pt': '1/1',
         'text': 'T: Zebra Firekeeper deals 1 damage to target opponent.\n\nWhen Zebra Firekeeper dies, it deals 1 damage to each player.',
@@ -3412,7 +3412,7 @@ var CARDS = [
         'name': 'Zebra War Paint',
         'image': 'Zebra War Paint.jpg',
         'cost': '1R',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant creature\n\nEnchanted creature has First Strike.\n\nEnchanted creature gets +X/+0, where X is the amount of damage dealt to you since your last end step.',
         'flavorText': '"Come on! Hit me!" — Azo, to a student.',
@@ -3424,7 +3424,7 @@ var CARDS = [
         'name': 'Zvaha Infiltrator',
         'image': 'Zvaha Infiltrator.jpg',
         'cost': '1R',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
         'pt': '1/1',
         'text': 'Haste\n\nWhenever Zvaha Infiltrator deals combat damage to a player, put a Charge counter on it.\n\nZvaha Infiltrator can only be blocked by a number of creatures equal to the number of Charge counters on it.',
@@ -3447,7 +3447,7 @@ var CARDS = [
         'name': 'Applejack, the Diligent',
         'image': 'Applejack the Diligent.jpg',
         'cost': '2G',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Earthpony',
         'pt': '3/3',
         'text': 'G, Pay 1 Quest counter: Search your library for a basic Forest. Put it onto the battlefield tapped, then shuffle your library.\n\nQuest — At the beginning of each upkeep, if you put a Forest onto the battlefield last turn, you get a Quest counter.\n\nQuest Level X — Applejack gets +X/+X and has Trample.',
@@ -3469,7 +3469,7 @@ var CARDS = [
         'name': 'Ashwood Ancient',
         'image': 'Ashwood Ancient.jpg',
         'cost': '2G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Treefolk',
         'pt': '0/5',
         'text': 'Defender, Reach\n\nWhen Ashwood Ancient enters the battlefield, look at the top 3 cards of your library, then put them back in any order.',
@@ -3482,7 +3482,7 @@ var CARDS = [
         'name': 'Druid of the Verge',
         'image': 'Druid of the Verge.jpg',
         'cost': '1G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Druid',
         'pt': '2/2',
         'text': 'T: Search your library for a basic land and put it onto the battlefield, then shuffle Druid of the Verge into your library. You get a Quest counter.',
@@ -3506,7 +3506,7 @@ var CARDS = [
         'name': 'Earthknight Errant',
         'image': 'Earthknight Errant.jpg',
         'cost': '3GG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
         'pt': '3/5',
         'text': 'Hexproof\n\nWhen Earthknight Errant attacks, if it could be blocked, it must be blocked by exactly one creature the defending player controls.',
@@ -3519,7 +3519,7 @@ var CARDS = [
         'name': 'Earthmage Sniper',
         'image': 'Earthmage Sniper.jpg',
         'cost': '2GG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Artificer',
         'pt': '2/5',
         'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nG, T: For each land paired with Earthmage Sniper, you may have target creature lose Flying, Intimidate, and Unblockable until end of turn.',
@@ -3531,7 +3531,7 @@ var CARDS = [
         'name': 'Earthpony Adventurer',
         'image': 'Earthpony Adventurer.jpg',
         'cost': '2GG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony',
         'pt': '3/4',
         'text': 'Reach\n\nWhen you cast Earthpony Adventurer, you get a Quest counter.',
@@ -3544,7 +3544,7 @@ var CARDS = [
         'name': 'Carrot Farmer',
         'image': 'Carrot Farmer.jpg',
         'cost': 'G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony',
         'pt': '0/1',
         'text': 'When Carrot Farmer blocks, it gets -2/+2 until end of turn.\n\nT: Add G to your mana pool.',
@@ -3557,7 +3557,7 @@ var CARDS = [
         'name': 'Field Worker',
         'image': 'Field Worker.jpg',
         'cost': '4G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony',
         'pt': '5/5',
         'text': 'When Field Worker blocks, it gets -5/+5 until end of turn.',
@@ -3581,7 +3581,7 @@ var CARDS = [
         'name': 'Everfree Forest Expedition',
         'image': 'Everfree Forest Expedition.jpg',
         'cost': 'G',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': 'Quest — At the beginning of each upkeep, if you spent all the mana lands you control could produce last turn, you get a Quest counter.\n\nT, Pay 3 Quest counters: Sacrifice Everfree Forest Expedition, then search your library for two basic lands, put them onto the battlefield tapped, and shuffle your library.',
         'flavorText': 'The Everfree is a focal point for all mana.',
@@ -3593,7 +3593,7 @@ var CARDS = [
         'name': 'Everfree Hydra',
         'image': 'Everfree Hydra.jpg',
         'cost': '3GGG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Hydra',
         'pt': '0/0',
         'text': 'When Everfree Hydra enters the battlefield or attacks, put four +1/+1 counters on it.\n\nWhen Everfree Hydra attacks, you may destroy target noncreature artifact, noncreature enchantment, or nonbasic land the defending player controls. If you do, prevent all damage that would be dealt to and dealt by Everfree Hydra this turn.           ',
@@ -3605,7 +3605,7 @@ var CARDS = [
         'name': 'Everfree Timberwolf',
         'image': 'Everfree Timberwolf.jpg',
         'cost': '2GG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Wolf Elemental',
         'pt': '2/2',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nWhenever a Forest enters the battlefield under your control, put a +1/+1 counter on Everfree Timberwolf.',
@@ -3617,7 +3617,7 @@ var CARDS = [
         'name': 'Floramancy',
         'image': 'Floramancy.jpg',
         'cost': 'G',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Aura',
         'text': 'Enchant land\n\nWhenever enchanted land is tapped for mana, its controller adds one mana of any color that land could produce to his or her mana pool.',
         'flavorText': 'Earth ponies are saturated with natural magic, to the point where they can make plants grow just by thinking about it.',
@@ -3629,7 +3629,7 @@ var CARDS = [
         'name': 'Geist of the Garden',
         'image': 'Geist of the Garden.jpg',
         'cost': '4GG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Elemental',
         'pt': '4/4',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\n1G: Regenerate Geist of the Garden. (The next time this turn it would be destroyed, instead it isn\'t. Remove all damage from it and remove it from combat.)',
@@ -3641,7 +3641,7 @@ var CARDS = [
         'name': 'Ground Charger',
         'image': 'Ground Charger.jpg',
         'cost': '1GG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony',
         'pt': '3/3',
         'text': 'Hexproof',
@@ -3654,7 +3654,7 @@ var CARDS = [
         'name': 'Grove Elemental',
         'image': 'Grove Elemental.jpg',
         'cost': '2G',
-        'supertype': 'Enchantment Creature'
+        'supertype': 'Enchantment Creature',
         'subtype': 'Elemental',
         'pt': '3/3',
         'text': 'Quest Level 3 — If you have at least 3 Quest counters, whenever Grove Elemental attacks or blocks, you may untap target land.',
@@ -3667,7 +3667,7 @@ var CARDS = [
         'name': 'Harmony, Life of the Earth',
         'image': 'Harmony Life of the Earth.jpg',
         'cost': '3GG',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Alicorn God',
         'pt': '5/5',
         'text': 'Arcane Shield 3, Reach\n\n1GG: Put a colorless basic land token with "T: Add 1 to your mana pool" onto the battlefield. You get a Quest counter.\n\nQuest Level 7 — Creatures you control have Reach and get +0/+1 for each basic land you control.',
@@ -3691,7 +3691,7 @@ var CARDS = [
         'name': 'Harmony\'s Earthwatcher',
         'image': 'Harmonys Earthwatcher.jpg',
         'cost': '1G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Druid',
         'pt': '1/2',
         'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nLands paired with Harmony\'s Earthwatcher have "T: Look at the top two cards of your library, then put them back in any order."',
@@ -3704,7 +3704,7 @@ var CARDS = [
         'name': 'Harmony\'s Floramancer',
         'image': 'Harmonys Floramancer.jpg',
         'cost': '2G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Druid',
         'pt': '1/3',
         'text': '1G, T: Add G to your mana pool equal to the number of basic lands you control.',
@@ -3750,7 +3750,7 @@ var CARDS = [
         'name': 'Knight of the Wayside',
         'image': 'Knight of the Wayside.jpg',
         'cost': '3GG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
         'pt': '5/5',
         'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\n1GG: For each land paired with Knight of the Wayside, you may regenerate target creature you control.',
@@ -3785,7 +3785,7 @@ var CARDS = [
         'name': 'Lord of the Far Forest',
         'image': 'Lord of the Far Forest.jpg',
         'cost': '5GGG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Treefolk',
         'pt': '8/8',
         'text': 'Reach\n\nG: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nLord of the Far Forest gets +1/+1 and may block an additional creature for each land paired with it.',
@@ -3808,7 +3808,7 @@ var CARDS = [
         'name': 'Oakenshield Chevalier',
         'image': 'Oakenshield Chevalier.jpg',
         'cost': '2G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
         'pt': '2/3',
         'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nOakenshield Chevalier may block an extra creature for each land paired with it.',
@@ -3822,7 +3822,7 @@ var CARDS = [
         'name': 'Oakenshield Paladin',
         'image': 'Oakenshield Paladin.jpg',
         'cost': '5G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
         'pt': '6/6',
         'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nLands paired with Oakenshield Paladin have "T: Until end of turn, Oakenshield Paladin gets -2/+2 and may block an additional creature."',
@@ -3834,7 +3834,7 @@ var CARDS = [
         'name': 'Quest for Harmony\'s Heart',
         'image': 'Quest for Harmonys Heart.jpg',
         'cost': '3G',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if you cast at least two creature spells last turn, you get a Quest counter.\n\nT, Pay 4 Quest counters: Creatures you control get +3/+3 and have Trample until end of turn.',
         'artist': 'Harwicks_Art',
@@ -3867,7 +3867,7 @@ var CARDS = [
         'name': 'Search for Strength',
         'image': 'Search for Strength.jpg',
         'cost': '1GG',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': '3: Return Search for Strength to your hand.\n\nQuest — At the beginning of each upkeep, if a land entered the battlefield last turn, you get a Quest counter.\n\nQuest Level 6 — As long as you have at least six Quest counters, Search for Strength becomes a 4/4 green Elemental creature with Trample and Reach.',
         'artist': 'SuperRobotRainbowOwl',
@@ -3878,7 +3878,7 @@ var CARDS = [
         'name': 'Shieldbreaker',
         'image': 'Shieldbreaker.jpg',
         'cost': '4G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
         'pt': '4/4',
         'text': 'Trample\n\nWhenever Shieldbreaker deals combat damage to a player, you may destroy target noncreature artifact or noncreature enchantment that player controls. If you do, return Shieldbreaker to your hand.',
@@ -3900,7 +3900,7 @@ var CARDS = [
         'name': 'Steadholdt Botanist',
         'image': 'Steadholdt Botanist.jpg',
         'cost': 'GG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Druid',
         'pt': '0/2',
         'text': 'T: Untap target land.\n\nWhen Steadholdt Botanist enters the battlefield, put a colorless basic land token with "T: Add 1 to your mana pool" onto the battlefield.',
@@ -3913,7 +3913,7 @@ var CARDS = [
         'name': 'Steadholdt Earthmagus',
         'image': 'Steadholdt Earthmagus.jpg',
         'cost': '2G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony',
         'pt': '0/5',
         'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nSteadholdt Earthmagus gets +1/+0 for each land you control that is paired with a creature.',
@@ -3925,7 +3925,7 @@ var CARDS = [
         'name': 'Steadholdt Settler',
         'image': 'Steadholdt Settler.jpg',
         'cost': '2GG',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony',
         'pt': '4/4',
         'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nAs long as Steadholdt Settler is paired with a land, it has Trample.',
@@ -3938,7 +3938,7 @@ var CARDS = [
         'name': 'Steadholdt Sharpshooter',
         'image': 'Steadholdt Sharpshooter.jpg',
         'cost': '3G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony',
         'pt': '1/4',
         'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nLands paired with Steadholdt Sharpshooter have "T: This turn, Steadholdt Sharpshooter may block target creature as though it doesn\'t have Flying, Intimidate, or Menace."',
@@ -3971,7 +3971,7 @@ var CARDS = [
         'name': 'Ursa Minor',
         'image': 'Ursa Minor.jpg',
         'cost': '6G',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Bear Elemental',
         'pt': '6/6',
         'text': 'Reach',
@@ -3984,7 +3984,7 @@ var CARDS = [
         'name': 'Amplifying Tome',
         'image': 'Amplifying Tome.jpg',
         'cost': '5',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Book',
         'text': 'T: Until end of turn, spells you control cost 1 less to cast. At end of turn, put Amplifying Tome on the bottom of its owner\'s library.',
         'flavorText': 'Many magical books contain more than just spell formulae and runic alphabets — some have assistant casting arrays built in.',
@@ -3996,7 +3996,7 @@ var CARDS = [
         'name': 'Ancient Volume',
         'image': 'Ancient Volume.jpg',
         'cost': '2',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Book',
         'text': 'Ancient Volume enters the battlefield tapped. When it does, look at the top four cards of your library, exile one, and put the rest on the bottom of your library.\n\n1, T: You may play the exiled card without paying its mana cost if you spent at least five mana this turn. When you do, shuffle Ancient Volume into its owner\'s library.',
         'artist': 'Alectorfencer',
@@ -4007,7 +4007,7 @@ var CARDS = [
         'name': 'Applejack\'s Lasso',
         'image': 'Applejacks Lasso.jpg',
         'cost': '4',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Equipment',
         'text': 'Equipped creature gets +1/+3 and has Reach.\n\nG, T, Pay one Quest counter: Exile target creature with Flying until end of turn.\n\nEquip 1 (Equip only as a sorcery.)',
         'flavorText': '"Hah! The day Dash manages to get away from me is the day I hang up my lasso." — Applejack',
@@ -4019,7 +4019,7 @@ var CARDS = [
         'name': 'Archaic Index',
         'image': 'Archaic Index.jpg',
         'cost': '1',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Book',
         'text': '1, T: Look at the top 5 cards of your library. You may put them back in any order, then put Archaic Index on the bottom of its owner\'s library.',
         'flavorText': 'It was Titan who wrote the first book, inscribing the fundamental laws of the universe on pages made of starstuff.',
@@ -4051,7 +4051,7 @@ var CARDS = [
         'name': 'Encyclopedia Magica',
         'image': 'Encyclopedia Magica.jpg',
         'cost': '2',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Book',
         'text': '2/U2/U, T: Draw two cards, then put Encyclopedia Magica on the bottom of its owner\'s library.',
         'flavorText': 'The 8th Edition of the Encyclopedia Magica is said to be Stellar\'s finest work, and contains an almost unimaginable quanity of magical knowledge.',
@@ -4074,7 +4074,7 @@ var CARDS = [
         'name': 'Fluttershy\'s First-Aid Kit',
         'image': 'Fluttershys First-Aid Kit.jpg',
         'cost': '4',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Equipment',
         'text': 'Equipped creature gets +0/+4 and has Vigilance.\n\n1W, T, Pay one Quest counter: Prevent all damage that would be dealt to and dealt by target creature this turn."\n\nEquip 2 (Equip only as a sorcery.)',
         'flavorText': '"Oh! Um, are you alright?" — Fluttershy',
@@ -4086,7 +4086,7 @@ var CARDS = [
         'name': 'Grimoire of the Archive',
         'image': 'Grimoire of the Archive.jpg',
         'cost': '4',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Book',
         'text': 'Whenever Grimoire of the Archive or another Book enters the battlefield under your control, you get a Quest counter.\n\nQuest Level X — T: Target player puts the top X cards of his or her library into his or her graveyard, where X is the number of Quest counters you have.',
         'artist': 'Gailee',
@@ -4097,7 +4097,7 @@ var CARDS = [
         'name': 'Leatherleaf Barding',
         'image': 'Leatherleaf Barding.jpg',
         'cost': '3',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Equipment',
         'text': 'Equipped creature gets +0/+3.\n\nIf Equipped creature is a Pegasus, Unicorn, Batpony, Zebra, or Earthpony, it also gets +2/+0.\n\nEquip 2 (Equip only as a sorcery.)',
         'flavorText': 'The Leatherleaf plant has been used to manufacture durable clothing for millenia.',
@@ -4109,7 +4109,7 @@ var CARDS = [
         'name': 'List of Important Things',
         'image': 'List of Important Things.jpg',
         'cost': 'X',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Book',
         'text': 'If U was spent to cast List of Important Things, when it enters the battlefield, Scry X.\n\n1, T: Shuffle any number of Books you control into their owners\' libraries.',
         'flavorText': '"Spike, make a list." — Twilight Sparkle',
@@ -4143,7 +4143,7 @@ var CARDS = [
         'name': 'Potioneer\'s Knacksack',
         'image': 'Potioneers Knacksack.jpg',
         'cost': '2',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Equipment',
         'text': 'T: Put a Charge counter on target permanent you control.\n\n1RR, T: Equipped creature deals damage equal to the number of Charge counters on it to target opponent.\n\nEquip 2 (Equip only as a sorcery.)',
         'artist': 'DoomSp0rk',
@@ -4154,7 +4154,7 @@ var CARDS = [
         'name': 'Twilight Sparkle\'s Study Guide',
         'image': 'Twilight Sparkles Study Guide.jpg',
         'cost': '4',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Book Equipment',
         'text': 'Equipped creature gets +2/+2 and has Hexproof.\n\n3U, T, Pay one Quest counter: Draw a card. If you draw a Book this way, you may draw another card.\n\nEquip 1 (Equip only as a sorcery.)',
         'flavorText': '"Now, where\'s my checklist?" — Twilight Sparkle',
@@ -4177,7 +4177,7 @@ var CARDS = [
         'name': 'Weathered Map',
         'image': 'Weathered Map.jpg',
         'cost': '1',
-        'supertype': 'Artifact'
+        'supertype': 'Artifact',
         'subtype': 'Book',
         'text': 'When Weathered Map enters the battlefield, look at the top 3 cards of your library, then put them back in any order.\n\n1, T: You get a Quest counter, then put Weathered Map on the bottom of its owner\'s library.',
         'artist': 'DoomSp0rk',
@@ -4301,7 +4301,7 @@ var CARDS = [
     
         'name': 'Plains',
         'image': 'Plains.2.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Plains',
         'artist': 'Devinian',
         'rarity': 'common',
@@ -4310,7 +4310,7 @@ var CARDS = [
     
         'name': 'Plains',
         'image': 'Plains.1.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Plains',
         'artist': 'Bering',
         'rarity': 'common',
@@ -4319,7 +4319,7 @@ var CARDS = [
     
         'name': 'Plains',
         'image': 'Plains.4.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Plains',
         'artist': 'Bering',
         'rarity': 'common',
@@ -4328,7 +4328,7 @@ var CARDS = [
     
         'name': 'Plains',
         'image': 'Plains.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Plains',
         'artist': 'Devinian',
         'rarity': 'common',
@@ -4337,7 +4337,7 @@ var CARDS = [
     
         'name': 'Plains',
         'image': 'Plains.3.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Plains',
         'artist': 'Devinian',
         'rarity': 'common',
@@ -4346,7 +4346,7 @@ var CARDS = [
     
         'name': 'Island',
         'image': 'Island.1.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Island',
         'artist': 'Memod',
         'rarity': 'common',
@@ -4355,7 +4355,7 @@ var CARDS = [
     
         'name': 'Island',
         'image': 'Island.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Island',
         'artist': 'Memod',
         'rarity': 'common',
@@ -4364,7 +4364,7 @@ var CARDS = [
     
         'name': 'Island',
         'image': 'Island.2.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Island',
         'artist': 'Sayuri1314',
         'rarity': 'common',
@@ -4373,7 +4373,7 @@ var CARDS = [
     
         'name': 'Island',
         'image': 'Island.3.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Island',
         'artist': 'Simbaro',
         'rarity': 'common',
@@ -4382,7 +4382,7 @@ var CARDS = [
     
         'name': 'Island',
         'image': 'Island.4.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Island',
         'artist': 'RHADS',
         'rarity': 'common',
@@ -4391,7 +4391,7 @@ var CARDS = [
     
         'name': 'Swamp',
         'image': 'Swamp.4.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Swamp',
         'artist': 'JoshEiten',
         'rarity': 'common',
@@ -4400,7 +4400,7 @@ var CARDS = [
     
         'name': 'Swamp',
         'image': 'Swamp.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Swamp',
         'artist': 'JoshEiten',
         'rarity': 'common',
@@ -4409,7 +4409,7 @@ var CARDS = [
     
         'name': 'Swamp',
         'image': 'Swamp.1.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Swamp',
         'artist': 'SkavenZvervov',
         'rarity': 'common',
@@ -4418,7 +4418,7 @@ var CARDS = [
     
         'name': 'Swamp',
         'image': 'Swamp.3.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Swamp',
         'artist': 'Memod',
         'rarity': 'common',
@@ -4427,7 +4427,7 @@ var CARDS = [
     
         'name': 'Swamp',
         'image': 'Swamp.2.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Swamp',
         'artist': 'Memod',
         'rarity': 'common',
@@ -4436,7 +4436,7 @@ var CARDS = [
     
         'name': 'Mountain',
         'image': 'Mountain.4.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Mountain',
         'artist': 'FerdinandLadera',
         'rarity': 'common',
@@ -4445,7 +4445,7 @@ var CARDS = [
     
         'name': 'Mountain',
         'image': 'Mountain.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Mountain',
         'artist': 'FerdinandLadera',
         'rarity': 'common',
@@ -4454,7 +4454,7 @@ var CARDS = [
     
         'name': 'Mountain',
         'image': 'Mountain.3.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Mountain',
         'artist': 'AeronJVL',
         'rarity': 'common',
@@ -4463,7 +4463,7 @@ var CARDS = [
     
         'name': 'Mountain',
         'image': 'Mountain.1.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Mountain',
         'artist': 'FerdinandLadera',
         'rarity': 'common',
@@ -4472,7 +4472,7 @@ var CARDS = [
     
         'name': 'Mountain',
         'image': 'Mountain.2.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Mountain',
         'artist': 'FerdinandLadera',
         'rarity': 'common',
@@ -4481,7 +4481,7 @@ var CARDS = [
     
         'name': 'Forest',
         'image': 'Forest.4.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Forest',
         'artist': 'Durger',
         'rarity': 'common',
@@ -4490,7 +4490,7 @@ var CARDS = [
     
         'name': 'Forest',
         'image': 'Forest.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Forest',
         'artist': 'ThePhoenixDark',
         'rarity': 'common',
@@ -4499,7 +4499,7 @@ var CARDS = [
     
         'name': 'Forest',
         'image': 'Forest.1.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Forest',
         'artist': 'ThePhoenixDark',
         'rarity': 'common',
@@ -4508,7 +4508,7 @@ var CARDS = [
     
         'name': 'Forest',
         'image': 'Forest.2.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Forest',
         'artist': 'Devinian',
         'rarity': 'common',
@@ -4517,7 +4517,7 @@ var CARDS = [
     
         'name': 'Forest',
         'image': 'Forest.3.jpg',
-        'supertype': 'Basic Land'
+        'supertype': 'Basic Land',
         'subtype': 'Forest',
         'artist': 'Machinimator',
         'rarity': 'common',
@@ -4526,7 +4526,7 @@ var CARDS = [
     
         'name': 'Ascension',
         'image': 'Ascension.jpg',
-        'supertype': 'Emblem'
+        'supertype': 'Emblem',
         'subtype': 'Celestia, the Light Eternal',
         'text': 'Damage can\'t be dealt to Celestia. She becomes a creature with Indestructible in addition to her other types. Her power and toughness are equal to the number of permanents you control.',
         'artist': 'Cmaggot',
@@ -4537,7 +4537,7 @@ var CARDS = [
     
         'name': 'Nightveil',
         'image': 'Nightveil.jpg',
-        'supertype': 'Emblem'
+        'supertype': 'Emblem',
         'subtype': 'Luna, the Dream Warden',
         'text': 'Lands you don\'t control don\'t untap during their controllers\' untap steps.\n\nEach land gains "Pay 1 life: Untap this land."',
         'artist': 'Bary91',
@@ -4593,7 +4593,7 @@ var CARDS = [
     
         'name': 'Solar Guard',
         'image': 'Solar Guard.jpg',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
         'pt': '2/2',
         'text': 'Vigilance',
@@ -4606,7 +4606,7 @@ var CARDS = [
     
         'name': 'Pegasus',
         'image': 'Pegasus.jpg',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Pegasus',
         'pt': '1/1',
         'text': 'Flying',
@@ -4619,7 +4619,7 @@ var CARDS = [
     
         'name': 'Alicorn Nightmare',
         'image': 'Alicorn Nightmare.jpg',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Alicorn Nightmare',
         'pt': '4/3',
         'text': 'Other creatures get -2/-1.',
@@ -4632,7 +4632,7 @@ var CARDS = [
     
         'name': 'Nightmare',
         'image': 'Nightmare.jpg',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Nightmare',
         'pt': '2/2',
         'flavorText': 'The first Nightmares were created by Discord as a way to attack ponies\' minds. Their arrival was what prompted Luna to assume the role of Dream Warden.',
@@ -4644,7 +4644,7 @@ var CARDS = [
     
         'name': 'Earthpony ',
         'image': 'Earthpony .jpg',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Earthpony',
         'pt': '3/3',
         'text': 'Trample',
@@ -4657,7 +4657,7 @@ var CARDS = [
     
         'name': 'Golem',
         'image': 'Golem.jpg',
-        'supertype': 'Artifact Creature'
+        'supertype': 'Artifact Creature',
         'subtype': 'Golem',
         'pt': '4/4',
         'flavorText': 'The Golems were Keris\' first creations — mighty constructs of metal, stone, and magic, designed to aid her in shaping the new world and in guiding the path of civilization.',
@@ -4681,7 +4681,7 @@ var CARDS = [
         'name': 'Alicorn of Shadows',
         'image': 'Alicorn of Shadows.jpg',
         'cost': '3BB',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Alicorn',
         'pt': '4/4',
         'text': 'Flying\n\nIf Alicorn of Shadows would deal combat damage to a player, you may instead Drain target creature that many times. (When you drain a creature, it gets -1/-1 until end of turn.)',
@@ -4704,7 +4704,7 @@ var CARDS = [
         'name': 'Disciple of Oceanus',
         'image': 'Disciple of Oceanus.jpg',
         'cost': '4B',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Bat Cleric',
         'pt': '3/3',
         'text': 'Whenever Disciple of Oceanus attacks, choose one:\n\n• Disciple of Oceanus gains First Strike until end of turn.\n\n• Drained creatures can\'t block Disciple of Oceanus this turn.',
@@ -4716,7 +4716,7 @@ var CARDS = [
         'name': 'Dreambound Acolyte',
         'image': 'Dreambound Acolyte.jpg',
         'cost': '3B',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony Cleric',
         'pt': '2/3',
         'text': 'T: Drain target creature (That creature gets -1/-1 until end of turn.)\n\nWhenever you lose life, you may have target opponent lose 1 life.',
@@ -4728,7 +4728,7 @@ var CARDS = [
         'name': 'Nadir, the Intrepid',
         'image': 'Nadir the Intrepid.jpg',
         'cost': '2B',
-        'supertype': 'Legendary Creature'
+        'supertype': 'Legendary Creature',
         'subtype': 'Batpony',
         'pt': '2/3',
         'text': 'Quest — At the beginning of each upkeep, if you reduced a creature\'s toughness last turn, you get a Quest counter.\n\nB, Pay 1 Quest counter: You gain 1 life for each creature with reduced toughness.\n\nQuest Level X — At the beginning of your upkeep, each opponent discards a card with converted mana cost X or less.',
@@ -4740,7 +4740,7 @@ var CARDS = [
         'name': 'Nightveil Raider',
         'image': 'Nightveil Raider.jpg',
         'cost': '3B',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony Rogue',
         'pt': '1/3',
         'text': 'When Nightveil Raider attacks, Drain target creature (That creature gets -1/-1 until end of turn.)\n\nWhenever Nightveil Raider deals damage to a drained creature, destroy that creature.',
@@ -4753,7 +4753,7 @@ var CARDS = [
         'name': 'Search for Power',
         'image': 'Search for Power.jpg',
         'cost': '1BB',
-        'supertype': 'Enchantment'
+        'supertype': 'Enchantment',
         'subtype': 'Quest',
         'text': '3: Return Search for Power to your hand.\n\nQuest — At the beginning of each upkeep, if an opponent lost life this turn without being dealt damage, you get a Quest counter.\n\nQuest Level 6 — As long as you have at least six Quest counters, Search for Power becomes a 4/4 black Alicorn creature with Deathtouch.',
         'artist': 'Huussii',
@@ -4764,7 +4764,7 @@ var CARDS = [
         'name': 'Umbral Acolyte',
         'image': 'Umbral Acolyte.jpg',
         'cost': '2B',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony Cleric',
         'pt': '2/2',
         'text': '1BB: Drain target creature. You gain 1 life. (That creature gets -1/-1 until end of turn.)',
@@ -4777,7 +4777,7 @@ var CARDS = [
         'name': 'Nightseeker',
         'image': 'Nightseeker.jpg',
         'cost': '1B',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony',
         'pt': '1/2',
         'text': 'When Nightseeker attacks, Drain target creature (That creature gets -1/-1 until end of turn.)',
@@ -4790,7 +4790,7 @@ var CARDS = [
         'name': 'Nightveil Blademaster',
         'image': 'Nightveil Blademaster.jpg',
         'cost': '4BB',
-        'supertype': 'Creature'
+        'supertype': 'Creature',
         'subtype': 'Batpony Rogue',
         'pt': '2/4',
         'text': 'Deathtouch\n\nWhenever Nightveil Blademaster attacks, it gains First Strike until end of turn.\n\nWhenever Nightveil Blademaster blocks, Drain each creature it blocks twice. (That creature gets -2/-2 until end of turn.)',
