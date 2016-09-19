@@ -1363,1520 +1363,3451 @@ var CARDS = [
         'set': 'A Warm Welcome',
     },
     {
-        'name': 'Academic Curiosity',
-        'image': 'Academic Curiosity.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Act of Valor',
-        'image': 'Act of Valor.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Adventurer\'s Inn',
-        'image': 'Adventurers Inn.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Alchemical Flask',
-        'image': 'Alchemical Flask.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Alicorn Nightmare',
-        'image': 'Alicorn Nightmare.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Alicorn of Shadows',
-        'image': 'Alicorn of Shadows.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Amplifying Tome',
-        'image': 'Amplifying Tome.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Ancient Volume',
-        'image': 'Ancient Volume.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Applebuck',
-        'image': 'Applebuck.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Applejack\'s Lasso',
-        'image': 'Applejacks Lasso.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Applejack, the Diligent',
-        'image': 'Applejack the Diligent.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Arbore, Staff of Seasons',
-        'image': 'Arbore Staff of Seasons.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Arcane Waterspout',
-        'image': 'Arcane Waterspout.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Arcanim of Lauren\'s Light',
-        'image': 'Arcanim of Laurens Light.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Archaic Index',
-        'image': 'Archaic Index.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Archive Adjudicator',
-        'image': 'Archive Adjucator.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Archive Extraction',
-        'image': 'Archive Extraction.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Arcknight Ascendant',
-        'image': 'Arcknight Ascendant.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Arc-Matrix Gestalt',
-        'image': 'Arc-Matrix Gestalt.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Argent Battlemage',
-        'image': 'Argent Battlemage.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Ascension',
-        'image': 'Ascension.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Ash Mountain Hellkite',
-        'image': 'Ash Mountain Hellkite.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Ashwood Ancient',
-        'image': 'Ashwood Ancient.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Atmospheric Singularity',
-        'image': 'Atmospheric Singularity.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Audioflood',
-        'image': 'Audioflood.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Awaken the Tribe',
-        'image': 'Awaken the Tribe.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Azo, the Fleet-of-Hoof',
-        'image': 'Azo the Fleet-of-Hoof.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Balefire Seeker',
-        'image': 'Balefire Seeker.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Balefire Totem',
-        'image': 'Balefire Totem.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Barter With Oceanus',
-        'image': 'Barter With Oceanus.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Basic Land',
-        'image': 'Basic land.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Batpony Adventurer',
-        'image': 'Batpony Adventurer.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Batpony Blackguard',
-        'image': 'Batpony Blackguard.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Battle of Wills',
-        'image': 'Battle of Wills.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Beacon Station Expedition',
-        'image': 'Beacon Station Expedition.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Bite Mark',
-        'image': 'Bite Mark.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Bladeflight Totem',
-        'image': 'Bladeflight Totem.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Blasting Potion',
-        'image': 'Blasting Potion.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Blaze Elemental',
-        'image': 'Blaze Elemental.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Blessing of the Zvaha',
-        'image': 'Blessing of the Zvaha.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Blind Terror',
-        'image': 'Blind Terror.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Bloodfury Totem',
-        'image': 'Bloodfury Totem.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Bondfire Animus',
-        'image': 'Bondfire Animus.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Bonk',
-        'image': 'Bonk.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Boop',
-        'image': 'Boop.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Breath of the Dragons',
-        'image': 'Breath of the Dragons.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Broad Daylight',
-        'image': 'Broad Daylight.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Bubbling Brew',
-        'image': 'Bubbling Brew.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Call to Arms',
-        'image': 'Call to Arms.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Canterlot Archiveologist',
-        'image': 'Canterlot Archiveologist.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Carrot Farmer',
-        'image': 'Carrot Farmer.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Cauldron of Calamity',
-        'image': 'Cauldron of Calamity.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Celestia, the Light Eternal',
-        'image': 'Celestia the Light Eternal.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Cinder Ruins Expedition',
-        'image': 'Cinder Ruins Expedition.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Cloak of Storms',
-        'image': 'Cloak of Storms.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Cloudpuncher Cadet',
-        'image': 'Cloudpuncher Cadet.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Cloudpuncher Veteran',
-        'image': 'Cloudpuncher Veteran.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Cloudsdale Champion',
-        'image': 'Cloudsdale Champion.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Cloudvillage',
-        'image': 'Cloudvillage.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Confiscate Memory',
-        'image': 'Confiscate Memory.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Conjured Armor',
-        'image': 'Conjured Armor.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Contagion',
-        'image': 'Contagion.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Corner of the Eye',
-        'image': 'Corner of the Eye.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Counterattack',
-        'image': 'Counterattack.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Covert Delivery',
-        'image': 'Covert Delivery.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Crucius, Axe of Damnation',
-        'image': 'Crucius Axe of Damnation.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Cryothaumic Construct',
-        'image': 'Cryothaumic Construct.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Curse of the Batpony',
-        'image': 'Curse of the Batpony.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Darkspire Shadowcaster',
-        'image': 'Darkspire Shadowcaster.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Dark Will',
-        'image': 'Dark Will.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Darrowdelf',
-        'image': 'Darrowdelf.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Deresonation',
-        'image': 'Deresonation.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Disciple of Oceanus',
-        'image': 'Disciple of Oceanus.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Dreambound Acolyte',
-        'image': 'Dreambound Acolyte.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Driven by Ambition',
-        'image': 'Driven by Ambition.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Druid of the Verge',
-        'image': 'Druid of the Verge.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Earthen Ramparts',
-        'image': 'Earthen Ramparts.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Earthknight Errant',
-        'image': 'Earthknight Errant.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Earthmage Sniper',
-        'image': 'Earthmage Sniper.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Earthpony Adventurer',
-        'image': 'Earthpony Adventurer.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Earthpony',
-        'image': 'Earthpony .jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Earthshift',
-        'image': 'Earthshift.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Edge of the Wild',
-        'image': 'Edge of the Wild.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Encyclopedia Magica',
-        'image': 'Encyclopedia Magica.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Everfree Forest Expedition',
-        'image': 'Everfree Forest Expedition.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Everfree Hydra',
-        'image': 'Everfree Hydra.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Everfree Timberwolf',
-        'image': 'Everfree Timberwolf.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Exhaustion',
-        'image': 'Exhaustion.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Explorer\'s Amulet',
-        'image': 'Explorers Amulet.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Eye Spy',
-        'image': 'Eye Spy.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Face the Gods',
-        'image': 'Face the Gods.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Fancy Mathematics',
-        'image': 'Fancy Mathematics.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Fatal Conversion',
-        'image': 'Fatal Conversion.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Field Worker',
-        'image': 'Field Worker.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Fireblood Zealot',
-        'image': 'Fireblood Zealot.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Fleethoof Interceptor',
-        'image': 'Fleethoof Interceptor.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Fleethoof Prodigy',
-        'image': 'Fleethoof Prodigy.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Fleethoof Sensei',
-        'image': 'Fleethoof Sensei.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Flight Aptitude',
-        'image': 'Flight Aptitude.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Floramancy',
-        'image': 'Floramancy.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Fluttershy\'s First-Aid Kit',
-        'image': 'Fluttershys First-Aid Kit.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Fluttershy, the Good',
-        'image': 'Fluttershy the Good.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Forest',
-        'image': 'Forest.1.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Forest',
-        'image': 'Forest.2.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Forest',
-        'image': 'Forest.3.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Forest',
-        'image': 'Forest.4.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Forest',
-        'image': 'Forest.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Forgotten Cave Expedition',
-        'image': 'Forgotten Cave Expedition.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Forgotten Passageway',
-        'image': 'Forgotten Passageway.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Geist of the Garden',
-        'image': 'Geist of the Garden.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Gift of Sunlight',
-        'image': 'Gift of Sunlight.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Golem',
-        'image': 'Golem.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Grimoire of the Archive',
-        'image': 'Grimoire of the Archive.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Ground Charger',
-        'image': 'Ground Charger.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Grove Elemental',
-        'image': 'Grove Elemental.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Harborkeep',
-        'image': 'Harborkeep.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Harmonic Resonance',
-        'image': 'Harmonic Resonance.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Harmony, Life of the Earth',
-        'image': 'Harmony Life of the Earth.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Harmony\'s Devotion',
-        'image': 'Harmonys Devotion.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Harmony\'s Earthwatcher',
-        'image': 'Harmonys Earthwatcher.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Harmony\'s Floramancer',
-        'image': 'Harmonys Floramancer.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Hill Flip',
-        'image': 'Hill Flip.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Hoofstomp',
-        'image': 'Hoofstomp.jpg',
-        'set': 'Nightfall',
-    },
-    {
         'name': 'Invoke Order',
         'image': 'Invoke Order.jpg',
-        'set': 'Nightfall',
+        'cost': 'X',
+        'colorIndicator': '(U)',
+        'supertype': 'Instant',
+        'text': 'If you pay mana to cast Invoke Order, you must pay at least U.\n\nCounter target noncreature, nonartifact spell with converted mana cost X.',
+        'flavorText': 'Gates of sea and sky\n\nopen now towards each other\n\nbalance and make naught.',
+        'artist': 'Viwrastupr',
+        'rarity': 'uncommon',
     },
     {
-        'name': 'Invoke the Darrow',
-        'image': 'Invoke the Darrow.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Act of Valor',
+        'image': 'Act of Valor.jpg',
+        'cost': '0',
+        'colorIndicator': '(W)',
+        'supertype': 'Instant',
+        'text': 'As an additional cost to cast Act of Valor, tap an untapped Pegasus creature you control.\n\nThat creature and another target creature you control each have protection from the color of your choice until end of turn.',
+        'flavorText': 'Disaster is the truest judge of character.',
+        'artist': 'JackJacko_Eponymous',
+        'rarity': 'common',
     },
     {
-        'name': 'Island',
-        'image': 'Island.1.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Arcanim of Lauren\'s Light',
+        'image': 'Arcanim of Laurens Light.jpg',
+        'cost': '4W',
+        'supertype': 'Creature'
+        'subtype': 'Alicorn',
+        'pt': '4/4',
+        'text': 'Flying, Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\n2W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nWhen Arcanim of Lauren\'s Light enters the battlefield, prevent all damage that would be dealt to and dealt by it this turn.',
+        'artist': 'Ruhje',
+        'rarity': 'rare',
     },
     {
-        'name': 'Island',
-        'image': 'Island.2.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Arcknight Ascendant',
+        'image': 'Arcknight Ascendant.jpg',
+        'cost': '3WWW',
+        'supertype': 'Creature'
+        'subtype': 'Alicorn Knight',
+        'pt': '6/6',
+        'text': 'Flying, Vigilance, Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nWhenever Arcknight Ascendant blocks or is blocked, you may pay 1WW. If you do, destroy target creature that is attacking or blocking you. You get a Quest counter.',
+        'flavorText': '"Our enemies\' ignorance cannot be remedied. Blast it out of them." — Swift Steel',
+        'artist': 'Silfoe',
+        'rarity': 'mythic rare',
     },
     {
-        'name': 'Island',
-        'image': 'Island.3.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Atmospheric Singularity',
+        'image': 'Atmospheric Singularity.jpg',
+        'cost': '1WW',
+        'supertype': 'Enchantment',
+        'text': 'Arcane Shield 1 (Opponents must pay 1 to target this card.)\n\nWhen Atmospheric Singularity enters the battlefield, exile target nonland permanent until Atmospheric Singularity leaves the battlefield.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
     },
     {
-        'name': 'Island',
-        'image': 'Island.4.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Beacon Station Expedition',
+        'image': 'Beacon Station Expedition.jpg',
+        'cost': '1W',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': 'Quest — At the beginning of each upkeep, if you gained at least 3 life last turn, you get a Quest counter.\n\nT, Pay 3 Quest counters: Sacrifice Beacon Station Expedition, then search your library for an enchantment, put it into your hand, and shuffle your library.',
+        'flavorText': 'The Skylights signaled passage to airships of old.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
     },
     {
-        'name': 'Island',
-        'image': 'Island.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Call to Arms',
+        'image': 'Call to Arms.jpg',
+        'cost': '3WW',
+        'supertype': 'Sorcery',
+        'text': 'You get a Quest counter, then choose one:\n\n• Put three 1/1 white Pegasus creature tokens with Flying onto the battlefield.\n\n• Tap an untapped Pegasus creature you control. If you do, put four 1/1 white Pegasus creature tokens with Flying onto the battlefield.',
+        'artist': 'Equestria-Prevails',
+        'rarity': 'common',
     },
     {
-        'name': 'Jumpkick',
-        'image': 'Jumpkick.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Celestia, the Light Eternal',
+        'image': 'Celestia the Light Eternal.jpg',
+        'cost': '2WW',
+        'supertype': 'Planeswalker'
+        'subtype': 'Celestia',
+        'text': '+2: White creatures you control have Lifelink and Vigilance until end of turn.\n\n-3: Put two 2/2 white Earthpony Knight creature tokens with Vigilance named "Solar Guard" onto the battlefield.\n\n-7: You get Celestia\'s "Ascension" emblem.',
+        'artist': 'Noben',
+        'rarity': 'mythic rare',
     },
     {
-        'name': 'Keris\' Inspiration',
-        'image': 'Keris Inspiration.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Cloak of Storms',
+        'image': 'Cloak of Storms.jpg',
+        'cost': '1WW',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nEnchanted creature gets +1/+1 for each enchantment and each creature you control.\n\nIf Cloak of Storms would enter the graveyard, instead return it to its owner\'s hand.',
+        'flavorText': 'The crafting of cloud armor was a lost art from a previous age, rediscovered when the Great Archive of Canterlot was reopened.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'rare',
     },
     {
-        'name': 'Keris, Mother of Invention',
-        'image': 'Keris Mother of Invention.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Cloudpuncher Cadet',
+        'image': 'Cloudpuncher Cadet.jpg',
+        'cost': 'W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus',
+        'pt': '1/1',
+        'text': '1W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nW: Cloudpuncher Cadet has Flying until end of turn.',
+        'artist': 'Iopichio',
+        'rarity': 'common',
     },
     {
-        'name': 'Knight of the Wayside',
-        'image': 'Knight of the Wayside.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Cloudpuncher Veteran',
+        'image': 'Cloudpuncher Veteran.jpg',
+        'cost': '2W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Soldier',
+        'pt': '1/1',
+        'text': 'Double Strike\n\nWW: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nW: Cloudpuncher Veteran has Flying until end of turn.',
+        'artist': 'Xenocidaender',
+        'rarity': 'common',
     },
     {
-        'name': 'Kylara Scout',
-        'image': 'Kylara Scout.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Cloudsdale Champion',
+        'image': 'Cloudsdale Champion.jpg',
+        'cost': '1W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Soldier',
+        'pt': '1/1',
+        'text': 'Flying\n\nWhenever another Pegasus enters the battlefield under your control and whenever you get a Quest counter, put a +1/+1 counter on Cloudsdale Champion.',
+        'flavorText': 'Folks need heroes.',
+        'artist': 'DennyButt',
+        'rarity': 'rare',
     },
     {
-        'name': 'Kylara Thoughtkeeper',
-        'image': 'Kylara Thoughtkeeper.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Conjured Armor',
+        'image': 'Conjured Armor.jpg',
+        'cost': '1W',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant Creature\n\nEnchanted creature gets +1/+3.\n\nConjured Armor and enchanted creature each have Arcane Shield 1. (Opponents must pay 1 to target Conjured Armor and enchanted creature.)',
+        'artist': 'Makkon',
+        'rarity': 'uncommon',
     },
     {
-        'name': 'Lashvines',
-        'image': 'Lashvines.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Face the Gods',
+        'image': 'Face the Gods.jpg',
+        'cost': '2WW',
+        'supertype': 'Instant',
+        'text': 'Choose one:\n\n• Destroy target attacking creature.\n\n• Exile target enchantment.\n\n• You gain life equal to target creature\'s power.',
+        'flavorText': 'Accept your life, and know that all will be rewarded based upon their actions.',
+        'artist': 'MechaGen',
+        'rarity': 'uncommon',
     },
     {
-        'name': 'Lasso Trick',
-        'image': 'Lasso Trick.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Flight Aptitude',
+        'image': 'Flight Aptitude.jpg',
+        'cost': 'W',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nEnchanted creature gets +1/+1 for each enchantment you control.\n\n1W: Enchanted creature has Flying until end of turn.',
+        'flavorText': '"...Let me show you \'fast enough.\'"             — Rainbow Dash',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
     },
     {
+    
+        'name': 'Fluttershy, the Good',
+        'image': 'Fluttershy the Good.jpg',
+        'cost': '2W',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Pegasus',
+        'pt': '0/3',
+        'text': 'W, Pay 1 Quest counter: Prevent all damage that would be dealt to and dealt by target creature this turn.\n\nQuest — At the beginning of each upkeep, if you attacked or blocked with at least 3 creatures last turn, you get a Quest counter.\n\nQuest Level X — At the beginning of your upkeep, you gain X life.',
+        'artist': 'Suikuzu',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Gift of Sunlight',
+        'image': 'Gift of Sunlight.jpg',
+        'cost': '1W',
+        'supertype': 'Sorcery',
+        'text': 'Target player gains 4 life.\n\nYou get a Quest counter.',
+        'flavorText': 'Celestia remembers the name of everyone to whom she has given light from the sun\'s heart, for it is a rare gift indeed.',
+        'artist': 'Unknown',
+        'rarity': 'common',
+    },
+    {
+    
         'name': 'Lauren, Author of Worlds',
         'image': 'Lauren Author of Worlds.jpg',
-        'set': 'Nightfall',
+        'cost': '3WW',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Alicorn God',
+        'pt': '4/6',
+        'text': 'Arcane Shield 3, Lifelink\n\n3W: Put a 1/1 white Pegasus creature token with Flying onto the battlefield. You get a Quest counter.\n\nQuest Level 7 — Permanents you control have "1W: This permanent has Indestructible until end of turn. You gain 2 life."',
+        'flavorText': 'Equestria began with a Song.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
     },
     {
+    
         'name': 'Lauren\'s Benediction',
         'image': 'Laurens Benediction.jpg',
-        'set': 'Nightfall',
+        'cost': '2W',
+        'supertype': 'Enchantment',
+        'text': 'Attacking creatures you control get +1/+1 and have Vigilance.',
+        'flavorText': 'It\'s not great power or great courage that holds the darkness at bay. It\'s the little things.',
+        'artist': 'Famosity',
+        'rarity': 'common',
     },
     {
+    
         'name': 'Lauren\'s Lightbringer',
         'image': 'Laurens Lightbringer.jpg',
-        'set': 'Nightfall',
+        'cost': '3W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Shaman',
+        'pt': '1/4',
+        'text': 'W: Lauren\'s Lightbringer has Flying until end of turn.\n\nWhenever Lauren\'s Lightbringer or another creature enters the battlefield, prevent all damage that would be dealt to and dealt by target creature you control this turn.',
+        'artist': 'Tarakanovich',
+        'rarity': 'common',
     },
     {
-        'name': 'Leatherleaf Barding',
-        'image': 'Leatherleaf Barding.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Lemonades',
-        'image': 'Lemonades.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Leyline of Discovery',
-        'image': 'Leyline of Discovery.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Librarian of the Infinite',
-        'image': 'Librarian of the Infinite.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'List of Important Things',
-        'image': 'List of Important Things.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Lol, Nop',
-        'image': 'Lol Nop.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Look, a Distraction!',
-        'image': 'Look a Distraction.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Lord of the Far Forest',
-        'image': 'Lord of the Far Forest.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Lotus Seed',
-        'image': 'Lotus Seed.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Luna, the Dream Warden',
-        'image': 'Luna the Dream Warden.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Master Arcanomancer',
-        'image': 'Master Arcanomancer.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Masterwork Brew',
-        'image': 'Masterwork Brew.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Mbolo Potionkeeper',
-        'image': 'Mbolo Potionkeeper.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Mbolo Warrior',
-        'image': 'Mbolo Warrior.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Memory Switch',
-        'image': 'Memory Switch.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Metria, Balance of Eternity',
-        'image': 'Metria Balance of Eternity.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Midnight Studies',
-        'image': 'Midnight Studies.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Moonlit Archive',
-        'image': 'Moonlit Archive.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Moshaka Doll',
-        'image': 'Moshaka Doll.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Mountain',
-        'image': 'Mountain.1.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Mountain',
-        'image': 'Mountain.2.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Mountain',
-        'image': 'Mountain.3.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Mountain',
-        'image': 'Mountain.4.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Mountain',
-        'image': 'Mountain.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Nadir, the Intrepid',
-        'image': 'Nadir the Intrepid.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Nightmare',
-        'image': 'Nightmare.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Nightseeker',
-        'image': 'Nightseeker.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Nightveil Blademaster',
-        'image': 'Nightveil Blademaster.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Nightveil',
-        'image': 'Nightveil.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Nightveil Raider',
-        'image': 'Nightveil Raider.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Nimbus of Knowledge',
-        'image': 'Nimbus of Knowledge.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Nocturnal Fragment',
-        'image': 'Nocturnal Fragment.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Nurture the Earth',
-        'image': 'Nurture the Earth.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Oakenshield Chevalier',
-        'image': 'Oakenshield Chevalier.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Oakenshield Paladin',
-        'image': 'Oakenshield Paladin.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Oceanus\' Dreamtwister',
-        'image': 'Oceanus Dreamtwister.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Oceanus, Fell Guardian',
-        'image': 'Oceanus Fell Guardian.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Oceanus\' Humor',
-        'image': 'Oceanus Humor.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Overthink',
-        'image': 'Overthink.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Paralunar Ritual',
-        'image': 'Paralunar Ritual.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Partial Success Failure',
-        'image': 'Partial Success Failure.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Peer Into the Future',
-        'image': 'Peer Into the Future.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Pegassistance',
         'image': 'Pegassistance.jpg',
-        'set': 'Nightfall',
+        'cost': '3W',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nEnchanted creature has Lifelink.\n\nWhenever enchanted creature attacks, it gets +1/+1 for each other attacking creature until end of turn.',
+        'flavorText': '"That is, um, if you don\'t mind..."             — Fluttershy',
+        'artist': 'Equestria-Prevails',
+        'rarity': 'common',
     },
     {
+    
         'name': 'Pegasus Adventurer',
         'image': 'Pegasus Adventurer.jpg',
-        'set': 'Nightfall',
+        'cost': '2WW',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus',
+        'pt': '2/3',
+        'text': 'Flying, Vigilance\n\nWhen you cast Pegasus Adventurer, you get a Quest counter.',
+        'flavorText': 'Of course it had to be her — Rare indeed is the pegasus who is willing to venture underground.',
+        'artist': 'SpittfireArt',
+        'rarity': 'common',
     },
     {
-        'name': 'Pegasus',
-        'image': 'Pegasus.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Pegasus Lightweaver',
         'image': 'Pegasus Lightweaver.jpg',
-        'set': 'Nightfall',
+        'cost': '3W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Shaman',
+        'pt': '1/4',
+        'text': 'W: Pegasus Lightweaver has Flying until end of turn.\n\nWhenever you cast an enchantment spell, you may draw a card.',
+        'flavorText': '"...Watch this." — Every pegasus ever',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
     },
     {
+    
         'name': 'Pegasus Skyvillager',
         'image': 'Pegasus Skyvillager.jpg',
-        'set': 'Nightfall',
+        'cost': 'W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus',
+        'pt': '2/1',
+        'text': 'Flying\n\nPegasus Skyvillager can\'t attack or block alone.',
+        'flavorText': 'While they may seem impulsive and warlike, the pegasi choose battles carefully. ...Not to say that they aren\'t impulsive and warlike. — Pegasus Politics, Vol. 1            ',
+        'artist': 'StupidYou3',
+        'rarity': 'common',
     },
     {
+    
         'name': 'Pegasus Vanguard',
         'image': 'Pegasus Vanguard.jpg',
-        'set': 'Nightfall',
+        'cost': '2W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Soldier',
+        'pt': '2/2',
+        'text': 'WWW: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nW: Pegasus Vanguard has Flying until end of turn.',
+        'artist': 'Pridark',
+        'rarity': 'common',
     },
     {
-        'name': 'Plains',
-        'image': 'Plains.1.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Plains',
-        'image': 'Plains.2.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Plains',
-        'image': 'Plains.3.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Plains',
-        'image': 'Plains.4.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Plains',
-        'image': 'Plains.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Planar Genesis',
         'image': 'Planar Genesis.jpg',
-        'set': 'Nightfall',
+        'cost': '3WWW',
+        'supertype': 'Sorcery',
+        'text': 'Exile each nonlegendary permanent.\n\nAt end of turn, each player who controls no permanents searches his or her library for up to three basic lands and puts them onto the battlefield, then shuffles his or her library.',
+        'flavorText': 'Lauren\'s magic spun time and space from the chaos of the Void, and at her word, Equestria was born.',
+        'artist': 'Nelvakre',
+        'rarity': 'rare',
     },
     {
+    
         'name': 'Polaris, Sword of the Word',
         'image': 'Polaris Sword of the Word.jpg',
-        'set': 'Nightfall',
+        'cost': '1WW',
+        'supertype': 'Legendary Artifact Enchantment',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of each upkeep, target creature gets +1/+1 for each creature you control until end of turn.\n\n1WW, T: Destroy target creature that dealt combat damage this turn. You gain 3 life.',
+        'flavorText': 'Lauren\'s sword carved the world out of stardust.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
     },
     {
-        'name': 'Polychrome Prism',
-        'image': 'Polychrome Prism.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Potioneer\'s Knacksack',
-        'image': 'Potioneers Knacksack.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Potion of Pyrogenesis',
-        'image': 'Potion of Pyrogenesis.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Potion of Strength',
-        'image': 'Potion of Strength.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Purehearted Alicorn',
         'image': 'Purehearted Alicorn.jpg',
-        'set': 'Nightfall',
+        'cost': '3W',
+        'supertype': 'Creature'
+        'subtype': 'Alicorn',
+        'pt': '3/3',
+        'text': 'Flying\n\nArcane Shield 2 (Opponents must pay 2 to target this card.)',
+        'flavorText': 'Alicorns are not entirely of this world.',
+        'artist': 'Cerraka',
+        'rarity': 'uncommon',
     },
     {
-        'name': 'Pyroburst',
-        'image': 'Pyroburst.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Quest Counter',
-        'image': 'Quest Counter.1.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Quest Counter',
-        'image': 'Quest Counter.2.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Quest Counter',
-        'image': 'Quest Counter.3.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Quest Counter',
-        'image': 'Quest Counter.4.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Quest Counter',
-        'image': 'Quest Counter.5.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Quest Counter',
-        'image': 'Quest Counter.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Quest for Harmony\'s Heart',
-        'image': 'Quest for Harmonys Heart.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Quest for Keris\' Balefire',
-        'image': 'Quest for Keris Balefire.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Quest for Lauren\'s Song',
         'image': 'Quest for Laurens Song.jpg',
-        'set': 'Nightfall',
+        'cost': '3W',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if you attacked or blocked with at least four creatures last turn, you get a Quest counter.\n\nT, Pay 4 Quest counters: You gain 2 life for each land and each creature on the battlefield.',
+        'artist': 'Huussii',
+        'rarity': 'rare',
     },
     {
-        'name': 'Quest for Oceanus\' Last Joke',
-        'image': 'Quest for Oceanus Last Joke.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Quest for Titan\'s First Law',
-        'image': 'Quest for Titans First Law.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Rage Drinker',
-        'image': 'Rage Drinker.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Rain Elemental',
-        'image': 'Rain Elemental.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Rainshower',
-        'image': 'Rainshower.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Rain Warden',
         'image': 'Rain Warden.jpg',
-        'set': 'Nightfall',
+        'cost': 'W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Shaman',
+        'pt': '0/2',
+        'text': 'W: Rain Warden has Flying until end of turn.\n\nWhenever another creature enters the battlefield under your control, you gain 1 life.',
+        'artist': 'Tarakanovich',
+        'rarity': 'common',
     },
     {
-        'name': 'Raw Zap Apple',
-        'image': 'Raw Zap Apple.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Rainshower',
+        'image': 'Rainshower.jpg',
+        'cost': '1W',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nFlash\n\nPrevent all damage that would be dealt to and dealt by enchanted creature.',
+        'flavorText': '"Oh, um, I\'m sorry... I can get you a towel, uh, if you don\'t mind."\n\n— Fluttershy',
+        'artist': 'KP-ShadowSquirrel',
+        'rarity': 'common',
     },
     {
-        'name': 'Recall the Relatives',
-        'image': 'Recall the Relatives.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Red-Eyed Batpony',
-        'image': 'Red-Eyed Batpony.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Return of the Pentarch',
         'image': 'Return of the Pentarch.jpg',
-        'set': 'Nightfall',
+        'cost': '1WW',
+        'supertype': 'Legendary Enchantment'
+        'subtype': 'Quest',
+        'text': 'Indestructible\n\nQuest — At the beginning of each upkeep, if you spent at least 4 last turn, you get a Quest counter.\n\nQuest Level 10 — 1W, T: If you have at least 10 Quest counters, search your library for a Legendary or Alicorn creature, put it into your hand, then shuffle your library.',
+        'artist': 'AquaGalaxy',
+        'rarity': 'rare',
     },
     {
-        'name': 'Return to Sender',
-        'image': 'Return to Sender.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Royal Archive Expedition',
-        'image': 'Royal Archive Expedition.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Seal of the Sun',
         'image': 'Seal of the Sun.jpg',
-        'set': 'Nightfall',
+        'cost': 'WW',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nIf you control enchanted creature, it gets +1/+1 and has Arcane Shield 1 (Opponents must pay 1 to target enchanted creature.)\n\nIf you don\'t control enchanted creature, it can\'t attack or block and Seal of the Sun has Arcane Shield 1 (Opponents must pay 1 to target this enchantment.)',
+        'artist': 'Mrs1989',
+        'rarity': 'common',
     },
     {
-        'name': 'Search for Focus',
-        'image': 'Search for Focus.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Search for Power',
-        'image': 'Search for Power.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Search for Strength',
-        'image': 'Search for Strength.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Search for Truth',
         'image': 'Search for Truth.jpg',
-        'set': 'Nightfall',
+        'cost': '1WW',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': '3: Return Search for Truth to your hand.\n\nQuest — At the beginning of each upkeep, if a spell or ability you control prevented damage last turn, you get a Quest counter.\n\nQuest Level 6 — If you have at least six Quest counters, Search for Truth becomes a 4/4 white Alicorn creature with Lifelink and Vigilance.',
+        'artist': 'AquaGalaxy',
+        'rarity': 'uncommon',
     },
     {
-        'name': 'Search for Wisdom',
-        'image': 'Search for Wisdom.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Seeker of Secrets',
-        'image': 'Seeker of Secrets.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Shade Elemental',
-        'image': 'Shade Elemental.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Shadowborn Batpony',
-        'image': 'Shadowborn Batpony.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Shadowform Raider',
-        'image': 'Shadowform Raider.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Shieldbreaker',
-        'image': 'Shieldbreaker.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Skycouncil Elder',
         'image': 'Skycouncil Elder.jpg',
-        'set': 'Nightfall',
+        'cost': '2W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus',
+        'pt': '1/3',
+        'text': 'Flying\n\nWhen Skycouncil Elder enters the battlefield, look at the top 3 cards of your library, then put them back in any order.',
+        'flavorText': 'Each village has a governing council of Elders who are responsible for the organization of their community.',
+        'artist': 'DreamPaw',
+        'rarity': 'common',
     },
     {
+    
         'name': 'Skyguard Captain',
         'image': 'Skyguard Captain.jpg',
-        'set': 'Nightfall',
+        'cost': '4W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Soldier',
+        'pt': '1/1',
+        'text': 'W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nWhen you cast Skyguard Captain from your hand, put four 1/1 white Pegasus creature tokens with Flying onto the battlefield.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'rare',
     },
     {
+    
         'name': 'Skyguard Militia',
         'image': 'Skyguard Militia.jpg',
-        'set': 'Nightfall',
+        'cost': '1W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Soldier',
+        'pt': '2/1',
+        'text': 'First Strike\n\nW: Skyguard Militia has Flying until end of turn.',
+        'flavorText': 'Each pegasus settlement has a standing force of trained guardsponies, an old habit from the days of the Griffin Wars, centuries in the past.',
+        'artist': 'xxHazukixx',
+        'rarity': 'common',
     },
     {
-        'name': 'Smash Into Kindling',
-        'image': 'Smash Into Kindling.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Solar Guard',
-        'image': 'Solar Guard.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Sonic Blast',
-        'image': 'Sonic Blast.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'South Sea Dragon',
-        'image': 'South Sea Dragon.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Sowing Season',
-        'image': 'Sowing Season.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Spectral Caveguard',
-        'image': 'Spectral Caveguard.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Spectre of Living Shadow',
-        'image': 'Spectre of Living Shadow.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Spell Wright',
-        'image': 'Spell Wright.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Stargazing',
-        'image': 'Stargazing.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Steadholdt Botanist',
-        'image': 'Steadholdt Botanist.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Steadholdt Earthmagus',
-        'image': 'Steadholdt Earthmagus.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Steadholdt',
-        'image': 'Steadholdt.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Steadholdt Settler',
-        'image': 'Steadholdt Settler.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Steadholdt Sharpshooter',
-        'image': 'Steadholdt Sharpshooter.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Storm Wall',
         'image': 'Storm Wall.jpg',
-        'set': 'Nightfall',
+        'cost': '1WW',
+        'supertype': 'Enchantment',
+        'text': 'When Storm Wall enters the battlefield, you gain 3 life.\n\nEach opponent can\'t attack you unless he or she pays X, where X is the number of enchantments you control.',
+        'artist': 'RainGear',
+        'rarity': 'uncommon',
     },
     {
+    
         'name': 'Strike From the Skies',
         'image': 'Strike From the Skies.jpg',
-        'set': 'Nightfall',
+        'cost': '1WW',
+        'supertype': 'Instant',
+        'text': 'Until end of turn, creatures you control with Flying gain +1/+1.',
+        'flavorText': 'Pegasus air raids hit hard and fast, leaving defenders confused, disorganized, and overwhelmed.',
+        'artist': 'Equestria-Prevails',
+        'rarity': 'common',
     },
     {
+    
         'name': 'Sunflight Cloudshaper',
         'image': 'Sunflight Cloudshaper.jpg',
-        'set': 'Nightfall',
+        'cost': '2W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Shaman',
+        'pt': '2/2',
+        'text': 'W: Sunflight Cloudshaper has Flying until end of turn.\n\nPlains you control have "T: Prevent the next 1 damage that would be dealt to you or target creature you control this turn."',
+        'flavorText': 'Pegasus magic includes the ability to interact with the weather.',
+        'artist': 'Rujhe',
+        'rarity': 'uncommon',
     },
     {
+    
         'name': 'Sunflight Corsair',
         'image': 'Sunflight Corsair.jpg',
-        'set': 'Nightfall',
+        'cost': '1WW',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Soldier',
+        'pt': '1/3',
+        'text': 'Flying, Vigilance\n\nArcane Shield 1 (Opponents must pay 1 to target this card.)',
+        'flavorText': 'With the sun at their backs, Pegasi become fleeting glimmers of light, impossible to track.',
+        'artist': 'OtakuAP',
+        'rarity': 'uncommon',
     },
     {
+    
         'name': 'Sunflight Crusader',
         'image': 'Sunflight Crusader.jpg',
-        'set': 'Nightfall',
+        'cost': '2WW',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Soldier',
+        'pt': '3/3',
+        'text': 'Flying, Lifelink\n\n3WWW: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nWhen you pay Sunflight Crusader\'s Airstrike cost, it enters the battlefield with a +1/+1 counter for each creature you control.             ',
+        'artist': 'Equestria-Prevails',
+        'rarity': 'rare',
     },
     {
-        'name': 'Surge of Vitality',
-        'image': 'Surge of Vitality.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Swamp',
-        'image': 'Swamp.1.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Swamp',
-        'image': 'Swamp.2.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Swamp',
-        'image': 'Swamp.3.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Swamp',
-        'image': 'Swamp.4.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Swamp',
-        'image': 'Swamp.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Telekinetic Shove',
-        'image': 'Telekinetic Shove.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Telekinetomancer',
-        'image': 'Telekinetomancer.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Temple of Mazes',
-        'image': 'Temple of Mazes.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Temporal Loophole',
-        'image': 'Temporal Loophole.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Terra Arbora Animus',
-        'image': 'Terra Arbora Animus.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Thundercloud Trap',
         'image': 'Thundercloud Trap.jpg',
-        'set': 'Nightfall',
+        'cost': '3W',
+        'supertype': 'Instant',
+        'text': 'If any number of creatures with total power greater than your life total are attacking you or, you may pay 0 rather than pay Thundercloud Trap\'s mana cost.\n\nExile target creature.',
+        'artist': 'SlackerTheHacker',
+        'rarity': 'uncommon',
     },
     {
+    
         'name': 'Thunderstorm',
         'image': 'Thunderstorm.jpg',
-        'set': 'Nightfall',
+        'cost': 'XW',
+        'supertype': 'Instant',
+        'text': 'Tap X target Pegasus creatures you control. For each creature tapped this way, Thunderstorm deals 2 damage to target creature that is attacking or blocking you.',
+        'flavorText': 'Nothing says "stop trying" quite like that.',
+        'artist': 'Viwrastupr',
+        'rarity': 'uncommon',
     },
     {
-        'name': 'Titan\'s Authority',
-        'image': 'Titans Authority.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Titan, Scion of Order',
-        'image': 'Titan Scion of Order.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Titan\'s Isomancer',
-        'image': 'Titans Isomancer.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Tome Thief',
-        'image': 'Tome Thief.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'To Steal From Eternity',
-        'image': 'To Steal From Eternity.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Twilight Sparkle\'s Study Guide',
-        'image': 'Twilight Sparkles Study Guide.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Twilight Sparkle, the Studious',
-        'image': 'Twilight Sparkle the Studious.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Umbral Acolyte',
-        'image': 'Umbral Acolyte.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Uncharted Leyline',
-        'image': 'Uncharted Leyline.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Unicorn Adventurer',
-        'image': 'Unicorn Adventurer.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Unicorn Aeromancer',
-        'image': 'Unicorn Aeromancer.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Unicorn Shieldwright',
-        'image': 'Unicorn Shieldwright.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Ursa Minor',
-        'image': 'Ursa Minor.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Vaelek, Hammer of Genius',
-        'image': 'Vaelek Hammer of Genius.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Valleypost',
-        'image': 'Valleypost.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Veil of Shadows',
-        'image': 'Veil of Shadows.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Vial of Balefire',
-        'image': 'Vial of Balefire.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Wall of the Darrow',
-        'image': 'Wail of the Darrow.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Warden of Keris',
-        'image': 'Warden of Keris.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Waystone',
-        'image': 'Waystone.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Weaponized Echolocation',
-        'image': 'Weaponized Echolocation.jpg',
-        'set': 'Nightfall',
-    },
-    {
-        'name': 'Weathered Map',
-        'image': 'Weathered Map.jpg',
-        'set': 'Nightfall',
-    },
-    {
+    
         'name': 'Weather Team Captain',
         'image': 'Weather Team Captain.jpg',
-        'set': 'Nightfall',
+        'cost': 'WW',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Soldier',
+        'pt': '1/1',
+        'text': 'Flying\n\nOther Pegasus creatures you control get +1/+1.\n\n1WW: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)',
+        'artist': 'Atryl',
+        'rarity': 'uncommon',
     },
     {
+    
         'name': 'Weather Worker',
         'image': 'Weather Worker.jpg',
-        'set': 'Nightfall',
+        'cost': '1W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus',
+        'pt': '1/1',
+        'text': 'Flying\n\n2W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nWhen Weather Worker enters the battlefield, you may destroy target enchantment.',
+        'artist': 'Antiander',
+        'rarity': 'common',
     },
     {
+    
         'name': 'Wind Elemental',
         'image': 'Wind Elemental.jpg',
-        'set': 'Nightfall',
+        'cost': '1W',
+        'supertype': 'Enchantment Creature'
+        'subtype': 'Elemental',
+        'pt': '0/2',
+        'text': 'Quest Level 3 — If you have at least 3 Quest counters, Wind Elemental gets +1/+1 and has Vigilance.',
+        'flavorText': 'Elemental spirits have roamed the face of Equestria for centuries. They seldom interact with ponies, preferring in this age to quietly observe.',
+        'artist': 'PaliByte',
+        'rarity': 'uncommon',
     },
     {
+    
         'name': 'Windshear',
         'image': 'Windshear.jpg',
-        'set': 'Nightfall',
+        'cost': 'W',
+        'supertype': 'Sorcery',
+        'text': 'Destroy target enchantment.\n\nQuest Level 5 — If you have at least five Quest counters, you may shuffle cards from your graveyard into your library equal to the number of Plains you control.',
+        'flavorText': '"Hey, Scoots! Check this out!" \n\n— Rainbow Dash',
+        'artist': 'Keepare',
+        'rarity': 'uncommon',
     },
     {
+    
         'name': 'Windshear Weathermage',
         'image': 'Windshear Weathermage.jpg',
-        'set': 'Nightfall',
+        'cost': 'W',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus',
+        'pt': '0/2',
+        'text': 'Flying\n\n1W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nWhen Windshear Weathermage enters the battlefield, exile another target nonland permanent until end of turn.',
+        'artist': 'OtakuAP',
+        'rarity': 'rare',
     },
     {
+    
         'name': 'Wonderbolt Squad',
         'image': 'Wonderbolt Squad.jpg',
-        'set': 'Nightfall',
+        'cost': '3WW',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus Soldier',
+        'pt': '3/3',
+        'text': '2W: Airstrike (If an attacking creature isn\'t blocked, put this creature onto the battlefield tapped and attacking or blocking.)\n\nFlying, Vigilance',
+        'flavorText': 'Like most advanced flying teams, they are military at their core.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
     },
     {
-        'name': 'Xanthe, the Wanderer',
-        'image': 'Xanthe the Wanderer.jpg',
-        'set': 'Nightfall',
+    
+        'name': 'Academic Curiosity',
+        'image': 'Academic Curiosity.jpg',
+        'cost': 'U',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nWhen you cast Academic Curiosity, draw a card.\n\nWhenever enchanted creature deals damage to a player, draw a card.',
+        'flavorText': '"Ooh, what\'s that? How does it work? Can I borrow it?" — Twilight Sparkle',
+        'artist': 'PeterParkerWorks',
+        'rarity': 'common',
     },
     {
+    
+        'name': 'Arc-Matrix Gestalt',
+        'image': 'Arc-Matrix Gestalt.jpg',
+        'cost': 'U',
+        'supertype': 'Enchantment Creature'
+        'subtype': 'Illusion',
+        'pt': '0/3',
+        'text': 'Defender, Flying\n\nIf Arc-Matrix Gestalt would die from damage, instead that damage is reduced to 1 and it is dealt to you.',
+        'flavorText': 'Illusions are elaborate pictures, carefully spun from mist and light. As such, misinformation is both their greatest strength and their greatest weakness',
+        'artist': 'ElkaArt',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Arcane Waterspout',
+        'image': 'Arcane Waterspout.jpg',
+        'cost': 'XU',
+        'supertype': 'Instant',
+        'text': 'Return target creature to its owner\'s hand. That player chooses X cards at random from their hand, shuffles them into their library, then draws X cards.',
+        'flavorText': 'Elemental magic is a specialized branch of the unicorn magical tree that is little- studied and even less practiced.',
+        'artist': 'Suzanne_Helmigh',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Archive Adjucator',
+        'image': 'Archive Adjucator.jpg',
+        'cost': '2U',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Advisor',
+        'pt': '1/3',
+        'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, you may pay 1. If you do, target player puts the top three cards of his or her library into his or her graveyard.',
+        'flavorText': '"We\'ll just file that one away for... \'future reference.\'"\n\n—Dewey Decimal, Head Librarian',
+        'artist': 'FoxInShadow',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Archive Extraction',
+        'image': 'Archive Extraction.jpg',
+        'cost': 'XU',
+        'supertype': 'Sorcery',
+        'text': 'Tap X target Unicorn creatures you control. Each opponent reveals the top X cards of their library, then you draw X cards.',
+        'flavorText': 'Reopening one of Equestria\'s great archives is a monumental undertaking.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Battle of Wills',
+        'image': 'Battle of Wills.jpg',
+        'cost': 'U',
+        'supertype': 'Instant',
+        'text': 'Counter target spell.\n\n1: Counter Battle of Wills. (Any player may use this ability before Battle of Wills resolves.)\n\n1: The next time this turn Battle of Wills would be countered, instead it isn\'t. (Any player may use this ability before Battle of Wills resolves.)',
+        'flavorText': 'Known colloquially as a "Macro War."',
+        'artist': 'Yanoda',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Argent Battlemage',
+        'image': 'Argent Battlemage.jpg',
+        'cost': '4U',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Wizard',
+        'pt': '2/4',
+        'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, another target creature you control gets +2/+0 and has Flying until end of turn.',
+        'flavorText': 'Combat magic is little-studied in this age, but its practitioners have turned mana efficiency nearly into a religion.',
+        'artist': 'Laweegie',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Bonk',
+        'image': 'Bonk.jpg',
+        'cost': '2U',
+        'supertype': 'Instant',
+        'text': 'Choose one:\n\n• Tap up to three target creatures.\n\n• Target creature can\'t be blocked this turn.',
+        'flavorText': '"Tag! Tag! Tag! I\'m it!" —Pinkie Pie',
+        'artist': 'Atryl',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Boop',
+        'image': 'Boop.jpg',
+        'cost': 'U',
+        'supertype': 'Instant',
+        'text': 'Tap target creature. It can\'t be the target of spells or abilities your opponents control until your next upkeep.',
+        'flavorText': '"Tag! You\'re it!" —Pinkie Pie',
+        'artist': 'MickeyMonster',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Canterlot Archiveologist',
+        'image': 'Canterlot Archiveologist.jpg',
+        'cost': '2U',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Advisor',
+        'pt': '1/2',
+        'text': 'Flash\n\nWhen Canterlot Archiveologist enters the battlefield, you may return target noncreature, nonartifact spell from your graveyard to your hand.',
+        'flavorText': 'Many mages spend their careers studying a single section of one of the ancient archives that lie beneath Canterlot.',
+        'artist': 'Asimos',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Confiscate Memory',
+        'image': 'Confiscate Memory.jpg',
+        'cost': '2U',
+        'supertype': 'Sorcery',
+        'text': 'Target player puts the top 10 cards of his or her library into the graveyard.\n\nQuest Level 5 — If you have at least five Quest counters, that player also puts cards equal to the number of Islands you control from the top of his or her library into the graveyard.',
+        'flavorText': '"...Let me see that." — Twilight Sparkle',
+        'artist': 'DCPip',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Cryothaumic Construct',
+        'image': 'Cryothaumic Construct.jpg',
+        'cost': 'U',
+        'supertype': 'Enchantment Creature'
+        'subtype': 'Illusion',
+        'pt': '0/4',
+        'text': 'When Cryothaumic Construct becomes the target of a spell or ability, sacrifice it.\n\nWhen Cryothaumic Construct dies, you may draw a card.',
+        'flavorText': 'Illusions are so difficult to hold together, but they are useful nonetheless.',
+        'artist': 'ElkaArt',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Darkspire Shadowcaster',
+        'image': 'Darkspire Shadowcaster.jpg',
+        'cost': '1U',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Wizard',
+        'pt': '1/2',
+        'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, you may pay 3. If you do, target creature can\'t be blocked this turn.',
+        'flavorText': 'Acolytes of the Darkspire School of Magic can manipulate shadows and the absence of light to great effect.',
+        'artist': 'Cannibalus',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Exhaustion',
+        'image': 'Exhaustion.jpg',
+        'cost': '1U',
+        'supertype': 'Instant',
+        'text': 'Tap target creature you don\'t control. It doesn\'t untap during its controller\'s next untap step.\n\nIf you tap a creature this way, you may pay 2U. If you do, tap each other creature you don\'t control. They don\'t untap during their controller\'s next untap step.',
+        'artist': 'Neko-Phoenix',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Eye Spy',
+        'image': 'Eye Spy.jpg',
+        'cost': '1UU',
+        'supertype': 'Instant',
+        'text': 'Target player reveals the top four unrevealed cards of their library. If you own those cards, you may put each card revealed from your library on top of your library in any order. They remain revealed.\n\nDraw a card.',
+        'flavorText': '"Ooh! Let\'s play \'I Spy!\'" —Pinkie Pie',
+        'artist': 'MysticAlpha',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Fancy Mathematics',
+        'image': 'Fancy Mathematics.jpg',
+        'cost': '2UU',
+        'supertype': 'Instant',
+        'text': 'Counter target spell unless that spell\'s controller chooses to return both it and Fancy Mathematics to their owners\' hands.\n\nWhen Fancy Mathematics resolves, return the mana spent to cast it to your mana pool.',
+        'flavorText': 'Mathematics: muddling the issue since the days of Star Swirl, the Bearded.',
+        'artist': 'DarkFlame75',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Librarian of the Infinite',
+        'image': 'Librarian of the Infinite.jpg',
+        'cost': '1U',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Advisor',
+        'pt': '1/2',
+        'text': 'T: Exile a noncreature, nonartifact card from your hand, then draw a card.\n\nT: Return a card exiled with Librarian of the Infinite to your hand.',
+        'flavorText': 'Time knows all and remembers all. The secret is to ask nicely.',
+        'artist': 'SaturnSpace',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Lol, Nop',
+        'image': 'Lol Nop.jpg',
+        'cost': '1UU',
+        'supertype': 'Instant',
+        'text': 'Counter target spell.\n\nIf Lol, Nop targets a spell that would counter another spell, Lol, Nop can\'t be countered.',
+        'flavorText': '"We\'re not just rewriting the rulebook, we\'re burning it and snorting the ashes."\n\n— Vinyl Scratch',
+        'artist': 'Karzahnii',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Master Arcanomancer',
+        'image': 'Master Arcanomancer.jpg',
+        'cost': '3UU',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Wizard',
+        'pt': '1/4',
+        'text': 'Flash\n\nSpellwright — Whenever you cast a noncreature, nonartifact spell, you may exile an instant or sorcery card from your hand or the graveyard.\n\nT: Until end of turn, you may cast spells exiled with Master Arcanomancer as though they were in your hand. They cost 1 less to cast.',
+        'artist': 'Tarakanovich',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Memory Switch',
+        'image': 'Memory Switch.jpg',
+        'cost': '1U',
+        'supertype': 'Instant',
+        'text': 'Counter target spell.\n\nThat spell\'s controller draws a card.',
+        'flavorText': 'It doesn\'t matter what they remember, as long as they forget what they\'re doing.',
+        'artist': 'Kaliptro2',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Metria, Balance of Eternity',
+        'image': 'Metria Balance of Eternity.jpg',
+        'cost': '1UU',
+        'supertype': 'Legendary Artifact Enchantment',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of each upkeep, choose target creature. When it deals damage to a player this turn, you may draw a card.\n\n1UU, T: Tap up to three target creatures.',
+        'flavorText': 'Titan used Metria to impose order on the cosmos.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Midnight Studies',
+        'image': 'Midnight Studies.jpg',
+        'cost': '2U',
+        'supertype': 'Sorcery',
+        'text': 'Choose one:\n\n• Draw two cards.\n\n• Tap an untapped Unicorn creature you control. If you do, draw three cards.',
+        'flavorText': 'Much of a unicorn mage\'s "free" time is spent reading, writing, or both.',
+        'artist': 'Atryl',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Nimbus of Knowledge',
+        'image': 'Nimbus of Knowledge.jpg',
+        'cost': '3U',
+        'supertype': 'Enchantment Creature'
+        'subtype': 'Illusion',
+        'pt': '1/3',
+        'text': 'Flash\n\nWhen Nimbus of Knowledge enters the battlefield, look at the top three cards of your library, then put them back in any order.\n\nWhenever you would draw a card, you may instead Scry 3.',
+        'artist': 'StickFigureQueen',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Overthink',
+        'image': 'Overthink.jpg',
+        'cost': '2UU',
+        'supertype': 'Sorcery',
+        'text': 'Target player reveals the top 13 cards of his or her library. That player puts one card revealed this way on top of his or her library, and puts the rest into the graveyard.',
+        'flavorText': '"You\'ll figure it out... eventually."\n\n— Shthara, God of Intellect',
+        'artist': 'Dalagar',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Peer Into the Future',
+        'image': 'Peer Into the Future.jpg',
+        'cost': '3U',
+        'supertype': 'Sorcery',
+        'text': 'Look at the top seven cards of your library. Put them back in any order, then draw a card.\n\nYou get a Quest counter.',
+        'flavorText': '"There is darkness ahead... war, hunger, terror like the world has never seen... but there is also hope. Hope keeps us going."\n\n— Pinkie Pie',
+        'artist': 'Ventious',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Quest for Titan\'s First Law',
+        'image': 'Quest for Titans First Law.jpg',
+        'cost': '3U',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if you countered a spell last turn, you get a Quest counter.\n\nT, Pay 4 Quest counters: Until end of turn, whenever an opponent casts a spell, counter it.',
+        'artist': 'CigarsCigarettes',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Rain Elemental',
+        'image': 'Rain Elemental.jpg',
+        'cost': 'U',
+        'supertype': 'Enchantment Creature'
+        'subtype': 'Elemental',
+        'pt': '0/3',
+        'text': 'Quest Level 3 — T: If you have at least 3 Quest counters, tap target creature.',
+        'flavorText': 'The first elementals were created on the First Day, to be guardians of the aspects of the physical world that they embodied. Sea, Sky, Life, Fire, and Chaos, all were called in turn to serve.',
+        'artist': 'Palibyte',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Return to Sender',
+        'image': 'Return to Sender.jpg',
+        'cost': '1U',
+        'supertype': 'Instant',
+        'text': 'Return target nonland permanent to its owner\'s hand.',
+        'flavorText': '"Oops! Here you go!" =)\n\n— Ditzy "Derpy" Doo',
+        'artist': 'Azenge',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Royal Archive Expedition',
+        'image': 'Royal Archive Expedition.jpg',
+        'cost': '2U',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': 'Quest — At the beginning of each upkeep, if you drew at least three cards last turn, you get a Quest counter.\n\nT, Pay 3 Quest counters: Sacrifice Royal Archive Expedition, then search your library for a nonpermanent spell, put it into your hand, and shuffle your library.',
+        'flavorText': 'The Great Archive was reopened as a last resort.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Search for Wisdom',
+        'image': 'Search for Wisdom.jpg',
+        'cost': '1UU',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': '3: Return Search for Wisdom to your hand.\n\nQuest — At the beginning of each upkeep, if you drew at least two cards last turn, you get a Quest counter.\n\nQuest Level 6 — As long as you have at least six Quest counters, Search for Wisdom becomes a 4/4 blue Alicorn creature with Flying.',
+        'artist': 'Bakuel',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Seeker of Secrets',
+        'image': 'Seeker of Secrets.jpg',
+        'cost': '2U',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn',
+        'pt': '1/3',
+        'text': 'When Seeker of Secrets enters the battlefield, look at the top three cards of target player\'s library, then put them back in any order.',
+        'flavorText': 'Few now remember what lies hidden in the Canterlot Archives, and with good reason. It was never meant for mortal eyes.',
+        'artist': 'FoxInShadow',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'South Sea Dragon',
+        'image': 'South Sea Dragon.jpg',
+        'cost': '3UUU',
+        'supertype': 'Creature'
+        'subtype': 'Dragon',
+        'pt': '6/6',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nEach other creature can\'t attack or block unless its controller pays 1 or 1 Quest counter.\n\nPay 1 Quest counter: The next spell you cast this turn costs 1 less to cast.',
+        'flavorText': 'Words are cheap.',
+        'artist': 'Sandara',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Stargazing',
+        'image': 'Stargazing.jpg',
+        'cost': '1UU',
+        'supertype': 'Sorcery',
+        'text': 'Look at the top thirteen cards of your library. You may exile any number of them, then put the rest back in order.',
+        'flavorText': 'Out of all possible futures, only one will come to pass. Knowledge is just as dangerous as any weapon.',
+        'artist': 'DreamPaw',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Telekinetic Shove',
+        'image': 'Telekinetic Shove.jpg',
+        'cost': '1U',
+        'supertype': 'Instant',
+        'text': 'You get a Quest counter, then choose one:\n\n• Return target creature to its owner\'s hand.\n\n• Tap an untapped Unicorn creature you control. If you do, put target creature on top of its owner\'s library.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Telekinetomancer',
+        'image': 'Telekinetomancer.jpg',
+        'cost': '2UU',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Wizard',
+        'pt': '2/3',
+        'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, you may tap target creature.',
+        'flavorText': 'Telekinesis is one of the most basic applications of unicorn magic, a nearly instinctive skill. This means that it is also one of the most studied. Masters of telekinesis are powerful indeed.',
+        'artist': 'BlueonDrive',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Temporal Loophole',
+        'image': 'Temporal Loophole.jpg',
+        'cost': '3UUU',
+        'supertype': 'Enchantment',
+        'text': 'Flash, Arcane Shield 3 (Opponents must pay 3 to target this card.)\n\nYou cast spells as though they had Flash.\n\nYou may skip your turn. Whenever you do, untap each permanent you control. Until your next turn, whenever an opponent draws a card, you may Scry 1 and draw a card.',
+        'flavorText': 'Rule #408: Time is not the boss of you.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Titan, Scion of Order',
+        'image': 'Titan Scion of Order.jpg',
+        'cost': '3UU',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Alicorn God',
+        'pt': '3/7',
+        'text': 'Arcane Shield 3, Flash\n\n1UU: Copy target instant or sorcery spell you control. You may choose new targets for the copy. You get a Quest counter.\n\nQuest Level 7 — Counter the first spell cast during each turn. If a spell you control is countered this way, draw a card.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Titan\'s Authority',
+        'image': 'Titans Authority.jpg',
+        'cost': 'UU',
+        'supertype': 'Sorcery',
+        'text': 'Arcane Shield 1 (Opponents must pay 1 to target this card.)\n\nChoose target player. Until end of turn, whenever that player casts a spell or activates an ability, counter it.',
+        'flavorText': '"Like Titan" — literally, "overly negative"',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Titan\'s Isomancer',
+        'image': 'Titans Isomancer.jpg',
+        'cost': '2U',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Wizard',
+        'pt': '2/2',
+        'text': '3, T: Counter target spell that targets a permanent you control.',
+        'flavorText': 'Titan\'s magic lends itself particularly well to the formation of all sorts of shields and defensive arrays.',
+        'artist': 'AnaduKune',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Tome Thief',
+        'image': 'Tome Thief.jpg',
+        'cost': 'UU',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn',
+        'pt': '1/2',
+        'text': 'Whenever Tome Thief deals combat damage to a player, that player puts the top card of their library into their graveyard, and you may draw a card.',
+        'flavorText': 'I\'ll take this... and this... and this... ooh, something shiny!',
+        'artist': 'Lilac_the_Fox99',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Twilight Sparkle, the Studious',
+        'image': 'Twilight Sparkle the Studious.jpg',
+        'cost': '2U',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Unicorn',
+        'pt': '2/2',
+        'text': 'Flash, Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\n2U, Pay 1 Quest counter: Draw a card.\n\nQuest — At the beginning of each upkeep, if you cast a noncreature, nonartifact spell last turn, you get a Quest counter.\n\nQuest Level X — Instant and sorcery spells you control cost X less to cast.',
+        'artist': 'GuyRandom',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Unicorn Adventurer',
+        'image': 'Unicorn Adventurer.jpg',
+        'cost': '2UU',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn',
+        'pt': '2/4',
+        'text': 'Flash\n\nWhen you cast Unicorn Adventurer, you get a Quest counter.',
+        'flavorText': 'Equipology is a popular career choice among unicorns who wish to learn more about ancient magic.',
+        'artist': 'Lexx2Dot0',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Unicorn Aeromancer',
+        'image': 'Unicorn Aeromancer.jpg',
+        'cost': '3U',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Wizard',
+        'pt': '2/3',
+        'text': 'U: Another target creature you control gains Flying until end of turn.',
+        'flavorText': 'The strategic applications of airplane rides weren\'t recognized until Twilight Sparkle and her brother led a covert infiltration of the Royal Library.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Unicorn Shieldwright',
+        'image': 'Unicorn Shieldwright.jpg',
+        'cost': '2UU',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Wizard',
+        'pt': '1/4',
+        'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, target nonland permanent you control has Arcane Shield 2 until end of turn. (Opponents must pay 2 to target that permanent.)',
+        'artist': 'AngelWing314',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Spell Wright',
+        'image': 'Spell Wright.jpg',
+        'cost': '1U',
+        'supertype': 'Creature'
+        'subtype': 'Unicorn Wizard',
+        'pt': '1/2',
+        'text': 'Spellwright — Whenever you cast a noncreature, nonartifact spell, you may pay 1U. If you do, draw a card.',
+        'flavorText': '"I say, dearest, what if you could just tack on a bit that preps your next spell for you?" — Rarity, to Twilight Sparkle',
+        'artist': 'InkyTophat',
+        'rarity': 'common',
+    },
+    {
+    
         'name': 'Ye Olde Switcheroony',
         'image': 'Ye Olde Switcheroony.jpg',
-        'set': 'Nightfall',
+        'cost': '2U',
+        'supertype': 'Sorcery',
+        'text': 'Choose two target permanents with equal converted mana costs. Their controllers switch control of those permanents.',
+        'flavorText': '"How does that even work??"\n\n— Octavia, to Vinyl',
+        'artist': 'Atryl',
+        'rarity': 'common',
     },
     {
+    
+        'name': 'Audioflood',
+        'image': 'Audioflood.jpg',
+        'cost': '3B',
+        'supertype': 'Sorcery',
+        'text': 'Each player discards a card. You gain life equal to the total converted mana cost of all cards discarded this way.\n\nYou get a Quest counter.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Barter With Oceanus',
+        'image': 'Barter With Oceanus.jpg',
+        'cost': '2B',
+        'supertype': 'Sorcery',
+        'text': 'Sacrifice a nontoken creature, then return a creature with an equal or lower converted mana cost from the graveyard to the battlefield.',
+        'flavorText': 'Only death can pay for life, and those who deal with death shall surely die.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Batpony Adventurer',
+        'image': 'Batpony Adventurer.jpg',
+        'cost': '2BB',
+        'supertype': 'Creature'
+        'subtype': 'Batpony',
+        'pt': '2/3',
+        'text': 'First Strike, Lifelink\n\nWhen you cast Batpony Adventurer, you get a Quest counter.',
+        'flavorText': 'Some batponies sought a better life. These first wanderers became the representatives of the batpony race to all of Equestria.',
+        'artist': 'DcPip',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Batpony Blackguard',
+        'image': 'Batpony Blackguard.jpg',
+        'cost': 'BB',
+        'supertype': 'Creature'
+        'subtype': 'Batpony Rogue',
+        'pt': '2/3',
+        'text': 'Intimidate, Lifelink\n\nAt the beginning of your upkeep, you lose 2 life.',
+        'flavorText': '"Thieves and brigands, all of them. Even when they work for you they\'ll still just as happily steal from you."\n\n— Kono\'s Notes',
+        'artist': 'Equestria-Prevails',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Bite Mark',
+        'image': 'Bite Mark.jpg',
+        'cost': 'B',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nEnchanted creature gets -1/-1 and has Deathtouch.',
+        'flavorText': 'The curse that defines a Batpony incurs a deep and terrible hunger for the lifeforce of mortal creatures.',
+        'artist': 'Amy30535',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Blind Terror',
+        'image': 'Blind Terror.jpg',
+        'cost': 'XB',
+        'supertype': 'Sorcery',
+        'text': 'Tap X target Batpony creatures you control. For each creature tapped this way, each opponent loses 1 life and you gain life equal to the life lost this way.',
+        'flavorText': 'Batpony magic manipulates the mind via exquisitely crafted harmonies.',
+        'artist': 'SonicSketch',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Broad Daylight',
+        'image': 'Broad Daylight.jpg',
+        'cost': '1B',
+        'supertype': 'Instant',
+        'text': 'Destroy target nonblack creature. You lose 1 life.',
+        'flavorText': 'Batponies are reluctant to attack during the day, being extremely sensitive to the sun\'s light — But when they do, you\'ll never see it coming.',
+        'artist': 'Tsitra360',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Contagion',
+        'image': 'Contagion.jpg',
+        'cost': '1BB',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nEnchanted creature gets -3/-3.\n\nWhen enchanted creature leaves the battlefield, return Contagion to your hand.',
+        'flavorText': '"Hangovers are a disease."\n\n— Spike',
+        'artist': 'OtakuAP',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Corner of the Eye',
+        'image': 'Corner of the Eye.jpg',
+        'cost': '1BB',
+        'supertype': 'Instant',
+        'text': 'Target opponent sacrifices a creature.',
+        'flavorText': '"If seeing is believing, then the only true faith is in death."\n\n— Inscription found on the wall of a cavern in the Everfree forest.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Curse of the Batpony',
+        'image': 'Curse of the Batpony.jpg',
+        'cost': '3BBB',
+        'supertype': 'Enchantment',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nCreatures you control lose all abilities and become 1/1 black Batpony creatures with Flying and Deathtouch.\n\nWhenever a creature dies from damage dealt by a creature you control, return it from the graveyard to the battlefield under your control.',
+        'artist': 'ｯｯｯｯｩ',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Dark Will',
+        'image': 'Dark Will.jpg',
+        'cost': '4B',
+        'supertype': 'Enchantment',
+        'text': 'Whenever a creature attacks you or a planeswalker you control, it gets -2/-1 until end of turn and its controller loses 1 life.',
+        'flavorText': 'Down to the smallest root and stone, the bog abhors intruders.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Deresonation',
+        'image': 'Deresonation.jpg',
+        'cost': '1BB',
+        'supertype': 'Instant',
+        'text': 'Destroy target non-Batpony nonland permanent. If it\'s a creature, it can\'t be regenerated.',
+        'flavorText': 'Sound is more than just noise. The coordinated movement of free particles can level buildings and fell trees.',
+        'artist': 'Unknown',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Driven by Ambition',
+        'image': 'Driven by Ambition.jpg',
+        'cost': '1BB',
+        'supertype': 'Sorcery',
+        'text': 'Discard a card, then search your library for a card and put that card into your hand, then shuffle your library.',
+        'flavorText': 'A few batponies sought the strength to end their race\'s millennia-long oppression, but what they found changed the world.',
+        'artist': 'FoxInShadow',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Fatal Conversion',
+        'image': 'Fatal Conversion.jpg',
+        'cost': '2BB',
+        'supertype': 'Instant',
+        'text': 'Destroy target creature, then put a 2/2 black Nightmare creature token onto the battlefield under your control.',
+        'flavorText': 'The lucky ones were those who became batponies.',
+        'artist': 'Ziom05',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Forgotten Cave Expedition',
+        'image': 'Forgotten Cave Expedition.jpg',
+        'cost': '3B',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': 'Quest — At the beginning of each upkeep, if an opponent put at least two card into the graveyard last turn, you get a Quest counter.\n\nT, Pay 3 Quest counters: Sacrifice Forgotten Cave Expedition, then search your library for a card, put it into your hand, and shuffle your library.',
+        'artist': 'AssassinMonkey',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Harmonic Resonance',
+        'image': 'Harmonic Resonance.jpg',
+        'cost': '2BBB',
+        'supertype': 'Enchantment',
+        'text': 'Whenever another source causes a player to lose life without dealing damage, you may have another target player lose that much life.',
+        'flavorText': 'The air itself trembled as an unearthly scream tore through the lowlands, and the Darkspire mages found their own spells reflected back upon them. — Excerpt from "Terrifying Tales"',
+        'artist': 'Ziom05',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Invoke the Darrow',
+        'image': 'Invoke the Darrow.jpg',
+        'cost': '2BB',
+        'supertype': 'Sorcery',
+        'text': 'Invoke the Darrow deals damage equal to the number of Swamps you control to target creature or player.\n\nQuest Level 5 — If you have at least five Quest counters, if a creature dealt damage this way would die this turn, exile it instead.',
+        'flavorText': '"Rejoin your kin." — Nadir',
+        'artist': 'AnaduKune',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Luna, the Dream Warden',
+        'image': 'Luna the Dream Warden.jpg',
+        'cost': '2BB',
+        'supertype': 'Planeswalker'
+        'subtype': 'Luna',
+        'text': '+1: Each opponent loses 1 life and you gain that much life.\n\n-X: Target creature gets -X/-X until the beginning of your next upkeep.\n\n-6: You get Luna\'s "Nightveil" emblem.',
+        'artist': 'PonyKillerX',
+        'rarity': 'mythic rare',
+        'loyalty': '4',
+    },
+    {
+    
+        'name': 'Nocturnal Fragment',
+        'image': 'Nocturnal Fragment.jpg',
+        'cost': '2B',
+        'supertype': 'Enchantment Creature'
+        'subtype': 'Nightmare',
+        'pt': '2/2',
+        'text': 'When Nocturnal Fragment enters the battlefield, look at the top 3 cards of your library, then put them back in any order.',
+        'flavorText': 'The Order Nocturnus hides its deepest secrets within the minds of creatures all but impossible to locate.',
+        'artist': 'StickFigureQueen',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Oceanus\' Dreamtwister',
+        'image': 'Oceanus Dreamtwister.jpg',
+        'cost': '2B',
+        'supertype': 'Creature'
+        'subtype': 'Batpony Cleric',
+        'pt': '2/2',
+        'text': 'Whenever you reduce a creature\'s toughness, you gain 1 life.\n\n1B, T: Target creature gets -2/-1 until end of turn.',
+        'flavorText': 'The Stare was given by Oceanus to the then-defenseless Batponies.',
+        'artist': 'Anadukune',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Oceanus, Fell Guardian',
+        'image': 'Oceanus Fell Guardian.jpg',
+        'cost': '3BB',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Alicorn God',
+        'pt': '6/4',
+        'text': 'Arcane Shield 3, Vigilance\n\n1B, Sacrifice a creature: Gain life equal to its toughness and put a 2/2 black Nightmare creature token onto the battlefield. You get a Quest counter.\n\nQuest Level 7 — Opponents can\'t gain life. At the beginning of your upkeep, target player loses 2 life.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Oceanus\' Humor',
+        'image': 'Oceanus Humor.jpg',
+        'cost': '3B',
+        'supertype': 'Sorcery',
+        'text': 'You may pay 6 life instead of Oceanus\' Humor\'s casting cost.\n\nTarget opponent loses 3 life and you gain 3 life.',
+        'flavorText': 'Immortal beings do prefer unsolveable moral dilemmas over the rather more traditional knock-knock joke.',
+        'artist': 'Audrarius',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Paralunar Ritual',
+        'image': 'Paralunar Ritual.jpg',
+        'cost': 'B',
+        'supertype': 'Sorcery',
+        'text': 'Sacrifice a Swamp. If you do, add BBB to your mana pool.\n\nWhen you cast Paralunar Ritual, you may pay BB. If you do, copy it for each Swamp you control. Each copy targets a different swamp. Your life total becomes 3.',
+        'flavorText': 'Think thou now upon thy legacy of sin, as the tide of days most dark draws inexorably nearer.',
+        'artist': 'Ziom05',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Quest for Oceanus\' Last Joke',
+        'image': 'Quest for Oceanus Last Joke.jpg',
+        'cost': '3B',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if at least two permanents were destroyed as an effect of a spell or ability you control last turn, you get a Quest counter.\n\nT, Pay 4 Quest counters: Each player\'s life total becomes 1.',
+        'artist': 'Rujhe',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Red-Eyed Batpony',
+        'image': 'Red-Eyed Batpony.jpg',
+        'cost': 'B',
+        'supertype': 'Creature'
+        'subtype': 'Batpony Rogue',
+        'pt': '1/1',
+        'text': 'Intimidate',
+        'flavorText': 'Many batponies possess a low-level "Stare" — a magical ability projected through the eyes that is said to have been gifted to them by Oceanus himself.',
+        'artist': 'Equestria-Prevails',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Shade Elemental',
+        'image': 'Shade Elemental.jpg',
+        'cost': 'B',
+        'supertype': 'Enchantment Creature'
+        'subtype': 'Elemental',
+        'pt': '1/1',
+        'text': 'Quest Level 3 — If you have at least 3 Quest counters, Shade Elemental has Deathtouch and can\'t block.',
+        'flavorText': 'There are places in Equestria where shadows are much more than the absence of light. There can be found the strangest of creatures.',
+        'artist': 'SageBrushPony',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Shadowborn Batpony',
+        'image': 'Shadowborn Batpony.jpg',
+        'cost': 'B',
+        'supertype': 'Creature'
+        'subtype': 'Batpony',
+        'pt': '1/1',
+        'text': 'B, Sacrifice Shadowborn Batpony: Put a 2/2 black Nightmare creature token onto the battlefield under your control.',
+        'flavorText': 'Nightmare Moon created the batponies by fusing Discord\'s nightmare creatures with normal ponies. The result was an unstable but highly dangerous hybrid.',
+        'artist': 'BlitzPony',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Shadowform Raider',
+        'image': 'Shadowform Raider.jpg',
+        'cost': '1BB',
+        'supertype': 'Creature'
+        'subtype': 'Batpony Rogue',
+        'pt': '1/3',
+        'text': 'Deathtouch\n\n1BB: Regenerate Shadowform Raider.',
+        'flavorText': 'When the batponies were first created, it was the Raiders who gave them their fearsome reputation.',
+        'artist': 'ZestyOranges',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Sonic Blast',
+        'image': 'Sonic Blast.jpg',
+        'cost': '2B',
+        'supertype': 'Instant',
+        'text': 'You get a Quest counter, then choose one:\n\n• Target player discards 2 cards.\n\n• Tap an untapped Batpony creature you control. If you do, target player discards 3 cards.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Spectral Caveguard',
+        'image': 'Spectral Caveguard.jpg',
+        'cost': '2BB',
+        'supertype': 'Creature'
+        'subtype': 'Batpony Soldier',
+        'pt': '3/3',
+        'text': 'Intimidate\n\nWhen Spectral Caveguard attacks, it gains First Strike until end of turn.',
+        'flavorText': 'The Batpony definition of "guard" is slightly more preemptive than most.',
+        'artist': 'EchoWolf800',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Spectre of Living Shadow',
+        'image': 'Spectre of Living Shadow.jpg',
+        'cost': 'BBB',
+        'supertype': 'Creature'
+        'subtype': 'Batpony',
+        'pt': '5/3',
+        'text': 'When Spectre of Living Shadow enters the battlefield, you lose 3 life.\n\nWhen Spectre of Living Shadow leaves the battlefield, its owner may pay BB. If he or she does, return it to the battlefield under its owner\'s control.',
+        'flavorText': 'The air is hungry. The shadows move without cause. Death waits in the dark.',
+        'artist': 'MechaGen',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'To Steal From Eternity',
+        'image': 'To Steal From Eternity.jpg',
+        'cost': '3BB',
+        'supertype': 'Legendary Enchantment'
+        'subtype': 'Quest',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if you lost life without being dealt damage last turn, you get a Quest counter.\n\nBBB, T, Pay 3 Quest counters: Put a 4/3 black Alicorn Nightmare creature token with "Other creatures get -2/-1" onto the battlefield.',
+        'artist': 'FoxInShadow',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Veil of Shadows',
+        'image': 'Veil of Shadows.jpg',
+        'cost': 'B',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nEnchanted creature gets +1/+1 and has Intimidate.\n\nWhen enchanted creature deals combat damage to a player, return Veil of Shadows to its owner\'s hand.',
+        'artist': 'TwinTails, Inc.',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Wail of the Darrow',
+        'image': 'Wail of the Darrow.jpg',
+        'cost': 'BB',
+        'supertype': 'Sorcery',
+        'text': 'Target player discards a card at random.\n\nIf an artifact, creature, or enchantment is discarded this way, you gain 3 life. If an instant or sorcery is discarded this way, its owner loses 3 life. If a land is discarded this way, that player discards an additional card.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Weaponized Echolocation',
+        'image': 'Weaponized Echolocation.jpg',
+        'cost': 'B',
+        'supertype': 'Instant',
+        'text': 'Target creature gets -2/-1 until end of turn.\n\nWhen that creature dies this turn, each other non-Batpony creature gets -2/-1 until end of turn.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Alchemical Flask',
+        'image': 'Alchemical Flask.jpg',
+        'cost': '1R',
+        'supertype': 'Artifact'
+        'subtype': 'Equipment',
+        'text': 'At the beginning of each upkeep, put a Charge counter on equipped creature.\n\nT: Equipped creature deals damage equal to the number of Charge counters on it to target creature or player, then unattach Alchemical Flask.\n\nEquip 1R (Equip only as a sorcery.)',
+        'artist': 'DoomSp0rk',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Ash Mountain Hellkite',
+        'image': 'Ash Mountain Hellkite.jpg',
+        'cost': '5RR',
+        'supertype': 'Creature'
+        'subtype': 'Dragon',
+        'pt': '5/5',
+        'text': 'Flying\n\nWhen you cast Ash Mountain Hellkite, you get a Quest counter.\n\nWhenever a red source you control would deal damage to a target, it deals an additional 2 damage.',
+        'flavorText': 'Keris gave the zebras fire, but the Dragons taught them to use it.',
+        'artist': 'Sandara',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Awaken the Tribe',
+        'image': 'Awaken the Tribe.jpg',
+        'cost': '1R',
+        'supertype': 'Instant',
+        'text': 'Creatures you control get +2/+0 and have Haste until end of turn.',
+        'flavorText': 'The Zebras are an ancient and clever race, sustaining themselves solely off of what their land provides. They have little use for "settling down".',
+        'artist': 'Unknown',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Azo, the Fleet-of-Hoof',
+        'image': 'Azo the Fleet-of-Hoof.jpg',
+        'cost': '1RR',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Zebra Warrior',
+        'pt': '*/*',
+        'text': 'Azo enters the battlefield with four Charge counters.\n\nAzo\'s power and toughness are each equal to the number of Charge counters on creatures you control.\n\nR, Remove a Charge counter from Azo: Target creature can\'t block this turn.',
+        'artist': 'NastyLady',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Balefire Seeker',
+        'image': 'Balefire Seeker.jpg',
+        'cost': '3R',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Warrior',
+        'pt': '1/4',
+        'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nBalefire Seeker gets +2/-1 for each Charge counter on it.',
+        'flavorText': 'Those who seek true fire will sacrifice nearly anything to obtain its power.',
+        'artist': 'Rem_Jericho',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Balefire Totem',
+        'image': 'Balefire Totem.jpg',
+        'cost': '1RRR',
+        'supertype': 'Artifact',
+        'text': 'At the beginning of each upkeep, put a Charge counter on target creature you control.\n\nCreatures you control with three or more Charge counters have "1R: Until end of turn, this creature gets +1/+0 for each Charge counter on it. At end of turn, it deals that much damage to itself."',
+        'artist': 'DoomSp0rk',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Bladeflight Totem',
+        'image': 'Bladeflight Totem.jpg',
+        'cost': '1RR',
+        'supertype': 'Artifact',
+        'text': 'At the beginning of each upkeep, you may put a Charge counter on target creature you control.\n\nCreatures you control with three or more Charge counters can only be blocked by creatures with First Strike, Flying, Intimidate, or Reach.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Blasting Potion',
+        'image': 'Blasting Potion.jpg',
+        'cost': 'RR',
+        'supertype': 'Instant',
+        'text': 'Choose one:\n\n• Blasting Potion deals 4 damage to target creature.\n\n• Blasting Potion deals 3 damage to target opponent.',
+        'flavorText': 'Zebra alchemy is a subtle and fickle art.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Blaze Elemental',
+        'image': 'Blaze Elemental.jpg',
+        'cost': '1R',
+        'supertype': 'Enchantment Creature'
+        'subtype': 'Elemental',
+        'pt': '2/1',
+        'text': 'Quest Level 3 — As long as you have at least 3 Quest counters, Blaze Elemental gets +1/+0 and has Menace.',
+        'flavorText': 'Elementals, embodiments of particular natural forces, are called into being as a kind of byproduct whenever Equestria\'s gods decide to take a hoof in things.',
+        'artist': 'CosmicRadish',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Blessing of the Zvaha',
+        'image': 'Blessing of the Zvaha.jpg',
+        'cost': '3R',
+        'supertype': 'Sorcery',
+        'text': 'Distribute Charge counters equal to the number of Mountains you control among creatures you control.\n\nQuest Level 5 — If you have five or more Quest counters, until end of turn, creatures you control that have Charge counters on them have Menace.',
+        'flavorText': '"I know each stone by name." — Xanthe',
+        'artist': 'Vest',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Bloodfury Totem',
+        'image': 'Bloodfury Totem.jpg',
+        'cost': '1R',
+        'supertype': 'Artifact',
+        'text': 'At the beginning of each upkeep, you may put a Charge counter on target creature you control.\n\nCreatures you control with three or more Charge counters have First Strike and Arcane Shield 1. (Opponents must pay 1 to target them.)',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Bondfire Animus',
+        'image': 'Bondfire Animus.jpg',
+        'cost': '4R',
+        'supertype': 'Artifact Creature'
+        'subtype': 'Spirit Construct',
+        'pt': '5/1',
+        'text': 'Damage dealt by Bondfire Animus can\'t be prevented. Creatures dealt damage by it can\'t be regenerated that turn.',
+        'flavorText': 'Zebra magic relies on the drawing of symbolic connections between objects. While this naturally leads one to alchemy, that is by no means the extent of its potential.',
+        'artist': 'JokerPony',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Breath of the Dragons',
+        'image': 'Breath of the Dragons.jpg',
+        'cost': 'RRR',
+        'supertype': 'Sorcery',
+        'text': 'Arcane Shield 1 (Opponents must pay 1 to target this card.)\n\nYou may have Breath of the Dragons deal up to 3 damage to you. For each 1 damage dealt this way, it deals 3 damage to target creature or player.',
+        'flavorText': '"Tame balefire" — a woefully inadequate description.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Cinder Ruins Expedition',
+        'image': 'Cinder Ruins Expedition.jpg',
+        'cost': '1R',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': 'Quest — At the beginning of each upkeep, if you dealt at least 3 noncombat damage last turn, you get a Quest counter.\n\nT, Pay 3 Quest counters: Sacrifice Cinder Ruins Expedition, then search your library for an artifact, put it into your hand, and shuffle your library.',
+        'flavorText': 'Secrets lie in the forgotten seat of Keris\' power',
+        'artist': 'Vest',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Counterattack',
+        'image': 'Counterattack.jpg',
+        'cost': 'RR',
+        'supertype': 'Instant',
+        'text': 'Target creature you control gets +X/+0 until your next end step, where X is the amount of damage dealt to you this turn.',
+        'flavorText': '"The zebra dropped low, bringing her spear to bear in the blink of an eye. Ignoring her many wounds, she charged her enemies again." — Daring Do and the Seventh Cinder of Skavarra',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Covert Delivery',
+        'image': 'Covert Delivery.jpg',
+        'cost': '1R',
+        'supertype': 'Sorcery',
+        'text': 'You get a Quest counter, then choose one:\n\n• Covert Delivery deals 3 damage to target creature or player.\n\n• Tap an untapped Zebra creature you control. If you do, Covert Delivery deals 5 damage to target creature or player.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Fireblood Zealot',
+        'image': 'Fireblood Zealot.jpg',
+        'cost': 'R',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Warrior',
+        'pt': '1/1',
+        'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nRemove a Charge counter from Fireblood Zealot: It gets +1/+1 until end of turn. (Use this ability only as a sorcery.)',
+        'artist': 'JowyBean',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Fleethoof Interceptor',
+        'image': 'Fleethoof Interceptor.jpg',
+        'cost': '1R',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Warrior',
+        'pt': '2/1',
+        'text': 'First Strike',
+        'flavorText': 'Interceptors roam the land around their clan\'s village, forming an active screen that seeks out sources of food and water, maintains the wandering clan\'s direction, and eliminates threats.',
+        'artist': 'Maximuminus',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Fleethoof Prodigy',
+        'image': 'Fleethoof Prodigy.jpg',
+        'cost': '2R',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Warrior',
+        'pt': '3/2',
+        'text': 'When Fleethoof Prodigy enters the battlefield or attacks, put a Charge counter on it.\n\nRemove a Charge counter from Fleethoof Prodigy: Target creature can\'t block Fleethoof Prodigy this turn.',
+        'artist': 'NastyLady',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Fleethoof Sensei',
+        'image': 'Fleethoof Sensei.jpg',
+        'cost': '2R',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Sage',
+        'pt': '3/1',
+        'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nIf Fleethoof Sensei has at least three Charge counters, it has Double Strike.',
+        'flavorText': 'Zebra tutors take a very hooves-on approach to their students\' education.',
+        'artist': 'Euphreana',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Keris\' Inspiration',
+        'image': 'Keris Inspiration.jpg',
+        'cost': '1RR',
+        'supertype': 'Instant',
+        'text': 'Until end of turn, red instants and sorceries you cast cost R less to cast.\n\nUntil end of turn, whenever a red instant or sorcery spell enters your graveyard, draw a card.',
+        'flavorText': 'An idea\'s spark can quickly become an inferno.',
+        'artist': 'Stasushka',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Keris, Mother of Invention',
+        'image': 'Keris Mother of Invention.jpg',
+        'cost': '3RR',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Alicorn God',
+        'pt': '7/3',
+        'text': 'Arcane Shield 3, First Strike\n\n1R, Discard a card: Scry X, where X is that card\'s converted mana cost, then draw a card. You get a Quest counter.\n\nQuest Level 7 — Whenever a red card enters your graveyard, Keris deals 2 damage to target player.',
+        'flavorText': 'Equestria began with a Spark.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Kylara Scout',
+        'image': 'Kylara Scout.jpg',
+        'cost': 'R',
+        'supertype': 'Creature'
+        'subtype': 'Zebra',
+        'pt': '1/1',
+        'text': 'Haste',
+        'flavorText': '"A zebra\'s drive to explore is inversely proportional to said zebra\'s age. One can only imagine what zebra foals must be like." — Sparkling Repartee, Equestrian Ambassador to Zebrica.',
+        'artist': 'KP-ShadowSquirrel',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Kylara Thoughtkeeper',
+        'image': 'Kylara Thoughtkeeper.jpg',
+        'cost': '2R',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Shaman',
+        'pt': '2/2',
+        'text': 'Haste\n\nWhen Kylara Thoughtkeeper enters the battlefield, look at the top 3 cards of your library, then put them back in any order.',
+        'flavorText': 'It is the duty of a Thoughtkeeper to remember the history of their family, their clan, and their species.',
+        'artist': 'Hitoame113',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Lemonades',
+        'image': 'Lemonades.jpg',
+        'cost': '2R',
+        'supertype': 'Artifact',
+        'text': 'X, T, Sacrifice Lemonades: Choose target player. For each 1 mana paid this way, Lemonades deals 2 damage to a random creature that player controls.',
+        'flavorText': 'When life gives you lemons, you make lemonades. — Cave Johnson',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Look, a Distraction!',
+        'image': 'Look a Distraction!.jpg',
+        'cost': 'XRR',
+        'supertype': 'Sorcery',
+        'text': 'Up to X target creatures can\'t block this turn.',
+        'flavorText': '"Look! Lore! If you read it out loud, maybe that stupid blue mage won\'t notice you sneaking in another Bolt!"\n\n— Inscription on an ancient Zebra tablet.',
+        'artist': 'Viwrastupr',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Masterwork Brew',
+        'image': 'Masterwork Brew.jpg',
+        'cost': 'XR',
+        'supertype': 'Sorcery',
+        'text': 'Tap X target untapped Zebra creatures you control, then put that many Charge counters on target creature you control. Until end of turn, it gets +1/+1 for each Charge counter on it.',
+        'flavorText': 'The greatest potions require teamwork.',
+        'artist': 'RubleGun',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Mbolo Potionkeeper',
+        'image': 'Mbolo Potionkeeper.jpg',
+        'cost': '2RR',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Shaman',
+        'pt': '3/3',
+        'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nT: Mbolo Potionkeeper deals damage equal to the number of Charge counters on it to target creature.',
+        'artist': 'Pantzar',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Rage Drinker',
+        'image': 'Rage Drinker.jpg',
+        'cost': 'RR',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Warrior',
+        'pt': '2/2',
+        'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nAs long as Rage Drinker is attacking, it gets +1/+1 for each Charge counter on it.',
+        'artist': 'Pantzar',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Mbolo Warrior',
+        'image': 'Mbolo Warrior.jpg',
+        'cost': '1RR',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Warrior',
+        'pt': '3/1',
+        'text': 'Countercharge (Whenever damage is dealt to you or this creature, put a Charge counter on it.)\n\nRemove a Charge counter from Mbolo Warrior: Until end of turn, it has Menace.',
+        'artist': 'ECMajor',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Moshaka Doll',
+        'image': 'Moshaka Doll.jpg',
+        'cost': 'R',
+        'supertype': 'Artifact Enchantment',
+        'text': 'Countercharge (Whenever damage is dealt to you, put a Charge counter on this permanent.)\n\nT: Remove any number of Charge counters from Moshaka Doll. It deals that much damage to target opponent or target creature you don\'t control.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Potion of Pyrogenesis',
+        'image': 'Potion of Pyrogenesis.jpg',
+        'cost': '1R',
+        'supertype': 'Artifact',
+        'text': 'When Potion of Pyrogenesis enters the battlefield, put a Charge counter on target land.\n\nWhenever a land with a Charge counter on it is tapped for mana, it deals 2 damage to its controller and it adds RR to its controller\'s mana pool.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Potion of Strength',
+        'image': 'Potion of Strength.jpg',
+        'cost': '1RR',
+        'supertype': 'Instant',
+        'text': 'Put three Charge counters on target creature you control.\n\nUntil end of turn, that creature gets +1/+1 for each Charge counter on it.',
+        'flavorText': '"This brew will do, it will pull you through." — Zecora of the Everfree',
+        'artist': 'Locolimo',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Pyroburst',
+        'image': 'Pyroburst.jpg',
+        'cost': 'R',
+        'supertype': 'Instant',
+        'text': 'Choose one:\n\n• Pyroburst deals 3 damage to target creature.\n\n• Pyroburst deals 2 damage to target player.',
+        'flavorText': 'A beginner\'s spell, but elegantly designed nonetheless.',
+        'artist': 'DexHaiken',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Quest for Keris\' Balefire',
+        'image': 'Quest for Keris Balefire.jpg',
+        'cost': '3R',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if you dealt at least 4 noncombat damage last turn, you get a Quest counter.\n\nT, Pay 4 Quest counters: Until end of turn, if a red source you control would deal damage, it deals double that damage instead.',
+        'artist': 'Makkon',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Search for Focus',
+        'image': 'Search for Focus.jpg',
+        'cost': '1RR',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': '3: Return Search for Focus to your hand.\n\nQuest — At the beginning of each upkeep, if you cast an artifact spell last turn, you get a Quest counter.\n\nQuest Level 6 — As long as you have at least six Quest counters, Search for Focus becomes a 4/4 red Spirit creature with First Strike and Menace.',
+        'artist': 'RubleGun',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Partial Success Failure',
+        'image': 'Partial Success Failure.jpg',
+        'cost': '1R',
+        'supertype': 'Instant',
+        'text': 'Partial Success Failure deals 1 damage to you.\n\nPartial Success Failure deals 1 damage to each creature target player controls.',
+        'flavorText': '*WHOOMPH*\n\n"...Sorry!" — Alchemist\'s Apprentice',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Smash Into Kindling',
+        'image': 'Smash Into Kindling.jpg',
+        'cost': '3RR',
+        'supertype': 'Sorcery',
+        'text': 'Destroy target land, then add RRR to your mana pool.',
+        'flavorText': '"My soul weeps at the horrors here. This place is evil, I admit. Our brothers died in utter fear. There\'s nothing we can do. Torch it."\n\n— Kioka, Kylara Firstspeaker',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Vaelek, Hammer of Genius',
+        'image': 'Vaelek Hammer of Genius.jpg',
+        'cost': '1RR',
+        'supertype': 'Legendary Artifact Enchantment',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of each upkeep, target creature gains Menace until end of turn.\n\n1RR, T: Destroy target basic land. Its controller puts a 4/4 colorless Golem artifact creature token with Haste onto the battlefield.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Vial of Balefire',
+        'image': 'Vial of Balefire.jpg',
+        'cost': 'RR',
+        'supertype': 'Artifact',
+        'text': 'Vial of Balefire can\'t be countered and damage dealt by it can\'t be prevented.\n\nT, Sacrifice Vial of Balefire: It deals 3 damage to target creature, 2 damage to that creature\'s controller, and 1 damage to you. Creatures dealt damage this way can\'t be regenerated this turn.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Warden of Keris',
+        'image': 'Warden of Keris.jpg',
+        'cost': '2R',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Shaman',
+        'pt': '3/1',
+        'text': 'Mountains you control have "1, T: Put a Charge counter on target creature you control."\n\nWarden of Keris gets +0/+1 for each Charge counter on it.',
+        'flavorText': 'These mountains belong to Keris, and are utterly saturated with her power.',
+        'artist': 'Yakovlev_Vad',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Xanthe, the Wanderer',
+        'image': 'Xanthe the Wanderer.jpg',
+        'cost': '2R',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Zebra',
+        'pt': '3/1',
+        'text': 'First Strike, Haste\n\n1R, Pay 1 Quest counter: Xanthe deals 2 damage to target creature or player.\n\nQuest — At the beginning of each upkeep, if damage was dealt to you last turn, you get a Quest counter.\n\nQuest Level X — At the beginning of your upkeep, discard X cards, then draw that many cards.',
+        'artist': 'Asimos',
+        'rarity': 'rare',
+    },
+    {
+    
         'name': 'Zebra Adventurer',
         'image': 'Zebra Adventurer.jpg',
-        'set': 'Nightfall',
+        'cost': '2RR',
+        'supertype': 'Creature'
+        'subtype': 'Zebra',
+        'pt': '3/2',
+        'text': 'First Strike, Haste\n\nWhen you cast Zebra Adventurer, you get a Quest counter.',
+        'flavorText': 'Many Zebras wander the land, offering their services for a price.',
+        'artist': 'MadHotaru',
+        'rarity': 'common',
     },
     {
+    
         'name': 'Zebra Firekeeper',
         'image': 'Zebra Firekeeper.jpg',
-        'set': 'Nightfall',
+        'cost': 'R',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Shaman',
+        'pt': '1/1',
+        'text': 'T: Zebra Firekeeper deals 1 damage to target opponent.\n\nWhen Zebra Firekeeper dies, it deals 1 damage to each player.',
+        'flavorText': 'Their job is to keep the clan\'s fire going, no matter what.',
+        'artist': 'Erosplosion',
+        'rarity': 'common',
     },
     {
+    
         'name': 'Zebra War Paint',
         'image': 'Zebra War Paint.jpg',
-        'set': 'Nightfall',
+        'cost': '1R',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nEnchanted creature has First Strike.\n\nEnchanted creature gets +X/+0, where X is the amount of damage dealt to you since your last end step.',
+        'flavorText': '"Come on! Hit me!" — Azo, to a student.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
     },
     {
+    
         'name': 'Zvaha Infiltrator',
         'image': 'Zvaha Infiltrator.jpg',
-        'set': 'Nightfall',
+        'cost': '1R',
+        'supertype': 'Creature'
+        'subtype': 'Zebra Warrior',
+        'pt': '1/1',
+        'text': 'Haste\n\nWhenever Zvaha Infiltrator deals combat damage to a player, put a Charge counter on it.\n\nZvaha Infiltrator can only be blocked by a number of creatures equal to the number of Charge counters on it.',
+        'artist': 'Yakovlev_Vad',
+        'rarity': 'rare',
     },
+    {
+    
+        'name': 'Applebuck',
+        'image': 'Applebuck.jpg',
+        'cost': '1GG',
+        'supertype': 'Instant',
+        'text': 'Target untapped creature you control gets +4/+4 until end of turn. You may have it fight target creature you don\'t control. If you do, tap it.',
+        'flavorText': '"How d\'ya like them apples?"            — Applejack',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Applejack, the Diligent',
+        'image': 'Applejack the Diligent.jpg',
+        'cost': '2G',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Earthpony',
+        'pt': '3/3',
+        'text': 'G, Pay 1 Quest counter: Search your library for a basic Forest. Put it onto the battlefield tapped, then shuffle your library.\n\nQuest — At the beginning of each upkeep, if you put a Forest onto the battlefield last turn, you get a Quest counter.\n\nQuest Level X — Applejack gets +X/+X and has Trample.',
+        'artist': 'Matrosha123',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Arbore, Staff of Seasons',
+        'image': 'Arbore Staff of Seasons.jpg',
+        'cost': '1GG',
+        'supertype': 'Legendary Artifact Enchantment',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of each upkeep, put two +1/+1 counters on target creature. Untap it.\n\n1GG, T: Add G to your mana pool equal to the number of +1/+1 counters on creatures you control.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Ashwood Ancient',
+        'image': 'Ashwood Ancient.jpg',
+        'cost': '2G',
+        'supertype': 'Creature'
+        'subtype': 'Treefolk',
+        'pt': '0/5',
+        'text': 'Defender, Reach\n\nWhen Ashwood Ancient enters the battlefield, look at the top 3 cards of your library, then put them back in any order.',
+        'flavorText': 'They were the first of Equestria\'s creatures, and the oldest of them bore witness to the great clanwars before Unification.',
+        'artist': 'Unknown',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Druid of the Verge',
+        'image': 'Druid of the Verge.jpg',
+        'cost': '1G',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Druid',
+        'pt': '2/2',
+        'text': 'T: Search your library for a basic land and put it onto the battlefield, then shuffle Druid of the Verge into your library. You get a Quest counter.',
+        'flavorText': 'In this age, they rarely emerge from the great forests of the south.',
+        'artist': 'SophieCabra',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Earthen Ramparts',
+        'image': 'Earthen Ramparts.jpg',
+        'cost': 'GG',
+        'supertype': 'Enchantment',
+        'text': 'GG, T: Until end of turn, creatures you control have Defender and get +0/+1 for each Forest you control.',
+        'flavorText': 'Thunder in our hearts\n\nrumbles through the ground\n\nstand firm with the earth\n\ndarkness trembles at the sound.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Earthknight Errant',
+        'image': 'Earthknight Errant.jpg',
+        'cost': '3GG',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Knight',
+        'pt': '3/5',
+        'text': 'Hexproof\n\nWhen Earthknight Errant attacks, if it could be blocked, it must be blocked by exactly one creature the defending player controls.',
+        'flavorText': '"Come on, then! Have at thee! Prove your valor, and I shall remember your name!"\n\n— Sable, Knight of the Bridge',
+        'artist': 'OtakuAP',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Earthmage Sniper',
+        'image': 'Earthmage Sniper.jpg',
+        'cost': '2GG',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Artificer',
+        'pt': '2/5',
+        'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nG, T: For each land paired with Earthmage Sniper, you may have target creature lose Flying, Intimidate, and Unblockable until end of turn.',
+        'artist': 'MadHotaru',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Earthpony Adventurer',
+        'image': 'Earthpony Adventurer.jpg',
+        'cost': '2GG',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony',
+        'pt': '3/4',
+        'text': 'Reach\n\nWhen you cast Earthpony Adventurer, you get a Quest counter.',
+        'flavorText': 'The wilds call, and some answer more readily than others.',
+        'artist': 'Fedte',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Carrot Farmer',
+        'image': 'Carrot Farmer.jpg',
+        'cost': 'G',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony',
+        'pt': '0/1',
+        'text': 'When Carrot Farmer blocks, it gets -2/+2 until end of turn.\n\nT: Add G to your mana pool.',
+        'flavorText': 'The earth ponies of Equestria are some of the stubbornest creatures alive.',
+        'artist': '1Vladislav',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Field Worker',
+        'image': 'Field Worker.jpg',
+        'cost': '4G',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony',
+        'pt': '5/5',
+        'text': 'When Field Worker blocks, it gets -5/+5 until end of turn.',
+        'flavorText': '"...Nnnope." — Big Macintosh',
+        'artist': 'Fleebites',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Earthshift',
+        'image': 'Earthshift.jpg',
+        'cost': 'G',
+        'supertype': 'Instant',
+        'text': 'Prevent all combat damage that would be dealt this turn.\n\nDraw a card.',
+        'flavorText': 'Earth magic has never been subtle. "Turning the tables" usually involves a complete geographical redesign.',
+        'artist': 'Jenovah_Art',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Everfree Forest Expedition',
+        'image': 'Everfree Forest Expedition.jpg',
+        'cost': 'G',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': 'Quest — At the beginning of each upkeep, if you spent all the mana lands you control could produce last turn, you get a Quest counter.\n\nT, Pay 3 Quest counters: Sacrifice Everfree Forest Expedition, then search your library for two basic lands, put them onto the battlefield tapped, and shuffle your library.',
+        'flavorText': 'The Everfree is a focal point for all mana.',
+        'artist': 'c_o_m_p_a_s_s',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Everfree Hydra',
+        'image': 'Everfree Hydra.jpg',
+        'cost': '3GGG',
+        'supertype': 'Creature'
+        'subtype': 'Hydra',
+        'pt': '0/0',
+        'text': 'When Everfree Hydra enters the battlefield or attacks, put four +1/+1 counters on it.\n\nWhen Everfree Hydra attacks, you may destroy target noncreature artifact, noncreature enchantment, or nonbasic land the defending player controls. If you do, prevent all damage that would be dealt to and dealt by Everfree Hydra this turn.           ',
+        'artist': 'El_Grimlock',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Everfree Timberwolf',
+        'image': 'Everfree Timberwolf.jpg',
+        'cost': '2GG',
+        'supertype': 'Creature'
+        'subtype': 'Wolf Elemental',
+        'pt': '2/2',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nWhenever a Forest enters the battlefield under your control, put a +1/+1 counter on Everfree Timberwolf.',
+        'artist': 'Huussii',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Floramancy',
+        'image': 'Floramancy.jpg',
+        'cost': 'G',
+        'supertype': 'Enchantment'
+        'subtype': 'Aura',
+        'text': 'Enchant land\n\nWhenever enchanted land is tapped for mana, its controller adds one mana of any color that land could produce to his or her mana pool.',
+        'flavorText': 'Earth ponies are saturated with natural magic, to the point where they can make plants grow just by thinking about it.',
+        'artist': 'MysticAlpha',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Geist of the Garden',
+        'image': 'Geist of the Garden.jpg',
+        'cost': '4GG',
+        'supertype': 'Creature'
+        'subtype': 'Elemental',
+        'pt': '4/4',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\n1G: Regenerate Geist of the Garden. (The next time this turn it would be destroyed, instead it isn\'t. Remove all damage from it and remove it from combat.)',
+        'artist': 'Twigileia',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Ground Charger',
+        'image': 'Ground Charger.jpg',
+        'cost': '1GG',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony',
+        'pt': '3/3',
+        'text': 'Hexproof',
+        'flavorText': 'Earthponies do not have "traditional" magic like the unicorns, or pegasus flight. What they have is the ability to harness the strength of the very earth itself.',
+        'artist': 'Cenit_V',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Grove Elemental',
+        'image': 'Grove Elemental.jpg',
+        'cost': '2G',
+        'supertype': 'Enchantment Creature'
+        'subtype': 'Elemental',
+        'pt': '3/3',
+        'text': 'Quest Level 3 — If you have at least 3 Quest counters, whenever Grove Elemental attacks or blocks, you may untap target land.',
+        'flavorText': 'As pony civilizations grew, many began to forget the gods who had built their world. Thus did the elementals, true children of the gods, begin to dwindle in number.',
+        'artist': 'Palibyte',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Harmony, Life of the Earth',
+        'image': 'Harmony Life of the Earth.jpg',
+        'cost': '3GG',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Alicorn God',
+        'pt': '5/5',
+        'text': 'Arcane Shield 3, Reach\n\n1GG: Put a colorless basic land token with "T: Add 1 to your mana pool" onto the battlefield. You get a Quest counter.\n\nQuest Level 7 — Creatures you control have Reach and get +0/+1 for each basic land you control.',
+        'flavorText': 'Equestria began with a Seed.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Harmony\'s Devotion',
+        'image': 'Harmonys Devotion.jpg',
+        'cost': 'G',
+        'supertype': 'Instant',
+        'text': 'Search your library for a basic land card, shuffle your library, and put the chosen land onto the battlefield tapped. It doesn\'t untap during your next untap step.',
+        'flavorText': 'The power of the earth is not in violence or wisdom or faith — it is in life itself.',
+        'artist': 'ErinLiona',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Harmony\'s Earthwatcher',
+        'image': 'Harmonys Earthwatcher.jpg',
+        'cost': '1G',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Druid',
+        'pt': '1/2',
+        'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nLands paired with Harmony\'s Earthwatcher have "T: Look at the top two cards of your library, then put them back in any order."',
+        'flavorText': 'Those who examine the world learn all sorts of things. —On Sea Shores by Tidal Drift',
+        'artist': 'DreamPaw',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Harmony\'s Floramancer',
+        'image': 'Harmonys Floramancer.jpg',
+        'cost': '2G',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Druid',
+        'pt': '1/3',
+        'text': '1G, T: Add G to your mana pool equal to the number of basic lands you control.',
+        'flavorText': 'The most devoted of Harmony\'s followers are granted the power to harness the whole of Equestria\'s store of mana.',
+        'artist': 'Yoka_The_Changeling',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Hill Flip',
+        'image': 'Hill Flip.jpg',
+        'cost': 'G',
+        'supertype': 'Instant',
+        'text': 'As an additional cost to cast Hill Flip, tap target untapped Earthpony creature you control.\n\nPrevent all damage that would be dealt to you and creatures you control this turn.',
+        'flavorText': 'Earthmages don\'t flip tables when they get angry. They flip small to medium-sized hills.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Hoofstomp',
+        'image': 'Hoofstomp.jpg',
+        'cost': 'GG',
+        'supertype': 'Instant',
+        'text': 'Destroy target artifact or enchantment. You gain life equal to its converted mana cost.',
+        'flavorText': 'Earthponies have long eschewed the application of "fancy unicorn magic" to functions traditionally fulfilled by quick minds and strong hooves.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Jumpkick',
+        'image': 'Jumpkick.jpg',
+        'cost': '3G',
+        'supertype': 'Instant',
+        'text': 'When you cast Jumpkick, untap target creature you control.\n\nUntil end of turn, that creature gets +3/+3 and has Reach.',
+        'flavorText': '"Surprise, sugarcube." — Applejack',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Knight of the Wayside',
+        'image': 'Knight of the Wayside.jpg',
+        'cost': '3GG',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Knight',
+        'pt': '5/5',
+        'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\n1GG: For each land paired with Knight of the Wayside, you may regenerate target creature you control.',
+        'flavorText': '"Meet a Knight on the way" — an Old Equuish\n\nblessing meaning, "Travel safely."',
+        'artist': 'DoomSp0rk',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Lashvines',
+        'image': 'Lashvines.jpg',
+        'cost': '1G',
+        'supertype': 'Enchantment',
+        'text': 'Green creatures you control get +1/+1 and have Reach.',
+        'flavorText': 'The larger an animal, the slower its reaction time. Mountainosaurs take years to go from stimulus to response, so one would assume the Everfree forest to be even more sluggish. One would be wrong.',
+        'artist': 'Sleyf',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Lasso Trick',
+        'image': 'Lasso Trick.jpg',
+        'cost': '1G',
+        'supertype': 'Instant',
+        'text': 'Exile target creature with Flying.\n\nGG: Return Lasso Trick from your graveyard to your hand. (Use this ability only as a sorcery.)',
+        'flavorText': '"Git back down here!" — Applejack',
+        'artist': 'Vest',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Lord of the Far Forest',
+        'image': 'Lord of the Far Forest.jpg',
+        'cost': '5GGG',
+        'supertype': 'Creature'
+        'subtype': 'Treefolk',
+        'pt': '8/8',
+        'text': 'Reach\n\nG: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nLord of the Far Forest gets +1/+1 and may block an additional creature for each land paired with it.',
+        'artist': 'ValeoFox',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Nurture the Earth',
+        'image': 'Nurture the Earth.jpg',
+        'cost': 'G',
+        'supertype': 'Sorcery',
+        'text': 'At end of turn, you gain 1 life for each mana you spent this turn.\n\nQuest Level 5 — If you have at least five Quest counters, you gain 1 life for each Forest you control.',
+        'flavorText': '"This land is ours. Others ain\'t welcome."\n\n— Applejack',
+        'artist': 'LavosVsBahamut',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Oakenshield Chevalier',
+        'image': 'Oakenshield Chevalier.jpg',
+        'cost': '2G',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Knight',
+        'pt': '2/3',
+        'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nOakenshield Chevalier may block an extra creature for each land paired with it.',
+        'flavorText': 'The Order of the Oak is all that remains of Celestia\'s ancient army.',
+        'artist': 'Equestria-Prevails',
+        'rarity': 'common',
+        'loyalty': '4'
+    },
+    {
+    
+        'name': 'Oakenshield Paladin',
+        'image': 'Oakenshield Paladin.jpg',
+        'cost': '5G',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Knight',
+        'pt': '6/6',
+        'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nLands paired with Oakenshield Paladin have "T: Until end of turn, Oakenshield Paladin gets -2/+2 and may block an additional creature."',
+        'artist': 'OtakuAP',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Quest for Harmony\'s Heart',
+        'image': 'Quest for Harmonys Heart.jpg',
+        'cost': '3G',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nQuest — At the beginning of each upkeep, if you cast at least two creature spells last turn, you get a Quest counter.\n\nT, Pay 4 Quest counters: Creatures you control get +3/+3 and have Trample until end of turn.',
+        'artist': 'Harwicks_Art',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Raw Zap Apple',
+        'image': 'Raw Zap Apple.jpg',
+        'cost': '1G',
+        'supertype': 'Instant',
+        'text': 'Target creature gets +3/+3 and has Trample until end of turn.',
+        'flavorText': '"Pinkie Pie! Do NOT eat the Zap Apples!" — Applejack\n\n"...Uh-oh." — Big Mac',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Recall the Relatives',
+        'image': 'Recall the Relatives.jpg',
+        'cost': '5G',
+        'supertype': 'Sorcery',
+        'text': 'Put two 3/3 green Earthpony creature tokens with Trample onto the battlefield.\n\nYou get a Quest counter.',
+        'flavorText': '"SOUP\'S ON, EVERYPONY!"\n\n— Applejack',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Search for Strength',
+        'image': 'Search for Strength.jpg',
+        'cost': '1GG',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': '3: Return Search for Strength to your hand.\n\nQuest — At the beginning of each upkeep, if a land entered the battlefield last turn, you get a Quest counter.\n\nQuest Level 6 — As long as you have at least six Quest counters, Search for Strength becomes a 4/4 green Elemental creature with Trample and Reach.',
+        'artist': 'SuperRobotRainbowOwl',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Shieldbreaker',
+        'image': 'Shieldbreaker.jpg',
+        'cost': '4G',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Knight',
+        'pt': '4/4',
+        'text': 'Trample\n\nWhenever Shieldbreaker deals combat damage to a player, you may destroy target noncreature artifact or noncreature enchantment that player controls. If you do, return Shieldbreaker to your hand.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Sowing Season',
+        'image': 'Sowing Season.jpg',
+        'cost': '2G',
+        'supertype': 'Sorcery',
+        'text': 'You get a Quest counter, then choose one:\n\n• Put a basic land token with "T: Add 1 to your mana pool" onto the battlefield.\n\n• Tap an untapped Earthpony creature you control. If you do, put two colorless basic land tokens with "T: Add 1 to your mana pool" onto the battlefield.',
+        'artist': 'Cmaggot',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Steadholdt Botanist',
+        'image': 'Steadholdt Botanist.jpg',
+        'cost': 'GG',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Druid',
+        'pt': '0/2',
+        'text': 'T: Untap target land.\n\nWhen Steadholdt Botanist enters the battlefield, put a colorless basic land token with "T: Add 1 to your mana pool" onto the battlefield.',
+        'flavorText': 'They\'re always inventing new ways to watch things grow.',
+        'artist': 'Cenit_V',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Steadholdt Earthmagus',
+        'image': 'Steadholdt Earthmagus.jpg',
+        'cost': '2G',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony',
+        'pt': '0/5',
+        'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nSteadholdt Earthmagus gets +1/+0 for each land you control that is paired with a creature.',
+        'artist': '1n33d4hug',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Steadholdt Settler',
+        'image': 'Steadholdt Settler.jpg',
+        'cost': '2GG',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony',
+        'pt': '4/4',
+        'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nAs long as Steadholdt Settler is paired with a land, it has Trample.',
+        'flavorText': 'The Age of Harmony saw a resurgence in colonization efforts.',
+        'artist': 'SpittFireArt',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Steadholdt Sharpshooter',
+        'image': 'Steadholdt Sharpshooter.jpg',
+        'cost': '3G',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony',
+        'pt': '1/4',
+        'text': 'G: Earthlink (Pair this creature with an unpaired land you control. They remain paired as long as you control them.)\n\nLands paired with Steadholdt Sharpshooter have "T: This turn, Steadholdt Sharpshooter may block target creature as though it doesn\'t have Flying, Intimidate, or Menace."',
+        'artist': 'Equestria-Prevails',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Surge of Vitality',
+        'image': 'Surge of Vitality.jpg',
+        'cost': 'XG',
+        'supertype': 'Instant',
+        'text': 'Tap X target Earthpony creatures you control. Add GG to your mana pool equal to the number of creatures tapped this way.',
+        'flavorText': 'When need is great, the earth\'s power is even greater.',
+        'artist': 'Tsitra360',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Terra Arbora Animus',
+        'image': 'Terra Arbora Animus.jpg',
+        'cost': '1GG',
+        'supertype': 'Sorcery',
+        'text': 'Arcane Shield 1 (Opponents must pay 1 to target this card.)\n\nTerra Arbora Animus deals X damage to each creature with Flying, where X is the number of lands paired with creatures you control.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Ursa Minor',
+        'image': 'Ursa Minor.jpg',
+        'cost': '6G',
+        'supertype': 'Creature'
+        'subtype': 'Bear Elemental',
+        'pt': '6/6',
+        'text': 'Reach',
+        'flavorText': '"...That\'s just a baby Ursa."\n\n— Twilight Sparkle, to Trixie',
+        'artist': 'RarieDash',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Amplifying Tome',
+        'image': 'Amplifying Tome.jpg',
+        'cost': '5',
+        'supertype': 'Artifact'
+        'subtype': 'Book',
+        'text': 'T: Until end of turn, spells you control cost 1 less to cast. At end of turn, put Amplifying Tome on the bottom of its owner\'s library.',
+        'flavorText': 'Many magical books contain more than just spell formulae and runic alphabets — some have assistant casting arrays built in.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Ancient Volume',
+        'image': 'Ancient Volume.jpg',
+        'cost': '2',
+        'supertype': 'Artifact'
+        'subtype': 'Book',
+        'text': 'Ancient Volume enters the battlefield tapped. When it does, look at the top four cards of your library, exile one, and put the rest on the bottom of your library.\n\n1, T: You may play the exiled card without paying its mana cost if you spent at least five mana this turn. When you do, shuffle Ancient Volume into its owner\'s library.',
+        'artist': 'Alectorfencer',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Applejack\'s Lasso',
+        'image': 'Applejacks Lasso.jpg',
+        'cost': '4',
+        'supertype': 'Artifact'
+        'subtype': 'Equipment',
+        'text': 'Equipped creature gets +1/+3 and has Reach.\n\nG, T, Pay one Quest counter: Exile target creature with Flying until end of turn.\n\nEquip 1 (Equip only as a sorcery.)',
+        'flavorText': '"Hah! The day Dash manages to get away from me is the day I hang up my lasso." — Applejack',
+        'artist': 'LaurenMagpie',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Archaic Index',
+        'image': 'Archaic Index.jpg',
+        'cost': '1',
+        'supertype': 'Artifact'
+        'subtype': 'Book',
+        'text': '1, T: Look at the top 5 cards of your library. You may put them back in any order, then put Archaic Index on the bottom of its owner\'s library.',
+        'flavorText': 'It was Titan who wrote the first book, inscribing the fundamental laws of the universe on pages made of starstuff.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Bubbling Brew',
+        'image': 'Bubbling Brew.jpg',
+        'cost': '3',
+        'supertype': 'Artifact',
+        'text': '2/R: Put a Charge counter on Bubbling Brew.\n\nT, Remove each Charge counter from Bubbling Brew: It deals that much damage to target creature or target opponent.',
+        'artist': 'Gezibing',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Cauldron of Calamity',
+        'image': 'Cauldron of Calamity.jpg',
+        'cost': '4',
+        'supertype': 'Artifact',
+        'text': 'At the beginning of your upkeep, distribute a number of Charge counters equal to the number of Charge counters on Cauldron of Calamity among other permanents you control.\n\nR, T: Sacrifice a land, then put a Charge counter on Cauldron of Calamity.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Encyclopedia Magica',
+        'image': 'Encyclopedia Magica.jpg',
+        'cost': '2',
+        'supertype': 'Artifact'
+        'subtype': 'Book',
+        'text': '2/U2/U, T: Draw two cards, then put Encyclopedia Magica on the bottom of its owner\'s library.',
+        'flavorText': 'The 8th Edition of the Encyclopedia Magica is said to be Stellar\'s finest work, and contains an almost unimaginable quanity of magical knowledge.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Explorer\'s Amulet',
+        'image': 'Explorers Amulet.jpg',
+        'cost': '1',
+        'supertype': 'Artifact',
+        'text': 'T, Pay 1 Quest counter: Target creature you control has protection from the color of your choice until end of turn.',
+        'flavorText': 'When your day job takes you to places full of danger, and when your side job involves eliminating said danger, a little protection never goes amiss.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Fluttershy\'s First-Aid Kit',
+        'image': 'Fluttershys First-Aid Kit.jpg',
+        'cost': '4',
+        'supertype': 'Artifact'
+        'subtype': 'Equipment',
+        'text': 'Equipped creature gets +0/+4 and has Vigilance.\n\n1W, T, Pay one Quest counter: Prevent all damage that would be dealt to and dealt by target creature this turn."\n\nEquip 2 (Equip only as a sorcery.)',
+        'flavorText': '"Oh! Um, are you alright?" — Fluttershy',
+        'artist': 'JohnJoseco',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Grimoire of the Archive',
+        'image': 'Grimoire of the Archive.jpg',
+        'cost': '4',
+        'supertype': 'Artifact'
+        'subtype': 'Book',
+        'text': 'Whenever Grimoire of the Archive or another Book enters the battlefield under your control, you get a Quest counter.\n\nQuest Level X — T: Target player puts the top X cards of his or her library into his or her graveyard, where X is the number of Quest counters you have.',
+        'artist': 'Gailee',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Leatherleaf Barding',
+        'image': 'Leatherleaf Barding.jpg',
+        'cost': '3',
+        'supertype': 'Artifact'
+        'subtype': 'Equipment',
+        'text': 'Equipped creature gets +0/+3.\n\nIf Equipped creature is a Pegasus, Unicorn, Batpony, Zebra, or Earthpony, it also gets +2/+0.\n\nEquip 2 (Equip only as a sorcery.)',
+        'flavorText': 'The Leatherleaf plant has been used to manufacture durable clothing for millenia.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'List of Important Things',
+        'image': 'List of Important Things.jpg',
+        'cost': 'X',
+        'supertype': 'Artifact'
+        'subtype': 'Book',
+        'text': 'If U was spent to cast List of Important Things, when it enters the battlefield, Scry X.\n\n1, T: Shuffle any number of Books you control into their owners\' libraries.',
+        'flavorText': '"Spike, make a list." — Twilight Sparkle',
+        'artist': 'Et_Ya',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Lotus Seed',
+        'image': 'Lotus Seed.jpg',
+        'cost': '0',
+        'supertype': 'Artifact',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of your upkeep, you get a Quest counter. Then, if you have at least 2 Quest counters, sacrifice Lotus Seed. If you do, search your library for a land, put it onto the battlefield, and shuffle your library.',
+        'flavorText': 'Earthponies made it. Of course it still works.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Polychrome Prism',
+        'image': 'Polychrome Prism.jpg',
+        'cost': '3',
+        'supertype': 'Artifact',
+        'text': 'Untap Polychrome Prism during each other player\'s untap step.\n\nX1, T: Add X mana in any combination of colors to your mana pool.',
+        'flavorText': 'These exquisitely crafted diamond spell-crystals are becoming increasingly rare, for the secret of their creation has been lost to time.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Potioneer\'s Knacksack',
+        'image': 'Potioneers Knacksack.jpg',
+        'cost': '2',
+        'supertype': 'Artifact'
+        'subtype': 'Equipment',
+        'text': 'T: Put a Charge counter on target permanent you control.\n\n1RR, T: Equipped creature deals damage equal to the number of Charge counters on it to target opponent.\n\nEquip 2 (Equip only as a sorcery.)',
+        'artist': 'DoomSp0rk',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Twilight Sparkle\'s Study Guide',
+        'image': 'Twilight Sparkles Study Guide.jpg',
+        'cost': '4',
+        'supertype': 'Artifact'
+        'subtype': 'Book Equipment',
+        'text': 'Equipped creature gets +2/+2 and has Hexproof.\n\n3U, T, Pay one Quest counter: Draw a card. If you draw a Book this way, you may draw another card.\n\nEquip 1 (Equip only as a sorcery.)',
+        'flavorText': '"Now, where\'s my checklist?" — Twilight Sparkle',
+        'artist': 'JohnJoseco',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Waystone',
+        'image': 'Waystone.jpg',
+        'cost': '2',
+        'supertype': 'Artifact',
+        'text': 'When Waystone enters the battlefield, you get a Quest counter.\n\n3, Tap an untapped nontoken creature you control: You get a Quest counter. (Any player may use this ability.)',
+        'flavorText': 'These ancient monoliths provide guidance to those who can read Equestria\'s old language.',
+        'artist': 'Eru17',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Weathered Map',
+        'image': 'Weathered Map.jpg',
+        'cost': '1',
+        'supertype': 'Artifact'
+        'subtype': 'Book',
+        'text': 'When Weathered Map enters the battlefield, look at the top 3 cards of your library, then put them back in any order.\n\n1, T: You get a Quest counter, then put Weathered Map on the bottom of its owner\'s library.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Adventurer\'s Inn',
+        'image': 'Adventurers Inn.jpg',
+        'supertype': 'Land',
+        'text': 'T: Add 1 mana of any color shared by a creature you control to your mana pool.\n\nQuest Level 4 — If you have at least 4 Quest counters, tapped creatures you control have Hexproof.',
+        'flavorText': 'A place to rest and swap tales.',
+        'artist': 'Chari_San',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Cloudvillage',
+        'image': 'Cloudvillage.jpg',
+        'supertype': 'Land',
+        'text': 'T: Add W to your mana pool.\n\nT: If you paid an Airstrike cost this turn, add WW to your mana pool.',
+        'flavorText': 'These mobile pegasus residences are constructed out of clouds from Equestria\'s cloud forests.',
+        'artist': 'AssassinMonkey',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Darrowdelf',
+        'image': 'Darrowdelf.jpg',
+        'supertype': 'Land',
+        'text': 'T: Add B to your mana pool.\n\nT: If you activated a Drain ability this turn, add BB to your mana pool.',
+        'flavorText': 'The secluded caverns that the Batponies call home are hidden deep in the swamplands.',
+        'artist': 'Ninjatic',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Edge of the Wild',
+        'image': 'Edge of the Wild.jpg',
+        'supertype': 'Land',
+        'text': 'T: Add 1 to your mana pool.\n\nT, Sacrifice Edge of the Wild: You get a Quest counter.',
+        'artist': 'ChaosLavaWolf',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Forgotten Passageway',
+        'image': 'Forgotten Passageway.jpg',
+        'supertype': 'Land',
+        'text': 'If you have no Quest counters when Forgotten Passageway enters the battlefield, you get a Quest counter.\n\nT: Add 1 to your mana pool.\n\n3, Pay 1 Quest counter: Target creature you control can\'t be blocked this turn.',
+        'artist': 'Unknown',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Harborkeep',
+        'image': 'Harborkeep.jpg',
+        'supertype': 'Land',
+        'text': 'T: Add U to your mana pool.\n\nT: If you triggered a Spellwright ability this turn, add UU to your mana pool.',
+        'flavorText': 'Unicorn harborkeeps provide safe havens for trading ships from around the world.',
+        'artist': 'GaiasAngel',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Leyline of Discovery',
+        'image': 'Leyline of Discovery.jpg',
+        'supertype': 'Land',
+        'text': 'If you have no Quest counters when Leyline of Discovery enters the battlefield, you get a Quest counter.\n\nT: Add 1 to your mana pool.\n\nT, Pay 1 Quest counter: Add 1 mana of any color to your mana pool.',
+        'artist': 'FrankAtt',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Moonlit Archive',
+        'image': 'Moonlit Archive.jpg',
+        'supertype': 'Land',
+        'text': 'Moonlit Archive enters the battlefield with three Catalog counters on it.\n\nT: Add 1 to your mana pool.\n\nT, Remove a Catalog counter from Moonlit Archive: Look at the top three cards of your library. You may put one on top of your library and the rest on the bottom in any order.',
+        'artist': 'Unknown',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Steadholdt',
+        'image': 'Steadholdt.jpg',
+        'supertype': 'Land',
+        'text': 'T: Add G to your mana pool.\n\nT: If you paid an Earthlink cost this turn, add GG to your mana pool.',
+        'flavorText': 'Earthpony steadholdts are bastions of civilization on the edges of the wilderness.',
+        'artist': 'Huussii',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Temple of Mazes',
+        'image': 'Temple of Mazes.jpg',
+        'supertype': 'Land',
+        'text': 'T, Tap target creature: That creature\'s controller gets an additional Quest counter.\n\nPay 1 Quest counter: Add 1 mana of any color to your mana pool. (Any player may use this ability.)',
+        'artist': 'NinePixels',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Uncharted Leyline',
+        'image': 'Uncharted Leyline.jpg',
+        'supertype': 'Land',
+        'text': 'If you have three or fewer Quest counters when Uncharted Leyline enters the battlefield, you get a Quest counter.\n\nQuest Level X — T: Add X to your mana pool, where X is the number of Quest counters you have.',
+        'artist': 'Narandel',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Valleypost',
+        'image': 'Valleypost.jpg',
+        'supertype': 'Land',
+        'text': 'T: Add R to your mana pool.\n\nT: If you triggered a Countercharge ability this turn, add RR to your mana pool.',
+        'flavorText': 'The Zebras\' most permanent settlements are built within their deepest canyons.',
+        'artist': 'AndreeWallin',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Plains',
+        'image': 'Plains.2.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Plains',
+        'artist': 'Devinian',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Plains',
+        'image': 'Plains.1.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Plains',
+        'artist': 'Bering',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Plains',
+        'image': 'Plains.4.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Plains',
+        'artist': 'Bering',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Plains',
+        'image': 'Plains.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Plains',
+        'artist': 'Devinian',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Plains',
+        'image': 'Plains.3.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Plains',
+        'artist': 'Devinian',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Island',
+        'image': 'Island.1.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Island',
+        'artist': 'Memod',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Island',
+        'image': 'Island.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Island',
+        'artist': 'Memod',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Island',
+        'image': 'Island.2.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Island',
+        'artist': 'Sayuri1314',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Island',
+        'image': 'Island.3.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Island',
+        'artist': 'Simbaro',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Island',
+        'image': 'Island.4.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Island',
+        'artist': 'RHADS',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Swamp',
+        'image': 'Swamp.4.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Swamp',
+        'artist': 'JoshEiten',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Swamp',
+        'image': 'Swamp.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Swamp',
+        'artist': 'JoshEiten',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Swamp',
+        'image': 'Swamp.1.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Swamp',
+        'artist': 'SkavenZvervov',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Swamp',
+        'image': 'Swamp.3.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Swamp',
+        'artist': 'Memod',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Swamp',
+        'image': 'Swamp.2.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Swamp',
+        'artist': 'Memod',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Mountain',
+        'image': 'Mountain.4.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Mountain',
+        'artist': 'FerdinandLadera',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Mountain',
+        'image': 'Mountain.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Mountain',
+        'artist': 'FerdinandLadera',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Mountain',
+        'image': 'Mountain.3.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Mountain',
+        'artist': 'AeronJVL',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Mountain',
+        'image': 'Mountain.1.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Mountain',
+        'artist': 'FerdinandLadera',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Mountain',
+        'image': 'Mountain.2.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Mountain',
+        'artist': 'FerdinandLadera',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Forest',
+        'image': 'Forest.4.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Forest',
+        'artist': 'Durger',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Forest',
+        'image': 'Forest.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Forest',
+        'artist': 'ThePhoenixDark',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Forest',
+        'image': 'Forest.1.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Forest',
+        'artist': 'ThePhoenixDark',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Forest',
+        'image': 'Forest.2.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Forest',
+        'artist': 'Devinian',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Forest',
+        'image': 'Forest.3.jpg',
+        'supertype': 'Basic Land'
+        'subtype': 'Forest',
+        'artist': 'Machinimator',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Ascension',
+        'image': 'Ascension.jpg',
+        'supertype': 'Emblem'
+        'subtype': 'Celestia, the Light Eternal',
+        'text': 'Damage can\'t be dealt to Celestia. She becomes a creature with Indestructible in addition to her other types. Her power and toughness are equal to the number of permanents you control.',
+        'artist': 'Cmaggot',
+        'rarity': 'rare',
+        'cardType': 'emblem',
+    },
+    {
+    
+        'name': 'Nightveil',
+        'image': 'Nightveil.jpg',
+        'supertype': 'Emblem'
+        'subtype': 'Luna, the Dream Warden',
+        'text': 'Lands you don\'t control don\'t untap during their controllers\' untap steps.\n\nEach land gains "Pay 1 life: Untap this land."',
+        'artist': 'Bary91',
+        'rarity': 'rare',
+        'cardType': 'emblem',
+    },
+    {
+    
+        'name': 'Quest Counter',
+        'image': 'Quest Counter.jpg',
+        'supertype': 'Quest Counter',
+        'artist': 'Dreatos',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Quest Counter',
+        'image': 'Quest Counter.1.jpg',
+        'supertype': 'Quest Counter',
+        'artist': 'AquaGalaxy',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Quest Counter',
+        'image': 'Quest Counter.2.jpg',
+        'supertype': 'Quest Counter',
+        'artist': 'Ziom05',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Quest Counter',
+        'image': 'Quest Counter.3.jpg',
+        'supertype': 'Quest Counter',
+        'artist': 'WhiteStar1802',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Quest Counter',
+        'image': 'Quest Counter.4.jpg',
+        'supertype': 'Quest Counter',
+        'artist': 'Lexx2Dot0',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Solar Guard',
+        'image': 'Solar Guard.jpg',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony Knight',
+        'pt': '2/2',
+        'text': 'Vigilance',
+        'flavorText': 'Many of Celestia\'s small circle of true friends are members of her personal guard.\n\n— A Student\'s Memoir, Vol. 2',
+        'artist': 'BrotugueseViking',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Pegasus',
+        'image': 'Pegasus.jpg',
+        'supertype': 'Creature'
+        'subtype': 'Pegasus',
+        'pt': '1/1',
+        'text': 'Flying',
+        'flavorText': 'The first pegasi were woven by Lauren herself from rays of sunlight and tufts of cloudstuff.',
+        'artist': 'TakuyaRawr',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Alicorn Nightmare',
+        'image': 'Alicorn Nightmare.jpg',
+        'supertype': 'Creature'
+        'subtype': 'Alicorn Nightmare',
+        'pt': '4/3',
+        'text': 'Other creatures get -2/-1.',
+        'flavorText': 'The theft of a soul from the Eternal Herd is the worst crime that can be committed.',
+        'artist': 'DreamPaw',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Nightmare',
+        'image': 'Nightmare.jpg',
+        'supertype': 'Creature'
+        'subtype': 'Nightmare',
+        'pt': '2/2',
+        'flavorText': 'The first Nightmares were created by Discord as a way to attack ponies\' minds. Their arrival was what prompted Luna to assume the role of Dream Warden.',
+        'artist': 'Twigileia',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Earthpony ',
+        'image': 'Earthpony .jpg',
+        'supertype': 'Creature'
+        'subtype': 'Earthpony',
+        'pt': '3/3',
+        'text': 'Trample',
+        'flavorText': 'Earth Ponies, it is said, are as tough as mountains and twice as stubborn.',
+        'artist': 'ShinePawPony',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Golem',
+        'image': 'Golem.jpg',
+        'supertype': 'Artifact Creature'
+        'subtype': 'Golem',
+        'pt': '4/4',
+        'flavorText': 'The Golems were Keris\' first creations — mighty constructs of metal, stone, and magic, designed to aid her in shaping the new world and in guiding the path of civilization.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Basic land',
+        'image': 'Basic land.jpg',
+        'supertype': 'Basic Land',
+        'text': 'T: Add 1 to your mana pool.',
+        'flavorText': 'Harmony saw what Lauren and Titan were making, and thought that it was too empty.',
+        'artist': 'DawnPu',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+    {
+    
+        'name': 'Alicorn of Shadows',
+        'image': 'Alicorn of Shadows.jpg',
+        'cost': '3BB',
+        'supertype': 'Creature'
+        'subtype': 'Alicorn',
+        'pt': '4/4',
+        'text': 'Flying\n\nIf Alicorn of Shadows would deal combat damage to a player, you may instead Drain target creature that many times. (When you drain a creature, it gets -1/-1 until end of turn.)',
+        'flavorText': 'They erred in believing that simply because they called it, it would serve them.',
+        'artist': 'Fantazyme',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Crucius\, Axe of Damnation',
+        'image': 'Crucius Axe of Damnation.jpg',
+        'cost': '1BB',
+        'supertype': 'Legendary Artifact Enchantment',
+        'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of each upkeep, Drain target creature (That creature gets -1/-1 until end of turn.)\n\n1BB, T: The next time a creature with reduced toughness dies this turn, return it to the battlefield under your control.',
+        'artist': 'DoomSp0rk',
+        'rarity': 'mythic rare',
+    },
+    {
+    
+        'name': 'Disciple of Oceanus',
+        'image': 'Disciple of Oceanus.jpg',
+        'cost': '4B',
+        'supertype': 'Creature'
+        'subtype': 'Bat Cleric',
+        'pt': '3/3',
+        'text': 'Whenever Disciple of Oceanus attacks, choose one:\n\n• Disciple of Oceanus gains First Strike until end of turn.\n\n• Drained creatures can\'t block Disciple of Oceanus this turn.',
+        'artist': 'BaitouBaozou',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Dreambound Acolyte',
+        'image': 'Dreambound Acolyte.jpg',
+        'cost': '3B',
+        'supertype': 'Creature'
+        'subtype': 'Batpony Cleric',
+        'pt': '2/3',
+        'text': 'T: Drain target creature (That creature gets -1/-1 until end of turn.)\n\nWhenever you lose life, you may have target opponent lose 1 life.',
+        'artist': 'Bonaxor',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Nadir, the Intrepid',
+        'image': 'Nadir the Intrepid.jpg',
+        'cost': '2B',
+        'supertype': 'Legendary Creature'
+        'subtype': 'Batpony',
+        'pt': '2/3',
+        'text': 'Quest — At the beginning of each upkeep, if you reduced a creature\'s toughness last turn, you get a Quest counter.\n\nB, Pay 1 Quest counter: You gain 1 life for each creature with reduced toughness.\n\nQuest Level X — At the beginning of your upkeep, each opponent discards a card with converted mana cost X or less.',
+        'artist': 'Rujhe',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Nightveil Raider',
+        'image': 'Nightveil Raider.jpg',
+        'cost': '3B',
+        'supertype': 'Creature'
+        'subtype': 'Batpony Rogue',
+        'pt': '1/3',
+        'text': 'When Nightveil Raider attacks, Drain target creature (That creature gets -1/-1 until end of turn.)\n\nWhenever Nightveil Raider deals damage to a drained creature, destroy that creature.',
+        'flavorText': 'Nightveils are considered some of the deadliest batponies in Equestria.',
+        'artist': 'Zedrin',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Search for Power',
+        'image': 'Search for Power.jpg',
+        'cost': '1BB',
+        'supertype': 'Enchantment'
+        'subtype': 'Quest',
+        'text': '3: Return Search for Power to your hand.\n\nQuest — At the beginning of each upkeep, if an opponent lost life this turn without being dealt damage, you get a Quest counter.\n\nQuest Level 6 — As long as you have at least six Quest counters, Search for Power becomes a 4/4 black Alicorn creature with Deathtouch.',
+        'artist': 'Huussii',
+        'rarity': 'uncommon',
+    },
+    {
+    
+        'name': 'Umbral Acolyte',
+        'image': 'Umbral Acolyte.jpg',
+        'cost': '2B',
+        'supertype': 'Creature'
+        'subtype': 'Batpony Cleric',
+        'pt': '2/2',
+        'text': '1BB: Drain target creature. You gain 1 life. (That creature gets -1/-1 until end of turn.)',
+        'flavorText': 'The first thing that an initiate to the Order Nocturnus learns is the weapons-grade version of their inherent magic.',
+        'artist': 'KiraKura',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Nightseeker',
+        'image': 'Nightseeker.jpg',
+        'cost': '1B',
+        'supertype': 'Creature'
+        'subtype': 'Batpony',
+        'pt': '1/2',
+        'text': 'When Nightseeker attacks, Drain target creature (That creature gets -1/-1 until end of turn.)',
+        'flavorText': 'The art of shadow warfare is a secret that is slowly being rediscovered.',
+        'artist': 'Avarick',
+        'rarity': 'common',
+    },
+    {
+    
+        'name': 'Nightveil Blademaster',
+        'image': 'Nightveil Blademaster.jpg',
+        'cost': '4BB',
+        'supertype': 'Creature'
+        'subtype': 'Batpony Rogue',
+        'pt': '2/4',
+        'text': 'Deathtouch\n\nWhenever Nightveil Blademaster attacks, it gains First Strike until end of turn.\n\nWhenever Nightveil Blademaster blocks, Drain each creature it blocks twice. (That creature gets -2/-2 until end of turn.)',
+        'flavorText': '"Your fate is decided." — Sky Lash               ',
+        'artist': 'Anadukune',
+        'rarity': 'rare',
+    },
+    {
+    
+        'name': 'Quest Counter',
+        'image': 'Quest Counter.5.jpg',
+        'supertype': 'Quest Counter',
+        'artist': 'Koviry',
+        'rarity': 'common',
+        'cardType': 'token',
+    },
+
     {
         'name': 'Ahuizotl',
         'image': 'Ahuizotl.png',
