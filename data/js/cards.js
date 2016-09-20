@@ -1459,7 +1459,7 @@ var CARDS = [
         'subtype': 'Celestia',
         'text': '+2: White creatures you control have Lifelink and Vigilance until end of turn.\n\n-3: Put two 2/2 white Earthpony Knight creature tokens with Vigilance named "Solar Guard" onto the battlefield.\n\n-7: You get Celestia\'s "Ascension" emblem.',
         'artist': 'Noben',
-        'loyalty': '4'
+        'loyalty': '4',
         'rarity': 'mythic rare',
     },
     {
