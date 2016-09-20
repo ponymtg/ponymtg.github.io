@@ -1365,7 +1365,8 @@ var CARDS = [
     {
         'name': 'Invoke Order',
         'image': 'Invoke Order.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'X',
         'colorIndicator': '(U)',
         'supertype': 'Instant',
@@ -1378,7 +1379,8 @@ var CARDS = [
     
         'name': 'Act of Valor',
         'image': 'Act of Valor.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '0',
         'colorIndicator': '(W)',
         'supertype': 'Instant',
@@ -1391,7 +1393,8 @@ var CARDS = [
     
         'name': 'Arcanim of Lauren\'s Light',
         'image': 'Arcanim of Laurens Light.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4W',
         'supertype': 'Creature',
         'subtype': 'Alicorn',
@@ -1404,7 +1407,8 @@ var CARDS = [
     
         'name': 'Arcknight Ascendant',
         'image': 'Arcknight Ascendant.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3WWW',
         'supertype': 'Creature',
         'subtype': 'Alicorn Knight',
@@ -1418,7 +1422,8 @@ var CARDS = [
     
         'name': 'Atmospheric Singularity',
         'image': 'Atmospheric Singularity.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1WW',
         'supertype': 'Enchantment',
         'text': 'Arcane Shield 1 (Opponents must pay 1 to target this card.)\n\nWhen Atmospheric Singularity enters the battlefield, exile target nonland permanent until Atmospheric Singularity leaves the battlefield.',
@@ -1429,7 +1434,8 @@ var CARDS = [
     
         'name': 'Beacon Station Expedition',
         'image': 'Beacon Station Expedition.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1W',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -1442,7 +1448,8 @@ var CARDS = [
     
         'name': 'Call to Arms',
         'image': 'Call to Arms.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3WW',
         'supertype': 'Sorcery',
         'text': 'You get a Quest counter, then choose one:\n\n• Put three 1/1 white Pegasus creature tokens with Flying onto the battlefield.\n\n• Tap an untapped Pegasus creature you control. If you do, put four 1/1 white Pegasus creature tokens with Flying onto the battlefield.',
@@ -1453,7 +1460,8 @@ var CARDS = [
     
         'name': 'Celestia, the Light Eternal',
         'image': 'Celestia the Light Eternal.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2WW',
         'supertype': 'Planeswalker',
         'subtype': 'Celestia',
@@ -1466,7 +1474,8 @@ var CARDS = [
     
         'name': 'Cloak of Storms',
         'image': 'Cloak of Storms.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1WW',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -1479,7 +1488,8 @@ var CARDS = [
     
         'name': 'Cloudpuncher Cadet',
         'image': 'Cloudpuncher Cadet.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'W',
         'supertype': 'Creature',
         'subtype': 'Pegasus',
@@ -1492,7 +1502,8 @@ var CARDS = [
     
         'name': 'Cloudpuncher Veteran',
         'image': 'Cloudpuncher Veteran.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2W',
         'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
@@ -1505,7 +1516,8 @@ var CARDS = [
     
         'name': 'Cloudsdale Champion',
         'image': 'Cloudsdale Champion.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1W',
         'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
@@ -1519,7 +1531,8 @@ var CARDS = [
     
         'name': 'Conjured Armor',
         'image': 'Conjured Armor.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1W',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -1531,7 +1544,8 @@ var CARDS = [
     
         'name': 'Face the Gods',
         'image': 'Face the Gods.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2WW',
         'supertype': 'Instant',
         'text': 'Choose one:\n\n• Destroy target attacking creature.\n\n• Exile target enchantment.\n\n• You gain life equal to target creature\'s power.',
@@ -1543,7 +1557,8 @@ var CARDS = [
     
         'name': 'Flight Aptitude',
         'image': 'Flight Aptitude.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'W',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -1556,7 +1571,8 @@ var CARDS = [
     
         'name': 'Fluttershy, the Good',
         'image': 'Fluttershy the Good.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2W',
         'supertype': 'Legendary Creature',
         'subtype': 'Pegasus',
@@ -1569,7 +1585,8 @@ var CARDS = [
     
         'name': 'Gift of Sunlight',
         'image': 'Gift of Sunlight.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1W',
         'supertype': 'Sorcery',
         'text': 'Target player gains 4 life.\n\nYou get a Quest counter.',
@@ -1581,7 +1598,8 @@ var CARDS = [
     
         'name': 'Lauren, Author of Worlds',
         'image': 'Lauren Author of Worlds.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3WW',
         'supertype': 'Legendary Creature',
         'subtype': 'Alicorn God',
@@ -1595,7 +1613,8 @@ var CARDS = [
     
         'name': 'Lauren\'s Benediction',
         'image': 'Laurens Benediction.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2W',
         'supertype': 'Enchantment',
         'text': 'Attacking creatures you control get +1/+1 and have Vigilance.',
@@ -1607,7 +1626,8 @@ var CARDS = [
     
         'name': 'Lauren\'s Lightbringer',
         'image': 'Laurens Lightbringer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3W',
         'supertype': 'Creature',
         'subtype': 'Pegasus Shaman',
@@ -1620,7 +1640,8 @@ var CARDS = [
     
         'name': 'Pegassistance',
         'image': 'Pegassistance.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3W',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -1633,7 +1654,8 @@ var CARDS = [
     
         'name': 'Pegasus Adventurer',
         'image': 'Pegasus Adventurer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2WW',
         'supertype': 'Creature',
         'subtype': 'Pegasus',
@@ -1647,7 +1669,8 @@ var CARDS = [
     
         'name': 'Pegasus Lightweaver',
         'image': 'Pegasus Lightweaver.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3W',
         'supertype': 'Creature',
         'subtype': 'Pegasus Shaman',
@@ -1661,7 +1684,8 @@ var CARDS = [
     
         'name': 'Pegasus Skyvillager',
         'image': 'Pegasus Skyvillager.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'W',
         'supertype': 'Creature',
         'subtype': 'Pegasus',
@@ -1675,7 +1699,8 @@ var CARDS = [
     
         'name': 'Pegasus Vanguard',
         'image': 'Pegasus Vanguard.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2W',
         'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
@@ -1688,7 +1713,8 @@ var CARDS = [
     
         'name': 'Planar Genesis',
         'image': 'Planar Genesis.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3WWW',
         'supertype': 'Sorcery',
         'text': 'Exile each nonlegendary permanent.\n\nAt end of turn, each player who controls no permanents searches his or her library for up to three basic lands and puts them onto the battlefield, then shuffles his or her library.',
@@ -1700,7 +1726,8 @@ var CARDS = [
     
         'name': 'Polaris, Sword of the Word',
         'image': 'Polaris Sword of the Word.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1WW',
         'supertype': 'Legendary Artifact Enchantment',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of each upkeep, target creature gets +1/+1 for each creature you control until end of turn.\n\n1WW, T: Destroy target creature that dealt combat damage this turn. You gain 3 life.',
@@ -1712,7 +1739,8 @@ var CARDS = [
     
         'name': 'Purehearted Alicorn',
         'image': 'Purehearted Alicorn.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3W',
         'supertype': 'Creature',
         'subtype': 'Alicorn',
@@ -1726,7 +1754,8 @@ var CARDS = [
     
         'name': 'Quest for Lauren\'s Song',
         'image': 'Quest for Laurens Song.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3W',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -1738,7 +1767,8 @@ var CARDS = [
     
         'name': 'Rain Warden',
         'image': 'Rain Warden.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'W',
         'supertype': 'Creature',
         'subtype': 'Pegasus Shaman',
@@ -1751,7 +1781,8 @@ var CARDS = [
     
         'name': 'Rainshower',
         'image': 'Rainshower.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1W',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -1764,7 +1795,8 @@ var CARDS = [
     
         'name': 'Return of the Pentarch',
         'image': 'Return of the Pentarch.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1WW',
         'supertype': 'Legendary Enchantment',
         'subtype': 'Quest',
@@ -1776,7 +1808,8 @@ var CARDS = [
     
         'name': 'Seal of the Sun',
         'image': 'Seal of the Sun.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'WW',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -1788,7 +1821,8 @@ var CARDS = [
     
         'name': 'Search for Truth',
         'image': 'Search for Truth.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1WW',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -1800,7 +1834,8 @@ var CARDS = [
     
         'name': 'Skycouncil Elder',
         'image': 'Skycouncil Elder.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2W',
         'supertype': 'Creature',
         'subtype': 'Pegasus',
@@ -1814,7 +1849,8 @@ var CARDS = [
     
         'name': 'Skyguard Captain',
         'image': 'Skyguard Captain.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4W',
         'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
@@ -1827,7 +1863,8 @@ var CARDS = [
     
         'name': 'Skyguard Militia',
         'image': 'Skyguard Militia.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1W',
         'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
@@ -1841,7 +1878,8 @@ var CARDS = [
     
         'name': 'Storm Wall',
         'image': 'Storm Wall.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1WW',
         'supertype': 'Enchantment',
         'text': 'When Storm Wall enters the battlefield, you gain 3 life.\n\nEach opponent can\'t attack you unless he or she pays X, where X is the number of enchantments you control.',
@@ -1852,7 +1890,8 @@ var CARDS = [
     
         'name': 'Strike From the Skies',
         'image': 'Strike From the Skies.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1WW',
         'supertype': 'Instant',
         'text': 'Until end of turn, creatures you control with Flying gain +1/+1.',
@@ -1864,7 +1903,8 @@ var CARDS = [
     
         'name': 'Sunflight Cloudshaper',
         'image': 'Sunflight Cloudshaper.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2W',
         'supertype': 'Creature',
         'subtype': 'Pegasus Shaman',
@@ -1878,7 +1918,8 @@ var CARDS = [
     
         'name': 'Sunflight Corsair',
         'image': 'Sunflight Corsair.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1WW',
         'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
@@ -1892,7 +1933,8 @@ var CARDS = [
     
         'name': 'Sunflight Crusader',
         'image': 'Sunflight Crusader.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2WW',
         'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
@@ -1905,7 +1947,8 @@ var CARDS = [
     
         'name': 'Thundercloud Trap',
         'image': 'Thundercloud Trap.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3W',
         'supertype': 'Instant',
         'text': 'If any number of creatures with total power greater than your life total are attacking you or, you may pay 0 rather than pay Thundercloud Trap\'s mana cost.\n\nExile target creature.',
@@ -1916,7 +1959,8 @@ var CARDS = [
     
         'name': 'Thunderstorm',
         'image': 'Thunderstorm.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'XW',
         'supertype': 'Instant',
         'text': 'Tap X target Pegasus creatures you control. For each creature tapped this way, Thunderstorm deals 2 damage to target creature that is attacking or blocking you.',
@@ -1928,7 +1972,8 @@ var CARDS = [
     
         'name': 'Weather Team Captain',
         'image': 'Weather Team Captain.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'WW',
         'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
@@ -1941,7 +1986,8 @@ var CARDS = [
     
         'name': 'Weather Worker',
         'image': 'Weather Worker.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1W',
         'supertype': 'Creature',
         'subtype': 'Pegasus',
@@ -1954,7 +2000,8 @@ var CARDS = [
     
         'name': 'Wind Elemental',
         'image': 'Wind Elemental.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1W',
         'supertype': 'Enchantment Creature',
         'subtype': 'Elemental',
@@ -1968,7 +2015,8 @@ var CARDS = [
     
         'name': 'Windshear',
         'image': 'Windshear.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'W',
         'supertype': 'Sorcery',
         'text': 'Destroy target enchantment.\n\nQuest Level 5 — If you have at least five Quest counters, you may shuffle cards from your graveyard into your library equal to the number of Plains you control.',
@@ -1980,7 +2028,8 @@ var CARDS = [
     
         'name': 'Windshear Weathermage',
         'image': 'Windshear Weathermage.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'W',
         'supertype': 'Creature',
         'subtype': 'Pegasus',
@@ -1993,7 +2042,8 @@ var CARDS = [
     
         'name': 'Wonderbolt Squad',
         'image': 'Wonderbolt Squad.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3WW',
         'supertype': 'Creature',
         'subtype': 'Pegasus Soldier',
@@ -2007,7 +2057,8 @@ var CARDS = [
     
         'name': 'Academic Curiosity',
         'image': 'Academic Curiosity.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'U',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -2020,7 +2071,8 @@ var CARDS = [
     
         'name': 'Arc-Matrix Gestalt',
         'image': 'Arc-Matrix Gestalt.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'U',
         'supertype': 'Enchantment Creature',
         'subtype': 'Illusion',
@@ -2034,7 +2086,8 @@ var CARDS = [
     
         'name': 'Arcane Waterspout',
         'image': 'Arcane Waterspout.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'XU',
         'supertype': 'Instant',
         'text': 'Return target creature to its owner\'s hand. That player chooses X cards at random from their hand, shuffles them into their library, then draws X cards.',
@@ -2046,7 +2099,8 @@ var CARDS = [
     
         'name': 'Archive Adjucator',
         'image': 'Archive Adjucator.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2U',
         'supertype': 'Creature',
         'subtype': 'Unicorn Advisor',
@@ -2060,7 +2114,8 @@ var CARDS = [
     
         'name': 'Archive Extraction',
         'image': 'Archive Extraction.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'XU',
         'supertype': 'Sorcery',
         'text': 'Tap X target Unicorn creatures you control. Each opponent reveals the top X cards of their library, then you draw X cards.',
@@ -2072,7 +2127,8 @@ var CARDS = [
     
         'name': 'Battle of Wills',
         'image': 'Battle of Wills.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'U',
         'supertype': 'Instant',
         'text': 'Counter target spell.\n\n1: Counter Battle of Wills. (Any player may use this ability before Battle of Wills resolves.)\n\n1: The next time this turn Battle of Wills would be countered, instead it isn\'t. (Any player may use this ability before Battle of Wills resolves.)',
@@ -2084,7 +2140,8 @@ var CARDS = [
     
         'name': 'Argent Battlemage',
         'image': 'Argent Battlemage.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4U',
         'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
@@ -2098,7 +2155,8 @@ var CARDS = [
     
         'name': 'Bonk',
         'image': 'Bonk.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2U',
         'supertype': 'Instant',
         'text': 'Choose one:\n\n• Tap up to three target creatures.\n\n• Target creature can\'t be blocked this turn.',
@@ -2110,7 +2168,8 @@ var CARDS = [
     
         'name': 'Boop',
         'image': 'Boop.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'U',
         'supertype': 'Instant',
         'text': 'Tap target creature. It can\'t be the target of spells or abilities your opponents control until your next upkeep.',
@@ -2122,7 +2181,8 @@ var CARDS = [
     
         'name': 'Canterlot Archiveologist',
         'image': 'Canterlot Archiveologist.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2U',
         'supertype': 'Creature',
         'subtype': 'Unicorn Advisor',
@@ -2136,7 +2196,8 @@ var CARDS = [
     
         'name': 'Confiscate Memory',
         'image': 'Confiscate Memory.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2U',
         'supertype': 'Sorcery',
         'text': 'Target player puts the top 10 cards of his or her library into the graveyard.\n\nQuest Level 5 — If you have at least five Quest counters, that player also puts cards equal to the number of Islands you control from the top of his or her library into the graveyard.',
@@ -2148,7 +2209,8 @@ var CARDS = [
     
         'name': 'Cryothaumic Construct',
         'image': 'Cryothaumic Construct.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'U',
         'supertype': 'Enchantment Creature',
         'subtype': 'Illusion',
@@ -2162,7 +2224,8 @@ var CARDS = [
     
         'name': 'Darkspire Shadowcaster',
         'image': 'Darkspire Shadowcaster.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1U',
         'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
@@ -2176,7 +2239,8 @@ var CARDS = [
     
         'name': 'Exhaustion',
         'image': 'Exhaustion.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1U',
         'supertype': 'Instant',
         'text': 'Tap target creature you don\'t control. It doesn\'t untap during its controller\'s next untap step.\n\nIf you tap a creature this way, you may pay 2U. If you do, tap each other creature you don\'t control. They don\'t untap during their controller\'s next untap step.',
@@ -2187,7 +2251,8 @@ var CARDS = [
     
         'name': 'Eye Spy',
         'image': 'Eye Spy.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1UU',
         'supertype': 'Instant',
         'text': 'Target player reveals the top four unrevealed cards of their library. If you own those cards, you may put each card revealed from your library on top of your library in any order. They remain revealed.\n\nDraw a card.',
@@ -2199,7 +2264,8 @@ var CARDS = [
     
         'name': 'Fancy Mathematics',
         'image': 'Fancy Mathematics.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2UU',
         'supertype': 'Instant',
         'text': 'Counter target spell unless that spell\'s controller chooses to return both it and Fancy Mathematics to their owners\' hands.\n\nWhen Fancy Mathematics resolves, return the mana spent to cast it to your mana pool.',
@@ -2211,7 +2277,8 @@ var CARDS = [
     
         'name': 'Librarian of the Infinite',
         'image': 'Librarian of the Infinite.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1U',
         'supertype': 'Creature',
         'subtype': 'Unicorn Advisor',
@@ -2225,7 +2292,8 @@ var CARDS = [
     
         'name': 'Lol, Nop',
         'image': 'Lol Nop.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1UU',
         'supertype': 'Instant',
         'text': 'Counter target spell.\n\nIf Lol, Nop targets a spell that would counter another spell, Lol, Nop can\'t be countered.',
@@ -2237,7 +2305,8 @@ var CARDS = [
     
         'name': 'Master Arcanomancer',
         'image': 'Master Arcanomancer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3UU',
         'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
@@ -2250,7 +2319,8 @@ var CARDS = [
     
         'name': 'Memory Switch',
         'image': 'Memory Switch.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1U',
         'supertype': 'Instant',
         'text': 'Counter target spell.\n\nThat spell\'s controller draws a card.',
@@ -2262,7 +2332,8 @@ var CARDS = [
     
         'name': 'Metria, Balance of Eternity',
         'image': 'Metria Balance of Eternity.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1UU',
         'supertype': 'Legendary Artifact Enchantment',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of each upkeep, choose target creature. When it deals damage to a player this turn, you may draw a card.\n\n1UU, T: Tap up to three target creatures.',
@@ -2274,7 +2345,8 @@ var CARDS = [
     
         'name': 'Midnight Studies',
         'image': 'Midnight Studies.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2U',
         'supertype': 'Sorcery',
         'text': 'Choose one:\n\n• Draw two cards.\n\n• Tap an untapped Unicorn creature you control. If you do, draw three cards.',
@@ -2286,7 +2358,8 @@ var CARDS = [
     
         'name': 'Nimbus of Knowledge',
         'image': 'Nimbus of Knowledge.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3U',
         'supertype': 'Enchantment Creature',
         'subtype': 'Illusion',
@@ -2299,7 +2372,8 @@ var CARDS = [
     
         'name': 'Overthink',
         'image': 'Overthink.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2UU',
         'supertype': 'Sorcery',
         'text': 'Target player reveals the top 13 cards of his or her library. That player puts one card revealed this way on top of his or her library, and puts the rest into the graveyard.',
@@ -2311,7 +2385,8 @@ var CARDS = [
     
         'name': 'Peer Into the Future',
         'image': 'Peer Into the Future.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3U',
         'supertype': 'Sorcery',
         'text': 'Look at the top seven cards of your library. Put them back in any order, then draw a card.\n\nYou get a Quest counter.',
@@ -2323,7 +2398,8 @@ var CARDS = [
     
         'name': 'Quest for Titan\'s First Law',
         'image': 'Quest for Titans First Law.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3U',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -2335,7 +2411,8 @@ var CARDS = [
     
         'name': 'Rain Elemental',
         'image': 'Rain Elemental.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'U',
         'supertype': 'Enchantment Creature',
         'subtype': 'Elemental',
@@ -2349,7 +2426,8 @@ var CARDS = [
     
         'name': 'Return to Sender',
         'image': 'Return to Sender.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1U',
         'supertype': 'Instant',
         'text': 'Return target nonland permanent to its owner\'s hand.',
@@ -2361,7 +2439,8 @@ var CARDS = [
     
         'name': 'Royal Archive Expedition',
         'image': 'Royal Archive Expedition.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2U',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -2374,7 +2453,8 @@ var CARDS = [
     
         'name': 'Search for Wisdom',
         'image': 'Search for Wisdom.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1UU',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -2386,7 +2466,8 @@ var CARDS = [
     
         'name': 'Seeker of Secrets',
         'image': 'Seeker of Secrets.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2U',
         'supertype': 'Creature',
         'subtype': 'Unicorn',
@@ -2400,7 +2481,8 @@ var CARDS = [
     
         'name': 'South Sea Dragon',
         'image': 'South Sea Dragon.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3UUU',
         'supertype': 'Creature',
         'subtype': 'Dragon',
@@ -2414,7 +2496,8 @@ var CARDS = [
     
         'name': 'Stargazing',
         'image': 'Stargazing.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1UU',
         'supertype': 'Sorcery',
         'text': 'Look at the top thirteen cards of your library. You may exile any number of them, then put the rest back in order.',
@@ -2426,7 +2509,8 @@ var CARDS = [
     
         'name': 'Telekinetic Shove',
         'image': 'Telekinetic Shove.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1U',
         'supertype': 'Instant',
         'text': 'You get a Quest counter, then choose one:\n\n• Return target creature to its owner\'s hand.\n\n• Tap an untapped Unicorn creature you control. If you do, put target creature on top of its owner\'s library.',
@@ -2437,7 +2521,8 @@ var CARDS = [
     
         'name': 'Telekinetomancer',
         'image': 'Telekinetomancer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2UU',
         'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
@@ -2451,7 +2536,8 @@ var CARDS = [
     
         'name': 'Temporal Loophole',
         'image': 'Temporal Loophole.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3UUU',
         'supertype': 'Enchantment',
         'text': 'Flash, Arcane Shield 3 (Opponents must pay 3 to target this card.)\n\nYou cast spells as though they had Flash.\n\nYou may skip your turn. Whenever you do, untap each permanent you control. Until your next turn, whenever an opponent draws a card, you may Scry 1 and draw a card.',
@@ -2463,7 +2549,8 @@ var CARDS = [
     
         'name': 'Titan, Scion of Order',
         'image': 'Titan Scion of Order.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3UU',
         'supertype': 'Legendary Creature',
         'subtype': 'Alicorn God',
@@ -2476,7 +2563,8 @@ var CARDS = [
     
         'name': 'Titan\'s Authority',
         'image': 'Titans Authority.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'UU',
         'supertype': 'Sorcery',
         'text': 'Arcane Shield 1 (Opponents must pay 1 to target this card.)\n\nChoose target player. Until end of turn, whenever that player casts a spell or activates an ability, counter it.',
@@ -2488,7 +2576,8 @@ var CARDS = [
     
         'name': 'Titan\'s Isomancer',
         'image': 'Titans Isomancer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2U',
         'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
@@ -2502,7 +2591,8 @@ var CARDS = [
     
         'name': 'Tome Thief',
         'image': 'Tome Thief.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'UU',
         'supertype': 'Creature',
         'subtype': 'Unicorn',
@@ -2516,7 +2606,8 @@ var CARDS = [
     
         'name': 'Twilight Sparkle, the Studious',
         'image': 'Twilight Sparkle the Studious.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2U',
         'supertype': 'Legendary Creature',
         'subtype': 'Unicorn',
@@ -2529,7 +2620,8 @@ var CARDS = [
     
         'name': 'Unicorn Adventurer',
         'image': 'Unicorn Adventurer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2UU',
         'supertype': 'Creature',
         'subtype': 'Unicorn',
@@ -2543,7 +2635,8 @@ var CARDS = [
     
         'name': 'Unicorn Aeromancer',
         'image': 'Unicorn Aeromancer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3U',
         'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
@@ -2557,7 +2650,8 @@ var CARDS = [
     
         'name': 'Unicorn Shieldwright',
         'image': 'Unicorn Shieldwright.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2UU',
         'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
@@ -2570,7 +2664,8 @@ var CARDS = [
     
         'name': 'Spell Wright',
         'image': 'Spell Wright.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1U',
         'supertype': 'Creature',
         'subtype': 'Unicorn Wizard',
@@ -2584,7 +2679,8 @@ var CARDS = [
     
         'name': 'Ye Olde Switcheroony',
         'image': 'Ye Olde Switcheroony.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2U',
         'supertype': 'Sorcery',
         'text': 'Choose two target permanents with equal converted mana costs. Their controllers switch control of those permanents.',
@@ -2596,7 +2692,8 @@ var CARDS = [
     
         'name': 'Audioflood',
         'image': 'Audioflood.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3B',
         'supertype': 'Sorcery',
         'text': 'Each player discards a card. You gain life equal to the total converted mana cost of all cards discarded this way.\n\nYou get a Quest counter.',
@@ -2607,7 +2704,8 @@ var CARDS = [
     
         'name': 'Barter With Oceanus',
         'image': 'Barter With Oceanus.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2B',
         'supertype': 'Sorcery',
         'text': 'Sacrifice a nontoken creature, then return a creature with an equal or lower converted mana cost from the graveyard to the battlefield.',
@@ -2619,7 +2717,8 @@ var CARDS = [
     
         'name': 'Batpony Adventurer',
         'image': 'Batpony Adventurer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2BB',
         'supertype': 'Creature',
         'subtype': 'Batpony',
@@ -2633,7 +2732,8 @@ var CARDS = [
     
         'name': 'Batpony Blackguard',
         'image': 'Batpony Blackguard.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'BB',
         'supertype': 'Creature',
         'subtype': 'Batpony Rogue',
@@ -2647,7 +2747,8 @@ var CARDS = [
     
         'name': 'Bite Mark',
         'image': 'Bite Mark.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'B',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -2660,7 +2761,8 @@ var CARDS = [
     
         'name': 'Blind Terror',
         'image': 'Blind Terror.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'XB',
         'supertype': 'Sorcery',
         'text': 'Tap X target Batpony creatures you control. For each creature tapped this way, each opponent loses 1 life and you gain life equal to the life lost this way.',
@@ -2672,7 +2774,8 @@ var CARDS = [
     
         'name': 'Broad Daylight',
         'image': 'Broad Daylight.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1B',
         'supertype': 'Instant',
         'text': 'Destroy target nonblack creature. You lose 1 life.',
@@ -2684,7 +2787,8 @@ var CARDS = [
     
         'name': 'Contagion',
         'image': 'Contagion.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1BB',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -2697,7 +2801,8 @@ var CARDS = [
     
         'name': 'Corner of the Eye',
         'image': 'Corner of the Eye.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1BB',
         'supertype': 'Instant',
         'text': 'Target opponent sacrifices a creature.',
@@ -2709,7 +2814,8 @@ var CARDS = [
     
         'name': 'Curse of the Batpony',
         'image': 'Curse of the Batpony.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3BBB',
         'supertype': 'Enchantment',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nCreatures you control lose all abilities and become 1/1 black Batpony creatures with Flying and Deathtouch.\n\nWhenever a creature dies from damage dealt by a creature you control, return it from the graveyard to the battlefield under your control.',
@@ -2720,7 +2826,8 @@ var CARDS = [
     
         'name': 'Dark Will',
         'image': 'Dark Will.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4B',
         'supertype': 'Enchantment',
         'text': 'Whenever a creature attacks you or a planeswalker you control, it gets -2/-1 until end of turn and its controller loses 1 life.',
@@ -2732,7 +2839,8 @@ var CARDS = [
     
         'name': 'Deresonation',
         'image': 'Deresonation.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1BB',
         'supertype': 'Instant',
         'text': 'Destroy target non-Batpony nonland permanent. If it\'s a creature, it can\'t be regenerated.',
@@ -2744,7 +2852,8 @@ var CARDS = [
     
         'name': 'Driven by Ambition',
         'image': 'Driven by Ambition.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1BB',
         'supertype': 'Sorcery',
         'text': 'Discard a card, then search your library for a card and put that card into your hand, then shuffle your library.',
@@ -2756,7 +2865,8 @@ var CARDS = [
     
         'name': 'Fatal Conversion',
         'image': 'Fatal Conversion.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2BB',
         'supertype': 'Instant',
         'text': 'Destroy target creature, then put a 2/2 black Nightmare creature token onto the battlefield under your control.',
@@ -2768,7 +2878,8 @@ var CARDS = [
     
         'name': 'Forgotten Cave Expedition',
         'image': 'Forgotten Cave Expedition.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3B',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -2780,7 +2891,8 @@ var CARDS = [
     
         'name': 'Harmonic Resonance',
         'image': 'Harmonic Resonance.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2BBB',
         'supertype': 'Enchantment',
         'text': 'Whenever another source causes a player to lose life without dealing damage, you may have another target player lose that much life.',
@@ -2792,7 +2904,8 @@ var CARDS = [
     
         'name': 'Invoke the Darrow',
         'image': 'Invoke the Darrow.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2BB',
         'supertype': 'Sorcery',
         'text': 'Invoke the Darrow deals damage equal to the number of Swamps you control to target creature or player.\n\nQuest Level 5 — If you have at least five Quest counters, if a creature dealt damage this way would die this turn, exile it instead.',
@@ -2804,7 +2917,8 @@ var CARDS = [
     
         'name': 'Luna, the Dream Warden',
         'image': 'Luna the Dream Warden.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2BB',
         'supertype': 'Planeswalker',
         'subtype': 'Luna',
@@ -2817,7 +2931,8 @@ var CARDS = [
     
         'name': 'Nocturnal Fragment',
         'image': 'Nocturnal Fragment.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2B',
         'supertype': 'Enchantment Creature',
         'subtype': 'Nightmare',
@@ -2831,7 +2946,8 @@ var CARDS = [
     
         'name': 'Oceanus\' Dreamtwister',
         'image': 'Oceanus Dreamtwister.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2B',
         'supertype': 'Creature',
         'subtype': 'Batpony Cleric',
@@ -2845,7 +2961,8 @@ var CARDS = [
     
         'name': 'Oceanus, Fell Guardian',
         'image': 'Oceanus Fell Guardian.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3BB',
         'supertype': 'Legendary Creature',
         'subtype': 'Alicorn God',
@@ -2858,7 +2975,8 @@ var CARDS = [
     
         'name': 'Oceanus\' Humor',
         'image': 'Oceanus Humor.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3B',
         'supertype': 'Sorcery',
         'text': 'You may pay 6 life instead of Oceanus\' Humor\'s casting cost.\n\nTarget opponent loses 3 life and you gain 3 life.',
@@ -2870,7 +2988,8 @@ var CARDS = [
     
         'name': 'Paralunar Ritual',
         'image': 'Paralunar Ritual.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'B',
         'supertype': 'Sorcery',
         'text': 'Sacrifice a Swamp. If you do, add BBB to your mana pool.\n\nWhen you cast Paralunar Ritual, you may pay BB. If you do, copy it for each Swamp you control. Each copy targets a different swamp. Your life total becomes 3.',
@@ -2882,7 +3001,8 @@ var CARDS = [
     
         'name': 'Quest for Oceanus\' Last Joke',
         'image': 'Quest for Oceanus Last Joke.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3B',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -2894,7 +3014,8 @@ var CARDS = [
     
         'name': 'Red-Eyed Batpony',
         'image': 'Red-Eyed Batpony.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'B',
         'supertype': 'Creature',
         'subtype': 'Batpony Rogue',
@@ -2908,7 +3029,8 @@ var CARDS = [
     
         'name': 'Shade Elemental',
         'image': 'Shade Elemental.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'B',
         'supertype': 'Enchantment Creature',
         'subtype': 'Elemental',
@@ -2922,7 +3044,8 @@ var CARDS = [
     
         'name': 'Shadowborn Batpony',
         'image': 'Shadowborn Batpony.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'B',
         'supertype': 'Creature',
         'subtype': 'Batpony',
@@ -2936,7 +3059,8 @@ var CARDS = [
     
         'name': 'Shadowform Raider',
         'image': 'Shadowform Raider.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1BB',
         'supertype': 'Creature',
         'subtype': 'Batpony Rogue',
@@ -2950,7 +3074,8 @@ var CARDS = [
     
         'name': 'Sonic Blast',
         'image': 'Sonic Blast.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2B',
         'supertype': 'Instant',
         'text': 'You get a Quest counter, then choose one:\n\n• Target player discards 2 cards.\n\n• Tap an untapped Batpony creature you control. If you do, target player discards 3 cards.',
@@ -2961,7 +3086,8 @@ var CARDS = [
     
         'name': 'Spectral Caveguard',
         'image': 'Spectral Caveguard.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2BB',
         'supertype': 'Creature',
         'subtype': 'Batpony Soldier',
@@ -2975,7 +3101,8 @@ var CARDS = [
     
         'name': 'Spectre of Living Shadow',
         'image': 'Spectre of Living Shadow.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'BBB',
         'supertype': 'Creature',
         'subtype': 'Batpony',
@@ -2989,7 +3116,8 @@ var CARDS = [
     
         'name': 'To Steal From Eternity',
         'image': 'To Steal From Eternity.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3BB',
         'supertype': 'Legendary Enchantment',
         'subtype': 'Quest',
@@ -3001,7 +3129,8 @@ var CARDS = [
     
         'name': 'Veil of Shadows',
         'image': 'Veil of Shadows.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'B',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -3013,7 +3142,8 @@ var CARDS = [
     
         'name': 'Wail of the Darrow',
         'image': 'Wail of the Darrow.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'BB',
         'supertype': 'Sorcery',
         'text': 'Target player discards a card at random.\n\nIf an artifact, creature, or enchantment is discarded this way, you gain 3 life. If an instant or sorcery is discarded this way, its owner loses 3 life. If a land is discarded this way, that player discards an additional card.',
@@ -3024,7 +3154,8 @@ var CARDS = [
     
         'name': 'Weaponized Echolocation',
         'image': 'Weaponized Echolocation.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'B',
         'supertype': 'Instant',
         'text': 'Target creature gets -2/-1 until end of turn.\n\nWhen that creature dies this turn, each other non-Batpony creature gets -2/-1 until end of turn.',
@@ -3035,7 +3166,8 @@ var CARDS = [
     
         'name': 'Alchemical Flask',
         'image': 'Alchemical Flask.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Artifact',
         'subtype': 'Equipment',
@@ -3047,7 +3179,8 @@ var CARDS = [
     
         'name': 'Ash Mountain Hellkite',
         'image': 'Ash Mountain Hellkite.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '5RR',
         'supertype': 'Creature',
         'subtype': 'Dragon',
@@ -3061,7 +3194,8 @@ var CARDS = [
     
         'name': 'Awaken the Tribe',
         'image': 'Awaken the Tribe.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Instant',
         'text': 'Creatures you control get +2/+0 and have Haste until end of turn.',
@@ -3073,7 +3207,8 @@ var CARDS = [
     
         'name': 'Azo, the Fleet-of-Hoof',
         'image': 'Azo the Fleet-of-Hoof.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1RR',
         'supertype': 'Legendary Creature',
         'subtype': 'Zebra Warrior',
@@ -3086,7 +3221,8 @@ var CARDS = [
     
         'name': 'Balefire Seeker',
         'image': 'Balefire Seeker.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3R',
         'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
@@ -3100,7 +3236,8 @@ var CARDS = [
     
         'name': 'Balefire Totem',
         'image': 'Balefire Totem.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1RRR',
         'supertype': 'Artifact',
         'text': 'At the beginning of each upkeep, put a Charge counter on target creature you control.\n\nCreatures you control with three or more Charge counters have "1R: Until end of turn, this creature gets +1/+0 for each Charge counter on it. At end of turn, it deals that much damage to itself."',
@@ -3111,7 +3248,8 @@ var CARDS = [
     
         'name': 'Bladeflight Totem',
         'image': 'Bladeflight Totem.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1RR',
         'supertype': 'Artifact',
         'text': 'At the beginning of each upkeep, you may put a Charge counter on target creature you control.\n\nCreatures you control with three or more Charge counters can only be blocked by creatures with First Strike, Flying, Intimidate, or Reach.',
@@ -3122,7 +3260,8 @@ var CARDS = [
     
         'name': 'Blasting Potion',
         'image': 'Blasting Potion.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'RR',
         'supertype': 'Instant',
         'text': 'Choose one:\n\n• Blasting Potion deals 4 damage to target creature.\n\n• Blasting Potion deals 3 damage to target opponent.',
@@ -3134,7 +3273,8 @@ var CARDS = [
     
         'name': 'Blaze Elemental',
         'image': 'Blaze Elemental.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Enchantment Creature',
         'subtype': 'Elemental',
@@ -3148,7 +3288,8 @@ var CARDS = [
     
         'name': 'Blessing of the Zvaha',
         'image': 'Blessing of the Zvaha.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3R',
         'supertype': 'Sorcery',
         'text': 'Distribute Charge counters equal to the number of Mountains you control among creatures you control.\n\nQuest Level 5 — If you have five or more Quest counters, until end of turn, creatures you control that have Charge counters on them have Menace.',
@@ -3160,7 +3301,8 @@ var CARDS = [
     
         'name': 'Bloodfury Totem',
         'image': 'Bloodfury Totem.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Artifact',
         'text': 'At the beginning of each upkeep, you may put a Charge counter on target creature you control.\n\nCreatures you control with three or more Charge counters have First Strike and Arcane Shield 1. (Opponents must pay 1 to target them.)',
@@ -3171,7 +3313,8 @@ var CARDS = [
     
         'name': 'Bondfire Animus',
         'image': 'Bondfire Animus.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4R',
         'supertype': 'Artifact Creature',
         'subtype': 'Spirit Construct',
@@ -3185,7 +3328,8 @@ var CARDS = [
     
         'name': 'Breath of the Dragons',
         'image': 'Breath of the Dragons.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'RRR',
         'supertype': 'Sorcery',
         'text': 'Arcane Shield 1 (Opponents must pay 1 to target this card.)\n\nYou may have Breath of the Dragons deal up to 3 damage to you. For each 1 damage dealt this way, it deals 3 damage to target creature or player.',
@@ -3197,7 +3341,8 @@ var CARDS = [
     
         'name': 'Cinder Ruins Expedition',
         'image': 'Cinder Ruins Expedition.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -3210,7 +3355,8 @@ var CARDS = [
     
         'name': 'Counterattack',
         'image': 'Counterattack.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'RR',
         'supertype': 'Instant',
         'text': 'Target creature you control gets +X/+0 until your next end step, where X is the amount of damage dealt to you this turn.',
@@ -3222,7 +3368,8 @@ var CARDS = [
     
         'name': 'Covert Delivery',
         'image': 'Covert Delivery.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Sorcery',
         'text': 'You get a Quest counter, then choose one:\n\n• Covert Delivery deals 3 damage to target creature or player.\n\n• Tap an untapped Zebra creature you control. If you do, Covert Delivery deals 5 damage to target creature or player.',
@@ -3233,7 +3380,8 @@ var CARDS = [
     
         'name': 'Fireblood Zealot',
         'image': 'Fireblood Zealot.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'R',
         'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
@@ -3246,7 +3394,8 @@ var CARDS = [
     
         'name': 'Fleethoof Interceptor',
         'image': 'Fleethoof Interceptor.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
@@ -3260,7 +3409,8 @@ var CARDS = [
     
         'name': 'Fleethoof Prodigy',
         'image': 'Fleethoof Prodigy.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2R',
         'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
@@ -3273,7 +3423,8 @@ var CARDS = [
     
         'name': 'Fleethoof Sensei',
         'image': 'Fleethoof Sensei.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2R',
         'supertype': 'Creature',
         'subtype': 'Zebra Sage',
@@ -3287,7 +3438,8 @@ var CARDS = [
     
         'name': 'Keris\' Inspiration',
         'image': 'Keris Inspiration.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1RR',
         'supertype': 'Instant',
         'text': 'Until end of turn, red instants and sorceries you cast cost R less to cast.\n\nUntil end of turn, whenever a red instant or sorcery spell enters your graveyard, draw a card.',
@@ -3299,7 +3451,8 @@ var CARDS = [
     
         'name': 'Keris, Mother of Invention',
         'image': 'Keris Mother of Invention.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3RR',
         'supertype': 'Legendary Creature',
         'subtype': 'Alicorn God',
@@ -3313,7 +3466,8 @@ var CARDS = [
     
         'name': 'Kylara Scout',
         'image': 'Kylara Scout.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'R',
         'supertype': 'Creature',
         'subtype': 'Zebra',
@@ -3327,7 +3481,8 @@ var CARDS = [
     
         'name': 'Kylara Thoughtkeeper',
         'image': 'Kylara Thoughtkeeper.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2R',
         'supertype': 'Creature',
         'subtype': 'Zebra Shaman',
@@ -3341,7 +3496,8 @@ var CARDS = [
     
         'name': 'Lemonades',
         'image': 'Lemonades.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2R',
         'supertype': 'Artifact',
         'text': 'X, T, Sacrifice Lemonades: Choose target player. For each 1 mana paid this way, Lemonades deals 2 damage to a random creature that player controls.',
@@ -3353,7 +3509,8 @@ var CARDS = [
     
         'name': 'Look, a Distraction!',
         'image': 'Look a Distraction!.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'XRR',
         'supertype': 'Sorcery',
         'text': 'Up to X target creatures can\'t block this turn.',
@@ -3365,7 +3522,8 @@ var CARDS = [
     
         'name': 'Masterwork Brew',
         'image': 'Masterwork Brew.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'XR',
         'supertype': 'Sorcery',
         'text': 'Tap X target untapped Zebra creatures you control, then put that many Charge counters on target creature you control. Until end of turn, it gets +1/+1 for each Charge counter on it.',
@@ -3377,7 +3535,8 @@ var CARDS = [
     
         'name': 'Mbolo Potionkeeper',
         'image': 'Mbolo Potionkeeper.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2RR',
         'supertype': 'Creature',
         'subtype': 'Zebra Shaman',
@@ -3390,7 +3549,8 @@ var CARDS = [
     
         'name': 'Rage Drinker',
         'image': 'Rage Drinker.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'RR',
         'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
@@ -3403,7 +3563,8 @@ var CARDS = [
     
         'name': 'Mbolo Warrior',
         'image': 'Mbolo Warrior.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1RR',
         'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
@@ -3416,7 +3577,8 @@ var CARDS = [
     
         'name': 'Moshaka Doll',
         'image': 'Moshaka Doll.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'R',
         'supertype': 'Artifact Enchantment',
         'text': 'Countercharge (Whenever damage is dealt to you, put a Charge counter on this permanent.)\n\nT: Remove any number of Charge counters from Moshaka Doll. It deals that much damage to target opponent or target creature you don\'t control.',
@@ -3427,7 +3589,8 @@ var CARDS = [
     
         'name': 'Potion of Pyrogenesis',
         'image': 'Potion of Pyrogenesis.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Artifact',
         'text': 'When Potion of Pyrogenesis enters the battlefield, put a Charge counter on target land.\n\nWhenever a land with a Charge counter on it is tapped for mana, it deals 2 damage to its controller and it adds RR to its controller\'s mana pool.',
@@ -3438,7 +3601,8 @@ var CARDS = [
     
         'name': 'Potion of Strength',
         'image': 'Potion of Strength.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1RR',
         'supertype': 'Instant',
         'text': 'Put three Charge counters on target creature you control.\n\nUntil end of turn, that creature gets +1/+1 for each Charge counter on it.',
@@ -3450,7 +3614,8 @@ var CARDS = [
     
         'name': 'Pyroburst',
         'image': 'Pyroburst.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'R',
         'supertype': 'Instant',
         'text': 'Choose one:\n\n• Pyroburst deals 3 damage to target creature.\n\n• Pyroburst deals 2 damage to target player.',
@@ -3462,7 +3627,8 @@ var CARDS = [
     
         'name': 'Quest for Keris\' Balefire',
         'image': 'Quest for Keris Balefire.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3R',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -3474,7 +3640,8 @@ var CARDS = [
     
         'name': 'Search for Focus',
         'image': 'Search for Focus.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1RR',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -3486,7 +3653,8 @@ var CARDS = [
     
         'name': 'Partial Success Failure',
         'image': 'Partial Success Failure.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Instant',
         'text': 'Partial Success Failure deals 1 damage to you.\n\nPartial Success Failure deals 1 damage to each creature target player controls.',
@@ -3498,7 +3666,8 @@ var CARDS = [
     
         'name': 'Smash Into Kindling',
         'image': 'Smash Into Kindling.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3RR',
         'supertype': 'Sorcery',
         'text': 'Destroy target land, then add RRR to your mana pool.',
@@ -3510,7 +3679,8 @@ var CARDS = [
     
         'name': 'Vaelek, Hammer of Genius',
         'image': 'Vaelek Hammer of Genius.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1RR',
         'supertype': 'Legendary Artifact Enchantment',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of each upkeep, target creature gains Menace until end of turn.\n\n1RR, T: Destroy target basic land. Its controller puts a 4/4 colorless Golem artifact creature token with Haste onto the battlefield.',
@@ -3521,7 +3691,8 @@ var CARDS = [
     
         'name': 'Vial of Balefire',
         'image': 'Vial of Balefire.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'RR',
         'supertype': 'Artifact',
         'text': 'Vial of Balefire can\'t be countered and damage dealt by it can\'t be prevented.\n\nT, Sacrifice Vial of Balefire: It deals 3 damage to target creature, 2 damage to that creature\'s controller, and 1 damage to you. Creatures dealt damage this way can\'t be regenerated this turn.',
@@ -3532,7 +3703,8 @@ var CARDS = [
     
         'name': 'Warden of Keris',
         'image': 'Warden of Keris.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2R',
         'supertype': 'Creature',
         'subtype': 'Zebra Shaman',
@@ -3546,7 +3718,8 @@ var CARDS = [
     
         'name': 'Xanthe, the Wanderer',
         'image': 'Xanthe the Wanderer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2R',
         'supertype': 'Legendary Creature',
         'subtype': 'Zebra',
@@ -3559,7 +3732,8 @@ var CARDS = [
     
         'name': 'Zebra Adventurer',
         'image': 'Zebra Adventurer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2RR',
         'supertype': 'Creature',
         'subtype': 'Zebra',
@@ -3573,7 +3747,8 @@ var CARDS = [
     
         'name': 'Zebra Firekeeper',
         'image': 'Zebra Firekeeper.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'R',
         'supertype': 'Creature',
         'subtype': 'Zebra Shaman',
@@ -3587,7 +3762,8 @@ var CARDS = [
     
         'name': 'Zebra War Paint',
         'image': 'Zebra War Paint.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -3600,7 +3776,8 @@ var CARDS = [
     
         'name': 'Zvaha Infiltrator',
         'image': 'Zvaha Infiltrator.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1R',
         'supertype': 'Creature',
         'subtype': 'Zebra Warrior',
@@ -3613,7 +3790,8 @@ var CARDS = [
     
         'name': 'Applebuck',
         'image': 'Applebuck.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1GG',
         'supertype': 'Instant',
         'text': 'Target untapped creature you control gets +4/+4 until end of turn. You may have it fight target creature you don\'t control. If you do, tap it.',
@@ -3625,7 +3803,8 @@ var CARDS = [
     
         'name': 'Applejack, the Diligent',
         'image': 'Applejack the Diligent.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2G',
         'supertype': 'Legendary Creature',
         'subtype': 'Earthpony',
@@ -3638,7 +3817,8 @@ var CARDS = [
     
         'name': 'Arbore, Staff of Seasons',
         'image': 'Arbore Staff of Seasons.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1GG',
         'supertype': 'Legendary Artifact Enchantment',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of each upkeep, put two +1/+1 counters on target creature. Untap it.\n\n1GG, T: Add G to your mana pool equal to the number of +1/+1 counters on creatures you control.',
@@ -3649,7 +3829,8 @@ var CARDS = [
     
         'name': 'Ashwood Ancient',
         'image': 'Ashwood Ancient.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2G',
         'supertype': 'Creature',
         'subtype': 'Treefolk',
@@ -3663,7 +3844,8 @@ var CARDS = [
     
         'name': 'Druid of the Verge',
         'image': 'Druid of the Verge.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1G',
         'supertype': 'Creature',
         'subtype': 'Earthpony Druid',
@@ -3677,7 +3859,8 @@ var CARDS = [
     
         'name': 'Earthen Ramparts',
         'image': 'Earthen Ramparts.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'GG',
         'supertype': 'Enchantment',
         'text': 'GG, T: Until end of turn, creatures you control have Defender and get +0/+1 for each Forest you control.',
@@ -3689,7 +3872,8 @@ var CARDS = [
     
         'name': 'Earthknight Errant',
         'image': 'Earthknight Errant.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3GG',
         'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
@@ -3703,7 +3887,8 @@ var CARDS = [
     
         'name': 'Earthmage Sniper',
         'image': 'Earthmage Sniper.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2GG',
         'supertype': 'Creature',
         'subtype': 'Earthpony Artificer',
@@ -3716,7 +3901,8 @@ var CARDS = [
     
         'name': 'Earthpony Adventurer',
         'image': 'Earthpony Adventurer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2GG',
         'supertype': 'Creature',
         'subtype': 'Earthpony',
@@ -3730,7 +3916,8 @@ var CARDS = [
     
         'name': 'Carrot Farmer',
         'image': 'Carrot Farmer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'G',
         'supertype': 'Creature',
         'subtype': 'Earthpony',
@@ -3744,7 +3931,8 @@ var CARDS = [
     
         'name': 'Field Worker',
         'image': 'Field Worker.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4G',
         'supertype': 'Creature',
         'subtype': 'Earthpony',
@@ -3758,7 +3946,8 @@ var CARDS = [
     
         'name': 'Earthshift',
         'image': 'Earthshift.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'G',
         'supertype': 'Instant',
         'text': 'Prevent all combat damage that would be dealt this turn.\n\nDraw a card.',
@@ -3770,7 +3959,8 @@ var CARDS = [
     
         'name': 'Everfree Forest Expedition',
         'image': 'Everfree Forest Expedition.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'G',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -3783,7 +3973,8 @@ var CARDS = [
     
         'name': 'Everfree Hydra',
         'image': 'Everfree Hydra.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3GGG',
         'supertype': 'Creature',
         'subtype': 'Hydra',
@@ -3796,7 +3987,8 @@ var CARDS = [
     
         'name': 'Everfree Timberwolf',
         'image': 'Everfree Timberwolf.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2GG',
         'supertype': 'Creature',
         'subtype': 'Wolf Elemental',
@@ -3809,7 +4001,8 @@ var CARDS = [
     
         'name': 'Floramancy',
         'image': 'Floramancy.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'G',
         'supertype': 'Enchantment',
         'subtype': 'Aura',
@@ -3822,7 +4015,8 @@ var CARDS = [
     
         'name': 'Geist of the Garden',
         'image': 'Geist of the Garden.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4GG',
         'supertype': 'Creature',
         'subtype': 'Elemental',
@@ -3835,7 +4029,8 @@ var CARDS = [
     
         'name': 'Ground Charger',
         'image': 'Ground Charger.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1GG',
         'supertype': 'Creature',
         'subtype': 'Earthpony',
@@ -3849,7 +4044,8 @@ var CARDS = [
     
         'name': 'Grove Elemental',
         'image': 'Grove Elemental.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2G',
         'supertype': 'Enchantment Creature',
         'subtype': 'Elemental',
@@ -3863,7 +4059,8 @@ var CARDS = [
     
         'name': 'Harmony, Life of the Earth',
         'image': 'Harmony Life of the Earth.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3GG',
         'supertype': 'Legendary Creature',
         'subtype': 'Alicorn God',
@@ -3877,7 +4074,8 @@ var CARDS = [
     
         'name': 'Harmony\'s Devotion',
         'image': 'Harmonys Devotion.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'G',
         'supertype': 'Instant',
         'text': 'Search your library for a basic land card, shuffle your library, and put the chosen land onto the battlefield tapped. It doesn\'t untap during your next untap step.',
@@ -3889,7 +4087,8 @@ var CARDS = [
     
         'name': 'Harmony\'s Earthwatcher',
         'image': 'Harmonys Earthwatcher.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1G',
         'supertype': 'Creature',
         'subtype': 'Earthpony Druid',
@@ -3903,7 +4102,8 @@ var CARDS = [
     
         'name': 'Harmony\'s Floramancer',
         'image': 'Harmonys Floramancer.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2G',
         'supertype': 'Creature',
         'subtype': 'Earthpony Druid',
@@ -3917,7 +4117,8 @@ var CARDS = [
     
         'name': 'Hill Flip',
         'image': 'Hill Flip.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'G',
         'supertype': 'Instant',
         'text': 'As an additional cost to cast Hill Flip, tap target untapped Earthpony creature you control.\n\nPrevent all damage that would be dealt to you and creatures you control this turn.',
@@ -3929,7 +4130,8 @@ var CARDS = [
     
         'name': 'Hoofstomp',
         'image': 'Hoofstomp.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'GG',
         'supertype': 'Instant',
         'text': 'Destroy target artifact or enchantment. You gain life equal to its converted mana cost.',
@@ -3941,7 +4143,8 @@ var CARDS = [
     
         'name': 'Jumpkick',
         'image': 'Jumpkick.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3G',
         'supertype': 'Instant',
         'text': 'When you cast Jumpkick, untap target creature you control.\n\nUntil end of turn, that creature gets +3/+3 and has Reach.',
@@ -3953,7 +4156,8 @@ var CARDS = [
     
         'name': 'Knight of the Wayside',
         'image': 'Knight of the Wayside.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3GG',
         'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
@@ -3967,7 +4171,8 @@ var CARDS = [
     
         'name': 'Lashvines',
         'image': 'Lashvines.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1G',
         'supertype': 'Enchantment',
         'text': 'Green creatures you control get +1/+1 and have Reach.',
@@ -3979,7 +4184,8 @@ var CARDS = [
     
         'name': 'Lasso Trick',
         'image': 'Lasso Trick.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1G',
         'supertype': 'Instant',
         'text': 'Exile target creature with Flying.\n\nGG: Return Lasso Trick from your graveyard to your hand. (Use this ability only as a sorcery.)',
@@ -3991,7 +4197,8 @@ var CARDS = [
     
         'name': 'Lord of the Far Forest',
         'image': 'Lord of the Far Forest.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '5GGG',
         'supertype': 'Creature',
         'subtype': 'Treefolk',
@@ -4004,7 +4211,8 @@ var CARDS = [
     
         'name': 'Nurture the Earth',
         'image': 'Nurture the Earth.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'G',
         'supertype': 'Sorcery',
         'text': 'At end of turn, you gain 1 life for each mana you spent this turn.\n\nQuest Level 5 — If you have at least five Quest counters, you gain 1 life for each Forest you control.',
@@ -4016,7 +4224,8 @@ var CARDS = [
     
         'name': 'Oakenshield Chevalier',
         'image': 'Oakenshield Chevalier.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2G',
         'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
@@ -4030,7 +4239,8 @@ var CARDS = [
     
         'name': 'Oakenshield Paladin',
         'image': 'Oakenshield Paladin.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '5G',
         'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
@@ -4043,7 +4253,8 @@ var CARDS = [
     
         'name': 'Quest for Harmony\'s Heart',
         'image': 'Quest for Harmonys Heart.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3G',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -4055,7 +4266,8 @@ var CARDS = [
     
         'name': 'Raw Zap Apple',
         'image': 'Raw Zap Apple.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1G',
         'supertype': 'Instant',
         'text': 'Target creature gets +3/+3 and has Trample until end of turn.',
@@ -4067,7 +4279,8 @@ var CARDS = [
     
         'name': 'Recall the Relatives',
         'image': 'Recall the Relatives.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '5G',
         'supertype': 'Sorcery',
         'text': 'Put two 3/3 green Earthpony creature tokens with Trample onto the battlefield.\n\nYou get a Quest counter.',
@@ -4079,7 +4292,8 @@ var CARDS = [
     
         'name': 'Search for Strength',
         'image': 'Search for Strength.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1GG',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -4091,7 +4305,8 @@ var CARDS = [
     
         'name': 'Shieldbreaker',
         'image': 'Shieldbreaker.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4G',
         'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
@@ -4104,7 +4319,8 @@ var CARDS = [
     
         'name': 'Sowing Season',
         'image': 'Sowing Season.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2G',
         'supertype': 'Sorcery',
         'text': 'You get a Quest counter, then choose one:\n\n• Put a basic land token with "T: Add 1 to your mana pool" onto the battlefield.\n\n• Tap an untapped Earthpony creature you control. If you do, put two colorless basic land tokens with "T: Add 1 to your mana pool" onto the battlefield.',
@@ -4115,7 +4331,8 @@ var CARDS = [
     
         'name': 'Steadholdt Botanist',
         'image': 'Steadholdt Botanist.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'GG',
         'supertype': 'Creature',
         'subtype': 'Earthpony Druid',
@@ -4129,7 +4346,8 @@ var CARDS = [
     
         'name': 'Steadholdt Earthmagus',
         'image': 'Steadholdt Earthmagus.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2G',
         'supertype': 'Creature',
         'subtype': 'Earthpony',
@@ -4142,7 +4360,8 @@ var CARDS = [
     
         'name': 'Steadholdt Settler',
         'image': 'Steadholdt Settler.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2GG',
         'supertype': 'Creature',
         'subtype': 'Earthpony',
@@ -4156,7 +4375,8 @@ var CARDS = [
     
         'name': 'Steadholdt Sharpshooter',
         'image': 'Steadholdt Sharpshooter.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3G',
         'supertype': 'Creature',
         'subtype': 'Earthpony',
@@ -4169,7 +4389,8 @@ var CARDS = [
     
         'name': 'Surge of Vitality',
         'image': 'Surge of Vitality.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'XG',
         'supertype': 'Instant',
         'text': 'Tap X target Earthpony creatures you control. Add GG to your mana pool equal to the number of creatures tapped this way.',
@@ -4181,7 +4402,8 @@ var CARDS = [
     
         'name': 'Terra Arbora Animus',
         'image': 'Terra Arbora Animus.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1GG',
         'supertype': 'Sorcery',
         'text': 'Arcane Shield 1 (Opponents must pay 1 to target this card.)\n\nTerra Arbora Animus deals X damage to each creature with Flying, where X is the number of lands paired with creatures you control.',
@@ -4192,7 +4414,8 @@ var CARDS = [
     
         'name': 'Ursa Minor',
         'image': 'Ursa Minor.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '6G',
         'supertype': 'Creature',
         'subtype': 'Bear Elemental',
@@ -4206,7 +4429,8 @@ var CARDS = [
     
         'name': 'Amplifying Tome',
         'image': 'Amplifying Tome.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '5',
         'supertype': 'Artifact',
         'subtype': 'Book',
@@ -4219,7 +4443,8 @@ var CARDS = [
     
         'name': 'Ancient Volume',
         'image': 'Ancient Volume.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2',
         'supertype': 'Artifact',
         'subtype': 'Book',
@@ -4231,7 +4456,8 @@ var CARDS = [
     
         'name': 'Applejack\'s Lasso',
         'image': 'Applejacks Lasso.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4',
         'supertype': 'Artifact',
         'subtype': 'Equipment',
@@ -4244,7 +4470,8 @@ var CARDS = [
     
         'name': 'Archaic Index',
         'image': 'Archaic Index.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1',
         'supertype': 'Artifact',
         'subtype': 'Book',
@@ -4257,7 +4484,8 @@ var CARDS = [
     
         'name': 'Bubbling Brew',
         'image': 'Bubbling Brew.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3',
         'supertype': 'Artifact',
         'text': '2/R: Put a Charge counter on Bubbling Brew.\n\nT, Remove each Charge counter from Bubbling Brew: It deals that much damage to target creature or target opponent.',
@@ -4268,7 +4496,8 @@ var CARDS = [
     
         'name': 'Cauldron of Calamity',
         'image': 'Cauldron of Calamity.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4',
         'supertype': 'Artifact',
         'text': 'At the beginning of your upkeep, distribute a number of Charge counters equal to the number of Charge counters on Cauldron of Calamity among other permanents you control.\n\nR, T: Sacrifice a land, then put a Charge counter on Cauldron of Calamity.',
@@ -4279,7 +4508,8 @@ var CARDS = [
     
         'name': 'Encyclopedia Magica',
         'image': 'Encyclopedia Magica.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2',
         'supertype': 'Artifact',
         'subtype': 'Book',
@@ -4292,7 +4522,8 @@ var CARDS = [
     
         'name': 'Explorer\'s Amulet',
         'image': 'Explorers Amulet.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1',
         'supertype': 'Artifact',
         'text': 'T, Pay 1 Quest counter: Target creature you control has protection from the color of your choice until end of turn.',
@@ -4304,7 +4535,8 @@ var CARDS = [
     
         'name': 'Fluttershy\'s First-Aid Kit',
         'image': 'Fluttershys First-Aid Kit.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4',
         'supertype': 'Artifact',
         'subtype': 'Equipment',
@@ -4317,7 +4549,8 @@ var CARDS = [
     
         'name': 'Grimoire of the Archive',
         'image': 'Grimoire of the Archive.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4',
         'supertype': 'Artifact',
         'subtype': 'Book',
@@ -4329,7 +4562,8 @@ var CARDS = [
     
         'name': 'Leatherleaf Barding',
         'image': 'Leatherleaf Barding.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3',
         'supertype': 'Artifact',
         'subtype': 'Equipment',
@@ -4342,7 +4576,8 @@ var CARDS = [
     
         'name': 'List of Important Things',
         'image': 'List of Important Things.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': 'X',
         'supertype': 'Artifact',
         'subtype': 'Book',
@@ -4355,7 +4590,8 @@ var CARDS = [
     
         'name': 'Lotus Seed',
         'image': 'Lotus Seed.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '0',
         'supertype': 'Artifact',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of your upkeep, you get a Quest counter. Then, if you have at least 2 Quest counters, sacrifice Lotus Seed. If you do, search your library for a land, put it onto the battlefield, and shuffle your library.',
@@ -4367,7 +4603,8 @@ var CARDS = [
     
         'name': 'Polychrome Prism',
         'image': 'Polychrome Prism.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3',
         'supertype': 'Artifact',
         'text': 'Untap Polychrome Prism during each other player\'s untap step.\n\nX1, T: Add X mana in any combination of colors to your mana pool.',
@@ -4379,7 +4616,8 @@ var CARDS = [
     
         'name': 'Potioneer\'s Knacksack',
         'image': 'Potioneers Knacksack.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2',
         'supertype': 'Artifact',
         'subtype': 'Equipment',
@@ -4391,7 +4629,8 @@ var CARDS = [
     
         'name': 'Twilight Sparkle\'s Study Guide',
         'image': 'Twilight Sparkles Study Guide.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4',
         'supertype': 'Artifact',
         'subtype': 'Book Equipment',
@@ -4404,7 +4643,8 @@ var CARDS = [
     
         'name': 'Waystone',
         'image': 'Waystone.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2',
         'supertype': 'Artifact',
         'text': 'When Waystone enters the battlefield, you get a Quest counter.\n\n3, Tap an untapped nontoken creature you control: You get a Quest counter. (Any player may use this ability.)',
@@ -4416,7 +4656,8 @@ var CARDS = [
     
         'name': 'Weathered Map',
         'image': 'Weathered Map.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1',
         'supertype': 'Artifact',
         'subtype': 'Book',
@@ -4428,7 +4669,8 @@ var CARDS = [
     
         'name': 'Adventurer\'s Inn',
         'image': 'Adventurers Inn.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'T: Add 1 mana of any color shared by a creature you control to your mana pool.\n\nQuest Level 4 — If you have at least 4 Quest counters, tapped creatures you control have Hexproof.',
         'flavorText': 'A place to rest and swap tales.',
@@ -4439,7 +4681,8 @@ var CARDS = [
     
         'name': 'Cloudvillage',
         'image': 'Cloudvillage.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'T: Add W to your mana pool.\n\nT: If you paid an Airstrike cost this turn, add WW to your mana pool.',
         'flavorText': 'These mobile pegasus residences are constructed out of clouds from Equestria\'s cloud forests.',
@@ -4450,7 +4693,8 @@ var CARDS = [
     
         'name': 'Darrowdelf',
         'image': 'Darrowdelf.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'T: Add B to your mana pool.\n\nT: If you activated a Drain ability this turn, add BB to your mana pool.',
         'flavorText': 'The secluded caverns that the Batponies call home are hidden deep in the swamplands.',
@@ -4461,7 +4705,8 @@ var CARDS = [
     
         'name': 'Edge of the Wild',
         'image': 'Edge of the Wild.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'T: Add 1 to your mana pool.\n\nT, Sacrifice Edge of the Wild: You get a Quest counter.',
         'artist': 'ChaosLavaWolf',
@@ -4471,7 +4716,8 @@ var CARDS = [
     
         'name': 'Forgotten Passageway',
         'image': 'Forgotten Passageway.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'If you have no Quest counters when Forgotten Passageway enters the battlefield, you get a Quest counter.\n\nT: Add 1 to your mana pool.\n\n3, Pay 1 Quest counter: Target creature you control can\'t be blocked this turn.',
         'artist': 'Unknown',
@@ -4481,7 +4727,8 @@ var CARDS = [
     
         'name': 'Harborkeep',
         'image': 'Harborkeep.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'T: Add U to your mana pool.\n\nT: If you triggered a Spellwright ability this turn, add UU to your mana pool.',
         'flavorText': 'Unicorn harborkeeps provide safe havens for trading ships from around the world.',
@@ -4492,7 +4739,8 @@ var CARDS = [
     
         'name': 'Leyline of Discovery',
         'image': 'Leyline of Discovery.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'If you have no Quest counters when Leyline of Discovery enters the battlefield, you get a Quest counter.\n\nT: Add 1 to your mana pool.\n\nT, Pay 1 Quest counter: Add 1 mana of any color to your mana pool.',
         'artist': 'FrankAtt',
@@ -4502,7 +4750,8 @@ var CARDS = [
     
         'name': 'Moonlit Archive',
         'image': 'Moonlit Archive.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'Moonlit Archive enters the battlefield with three Catalog counters on it.\n\nT: Add 1 to your mana pool.\n\nT, Remove a Catalog counter from Moonlit Archive: Look at the top three cards of your library. You may put one on top of your library and the rest on the bottom in any order.',
         'artist': 'Unknown',
@@ -4512,7 +4761,8 @@ var CARDS = [
     
         'name': 'Steadholdt',
         'image': 'Steadholdt.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'T: Add G to your mana pool.\n\nT: If you paid an Earthlink cost this turn, add GG to your mana pool.',
         'flavorText': 'Earthpony steadholdts are bastions of civilization on the edges of the wilderness.',
@@ -4523,7 +4773,8 @@ var CARDS = [
     
         'name': 'Temple of Mazes',
         'image': 'Temple of Mazes.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'T, Tap target creature: That creature\'s controller gets an additional Quest counter.\n\nPay 1 Quest counter: Add 1 mana of any color to your mana pool. (Any player may use this ability.)',
         'artist': 'NinePixels',
@@ -4533,7 +4784,8 @@ var CARDS = [
     
         'name': 'Uncharted Leyline',
         'image': 'Uncharted Leyline.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'If you have three or fewer Quest counters when Uncharted Leyline enters the battlefield, you get a Quest counter.\n\nQuest Level X — T: Add X to your mana pool, where X is the number of Quest counters you have.',
         'artist': 'Narandel',
@@ -4543,7 +4795,8 @@ var CARDS = [
     
         'name': 'Valleypost',
         'image': 'Valleypost.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Land',
         'text': 'T: Add R to your mana pool.\n\nT: If you triggered a Countercharge ability this turn, add RR to your mana pool.',
         'flavorText': 'The Zebras\' most permanent settlements are built within their deepest canyons.',
@@ -4554,7 +4807,8 @@ var CARDS = [
     
         'name': 'Plains',
         'image': 'Plains.2.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Plains',
         'artist': 'Devinian',
@@ -4564,7 +4818,8 @@ var CARDS = [
     
         'name': 'Plains',
         'image': 'Plains.1.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Plains',
         'artist': 'Bering',
@@ -4574,7 +4829,8 @@ var CARDS = [
     
         'name': 'Plains',
         'image': 'Plains.4.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Plains',
         'artist': 'Bering',
@@ -4584,7 +4840,8 @@ var CARDS = [
     
         'name': 'Plains',
         'image': 'Plains.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Plains',
         'artist': 'Devinian',
@@ -4594,7 +4851,8 @@ var CARDS = [
     
         'name': 'Plains',
         'image': 'Plains.3.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Plains',
         'artist': 'Devinian',
@@ -4604,7 +4862,8 @@ var CARDS = [
     
         'name': 'Island',
         'image': 'Island.1.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Island',
         'artist': 'Memod',
@@ -4614,7 +4873,8 @@ var CARDS = [
     
         'name': 'Island',
         'image': 'Island.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Island',
         'artist': 'Memod',
@@ -4624,7 +4884,8 @@ var CARDS = [
     
         'name': 'Island',
         'image': 'Island.2.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Island',
         'artist': 'Sayuri1314',
@@ -4634,7 +4895,8 @@ var CARDS = [
     
         'name': 'Island',
         'image': 'Island.3.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Island',
         'artist': 'Simbaro',
@@ -4644,7 +4906,8 @@ var CARDS = [
     
         'name': 'Island',
         'image': 'Island.4.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Island',
         'artist': 'RHADS',
@@ -4654,7 +4917,8 @@ var CARDS = [
     
         'name': 'Swamp',
         'image': 'Swamp.4.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Swamp',
         'artist': 'JoshEiten',
@@ -4664,7 +4928,8 @@ var CARDS = [
     
         'name': 'Swamp',
         'image': 'Swamp.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Swamp',
         'artist': 'JoshEiten',
@@ -4674,7 +4939,8 @@ var CARDS = [
     
         'name': 'Swamp',
         'image': 'Swamp.1.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Swamp',
         'artist': 'SkavenZvervov',
@@ -4684,7 +4950,8 @@ var CARDS = [
     
         'name': 'Swamp',
         'image': 'Swamp.3.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Swamp',
         'artist': 'Memod',
@@ -4694,7 +4961,8 @@ var CARDS = [
     
         'name': 'Swamp',
         'image': 'Swamp.2.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Swamp',
         'artist': 'Memod',
@@ -4704,7 +4972,8 @@ var CARDS = [
     
         'name': 'Mountain',
         'image': 'Mountain.4.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Mountain',
         'artist': 'FerdinandLadera',
@@ -4714,7 +4983,8 @@ var CARDS = [
     
         'name': 'Mountain',
         'image': 'Mountain.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Mountain',
         'artist': 'FerdinandLadera',
@@ -4724,7 +4994,8 @@ var CARDS = [
     
         'name': 'Mountain',
         'image': 'Mountain.3.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Mountain',
         'artist': 'AeronJVL',
@@ -4734,7 +5005,8 @@ var CARDS = [
     
         'name': 'Mountain',
         'image': 'Mountain.1.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Mountain',
         'artist': 'FerdinandLadera',
@@ -4744,7 +5016,8 @@ var CARDS = [
     
         'name': 'Mountain',
         'image': 'Mountain.2.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Mountain',
         'artist': 'FerdinandLadera',
@@ -4754,7 +5027,8 @@ var CARDS = [
     
         'name': 'Forest',
         'image': 'Forest.4.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Forest',
         'artist': 'Durger',
@@ -4764,7 +5038,8 @@ var CARDS = [
     
         'name': 'Forest',
         'image': 'Forest.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Forest',
         'artist': 'ThePhoenixDark',
@@ -4774,7 +5049,8 @@ var CARDS = [
     
         'name': 'Forest',
         'image': 'Forest.1.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Forest',
         'artist': 'ThePhoenixDark',
@@ -4784,7 +5060,8 @@ var CARDS = [
     
         'name': 'Forest',
         'image': 'Forest.2.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Forest',
         'artist': 'Devinian',
@@ -4794,7 +5071,8 @@ var CARDS = [
     
         'name': 'Forest',
         'image': 'Forest.3.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'subtype': 'Forest',
         'artist': 'Machinimator',
@@ -4804,7 +5082,8 @@ var CARDS = [
     
         'name': 'Ascension',
         'image': 'Ascension.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Emblem',
         'subtype': 'Celestia, the Light Eternal',
         'text': 'Damage can\'t be dealt to Celestia. She becomes a creature with Indestructible in addition to her other types. Her power and toughness are equal to the number of permanents you control.',
@@ -4816,7 +5095,8 @@ var CARDS = [
     
         'name': 'Nightveil',
         'image': 'Nightveil.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Emblem',
         'subtype': 'Luna, the Dream Warden',
         'text': 'Lands you don\'t control don\'t untap during their controllers\' untap steps.\n\nEach land gains "Pay 1 life: Untap this land."',
@@ -4828,7 +5108,8 @@ var CARDS = [
     
         'name': 'Quest Counter',
         'image': 'Quest Counter.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Quest Counter',
         'artist': 'Dreatos',
         'rarity': 'common',
@@ -4838,7 +5119,8 @@ var CARDS = [
     
         'name': 'Quest Counter',
         'image': 'Quest Counter.1.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Quest Counter',
         'artist': 'AquaGalaxy',
         'rarity': 'common',
@@ -4848,7 +5130,8 @@ var CARDS = [
     
         'name': 'Quest Counter',
         'image': 'Quest Counter.2.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Quest Counter',
         'artist': 'Ziom05',
         'rarity': 'common',
@@ -4858,7 +5141,8 @@ var CARDS = [
     
         'name': 'Quest Counter',
         'image': 'Quest Counter.3.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Quest Counter',
         'artist': 'WhiteStar1802',
         'rarity': 'common',
@@ -4868,7 +5152,8 @@ var CARDS = [
     
         'name': 'Quest Counter',
         'image': 'Quest Counter.4.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Quest Counter',
         'artist': 'Lexx2Dot0',
         'rarity': 'common',
@@ -4878,7 +5163,8 @@ var CARDS = [
     
         'name': 'Solar Guard',
         'image': 'Solar Guard.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Creature',
         'subtype': 'Earthpony Knight',
         'pt': '2/2',
@@ -4892,7 +5178,8 @@ var CARDS = [
     
         'name': 'Pegasus',
         'image': 'Pegasus.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Creature',
         'subtype': 'Pegasus',
         'pt': '1/1',
@@ -4906,7 +5193,8 @@ var CARDS = [
     
         'name': 'Alicorn Nightmare',
         'image': 'Alicorn Nightmare.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Creature',
         'subtype': 'Alicorn Nightmare',
         'pt': '4/3',
@@ -4920,7 +5208,8 @@ var CARDS = [
     
         'name': 'Nightmare',
         'image': 'Nightmare.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Creature',
         'subtype': 'Nightmare',
         'pt': '2/2',
@@ -4933,7 +5222,8 @@ var CARDS = [
     
         'name': 'Earthpony ',
         'image': 'Earthpony .jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Creature',
         'subtype': 'Earthpony',
         'pt': '3/3',
@@ -4947,7 +5237,8 @@ var CARDS = [
     
         'name': 'Golem',
         'image': 'Golem.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Artifact Creature',
         'subtype': 'Golem',
         'pt': '4/4',
@@ -4960,7 +5251,8 @@ var CARDS = [
     
         'name': 'Basic land',
         'image': 'Basic land.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Basic Land',
         'text': 'T: Add 1 to your mana pool.',
         'flavorText': 'Harmony saw what Lauren and Titan were making, and thought that it was too empty.',
@@ -4972,7 +5264,8 @@ var CARDS = [
     
         'name': 'Alicorn of Shadows',
         'image': 'Alicorn of Shadows.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3BB',
         'supertype': 'Creature',
         'subtype': 'Alicorn',
@@ -4986,7 +5279,8 @@ var CARDS = [
     
         'name': 'Crucius\, Axe of Damnation',
         'image': 'Crucius Axe of Damnation.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1BB',
         'supertype': 'Legendary Artifact Enchantment',
         'text': 'Arcane Shield 2 (Opponents must pay 2 to target this card.)\n\nAt the beginning of each upkeep, Drain target creature (That creature gets -1/-1 until end of turn.)\n\n1BB, T: The next time a creature with reduced toughness dies this turn, return it to the battlefield under your control.',
@@ -4997,7 +5291,8 @@ var CARDS = [
     
         'name': 'Disciple of Oceanus',
         'image': 'Disciple of Oceanus.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4B',
         'supertype': 'Creature',
         'subtype': 'Bat Cleric',
@@ -5010,7 +5305,8 @@ var CARDS = [
     
         'name': 'Dreambound Acolyte',
         'image': 'Dreambound Acolyte.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3B',
         'supertype': 'Creature',
         'subtype': 'Batpony Cleric',
@@ -5023,7 +5319,8 @@ var CARDS = [
     
         'name': 'Nadir, the Intrepid',
         'image': 'Nadir the Intrepid.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2B',
         'supertype': 'Legendary Creature',
         'subtype': 'Batpony',
@@ -5036,7 +5333,8 @@ var CARDS = [
     
         'name': 'Nightveil Raider',
         'image': 'Nightveil Raider.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '3B',
         'supertype': 'Creature',
         'subtype': 'Batpony Rogue',
@@ -5050,7 +5348,8 @@ var CARDS = [
     
         'name': 'Search for Power',
         'image': 'Search for Power.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1BB',
         'supertype': 'Enchantment',
         'subtype': 'Quest',
@@ -5062,7 +5361,8 @@ var CARDS = [
     
         'name': 'Umbral Acolyte',
         'image': 'Umbral Acolyte.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '2B',
         'supertype': 'Creature',
         'subtype': 'Batpony Cleric',
@@ -5076,7 +5376,8 @@ var CARDS = [
     
         'name': 'Nightseeker',
         'image': 'Nightseeker.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '1B',
         'supertype': 'Creature',
         'subtype': 'Batpony',
@@ -5090,7 +5391,8 @@ var CARDS = [
     
         'name': 'Nightveil Blademaster',
         'image': 'Nightveil Blademaster.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'cost': '4BB',
         'supertype': 'Creature',
         'subtype': 'Batpony Rogue',
@@ -5104,7 +5406,8 @@ var CARDS = [
     
         'name': 'Quest Counter',
         'image': 'Quest Counter.5.jpg',
-        'set': 'Nightfall',
+        'creator': 'DoomSp0rk',
+        'set': 'Nightfall in Equestria',
         'supertype': 'Quest Counter',
         'artist': 'Koviry',
         'rarity': 'common',
