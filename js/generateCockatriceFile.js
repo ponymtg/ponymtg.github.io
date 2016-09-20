@@ -230,12 +230,11 @@ function getCockatriceXml(sets) {
             if (pt !== undefined) {
                 xml += '            '+createXmlElementString('pt', pt);
             }
-            if (loyalty !== undefined) {
-                // Cockatrice uses the pt field to store loyalty, if the card is a planeswalker.
-                xml += '            '+createXmlElementString('pt', loyalty);
-            }
             xml += '            '+createXmlElementString('tablerow', tablerow);
             xml += '            '+createXmlElementString('text', text);
+            if (loyalty !== undefined) {
+                xml += '            '+createXmlElementString('loyalty', loyalty);
+            }
             xml += '        </card>\n';
         }
     }
