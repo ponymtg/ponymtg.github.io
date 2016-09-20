@@ -29,10 +29,11 @@ var global = {
             'path': 'Shards of Equestria/Shards of Equestria pack/cards',
             'notes': '<i>Shards of Equestria</i> was shut down in 2012 after a Cease and Desist from Hasbro. The website no longer exists.',
         },
-        'Nightfall': {
+        'Nightfall in Equestria': {
             'path': 'Nightfall 1.15/cards',
+            'creator': 'DoomSp0rk',
             'url': 'http://www.fimtg-nightfall.com/',
-            'notes': '<i>Nightfall</i> is the first set in a planned 3-set block of completely custom pony MTG cards.',
+            'notes': '<i>Nightfall in Equestria</i> is the first set in a planned 3-set block of completely custom pony MTG cards.',
         },
         'Ponylude': {
             'path': 'Ponylude/cards',
