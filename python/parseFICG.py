@@ -1,15 +1,25 @@
 import mtgJson, re, sys
 # coding=utf-8
 
-# Given a text file containing a dump of card text from FanOfMostEverything's Friendship is Card Games posts, attempt to
-# parse this into a structured format and output the result as JSON.
+########################################################################################################################
+# Friendship is Card Games text dump parser
+#
+# Given a text file containing a dump of card text from FanOfMostEverything's Friendship is Card Games posts, this
+# script will attempt to parse it into a structured format and output the result as JSON. A "dump of card text", in this
+# case, is a direct copy-paste of card listings from FanOfMostEverything's card blog posts.
+#
+# NOTE: This script has been upgraded to Python 3, and will not work with earlier Python versions.
+########################################################################################################################
+
+########################################################################################################################
+# GLOBALS
+########################################################################################################################
 
 # Define a long dash, just so we don't have to keep copy-pasting it.
 EM_DASH = '—'
 
 # Use a global dictionary to keep track of meta-information about the set. There are some things, such as which cards
 # transform into which others, that we can only determine by keeping track of previously-seen cards.
-
 META = {}
 META['previous_card_data_entry'] = None
 META['previous_card_was_a_transformer'] = False
@@ -17,12 +27,17 @@ META['previous_card_was_reverse_side'] = False
 META['set_name'] = 'Friendship is Card Games'
 
 # When typos appear in the type line, this causes problems for the parser as it uses that line to determine where a card
-# starts and ends. For this reason, we are going to perform simple text correction of known typos before processing the
-# dump.
+# starts and ends. For this reason, we are going to perform simple text correction of some known typos before processing
+# the dump.
 SPELLING_CORRECTIONS = {}
 SPELLING_CORRECTIONS['Enchatment'] = 'Enchantment'
 
-# Returns True if we can identify `line` as being a card's type line.
+
+########################################################################################################################
+# FUNCTIONS
+########################################################################################################################
+
+# Return True if we can identify `line` as being a card's type line.
 def is_type_line(line):
     # An empty line never matches.
     if line.strip() == '':
@@ -460,12 +475,12 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     #
     # At this point, however, we want to detect whether the first character is a long dash. In UTF-8, the long dash (em
     # dash) is three bytes long. Because we're using byte strings, this means that in order to test for a long dash, we
-    # would need to look at the first _three_ characters of the string (ie. string[0:3]). This is just how Python strings
-    # work.
+    # would need to look at the first _three_ characters of the string (ie. string[0:3]). This is just how Python
+    # strings work.
     #
     # So we could do that, or we could decode our byte string into a proper Unicode string and examine the characters as
     # actual characters, rather than bytes. The latter option is preferable, so we'll do that.
-    if len(text_lines) >= 2 and text_lines[-2][0] == '"' and text_lines[-2][-1] == '"' and text_lines[-1].decode('utf-8')[0] == EM_DASH.decode('utf-8'):
+    if len(text_lines) >= 2 and text_lines[-2][0] == '"' and text_lines[-2][-1] == '"' and text_lines[-1][0] == EM_DASH:
         rules_text_lines = text_lines[0:-2]
         flavor_text_lines = text_lines[-2:]
 
@@ -561,10 +576,33 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump):
 
     return card_data_entries
 
+########################################################################################################################
+# SCRIPT
+########################################################################################################################
+
+# Read command line arguments.
+
+if len(sys.argv) != 4:
+    print("python "+sys.argv[0]+ "FICG_DUMP_PATH JS_VARIABLE_NAME SET_NAME")
+    print("""
+Parses a dump of raw card data in FanOfMostEverything's textual format into
+structured JSON of the form accepted by PonyMTG.
+
+FICG_DUMP_PATH      The path to a file containing a dump of cards.
+
+JS_VARIABLE_NAME    The name of the variable which will contain the JSON
+                    string. (This doesn't really matter; it can be anything).
+
+SET_NAME            The name of the set. This will populate the `set` field on
+                    every output card.
+""")
+    sys.exit()
+
 ficg_raw_path = sys.argv[1]
 js_variable_name = sys.argv[2]
 set_name = sys.argv[3]
 
+# Open the dump file and obtain its contents.
 ficg_raw_file = open(ficg_raw_path, 'r')
 ficg_raw_dump = ficg_raw_file.read()
 
@@ -575,7 +613,12 @@ for typo in SPELLING_CORRECTIONS:
 # The set name is the same for all cards, so store it in the global meta dictionary.
 META['set_name'] = set_name
 
+# Parse the raw dump into a dictionary of card data entries.
 card_data_entries = parse_ficg_dump_into_card_data_entries(ficg_raw_dump)
+
+# Define the fields (and their ordering) which will be put into the JSON. (Python dictionaries don't have an ordering by
+# default, so we have to impose one).
 card_properties = ['name', 'image', 'set', 'creator', 'cost', 'cost2', 'colorIndicator', 'supertype', 'subtype', 'supertype2', 'subtype2', 'text', 'flavorText', 'pt', 'loyalty', 'transformsInto', 'transformsFrom']
 
-print mtgJson.encapsulate_dict_list_in_js_variable(card_data_entries, card_properties, js_variable_name)
+# Turn the dictionary of card data entries into a Javascript JSON variable, and output it.
+print(mtgJson.encapsulate_dict_list_in_js_variable(card_data_entries, card_properties, js_variable_name))
