@@ -2485,7 +2485,7 @@ function estimateProxyCardTextFontSize(html, cardWidth) {
     // Estimate the dimensions of the dummy element. We won't be too precise about this; we just want it to be roughly
     // the same size as the card text area on a card.
     var dummyElementWidth = cardWidth - (2 * calculateCardBorderThickness(cardWidth)) - (2 * global.dimensions.proxy.padding);
-    var dummyElementHeight = cardHeight * 0.70;
+    var dummyElementHeight = cardHeight * 0.65;
     dummyElement.style.width = dummyElementWidth+'px';
     dummyElement.innerHTML = html;
     

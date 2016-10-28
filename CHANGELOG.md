@@ -9,7 +9,7 @@
 * Ported the FICG parser to Python 3.
 * Updated "Friendship is Card Games" set with all season 6 episodes, added some of FanOfMostEverything's IDW cards.
 * Updated "Nightfall" with full card details.
-* Renamed "Derpibooru 7200" to "Phil Srobeighn".
+* Renamed "Derpibooru 7220" to "Phil Srobeighn".
 ## 1.0.2
 
 * Made the About page look slightly less terrible.
