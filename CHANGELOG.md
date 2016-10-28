@@ -3,6 +3,7 @@
 * Changed proxy cards to use a table layout, to maintain better proportions of the card sections.
 * Disabled the previous/next page buttons if there's no previous or next page.
 * Slight tweak to the card text font size estimator to make it more generous with the sizing.
+* Make the print sheet use slightly lower text size generosity.
 
 ## 1.0.3
 

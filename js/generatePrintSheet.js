@@ -60,7 +60,7 @@ function generatePrintSheetForCards(cards, hashes) {
                 cardElement.style.width = standardCardDimensionsInPx.width+'px';
             }
             else {
-                cardElement = generateProxyElement(cards[i], standardCardDimensionsInPx.width);
+                cardElement = generateProxyElement(cards[i], standardCardDimensionsInPx.width, global.values.proxyTextGenerosity.printSheet);
             }
             cardElement.style.display = 'inline-block';
             cardElement.style.margin = (global.dimensions.printSheet.cardSpacing/2)+'px';
