@@ -1369,6 +1369,10 @@ function generatePaginationControlElement(id, scrollToElementId) {
     navElement.id = id;
 
     prevElement.innerHTML = '<a>&larr; Previous page</a>';
+    if (global.pagination.currentPage == 0) {
+        prevElement.className += ' disabled';
+    }
+
     prevElement.onclick = function() {
         global.pagination.currentPage--;
         if (global.pagination.currentPage < 0) {
@@ -1385,6 +1389,9 @@ function generatePaginationControlElement(id, scrollToElementId) {
     pageNumberTableCellElement.innerHTML = '<span style="border:0">Page <strong>'+(global.pagination.currentPage+1)+'</strong> of <strong>'+global.pagination.numberOfPages+'</strong></span>';
 
     nextElement.innerHTML = '<a>Next page &rarr;</a>';
+    if (global.pagination.currentPage == global.pagination.numberOfPages - 1) {
+        nextElement.className += ' disabled';
+    }
     nextElement.onclick = function() {
         global.pagination.currentPage++;
         if (global.pagination.currentPage >= global.pagination.numberOfPages) {
@@ -1716,7 +1723,7 @@ function generateCardTableElement(cards) {
             // If a card image is not available, generate a "proxy" image from the available card information. This will
             // be a div, but should have the same dimensions as a card image.
 
-            cardProxyElement = generateProxyElement(card, global.dimensions.displayCard.width);
+            cardProxyElement = generateTableProxyElement(card, global.dimensions.displayCard.width);
         }
 
         // Assemble relevant properties of the card into an information table.
@@ -1956,6 +1963,9 @@ function getCardHeightFromCardWidth(cardWidth) {
 /**
  * Using the properties listed in `cardProperties`, generate a "proxy card": a DOM object representing a Magic card. The
  * resulting element will be `cardWidth` pixels in width.
+ *
+ * @deprecated Use generateTableProxyElement instead, which is almost the same but uses a table layout for the card
+ * sections.
  */
 function generateProxyElement(
     cardProperties,
@@ -2192,6 +2202,262 @@ function generateProxyElement(
 }
 
 /**
+ * Using the properties listed in `cardProperties`, generate a "proxy card": a DOM object representing a Magic card. The
+ * resulting element will be `cardWidth` pixels in width.
+ */
+function generateTableProxyElement(
+    cardProperties,
+    cardWidth
+) {
+    var proxyElement = document.createElement('div');
+    proxyElement.className = 'proxy';
+    proxyElement.style.fontSize = global.dimensions.proxy.fontSize+'px';
+
+    // Determine the card's height.
+    var cardHeight = getCardHeightFromCardWidth(cardWidth);
+
+    // Although we now have the width and height of the proxy, (ie. the desired dimensions of the fully-assembled,
+    // displayed proxy card), this is not the width and height of the proxy _element_ which we're about to create (ie.
+    // the container of the card text, details, etc). That will be slightly smaller. The reason for this is that we have
+    // to add a border, padding, etc., and in HTML, these are not considered part of a div's width and height.
+    // Therefore, we have to account for those separately, and ensure that the total combined dimensions of all those
+    // things adds up to the desired card width and height.
+
+    // We'll account for the border first. Borders on Magic cards are usually black, and of uniform thickness. We know
+    // the border thickness of the global standard card, so we can work out how big the border needs to be for our
+    // proxy.
+
+    var proxyBorderThickness = calculateCardBorderThickness(cardWidth);
+
+    // We also need to take padding into account. This is simply a small gap between the contents of the proxy container
+    // (ie. the card name, text, etc.) and the border. There is no Magic standard for this; we're just adding it to make
+    // the proxy look a little better. The padding is uniform thickness all the way round.
+
+    var proxyPadding = global.dimensions.proxy.padding;
+
+    // Now we can determine the width and height of the proxy element, by subtracting the border and padding from the
+    // desired card width and height. We have to subtract two lots of border and padding, as the card is bordered and
+    // padded on all four sides.
+
+    var proxyElementWidth = (cardWidth - (2 * proxyBorderThickness)) - (2 * proxyPadding);
+    var proxyElementHeight = (cardHeight - (2 * proxyBorderThickness)) - (2 * proxyPadding);
+
+    proxyElement.style.width = proxyElementWidth+'px';
+    proxyElement.style.height = proxyElementHeight+'px';
+    proxyElement.style.borderWidth = proxyBorderThickness+'px';
+    proxyElement.style.padding = proxyPadding+'px';
+
+    // Determine the proxy's color scheme. Generally, this is determined by its mana cost.
+    var proxyColorScheme = undefined;
+    if (cardProperties.colorIndicator !== undefined) {
+        // If the card has a color indicator, then the color indicator is the authoritative determinant of the card's
+        // color identity, overriding all other sources of color such as mana cost.
+
+        // In card data, color indicators are represented by a string of mana symbols (ie. W, U, B, R, G) enclosed in
+        // parentheses. Although a color indicator is not the same thing as a mana cost, we can treat it as such for the
+        // purposes of determining a color scheme.
+
+        // Remove any parentheses from the color indicator.
+        var colorIndicatorManaSymbols = cardProperties.colorIndicator.replace(/\(/g, '').replace(/\)/g, '');
+        proxyColorScheme = getCardColorSchemeFromManaCost(colorIndicatorManaSymbols);
+    }
+    else {
+        // If there's no color indicator (which is the norm), derive a color scheme from the card's mana cost.
+        proxyColorScheme = getCardColorSchemeFromManaCost(cardProperties.cost);
+    }
+
+    // Special case: if this card is a token, we use slightly different mappings to get the color scheme (which favors
+    // hybrid color schemes if it's a two-colored card).
+    if (cardProperties.cardType === 'token') {
+        if (cardProperties.colorIndicator !== undefined && global.mappings.colorIndicatorsToCardColorSchemes[cardProperties.colorIndicator] !== undefined) {
+            proxyColorScheme = global.mappings.colorIndicatorsToCardColorSchemes[cardProperties.colorIndicator];
+        }
+    }
+        
+    // Apply an appropriate color scheme class to the proxy element, in accordance with its color scheme. (This will
+    // change the proxy's background color).
+    if (proxyColorScheme !== undefined) {
+        proxyElement.className += ' '+global.mappings.cardColorSchemesToCssClasses[proxyColorScheme];
+    }
+    
+    // Create the elements that will contain the various sections of the card.
+    var proxyNameElement = document.createElement('p');
+    var proxyNameAndCostLineElement = document.createElement('div');
+    var proxyNameElement = document.createElement('div');
+    var proxyCostElement = document.createElement('div');
+    var proxyTypeLineElement = document.createElement('div');
+    var proxyTextElement = document.createElement('div');
+
+    var typeLineHtml = cardProperties.supertype;
+
+    if (cardProperties.subtype !== undefined) {
+        typeLineHtml += ' &mdash; '+cardProperties.subtype;
+    }
+
+    if (cardProperties.supertype2 !== undefined) {
+        // If this card has a second supertype, then we'll concatenate it (and the subtype, if it has one) to the type
+        // line HTML.
+        typeLineHtml += ' // ';
+        typeLineHtml += cardProperties.supertype2;
+
+        if (cardProperties.subtype2 !== undefined) {
+            typeLineHtml += ' &mdash; '+cardProperties.subtype2;
+        }
+    }
+
+    proxyNameAndCostLineElement.className = 'card-name-cost-line';
+    proxyNameElement.className = 'card-name';
+    proxyCostElement.className = 'card-cost';
+
+    // Get the card text.
+    var cardText = cardProperties.text;
+
+    if (cardText) { 
+        // If we've got flavor text as well, add it in, italicizing it appropriately.
+        if (cardProperties.flavorText !== undefined) {
+            cardText += '\n\n<i>' + cardProperties.flavorText + '</i>';
+        }
+
+        // Since this is HTML, we need to replace line break characters with HTML breaks.
+        cardText = cardText.replace(/\n/g, '<br />');
+
+        // Process the text to apply Magic-like styling to any recognized Magic card markup (eg. "T" for the tap symbol).
+        cardText = applyMagicStylingToText(cardText);
+
+        proxyTextElement.className = 'card-text';
+        // If this is a planeswalker card, add a secondary style to the card text box to make it look more interesting.
+        if (cardProperties.supertype.toLowerCase().indexOf('planeswalker') !== -1) {
+            proxyTextElement.className += ' card-text-planeswalker';
+        }
+        proxyTextElement.innerHTML = cardText;
+
+        proxyTextElement.style.fontSize = estimateProxyCardTextFontSize(cardText, cardWidth)+'px';
+    }
+
+    proxyTypeLineElement.className = 'card-type-line';
+    proxyTypeLineElement.innerHTML = typeLineHtml;
+
+    if (cardProperties.cost !== undefined) {
+        if (cardProperties.cost2 !== undefined) {
+            // If the cost has two costs, we assume this is a split card. We render these a little differently.
+            // First, split the name up into two names.
+            var cardNames = cardProperties.name.split('//')
+            cardNames[0] = cardNames[0].trim()
+            cardNames[1] = cardNames[1].trim()
+
+            // Instead of just one name and one cost on the name-and-cost line, it'll be like this:
+            //
+            //     name cost // name2 cost2
+            proxyNameElement.innerHTML = cardNames[0]; 
+            proxyCostElement.innerHTML = applyManaStyling(cardProperties.cost);
+            proxyCostElement.style.cssFloat = 'left';
+            proxyCostElement.style.margin = '0 8px';
+            var proxySplitElement = document.createElement('div');
+            proxySplitElement.innerHTML = '//';
+            proxySplitElement.className = 'card-name';
+            proxySplitElement.style.margin = '0 8px';
+            var proxyName2Element = document.createElement('div');
+            proxyName2Element.className = 'card-name';
+            proxyName2Element.innerHTML = cardNames[1]
+            var proxyCost2Element = document.createElement('div');
+            proxyCost2Element.className = 'card-cost';
+            proxyCost2Element.style.cssFloat = 'left';
+            proxyCost2Element.style.margin = '0 8px';
+            proxyCost2Element.innerHTML = applyManaStyling(cardProperties.cost2);
+
+            proxyNameAndCostLineElement.appendChild(proxyNameElement);
+            proxyNameAndCostLineElement.appendChild(proxyCostElement);
+            //proxyNameAndCostLineElement.appendChild(proxySplitElement);
+            proxyNameAndCostLineElement.appendChild(proxyName2Element);
+            proxyNameAndCostLineElement.appendChild(proxyCost2Element);
+            
+        }
+        else { 
+            // This is not a split card, so just add the name and cost as normal.
+            proxyNameElement.innerHTML = cardProperties.name;
+            proxyNameAndCostLineElement.appendChild(proxyNameElement);
+            proxyCostElement.innerHTML = applyManaStyling(cardProperties.cost);
+            proxyNameAndCostLineElement.appendChild(proxyCostElement);
+        }
+    }
+    else {
+        // If the card has no cost, just add the name.
+            proxyNameElement.innerHTML = cardProperties.name;
+            proxyNameAndCostLineElement.appendChild(proxyNameElement);
+    }
+    
+    if (['token', 'emblem'].indexOf(cardProperties.cardType) !== -1) {
+        // If the card is a token or emblem, we use a more fancy-looking style for the card name.
+        proxyNameAndCostLineElement.className = 'card-name-token';
+        proxyNameElement.className = '';
+    }
+
+    if (cardProperties.cardType === 'emblem') {
+        // For emblems, even if they've been given a name, we just display "Emblem" as the card name.
+        proxyNameElement.innerHTML = cardProperties.supertype;
+    }
+
+    // Add a `<div style="clear:both">` inside the name-and-cost line, so that it expands to fit its contents even when
+    // those contents are floated. I hate this fix, but that's just how things go with CSS floats.
+    var clearDiv = document.createElement('div');
+    clearDiv.style.clear = "both";
+
+    proxyNameAndCostLineElement.appendChild(clearDiv);
+
+    // Assemble all the card parts into the main card container.
+
+    var proxyTable = document.createElement('table');
+    var proxyNameAndCostRow = document.createElement('tr');
+    var proxyNameAndCostCell = document.createElement('td');
+    var proxyTypeRow = document.createElement('tr');
+    var proxyTypeCell = document.createElement('td');
+    var proxyTextRow = document.createElement('tr');
+    var proxyTextCell = document.createElement('td');
+    var proxyPowerAndToughnessRow = document.createElement('tr');
+    var proxyPowerAndToughnessCell = document.createElement('td');
+
+    proxyTable.style.height = '100%';
+    proxyTextCell.style.height = '100%';
+
+    proxyNameAndCostCell.appendChild(proxyNameAndCostLineElement);
+    proxyTypeCell.appendChild(proxyTypeLineElement);
+    if (cardText) { 
+        proxyTextCell.appendChild(proxyTextElement);
+    }
+
+    if (cardProperties.pt !== undefined) {
+        var proxyPowerAndToughnessElement = document.createElement('div');
+        var powerAndToughnessHtml = cardProperties.pt;
+        proxyPowerAndToughnessElement.className = 'card-power-toughness';
+        proxyPowerAndToughnessElement.innerHTML = powerAndToughnessHtml;
+        proxyPowerAndToughnessCell.appendChild(proxyPowerAndToughnessElement);
+    }
+
+    if (cardProperties.loyalty !== undefined) {
+        var proxyLoyaltyElement = document.createElement('div');
+        var loyaltyHtml = cardProperties.loyalty;
+        proxyLoyaltyElement.className = 'card-loyalty';
+        proxyLoyaltyElement.innerHTML = loyaltyHtml;
+        proxyElement.appendChild(proxyLoyaltyElement);
+        proxyPowerAndToughnessCell.appendChild(proxyLoyaltyElement);
+    }
+
+    proxyNameAndCostRow.appendChild(proxyNameAndCostCell);
+    proxyTypeRow.appendChild(proxyTypeCell);
+    proxyTextRow.appendChild(proxyTextCell);
+    proxyPowerAndToughnessRow.appendChild(proxyPowerAndToughnessCell);
+
+    proxyTable.appendChild(proxyNameAndCostRow);
+    proxyTable.appendChild(proxyTypeRow);
+    proxyTable.appendChild(proxyTextRow);
+    proxyTable.appendChild(proxyPowerAndToughnessRow);
+
+    proxyElement.appendChild(proxyTable);
+
+    return proxyElement;
+}
+
+/**
  * Idea borrowed from StackOverflow. In HTML, there is no direct way to determine whether text is overflowing its
  * container or not, but there is a really clever trick we can use.
  *
@@ -2219,7 +2485,7 @@ function estimateProxyCardTextFontSize(html, cardWidth) {
     // Estimate the dimensions of the dummy element. We won't be too precise about this; we just want it to be roughly
     // the same size as the card text area on a card.
     var dummyElementWidth = cardWidth - (2 * calculateCardBorderThickness(cardWidth)) - (2 * global.dimensions.proxy.padding);
-    var dummyElementHeight = cardHeight * 0.5;
+    var dummyElementHeight = cardHeight * 0.70;
     dummyElement.style.width = dummyElementWidth+'px';
     dummyElement.innerHTML = html;
     

@@ -1,3 +1,9 @@
+## 1.1.0
+
+* Changed proxy cards to use a table layout, to maintain better proportions of the card sections.
+* Disabled the previous/next page buttons if there's no previous or next page.
+* Slight tweak to the card text font size estimator to make it more generous with the sizing.
+
 ## 1.0.3
 
 * Ported the FICG parser to Python 3.
