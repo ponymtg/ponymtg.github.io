@@ -1,3 +1,8 @@
+## 1.1.1
+
+* Corrected a couple of layout issues with the proxy generator on non-main pages.
+* Increased the text generosity on the print sheet font size estimator.
+
 ## 1.1.0
 
 * Changed proxy cards to use a table layout, to maintain better proportions of the card sections.
@@ -11,6 +16,7 @@
 * Updated "Friendship is Card Games" set with all season 6 episodes, added some of FanOfMostEverything's IDW cards.
 * Updated "Nightfall" with full card details.
 * Renamed "Derpibooru 7220" to "Phil Srobeighn".
+
 ## 1.0.2
 
 * Made the About page look slightly less terrible.

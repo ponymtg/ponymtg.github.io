@@ -574,7 +574,7 @@ var global = {
         'tipFrequency': 5,
         'proxyTextGenerosity': {
             'display': 0.65,
-            'printSheet': 0.45,
+            'printSheet': 0.65,
         },
     },
     /** Information about how to paginate the results set, including the current page that the user is viewing. */
@@ -2176,7 +2176,9 @@ function generateProxyElement(
 
     proxyNameAndCostLineElement.appendChild(clearDiv);
 
-    // Assemble all the card parts into the main card container.
+    // Assemble all the card parts into the main card container. We use a simple table layout to ensure the proportions
+    // of the card parts stay roughly constant. Note that this table layout is dependent on the Bootstrap CSS; it
+    // doesn't look quite right without it.
 
     var proxyTable = document.createElement('table');
     var proxyNameAndCostRow = document.createElement('tr');
@@ -2188,6 +2190,7 @@ function generateProxyElement(
     var proxyPowerAndToughnessRow = document.createElement('tr');
     var proxyPowerAndToughnessCell = document.createElement('td');
 
+    proxyTable.style.width = '100%';
     proxyTable.style.height = '100%';
     proxyTextCell.style.height = '100%';
 
@@ -2204,14 +2207,17 @@ function generateProxyElement(
         proxyPowerAndToughnessElement.innerHTML = powerAndToughnessHtml;
         proxyPowerAndToughnessCell.appendChild(proxyPowerAndToughnessElement);
     }
-
-    if (cardProperties.loyalty !== undefined) {
+    else if (cardProperties.loyalty !== undefined) {
         var proxyLoyaltyElement = document.createElement('div');
         var loyaltyHtml = cardProperties.loyalty;
         proxyLoyaltyElement.className = 'card-loyalty';
         proxyLoyaltyElement.innerHTML = loyaltyHtml;
-        proxyElement.appendChild(proxyLoyaltyElement);
         proxyPowerAndToughnessCell.appendChild(proxyLoyaltyElement);
+    }
+    else {
+        var emptyDiv = document.createElement('div');
+        emptyDiv.innerHTML = '&nbsp;';
+        proxyPowerAndToughnessCell.appendChild(emptyDiv);
     }
 
     proxyNameAndCostRow.appendChild(proxyNameAndCostCell);
