@@ -17791,3 +17791,148 @@ Land
 T: Add C to your mana pool.
 1, T: Put target card in a graveyard on the bottom of its owner’s library.
 Within lies a copy of every book ever written in Equestria.
+Take Off the Case W
+Sorcery
+Investigate, then exile target creature if its toughness is less than or equal to the number of Clues you control. (To investigate, create a colorless Clue artifact token with “2, Sacrifice this artifact: Draw a card.”)
+Inner Rainbow 1W
+Instant
+If target creature you control is white, it gets +2/+2 until end of turn. If it’s blue, it gains hexproof until end of turn. If it’s black, it gains lifelink until end of turn. If it’s red, it gains first strike until end of turn. If it’s green, put a +1/+1 counter on it.
+Triple Lutz 1W
+Snow Instant
+Target creature gets +2/+2 until end of turn. If it’s a snow creature, untap it and it gains indestructible until end of turn.
+The soulgorger’s form was perfect, but the Kjeldoran judge still only gave it a 4.0
+Sweetie Belle, Soul Searcher 2W
+Legendary Artifact Creature — Unicorn
+Defender, lifelink
+When Sweetie Belle, Soul Searcher becomes the target of a spell or ability that couldn’t target it if it weren’t an artifact, transform Sweetie Belle.
+When small things get pushed around…
+3/3
+Sweetie Bot, Devastator
+(BR) Legendary Artifact Creature — Golem
+Indestructible, trample
+Sweetie Bot, Devastator attacks each turn if able.
+…they just might destroy the town.
+6/6
+Defenders of Justice 3W
+Creature — Pony Pilot Soldier
+Lifelink
+Whenever Defenders of Justice crews a Vehicle, that Vehicle gains lifelink until end of turn. If that Vehicle is named Noble Mechanosteeds and you own both it and Defenders of Justice, exile them, then meld them into Mega-Pony, Heroic Titan.
+3/3
+Prismatic Vortex 2UU
+Instant
+For each color, return up to one target creature of that color to its owner’s hand.
+Like all works of pony magic, it desires numerous companions.
+Blustering Visage 3U
+Creature — Elemental
+Flying
+Whenever Blustering Visage blocks or becomes blocked by a creature, that creature gets -2/-0 until end of turn.
+An eye of a storm is peaceful. An entire face less so.
+2/3
+Wireframe Infiltrator 3(up)
+Artifact Creature — Ninja
+((up) can be paid with either U or 2 life.)
+Ninjutsu 1(up)
+Infect
+Whenever Wireframe Infiltrator deals combat damage to a player, proliferate.
+1/1
+Drooling Kaiju 4U
+Creature — Crocodile
+5UU: Monstrosity 4. (If this creature isn’t monstrous, put four +1/+1 counters on it and it becomes monstrous.)
+Drooling Kaiju can’t attack unless it’s monstrous.
+By the time it remembered how to rampage, the town was already evacuated.
+4/4
+Advocate of Gloom 1B
+Creature — Pony Rogue
+Advocate of Gloom gets +2/+2 for each -1/-1 counter on it.
+”It’s really not so bad once you get used to it.”
+2/1
+Crackling Rage 3R
+Instant
+Crackling Rage deals X damage to target creature or player, where X is 3 plus the damage dealt to you this turn.
+Anger augments amperage.
+Tameable Lions 4G
+Sorcery
+Create a 3/3 green Cat creature token. Create another one of those tokens at the beginning of your next upkeep step unless an opponent pays U before that step.
+”Aw, who’s a precious face?”
+—Fluttershy, Bearer of Kindness
+Fantastic Fortress 2
+Artifact Creature — Wall
+Defender
+Whenever Fantastic Fortress blocks, you get EE (two energy counters).
+Pay EE: Put a +1/+1 counter on Fantastic Fortress.
+Every great wall has to start somewhere.
+0/2
+Prismatic Axe 2
+Artifact — Equipment
+Equipped creature gets +1/+1 for each of its colors.
+Equip 2
+The more ostentatious the player, the louder the notes.
+Chaos Cart 3
+Artifact — Vehicle
+Whenever Chaos Cart becomes an artifact creature, roll a six-sided die. Chaos Cart gets +X/+X until end of turn, where X is the die roll.
+Crew 3 (Tap any number of untapped creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)
+1/1
+Noble Mechanosteeds 3
+Artifact — Vehicle
+Vigilance
+Crew 3
+(Melds with Defenders of Justice.)
+5/5
+Mega-Pony, Heroic Titan
+(W) Legendary Artifact Creature — Construct
+Haste, vigilance, lifelink
+When Mega-Pony, Heroic Titan dies, return target Pilot or Vehicle card from your graveyard to your hand.
+Fighting for truth, honor, and relatively little collateral damage.
+9/9
+Fumble (ub)
+Instant
+Move a counter from target permanent onto another target permanent.
+Draw a card.
+”If you wanted it, you clearly would’ve kept a better grip on it.”
+—Discord
+Mule Tzu, Master Tactician RW
+Legendary Creature — Pony Donkey
+1R: Target creature attacks this turn if able.
+1W: Destroy target creature that dealt combat damage to you this turn.
+To this day, Chineigh has not responded to Equestria’s diplomatic overtures.
+1/1
+Scuttling Crabapples GU
+Creature — Plant Crab
+Scuttling Crabapples can’t be blocked except by creatures with power equal to its power.
+Evolve (Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)
+1/1
+Dismal Atmosphere (br)(br)(br)
+Enchantment
+Wither (This deals damage to creatures in the form of -1/-1 counters.)
+At the beginning of your upkeep, Dismal Atmosphere deals 1 damage to each creature and player.
+Ponyville wilted under the constant gloom as the gremlins glutted themselves on its sorrow.
+Cloud Gremlins 1WUB
+Creature — Gremlin Rogue
+Flying
+Whenever a creature attacks you or a planeswalker you control, that creature gets -1/-1 until end of turn and Cloud Gremlins gets +1/+1 until end of turn.
+4U: Target attacking creature has base power and toughness 1/1 until end of turn.
+2/2
+Curse of Bad Publicity 2WB
+Enchantment — Aura Curse
+Enchant player
+Whenever you cast a spell, enchanted player loses 1 life.
+Whenever enchanted player casts a spell, you gain 1 life.
+Found guilty in the court of public opinion.
+Reality Bubble 2GWU
+World Enchantment
+When Reality Bubble enters the battlefield, each player draws seven cards, then may put any number of nonland permanent cards from his or her hand onto the battlefield. Those permanents gain “When Reality Bubble isn’t on the battlefield, sacrifice this permanent.” Then exile all other nonland permanents for as long as Reality Bubble is on the battlefield.
+Double Rainboom 9
+(WUBRG) Sorcery
+If you spent W to cast Double Rainboom, double your life total. If you spent U to cast it, draw a card for each card in your hand. If you spent B to cast it, each opponent loses life equal to the life he or she lost this turn. If you spent R to cast it, Double Rainboom deals damage to each creature equal to the damage dealt to it this turn. If you spent G to cast it, double the number of each kind of counter on each permanent.
+Liquid Ruination XBG
+Instant
+Choose one —
+• Target creature gets -X/-X until end of turn.
+• Destroy target noncreature, nonland permanent with converted mana cost X or less.
+Entwine—Pay X life. (Choose both if you pay the entwine cost.)
+Experimental Field
+Land
+At the beginning of each player’s upkeep, that player untaps and gains control of Experimental Field.
+T: Add one mana of any color to your mana pool.
+”Apple seeds already have incredible genetic variance. With me involved, who knows what could happen?”
+—Discord
