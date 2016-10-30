@@ -1,3 +1,8 @@
+## 1.1.2
+
+* Fixed an issue with the FICG parser which caused it to misinterpret the final word of the card name as a mana cost on
+  cards which don't have a cost.
+
 ## 1.1.1
 
 * Corrected a couple of layout issues with the proxy generator on non-main pages.

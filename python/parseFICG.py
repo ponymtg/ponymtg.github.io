@@ -200,20 +200,24 @@ def is_type_line(line):
     return True
 
 
-
-def split_name_and_cost_line_into_name_and_cost(name_and_cost_line):
-    # There are two situations that we need to consider:
-    #
-    # 1. The name and cost line consists of the card's name followed by the cost.
-    #
-    #    Example: "Applejack, Element of Honesty 4GG"
-    #
-    # 2. The name and cost line is for a split card, and thus consists of two name-cost pairs, separated by a
-    #    double-slash.
-    #
-    #    Example: "Bait 3G//Switch 5U"
-
-
+# Given a name and cost line string (eg. "Applejack, Element of Honesty 4GG"), split it into the name part and the cost
+# part. There are three situations that we need to consider:
+#
+# 1. The name and cost line consists of the card's name followed by the cost.
+#
+#    Example: "Applejack, Element of Honesty 4GG": the name is "Applejack, Element of Honesty" and the cost is "4GG".
+#
+# 2. The name and cost line is for a split card, and thus consists of two name-cost pairs, separated by a
+#    double-slash.
+#
+#    Example: "Bait 3G//Switch 5U"
+#
+# 3. There isn't a cost at all, just the name.
+#
+# If `use_strict_cost_checking` is True, then this function will apply extra scrutiny when attempting to extract the
+# mana cost from the line, which is helpful in some certain situations. (Strict cost checking shouldn't be used all the
+# time, as it might be _too_ strict in some cases).
+def split_name_and_cost_line_into_name_and_cost(name_and_cost_line, use_strict_cost_checking = False):
     if '//' in name_and_cost_line:
         # The name and cost line contains a double slash, so we will assume that it is a split card.
         name_and_cost_line_halves = [half.strip() for half in name_and_cost_line.split('//')]
@@ -231,11 +235,33 @@ def split_name_and_cost_line_into_name_and_cost(name_and_cost_line):
         cost2 = name_and_cost_2['cost']
         return {'name': name, 'cost': cost, 'cost2': cost2}
     else:
-        # This is not a split card, so we assume that it is a regular name-and-cost line. In this case, we take the last
-        # word of the line to be the cost.
+        # This is not a split card, so we assume that it is a regular name-and-cost line. Usually, in this case, the
+        # final word of the line is the cost (eg. "2WU"). However, there are rare cases where a card does not have a
+        # mana cost (for example, if it's the reverse side of a double-sided card). In such cases, the final word is
+        # part of the name.
+        #
+        # One way to be reasonably sure that the final word is part of the the name and not a mana cost, is to check if
+        # it contains any characters that wouldn't be expected in mana costs. However, since this is still prone to
+        # error, we only perform that check if the calling code requests it. Generally, we'll leave it up to the parser
+        # to make the decision based on other things that it knows about the card.
+
+        # By default, use the reasonable assumption that the last word on the line is the mana cost. (eg. "4GG").
         name_and_cost_line_pieces = name_and_cost_line.split()
         name = ' '.join(name_and_cost_line_pieces[0:-1])
         cost = name_and_cost_line_pieces[-1]
+
+        if use_strict_cost_checking:
+            # If strict checking was requested, we check the cost we just obtained against a whitelist of characters
+            # that we might expect to appear in a mana cost.
+            manaCostCharacters = r"WUBRGCXS0123456789(){}\[\]/"
+            nonManaCostRegex = "[^"+manaCostCharacters+"]"
+            if re.search(nonManaCostRegex, cost, re.IGNORECASE) is not None:
+                # If any characters were found in the cost that aren't on the whitelist, we can be reasonably sure that
+                # the "cost" we obtained is not really a mana cost, but is actually the last word in the card's name. In
+                # that case, we just return the (full) name and don't return a cost.
+                name = name + ' ' + cost
+                return {'name': name}
+
         return {'name': name, 'cost': cost}
 
 
@@ -381,8 +407,8 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     name_and_cost_line = individual_card_dump_lines[0]
     type_line = individual_card_dump_lines[1]
 
-    # Extract the supertype (and subtype, and color indicator, if present) first. We need this because we want to make a decision about how
-    # to interpret the name-and-cost line, and that decision depends on the card's supertype.
+    # Extract the supertype (and subtype, and color indicator, if present) first. We need this because we want to make a
+    # decision about how to interpret the name-and-cost line, and that decision may depend on some of this information.
     type_line_properties = split_type_line(type_line)
 
     for property_name in type_line_properties:
@@ -393,11 +419,20 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     if 'Land' in card_data_entry['supertype'] or 'Scheme' in card_data_entry['supertype'] or 'Conspiracy' in card_data_entry['supertype'] or ('Plane' in card_data_entry['supertype'] and 'Planeswalker' not in card_data_entry['supertype']):
         card_data_entry['name'] = name_and_cost_line
     else:
-        # Otherwise, if not a land, we will assume that the line contains a name and a cost, and will split it
-        # accordingly.
+        # Otherwise, if not a land, we will assume that the line contains a name and (probably) a cost, and will split
+        # it accordingly.
         name_and_cost_line_properties = split_name_and_cost_line_into_name_and_cost(name_and_cost_line)
+        if 'colorIndicator' in card_data_entry:
+            # Special case: If the card has a color indicator, this is often a sign that we are dealing with the reverse
+            # side of a double-sided card. These cards tend not to have mana costs, which can confuse our parser.
+            # Therefore, in # this situation, we'll request strict cost checking on the name and cost line. This will
+            # add an extra level of scrutiny which will make it easier for the function to tell whether there is a mana
+            # cost or not.
+            name_and_cost_line_properties = split_name_and_cost_line_into_name_and_cost(name_and_cost_line, True)
+            
         card_data_entry['name'] = name_and_cost_line_properties['name']
-        card_data_entry['cost'] = name_and_cost_line_properties['cost']
+        if 'cost' in name_and_cost_line_properties:
+            card_data_entry['cost'] = name_and_cost_line_properties['cost']
         if 'cost2' in name_and_cost_line_properties:
             # If the card was a split card, we should have gotten back a second cost (`cost2`), so we'll include that in
             # the card data.
