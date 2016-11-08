@@ -618,7 +618,7 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump):
 # Read command line arguments.
 
 if len(sys.argv) != 4:
-    print("python "+sys.argv[0]+ "FICG_DUMP_PATH JS_VARIABLE_NAME SET_NAME")
+    print("python "+sys.argv[0]+ " FICG_DUMP_PATH JS_VARIABLE_NAME SET_NAME")
     print("""
 Parses a dump of raw card data in FanOfMostEverything's textual format into
 structured JSON of the form accepted by PonyMTG.

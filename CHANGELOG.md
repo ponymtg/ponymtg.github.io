@@ -1,3 +1,7 @@
+## 1.1.3
+
+* Updated "Friendship is Card Games" with the latest IDW cards.
+
 ## 1.1.2
 
 * Fixed an issue with the FICG parser which caused it to misinterpret the final word of the card name as a mana cost on

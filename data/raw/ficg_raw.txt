@@ -17936,3 +17936,127 @@ At the beginning of each player’s upkeep, that player untaps and gains control
 T: Add one mana of any color to your mana pool.
 ”Apple seeds already have incredible genetic variance. With me involved, who knows what could happen?”
 —Discord
+Forget to Write 1W
+Instant
+Creatures leaving the battlefield don’t cause abilities to trigger this turn.
+Draw a card.
+”I was busy!”
+—Rainbow Dash, Bearer of Loyalty
+Scent of Flax 1W
+Instant
+Reveal any number of white cards in your hand. Put that up to that many enchantment cards from your graveyard on top of your library.
+The nose senses little. The soul flourishes.
+Spiritual Renovation 2WW
+Sorcery
+You may put an enchantment card from your hand or graveyard onto the battlefield.
+”If the present is the future’s past, then, like, we are all time travelers.”
+—Flax Seed, wellness guru
+Radiant Blast 3W
+Sorcery
+Destroy target artifact, enchantment, or tapped creature.
+”The cruel enjoy your suffering. The kind will end you in an instant. And my sister is very kind indeed.”
+—Princess Luna
+Spawnsculptor 3W
+Creature — Homarid Spellshaper
+4, T, Discard a card: Create a 4/3 colorless Homarid artifact creature token named Rock Lobster. It has “Creatures named Scissors Lizard can’t attack or block.”
+W, T, Discard a card: Target creature’s name becomes Scissors Lizard until end of turn.
+1/2
+Celestia’s Aid 3WW
+Enchantment — Aura
+Enchant creature
+Enchanted creature gets +2/+2 and has flying and vigilance.
+When enchanted creature dies, exile each creature that dealt damage to it this turn.
+Like the sun, it is both boon and bane.
+Fashion Show 1U
+Sorcery
+Each player may put an Aura or Equipment card from his or her hand onto the battlefield. Each player who put an Equipment onto the battlefield this way may attach it to a creature he or she controls.
+Eerie Billboard 2U
+Creature — Wall
+Defender
+Whenever a source deals damage to Eerie Billboard, that source’s controller puts that many cards from the top of his or her library into his or her graveyard.
+0/5
+Hornswoggle 2U
+Instant
+Counter target spell unless its controller pays 2 for each Unicorn you control.
+The unicorn tribe’s reputation for sinister behavior is unfair but not unearned.
+Scope Crafter 2U
+Creature — Unicorn Artificer
+Whenever an artifact enters the battlefield under your control, scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)
+Canterlotters always respect those who can see what’s on the horizon.
+1/3
+Soy Synthesis 2UU
+Sorcery
+Create a token that’s a copy of target nonland permanent.
+From one bean, infinite possibility
+Mind Expansion 3U
+Sorcery
+Draw three cards. Your maximum hand size is reduced by three this turn.
+The herbal blend opens you to cosmic insight even as it lessens your ability to retain it.
+Overstuffed Luggage 3U
+Enchantment
+At the beginning of each player’s upkeep, if that player has six or more cards in his or her hand, he or she may cast a card from his or her hand without paying its mana cost.
+Seapony Diplomat 3U
+Creature — Pony Merfolk Advisor
+When Seapony Diplomat enters the battlefield, each player draws two cards.
+Rarely seen on the surface, seaponies always make sure they leave a good impression on the drywalkers.
+1/2
+Need for Perfection 1B
+Enchantment
+B, Pay 1 life, Put a card in your hand on the bottom of your library: Draw a card.
+”Of course it’s necessary. Even the slightest flaw could end my career.”
+—Rarity, Bearer of Generosity
+Wild and Crazy Stallion 2R
+Creature — Pony Rogue
+When Wild and Crazy Stallion enters the battlefield, if you control another creature named Wild and Crazy Stallion, gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.
+Ponies follow them just to see what they do next.
+3/2
+True Omnivore 3R
+Creature — Dragon
+2, Sacrifice another permanent: Put a +1/+1 counter on True Omnivore.
+If it exists, a dragon can eat it.
+2/2
+Lava Bombardment 5RRR
+Instant
+Lava Bombardment deals 6 damage divided as you choose among any number of target creatures and/or players.
+Ponies tend to many of Ungula’s natural forces, but volcanoes obey no one.
+Manual Labor G
+Enchantment
+Creatures you control have “T: Add C to your mana pool.”
+”Work the body, uplift the mind.”
+—Wheat Germ, wellness guru
+Anger the Hive 2G
+Sorcery
+Target player gains 4 life. Another target player creates two 1/1 green Insect creature tokens with flying and deathtouch.
+”You invaded a kingdom. Why didn’t you expect an army?”
+—Fluttershy, Bearer of Kindness
+Party Toga 2
+Artifact — Equipment
+Whenever equipped creature attacks, you may discard a card. If you do, draw a card.
+Equip 1
+”Are those my good sheets!?”
+—Rarity, Bearer of Generosity
+Cobble Together (rw)
+Sorcery
+As an additional cost to cast Cobble Together, sacrifice two artifacts.
+Return target artifact card from your graveyard to the battlefield.
+”Not the first time I’ve had to improvise.”
+—Rarity, Bearer of Generosity
+Mass Lignify 1GU
+Instant
+Until end of turn, each creatures becomes a Plant with base power and toughness 0/4 and loses all abilities.
+”Sparkle did have a tendency to veg out when she was younger.”
+—Night Light
+Illusionist’s Gamble 3UR
+Sorcery
+Exile target nontoken creature you control, target nontoken creature you don’t control, and the top card of your library in a face-down pile, then shuffle that pile. The second creature’s controller manifests one of the exiled cards at random. You manifest the rest. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up at any time for its mana cost if it’s a creature card.)
+Crystalline Peak
+Land
+Crystalline Peak enters the battlefield tapped.
+When Crystalline Peak enters the battlefield, scry 1.
+T: Add R to your mana pool.
+Wellness Center
+Land
+T: Add C to your mana pool.
+1, T: Any number of target players each gain 1 life.
+”Enough mud for a dozen spas.”
+—Applejack, Bearer of Honesty
