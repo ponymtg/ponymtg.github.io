@@ -64,6 +64,10 @@ function generatePrintSheetForCards(cards, hashes) {
             }
             cardElement.style.display = 'inline-block';
             cardElement.style.margin = (global.dimensions.printSheet.cardSpacing/2)+'px';
+
+            // The Bootstrap CSS aligns images to the middle by default, but that will mess up our alignment on the
+            // print sheet (we want a regular grid formation), so we align everything to the top instead.
+            cardElement.style.verticalAlign = 'top';
             global.elements.printSheetCardsContainer.appendChild(cardElement);
         }
     }

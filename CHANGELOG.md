@@ -1,5 +1,8 @@
 ## 1.1.3
 
+* Fixed an alignment issue on the print sheet generator where card images were aligning to the middle instead of the
+  top.
+* Made the PonyMTG logo a link to the home page.
 * Updated "Friendship is Card Games" with the latest IDW cards.
 
 ## 1.1.2
@@ -49,7 +52,7 @@
 * Added Bootstrap styles to pages that didn't have them yet.
 * Added a warning to the advanced search box to note that it's not yet 100% useful.
 * Changed the container for result card images from `col-md-3` to `col-md-5`, which avoids an issue of the image
-overlapping the info box at some screen widths (due to the fact that card images are not permitted to resize).
+  overlapping the info box at some screen widths (due to the fact that card images are not permitted to resize).
 * Removed the "Search by" panel.
 * Improved the styling of the search field and the card info panels.
 * Reworded the About page and added a disclaimer.
