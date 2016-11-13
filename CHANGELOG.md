@@ -1,3 +1,8 @@
+## 1.1.4
+
+* Added a Bash script to ease invocation of the FICG parser.
+* Updated "Friendship is Card Games" with the latest IDW cards.
+
 ## 1.1.3
 
 * Fixed an alignment issue on the print sheet generator where card images were aligning to the middle instead of the

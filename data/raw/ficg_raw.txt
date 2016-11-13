@@ -18060,3 +18060,128 @@ T: Add C to your mana pool.
 1, T: Any number of target players each gain 1 life.
 ”Enough mud for a dozen spas.”
 —Applejack, Bearer of Honesty
+Imperial Librarian 1W
+Creature — Pony Advisor
+Each player can’t draw more than one card each turn.
+Overdue books are no longer a killing offense in the Crystal Empire, but they still have a strict checkout limit.
+2/2
+Minister of Silly Walks 3W
+Creature — Pony Advisor
+Whenever Minister of Silly Walks attacks, untap all creatures you control.
+Equestria’s government is a vast, multifaceted affair. Even Celestia isn’t sure why some departments exist, but the country still hums along.
+2/2
+In Another Castle 6W
+Instant
+All damage that would be dealt to you this turn is dealt to target creature or player instead.
+”Not again.”
+—Mushroom Risotto, imperial plumber
+Imprisonment 1UU
+Enchantment — Aura
+Enchant creature
+You control enchanted creature.
+Enchanted creature can’t attack.
+”You are mine.”
+—King Sombra
+Muse’s Guidance 2UU
+Enchantment
+At the beginning of each player’s draw step, look at the top card of that player’s library. You may put that card on the bottom of that library. Then that player draws an additional card.
+Sometimes, art takes control.
+Size Up 3UU
+Sorcery
+Choose one —
+• Draw cards equal to the power of target creature you control.
+• Draw cards equal to the toughness of target creature you control.
+Night Sprite 1B
+Creature — Faerie
+Flying
+When Night Sprite enters the battlefield, each player who doesn’t control an artifact loses 2 life.
+Unlike most fae, they’re fascinated by modern technology and those who embrace it. Others receive the full brunt of their whimsy.
+1/1
+Destructive Critic 2B
+Creature — Pony Advisor
+Whenever a player casts a spell, that player loses 1 life.
+”Pathetic. I’ve seen one-eyed mules do better work.”
+3/2
+Fit of Destruction R
+Instant
+Each player sacrifices an artifact.
+Some destroy out of frustration, some out of sorrow, and some out of wanting to hear the fun crunching sounds.
+Chamber of Extreme Knitting 3R
+Enchantment
+Whenever a nontoken creature enters the battlefield, that creature’s controller creates a token that’s a copy of that creature, except it’s an artifact in addition to its other types and has haste and “At the beginning of the end step, exile this creature.”
+Outrageous Creativity 4RRR
+Sorcery
+Take an extra turn after this one. At the beginning of that turn’s upkeep, exile all cards from your library. You may play cards exiled this way that turn. Skip that turn's draw step.
+”If I have to go out, I want to go out strong.”
+—Vinyl Scratch
+Nest Cleaning 1G
+Sorcery
+Kicker G (You may pay an additional G as you cast this spell.)
+Each player may put any number of cards from his or her graveyard on the bottom of his or her library in any order. If Nest Cleaning was kicked, shuffle your library.
+Tree Goblin 1G
+Creature — Goblin Scout
+Tree Goblin can’t be blocked except by creatures with flying or reach.
+Goblins lurk at the edges of civilization, forced out by ponies’ greater strength and cooperation.
+2/1
+Knitted Gremlin 2
+Artifact Creature — Gremlin
+Knitted Gremlin has menace as long as you control a black creature.
+A bully looking for a victim.
+2/1
+Sculpted Lightning 2
+Artifact
+At the beginning of your upkeep, put a charge counter on Sculpted Lightning.
+2, Sacrifice Sculpted Lightning: Sculpted Lightning deals damage equal to the number of charge counters on it to target creature or player.
+Knitted Branches 3
+Artifact Creature — Plant
+Knitted Branches has reach as long as you control a green creature.
+A harvest looking for a farmhoof.
+1/4
+Knitted Swarm 3
+Artifact Creature — Pest
+Knitted Swarm has flying as long as you control a blue creature.
+A cloud looking for an aggregator.
+2/2
+Chimeric Collage 3
+Artifact
+3: Until end of turn, Chimeric Collage becomes a Construct artifact creature with “This creature’s power and toughness are each equal to the number of artifacts you control.”
+It ties your doom together.
+Knitted Wyrm 4
+Artifact Creature — Dragon
+Flying
+Knitted Wyrm has haste as long as you control a red creature.
+A hunger looking for a morsel.
+2/2
+Clockwork Legion 5
+Artifact Creature — Soldier
+Clockwork Legion enters the battlefield with a +1/+1 counter on it for each creature you control.
+Whenever another creature enters the battlefield under your control, put a +1/+1 counter on Clockwork Legion.
+Whenever Clockwork Legion attacks or blocks, remove a +1/+1 counter from it at end of combat.
+0/0
+Knitted Seraph 5
+Artifact Creature — Pony Angel
+Flying
+Knitted Seraph has lifelink and vigilance as long as you control a white creature.
+An answer looking for a prayer.
+3/3
+Monsterpedia 5
+Artifact
+3, T: Scry 1, then reveal the top card of your library. If it’s a creature card, put it into your hand.
+Fact and fiction blend imperceptibly in its pages.
+Wood Sprite GU
+Creature — Faerie
+Flying, hexproof
+Skulk (This creature can’t be blocked by creatures with greater power.)
+Sprites are so elusive that most ponies don’t think they exist.
+1/1
+Celestia’s Approval 3GW
+Enchantment — Aura
+Enchant creature
+Enchanted creature has hexproof.
+Prevent all combat damage that would be dealt to enchanted creature.
+Who would dare tamper with what the sun holds dear?
+Crystal Bard 3(gu)W
+Snow Creature — Elemental
+Whenever you draw a card, you gain 1 life.
+Though normally shy, crystal bards can be coaxed out of hiding by an appreciative audience.
+2/5
