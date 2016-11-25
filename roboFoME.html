@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>RoboFoME</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="third_party/bootstrap-3.3.6-dist/css/bootstrap.css" />
+        <link rel="icon" type="image/x-icon" href="images/icons/ponymtg_icon.png" />
+    </head>
+    <body style="width:75%;margin:1% auto">
+        <h1 style="text-align:center">RoboFoME random card generator</h1>
+        <p>
+            RoboFoME is a random card generator inspired by
+            <a href="https://twitter.com/RoboRosewater">RoboRosewater</a>. It uses frequency analysis to randomly
+            generate statistically accurate (but semantically meaningless) Magic cards from FanOfMostEverything's
+            <a href="http://www.fimfiction.net/blog/406600/gathered-friendship-the-ficg-index">
+                <em>Friendship is Card Games</em>
+            </a> set. Any playable cards generated are purely accidental.
+        </p>
+        <p style="font-size:0.75em">
+            "<a href="http://mrponiator.deviantart.com/art/Princess-Daapi-561686715">Princess Daapi</a>" animation by
+            <a href="http://mrponiator.deviantart.com">MrPoniator</a>.
+        </p>
+
+        <div id="statusPanel" class="panel panel-default" style="text-align:center;padding:16px">
+            <div class="panel-body">
+                <div style="margin:16px">
+                    <img src="images/loading/derpy_princess_twilight.gif" />
+                </div>
+                <div id="statusMessage" style="font-weight: bold;"></div>
+                <div class="progress">
+                    <div id="progressBar" class="progress-bar progress-bar-striped active" role="progressbar" style="width:0%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="data/js/ficg_cards.js"></script>
+<script src="js/main.js"></script>
+<script src="js/roboFoME.js"></script>

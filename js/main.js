@@ -2732,6 +2732,17 @@ function rnd(max) {
 }
 
 /**
+ * Given a string `string`, return its reverse.
+ */
+function reverseString(string) {
+    var reversedString = '';
+    for (var i=string.length-1; i >= 0; i--) {
+        reversedString += string.substr(i, 1);
+    }
+    return reversedString;
+}
+
+/**
  * Escape any regex metacharacters in `string`.
  */
 function escapeRegex(string) {
@@ -2828,25 +2839,4 @@ function sortByProperties(objects, properties, ignoreCase) {
             return 0;
         }
     );
-}
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Polyfills
-
-/**
- * Polyfill for the `includes` method, which isn't supported in Internet Explorer.
- */
-if (!String.prototype.includes) {
-  String.prototype.includes = function(search, start) {
-    'use strict';
-    if (typeof start !== 'number') {
-      start = 0;
-    }
-    
-    if (start + search.length > this.length) {
-      return false;
-    } else {
-      return this.indexOf(search, start) !== -1;
-    }
-  };
 }

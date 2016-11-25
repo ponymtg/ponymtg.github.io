@@ -1,3 +1,7 @@
+## 1.2.0
+
+* Added RoboFoME, a random card generator.
+
 ## 1.1.4
 
 * Added a Bash script to ease invocation of the FICG parser.
