@@ -1,3 +1,7 @@
+## 1.2.1
+
+* Improved RoboFoME's generation algorithm.
+
 ## 1.2.0
 
 * Added RoboFoME, a random card generator.

@@ -336,18 +336,13 @@ function produceFrequencyDataSuite(corpus, depth) {
             'general': createFrequencyNode(),
             'start': createFrequencyNode(),
             'end': createFrequencyNode(),
+            'endReversed': createFrequencyNode(),
         },
         'frequencyTables': {
-            'paragraph': {
-                'counts': {},
-                'wordsInFirst': {},
-                'wordsInLast': {},
-            },
-            'word': {
-                'counts': {},
-            },
-            'character': {
-                'counts': {},
+            'counts': {
+                'paragraph': {},
+                'word': {},
+                'character': {},
             },
         },
     };
@@ -364,36 +359,60 @@ function produceFrequencyDataSuite(corpus, depth) {
 
         var paragraphCount = paragraphs.length;
 
-        if (dataSuite.frequencyTables.paragraph.counts[paragraphCount] === undefined) {
-            dataSuite.frequencyTables.paragraph.counts[paragraphCount] = 0;
+        if (dataSuite.frequencyTables.counts.paragraph[paragraphCount] === undefined) {
+            dataSuite.frequencyTables.counts.paragraph[paragraphCount] = 0;
         }
 
-        dataSuite.frequencyTables.paragraph.counts[paragraphCount]++;
+        dataSuite.frequencyTables.counts.paragraph[paragraphCount]++;
 
         // Similarly to the paragraph counts, we'd also like to record the counts of how many total words there are in
         // each text, as this will allow us to decide what a reasonable length of text is.
         var words = text.split(/\s+/);
         var wordCount = words.length;
 
-        if (dataSuite.frequencyTables.word.counts[wordCount] === undefined) {
-            dataSuite.frequencyTables.word.counts[wordCount] = 0;
+        if (dataSuite.frequencyTables.counts.word[wordCount] === undefined) {
+            dataSuite.frequencyTables.counts.word[wordCount] = 0;
         }
 
-        dataSuite.frequencyTables.word.counts[wordCount]++;
+        dataSuite.frequencyTables.counts.word[wordCount]++;
 
         // Also record the character counts.
         var characterCount = text.length;
 
-        if (dataSuite.frequencyTables.character.counts[characterCount] === undefined) {
-            dataSuite.frequencyTables.character.counts[characterCount] = 0;
+        if (dataSuite.frequencyTables.counts.character[characterCount] === undefined) {
+            dataSuite.frequencyTables.counts.character[characterCount] = 0;
         }
 
-        dataSuite.frequencyTables.character.counts[characterCount]++;
+        dataSuite.frequencyTables.counts.character[characterCount]++;
 
         // Update the frequency trees with frequency data from this text.
         scanTextIntoFrequencyTree(text, dataSuite.frequencyTrees.general, 1, depth);
+
+        // For the start frequency tree (the frequencies of character sequences that only occur at the start of text),
+        // we specify that the scan should be clamped to the start. Any character sequences that occur after the start
+        // of the text will be ignored.
         scanTextIntoFrequencyTree(text, dataSuite.frequencyTrees.start, 1, depth, 'start');
-        scanTextIntoFrequencyTree(text, dataSuite.frequencyTrees.end, 1, depth, 'end');
+
+        // The endings frequency tree is very similar to the start frequency tree, but we do something slightly unusual:
+        // we _reverse_ the text first, then clamp the scan to the start.
+        //
+        // This guarantees that we'll collect character sequences only from the end of the text, but in reverse order
+        // (ie. ".ynop" instead of "pony.". Although that seems weird, that's actually beneficial to us. Remember that
+        // the tree is only storing the frequencies of character sequences, so those frequencies would be the same
+        // whether the sequence is forward or backward. By collecting sequences in reverse like this, we can scan
+        // _backward_ from the end of text and be able to confirm with complete certainty whether or not the sequence
+        // we're looking at is a viable ending.
+        scanTextIntoFrequencyTree(reverseString(text), dataSuite.frequencyTrees.endReversed, 1, depth, 'start');
+
+        // For our final frequency tree, we clamp the scan to the end of the text (but collect the characters in their
+        // normal forward sequence). While this seems like it's ultimately the same as the "reversed ending" tree we
+        // just collected, it is subtly different. Remember that the reason we are building up these trees is so that we
+        // can use them to predict the next character in the text that we're generating. We can't do that with the
+        // "reversed" tree above (because the characters are reversed; it can only predict the _previous_ character,
+        // which although useful in some cases, isn't really what we need). So, we need to collect frequencies for
+        // character sequences that we know occur at the end of the text, and which also allow us to make predictions
+        // for the next character.
+        scanTextIntoFrequencyTree(text.substr(0 - depth, depth), dataSuite.frequencyTrees.end, 1, depth);
     }
 
     return dataSuite;
@@ -457,29 +476,6 @@ function scanTextIntoFrequencyTree(
 
             // Extract the character sequence contained inside the window.
             var characterSequence = text.substr(windowStartIndex, (windowEndIndex - windowStartIndex) + 1);
-
-            if (clampTo === "end") {
-                // If we're clamping to the end of the string, we do something a little unusual with the character
-                // sequence; we _reverse_ it. Remember that when end-clamping, we're only extracting runs from the very
-                // end of the string, so we can be sure, at this point, that the window is positioned at the end. For
-                // example, if the string is "Maud is best pony.", and we're currently extracting a window of 5
-                // characters clamped to the end, then `characterSequence` will currently be "pony.".
-                //
-                // However, for our purposes, it is more useful if we enter that into the frequency tree as ".ynop",
-                // rather than "pony.". The reason for this is that this allows us to unambiguously identify this as
-                // being the ending of the string. From the tree's perspective, it doesn't care what direction the
-                // characters are entered in, since it will record the same frequency of occurrence either way.
-                //
-                // To understand the problem, suppose that some strings end in "card" and some strings end in "cards".
-                // If we were to insert these into the frequency tree as "card" and "cards", we would have a problem
-                // when trying to predict the end of the string, since the tree has no way to tell us that "card" is an
-                // ending and not just a substring of "cards". If we insert them as "drac" and "sdrac", however, and
-                // declare a simple rule that the root node's children are always the final letter, then we can easily
-                // see that "card" and "cards" must, by definition, end the string.
-
-                // Reverse the character sequence.
-                characterSequence = reverseString(characterSequence);
-            }
 
             // Insert the character sequence into the frequency tree.
             addToFrequencyTree(frequencyTree, characterSequence);

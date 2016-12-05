@@ -3,6 +3,9 @@
  * probabalistic text generation.
  */
 
+// If true, `log` messages will be shown in the console.
+var showLogMessages = true;
+
 // Define some convenient references to elements that we'd like to update.
 var elementIds = [
     'statusPanel',
@@ -46,6 +49,7 @@ worker.addEventListener(
                 emptyElement(elements.statusPanel);
                 var generateCardButton = document.createElement('button');
                 var frequencyData = message.content;
+                log(frequencyData);
                 generateCardButton.id = 'generateCardButton';
                 generateCardButton.className = 'btn btn-primary btn-lg';
                 generateCardButton.innerHTML = 'Generate a card';
@@ -135,7 +139,7 @@ var SETTINGS = {
 worker.postMessage(SETTINGS);
 
 function generateCard(frequencyDataSuites) {
-    console.log(frequencyDataSuites);
+    log(frequencyDataSuites);
     var cardPropertyNames = Object.keys(frequencyDataSuites);
 
     // Generate a set of properties for a new card, by using frequency data with an appropriate generation function.
@@ -144,7 +148,9 @@ function generateCard(frequencyDataSuites) {
     for (var i=0; i < cardPropertyNames.length; i++) {
         var cardPropertyName = cardPropertyNames[i];
         var propertyGenerationSettings = SETTINGS.propertyGeneration[cardPropertyName];
-        console.log('Generating '+cardPropertyName+' property');
+        log('----------------');
+        log('Generating '+cardPropertyName+' property');
+        log('----------------');
         generatedProperties[cardPropertyName] = window[propertyGenerationSettings.generator](frequencyDataSuites[cardPropertyName], propertyGenerationSettings.depth);
     }
 
@@ -172,7 +178,7 @@ function generateCard(frequencyDataSuites) {
         // in Magic where an Instant or Sorcery _can_ have a subtype, we won't attempt to account for those.
         delete generatedCard['subtype'];
     }
-    console.log(generatedCard);
+    log(generatedCard);
 
     // Create a displayable proxy for the generated card.
     var generatedCardContainer = document.querySelector('#generatedCard');
@@ -188,47 +194,171 @@ function generateCard(frequencyDataSuites) {
  * we're interested in words.
  */
 function generateCardName(frequencyDataSuite) {
-    return generateCardProperty(frequencyDataSuite, frequencyDataSuite.frequencyTables.word.counts, ' ');
+    return generateCardProperty(
+        frequencyDataSuite,
+        frequencyDataSuite.frequencyTables.counts.word,
+        ' ',
+        1.5,
+        {
+            'start': 3,
+            'general': 1,
+            'end': 3,
+            'endReversed': 3,
+        }
+    );
 }
 function generateCardText(frequencyDataSuite) {
-    return generateCardProperty(frequencyDataSuite, frequencyDataSuite.frequencyTables.paragraph.counts, '\n\n');
+    return generateCardProperty(
+        frequencyDataSuite,
+        frequencyDataSuite.frequencyTables.counts.word,
+        ' ',
+        1.5,
+        {
+            'start': 3,
+            'general': 3,
+            'end': 3,
+            'endReversed': 5,
+        }
+    );
+    //return generateCardProperty(frequencyDataSuite, frequencyDataSuite.frequencyTables.counts.paragraph, '\n\n', 1.5);
 }
 function generateCardFlavorText(frequencyDataSuite) {
-    return generateCardProperty(frequencyDataSuite, frequencyDataSuite.frequencyTables.word.counts, ' ');
+    return generateCardProperty(
+        frequencyDataSuite,
+        frequencyDataSuite.frequencyTables.counts.word,
+        ' ',
+        1.5,
+        {
+            'start': 3,
+            'general': 3,
+            'end': 3,
+            'endReversed': 5,
+        }
+    );
 }
 function generateCardSupertype(frequencyDataSuite) {
-    return generateCardProperty(frequencyDataSuite, frequencyDataSuite.frequencyTables.word.counts, ' ');
+    // We make the supertype (and subtype) generation very generous, allowing it to make predictions even from a single
+    // character if it has to. We don't want to make things too difficult for the supertype and subtype generation
+    // because it already has to deal with a much-reduced frequency set (supertypes, for example, follow simple patterns
+    // from which they rarely deviate) and thus we want to avoid the kind of situation where it has to wildly guess.
+    return generateCardProperty(
+        frequencyDataSuite,
+        frequencyDataSuite.frequencyTables.counts.word,
+        ' ',
+        1.5,
+        {
+            'start': 1,
+            'general': 1,
+            'end': 1,
+            'endReversed': 1,
+        }
+    );
 }
 function generateCardSubtype(frequencyDataSuite) {
-    return generateCardProperty(frequencyDataSuite, frequencyDataSuite.frequencyTables.word.counts, ' ');
+    return generateCardProperty(
+        frequencyDataSuite,
+        frequencyDataSuite.frequencyTables.counts.word,
+        ' ',
+        1.5,
+        {
+            'start': 1,
+            'general': 1,
+            'end': 1,
+            'endReversed': 1,
+        }
+    );
 }
 function generateCardCost(frequencyDataSuite) {
-    return generateCardProperty(frequencyDataSuite, frequencyDataSuite.frequencyTables.character.counts);
+    return generateCardProperty(
+        frequencyDataSuite,
+        frequencyDataSuite.frequencyTables.counts.character,
+        undefined,
+        1.5,
+        {
+            'start': 1,
+            'general': 1,
+            'end': 1,
+            'endReversed': 1,
+        }
+    );
 }
 function generateCardPt(frequencyDataSuite) {
-    return generateCardProperty(frequencyDataSuite, frequencyDataSuite.frequencyTables.character.counts);
+    return generateCardProperty(
+        frequencyDataSuite,
+        frequencyDataSuite.frequencyTables.counts.character,
+        undefined,
+        1.5,
+        {
+            'start': 1,
+            'general': 1,
+            'end': 1,
+            'endReversed': 1,
+        }
+    );
 }
 function generateCardLoyalty(frequencyDataSuite) {
-    return generateCardProperty(frequencyDataSuite, frequencyDataSuite.frequencyTables.character.counts);
+    return generateCardProperty(
+        frequencyDataSuite,
+        frequencyDataSuite.frequencyTables.counts.character,
+        undefined,
+        1.5,
+        {
+            'start': 1,
+            'general': 1,
+            'end': 1,
+            'endReversed': 1,
+        }
+    );
 }
 
 /**
  * Generates a card property based on supplied frequency data.
  *
- * `frequencyDataSuite`:        A suite of frequency data containing, among other things, the trees which hold symbol
- *                              frequencies.
+ * `frequencyDataSuite`:
+ * A suite of frequency data containing, among other things, the trees which hold symbol frequencies.
  *
- * `blockCountsFrequencyTable`: A frequency table which holds frequencies for how many times a certain class of block is
- *                              known to occur in the corpus. "block" in this case is an abstract way to refer to a
- *                              unit of text; we essentially mean something like "word" or "paragraph". We use this
- *                              frequency data to help the algorithm decide how long to make the text.
+ * `blockCountsFrequencyTable`: 
+ * A frequency table which holds frequencies for how many times a certain class of block is known to occur in the
+ * corpus. "block" in this case is an abstract way to refer to a unit of text; we essentially mean something like "word"
+ * or "paragraph". We use this frequency data to help the algorithm decide how long to make the text.
  *
- * `blockSeparator`:            A string which is known to separate blocks. The algorithm needs to know this in order to
- *                              know what we actually mean by "block". If left undefined, the algorithm will assume that
- *                              each character is a block, and will thus end once it has decided that enough characters
- *                              have been generated.
+ * `blockSeparator`:            
+ * A string which is known to separate blocks. The algorithm needs to know this in order to know what we actually mean
+ * by "block". If left undefined, the algorithm will assume that each character is a block, and will thus end once it
+ * has decided that enough characters have been generated.
+ *
+ * `endingThresholdFactor`:     
+ * After a certain number of blocks have been generated (`maxBlocks`), the algorithm will go into "attempt ending" mode,
+ * which means that it is now trying to end the text as smoothly as possible (using the frequency data that it has on
+ * likely text endings). We give it a certain number of additional blocks in which to attempt to do this, and that
+ * number is determined by the `endingThresholdFactor`. A value of 1.5, for example, means that we allow the generation
+ * to continue on for half as many blocks as have already been generated (ie. if 10 blocks were generated, we let it
+ * continue for an extra 5) in the hopes that it will be able to find a viable ending for the text. If it still can't
+ * properly end the text after that, we just have to end the generation there.
+ *
+ * `lookbackThresholds`:
+ * In the event that this algorithm is unable to recommend a likely next character (for example, if it's an unusual
+ * sequence that the frequency data doesn't have any record of), it will try shortening the character sequence that it's
+ * attempting to predict for, which is more likely to yield results. We want to set limits on how short the sequence
+ * will go, though; too short, and the algorithm won't be using enough data to make a reasonable prediction (that is, it
+ * won't be looking back far enough). The amount that we want to look back will generally depend on where in the
+ * sequence the generated character is, so we need to provide a set of thresholds for start characters, general
+ * characters, and end characters.
+ *
+ * `attemptEndingMinCharacters`:
+ * When the algorithm is in "attempt ending" mode, it will start scanning the last few characters to try to see if there
+ * is a place where the text could reasonably be ended. Like `minCharacters`, it will have a few attempts at this,
+ * shortening the sequence by 1 character each time. This parameter sets the minimum number of characters that it will
+ * go to when making these attempts. We don't want to make this number too small, or the algorithm will be able to end
+ * the text too easily (and unrealistically).
  */
-function generateCardProperty(frequencyDataSuite, blockCountsFrequencyTable, blockSeparator) {
+function generateCardProperty(
+    frequencyDataSuite,
+    blockCountsFrequencyTable,
+    blockSeparator,
+    endingThresholdFactor,
+    lookbackThresholds
+) {
     var maxBlocks = weightedRandomSelect(blockCountsFrequencyTable);
 ////////
     var blockSeparatorDescription = 'character';
@@ -238,18 +368,12 @@ function generateCardProperty(frequencyDataSuite, blockCountsFrequencyTable, blo
     if (blockSeparator === '\n\n') {
         blockSeparatorDescription = 'paragraph';
     }
-    //console.log('Generating '+maxBlocks+' '+blockSeparatorDescription+'s');
+    log('Generating '+maxBlocks+' '+blockSeparatorDescription+'s');
 ////////
 
     var generatedText = '';
     var characterCount = 0;
     var blockCount = 0;
-
-    // In the event that this algorithm is unable to recommend a likely next character (for example, if it's an unusual
-    // sequence that the frequency data doesn't have any record of), it will try shortening the character sequence that
-    // it's attempting to predict for, which is more likely to yield results. We'll set a minimum threshold here for how
-    // short we'll permit the character sequence to be.
-    var minCharacters = 1;
 
     // Prepare a set of alphabetic characters for situations where we just have to randomly choose a character.
     var alphabet = 'abcdefghjiklmnopqrstuvwxyz';
@@ -257,14 +381,10 @@ function generateCardProperty(frequencyDataSuite, blockCountsFrequencyTable, blo
     // If the `attemptEnding` flag is true, the generation loop will start trying to find ways to smoothly end the text.
     var attemptEnding = false;
 
-    // After a certain number of blocks have been generated (`maxBlocks`), the algorithm will go into "attempt ending"
-    // mode, which means that it is now trying to end the text as smoothly as possible (using the frequency data that it
-    // has on likely text endings). We give it a certain number of additional blocks in which to attempt to do this,
-    // and that number is determined by the `endingThresholdFactor`. A value of 1.5, for example, means that we allow
-    // the generation to continue on for half as many blocks as have already been generated (ie. if 10 blocks were
-    // generated, we let it continue for an extra 5) in the hopes that it will be able to find a viable ending for the
-    // text. If it still can't properly end the text after that, we just have to end the generation there.
-    var endingThresholdFactor = 1.5;
+
+    if (endingThresholdFactor === undefined) {
+        endingThresholdFactor = 1;
+    }
 
     //while (blockCount < maxBlocks || attemptEnding) {
     while (true) {
@@ -274,16 +394,23 @@ function generateCardProperty(frequencyDataSuite, blockCountsFrequencyTable, blo
 
         var nextCharacterSuggestions = undefined;
         // By default, use the general frequency tree for prediction.
-        var frequencyTreeToUse = frequencyDataSuite.frequencyTrees.general;
+        var frequencyTreeToUse = 'general';
 
         if (characterCount < frequencyDataSuite.depth) {
             // For the first few characters generated, we'll take suggestions from our start frequency tree, as that was
             // generated using only characters that are known to occur at the beginning of text.
-            nextCharacterSuggestions = getNextCharacterSuggestions(lastCharacters, frequencyDataSuite.frequencyTrees.start);
-            frequencyTreeToUse = frequencyDataSuite.frequencyTrees.start;
+            frequencyTreeToUse = 'start';
         }
 
         if (attemptEnding) {
+            // If we've been instructed to try to end the text, we enter a new mode where we scan the end of the current
+            // text for patterns that we know can lead to the end of the text. We do this check first, before we try any
+            // actual prediction, since it's possible we may already be able to end the text here.
+            //
+            // For example, if we have so far generated the string "Maud is best p", we check our tree of endings to see
+            // if any of the last characters in that string are known to lead to endings.
+            //
+            // Suppose that we scan the last 5 characters: "est p". This probably 
             // If we've been instructed to try to end the text, do a bit of scanning to see if that is actually
             // possible. To determine this, we check the last few characters against our ending frequency tree to see
             // if there are any character sequences which we know can reasonably end the text. If we find any, then
@@ -291,22 +418,104 @@ function generateCardProperty(frequencyDataSuite, blockCountsFrequencyTable, blo
 
             // Remember that the ending frequency tree enters its characters in reverse order, so we'll have to reverse
             // our characters too to perform this lookup.
-            var endFrequencyNode = traverseFrequencyTree(frequencyDataSuite.frequencyTrees.end, reverseString(lastCharacters));
-            //console.log('Checking "'+lastCharacters+'" for ending plausibility.');
+
+            var attemptEndingCharacters = reverseString(lastCharacters);
+
+            var endFrequencyNode = undefined;
+
+            while (endFrequencyNode === undefined && attemptEndingCharacters.length >= lookbackThresholds.endReversed) {
+                log('Checking "'+reverseString(attemptEndingCharacters)+'" for ending plausibility.');
+                var endFrequencyNode = traverseFrequencyTree(
+                    frequencyDataSuite.frequencyTrees.endReversed,
+                    attemptEndingCharacters
+                );
+                if (endFrequencyNode !== undefined) {
+                    break;
+                }
+
+                // If the ending characters didn't look like a plausible ending, try shortening the scan (eg. instead of
+                // the last 6 characters, try the last 5). Don't forget that the `attemptEndingCharacters` sequence is
+                // reversed (so we subtract one character from the end, not the start).
+                attemptEndingCharacters = attemptEndingCharacters.substr(0, attemptEndingCharacters.length - 1);
+            }
+    
             if (endFrequencyNode !== undefined) {
-                //console.log('Plausible ending detected ("'+lastCharacters+'"). Ending text after '+blockCount+' blocks');
+                log('Plausible ending detected ("'+reverseString(attemptEndingCharacters)+'"). Ending text after '+blockCount+' blocks');
                 break;
             }
+            log('No plausible ending found for "'+lastCharacters+'"');
+            // If our scan determined that this isn't a suitable place to end the text, we'll switch on to using the
+            // ending frequencies free (for forward prediction) so that the generator can at least try to make
+            // reasonable guesses as to what characters might end the text.
+            frequencyTreeToUse = 'end';
         }
+
         // Whichever frequency tree we're using, try to obtain some suggestions for the next character, reducing the
         // character sequence if necessary to obtain results.
-        while (nextCharacterSuggestions === undefined && lastCharacters.length >= minCharacters) {
-            nextCharacterSuggestions = getNextCharacterSuggestions(lastCharacters, frequencyTreeToUse);
 
-            if (nextCharacterSuggestions === undefined) {
-                lastCharacters = lastCharacters.substr(1);
-            }
+        // Try to obtain some suggestions for the next character. We change our approach slightly depending on where
+        // in the generated text the character is.
+
+        lookbackThreshold = lookbackThresholds[frequencyTreeToUse];
+
+        switch (frequencyTreeToUse) {
+            case 'start':
+                // We don't use any lookback scanning for characters at the start; after all, when the algorithm starts,
+                // there aren't any characters to look back _through_. We'll just take the first suggestion that the
+                // start frequency tree gives us.
+                nextCharacterSuggestions = getNextCharacterSuggestions(
+                    lastCharacters,
+                    frequencyDataSuite.frequencyTrees[frequencyTreeToUse]
+                );
+                break;
+            case 'general':
+                // In the general case (ie. just a regular character that could occur anywhere in the body of the text),
+                // we just take suggestions from the tree, shortening the character sequence as needed if we can't find
+                // a match for a longer sequence.
+                while (nextCharacterSuggestions === undefined && lastCharacters.length >= lookbackThreshold) {
+                    nextCharacterSuggestions = getNextCharacterSuggestions(
+                        lastCharacters,
+                        frequencyDataSuite.frequencyTrees[frequencyTreeToUse]
+                    );
+
+                    if (nextCharacterSuggestions === undefined) {
+                        lastCharacters = lastCharacters.substr(1);
+                    }
+                }
+                break;
+            case 'end':
+                // The ending case (a character that we think should appear toward the end of text) is similar to the
+                // general case. We use the ending frequency tree (the forward predicting one), shorten our sequence if
+                // needed to try to yield a prediction; but, if that doesn't work and no prediction is forthcoming, we
+                // fall back to the general frequencies tree and allow it to have another try at predicting. That way,
+                // at least we get a plausible next character, even if it doesn't help us to end the text.
+                while (nextCharacterSuggestions === undefined && lastCharacters.length >= lookbackThreshold) {
+                    nextCharacterSuggestions = getNextCharacterSuggestions(
+                        lastCharacters,
+                        frequencyDataSuite.frequencyTrees[frequencyTreeToUse]
+                    );
+
+                    if (lastCharacters.length === lookbackThreshold) {
+                        log(frequencyDataSuite.frequencyTrees[frequencyTreeToUse]);
+                    }
+                    if (nextCharacterSuggestions === undefined) {
+                        log('No suggestions for "'+lastCharacters+'"');
+                        lastCharacters = lastCharacters.substr(1);
+                        log('Reducing to "'+lastCharacters+'"');
+                    }
+
+                    if (frequencyTreeToUse === 'end' && nextCharacterSuggestions === undefined && lastCharacters.length < lookbackThreshold) {
+                        // Fall back to the general frequency tree, and have another try at predicting the next
+                        // character.
+                        frequencyTreeToUse = 'general';
+                        lookbackThreshold = lookbackThresholds['general'];
+                        lastCharacters = generatedText.substr(0 - frequencyDataSuite.depth);
+                        log('Unable to end the text, and unable to predict a reasonable ending character. Falling back to '+frequencyTreeToUse+' frequency tree.');
+                    }
+                }
+                break;
         }
+
 
         // If we still haven't managed to obtain any suggestions for the next character, we'll try one emergency
         // measure; try to see if this is a reasonable place to end the text. We can determine this by checking our
@@ -319,26 +528,30 @@ function generateCardProperty(frequencyDataSuite, blockCountsFrequencyTable, blo
         // just isn't a lot of frequency data to work with; but we can give it this out to allow it to end after it's
         // produced something meaningful.
         if (nextCharacterSuggestions === undefined) {
-            //console.log('No next character suggestions. Traversing tree for "'+generatedText.substr(0 - frequencyDataSuite.depth)+'"');
-            endText = traverseFrequencyTree(
-                frequencyDataSuite.frequencyTrees.end,
-                reverseString(generatedText.substr(0 - frequencyDataSuite.depth))
-            )
-            !== undefined;
-            //console.log("endText = "+endText);
-            break;
+            log('No next character suggestions. Traversing tree for "'+generatedText.substr(0 - frequencyDataSuite.depth)+'"');
+            if (
+                traverseFrequencyTree(
+                    frequencyDataSuite.frequencyTrees.endReversed,
+                    reverseString(generatedText.substr(0 - frequencyDataSuite.depth))
+                ) !== undefined
+            ) {
+                log('Unable to predict next character, but it is possible to end the text here. Ending text generation.');
+                break;
+            }
         }
 
         // If we _still_ don't have any suggestions for the next character, we're out of options at this point, so we'll
         // just suggest a random alphabet character and hope for the best.
         if (nextCharacterSuggestions === undefined) {
             var randomAlphabetCharacter = alphabet.substr(rnd(alphabet.length), 1);
+            log('Unable to predict next character. Randomly selecting "'+randomAlphabetCharacter+'".');
             nextCharacterSuggestions = {};
             nextCharacterSuggestions[randomAlphabetCharacter] = 1;
         }
 
         // Choose the next character from the table of suggestions, and add it to the generated text.
         var suggestedNextCharacter = weightedRandomSelect(nextCharacterSuggestions);
+
         generatedText += suggestedNextCharacter;
 
         if (blockSeparator === undefined) {
@@ -356,12 +569,24 @@ function generateCardProperty(frequencyDataSuite, blockCountsFrequencyTable, blo
         characterCount++;
 
         if (blockCount >= maxBlocks && !attemptEnding) {
-            //console.log('The block count has reached '+blockCount+'. Attempting to end the text.');
+            // The block count has exceeded the limit, so we instruct the algorithm to start trying to end this as
+            // quickly as possible.
+            log('The block count has reached '+blockCount+'. Attempting to end the text.');
             attemptEnding = true;
+
+            // Since we've only just passed the limit, that means that the last characters in the generated text so far
+            // must be the block separator (if there is one). We'll actually backtrack a bit by removing that separator.
+            // The reason for this is that if we retain the separator, the algorithm will almost certainly have to
+            // generate at least one whole extra block after this, whereas if we remove it, it might be possible for the
+            // algorithm to end the text immediately, which is the most desirable outcome. This makes a difference for
+            // text that consists of just a few well-defined words, like the supertype or subtype.
+            if (blockSeparator) {
+                generatedText = generatedText.substr(0, generatedText.length-blockSeparator.length);
+            }
         }
 
         if (blockCount > maxBlocks * endingThresholdFactor && attemptEnding) {
-            //console.log('The block count exceeded '+(maxBlocks * endingThresholdFactor)+'. Forcing end of text.');
+            log('The block count exceeded '+(maxBlocks * endingThresholdFactor)+'. Forcing end of text.');
             break;
         }
     }
@@ -384,13 +609,6 @@ function generateCardProperty(frequencyDataSuite, blockCountsFrequencyTable, blo
             generatedText = generatedText.substr(0, generatedText.length - blockSeparator.length);
         }
     }
-
-    // At this point, we have a text that we could return. However, there's one final thing we can do to try to improve
-    // it: we can try to give it a more natural ending. The algorithm above simply stops the text after a certain number
-    // of blocks, which isn't very "English" if the blocks are words; in all likelihood, the text will stop in the
-    // middle of a sentence. To make it feel more natural, we can try to complete the text using the frequency data that
-    // we have for the end of the text.
-
 
     return generatedText;
 }
@@ -478,4 +696,13 @@ function traverseFrequencyTree(frequencyTree, string) {
 
 function rnd(max) {
     return Math.floor(Math.random() * max);
+}
+
+/**
+ * A wrapper around `log` so that we can switch off the output with a single boolean if needed.
+ */
+function log(object) {
+    if (showLogMessages) {
+        console.log(object);
+    }
 }
