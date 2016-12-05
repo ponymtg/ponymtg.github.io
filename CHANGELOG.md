@@ -1,6 +1,7 @@
 ## 1.2.1
 
 * Improved RoboFoME's generation algorithm.
+* Updated "Friendship is Card Games" with the latest IDW cards.
 
 ## 1.2.0
 

@@ -18185,3 +18185,222 @@ Snow Creature — Elemental
 Whenever you draw a card, you gain 1 life.
 Though normally shy, crystal bards can be coaxed out of hiding by an appreciative audience.
 2/5
+Flock Together 3W
+Sorcery
+Create two 1/1 white Bird creature tokens with flying.
+Conspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it.)
+Not all tweets are mating calls and territory markers.
+The Great Ponyacci 3WW
+Legendary Creature — Pony Rogue
+If you would gain life, you gain twice that much life instead.
+At the beginning of each player’s end step, that player gains 2 life.
+”Wa-hey-hey! Who’s ready to laugh?”
+3/4
+Chilling Salve U
+Enchantment — Aura
+Enchant creature
+Vanishing 2 (This Aura enters the battlefield with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)
+When Chilling Salve enters the battlefield, tap enchanted creature.
+Enchanted creature doesn’t untap during its controller’s untap step.
+Remain Unconvinced 1U
+Instant
+Counter target spell that targets you or a permanent you control. Scry 1. (Look at the top card of your library. You may put that card on the bottom of your library.)
+“A commendable attempt.”
+—Ponyacci
+Active Hallucination 2U
+Instant
+Target noncreature artifact becomes an Illusion creature in addition to its other types until end of turn. If that artifact isn’t a Vehicle, its power and toughness are each equal to its converted mana cost.
+”When your sewing machine criticizes your stitching, it’s time to take a break.”
+—Rarity, Bearer of Generosity
+Compressed Recap 2U
+Instant
+Draw cards equal to the number of cards target opponent drew this turn.
+Pinkie can detail the events of the past month in a matter of seconds.
+Tears of a Clown B
+Instant
+Choose one —
+• Target creature gains deathtouch until end of turn.
+• Target creature deals 1 damage to itself.
+Entwine 3 (Choose both if you pay the entwine cost.)
+”But doctor, I am Ponyacci!”
+“Ponyacci, Ponyacci” 1B
+Enchantment — Song
+At the beginning of your upkeep, put a verse counter on “Ponyacci, Ponyacci”.
+1B, Sacrifice “Ponyacci, Ponyacci”: Return target creature card with converted mana cost X or less from your graveyard to the battlefield, where X is the number of verse counters on “Ponyacci, Ponyacci”.
+Zecora’s Interrogation 2B
+Sorcery
+Scry 2, then reveal the top card of your library. If it’s a creature card, target opponent loses X life and you gain X life, where X is that card’s power.
+”I came here to heal and soothe, but threats to ponies I’ll remove.”
+Laugh Until It Hurts 2BB
+Sorcery
+All creature get -2/-2 until end of turn. Whenever a creature dies this turn, its controller loses 1 life.
+”Moderation is key. Too much of a good thing can turn out very bad.”
+—Ponyacci
+Comedic Mentor 3B
+Creature — Pony Rogue
+Black creatures you control have lifelink.
+”If you can’t laugh at yourself, who can you laugh at?”
+2/2
+Screaming Powder 1R
+Instant
+Screaming Powder deals 6 damage to target creature or planeswalker that was dealt damage this turn.
+”Some things I make to ease the tense. Some others are for self-defense.”
+—Zecora, zebra shaman
+Scheduled Tremor 2RR
+Sorcery
+Scheduled Tremor deals 3 damage to each creature without flying and each player.
+Suspend 2—1RR.
+Whenever a time counter is removed from Scheduled Tremor while it’s exiled, it deals 1 damage to each creature without flying and each player.
+Celebratory Stampede 2G
+Sorcery
+Until end of turn, creatures you control gain trample and get +X/+X, where X is the amount of life you’ve gained this turn.
+Joy works just as well as fear in sending the herd forward.
+Bestial Legion 2GG
+Creature — Beast
+Whenever another creature enters the battlefield under your control, put a +1/+1 on Bestial Legion.
+When Bestial Legion dies, create X 1/1 green Squirrel creature tokens, where X is Bestial Legion’s power.
+You don’t stop them. You just chase them away so they can regroup.
+2/2
+Jaffa Stick 2
+Artifact — Equipment
+Equipped creature gets +1/+1.
+Untap equipped creature during each other player’s untap step.
+Equip 2
+”A length of wood’s a useful tool for a wise mare or a fool.”
+—Zecora, zebra shaman
+Explosive Crate 3
+Artifact Creature — Construct
+Defender
+When Explosive Crate dies, you may have it deals 3 damage to target creature.
+Morph 3 (You may cast this card face down as a 2/2 creature for 3. Turn it face up at any time for its morph cost.)
+0/3
+Alchemical Accident UR
+Instant
+Choose one —
+• Counter target instant or sorcery spell. Alchemical Accident deals 2 damage to that spell’s controller.
+• Counter target activated or triggered ability of a creature. Alchemical Accident deals 2 damage to that creature.
+Unexpected Uplift 2(gu)(gu)
+Enchantment — Aura
+Flash
+Enchanted creature gets +2/+2 and has “Whenever this creature deals combat damage to a player, you may draw a card.”
+Fluttershy had had many conversations with her animal friends, but she wasn’t sure what to think about their sudden interest in politics.
+Discord’s Gift 2URG
+Instant
+Exile cards from the top of your library until you exile a nonland card with converted mana cost 4 or less. You may cast that card without paying its mana cost. If you do, copy it. You may choose new targets for the copy. Then put the exiled cards on the bottom of your library in a random order. (A copy of a permanent spell enters the battlefield as a token copy of that permanent.)
+Hurry Scurry 3GW
+Instant
+Create a 1/1 green Squirrel creature token for each creature you control.
+Squirrels live in a near-constant state of panic, making them excellent sentries and auxiliaries.
+Coordinated Capture W
+Instant
+Coordinated Capture deals damage to target attacking creature equal to the number of blocking creatures.
+Every able hoof stood ready to defend Sweet Apple Acres.
+Cold Molasses Trap 2W
+Instant — Trap
+If four or more creatures are attacking, you may pay W rather than pay Cold Molasses Trap’s mana cost.
+Remove up to two attacking creatures from combat.
+Like a tar pit, but tastier.
+Democratic Process 2W
+Enchantment
+At the beginning of each player’s upkeep, that player becomes the monarch if he or she controls more creatures than each other player.
+One dog, one vote.
+Polka Break 2W
+Instant
+Prevent all combat damage that would be dealt this turn. Put a verse counter on each Song you control.
+Accordions are a balm for the hard-working soul.
+Simmer Down U
+Instant
+Target creature gets -1/-0 until end of turn.
+Target creature gets -1/-0 until end of turn.
+Target creature gets -1/-0 until end of turn.
+A splash of water to quench the flames of rage.
+Truthbender UU
+Creature — Unicorn Wizard
+Flash
+When Truthbender enters the battlefield, you may change a target of target spell or ability to Truthbender.
+”…and then the orphans declared me queen!”
+1/1
+Distracting Display 1U
+Enchantment — Aura
+Enchant creature
+When Distracting Display enters the battlefield, draw a card.
+Whenever enchanted creature attacks, creatures defending player controls get -1/-0 until end of turn.
+Know the Enemy 3U
+Sorcery
+Choose a card type. Target opponent reveals his or her hand. Draw a card for each card of the chosen type revealed this way. (Artifact, creature, enchantment, instant, land, planeswalker, sorcery, and tribal are card types.)
+Bemoan Fate 1B
+Sorcery
+Each player reveals the top card of his or her library, loses life equal to that card’s converted mana cost, and puts it into his or her hand.
+”Sometimes I suspect I’m fate’s chew toy.”
+—Trixie Lulamoon, travling performer
+Gibbering Jesters 2R
+Creature — Pony Rogue
+Hellbent — 1RR, Sacrifice Gibbering Jesters: Destroy all artifacts. Activate this ability only if you have no cards in hand.
+”Aligned electron spin axes. Stop asking.”
+—Twilight Sparkle, Bearer of Magic
+3/1
+Dimondia Engineers 3R
+Creature — Hound Citizen
+Whenever Dimondia Engineers or another Hound enters the battlefield, tap target land an opponent controls. That land doesn’t untap during its controller’s next untap step.
+Asking for anything more advanced than tunnel supports is asking for trouble.
+2/2
+Direct Approach G
+Instant
+Put a +1/+1 counter on target creature. That creature gains trample until end of turn.
+”Net.”
+—Big Macintosh
+Sassy Dance G
+Instant
+Choose one or both —
+• Untap target creature.
+• Target creature you control gains hexproof until end of turn.
+It’s unclear if the dance is a taunt or a celebration of the gift of squashes.
+Apple Trap 3GG
+Instant — Trap
+If a land card was put into your graveyard from anywhere this turn by a spell or ability an opponent controlled, you may pay 1G rather than pay Apple Trap’s mana cost.
+Distribute four +1/+1 counters among any number of target creatures.
+Sass Squash 3GG
+Creature — Plant Yeti
+Hexproof
+If a player taps a nonbasic land for mana, it produces G instead of any other type and amount.
+It distributes its produce of choice with the fervor of any Apple.
+4/4
+Animated Hoard 2
+Artifact Creature — Construct
+When Animated Hoard dies, add CC to your mana pool.
+Most vaults focus on keeping intruders out. Therefore, some thieves turn the treasury into an intruder.
+2/2
+Sassy Carapace 2
+Artifact — Equipment
+Equipped creature gets +3/+3 and can only attack or block alone.
+Equip 3
+With the strength of the sass squash comes its reclusiveness.
+Crown of the Chosen 3
+Artifact
+You may choose not to untap Crown of the Chosen during your untap step.
+3, T, Tap X untapped creatures you control and own: Gain control of target creature with power X or less for as long as Crown of the Chosen remains tapped.
+”To rule is to serve.”
+—Princess Luna
+Jar of Teeth 3
+Artifact
+Whenever a creature you control dies, put a tooth counter on Jar of Teeth.
+3, T, Remove all tooth counters from Jar of Teeth: Jar of Teeth deals X damage to target creature or player, where X is the number of tooth counters removed this way.
+Bushel Sentries 4
+Artifact Creature — Scarecrow
+When Bushel Sentries enters the battlefield, target land gains hexproof and indestructible for as long as you control Bushel Sentries.
+”Not on their watch.”
+—Applejack, Bearer of Honesty
+3/3
+Mirror Array 4
+Artifact
+3, Sacrifice Mirror Array: Choose target instant or sorcery spell that targets only a single permanent or player. Copy that spell for each other permanent or player the spell could target. Each copy targets a different one of those permanents and players.
+Dimondia Chancellor 2RW
+Creature — Hound Advisor
+When Dimondia Chancellor enters the battlefield, you become the monarch.
+At the beginning of your upkeep, if you’re the monarch, creatures you control gain double strike until end of turn.
+”In the name of our wise and gentle ruler, hit stuff really hard!”
+2/2
+Looming Shadow 2(ur)B
+Instant
+As an additional cost to cast Looming Shadow, reveal a creature card from your hand.
+Create a token that’s a copy of the revealed card, except it’s a black Shade in addition to its other colors and types and has haste. Exile that token at the beginning of the next end step.
