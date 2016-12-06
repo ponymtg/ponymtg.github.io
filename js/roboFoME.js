@@ -79,6 +79,8 @@ worker.addEventListener(
                 // type lines, which looks ugly; we just want the outline of the card).
                 emptyElement(emptyProxyElement);
 
+                // Stick a big "?" on the empty card.
+
                 emptyProxyText = document.createElement('div');
                 emptyProxyText.style.margin = (global.dimensions.standardCard.px.height / 2)+' auto 0 auto';
                 emptyProxyText.style.fontSize = (global.dimensions.standardCard.px.width * 0.75)+'px';
@@ -189,9 +191,7 @@ function generateCard(frequencyDataSuites) {
 }
 
 /**
- * Card property generation functions. These are all very similar and tend to differ only in the type of block that we
- * consider important for each property; as an example, for card text we're interested in paragraphs, but for card names
- * we're interested in words.
+ * Card property generation functions.
  */
 function generateCardName(frequencyDataSuite) {
     return generateCardProperty(
@@ -200,7 +200,6 @@ function generateCardName(frequencyDataSuite) {
         ' ',
         1.5,
         {
-            'start': 3,
             'general': 1,
             'end': 3,
             'endReversed': 3,
@@ -214,7 +213,6 @@ function generateCardText(frequencyDataSuite) {
         ' ',
         1.5,
         {
-            'start': 3,
             'general': 3,
             'end': 3,
             'endReversed': 5,
@@ -229,7 +227,6 @@ function generateCardFlavorText(frequencyDataSuite) {
         ' ',
         1.5,
         {
-            'start': 3,
             'general': 3,
             'end': 3,
             'endReversed': 5,
@@ -247,7 +244,6 @@ function generateCardSupertype(frequencyDataSuite) {
         ' ',
         1.5,
         {
-            'start': 1,
             'general': 1,
             'end': 1,
             'endReversed': 1,
@@ -261,7 +257,6 @@ function generateCardSubtype(frequencyDataSuite) {
         ' ',
         1.5,
         {
-            'start': 1,
             'general': 1,
             'end': 1,
             'endReversed': 1,
@@ -275,7 +270,6 @@ function generateCardCost(frequencyDataSuite) {
         undefined,
         1.5,
         {
-            'start': 1,
             'general': 1,
             'end': 1,
             'endReversed': 1,
@@ -289,7 +283,6 @@ function generateCardPt(frequencyDataSuite) {
         undefined,
         1.5,
         {
-            'start': 1,
             'general': 1,
             'end': 1,
             'endReversed': 1,
@@ -303,7 +296,6 @@ function generateCardLoyalty(frequencyDataSuite) {
         undefined,
         1.5,
         {
-            'start': 1,
             'general': 1,
             'end': 1,
             'endReversed': 1,
@@ -344,13 +336,6 @@ function generateCardLoyalty(frequencyDataSuite) {
  * won't be looking back far enough). The amount that we want to look back will generally depend on where in the
  * sequence the generated character is, so we need to provide a set of thresholds for start characters, general
  * characters, and end characters.
- *
- * `attemptEndingMinCharacters`:
- * When the algorithm is in "attempt ending" mode, it will start scanning the last few characters to try to see if there
- * is a place where the text could reasonably be ended. Like `minCharacters`, it will have a few attempts at this,
- * shortening the sequence by 1 character each time. This parameter sets the minimum number of characters that it will
- * go to when making these attempts. We don't want to make this number too small, or the algorithm will be able to end
- * the text too easily (and unrealistically).
  */
 function generateCardProperty(
     frequencyDataSuite,
@@ -381,12 +366,13 @@ function generateCardProperty(
     // If the `attemptEnding` flag is true, the generation loop will start trying to find ways to smoothly end the text.
     var attemptEnding = false;
 
-
     if (endingThresholdFactor === undefined) {
+        // If an ending threshold wasn't given, set it to 1 (ie. the algorithm won't give any leeway for finding an
+        // ending; it will just stop dead as soon as we exceed the block limit).
         endingThresholdFactor = 1;
     }
 
-    //while (blockCount < maxBlocks || attemptEnding) {
+    // MAIN GENERATION LOOP
     while (true) {
         // Get the last characters that were generated, up to the depth that the frequency data can cover. Using these,
         // we'll try to make a prediction about what character should come next.
@@ -404,17 +390,9 @@ function generateCardProperty(
 
         if (attemptEnding) {
             // If we've been instructed to try to end the text, we enter a new mode where we scan the end of the current
-            // text for patterns that we know can lead to the end of the text. We do this check first, before we try any
-            // actual prediction, since it's possible we may already be able to end the text here.
-            //
-            // For example, if we have so far generated the string "Maud is best p", we check our tree of endings to see
-            // if any of the last characters in that string are known to lead to endings.
-            //
-            // Suppose that we scan the last 5 characters: "est p". This probably 
-            // If we've been instructed to try to end the text, do a bit of scanning to see if that is actually
-            // possible. To determine this, we check the last few characters against our ending frequency tree to see
-            // if there are any character sequences which we know can reasonably end the text. If we find any, then
-            // we'll switch onto the ending tree for the last characters generated.
+            // text for character sequences that we know can appear at the end. If we find one, then we know it's safe
+            // to end the text here. We do this check first, before we try any actual prediction, since it's possible we
+            // may already be able to end the text at this point.
 
             // Remember that the ending frequency tree enters its characters in reverse order, so we'll have to reverse
             // our characters too to perform this lookup.
@@ -451,10 +429,8 @@ function generateCardProperty(
         }
 
         // Whichever frequency tree we're using, try to obtain some suggestions for the next character, reducing the
-        // character sequence if necessary to obtain results.
-
-        // Try to obtain some suggestions for the next character. We change our approach slightly depending on where
-        // in the generated text the character is.
+        // character sequence if necessary to obtain results. We change our approach slightly depending on where in the
+        // generated text the character is (start, general, end).
 
         lookbackThreshold = lookbackThresholds[frequencyTreeToUse];
 
@@ -495,13 +471,8 @@ function generateCardProperty(
                         frequencyDataSuite.frequencyTrees[frequencyTreeToUse]
                     );
 
-                    if (lastCharacters.length === lookbackThreshold) {
-                        log(frequencyDataSuite.frequencyTrees[frequencyTreeToUse]);
-                    }
                     if (nextCharacterSuggestions === undefined) {
-                        log('No suggestions for "'+lastCharacters+'"');
                         lastCharacters = lastCharacters.substr(1);
-                        log('Reducing to "'+lastCharacters+'"');
                     }
 
                     if (frequencyTreeToUse === 'end' && nextCharacterSuggestions === undefined && lastCharacters.length < lookbackThreshold) {
@@ -516,11 +487,10 @@ function generateCardProperty(
                 break;
         }
 
-
         // If we still haven't managed to obtain any suggestions for the next character, we'll try one emergency
-        // measure; try to see if this is a reasonable place to end the text. We can determine this by checking our
-        // ending frequencies tree. We want to use as many characters as we can for that search, as we do need to be
-        // very sure that the text can end here.
+        // measure; try to see if this is a reasonable place to end the text (even if we're not in attemptEnding mode.
+        // We can determine this by checking our ending frequencies tree. We want to use as many characters as we can
+        // for that search, as we do need to be absolutely sure that the text can end here.
         //
         // This emergency measure helps us out in situations where the corpus contains very short, similar pieces of
         // text, such as the supertype (which is nearly always a short word like "Creature" or "Instant"). In such
@@ -554,6 +524,8 @@ function generateCardProperty(
 
         generatedText += suggestedNextCharacter;
 
+        // Increase the block count (so that we can keep track of how much text we've generated so far, and thus make
+        // decisions on when it's appropriate to stop generating).
         if (blockSeparator === undefined) {
             // If no block separator was specified, then we assume that each individual character is a block, so we just
             // increment the block count every time.
@@ -566,6 +538,7 @@ function generateCardProperty(
                 blockCount++;
             }
         }
+
         characterCount++;
 
         if (blockCount >= maxBlocks && !attemptEnding) {
@@ -589,7 +562,7 @@ function generateCardProperty(
             log('The block count exceeded '+(maxBlocks * endingThresholdFactor)+'. Forcing end of text.');
             break;
         }
-    }
+    } // END OF MAIN GENERATION LOOP
 
     // We should now have our complete generated text. However, if we specified a particular block separator, then it's
     // likely that the generated text has that separator attached to the end. (This happens because the generation loop

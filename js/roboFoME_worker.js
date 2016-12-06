@@ -169,7 +169,6 @@ function getLikelyRulesTextWords(corpus) {
         }
     }
 
-
     // Our analysis of rules text vs flavor text is based on the assumption that the first paragraph of a card's text
     // will almost always be rules text, whilst the last paragraph is very often flavor text. Therefore, we can make the
     // following supposition: if a paragraph contains words that are known to occur with high frequency in the first
@@ -536,7 +535,7 @@ function addToFrequencyTree(tree, characterSequence) {
  * For example, if the text contains 3 instances of the character sequence "pony", then the frequency tree should
  * contain a chain of children from the root like:
  *
- *     [root] -> "p" -> "o" -> "n" -> "y"
+ *     (root) -> "p" -> "o" -> "n" -> "y"
  *
  * and the node holding the "y" symbol should have a value of 3.
  */
