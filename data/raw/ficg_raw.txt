@@ -18404,3 +18404,190 @@ Looming Shadow 2(ur)B
 Instant
 As an additional cost to cast Looming Shadow, reveal a creature card from your hand.
 Create a token that’s a copy of the revealed card, except it’s a black Shade in addition to its other colors and types and has haste. Exile that token at the beginning of the next end step.
+Shared Seal W
+Enchantment
+When Shared Seal enters the battlefield, exile target creature you control and target creature you don’t control for as long as Shared Seal is on the battlefield. If you don’t exile at least two permanents this way, sacrifice Shared Seal. This ability can’t be countered except by spells and abilities.
+Flimflam Adjudicators 2W
+Creature — Unicorn Advisor
+At the beginning of each player’s upkeep, if that player has less life than each other player, that player gains 3 life.
+Though much of Sombra’s Equestria has grown grim, the Flimflam brothers work to ensure that the courts remain as fair as ever.
+3/4
+Captain Goodguy 2WW
+Planeswalker — Discord
++1: Until your next turn, whenever a creature you control blocks, that creature gets +1/+1 until end of turn.
+-2: Until your next turn, target creature you control gains defender and indestructible and can block any number of creatures.
+-6: You get an emblem with “Creatures can’t attack you or a planeswalker you control unless their controller pays 5 for each of those creatures.”
+4
+Celestia, Guiding Light 2WW
+Legendary Creature — Avatar
+Alicorn (This card is a Pony Pegasus Unicorn.)
+Flying
+Creatures you control have vigilance.
+At the beginning of your end step, if you both own and control Celestia, Guiding Light and a creature named Celestia, Blinding Glare, exile them, then meld them into Polycosmic Catastrophe.
+2/4
+Trixie, Humble Ascendant 2WW
+Legendary Creature — Avatar
+Flash
+Alicorn
+Flying
+When Trixie, Humble Ascendant enters the battlefield, until end of turn, all other creatures lose all abilities and have base power and toughness 1/1.
+1/3
+Solar Struggle 3W
+Enchantment
+Each player skips his or her untap step.
+At the beginning of each player’s upkeep, that player chooses land or nonland, then untaps all permanents of the chosen kind he or she controls.
+”It’s even heavier than it looks.”
+—Princess Luna
+Sombra’s Stalwarts 3W
+Creature — Pony Soldier
+When Sombra’s Stalwarts enters the battlefield, detain each creature your opponents control that entered the battlefield since your last turn ended. (Until your next turn, those creatures can’t attack or block and their activated abilities can’t be activated.)
+2/3
+Celestia, Blinding Glare 3WW
+Legendary Creature — Avatar
+Alicorn
+Flying, first strike
+Creatures your opponents control enter the battlefield tapped.
+(Melds with Celestia, Guiding Light.)
+“Another Equestria to oppress? It must be mine.”
+4/2
+Polycosmic Catastrophe
+(WB) Legendary Enchantment
+At the beginning of each player’s upkeep, that player sacrifices an artifact, a creature, an enchantment, a land, and a planeswalker.
+At the beginning of each upkeep, return target permanent card from your graveyard to the battlefield.
+The two worldlines came together as destructively as colliding stars.
+Good King Sombra 3WW
+Legendary Creature — Unicorn Wizard
+If a source would deal damage to you or to another permanent you control, prevent 1 of that damage.
+When Good King Sombra dies, return it to the battlefield transformed under target opponent’s control.
+”One life for two kingdoms is a small price to pay.”
+4/4
+Sombra the Sin Bearer
+(B) Legendary Creature — Unicorn Wizard
+When Sombra the Sin Bearer enters the battlefield or at the beginning of your upkeep, Sombra deals 1 damage to you and to each creature and planeswalker you control.
+”Forgive me, my love, for I can never forgive myself.”
+4/4
+Chrysalis, the Nurturer 4WW
+Legendary Creature — Insect Pony
+Flying
+1W: Target creature gains lifelink until end of turn.
+Whenever another player gains life, you may gain that much life.
+”Love is infinite. Give it away and you have that much more.”
+4/4
+See Between 1U
+Instant
+Draw two cards, then exile a card from your hand.
+”Probability space is a lot like the Blind Eternities, but less deadly and with prettier colors.”
+—Pinkie Pie, Bearer of Laughter
+Cosmic Observer 2U
+Creature — Advisor
+Shroud
+Whenever a player casts a spell, each player may draw a card. Each player who does discards a card.
+They exist outside normal perception, cataloguing everything for their own inscrutable purposes.
+0/3
+Ditzy, Far-Sighted 3U
+Legendary Creature — Pegasus Advisor
+Flying
+When Ditzy, Far-Sighted enters the battlefield, choose an opponent. If that player has more cards in hand than you, draw cards equal to the difference.
+2U, Discard a card: Return Ditzy to its owner’s hand.
+For every ignited planeswalker spark, countless others lie forever dormant.
+2/2
+Seek Reason 3U
+Sorcery
+Discard any number of cards, then draw twice that many cards.
+”When you have eliminated everything illogical, you’re left with depressingly little.”
+—Princess Twilight Sparkle
+Splinter Reality 3UUU
+Sorcery
+For each nonland, nontoken permanent, that permanent’s controller creates a token that’s a copy of that permanent. The “legend rule” and “planeswalker rule” don’t apply for the rest of the game.
+”Encore! Encore!”
+—Discord
+Star Swirl’s Sanctum 4U
+Enchantment
+At the beginning of your upkeep, scry 1.
+Play with the top card of your library revealed.
+You may cast the top card of your library if it’s an instant or sorcery card.
+Sombra’s Sacrifice 5U
+Sorcery
+Exchange control of target creature you control and two target creatures a single opponent controls.
+”I still never got to say goodbye.”
+—Princess Celestia
+Relic Swallower 5UU
+Creature — Whale
+When Relic Swallower enters the battlefield, gain control of all artifacts for as long as you control Relic Swallower.
+Some thieves use subtlety and misdirection. Some just open their mouths and inhale.
+5/5
+Luna’s Vampossum 1B
+Creature — Vampire Beast
+Whenever a creature an opponent controls dies, you may return Luna’s Vampossum from your graveyard to your hand.
+Becoming a corpse has only heightened its ability to feign death.
+2/1
+Through the Mirror 2BB
+Instant
+Cast Through the Mirror only during your upkeep.
+Exchange life totals with target opponent.
+”Remember, if you sprout fingers, you went through the wrong one.”
+—Princess Twilight Sparkle
+Tyrants’ Attendant 3B
+Creature — Vampire Pony Advisor
+When Tyrants’ Attendant enters the battlefield, choose one —
+• Target opponent sacrifices a legendary creature.
+• Return target legendary creature card from your graveyard to your hand.
+1/3
+Otherworldly Secrets 3BB
+Sorcery
+Search target opponent’s sideboard for a card and exile it face down. As long as that card remains exiled, you may look at it, play it, and spend mana as though it were mana of any color to cast it. (Your opponent still owns that card.)
+Phoenix Fury RR
+Instant
+Target creature gets +1/+0 and gains double strike until end of turn.
+For one terrible moment, Twilight feared that her teacher had become a new Nightmare.
+Vicious Taunting XR
+Instant
+Vicious Taunting deals 1 damage to each of X target creatures. Those creatures attack this turn if able.
+The ferocity of the alicorns’ taunting took the Bearers completely by surprise.
+Thumbless Archers 2G
+Creature — Pony Archer
+Reach
+”To their credit, at least as many arrows are going into the air as into their hooves.”
+—Princess Luna
+3/2
+Fluttersaur 3GGG
+Creature — Lizard
+Deathtouch, trample, haste
+It offers the kindness of a swift death.
+4/4
+Enormous Penny 2
+Artifact
+T, Sacrifice Enormous Penny: The next time a player would flip a coin this turn, you choose the outcome of that flip instead.
+One of Star Swirl’s many trophies, originally owned by a crazed party pony.
+Helm of Neighbu 2
+Artifact — Equipment
+Whenever you cast a noncreature spell, equipped creature gets +2/+2 until end of turn.
+Equip 2
+The god Neighbu is long dead, but his creations still bestow unfathomable magical power.
+Id Extract 3
+Artifact
+2, T, Sacrifice Id Extract: Transform target creature. If you don’t, that creature gets +X/-X and gains trample until end of turn, where X is its toughness minus 1. (Only double-faced cards can be transformed.)
+Fortunately for Star Swirl, that shipment also contained a fire extinguisher.
+Bygone Hydra 1BG
+Creature — Hydra Skeleton
+Bygone Hydra can’t attack unless its power is 4 or greater.
+BG: Put a +1/+1 counter on Bygone Hydra. It gains indestructible until end of turn.
+Given enough mana, a hydra can regenerate from anything.
+0/4
+Dragon Monopolist 1RW
+Creature — Dragon
+Dragon spells you cast cost 1 less to cast.
+Your opponents can’t cast Dragon spells.
+”You do not summon us. You send out signals that we may respond to at our leisure.”
+2/2
+Luna, Blood Moon Queen 3BR
+Legendary Creature — Avatar
+Alicorn
+Flying, first strike, deathtouch
+Whenever a creature dealt damage by Luna, Blood Moon Queen this turn dies, put a +1/+1 counter on Luna.
+2/2
+Entangled Betrayal X(br)
+Instant
+Entangled Betrayal deals X plus 2 damage to target creature you control and X plus 2 damage to target creature you don’t control.
+”You’ve become such a useful tool, Luna. I would be a fool not to use you.”
+—Celestia, sun tyrant
