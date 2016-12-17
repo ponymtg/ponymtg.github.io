@@ -18291,6 +18291,137 @@ Hurry Scurry 3GW
 Instant
 Create a 1/1 green Squirrel creature token for each creature you control.
 Squirrels live in a near-constant state of panic, making them excellent sentries and auxiliaries.
+Entangling Locks 1W
+Enchantment — Aura
+Enchant creature
+Enchanted creature has “W, T: Tap target creature.”
+All those hours of conditioning finally paid off.
+Wielder of the Sacred Fire 2WW
+Creature — Unicorn Wizard
+Protection from black
+1W, T, Sacrifice Wielder of the Sacred Fire: Destroy target Demon.
+”You shall not pass.”
+3/3
+Winter Queen 3WW
+Snow Creature — Pony Wizard
+2S: Detain target creature an opponent controls. Activate this ability only any time you could cast a sorcery. (Until your next turn, that creature can’t attack or block and its activated abilities can’t be activated. S can be paid with one mana from a snow source.)
+3/3
+Gum Up the Works 1U
+Instant
+Choose one —
+• Counter target instant or sorcery spell.
+• Tap target nonland permanent. It doesn’t untap during its controller’s next untap step.
+A creative mind needs little else to achieve its goals.
+Fictionalize 3UU
+Sorcery
+Choose target permanent. Its owner shuffles it into his or her library.
+”It’s always important to keep reality and fantasy distinct, especially in my line of work.”
+—A. K. Yearling, novelist
+Twisted Retelling 3UU
+Instant
+You may cast target instant or sorcery card from a graveyard without paying its mana cost. If a card cast this way would be put into a graveyard this turn, exile it instead.
+No two readers experience the same story.
+Soulsplinter Lich BBB
+Creature — Unicorn Zombie Wizard
+Soulsplinter Lich has indestructible as long as you control an artifact.
+”Those who create only a single phylactery deserve their finite existences.”
+3/4
+Baker’s Friend 2B
+Creature — Pony Citizen
+Lifelink
+Whenever another creature dies, you may gain 2 life.
+”Just a little off the top, friend?”
+2/1
+Malicious Regent 2BB
+Creature — Pegasus Wizard
+Flying
+B, T, Pay 1 life: Draw a card.
+3BB: Transform Malicious Regent. Activate this ability only if your life total is less than half your starting life total.
+2/2
+Maleficent Dragon
+(B) Creature — Dragon
+Flying
+B, Discard a card: Maleficent Dragon gets +1/+1 and gains lifelink until end of turn.
+Her form finally matches her greed.
+4/4
+Permafrost Shamblers 3B
+Snow Creature — Pony Zombie
+S: Permafrost Shamblers gains menace until end of turn.
+The ice preserves the corpses as they wait for more bodies to add to their ranks.
+4/2
+Lord of the Shadow 4BB
+Creature — Demon
+Flying, trample
+At the beginning of your upkeep, sacrifice a creature.
+When Lord of the Shadow dies, each opponent sacrifices a creature.
+It stokes its dark fire with other souls, preparing for the day it will burn out of control.
+5/5
+Ravening Void 4BB
+Enchantment
+Devoid (This card has no color.)
+At the beginning of each player’s upkeep, that player exiles a permanent he or she controls.
+The blank expanse sucks at the mind, spirit, and body until all are just as empty.
+Action Hero RR
+Creature — Pegasus Warrior
+Flying
+Action Hero attacks each turn if able.
+Heroic — Whenever Action Hero becomes the target of a spell you control, it gains double strike until end of turn.
+”What are you waiting for?”
+2/1
+Mother of Dragons 4RR
+Creature — Unicorn Shaman
+When Mother of Dragons enters the battlefield, create three 1/1 red Dragon creature tokens with flying and haste.
+R: Target Dragon gets +1/+0 until end of turn.
+”My children prefer their meals well-cooked.”
+2/2
+Hamsters of Pygolia 3G
+Creature — Beast Warrior
+Hexproof
+Melee (Whenever this creature attacks, it gets +1/+1 until end of turn for each opponent you attacked with a creature this combat.)
+Without magic, hooves rarely beat paws.
+2/2
+Raised by Apes 4GG
+Enchantment — Aura
+Enchant creature
+When Raised by Apes enters the battlefield, create a 3/3 green Ape creature token.
+Enchanted creature can’t be blocked except by creatures with flying or reach.
+Enchanted creature gets +3/+3 as long as you control an Ape.
+Universal Rainboom 5
+Legendary Artifact — Vehicle
+Flying
+Whenever one or more creatures crew Universal Rainboom, it gets +1/+1 until end of turn for each color among those creatures.
+Crew 4 (Tap any number of creatures you control with total power 4 or more: This Vehicle becomes an artifact creature until end of turn.)
+4/4
+Narrative Schmarfelpod 6
+Artifact Creature — Construct
+Imprint — When Narrative Schmarfelpod enters the battlefield, you may choose a card you own from outside the game and exile it face down.
+When Narrative Schmarfelpod dies, turn the exiled card face up. If it’s a creature card, put it onto the battlefield under your control.
+0/5
+Consume Reality XX1
+Sorcery
+Target player exiles X permanents he or she controls.
+Grand vistas, wondrous devices, hopes and dreams… all fit down a gullet eventually.
+Ravenous Bookworm UB
+Creature — Worm
+Skulk (This creature can’t be blocked by creatures with greater power.)
+Whenever Ravenous Bookworm deals combat damage to a player, exile that many cards from the top of that player’s library, then put a +1/+1 counter on Ravenous Bookworm.
+1/1
+Mental Collapse (ur)B
+Instant
+As an additional cost to cast Mental Collapse, exile the top six cards of your library.
+Destroy target creature.
+”An alicorn’s insanity rarely ends well for anything nearby.”
+—Princess Luna
+Rainbow Revival 1WB
+Sorcery
+Return target multicolored permanent card from your graveyard to the battlefield.
+”Rainbows can do anything. I should know.”
+—Rainbow Dash, Bearer of Loyalty
+Mesmeric Python 1GU
+Creature — Snake
+Whenever Mesmeric Python deals combat damage to a creature, tap that creature. It doesn’t untap during its controller’s untap step for as long as you control Mesmeric Python.
+It only needs to constrict the blind.
+1/4
 Coordinated Capture W
 Instant
 Coordinated Capture deals damage to target attacking creature equal to the number of blocking creatures.
