@@ -18722,3 +18722,103 @@ Instant
 Entangled Betrayal deals X plus 2 damage to target creature you control and X plus 2 damage to target creature you don’t control.
 ”You’ve become such a useful tool, Luna. I would be a fool not to use you.”
 —Celestia, sun tyrant
+Divine Authority 1WW
+Enchantment — Aura
+Enchant creature
+Enchanted creature has indestructible and is a God enchantment in addition to its other types and subtypes.
+”It is a dangerous pedestal to stand upon, for soon you begin to believe your own infallibility.”
+—Princess Luna
+Funny Farm 2W
+Enchantment
+Silver-bordered creatures have lifelink.
+1W: Target creature becomes silver-bordered until end of turn.
+Where life is comical all the time.
+Change of Scenery U
+Instant
+Lands you control become the basic land type of your choice until end of turn.
+Draw a card.
+”Illusions mean never having to save for a vacation.”
+—Trixie Lulamoon, traveling performer
+Elaborate Plans 2U
+Instant
+Look at the top four cards of your library. Put one into your hand, one on top of your library, one into your graveyard, and one into exile.
+”…then Sweetie jumps off of the lead cow, through the rain barrel, and into the command center Apple Bloom dug out earlier. Then…”
+—Scootaloo
+Young Mimicker 2U
+Creature — Shapeshifter
+1U: Young Mimicker becomes a copy of target non-Pony, non-Pegasus, non-Unicorn permanent and gains this ability.
+They learn through becoming.
+0/3
+Crusader Kunoichi 3U
+Creature — Pony Ninja
+Ninjutsu 1U (1U: Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)
+Whenever Crusader Kunoichi deals combat damage to a player, scry 2.
+2/2
+Overanalyze 3U
+Instant
+Counter target spell unless its controller pays 3.
+Draw a card.
+”Nothing kills a joke quite like thinking about it.”
+—Pinkie Pie, Bearer of Laughter
+Sapphire Mimicker 3UU
+Creature — Shapeshifter
+U: Sapphire Mimicker gains all activated abilities of target artifact until end of turn.
+You may spend blue mana as though it were mana of any color to pay the activation costs of Sapphire Mimicker’s abilities.
+3/4
+Fragile Dignity 2B
+Enchantment — Aura
+Enchant creature
+Enchanted creature gets +4/+4.
+Whenever a player casts a spell, enchanted creature gets -2/-2 until end of turn.
+”If I do not have my ponies’ respect, I have nothing.”
+—Princess Luna
+Comedy Coaches 3B
+Creature — Construct
+Lifelink
+Madness — Pay 5 life. (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)
+“You don’t have to be crazy to be funny, but it helps.”
+—Pinkie Pie, Bearer of Laughter
+2/2
+Face the Facts 2RR
+Sorcery
+Target opponent may have you draw three cards. If the player doesn't, put the top three cards of your library into your graveyard, then Face the Facts deals damage to that player equal to the total converted mana cost of those cards.
+Thunderous Entrance 3R
+Enchantment
+Whenever a creature you control enters the battlefield, if you cast it from your hand, it deals 2 damage to target creature or player.
+”If you know Princess Luna’s coming, get some earplugs.”
+—Princess Twilight Sparkle
+Delightful Surprise G
+Instant
+The next spell you cast this turn can be cast as though it has flash. Each player gains 3 life.
+Never before in the history of comedy did a pie to the face bring so much joy.
+Flea Market 3G
+Enchantment
+X: Each player may put a permanent card with converted mana cost X or less from his or her hand onto the battlefield. Any player may activate this ability, but only any time he or she could cast a sorcery.
+Giraffe Headdress 2
+Artifact — Equipment
+Equipped creature gets +1/+1 and has reach.
+Equip 2
+”It’s perfectly acceptable as long as you don’t plan on ever going through doorways.”
+—Rarity, Bearer of Generosity
+Jet Wagon 3
+Artifact — Vehicle
+Hoofcraft — When Jet Wagon enters the battlefield, if you control three or more Ponies, Pegasi, and/or Unicorns, Jet Wagon gains haste and trample until end of turn.
+Crew 3 (Tap any number of creatures you control with power 3 or less: This Vehicle becomes an artifact creature until end of turn.)
+5/4
+Sorting Fugue WU
+Sorcery
+Each player may scry 3, then draw a card. Each player who does skips his or her next combat phase.
+”I’m not sure if I’m more disgusted or horrified.”
+—Discord
+Luna’s Indignation 1WB
+Enchantment
+Whenever a source an opponent controls deals damage to you, you may pay X, where X is less than or equal to the damage dealt to you this way. If you do, that opponent loses X life.
+Luna’s justice is harsh, swift, and undeniably fair.
+Morphic Maelstrom 5(ur)(ur)
+Sorcery
+Each player puts all creatures he or she owns on the bottom of his or her library in a random order, then reveals cards from the top of his or her library until he or she reveals that many creature cards. The player puts those cards onto the battlefield, then puts the rest on the bottom of his or her library in a random order.
+Forgotten Ruins
+Land
+T: Add C to your mana pool.
+3, T: Each player shuffles his or her graveyard into his or her library. Sacrifice Forgotten Ruins.
+The Everfree swallows many towns, but rarely chews.
