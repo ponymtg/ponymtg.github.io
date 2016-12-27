@@ -18822,3 +18822,104 @@ Land
 T: Add C to your mana pool.
 3, T: Each player shuffles his or her graveyard into his or her library. Sacrifice Forgotten Ruins.
 The Everfree swallows many towns, but rarely chews.
+Limit Break 2WW
+Sorcery
+Fateful hour — If you have 5 or less life, creatures you control get +2/+2 and gain double strike and lifelink until end of turn.
+The greatest feats are performed when they matter most.
+Client Hack 2UU
+Sorcery
+Target player reveals cards from the top of his or her library until he or she reveals an instant or sorcery card. You may cast that card without paying its mana cost. Then that player shuffles his or her library.
+Social Network 3U
+Enchantment
+All creatures have “1, T: Draw a card, then discard a card.”
+”The Internet is one of the most powerful tools ever created by any sapient race, used to share pictures of meals and complain about fiction.”
+—Sunset Shimmer
+Stolen Secrets 3UU
+Sorcery
+Target opponent reveals his or her hand. Draw a card for each card revealed this way.
+Learning opportunities are everywhere if you know how to look.
+Usher Out XUU
+Sorcery
+Return all creatures with converted mana cost X or less to their owners’ hands.
+Rarity: “It’s time for adult conversation, dear.”
+Sweetie Belle: “You’re sixteen!”
+Hollow Repentance 1B
+Instant
+Target player sacrifices a creature, then gains life equal to that creature’s power.
+”Sometimes doing everything you can still isn’t enough.”
+—Sunset Shimmer
+Old Shame 2B
+Sorcery
+Draw three cards.
+At the beginning of your upkeep, if Old Shame is in your graveyard, you lose 1 life.
+2B, Discard three cards: Return Old Shame from your graveyard to your hand.
+Sadistic Spectator 2B
+Creature — Human Rogue
+Whenever another creature dies, you may put a +1/+1 counter on Sadistic Spectator. If you do, you lose 1 life.
+”You all have your fun. I just like to watch.”
+2/2
+Soul of Spite 2BB
+Creature — Spirit
+When Soul of Spite dies, all creatures get -2/-2 until end of turn.
+Rumors had always taken on a life of their own. As magic flooded the world, that life became all too literal.
+2/1
+Gossipmonger 3B
+Creature — Human Monger
+2: Each player loses 1 life. Any player may activate this ability.
+”I’ll tell you everything I’ve heard. All I ask for is something new.”
+3/3
+Ominous Taleteller 3B
+Creature — Human Citizen
+When Ominous Taleteller enters the battlefield, you draw X cards and lose X life, where X is the number of Humans you control.
+The bigger the audience, the more memorable the story.
+1/2
+Teenage Backstabbers 3B
+Creature — Human Rogue
+Exploit (When this creature enters the battlefield, you may sacrifice a creature.)
+When Teenage Backstabbers exploits a creature, target player discards two cards.
+”Nothing personal.”
+2/2
+Broken Trust 3BB
+Enchantment
+Creatures can’t be the targets of spells or abilities their controllers control.
+Society is founded on unspoken promises and unwritten rules. Without them, it breaks down almost instantly.
+Humiliating History 5B
+Sorcery
+Delve (Each card you exile from your graveyard while casting this spell pays for 1.)
+Each player loses 1 life for each card in his or her graveyard.
+Combat Fury R
+Instant
+Target attacking creature gains double strike until end of turn.
+The first step of any journey, including a headlong charge, is the hardest. The rest flow naturally.
+Stage Dive 2R
+Sorcery
+As an additional cost to cast Stage Dive, sacrifice a creature.
+Stage Dive deals damage equal to the sacrificed creature’s power to each creature.
+Every performer should leave an impact on the audience.
+Unseasonable Bloom 1G
+Sorcery
+Each player may put any number of land cards from his or her hand onto the battlefield tapped.
+”That odd. I didn’t think this world had weather magic.”
+—Sunset Shimmer
+Bunny Trucker 2G
+Creature — Rabbit Artificer
+Metalcraft — As long as you control three or more artifacts, Bunny Trucker gets +5/+5 and has trample.
+”This game is weird.”
+—Pinkie Pie
+1/1
+Wallowing Hogs 4G
+Creature — Boar
+Landfall — Whenever a land enters the battlefield under your control, you gain 3 life.
+”’Happy as a pig in mud’ ain’t just an expression.”
+—Applejack
+3/4
+Consult Twilight 2WU
+Sorcery
+You gain 3 life and draw two cards.
+Fateful hour — If you have 5 or less life, you instead gain 6 life and draw four cards.
+”I trust Sunset. If she’s reaching out to me, it’s probably serious.”
+—Princess Twilight
+Obscured Identity
+Conspiracy
+Hidden agenda (Start the game with this conspiracy face down in the command zone and secretly name a card. You may turn this conspiracy face up any time and reveal the chosen name.)
+Creatures you control with the chosen name have “1U: This creature gains hexproof until end of turn.”
