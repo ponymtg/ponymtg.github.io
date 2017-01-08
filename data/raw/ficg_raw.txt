@@ -18923,3 +18923,227 @@ Obscured Identity
 Conspiracy
 Hidden agenda (Start the game with this conspiracy face down in the command zone and secretly name a card. You may turn this conspiracy face up any time and reveal the chosen name.)
 Creatures you control with the chosen name have “1U: This creature gains hexproof until end of turn.”
+Push Back W
+Instant
+Prevent the next X damage that would be dealt to each creature you control, where X is the number of creatures you control.
+Every step was a declaration that they would not fear the night.
+Guardian of Time 2WW
+Creature — Pegasus Wizard
+Flying
+During extra turns, phases, and steps, if you control a Plains, you may cast Guardian of Time without paying its mana cost and as though it had flash.
+If a player would begin an extra turn, phase, or step, that player skips that turn, phase, or step instead.
+3/3
+End-Marked Foal 3WW
+Creature — Unicorn Child
+2W: Another target creature gains indestructible until end of turn.
+When End-Marked Foal dies, destroy all creatures.
+”The fate of a pony who bears my sigil is rarely a happy one.”
+—Temperance, Princess of Endings
+2/2
+Tourist Trap 3WW
+Instant — Trap
+If three or more creatures you don’t control are attacking, you may pay 1W rather than pay Tourist Trap’s mana cost.
+Exile up to three target creatures. Return them to the battlefield at the beginning of the next end step.
+Ditzy’s Delivery 1U
+Instant
+Each player draws two cards and reveals them.
+”Information wants to be free, especially given how it can’t stay in my saddlebags.”
+Misshapen Toad 1U
+Creature — Frog
+U: Misshapen Toad gets -1/+1 until end of turn.
+”Other ponies say he’s ugly. I say ask a lady toad.”
+—Inkwell, wizened veteran
+2/1
+Precocious Prodigy 1U
+Creature — Unicorn Child Wizard
+T: Add C to your mana pool. Spend this mana only to cast a noncreature spell.
+”It’s a simple reversion charm. Wasn’t anypony else paying attention that day?”
+1/2
+Justified Paranoia 2U
+Enchantment
+At the beginning of your upkeep, scry 1.
+Delirium — If you would scry X, if there are four or more card types among cards in your graveyard, scry X plus 1 instead.
+Domineering Matriarch 2UU
+Creature — Unicorn Citizen
+Other creatures you control get -1/-0.
+Celestia is far from the most self-important pony in Canterlot.
+4/4
+Minor Breakdown 1B
+Sorcery
+Target player discards a card. If that player has five or more cards in his or her hand, he or she discards two cards instead.
+The more you have, the less you care.
+Siege Shades 4B
+Creature — Shade
+1B: Siege Shades gets +1/+1 until end of turn. Target player loses 1 life.
+They have no need for provisions or supplies as long as the defenders despair.
+2/2
+Shadowflame Onslaught 4BBB
+Sorcery
+Deathtouch
+Shadowflame Onslaught deals 1 damage to each creature target player controls.
+The tiniest spark is enough to reduce both body and soul to ash.
+Baleful Buffet 3R
+Enchantment
+When Baleful Buffet enters the battlefield, draw a card.
+Whenever an opponent gains life, create that many 1/1 colorless Construct artifact creature tokens.
+Celestia cursed under her breath. There was a simple solution, but it would cost far too much dignity.
+Cattle Rustlers 4R
+Creature — Ox Rogue
+Trample
+Whenever Cattle Rustlers deals combat damage to a player, exile the top card of that player’s library. You may play that card this turn.
+They care more about the fun of the heist than the actual loot.
+4/3
+Silo Raccoons 1G
+Creature — Beast
+Whenever a nonbasic land enters the battlefield under an opponent’s control, put a +1/+1 counter on Silo Raccoons.
+”Have you considered charging rent?”
+—Fluttershy, to Applejack
+2/2
+Savage Centerpiece 3
+Artifact
+(2g)(2g): Savage Centerpiece becomes a 4/3 Rabbit artifact creature until end of turn.
+After its rampage, few of the fillies still thought bunnies were cute, though some of the colts found the appeal.
+Boar Engine 6
+Artifact Creature — Boar
+Boar Engine has hexproof as long as you control a green permanent.
+”Go for the toes. If it’s one of those new-fangled models without toes, make some first.”
+—Inkwell, wizened veteran
+5/4
+Troublesome Trio URG
+Creature — Unicorn Child
+U: Troublesome Trio gains hexproof until end of turn.
+R: Troublesome Trio gains first strike until end of turn.
+G: Troublesome Trio gains trample until end of turn.
+3/3
+Shake Off 1(wu)
+Instant
+For each permanent attached to target creature, attach that permanent to another creature. (Control of those permanents doesn’t change.)
+Draw a card.
+Whinnyland Gates 1WB
+Creature — Wall
+Defender
+Extort, extort (Whenever you cast a spell, you may pay (wb) up to two times. For each time you do, each opponent loses 1 life and you gain that much life.)
+You’ll leave happy. Your wallet won’t.
+0/4
+Ravenous Goat 1GU
+Creature — Goat
+Whenever Ravenous Goat deals combat damage to a player, choose one —
+• Destroy target artifact or enchantment that player controls.
+• That player puts the top five cards of his or her library into his or her graveyard.
+3/3
+Canterlot Siege 3WB
+Enchantment
+As Canterlot Siege enters the battlefield, choose Light or Darkness.
+• Light — Whenever a creature you control attacks, it gains indestructible until end of turn.
+• Darkness — Whenever a creature deals combat damage to you, destroy it.
+Business 3U//Pleasure 4B
+Sorcery//Sorcery
+Business: Create a token that’s a copy of target artifact.
+Pleasure: You draw three cards and you lose 3 life.
+Mount Monument
+Legendary Land
+T: Add C to your mana pool.
+4, T: Put a sculpture counter on Mount Monument.
+T, Remove four sculpture counters from Mount Monument and sacrifice it: Create four 4/4 Golem artifact creature tokens with alicorn and flying. (They’re Pony Pegasus Unicorns in addition to their other types.)
+Manehattan Newsie 1W
+Creature — Pony Child
+Revolt — When Manehattan Newsie enters the battlefield, if a permanent you controlled left the battlefield this turn, return target enchantment card from your graveyard to your hand.
+The newsie strike was renown for its efficacy and choreography.
+2/2
+Adoring Audience 3W
+Creature — Pony Citizen
+Whenever a player activates an activated ability, if it isn’t a mana ability, you gain 1 life.
+On the street, Manehattanites are among the most cynical ponies in Equestria. In a theater, they’ll cheer for just about anything.
+3/3
+Police Battalion 3WW
+Creature — Pony Soldier
+When Police Battalion enters the battlefield, target opponent skips his or her next combat phase.
+”Everypony remain calm. If you cooperate, we’ll be able to get through this a lot faster.”
+—Stablemaker, police chief
+2/5
+Unjust Accusation 1U
+Sorcery
+Detain target creature an opponent controls. (Until you next turn, that creature can’t attack or block and its activated abilities can’t be activated.)
+Flashback 3U (You may cast this spell from your graveyard for its flashback cost. Then exile it.)
+Trixie’s Assistants 1UU
+Creature — Pegasus Wizard
+Flying
+The first instant or sorcery spell you cast each turn costs 1 less to cast.
+“I usually work alone, but some tricks just don't work with random volunteers.”
+—Trixie Lulamoon, traveling performer
+2/2
+Second-Story Prancer 2U
+Creature — Pony Rogue
+1U: Turn Second-Story Prancer face down.
+Morph 1U (You may cast this card face down as a 2/2 creature for 3. Turn it face up any time for its morph cost.)
+When Second-Story Prancer is turned face up, it gains hexproof until end of turn and can’t be blocked this turn.
+2/2
+Theater Director 2U
+Creature — Pony Advisor
+Whenever you activate an ability of a creature, if it isn’t a mana ability, you may pay U. If you do, untap that creature.
+”Somepony’s got to keep all these acts straight.”
+1/3
+Trixie’s Expertise 2UU
+Sorcery
+Return target instant or sorcery card from your graveyard to your hand.
+You may cast a card with converted mana cost 3 or less from your hand without paying its mana cost.
+”Watch in awe!”
+Follow the Trail 3U
+Sorcery
+Investigate for each instant and/or sorcery card in target player’s graveyard. (To investigate, create a colorless Clue artifact token with “2, Sacrifice this artifact: Draw a card.”)
+No criminal is truly untraceable.
+Smoke Bomb Trap 3U
+Instant — Trap
+If an opponent cast two or more noncreature spells this turn, you may pay U rather than pay Smoke Bomb Trap’s mana cost.
+All creatures gain shroud until end of turn. (They can’t be the targets of spells or abilities.)
+Great Escape X2U
+Instant
+Improvise (Your artifacts can help cast this spell. Each artifact you tap after you’re done activating mana abilities pays for 1.)
+Return up to X target creatures to their owners’ hands.
+Grand Larceny 2B
+Sorcery
+Target opponent loses any number of counters. For each counter lost this way, you get a counter of that kind. (You choose which counters.)
+Rough Diamond can steal anything from anyone, and lives to prove it.
+Knife Tosser 3R
+Creature — Unicorn Rogue
+When Knife Tosser enters the battlefield, it deals 3 damage to target creature an opponent controls chosen at random.
+”I swear I was aiming for the apple.”
+3/2
+Case the Joint 2G
+Sorcery
+Search your library for a land card, reveal it, and put it into your hand. Then shuffle your library.
+Investigate.
+Commiserate 2G
+Sorcery
+Put two +1/+1 counters on target creature.
+Conspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it and you may choose a new target for the copy.)
+Map Scrap 0
+Artifact
+T: Reveal the top card of your library. If it’s a land card, you may put it onto the battlefield. If you do, sacrifice Map Scrap.
+It gives a destination, but the journey is up to you.
+Decoy Diamond 2
+Artifact
+Whenever an opponent casts a spell, if it has a single target, change the target to Decoy Diamond if able.
+T: Add C to your mana pool.
+Shiny enough to overwhelm any sense of self-control.
+Manehattan Express 3
+Artifact — Vehicle
+Manehattan Express can’t be blocked by creatures with flying.
+Crew 3 (Tap any number of creatures you control with power 3 or more: This Vehicle becomes an artifact creature until end of turn.)
+5/5
+Forehoof Pendant 4
+Artifact
+At the beginning of your end step, draw a card.
+Whenever a creature deals combat damage to you, that creature’s controller gains control of Forehoof Pendant.
+A treasure fit for a king attracts the far less noble.
+Carneighie Hall
+Land
+T: Add C to your mana pool.
+3, T: Put a verse counter on target Song.
+Every art form has an ultimate venue, the place synonymous with greatness in that field.
+Diamond District
+Land
+T: Add C to your mana pool.
+1, T: Untap target artifact.
+”If it’s beautiful, it’s here.”
+—Rarity, Bearer of Generosity
