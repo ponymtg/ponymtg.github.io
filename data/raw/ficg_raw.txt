@@ -19147,3 +19147,120 @@ T: Add C to your mana pool.
 1, T: Untap target artifact.
 ”If it’s beautiful, it’s here.”
 —Rarity, Bearer of Generosity
+Combat Stance W
+Instant
+Target attacking or blocking creature gets +3/+3 until end of turn.
+All creatures defend themselves. Some do it more creatively than others.
+Long Hauler 4W
+Creature — Pony Scout
+Aura spells you control that target Long Hauler cost 2 less to cast.
+Equip abilities that target Long Hauler cost 2 less to activate.
+Carrying capacity is a matter of pride for some earth ponies.
+3/3
+Sea Beast Colony U
+Creature — Beast
+Evolve (Whenever a creature enters the battlefield under your control, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)
+When Sea Beast Colony’s power is 3 or greater, transform it.
+0/1
+Spiii-kean Contemplatives
+(U) Creature — Salamander Wizard
+Evolve
+2, Remove a +1/+1 counter from Spiii-kean Contemplatives: Draw a card.
+They wander the world, seeking to bring themselves closer to their creator in both form and wisdom.
+1/3
+Vase People Shelfdwellers UU
+Creature — Salamander Citizen
+Whenever you draw a card, put a +1/+1 counter on Vase People Shelfdwellers.
+Once they realized the meaning of the strange symbols, their development accelerated even further.
+1/1
+Get Creamed 1U
+Sorcery
+Tap up to two target creatures. If you cast another spell this turn, those creatures don’t untap during their controllers’ next untap steps.
+”At least it’s chocolate.”
+—Spike
+Object Lesson 1U
+Instant
+Draw a card for each spell target opponent cast this turn.
+”You aren’t the only mind in the world. Look around and you’ll find everypony has something to teach you.”
+—Twilight Sparkle, Bearer of Magic
+Vase People Pageglider 1U
+Creature — Salamander Warrior
+U: Vase People Pageglider gains flying until end of turn.
+In Equestria, ingenuity can easily trump aerodynamics.
+2/1
+Table People Chariot 2U
+Creature — Salamander Warrior
+Table People Chariot can’t be blocked except by creatures with defender.
+By the time you’ve processed what they’re looking at, it’s too late to stop them.
+2/2
+Table People Glyphist 2U
+Creature — Salamander Citizen
+Whenever Table People Glyphist or another Salamander enters the battlefield under your control, you may draw a card. If you do, discard a card.
+Markers provided an easy way to advance beyond an oral history.
+2/2
+Retail Malaise 1B
+Enchantment
+Whenever an opponent activates an activated ability, if it isn’t a mana ability, that player loses 1 life.
+Crushing a soul can be accomplished without magic.
+Painful Isolation 2B
+Enchantment — Aura
+Enchant creature
+Enchanted creature gets -2/-2 and can’t be the target of spells or abilities its controller controls.
+Loneliness is an unnatural state for ponies, detrimental to both mental and physical health.
+Directed Sabotage 2R
+Sorcery
+Creatures you control gain trample until end of turn. Whenever a creature you control deals combat damage to a player this turn, you may destroy target artifact that player controls.
+”Use the tools you got.”
+—Granny Smith
+Flimflam Processors 2R
+Creature — Unicorn Rigger
+Assemble 2 (2: Create a colorless Contraption artifact token. Assemble only as a sorcery.)
+Contraptions you control have “T, Sacrifice this artifact: Add R to your mana pool.”
+”Soon your tiresome chores will be a thing of the past!”
+2/1
+Convention Barbarian 3R
+Creature — Pony Barbarian
+Menace
+Whenever Convention Barbarian attacks, it gets +1/+0 until end of turn for each creature defending player controls.
+Crowds bring out the worst in some ponies.
+1/4
+Disciplining Flame 3R
+Sorcery
+As an additional cost to cast Disciplining Flame, you may reveal a Dragon card from your hand.
+Creatures target player controls can’t block this turn. If you revealed a Dragon card or controlled a Dragon as you cast Disciplining Flame, Disciplining Flame deals 3 damage to that player.
+Romantic Rivalry 3RR
+Sorcery
+As an additional cost to cast Romantic Rivalry, tap an untapped creature you control.
+Target creature fights another target creature.
+”Love can be freely created and destroyed just as easily.”
+—Cadence, Princess of Serenity
+Super-Growth Formula 4G
+Instant
+Choose one —
+• Target creature gets +6/+6 until end of turn.
+• Put three +1/+1 counters on target creature.
+Spike considered taste-testing, but decided that Ponyville didn’t need another new water tower.
+Fruit Suit 2
+Artifact — Equipment
+Landfall — Whenever a land enters the battlefield under your control, put a +1/+1 counter on equipped creature.
+Equip 2
+Cosplayers are a natural consequence of almost any convention.
+Draconic Tutor BR
+Sorcery
+As an additional cost to cast Draconic Tutor, you may reveal a Dragon card from your hand.
+Search your library for a card, put that card into your hand, then shuffle your library. Discard a card at random unless you revealed a Dragon card from your hand or controlled a Dragon as you cast Draconic Tutor.
+Eon-Long Line 2(wu)(wu)
+Enchantment
+Players can’t cast creature cards in hands.
+Each creature card in each player’s hand has suspend 2. The suspend cost is equal to its mana cost. (Rather than cast that card from his or her hand, its owner may pay its mana cost and exile it with two time counters on it. At the beginning of that player’s upkeep, he or she removes a time counter. When the last is removed, he or she casts it without paying its mana cost. It has haste.)
+Alluring Librarian 3GU
+Creature — Pony Citizen
+All creatures able to block Alluring Librarian do so.
+Whenever Alluring Librarian becomes blocked, draw a card for each creature blocking it.
+An attractive mare in a small town gets all kinds of unwanted attention.
+2/2
+Population Explosion 5(gu)(gu)(gu)
+Sorcery
+For each creature, that creature’s controller creates a token that’s a copy of that creature.
+”We’re going to need a bigger tank.”
+—Spike
