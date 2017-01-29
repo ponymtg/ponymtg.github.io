@@ -19264,3 +19264,125 @@ Sorcery
 For each creature, that creature’s controller creates a token that’s a copy of that creature.
 ”We’re going to need a bigger tank.”
 —Spike
+Baast’s Ambushers 3W
+Creature — Cat Rebel
+Flash
+Baast’s Ambushers has indestructible as long as it entered the battlefield this turn.
+The cats’ favored tactics were also the only viable ones they could use against Anubis.
+3/2
+Smaller on the Inside 4W
+Enchantment
+Nonartifact creatures with power 3 or greater can’t attack or crew Vehicles.
+”I keep forgetting you ponies can’t shapeshift on demand.”
+—Discord
+Ancient Butterdragon 5W
+Creature — Insect
+Flying, lifelink
+Suspend 3 — 1W (Rather than cast this card from your hand, you may pay 1W and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost. It has haste.)
+3/3
+Nesting Roc 6WW
+Creature — Bird
+Flying
+When Nesting Roc enters the battlefield, exile up to three target creatures until Nesting Roc leaves the battlefield.
+Fortunately, their chicks are very picky eaters.
+6/6
+Water Sprite U
+Creature — Spirit
+Water Sprite can’t attack unless defending player controls an Island.
+When you control no Islands, sacrifice Water Sprite.
+Water sprites are delicate creatures that cannot bear to be kept from their homes for long.
+2/1
+Swooping Owl 1UU
+Creature — Bird
+You may cast Swooping Owl as though it had flash if you pay 2 more to cast it.
+Flying
+When Swooping Owl enters the battlefield, you may return target creature to its owner’s hand.
+1/1
+Devastating Flood 2U
+Sorcery
+Kicker 3W (You may pay an additional 3W as you cast this spell.)
+Tap all nonblue creatures. If Devastating Flood was kicked, destroy those creatures.
+Water is essential for life. That doesn’t mean it’s harmless.
+Enthralled Excavators 2U
+Creature — Pony Drone
+Hoofcraft — When Enthralled Excavators enters the battlefield, if you control three or more Ponies, Pegasi, and/or Unicorns, target player puts the top six cards of his or her library into his or her graveyard.
+2/2
+Superluminoopsy 3U
+Instant
+Return target nonland permanent you control and target nonland permanent you don’t control to their owners’ hands.
+Chaotic 1U (You may cast this card for its chaotic cost. If you do, choose its targets at random.)
+Heartsong Kelpie 4UU
+Creature — Siren
+At the beginning of each upkeep, put a verse counter on Heartsong Kelpie, than gain control of each Pony, Pegasus, and Unicorn with converted mana cost equal to or less than the number of verse counters on Heartsong Kelpie for as long as you control it.
+3/4
+Malicious Molly 1B
+Creature — Cat
+Other creatures you control get -0/-1.
+Cats don’t cooperate. They tolerate the survivors.
+3/3
+Meteorite Barrage 1R
+Instant
+Buyback 2R (You may pay an additional 2R as you cast this spell. If you do, put this card into your hand as it resolves.)
+Meteorite Barrage deals 3 damage to target creature an opponent controls chosen at random.
+Discordian Faun 2R
+Creature — Satyr Shaman
+R, Sacrifice Discordian Faun: Return target card with chaotic from your graveyard to your hand.
+”Oh, them. There’s nothing more embarrassing than being worshipped, and they just wouldn’t stop. What’s a draconequus to do?”
+—Discord
+3/1
+Quick Thinking 3RR
+Instant
+Exile the top five cards of your library. Put two of those cards at random into your hand and the rest into your graveyard.
+”Plans are for mortals.”
+—Discord
+Charging Herd 3R
+Creature — Pony Drone
+Charging Herd attacks each turn if able.
+Ponies act aggressively only when defending themselves or others. Some of that defense is proactive.
+4/5
+Coney Commander 3GG
+Creature — Rabbit Soldier
+When Coney Commander enters the battlefield, other creatures you control get +2/+2 until end of turn and cant’ be blocked by creatures with power 2 or less this turn.
+Even headlong charges can use a little tactical finesse.
+2/2
+Wild Rumpus 3GG
+Sorcery
+Destroy all artifacts target player controls. For each artifact destroyed this way, that player creates a 2/2 green Beast creature token.
+The day was saved. The same couldn’t be said for Fluttershy’s favorite tea set.
+Flourishing Philter 4G
+Enchantment — Aura
+Enchant creature
+When Flourishing Philter enters the battlefield or at the beginning of your upkeep, put two +1/+1 counters on enchanted creature.
+Overdose to overwhelm.
+Cyberpony Converter 5
+Artifact Creature — Construct
+Whenever a nonartifact creature dies, you may pay 2. If you do, create a 3/3 colorless Construct artifact creature token.
+”They’re just doing what comes artificially.”
+—Minuette, temporal operative
+3/3
+Look Ahead WU
+Sorcery
+Each player may scry 1. Then each player reveals the top card of his or her library. You gain life equal to the total converted mana cost of cards revealed this way.
+Ditzy Doo can’t focus well on anything, including the present.
+Anugyptian Halberdier WB
+Creature — Hound Soldier
+W: Anugyptian Halberdier gains first strike until end of turn.
+B: Anugyptian Halberdier gains deathtouch until end of turn.
+Anubis personally trains his favored guardians, making them nearly unbeatable.
+1/3
+Quickglide Lotion UR
+Enchantment — Aura
+Enchant creature you control
+Enchanted creature has hexproof and haste.
+”You’ll slip and slide with careless ease, confounding all your enemies.”
+—Zecora, zebra shaman
+Baast, Pouncing Partisan 1RW
+Legendary Creature — Cat Rebel
+First strike, menace
+Whenever Baast, Pouncing Partisan deals combat damage to a player, search your library for a Rebel permanent card and reveal it. You may pay X, where X is that card’s converted mana cost. If you do, put it onto the battlefield. Otherwise, put it into your hand. Then shuffle your library.
+2/3
+Anubis, Fel Pharaoh 4WB
+Legendary Creature — Hound Wizard
+At the beginning of your upkeep, choose target creature card in your graveyard. Return that card to the battlefield unless an opponent pays 3 life.
+”You may enter the next life when I have no more need for you in this one.”
+4/5
