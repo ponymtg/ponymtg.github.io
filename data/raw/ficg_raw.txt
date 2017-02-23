@@ -19488,7 +19488,7 @@ Creature — Minotaur Warrior
 Whenever you cast a noncreature spell, Steamhorn Minotaur gains trample until end of turn.
 Whenever Steamhorn Minotaur deals combat damage to a player, you may return target instant or sorcery card from your graveyard to your hand.
 4/3
-Utter Pandemonium 4UBR
+Total Pandemonium 4UBR
 Sorcery
 Cascade storm (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order. Then repeat this process for each spell cast before this one this turn.)
 Precious Visage 3W

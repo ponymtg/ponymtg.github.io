@@ -35514,7 +35514,7 @@ var FICG_CARDS =
         'pt': '4/3',
     },
     {
-        'name': 'Utter Pandemonium',
+        'name': 'Total Pandemonium',
         'set': 'Friendship is Card Games',
         'creator': 'FanOfMostEverything',
         'cost': '4UBR',
