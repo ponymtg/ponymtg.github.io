@@ -19386,3 +19386,461 @@ Legendary Creature — Hound Wizard
 At the beginning of your upkeep, choose target creature card in your graveyard. Return that card to the battlefield unless an opponent pays 3 life.
 ”You may enter the next life when I have no more need for you in this one.”
 4/5
+Peacetime Patrol 2W
+Creature — Pegasus Soldier
+Defender, flying
+Peacetime Patrol can’t block alone.
+When a creature deals combat damage to you, transform Peacetime Patrol.
+2/4
+Mobilized Platoon
+(W) Creature — Pegasus Soldier
+Flying, vigilance
+”We failed once. Never again.”
+—Flash Sentry, Royal Guard veteran
+4/4
+Ceremonial Doves 2WW
+Creature — Bird
+Flash
+Flying
+When Ceremonial Doves enters the battlefield, target player skips his or her next combat phase.
+Some symbols are Multiversally recognized.
+2/2
+Kibitz, Princess Wrangler 3W
+Legendary Creature — Unicorn Advisor
+Spells you cast with alicorn cost 2 less to cast.
+As long as you control a creature with alicorn, spells you cast without alicorn cost 1 less to cast.
+He is the mainspring that powers the clockwork of Equestria’s governance.
+2/3
+Lorikeet Nectar 3W
+Sorcery
+Create a number of 1/1 white Bird creature tokens with flying equal to your devotion to white. (Each W in the mana costs of permanents you control counts towards your devotion to white.)
+They flock to sweetness in both flavor and attitude.
+Enticing Distraction 1U
+Instant
+Target creature gets -2/-0 until end of turn.
+Draw a card.
+”Well, maybe just one strawberry.”
+—Princess Celestia
+Berry Snatch 1B
+Sorcery
+Target player loses 2 life and you gain 2 life.
+Morbid — At the beginning of each end step, if Berry Snatch is in your graveyard and a creature died this turn, return Berry Snatch to your hand.
+Opossums are inveterate scavengers.
+Lunar Opossum 1B
+Creature — Beast
+Whenever you cast a black spell, you may return Lunar Opossum from your graveyard to your hand.
+”Don’t mind him; he’s only playing.”
+—Princess Luna
+2/1
+Luna’s Displeasure 3B
+Instant
+Destroy target creature.
+Revolt — If a permanent you controlled left the battlefield this turn, exile that creature instead.
+Luna may be free of the Nightmare, but her temper can still be dangerously short.
+Luna’s Edict 3BB
+Sorcery
+Each player sacrifices half the creatures he or she controls, rounded up.
+Luna is a big believer in middle-of-the-road policies.
+Rebellious Calf 1R
+Creature — Minotaur Rogue
+Rebellious Calf attacks each turn if able.
+Whenever you cast a noncreature spell, Rebellious Calf gains first strike until end of turn.
+Some young minotaurs see any slight as an excuse to charge.
+2/2
+Antagonize 2R
+Instant
+Kicker 2R (You may pay an additional 2R as you cast this spell.)
+Creatures target player controls attack this turn if able. If Antagonize was kicked, whenever a creature attacks you this turn, Antagonize deals 2 damage to that creature.
+Minotaur Hospitality 2RR
+Enchantment
+At the beginning of your upkeep, goad target creature an opponent controls. (Until your next turn, that creature attacks each combat if able and attacks a player other than you if able.)
+Getting lost in a minotaur’s home is as easy as finding a fight in one.
+Shadowmane Manticore 4R
+Creature — Manticore
+Flying, first strike
+6B: Monstrosity 3. (If this creature isn’t monstrous, put three +1/+1 counters on it and it becomes monstrous.)
+As long as Shadowmane Manticore is monstrous, it has deathtouch.
+3/3
+Survey the Land 2G
+Sorcery
+Choose one —
+• Scry X, where X is the number of lands you control.
+• Reveal cards from the top of your library until you reveal a noncreature card, then put all cards revealed this way into your hand.
+Entwine 2G (Choose both if you pay the entwine cost.)
+Marauding Owlbear 3G
+Creature — Chimera
+5G: Monstrosity 2.
+As long as Marauding Owlbear is monstrous, each nonmonstrous creature you control has “X: Monstrosity 2,” where X is that creature’s converted mana cost plus 2.
+3/3
+Faceless Peril 4GG
+Enchantment
+Whenever a creature attacks you, reveal the top card of your library. If it’s a creature card, put it onto the battlefield blocking that creature. Otherwise, put it in your graveyard.
+”What a lovely night for a stroll.”
+—Princess Luna
+Cloaked Figure 1GU
+Creature — Rogue
+Hexproof
+Whenever Cloaked Figure deals combat damage to a player, you may return it to your hand. If you do, you may put a creature card from your hand onto the battlefield.
+A mystery best left unsolved.
+2/2
+Steamhorn Minotaur 3UR
+Creature — Minotaur Warrior
+Whenever you cast a noncreature spell, Steamhorn Minotaur gains trample until end of turn.
+Whenever Steamhorn Minotaur deals combat damage to a player, you may return target instant or sorcery card from your graveyard to your hand.
+4/3
+Utter Pandemonium 4UBR
+Sorcery
+Cascade storm (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom of your library in a random order. Then repeat this process for each spell cast before this one this turn.)
+Precious Visage 3W
+Enchantment — Aura
+Enchant creature you control
+Vanishing 2 (This enters the battlefield with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)
+Enchanted creature can’t attack or block.
+Creatures can’t attack you or planeswalkers you control.
+Squatters’ Camp UU
+Enchantment — Aura
+Enchant land
+At the beginning of your upkeep, put an occupancy counter on Squatters’ Camp. Then, if there are three or more occupancy counters on Squatters’ Camp, remove all of them, gain control of enchanted land, and attach Squatter’s Camp to another land.
+Poultrification Trap 2UU
+Instant — Trap
+If a creature with power 4 or greater is attacking you or a planeswalker you control, you may pay UU rather than pay Poultrification Trap’s mana cost.
+Until end of turn, each creature target player controls lose all abilities and becomes a Bird with base power and toughness 1/1.
+Wash Away 2UU
+Instant
+Choose one —
+• Counter target spell.
+• Counter all red spells.
+On the one hoof, thought Tumbleweed, the fire was out. On the other, now they had to rebuild the water tower.
+Spectral Prospector 3U
+Creature — Pony Spirit
+Flying
+When Spectral Prospector enters or leaves the battlefield, you may draw a card. If you do, discard a card.
+Gold is meaningless to him now, but still he sifts.
+2/1
+Rustler’s Scorpion 1B
+Creature — Scorpion
+Deathtouch
+2G: Target creature blocks Rustler’s Scorpion this turn if able.
+Like a colt terrorizing a filly, but with more poison.
+1/1
+Shakedown 1BB
+Sorcery
+You gain 1 life for each creature target player controls. Those creatures get -1/-1 until end of turn.
+”Ponies are so generous.”
+—King Longhorn, cattle rustler
+Pyretic Reflux R
+Instant
+As an additional cost to cast Pyretic Reflux, discard a card.
+Pyretic Reflux deals 4 damage to target creature.
+”Excuse me.”
+—Pinkie Pie, Bearer of Laughter
+Capsaicin Shock 1R
+Instant
+Target creature gets +3/+0 until end of turn. Capsaicin Shock deals 3 damage to that creature.
+”It is a good pain.”
+—Pinkie Pie, Bearer of Laughter
+Bouncing Shot 2R
+Instant
+Choose one —
+• Bouncing Shot deals 3 damage to target creature.
+• Bouncing Shot deals 1 damage to each creature target player controls.
+A little acorn can go a long way.
+Instant Attraction 2RRR
+Sorcery
+Gain control of all creatures with power less than the greatest power among creatures you control. Untap those creatures. They gain haste until end of turn.
+The heart can easily drown out the head.
+Deliberate Arson 4RR
+Sorcery
+Destroy target land. Deliberate Arson deals 5 damage to that land’s controller.
+”Awful shame, that.”
+—King Longhorn, cattle rustler
+Careless Might 1GG
+Instant
+Target creature gets +6/+6 until end of turn.
+Longhorn always did like pushing ponies around.
+Natural Exemption 3G
+Enchantment
+Creatures you control with no abilities can’t be the targets of spell or abilities your opponents control.
+”We have to be considerate.”
+—Princess Twilight Sparkle
+Ruinous Stampede 3GG
+Sorcery
+Creatures you control get +3/+3 until end of turn. Whenever a creature you control attacks this turn, defending player sacrifices an artifact or enchantment.
+”Why do we even have a china shop?”
+—Blazing Saddle, bean farmer
+Barbed Fence 2
+Artifact Creature — Wall
+Defender
+1: Barbed Fence gets +1/+0 until end of turn.
+There’s no such thing as too many nails.
+0/3
+Sherrif’s Star 3
+Artifact — Equipment
+Equipped creature gets +1/+1.
+Whenever equipped creature attacks, detain target creature defending player controls. (Until your next turn, that creature can’t attack or block and its activated abilities can’t be activated.)
+Equip (2w)(2u)
+Wanted Poster 3
+Artifact
+2, T, Sacrifice Wanted Poster: Each player may search his or her library for a creature card, reveal it, and put it into his or her hand. Then each player who searched his or her library this way shuffles it.
+Thuggish Rustlers 4RG
+Creature — Ox Rogue
+It’s not that they don’t care about the lives they destroy or the damage they cause. They care very much. That’s why they keep doing it.
+7/7
+Rustic Spring
+Land
+Rustic Spring enters the battlefield tapped.
+T: Add U to your mana pool.
+T, Sacrifice Rustic Spring: Add RG to your mana pool.
+Your Laws Betray You
+Scheme
+When you set this scheme in motion, spells and abilities you control can’t be countered by spells and abilities this turn, permanents you control gain hexproof until end of turn, and creatures you control can’t be blocked this turn.
+”Stop me and you are as terrible as you claim I am.”
+Promising Filly W
+Creature — Pegasus Child
+Hoofcraft — Promising Filly gets +1/+1 and has flying as long as you control three or more Ponies, Pegasi, and/or Unicorns.
+”Once her confidence matches her potential, she’ll be flying circles around the rest.”
+—Rainbow Dash, Bearer of Loyalty
+1/1
+Crystal Radiance 1W
+Enchantment — Aura
+Enchant creature
+Whenever enchanted creature attacks or blocks, if it’s white, it gets +3/+0. If it’s black or red, Crystal Radiance deals 3 damage to it.
+The Crystal Heart is first and foremost a weapon.
+Complacency UU
+Enchantment
+At the beginning of each upkeep, if no spells were cast last turn, each player draws a card.
+”The crystal ponies sat idle for years, carelessly cavorting as I lay in agony. I intend to balance the scales.”
+—King Sombra
+Hope’s Faeries 1U
+Creature — Faerie Illusion
+Flying
+Cast Hope’s Faeries only if you’ve cast another spell this turn.
+A unicorn’s imagination is a truly wondrous thing.
+3/2
+Substitute Mailpony 3U
+Creature — Pegasus Citizen
+Flying
+Whenever an opponent draws a card, that player puts the top card of his or her library into his or her graveyard.
+”Not so easy, is it?”
+—Ditzy Doo
+2/2
+Lost to Time 3U
+Sorcery
+Choose one —
+• Put target nonland permanent on top of its owner’s library.
+• Target player puts the top eight cards of his or her library into his or her graveyard.
+Entwine 1B (Choose both if you pay the entwine cost.)
+Obsidian Transmutation 3U
+Enchantent — Aura
+Enchant artifact, creature, or planeswalker
+Enchanted permanent is a colorless artifact and loses all other card types and abilities.
+To Sombra, it was justice; Amore was now cold and dark without as within.
+Rapid Response 3UU
+Instant
+Split second (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)
+Counter target spell.
+”Not on my watch.”
+—Spitfire, Wonderbolt captain
+Draconic Figment 4U
+Creature — Dragon Illusion
+Flying, hexproof
+Whenever you cast a spell, Draconic Figment loses hexproof until your next turn.
+When Draconic Figment becomes the target of a spell or ability, sacrifice it.
+4/4
+Live Demonstration 4UU
+Instant
+Draw cards equal to target attacking creature’s power.
+Every experience can be a learning experience.
+Mysterious Foal B
+Creature — Unicorn Child
+When your devotion to black is five or greater, transform Mysterious Foal. (Each B in the mana costs of permanents you control counts toward your devotion to black.)
+Only a monster could leave a colt alone in the Frozen North.
+1/1
+Sombra Awakened
+(B) Legendary Creature — Horror
+Menace
+Sombra Awakened’s power and toughness are each equal to your devotion to black. (This creature’s mana cost is B unless it’s a copy.)
+Only a monster could repay that kindness as he did.
+*/*
+Umbrum Extrusion 2B
+Creature — Elemental
+Defender
+Whenever another black permanent enters the battlefield under your control, each opponent loses 1 life and you gain 1 life.
+Crystallized dark magic with roots among the imprisoned Umbra.
+1/3
+Wary Instructor 2B
+Creature — Pegasus Soldier
+Flying
+Wary Instructor can’t block creatures with power 1 or less.
+”H-hey there, kiddos. Who wants to learn how to, uh… Who wants to learn?”
+2/3
+Dark Awakening 2BB
+Enchantment — Aura
+Enchant creature
+Enchanted creature gets +2/+2 and has “1B: This creature gets +2/+2 until end of turn.”
+”In one fateful moment, I was reborn, and my purpose became clear.”
+—King Sombra
+Vestige of Sombra 3B
+Creature — Shade
+Skulk (This creature can’t be blocked by creatures with greater power.)
+B: Vestige of Sombra gets +1/+1 until end of turn.
+As long as there is light, the shadows live on.
+0/2
+Sombra’s Sanctum 3BB
+Enchantment
+If you would draw a card, you may pay 1 life. If you do, draw two cards instead.
+Twilight was torn. Sombra had done such horrible things, yet his shelving system made so much sense.
+Explode R
+Sorcery
+Exile target artifact.
+”Restore that.”
+—King Sombra
+Synthetic Vortex R
+Enchantment
+1R: Put a velocity counter on Synthetic Vortex.
+Sacrifice Synthetic Vortex: Create an X/1 red Elemental creature token with trample and haste, where X is the number of velocity counters on Synthetic Vortex. Exile that token at the beginning of the next end step.
+Toughen Up 1G
+Instant
+Whenever a creature you control is dealt damage this turn, put a +1/+1 counter on it. (The damage is dealt before the counter is put on.)
+“Rub some cloud in it. You’ll be fine.”
+—Spitfire, Wonderbolt captain
+Enslaved Excavators UB
+Creature — Pony Serf
+T: Target opponent puts the top card of his or her library into his or her graveyard. Then, if that player has ten or more cards in his or her graveyard, transform Enslaved Excavators.
+”Start digging. Release my family.”
+—King Sombra
+1/3
+Unleashed Umbra
+(UB) Creature — Horror
+Flying
+Unleashed Umbra’s power and toughness are each equal to the number of cards in your opponents’ graveyards.
+As the creatures escaped, even Sombra felt a fleeting sense of dread.
+*/*
+Soul Fracture 3WB
+Sorcery
+Exile target creature. That creature’s controller loses 3 life.
+”There are no words for what the Crystal Heart did to me. There is no imagining what it tried to do.”
+—King Sombra
+Tyrant’s Citadel
+Land
+As Tyrant’s Citadel enters the battlefield, you may reveal a Plains or Swamp card from your hand. If you don’t, Tyrant’s Citadel enters the battlefield tapped.
+T: Add W or B to your mana pool.
+Thicket Informant 1W
+Creature — Bird
+Flying
+As long as you control an Elk, Thicket Informant gets +1/+1 and has vigilance.
+Every eye in the Everfree serves its masters.
+1/2
+Mount Up 2W
+Sorcery
+Creatures you control get +1/+1 and gain flanking until end of turn. (Whenever a creature without flanking blocks a creature with flanking, the blocking creature gets -1/-1 until end of turn.)
+“Does this strike anypony else as odd?”
+—Rarity, Bearer of Generosity
+Civil Disobedience 4W
+Enchantment
+Revolt — At the beginning of your end step, if a permanent you controlled left the battlefield this turn, until your next turn, creatures can’t attack you or planeswalkers you control unless their controller pays 3 for each of those creatures.
+Contractual Obligation 2UU
+Enchantment — Aura
+Enchant creature
+You control enchanted creature.
+Enchanted creature can’t attack.
+”They don’t have to like it. They just have to show up.”
+—Well-To-Do
+Well-To-Do’s Enforcer 3B
+Creature — Pony Minion
+Lifelink, menace
+There aren’t many career paths available to a pony with a blackjack for a cutie mark. Cronyhood is among the more savory.
+2/3
+March of Progress 4B
+Sorcery
+Destroy target land. If you control an artifact, draw a card.
+”You have to tear down the old to make way for the new.”
+—Well-To-Do
+Well-To-Do, Bullish Marketer 4B
+Legendary Creature — Minotaur Rogue
+Spells you cast cost 2 less to cast.
+Whenever you cast a spell, you lose 2 life.
+”No refunds.”
+4/4
+Converse Cavalry 1RR
+Creature — Pony Knight
+Trample
+Flanking
+Fairness demands that somewhere in the Multiverse, horses ride apes.
+3/2
+Clear Cut 3R
+Sorcery
+Destroy target land. That land’s controller can’t play lands during his or her next turn.
+”These beasts have not merely cleared the land. They have killed it.”
+—King Aspen
+Nutrient Boost 2G
+Sorcery
+Choose one —
+• Target creature gets +4/+4 and gains trample until end of turn.
+• Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.
+Skulking Drop Bear 2G
+Creature — Bear
+Reach
+Revolt — If a permanent you controlled left the battlefield this turn, you may cast Skulking Drop Bear as though it had flash.
+A rumor with teeth.
+2/3
+Thicket Cultivator 2G
+Creature — Elk Druid
+T: Untap target land.
+The Everfree flourishes under the care of cloven hooves.
+2/1
+Hero of Thicket 2GG
+Creature — Elk Warrior
+Whenever Hero of Thicket attacks, other attacking creatures get +1/+1 and gain trample until end of turn.
+”For Aspen and Everfree!”
+3/3
+Invasive Growth 2GG
+Sorcery
+Destroy target nonbasic land. Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library.
+”It wasn’t me this time, I swear.”
+—Discord
+Fearless Timberwolves 3G
+Creature — Elemental Wolf
+Trample
+Revolt — When Fearless Timberwolves enters the battlefield, if a permanent you controlled left the battlefield this turn, you may destroy target artifact.
+Banging pots won’t save you.
+3/2
+Aspen, Heart of the Forest 3GG
+Legendary Creature — Elk Druid
+Vigilance
+T: Add G to your mana pool for each Elk you control.
+GG: Elk you control get +1/+1 until end of turn.
+”The time for friendship has ended.”
+4/5
+Roused Hydra 4GG
+Creature — Hydra
+Roused Hydra enters the battlefield with four +1/+1 counters on it.
+Revolt — At the beginning of your end step, if a permanent you controlled left the battlefield this turn, double the number of +1/+1 counters on Roused Hydra.
+0/0
+Enraged Owlbear 5G
+Creature — Chimera
+Revolt — When Enraged Owlbear enters the battlefield, if a permanent you controlled left the battlefield this turn, you may have Enraged Owlbear fight target creature.
+It didn’t like intruders before, but it’s developed a taste for them.
+5/5
+Shovedozer 3
+Artifact — Vehicle
+Whenever Shovedozer becomes blocked by a creature, return that creature to its owner’s hand at end of combat. (Return it only if it survives combat.)
+Crew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)
+3/4
+Bootleg Duplicate UR
+Creature — Shapeshifter
+You may have Bootleg Duplicate enter the battlefield as a copy of any creature, except it gains “At the beginning of your upkeep, flip a coin. If you lose the flip, return this creature to its owner’s hand.”
+”Cheap and legally distinct. Win-win!”
+—Well-To-Do
+0/0
+Ensnaring Vines 1GU
+Enchantment — Aura
+Enchant artifact or creature
+Enchanted permanent doesn’t untap during its controller’s untap step.
+Landfall — Whenever a land enters the battlefield under your control, you may attach Ensnaring Vines to target artifact or creature.
+Fluttershy Militant 1RGW
+Legendary Creature — Pegasus Druid
+Flying, double strike
+Fluttershy Militant’s power is equal to the number of nonbasic lands your opponents control.
+Fluttershy found herself reminded of another minotaur, and some very valuable lessons.
+*/4
