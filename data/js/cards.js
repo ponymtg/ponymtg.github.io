@@ -27,6 +27,7 @@
  * - transformsInto:    The name of the card that this card transforms into, if it's a double-sided card.
  * - transformsFrom:    The name of the card that this card transforms from, if it's a double-sided card.
  * - artist:            The artist who created the card art.
+ * - border:            The type of border this card has (eg. "silver"). If not given, the standard border is assumed.
  *
  * Most of these properties are optional; the application will attempt to do the best it can with the data that is
  * available. At the very least, "name" should be set, as this is what the application looks for when a search is made.
@@ -11400,6 +11401,17 @@ var CARDS = [
         'image': '9.jpg',
         'set': 'Phil Srobeighn',
         'creator': 'Phil Srobeighn',
+    },
+    {
+        'name': 'Circle of Protection: Brony',
+        'image': 'C6CMMKRUwAAdwyB.jpg',
+        'set': 'Phil Srobeighn',
+        'creator': 'Phil Srobeighn',
+        'cost': '1W',
+        'supertype': 'Enchantment',
+        'text': 'Kicker 2; Any player may kick Circle of Protection: Brony.\n\nWhen Circle of Protection: Brony enters the battlefield, chose a Brony. If Circle of Protection: Brony was kicked, you cannot choose FanOfMostEverything.\n\n2: The next time a source of your choice designed by the chosen Brony would deal damage to you this turn, prevent that damage.',
+        'artist': 'Dragonina',
+        'border': 'silver',
     },
     {
         'name': 'Applejack, The Skilled',
