@@ -137,7 +137,7 @@ def is_type_line(line):
     # - "Sorcery" must be preceded by "Tribal".
     # - "Sorcery" must be preceded by "Snow".
     # - The line must also contain a double slash (//), which indicates that this is a split card for which one of the
-    #   halves is an Sorcery.
+    #   halves is a Sorcery.
     if 'Sorcery' in line:
         if line not in ['Sorcery', 'Legendary Sorcery'] and 'Tribal Sorcery' not in line and 'Snow Sorcery' not in line and '//' not in line:
             return False
@@ -191,8 +191,9 @@ def is_type_line(line):
     # - "Land" is preceded by the word "Legendary".
     # - "Land" is preceded by the word "Basic".
     # - "Land" is preceded by the word "Snow".
+    # - "Land" is succeeded by a long dash.
     if 'Land' in line:
-        if line != 'Land' and 'Legendary Land' not in line and 'Basic Land' not in line and 'Snow Land' not in line:
+        if line != 'Land' and 'Legendary Land' not in line and 'Basic Land' not in line and 'Snow Land' not in line and 'Land —' not in line:
             return False
             
     # At this point, we're reasonably sure that we're ruled out a lot of false positives, so we will identify this as a
