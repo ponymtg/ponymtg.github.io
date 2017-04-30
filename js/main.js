@@ -27,7 +27,6 @@ var global = {
         },
         'Shards of Equestria': {
             'path': 'Shards of Equestria/Shards of Equestria pack/cards',
-            'notes': '<i>Shards of Equestria</i> was shut down in 2012 after a Cease and Desist from Hasbro. The website no longer exists.',
         },
         'Nightfall in Equestria': {
             'path': 'Nightfall 1.15/cards',

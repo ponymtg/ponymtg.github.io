@@ -1,8 +1,5 @@
 window.onload = initialize;
 
-/**
- * Application setup.
- */
 function initialize() {
     CARDS = CARDS.concat(FICG_CARDS);
     CARDS = CARDS.concat(IPU_CARDS);
