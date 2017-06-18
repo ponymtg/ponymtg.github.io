@@ -2,6 +2,7 @@ window.onload = initialize;
 function initialize() {
     CARDS = CARDS.concat(FICG_CARDS);
     CARDS = CARDS.concat(IPU_CARDS);
+    CARDS = CARDS.concat(MISC_CARDS);
 
     global.elements.printSheetCardsContainer = document.querySelector('#printSheetCardsContainer');
 

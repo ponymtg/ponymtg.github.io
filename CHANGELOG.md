@@ -1,3 +1,16 @@
+## 1.3.0
+
+* Added new Miscellany section, for one-off or uncategorizable cards that aren't part of any set.
+* Added a Home link to the top of every subpage.
+* Card view pages (the ones reached by supplying a card hash in the URL) now have a simplified layout showing only the
+  card, plus a Home link.
+* Added support for a "Source URL" property in card tables, which links through to the given URL.
+* The Print Sheet page can accept Miscellany cards.
+* Minor update to About page.
+* The FICG Python parser now reads from standard input and writes to standard output, rather than requiring a file.
+* Updated the FICG parser's invocation script to use streams instead of file arguments.
+
+
 ## 1.2.1
 
 * Improved RoboFoME's generation algorithm.

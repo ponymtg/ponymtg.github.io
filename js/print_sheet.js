@@ -6,6 +6,7 @@ function initialize() {
     // appending it to the main database.
     CARDS = CARDS.concat(FICG_CARDS);
     CARDS = CARDS.concat(IPU_CARDS);
+    CARDS = CARDS.concat(MISC_CARDS);
 
     for (var i=0; i < CARDS.length; i++) {
         // A little trick here: in order to be able to filter these cards by their hashes (which isn't a stored property

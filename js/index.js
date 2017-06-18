@@ -19,7 +19,24 @@ function initialize() {
     // We're also keeping Sorden's IPU set separate for now.
     CARDS = CARDS.concat(IPU_CARDS);
 
+    // Get any parameters passed in the URL.
     global.urlParameters = getUrlParameters();
+
+    // Get references to various page elements.
+    var elementIds = [
+        'advancedSearch',
+        'container',
+        'menuBar',
+        'printSheetLink',
+        'results',
+        'searchField',
+        'searchButton',
+        'tagline',
+        'title',
+    ];
+    for (var i=0; i < elementIds.length; i++) {
+        global.elements[elementIds[i]] = document.querySelector('#'+elementIds[i]);
+    }
 
     if (!global.urlParameters.noSort) {
         // Sort the entire database alphabetically by set, then name.
@@ -36,24 +53,10 @@ function initialize() {
         CARDS[i].hash = CARDS[i].derivedProperties.hash;
     }
 
-    // Obtain the list of print sheet cards from local storage. This is a persistent object that associates a set of
-    // card hashes (each hash of which uniquely identifies a single card) to a quantity value, representing numbers of
-    // cards selected by the user to be put onto a print sheet, which they can generate from another page.
-
-    global.elements.results = document.querySelector('#results');
-
-    //global.elements.titleReference = document.querySelector('#titleReference');
-    //global.elements.titleReference.onclick = function() {
-        //global.elements.titleReference.innerHTML = '* '+global.text.references.title;
-    //};
-
     // Similarly, collect some information about the database as a whole (eg. a list of all sets that are in it).
     global.information = getInformation(CARDS);
 
-    global.elements.title = document.querySelector('#title');
-
     // The title screen has a dynamic tagline which depends on the number of cards, so set that now.
-    global.elements.tagline = document.querySelector('#tagline');
     var tagline = global.text.tagline.dynamic;
     tagline = tagline.replace('{NUMBER_OF_CARDS}', '<strong>'+global.information.overall.numberOfCards+'</strong>');
     global.elements.tagline.innerHTML = tagline;
@@ -72,7 +75,6 @@ function initialize() {
     }
 
     // Set up the search field to perform searches of the card database when Enter is pressed.
-    global.elements.searchField = document.querySelector('#searchField');
     global.elements.searchField.onkeypress = function(event) {
         if (event.keyCode == 13) {
             initiateSearch();
@@ -80,7 +82,6 @@ function initialize() {
     };
 
     // Also set up the search button to perform searches when clicked.
-    global.elements.searchButton = document.querySelector('#searchButton');
     global.elements.searchButton.onclick = function(event) {
         initiateSearch();
     };
@@ -105,8 +106,6 @@ function initialize() {
             table.style.display = 'none';
         }
     }
-
-    global.elements.advancedSearch = document.querySelector('#advancedSearch');
 
     // Generate and add the advanced search control box.
     global.elements.advancedSearch.appendChild(generateAdvancedSearchElement());
@@ -153,10 +152,25 @@ function initialize() {
     // If a `hash` parameter is passed in the URL, auto-search for a card that matches that hash.
     if (Object.keys(global.urlParameters).length > 0) {
         if (global.urlParameters.hash !== undefined) {
+            // For card display, we rearrange the main page slightly; we remove the top menu bar and the main container,
+            // we move the card results table out into the main body of the page, and we add a small PonyMTG logo above
+            // it which links back to home.
+            global.elements.menuBar.style.display = 'none';
+            global.elements.container.style.display = 'none';
+
+            var logoSmall = document.createElement('a');
+            logoSmall.href = '/';
+            logoSmall.className = 'logo-small';
+            logoSmall.style.marginBottom = '32px';
+
+            document.body.appendChild(logoSmall);
+            document.body.appendChild(global.elements.results);
+            
             global.search.results = getCardsFilteredByProperties(CARDS, { 'hash': global.urlParameters.hash } );
             global.pagination.currentPage = 0;
             global.pagination.numberOfPages = Math.ceil(global.search.results.length/global.pagination.cardsPerPage);
             displayResults(global.search.results);
+            //
             // Since this is an auto-search from which we only ever expect to get one result, don't show the "found X
             // cards" message.
             var foundCardsMessageElement = document.querySelector('#foundCardsMessagePanel');

@@ -229,7 +229,10 @@ var global = {
             'loyalty': 'Loyalty',
             'transformsInto': 'Transforms into',
             'transformsFrom': 'Transforms from',
-            'artist': 'Artist'
+            'artist': 'Artist',
+            'createdAt': 'Date',
+            'source': 'Source URL',
+            'notes': 'Notes',
         },
         /**
          * Maps regular expressions representing parts of a mana cost, to the color scheme that the card would have if
@@ -1669,9 +1672,13 @@ function generateCheckboxListElement(idPrefix, data, optionWidth, addSelectAll) 
 
 /**
  * Given a set of card data objects `cards`, generate a table of those cards, which displays an image (if available) and
- * known, relevant properties of the card.
+ * known, relevant properties of the card. If `propertiesToDisplay` is given, only those properties will be shown; otherwise, it will use the global defaults.
  */
-function generateCardTableElement(cards) {
+function generateCardTableElement(cards, propertiesToDisplay) {
+    if (propertiesToDisplay === undefined) {
+        propertiesToDisplay = global.lists.cardPropertiesToDisplay;
+    }
+
     var cardPanel = document.createElement('div');
     cardPanel.className = 'container-fluid';
 
@@ -1744,10 +1751,9 @@ function generateCardTableElement(cards) {
         // descriptions on the right. This is a quick and easy way to list out property names and their values in a
         // nice-looking format.
         cardPropertiesDescriptionList.className = 'dl-horizontal';
-
-
-        for (var j=0; j < global.lists.cardPropertiesToDisplay.length; j++) {
-            var cardPropertyName = global.lists.cardPropertiesToDisplay[j];
+        
+        for (var j=0; j < propertiesToDisplay.length; j++) {
+            var cardPropertyName = propertiesToDisplay[j];
             var cardPropertyValue = card[cardPropertyName];
 
             // If the card doesn't have a value defined for this property, skip this property.
@@ -1756,7 +1762,7 @@ function generateCardTableElement(cards) {
             }
 
             // Check to see if this card property is one that we want to display. If it isn't, skip this property.
-            if (global.lists.cardPropertiesToDisplay.indexOf(cardPropertyName) === -1) {
+            if (propertiesToDisplay.indexOf(cardPropertyName) === -1) {
                 continue;
             }
 
@@ -1784,6 +1790,16 @@ function generateCardTableElement(cards) {
             // Special case for "flavorText" property: We'd like that to be italicized.
             if (cardPropertyName === 'flavorText') {
                 cardPropertyValueElement.style.fontStyle = 'italic';
+            }
+            // Special case for "source" property: This is a URL, so we hyperlink it.
+            if (cardPropertyName === 'source') {
+                cardPropertyValueElement.innerHTML = '';
+                cardSourceHyperlink = document.createElement('a');
+                cardSourceHyperlink.href = cardPropertyValue;
+                cardSourceHyperlink.target = '_blank';
+                cardSourceHyperlink.style.textAlign = 'left';
+                cardSourceHyperlink.innerHTML = cardPropertyValue;
+                cardPropertyValueElement.appendChild(cardSourceHyperlink);
             }
 
             cardPropertiesDescriptionList.appendChild(cardPropertyNameElement);
@@ -1829,9 +1845,11 @@ function generateCardTableElement(cards) {
             e.currentTarget.ponymtg.quantity++;
             e.currentTarget.innerHTML = addToPrintSheetButtonText+' <span class="badge">'+e.currentTarget.ponymtg.quantity+'</span>';
 
-            // Also increment the number on the main print sheets button in the navbar.
+            // Also increment the number on the main print sheets button in the navbar (if the navbar is on the page).
             var printSheetCountBadge = document.querySelector('#printSheetCountBadge');
-            printSheetCountBadge.innerHTML = getNumberOfCardsInPrintSheet();
+            if (printSheetCountBadge !== null) {
+                printSheetCountBadge.innerHTML = getNumberOfCardsInPrintSheet();
+            }
         };
 
         var cardImageLink = document.createElement('a');

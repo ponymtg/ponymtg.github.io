@@ -1,96 +1,104 @@
 html {
-    /*background-color:#f0f0f0;*/
-    /*color:#000000;*/
-    /*height:100%;*/
-    font-family:sans-serif;
+    /*background-color: #f0f0f0;*/
+    /*color: #000000;*/
+    /*height: 100%;*/
+    font-family: sans-serif;
 }
 
 body {
-    /*height:90%;*/
-    /*margin:0px;*/
-    /*padding:0px;*/
+    /*height: 90%;*/
+    /*margin: 0px;*/
+    /*padding: 0px;*/
 }
 
 /**
  * The main container for all application-related things.
  */
 #container {
-    height:90%;
-    margin:0 32px;
-    padding:0px;
-    text-align:center;
+    height: 90%;
+    margin: 0 32px;
+    padding: 0px;
+    text-align: center;
 }
 
 /**
  * A class used for simple "button-like" clickable links.
  */
 .link {
-    display:inline-block;
-    text-align:center;
-    width:20%;
-    text-decoration:none;
-    background-color:#d0d0d0;
-    color:#101010;
-    padding:2px;
-    margin:4px;
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    text-decoration: none;
+    background-color: #d0d0d0;
+    color: #101010;
+    padding: 2px;
+    margin: 4px;
 }
 
-.link:hover {
-    text-decoration:none;
-    background-color:#e8e8e8;
-    color:#202020;
+.link: hover {
+    text-decoration: none;
+    background-color: #e8e8e8;
+    color: #202020;
     cursor: pointer;
-}
-/**
- * The large logotype that appears on the home screen.
- */
-#title {
-    font-size:6em;
 }
 
 /**
  * The clickable "reference" on the home screen (the asterisk).
  */
 #titleReference {
-    font-size:1em;
+    font-size: 1em;
     color: #0040ff;
-    vertical-align:top;
+    vertical-align: top;
 }
 
 /**
- * The tagline that appears under the logotype on the home screen.
+ * The tagline that appears under the logoon the home screen.
  */
 #tagline {
-    font-size:0.9em;
-    margin:4px 4px 64px 4px;
-    text-align:center;
+    font-size: 0.9em;
+    margin: 4px 4px 64px 4px;
+    text-align: center;
 }
-
 
 /**
  * The advanced search container box.
  */
 #advancedSearch {
-    width:75%;
-    margin:0px auto 0px auto;
-    text-align:center;
+    width: 75%;
+    margin: 0px auto 0px auto;
+    text-align: center;
 }
 
 /**
  * The card results container.
  */
 #results {
-    width:75%;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 #disclaimer {
-    font-size:0.8em;
-    text-align:center;
-    padding:32px;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 32px;
 }
+
+/**
+ * The small clickable PonyMTG logo at the top of subpages.
+ */
+a.logo-small {
+    display: block;
+    background-image: url(../images/ponymtg_logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+}
+
 /**
  * A set of specific font faces to use on proxy cards. We don't want to leave the choice of font up to the browser, as
  * we need to ensure that proxy cards render consistently across all browsers. We're using the Liberation font, which is
@@ -227,10 +235,10 @@ body {
 .manaDecoration {
     border: 0px solid #000000;
     border-radius: 100%;
-    padding:1px 4px;
+    padding: 1px 4px;
     box-shadow: 0px 2px 0px #000000;
-    font-size:0.8em;
-    font-weight:bold;
+    font-size: 0.8em;
+    font-weight: bold;
 }
 
 /**
@@ -319,7 +327,7 @@ body {
 .card-name {
     color: #101010;
     font-weight: bold;
-    float:left;
+    float: left;
 }
 
 /**
@@ -330,7 +338,7 @@ body {
     background-color: #110800;
     border-radius: 4px;
     border: 1px solid #000000;
-    font-size:1.2em;
+    font-size: 1.2em;
     font-variant: small-caps;
     font-weight: bold;
 }
@@ -340,7 +348,7 @@ body {
  */
 .card-cost {
     text-align: right;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 /**
@@ -350,13 +358,13 @@ body {
 
 .card-type-line {
     background-color: rgba(240, 240, 240, 0.75);
-    color:#101010;
-    font-size:0.8em;
+    color: #101010;
+    font-size: 0.8em;
     font-weight: bold;
     border-radius: 8px;
     border: 1px solid #000000;
     padding: 2px;
-    text-align:left;
+    text-align: left;
     margin: 4px 0px;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
@@ -368,10 +376,10 @@ body {
     background-color: rgba(240, 240, 240, 0.75);
     border: 1px solid #000000;
     border-radius: 2px;
-    padding:8px;
-    text-align:left;
+    padding: 8px;
+    text-align: left;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    height:100%;
+    height: 100%;
 }
 
 /**
@@ -392,10 +400,10 @@ body {
     font-weight: bold;
     border-radius: 8px;
     border: 1px solid #000000;
-    float:right;
-    margin:4px;
-    padding:2px 4px;
-    width:15%;
+    float: right;
+    margin: 4px;
+    padding: 2px 4px;
+    width: 15%;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
 
@@ -410,50 +418,50 @@ body {
     font-weight: bold;
     border-radius: 1px 1px 16px 16px;
     border: 2px solid #e0e0e0;
-    float:right;
-    margin:4px;
-    padding:2px 4px;
-    width:15%;
+    float: right;
+    margin: 4px;
+    padding: 2px 4px;
+    width: 15%;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
 
 /**
  * A hover style to make the booster packs pop out a bit when you hover over them.
  */
-#boosterPackImage:hover {
-    transform:scale(1.05);
+#boosterPackImage: hover {
+    transform: scale(1.05);
 }
 
 /*
 #setsTable {
     border-spacing: 0;
     background-color: #ffffff;
-    font-size:0.9em;
+    font-size: 0.9em;
 }
 
 #setsTable th {
     border: 1px solid #c0c0c0;
-    padding:4px;
+    padding: 4px;
     background-color: #e0e0e0;
 }
 
 #setsTable td {
     border: 1px solid #c0c0c0;
-    padding:4px;
-    text-align:left;
+    padding: 4px;
+    text-align: left;
 }
 */
 #xmlContainer {
-    width:50%;
-    height:50%;
-    margin:32px auto 64px auto;
-    padding:32px;
+    width: 50%;
+    height: 50%;
+    margin: 32px auto 64px auto;
+    padding: 32px;
     text-align: center;
 }
 
 #xmlTextarea {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
 }
 
 /***********************************************************************************************************************
@@ -469,7 +477,7 @@ body {
  */
 /*
 #results dl.dl-horizontal dt {
-    width:80px;
+    width: 80px;
 }
 */
 /**
@@ -478,6 +486,6 @@ body {
  */
 /*
 #results dl.dl-horizontal dd {
-    margin-left:100px;
+    margin-left: 100px;
 }
 */

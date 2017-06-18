@@ -24,14 +24,12 @@ META = {}
 META['previous_card_data_entry'] = None
 META['previous_card_was_a_transformer'] = False
 META['previous_card_was_reverse_side'] = False
-META['set_name'] = 'Friendship is Card Games'
 
 # When typos appear in the type line, this causes problems for the parser as it uses that line to determine where a card
 # starts and ends. For this reason, we are going to perform simple text correction of some known typos before processing
 # the dump.
 SPELLING_CORRECTIONS = {}
 SPELLING_CORRECTIONS['Enchatment'] = 'Enchantment'
-
 
 ########################################################################################################################
 # FUNCTIONS
@@ -45,12 +43,43 @@ def is_type_line(line):
 
     # If the line exactly matches a number of well-known strings that we are sure will always indicate a type line, then
     # we will confirm this as being a type line.
-    exact_strings = ['Artifact', 'Artifact — Equipment', 'Basic Land', 'Enchantment', 'Enchantment — Aura', 'World Enchantment', 'Instant', 'Instant — Trap', 'Land', 'Sorcery', 'Legendary Artifact', 'Legendary Enchantment', 'Legendary Instant', 'Legendary Land', 'Legendary Sorcery'] 
+    exact_strings = [
+        'Artifact',
+        'Artifact — Equipment',
+        'Basic Land',
+        'Enchantment',
+        'Enchantment — Aura',
+        'World Enchantment',
+        'Instant',
+        'Instant — Trap',
+        'Land',
+        'Sorcery',
+        'Legendary Artifact',
+        'Legendary Enchantment',
+        'Legendary Instant',
+        'Legendary Land',
+        'Legendary Sorcery'
+    ] 
     if line in exact_strings:
         return True
 
     # If the line doesn't contain at least one of a small set of strings, then it is not a type line.
-    type_words = ['Artifact', 'Basic', 'Creature', 'Enchantment', 'Instant', 'Land', 'Legendary', 'Planeswalker', 'Sorcery', 'Scheme', 'Plane', 'Conspiracy', 'Tribal', 'Snow']
+    type_words = [
+        'Artifact',
+        'Basic',
+        'Creature',
+        'Enchantment',
+        'Instant',
+        'Land',
+        'Legendary',
+        'Planeswalker',
+        'Sorcery',
+        'Scheme',
+        'Plane',
+        'Conspiracy',
+        'Tribal',
+        'Snow'
+    ]
     contains_type_word = False
     for type_word in type_words:
         if type_word in line:
@@ -96,8 +125,17 @@ def is_type_line(line):
     # - "Snow" is succeeded by the word "Artifact".
     # - "Snow" is succeeded by the word "Enchantment".
     # - "Snow" is succeeded by the word "Land".
+    # - "Snow" is succeeded by the word "Sorcery".
+    # - "Snow" is succeeded by the word "Instant".
     if 'Snow' in line:
-        if 'Snow Creature' not in line and 'Snow Artifact' not in line and 'Snow Enchantment' not in line and 'Snow Land' not in line and 'Snow Instant' not in line:
+        if (
+            'Snow Creature' not in line
+            and 'Snow Artifact' not in line
+            and 'Snow Enchantment' not in line
+            and 'Snow Land' not in line
+            and 'Snow Sorcery' not in line
+            and 'Snow Instant' not in line
+        ):
             return False
             
     # If the line contains the word "Tribal", then it must meet one of the following conditions:
@@ -106,7 +144,12 @@ def is_type_line(line):
     # - "Tribal" is succeeded by the word "Artifact" and a long dash.
     # - "Tribal" is succeeded by the word "Enchantment" and a long dash.
     if 'Tribal' in line:
-        if 'Tribal Instant —' not in line and 'Tribal Sorcery —' not in line and 'Tribal Artifact —' not in line and 'Tribal Enchantment —' not in line:
+        if (
+            'Tribal Instant —' not in line
+            and 'Tribal Sorcery —' not in line
+            and 'Tribal Artifact —' not in line
+            and 'Tribal Enchantment —' not in line
+        ):
             return False
             
     # If the line contains the word "Creature", then it must meet one of the following conditions:
@@ -128,7 +171,12 @@ def is_type_line(line):
     # - The line must contain a double slash (//), which indicates that this is a split card for which one of the
     #   halves is an Instant.
     if 'Instant' in line:
-        if line not in ['Instant', 'Legendary Instant', 'Trope Instant'] and 'Tribal Instant' not in line and 'Snow Instant' not in line and '//' not in line:
+        if (
+            line not in ['Instant', 'Legendary Instant', 'Trope Instant']
+            and 'Tribal Instant' not in line
+            and 'Snow Instant' not in line
+            and '//' not in line
+        ):
             return False
 
     # If the line contains the word "Sorcery", then it must meet one of the following conditions:
@@ -139,7 +187,12 @@ def is_type_line(line):
     # - The line must also contain a double slash (//), which indicates that this is a split card for which one of the
     #   halves is a Sorcery.
     if 'Sorcery' in line:
-        if line not in ['Sorcery', 'Legendary Sorcery'] and 'Tribal Sorcery' not in line and 'Snow Sorcery' not in line and '//' not in line:
+        if (
+            line not in ['Sorcery', 'Legendary Sorcery']
+            and 'Tribal Sorcery' not in line
+            and 'Snow Sorcery' not in line
+            and '//' not in line
+        ):
             return False
 
     # If the line contains the word "Enchantment", then it must meet one of the following conditions:
@@ -152,7 +205,15 @@ def is_type_line(line):
     # - The line begins with an open parenthesis ("("). This is to account for type lines that begin with a color
     #   indicator.
     if 'Enchantment' in line_words:
-        if line != 'Enchantment' and 'Legendary Enchantment' not in line and 'Snow Enchantment' not in line and 'Enchantment Creature' not in line and 'Enchantment Artifact' not in line and 'Enchantment —' not in line and line[0] != '(':
+        if (
+            line != 'Enchantment'
+            and 'Legendary Enchantment' not in line
+            and 'Snow Enchantment' not in line
+            and 'Enchantment Creature' not in line
+            and 'Enchantment Artifact' not in line
+            and 'Enchantment —' not in line
+            and line[0] != '('
+        ):
             return False
             
     # If the line contains the word "Artifact", then it must meet one of the following conditions:
@@ -163,7 +224,14 @@ def is_type_line(line):
     # - "Artifact" is succeeded by a long dash.
     # - "Artifact" is succeeded by the word "Creature".
     if 'Artifact' in line:
-        if line != 'Artifact' and 'Legendary Artifact' not in line and 'Snow Artifact' not in line and 'Artifact Creature' not in line and 'Enchantment Artifact' not in line and 'Artifact —' not in line:
+        if (
+            line != 'Artifact'
+            and 'Legendary Artifact' not in line
+            and 'Snow Artifact' not in line
+            and 'Artifact Creature' not in line
+            and 'Enchantment Artifact' not in line
+            and 'Artifact —' not in line
+        ):
             return False
             
     # If the line contains the word "Conspiracy", then it must meet one of the following conditions:
@@ -193,7 +261,13 @@ def is_type_line(line):
     # - "Land" is preceded by the word "Snow".
     # - "Land" is succeeded by a long dash.
     if 'Land' in line:
-        if line != 'Land' and 'Legendary Land' not in line and 'Basic Land' not in line and 'Snow Land' not in line and 'Land —' not in line:
+        if (
+            line != 'Land'
+            and 'Legendary Land' not in line
+            and 'Basic Land' not in line
+            and 'Snow Land' not in line
+            and 'Land —' not in line
+        ):
             return False
             
     # At this point, we're reasonably sure that we're ruled out a lot of false positives, so we will identify this as a
@@ -323,7 +397,8 @@ def split_type_line(type_line):
 
 
         if len(type_line_remainder_pieces) == 2:
-            # If the line split into two pieces, then the first piece is the supertype, and the second piece is the subtype.
+            # If the line split into two pieces, then the first piece is the supertype, and the second piece is the
+            # subtype.
             type_line_parts['supertype'] = type_line_remainder_pieces[0].strip()
             type_line_parts['subtype'] = type_line_remainder_pieces[1].strip()
         else:
@@ -417,7 +492,12 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     
     # Now that we have the supertype, check what kind of card this is. If it's a land, scheme, or plane, we will assume
     # that the card has no cost for us to extract, and just take the entirety of the name-and-cost line to be the card's name.
-    if 'Land' in card_data_entry['supertype'] or 'Scheme' in card_data_entry['supertype'] or 'Conspiracy' in card_data_entry['supertype'] or ('Plane' in card_data_entry['supertype'] and 'Planeswalker' not in card_data_entry['supertype']):
+    if (
+        'Land' in card_data_entry['supertype']
+        or 'Scheme' in card_data_entry['supertype']
+        or 'Conspiracy' in card_data_entry['supertype']
+        or ('Plane' in card_data_entry['supertype'] and 'Planeswalker' not in card_data_entry['supertype'])
+    ):
         card_data_entry['name'] = name_and_cost_line
     else:
         # Otherwise, if not a land, we will assume that the line contains a name and (probably) a cost, and will split
@@ -516,7 +596,12 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     #
     # So we could do that, or we could decode our byte string into a proper Unicode string and examine the characters as
     # actual characters, rather than bytes. The latter option is preferable, so we'll do that.
-    if len(text_lines) >= 2 and text_lines[-2][0] == '"' and text_lines[-2][-1] == '"' and text_lines[-1][0] == EM_DASH:
+    if (
+        len(text_lines) >= 2
+        and text_lines[-2][0] == '"'
+        and text_lines[-2][-1] == '"'
+        and text_lines[-1][0] == EM_DASH
+    ):
         rules_text_lines = text_lines[0:-2]
         flavor_text_lines = text_lines[-2:]
 
@@ -549,7 +634,8 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         card_data_entry['flavorText'] = flavor_text
 
     # Finally, add the creator attribution; the set and creator will be the same in all cases.
-    card_data_entry['set'] = META['set_name']
+    if 'set_name' in META:
+        card_data_entry['set'] = META['set_name']
     card_data_entry['creator'] = 'FanOfMostEverything'
 
     # Sometimes, the card after this one will need to refer back to it, because it's related to it in some way (usually,
@@ -565,7 +651,11 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     # - "transform {FIRST WORD OF CARD NAME}"
     # - "transform it"
     first_word_of_card_name = card_data_entry['name'].split(' ')[0]
-    if 'transform '+card_data_entry['name'].lower() in card_data_entry['text'].lower() or 'transform '+first_word_of_card_name.lower() in card_data_entry['text'].lower() or 'transform it' in card_data_entry['text']:
+    if (
+        'transform '+card_data_entry['name'].lower() in card_data_entry['text'].lower()
+        or 'transform '+first_word_of_card_name.lower() in card_data_entry['text'].lower()
+        or 'transform it' in card_data_entry['text']
+    ):
         if META['previous_card_was_a_transformer']:
             if not META['previous_card_was_reverse_side']:
                 # If this card is a transformer, and the previous card was _also_ a transformer, _and_ the previous card
@@ -618,43 +708,61 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump):
 
 # Read command line arguments.
 
-if len(sys.argv) != 4:
-    print("python "+sys.argv[0]+ " FICG_DUMP_PATH JS_VARIABLE_NAME SET_NAME")
+if len(sys.argv) < 2:
+    print("python "+sys.argv[0]+ " JS_VARIABLE_NAME [SET_NAME]")
     print("""
-Parses a dump of raw card data in FanOfMostEverything's textual format into
-structured JSON of the form accepted by PonyMTG.
-
-FICG_DUMP_PATH      The path to a file containing a dump of cards.
+Given an input stream of raw card data in FanOfMostEverything's textual format,
+parse it into structured JSON of the form accepted by PonyMTG, and output the
+result.
 
 JS_VARIABLE_NAME    The name of the variable which will contain the JSON
                     string. (This doesn't really matter; it can be anything).
 
-SET_NAME            The name of the set. This will populate the `set` field on
-                    every output card.
+SET_NAME            The name of the set. If given, this will populate the `set`
+                    field on every output card.
 """)
     sys.exit()
 
-ficg_raw_path = sys.argv[1]
-js_variable_name = sys.argv[2]
-set_name = sys.argv[3]
+js_variable_name = sys.argv[1]
+set_name = None
+if len(sys.argv) >= 3:
+    set_name = sys.argv[2]
 
 # Open the dump file and obtain its contents.
-ficg_raw_file = open(ficg_raw_path, 'r')
-ficg_raw_dump = ficg_raw_file.read()
+ficg_raw_dump = sys.stdin.read()
 
 # Correct some known typos.
 for typo in SPELLING_CORRECTIONS:
     ficg_raw_dump = ficg_raw_dump.replace(typo, SPELLING_CORRECTIONS[typo])
 
-# The set name is the same for all cards, so store it in the global meta dictionary.
-META['set_name'] = set_name
+# The set name (if given) is the same for all cards, so store it in the global meta dictionary.
+if set_name is not None:
+    META['set_name'] = set_name
 
 # Parse the raw dump into a dictionary of card data entries.
 card_data_entries = parse_ficg_dump_into_card_data_entries(ficg_raw_dump)
 
 # Define the fields (and their ordering) which will be put into the JSON. (Python dictionaries don't have an ordering by
 # default, so we have to impose one).
-card_properties = ['name', 'image', 'set', 'creator', 'cost', 'cost2', 'colorIndicator', 'supertype', 'subtype', 'supertype2', 'subtype2', 'text', 'flavorText', 'pt', 'loyalty', 'transformsInto', 'transformsFrom']
+card_properties = [
+    'name',
+    'image',
+    'set',
+    'creator',
+    'cost',
+    'cost2',
+    'colorIndicator',
+    'supertype',
+    'subtype',
+    'supertype2',
+    'subtype2',
+    'text',
+    'flavorText',
+    'pt',
+    'loyalty',
+    'transformsInto',
+    'transformsFrom'
+]
 
 # Turn the dictionary of card data entries into a Javascript JSON variable, and output it.
-print(mtgJson.encapsulate_dict_list_in_js_variable(card_data_entries, card_properties, js_variable_name))
+sys.stdout.write(mtgJson.encapsulate_dict_list_in_js_variable(card_data_entries, card_properties, js_variable_name))
