@@ -164,7 +164,11 @@ function refreshPrintSheetTable() {
             quantityElement.innerHTML = 'x'+quantity;
 
             printSheetCardNameCell.innerHTML = printSheetCard.name;
-            printSheetCardSetCell.innerHTML = printSheetCard.set;
+            if (printSheetCard.set !== undefined) {
+                printSheetCardSetCell.innerHTML = printSheetCard.set;
+            } else {
+                printSheetCardSetCell.innerHTML = '<i>(none)</i>';
+            }
 
             quantityControl.appendChild(decreaseQuantityElement);
             quantityControl.appendChild(quantityElement);
