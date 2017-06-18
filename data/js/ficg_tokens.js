@@ -6,7 +6,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Rabbit',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Bird',
@@ -15,7 +15,7 @@ var FICG_TOKENS =
         'subtype': 'Bird',
         'text': 'Flying',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Crocodile',
@@ -24,7 +24,7 @@ var FICG_TOKENS =
         'subtype': 'Crocodile',
         'text': 'Islandwalk',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Cat',
@@ -32,7 +32,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Cat',
         'pt': '3/3',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Insect',
@@ -40,14 +40,14 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Insect',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Hat',
         'supertype': 'Artifact',
         'subtype': 'Equipment',
         'text': 'Equip 1\n\nEquipped creature gets +0/+1.',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Bat',
@@ -56,7 +56,7 @@ var FICG_TOKENS =
         'subtype': 'Bat',
         'text': 'Flying',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Insect',
@@ -65,12 +65,12 @@ var FICG_TOKENS =
         'subtype': 'Insect',
         'text': 'Flying, deathtouch',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Contraption',
         'supertype': 'Artifact',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Pony',
@@ -78,7 +78,24 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Pony',
         'pt': '2/2',
-        'cardType': 'token'
+        'cardType': 'token',
+    },
+    {
+        'name': 'Blue Flu',
+        'colorIndicator': '(U)',
+        'supertype': 'Enchantment',
+        'subtype': 'Aura',
+        'text': 'Enchant creature\n\nEnchanted creature is blue and gets -3/-0.\n\nWhenever enchanted creature blocks or becomes blocked by a nonblue creature, put a token that\'s a copy of Blue Flu onto the battlefield attached to that creature.',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Cloud of Twittermites',
+        'colorIndicator': '(URG)',
+        'supertype': 'Creature',
+        'subtype': 'Pest',
+        'text': 'Flying\n\nWhen Cloud of Twittermites enters the battlefield, it deals 1 damage to target creature or player.\n\nWhenever Cloud of Twittermites deals combat damage to a player, put a token that’s a copy of Cloud of Twittermites onto the battlefield.',
+        'pt': '1/1',
+        'cardType': 'token',
     },
     {
         'name': 'Elemental',
@@ -87,7 +104,7 @@ var FICG_TOKENS =
         'subtype': 'Elemental',
         'text': 'Flying',
         'pt': '2/2',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Pegasus',
@@ -96,7 +113,7 @@ var FICG_TOKENS =
         'subtype': 'Pegasus',
         'text': 'Flying',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Crocodile',
@@ -105,7 +122,7 @@ var FICG_TOKENS =
         'subtype': 'Crocodile',
         'text': 'Islandwalk',
         'pt': '2/2',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Nightmare',
@@ -113,7 +130,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Nightmare',
         'pt': '3/3',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Dragon',
@@ -122,13 +139,21 @@ var FICG_TOKENS =
         'subtype': 'Dragon',
         'text': 'Flying',
         'pt': '5/5',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Clue',
         'supertype': 'Artifact',
         'text': '2, Sacrifice this artifact: Draw a card.',
-        'cardType': 'token'
+        'cardType': 'token',
+    },
+    {
+        'name': 'Spider',
+        'supertype': 'Creature',
+        'subtype': 'Spider',
+        'text': 'Reach',
+        'pt': '3/3',
+        'cardType': 'token',
     },
     {
         'name': 'Spider',
@@ -137,13 +162,13 @@ var FICG_TOKENS =
         'subtype': 'Spider',
         'text': 'Reach',
         'pt': '1/2',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Jar',
         'supertype': 'Artifact',
         'text': 'When this artifact enters the battlefield, exile target creature an opponent controls until this artifact leaves the battlefield.',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Cat',
@@ -151,7 +176,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Cat',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Spirit',
@@ -160,7 +185,7 @@ var FICG_TOKENS =
         'subtype': 'Spirit',
         'text': 'Flying',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Minion',
@@ -168,7 +193,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Minion',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Unicorn',
@@ -176,7 +201,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Unicorn',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Bird',
@@ -185,7 +210,7 @@ var FICG_TOKENS =
         'subtype': 'Bird',
         'text': 'Flying',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Squirrel',
@@ -193,7 +218,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Squirrel',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Ox',
@@ -201,7 +226,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Ox',
         'pt': '3/3',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Pest',
@@ -210,13 +235,13 @@ var FICG_TOKENS =
         'subtype': 'Pest',
         'text': 'Flying',
         'pt': '0/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Gold',
         'supertype': 'Artifact',
         'text': 'Sacrifice this artifact: Add one mana of any color to your mana pool.',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Pony Soldier',
@@ -224,7 +249,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Pony Soldier',
         'pt': '2/2',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Construct',
@@ -232,7 +257,16 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Construct',
         'pt': '*/*',
-        'cardType': 'token'
+        'cardType': 'token',
+    },
+    {
+        'name': 'Parasprite',
+        'colorIndicator': '(U)',
+        'supertype': 'Creature',
+        'subtype': 'Pest',
+        'text': 'Flying\n\nAt the beginning of your upkeep, put a token that\'s a copy of Parasprite onto the battlefield.\n\n1, Tap two untapped Pests you control: Tap target land.',
+        'pt': '0/1',
+        'cardType': 'token',
     },
     {
         'name': 'Pest',
@@ -241,7 +275,7 @@ var FICG_TOKENS =
         'subtype': 'Pest',
         'text': 'Flying',
         'pt': '0/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Pest',
@@ -250,7 +284,7 @@ var FICG_TOKENS =
         'subtype': 'Pest',
         'text': 'Flying',
         'pt': '0/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Pest',
@@ -259,7 +293,7 @@ var FICG_TOKENS =
         'subtype': 'Pest',
         'text': 'Flying',
         'pt': '0/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Cat',
@@ -267,7 +301,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Cat',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Unicorn Soldier',
@@ -275,7 +309,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Unicorn Soldier',
         'pt': '2/*',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Snake',
@@ -283,7 +317,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Snake',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Plant',
@@ -291,7 +325,7 @@ var FICG_TOKENS =
         'supertype': 'Creature',
         'subtype': 'Plant',
         'pt': '0/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Shade',
@@ -300,7 +334,7 @@ var FICG_TOKENS =
         'subtype': 'Shade',
         'text': 'B: This creature gets +1/+1 until end of turn.',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Skeleton',
@@ -309,13 +343,224 @@ var FICG_TOKENS =
         'subtype': 'Skeleton',
         'text': 'B: Regenerate this creature.',
         'pt': '1/1',
-        'cardType': 'token'
+        'cardType': 'token',
     },
     {
         'name': 'Unicorn Construct',
         'supertype': 'Creature',
         'subtype': 'Unicorn Construct',
         'pt': '*/1',
-        'cardType': 'token'
+        'cardType': 'token',
+    },
+    {
+        'name': 'Snake',
+        'colorIndicator': '(B)',
+        'supertype': 'Creature',
+        'subtype': 'Snake',
+        'text': 'Deathtouch',
+        'pt': '1/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Zombie',
+        'colorIndicator': '(B)',
+        'supertype': 'Creature',
+        'subtype': 'Zombie',
+        'pt': '2/2',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Kelp',
+        'colorIndicator': '(U)',
+        'supertype': 'Creature',
+        'subtype': 'Plant Wall',
+        'text': 'Defender',
+        'pt': '0/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Servo',
+        'supertype': 'Artifact Creature',
+        'subtype': 'Servo',
+        'text': 'Haste',
+        'pt': '1/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Vampire Rabbit',
+        'colorIndicator': '(B)',
+        'supertype': 'Creature',
+        'subtype': 'Vampire Rabbit',
+        'text': 'Lifelink',
+        'pt': '1/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Clue',
+        'supertype': 'Artifact',
+        'text': 'Sacrifice this artifact: Draw a card.',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Crab',
+        'colorIndicator': '(U)',
+        'supertype': 'Creature',
+        'subtype': 'Crab',
+        'pt': '1/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Cat',
+        'colorIndicator': '(G)',
+        'supertype': 'Creature',
+        'subtype': 'Cat',
+        'pt': '3/3',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Rock Lobster',
+        'supertype': 'Artifact Creature',
+        'subtype': 'Homarid',
+        'pt': '4/3',
+        'text': 'Creatures named Scissors Lizard can’t attack or block.',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Dragon',
+        'colorIndicator': '(R)',
+        'supertype': 'Creature',
+        'subtype': 'Dragon',
+        'text': 'Flying, haste',
+        'pt': '1/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Ape',
+        'colorIndicator': '(G)',
+        'supertype': 'Creature',
+        'subtype': 'Ape',
+        'pt': '3/3',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Construct',
+        'supertype': 'Artifact Creature',
+        'subtype': 'Construct',
+        'pt': '1/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Golem',
+        'supertype': 'Artifact Creature',
+        'subtype': 'Golem',
+        'pt': '4/4',
+        'text': 'Alicorn (This creature is a Pony Pegasus Unicorn in addition to its other types).\n\nFlying',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Beast',
+        'colorIndicator': '(G)',
+        'supertype': 'Creature',
+        'subtype': 'Beast',
+        'pt': '2/2',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Construct',
+        'supertype': 'Artifact Creature',
+        'subtype': 'Construct',
+        'pt': '3/3',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Elemental',
+        'colorIndicator': '(R)',
+        'supertype': 'Creature',
+        'subtype': 'Elemental',
+        'text': 'Trample, haste',
+        'pt': '*/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Unicorn Soldier',
+        'colorIndicator': '(WB)',
+        'supertype': 'Creature',
+        'subtype': 'Unicorn Soldier',
+        'pt': '1/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Donkey',
+        'colorIndicator': '(W)',
+        'supertype': 'Creature',
+        'subtype': 'Donkey',
+        'pt': '2/2',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Homespun Frock',
+        'supertype': 'Artifact',
+        'subtype': 'Equipment',
+        'text': 'Equipped creature gets +1/+1.\n\nEquip 2',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Nightmare',
+        'colorIndicator': '(B)',
+        'supertype': 'Creature',
+        'subtype': 'Nightmare',
+        'pt': '*/*',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Plant',
+        'colorIndicator': '(G)',
+        'supertype': 'Creature',
+        'subtype': 'Plant',
+        'pt': '1/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Pony',
+        'colorIndicator': '(R)',
+        'supertype': 'Creature',
+        'subtype': 'Pony',
+        'pt': '3/3',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Eldrazi Horror',
+        'supertype': 'Creature',
+        'subtype': 'Eldrazi Horror',
+        'pt': '3/2',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Plushiesprite',
+        'supertype': 'Artifact Creature',
+        'subtype': 'Pest Construct',
+        'text': 'Flying\n\n3, T: Create a token that’s a copy of Plushiesprite.',
+        'pt': '0/1',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Domination Crystal',
+        'supertype': 'Artifact',
+        'text': 'Domination Crystal enters the battlefield tapped.\n\nSpells cost 1 more to cast.\n\n4, T: Create a token that’s a copy of Domination Crystal. Then if you control six or more permanents named Domination Crystal, you win the game.',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Cage',
+        'supertype': 'Artifact',
+        'text': 'When this artifact enters the battlefield, exile target creature an opponent controls until this artifact leaves the battlefield.',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Sheep',
+        'colorIndicator': '(W)',
+        'supertype': 'Creature',
+        'subtype': 'Sheep',
+        'pt': '0/1',
+        'cardType': 'token',
     },
 ];

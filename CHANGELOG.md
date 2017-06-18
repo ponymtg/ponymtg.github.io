@@ -1,6 +1,7 @@
 ## 1.3.2
 
 * Updated "Friendship is Card Games" with the latest cards for episodes 1 to 11 of Season 7.
+* Added new emblems and tokens for the FICG booster packs.
 
 ## 1.3.1
 
@@ -18,7 +19,6 @@
 * Minor update to About page.
 * The FICG Python parser now reads from standard input and writes to standard output, rather than requiring a file.
 * Updated the FICG parser's invocation script to use streams instead of file arguments.
-
 
 ## 1.2.1
 
