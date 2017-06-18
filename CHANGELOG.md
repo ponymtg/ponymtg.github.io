@@ -1,3 +1,12 @@
+## 1.3.2
+
+* Updated "Friendship is Card Games" with the latest cards for episodes 1 to 11 of Season 7.
+
+## 1.3.1
+
+* Added "Ungula", a set of card images covering the first two seasons of Friendship is Card Games, made by Fimfiction
+  user NoLongerBreathedIn.
+
 ## 1.3.0
 
 * Added new Miscellany section, for one-off or uncategorizable cards that aren't part of any set.
