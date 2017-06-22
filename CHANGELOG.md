@@ -1,3 +1,9 @@
+## 1.4.0
+
+* Allow Miscellany cards (cards with no defined set) to appear in the main search.
+* Added shell script to ease entry of card data.
+* Added lots of miscellaneous cards.
+
 ## 1.3.3
 
 * Fixed set name appearing as "undefined" on the Print Sheet page for Miscellany cards.

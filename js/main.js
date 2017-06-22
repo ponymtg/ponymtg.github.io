@@ -15,7 +15,9 @@
 var global = {
     'paths': {
         /** Path to the directory containing all the card sets. */
-        'sets': 'data/sets'
+        'sets': 'data/sets',
+        /** Path to the miscellany directory containing images for cards that don't have a defined set. */
+        'misc': 'data/misc'
     },
     /**
      * A collection of data about each set in the database.
@@ -231,7 +233,7 @@ var global = {
             'transformsFrom': 'Transforms from',
             'artist': 'Artist',
             'createdAt': 'Date',
-            'source': 'Source URL',
+            'sourceUrl': 'Source URL',
             'notes': 'Notes',
         },
         /**
@@ -437,6 +439,8 @@ var global = {
             'transformsInto',
             'transformsFrom',
             'artist',
+            'notes',
+            'sourceUrl',
         ],
         /**
          * A list of card properties that we will allow the user to search for text matches in (ie. the options for the
@@ -729,8 +733,8 @@ function getInformation(cards) {
     information.creators = [];
     for (var i=0; i < cards.length; i++) {
         var card = cards[i];
-        if (information.sets.indexOf(card.set) === -1) {
-            information.sets.push(card.set);
+        if (information.creators.indexOf(card.creator) === -1) {
+            information.creators.push(card.creator);
         }
     };
 
@@ -1505,7 +1509,11 @@ function generateAdvancedSearchElement() {
         // We can't use the set name in the id, as it may contain spaces or unsuitable characters; instead, we're using
         // the index of the array that the set appears at.
         datum.idSuffix = '_'+i;
-        datum.label = set;
+        if (set !== undefined) {
+            datum.label = set;
+        } else {
+            datum.label = '<i>(no set)</i>';
+        }
 
         data.push(datum);
     }
@@ -1705,28 +1713,20 @@ function generateCardTableElement(cards, propertiesToDisplay) {
         var cardImageLinkElement = undefined;
         var cardImageElement = undefined;
         var cardProxyElement = undefined;
-        var isCardImageLocatable =
-            card.image !== undefined
-            && global.sets[card.set] !== undefined
-            && global.sets[card.set].path !== undefined
-        ;
+        var isCardImageLocatable = card.image !== undefined;
         if (isCardImageLocatable) {
             // If a card image is available, create the card image element and set its source to the appropriate image
             // URL.
             var cardImageLinkElement = document.createElement('a');
             var cardImageElement = document.createElement('img');
-            if (global.sets[card.set] !== undefined) {
-                if (global.sets[card.set].path !== undefined) {
-                    var cardImageUrl = getCardImageUrl(card);
+            var cardImageUrl = getCardImageUrl(card);
 
-                    cardImageElement.src = cardImageUrl;
-                    cardImageLinkElement.href = cardImageUrl;
-                    cardImageLinkElement.target = '_blank';
+            cardImageElement.src = cardImageUrl;
+            cardImageLinkElement.href = cardImageUrl;
+            cardImageLinkElement.target = '_blank';
 
-                    // Make all card images the same width (it looks better in results).
-                    cardImageElement.style.width = global.dimensions.displayCard.width+'px';
-                }
-            }
+            // Make all card images the same width (it looks better in results).
+            cardImageElement.style.width = global.dimensions.displayCard.width+'px';
             cardImageLinkElement.appendChild(cardImageElement);
         }
         else {
@@ -1758,14 +1758,16 @@ function generateCardTableElement(cards, propertiesToDisplay) {
 
             // If the card doesn't have a value defined for this property, skip this property.
             if (cardPropertyValue === undefined) {
-                continue;
+                // One exception to this is sets; if the card has no set, we will display that (as "(no set)").
+                if (cardPropertyName !== 'set') {
+                    continue;
+                }
             }
 
             // Check to see if this card property is one that we want to display. If it isn't, skip this property.
             if (propertiesToDisplay.indexOf(cardPropertyName) === -1) {
                 continue;
             }
-
 
             // Attempt to get a more human-readable display name for this property, if one is available.
             var cardPropertyDisplayName = cardPropertyName;
@@ -1777,12 +1779,17 @@ function generateCardTableElement(cards, propertiesToDisplay) {
             var cardPropertyValueElement = document.createElement('dd');
 
             cardPropertyNameElement.innerHTML = cardPropertyDisplayName+':';
-            cardPropertyValue = cardPropertyValue.replace(/\n/g, '<br />');
+            if (cardPropertyValue) {
+                cardPropertyValue = cardPropertyValue.replace(/\n/g, '<br />');
+            }
             cardPropertyValueElement.style.textAlign = 'left';
             cardPropertyValueElement.innerHTML = cardPropertyValue;
-            // Special case for "set" property: We do have descriptions for some sets, which we can add as a title
-            // property, allowing the user to mouse over to find out information about the set.
             if (cardPropertyName === 'set') {
+                if (cardPropertyValue === undefined) {
+                    cardPropertyValueElement.innerHTML = '<i>(no set)</i>';
+                }
+                // Special case for "set" property: We do have descriptions for some sets, which we can add as a title
+                // property, allowing the user to mouse over to find out information about the set.
                 if (global.sets[cardPropertyValue] !== undefined && global.sets[cardPropertyValue].notes !== undefined) {
                     cardPropertyValueElement.title = global.sets[cardPropertyValue].notes;
                 }
@@ -1791,8 +1798,8 @@ function generateCardTableElement(cards, propertiesToDisplay) {
             if (cardPropertyName === 'flavorText') {
                 cardPropertyValueElement.style.fontStyle = 'italic';
             }
-            // Special case for "source" property: This is a URL, so we hyperlink it.
-            if (cardPropertyName === 'source') {
+            // Special case for "sourceUrl" property: This is a URL, so we hyperlink it.
+            if (cardPropertyName === 'sourceUrl') {
                 cardPropertyValueElement.innerHTML = '';
                 cardSourceHyperlink = document.createElement('a');
                 cardSourceHyperlink.href = cardPropertyValue;
@@ -1891,11 +1898,24 @@ function generateCardTableElement(cards, propertiesToDisplay) {
 }
 
 /**
- * Quick funfction to construct the (relative) path to a card's image. This assumes that the card actually has an
- * `image` property defined.
+ * Return the (relative) path to the directory containing the specified card. For cards that have a defined `set`, this
+ * should be the set path defined in the global config. For cards that don't have a set, this is the miscellany path,
+ * also defined in the global config.
+ */
+function getCardImageDirPath(card) {
+    if (card.set !== undefined) {
+        return global.paths.sets + '/' + global.sets[card.set].path;
+    }
+
+    return global.paths.misc;
+}
+
+/**
+ * Quick function to construct the (relative) path to a card's image, if needed. This assumes that the card actually has
+ *an `image` property defined.
  */
 function getCardImageUrl(card) {
-    return global.paths.sets+'/'+global.sets[card.set].path+'/'+card.image;
+    return getCardImageDirPath(card) + '/' +card.image;
 }
 
 /**

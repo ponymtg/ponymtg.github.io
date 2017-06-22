@@ -19,6 +19,9 @@ function initialize() {
     // We're also keeping Sorden's IPU set separate for now.
     CARDS = CARDS.concat(IPU_CARDS);
 
+    // Add the Miscellany cards.
+    CARDS = CARDS.concat(MISC_CARDS);
+
     // Get any parameters passed in the URL.
     global.urlParameters = getUrlParameters();
 

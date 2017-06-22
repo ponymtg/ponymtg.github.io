@@ -26,7 +26,7 @@ function initialize() {
     propertiesToDisplay = propertiesToDisplay.concat(
         [
             'notes',
-            'source',
+            'sourceUrl',
             'createdAt',
         ]
     );
