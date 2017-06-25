@@ -8,7 +8,6 @@ import mtgJson, re, sys
 # script will attempt to parse it into a structured format and output the result as JSON. A "dump of card text", in this
 # case, is a direct copy-paste of card listings from FanOfMostEverything's card blog posts.
 #
-# NOTE: This script has been upgraded to Python 3, and will not work with earlier Python versions.
 ########################################################################################################################
 
 ########################################################################################################################
@@ -650,11 +649,13 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     # - "transform {FULL NAME OF CARD}"
     # - "transform {FIRST WORD OF CARD NAME}"
     # - "transform it"
+    # - "return it to the battlefield transformed"
     first_word_of_card_name = card_data_entry['name'].split(' ')[0]
     if (
         'transform '+card_data_entry['name'].lower() in card_data_entry['text'].lower()
         or 'transform '+first_word_of_card_name.lower() in card_data_entry['text'].lower()
         or 'transform it' in card_data_entry['text']
+        or 'return it to the battlefield transformed' in card_data_entry['text']
     ):
         if META['previous_card_was_a_transformer']:
             if not META['previous_card_was_reverse_side']:

@@ -33882,6 +33882,7 @@ var FICG_CARDS =
         'text': 'If a source would deal damage to you or to another permanent you control, prevent 1 of that damage.\n\nWhen Good King Sombra dies, return it to the battlefield transformed under target opponent’s control.',
         'flavorText': '"One life for two kingdoms is a small price to pay."',
         'pt': '4/4',
+        'transformsInto': 'Sombra the Sin Bearer',
     },
     {
         'name': 'Sombra the Sin Bearer',
@@ -33893,6 +33894,7 @@ var FICG_CARDS =
         'text': 'When Sombra the Sin Bearer enters the battlefield or at the beginning of your upkeep, Sombra deals 1 damage to you and to each creature and planeswalker you control.',
         'flavorText': '"Forgive me, my love, for I can never forgive myself."',
         'pt': '4/4',
+        'transformsFrom': 'Good King Sombra',
     },
     {
         'name': 'Chrysalis, the Nurturer',
@@ -37355,6 +37357,7 @@ var FICG_CARDS =
         'subtype': 'Pegasus Soldier',
         'text': 'Flying\n\n6W: Other Pegasi you control get +2/+2 until end of turn. This ability costs 1 less to activate for each enchantment you control.\n\nWhen Orion, Bright-Eyed King dies, return it to the battlefield transformed under your control.',
         'pt': '3/3',
+        'transformsInto': 'Orion the Disgraced',
     },
     {
         'name': 'Orion the Disgraced',
@@ -37363,6 +37366,7 @@ var FICG_CARDS =
         'colorIndicator': '(W)',
         'supertype': 'Legendary Enchantment',
         'text': 'Constellation — Whenever Orion the Disgraced or another enchantment enters the battlefield under your control, Orion the Disgraced becomes a 5/5 Pegasus Soldier with flying and vigilance in addition to its other types until your next turn.\n\nHe lost one nation. He will not see any others fall.',
+        'transformsFrom': 'Orion, Bright-Eyed King',
     },
     {
         'name': 'Elementary Observation',
