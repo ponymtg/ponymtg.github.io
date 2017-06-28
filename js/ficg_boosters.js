@@ -64,6 +64,7 @@ function pickBoosterPackImageSrc() {
         'ficg_booster_pack_twilight_sparkle.png',
         'ficg_booster_pack_discord.png',
         'ficg_booster_pack_filly_rainbow_dash.png',
+        'ficg_booster_pack_daybreaker.png',
     ];
 
     return boosterPackImagePath+'/'+boosterPackImages[rnd(boosterPackImages.length)];

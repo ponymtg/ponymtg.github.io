@@ -1,3 +1,8 @@
+## 1.4.2
+* Made all subpages open in the same tab isntead of opening a new one.
+* Added the source file for the booster pack art.
+* Added new booster pack art: Daybreaker
+
 ## 1.4.1
 * Added an extra condition to the FICG parser for detecting transforming cards.
 

@@ -74,7 +74,8 @@ function initialize() {
         var randomSetCards = getCardsFilteredBySet(CARDS, [randomSet]);
         var randomCard = randomSetCards[rnd(randomSetCards.length)];
         var randomCardUrl = '?hash='+randomCard.hash;
-        window.open(randomCardUrl, '_blank');
+        // window.open(randomCardUrl, '_blank');
+        window.open(randomCardUrl);
     }
 
     // Set up the search field to perform searches of the card database when Enter is pressed.
