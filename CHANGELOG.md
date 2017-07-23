@@ -1,3 +1,7 @@
+## 1.4.4
+* Updated "Friendship is Card Games" with the 2017 Equestria Girls specials, plus a couple more comic editions.
+* Fixed a small bug in the FICG parser which caused it to incorrectly detect some card text lines as type lines.
+
 ## 1.4.3
 * Added several Miscellany cards.
 * Updated the IPU parser to add in some missing data for double-sized cards.

@@ -62,6 +62,7 @@ def is_type_line(line):
     if line in exact_strings:
         return True
 
+
     # If the line doesn't contain at least one of a small set of strings, then it is not a type line.
     type_words = [
         'Artifact',
@@ -77,7 +78,7 @@ def is_type_line(line):
         'Plane',
         'Conspiracy',
         'Tribal',
-        'Snow'
+        'Snow',
     ]
     contains_type_word = False
     for type_word in type_words:
@@ -86,9 +87,6 @@ def is_type_line(line):
             break
     if not contains_type_word:
         return False
-
-    line_words = line.split()
-    first_word_of_line = line_words[0]
 
     # If the line contains one of the type-relevant words, that's a good indication that this is the type line, but we 
     # still want more evidence (it might be card text that happens to begin with the word "Instant", for example). We
@@ -203,7 +201,7 @@ def is_type_line(line):
     # - "Enchantment" is succeeded by a long dash.
     # - The line begins with an open parenthesis ("("). This is to account for type lines that begin with a color
     #   indicator.
-    if 'Enchantment' in line_words:
+    if 'Enchantment' in line:
         if (
             line != 'Enchantment'
             and 'Legendary Enchantment' not in line
@@ -415,7 +413,6 @@ def split_ficg_dump_into_individual_card_dumps(dump):
 
     # Because text files often end with a newline, this means that `dump_lines` ends up with one empty string as the
     # last element. We don't want that, so we'll get rid of it if it's there.
-
     if dump_lines[-1] == '':
         dump_lines = dump_lines[0:-1]
 
@@ -426,7 +423,7 @@ def split_ficg_dump_into_individual_card_dumps(dump):
         if is_type_line(dump_line):
             # NOTE: If the parser has failed, this is a good place to look to see where the problem is. Usually it fails
             # because the type line has been misidentified.
-            # print dump_line
+            #print(dump_line)
             type_line_indices.append(i)
 
     # Since the name and cost line is always directly above the type line, we can get the indices of all name-and-cost
