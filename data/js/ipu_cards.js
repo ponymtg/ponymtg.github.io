@@ -10,6 +10,7 @@ var IPU_CARDS =
         'subtype': 'Pegasus Pony Druid',
         'text': 'Reach\n\nWhenever a Critter enters the battlefield under your control or you gain control of a Critter, put a +1/+1 counter on Fluttershy.\n\n{T}: Put a 0/1 green Critter creature token onto the battlefield.\n\n{1BB}: Transform Fluttershy unless a player who controls a Critter has you choose and gain control of a Critter he or she controls.\n\n',
         'pt': '0/3',
+        'transformsInto': 'Fluttershy Scorned',
     },
     {
         'name': 'Fluttershy Scorned',
@@ -20,6 +21,7 @@ var IPU_CARDS =
         'subtype': 'Pegasus Pony Druid',
         'text': 'Trample, reach\n\nAt end of combat, if a creature dealt damage by Fluttershy Scorned this turn died, transform Fluttershy Scorned.\n\n',
         'pt': '3/0',
+        'transformsFrom': 'Fluttershy',
     },
     {
         'name': 'Pinkie Pie',
@@ -31,6 +33,7 @@ var IPU_CARDS =
         'subtype': 'Earth Pony',
         'text': 'Whenever I block or become blocked, or the target of a spell or ability, put a colorless snack token onto the battlefield and flip three coins!\n\nI also have haste and persist as long as you\'re singing...\n\nWin 0 flips -- Oh no! Remove all +1/+1 counters from me and transform me!\n\nWin 1 flip -- Look at the top three cards of target player\'s library.\n\nWin 2 flips -- You may move all counters on me onto another creature, then exile me. If you do, you may return me to the battlefield at any time you could cast an instant. (You\'re not casting me, so it\'s free!)\n\nWin 3 flips -- Proliferate, then move a counter from any number of creatures to any number of other creatures, then       proliferate again! Whee!\n\n',
         'pt': '2/2',
+        'transformsInto': 'Pinkie Pie Forsaken',
     },
     {
         'name': 'Pinkie Pie Forsaken',
@@ -41,6 +44,7 @@ var IPU_CARDS =
         'subtype': 'Earth Pony',
         'text': 'Whenever a player completes a sentence in his or her normal voice, any other player may say \'A-ha!\'s If a player does, the caught player discards a card. Then that player loses 1 life for each card in his or her graveyard unless he or she comments on how those cards betrayed and abandoned their owner.\n\nAt the beginning of your upkeep, if a player has six or more cards in his or her hand, transform Pinkie Pie Forsaken.\n\n',
         'pt': '0/4',
+        'transformsFrom': 'Pinkie Pie',
     },
     {
         'name': 'Twilight Sparkle',
@@ -52,6 +56,7 @@ var IPU_CARDS =
         'subtype': 'Unicorn Pony Wizard',
         'text': 'When Twilight Sparkle enters the battlefield, put a +1/+1 counter on each legendary creature you and your teammates control.\n\nAt the beginning of each end step, if a counter was placed on a creature you or a teammate control this turn, draw a card. If not, you may pay {B}. If you do, transform Twilight Sparkle.\n\n',
         'pt': '0/1',
+        'transformsInto': 'Twilight Sparkle Unhinged',
     },
     {
         'name': 'Twilight Sparkle Unhinged',
@@ -62,6 +67,7 @@ var IPU_CARDS =
         'subtype': 'Unicorn Pony Wizard',
         'text': 'At the beginning of each upkeep, put a -1/-1 counter on another target creature. If that creature dies this way, transform Twilight Sparkle Unhinged.',
         'pt': '1/0',
+        'transformsFrom': 'Twilight Sparkle',
     },
     {
         'name': 'Applejack',
@@ -106,6 +112,7 @@ var IPU_CARDS =
         'subtype': 'Shapeshifter',
         'text': 'When The Queen of the Changelings enters the battlefield, you may exile target nontoken creature or nontoken planeswalker.\n\nIf you do, The Queen of the Changelings becomes a copy of the exiled card, except she gains \'When this permanent leaves the battlefield, return it to the battlefield transformed, then return the exiled card to the battlefield under its owner\'s control.\'\n\n ',
         'pt': '3/3',
+        'transformsInto': 'Chrysalis Unmasked',
     },
     {
         'name': 'Chrysalis Unmasked',
@@ -115,6 +122,7 @@ var IPU_CARDS =
         'supertype': 'Planeswalker',
         'subtype': 'Chrysalis',
         'text': 'Whenever a +1/+1 counter is removed from a creature on the battlefield, put a loyalty counter on Chrysalis Unmasked. (Moving removes counters.)\n\n+1: Move a counter from target permanent onto another target permanent.\n\n-3: Remove all counters from target creature. Gain control of that creature for as long as you control Chrysalis Unmasked.\n\n-10: Put ten 2/2 black and blue Shapeshifter creature tokens with flying and changeling named Changeling Invader onto the battlefield.\n\n',
+        'transformsFrom': 'The Queen of the Changelings',
         'loyalty': '5',
     },
     {
@@ -126,6 +134,7 @@ var IPU_CARDS =
         'supertype': 'Planeswalker',
         'subtype': 'Luna',
         'text': 'If Nightmare Moon would leave the battlefield while she still has loyalty counters on her, you may transform her instead.\n\n+1: Target player sacrifices a nonblack, nontoken permanent. All permanents it shared a card type with become black.\n\n0: Gain control of target black permanent until the end of your next turn. It becomes colorless.\n\n-7: Gain control of all black permanents.\n\n',
+        'transformsInto': 'Princess Luna',
         'loyalty': '4',
     },
     {
@@ -136,6 +145,7 @@ var IPU_CARDS =
         'supertype': 'Planeswalker',
         'subtype': 'Luna',
         'text': 'Whenever you a +1/+1 counter on a creature or sacrifice a snack, you may put a loyalty counter on Princess Luna.\n\n0: Tap or untap all black permanents target player controls.\n\n-2: Put a 1/1 colorless Pony Foal creature token onto the battlefield for each black permanent target player controls.\n\n',
+        'transformsFrom': 'Nightmare Moon',
     },
     {
         'name': 'Spike',
@@ -147,6 +157,7 @@ var IPU_CARDS =
         'subtype': 'Dragon Advisor',
         'text': 'When an artifact enters the battlefield for the third time in a turn, transform Spike.\n\n{T}: Exile target artifact, enchantment or snack you control, then return it to the battlefield under target player\'s control.\n\n',
         'pt': '1/1',
+        'transformsInto': 'Spike Insatiable',
     },
     {
         'name': 'Spike Insatiable',
@@ -157,6 +168,7 @@ var IPU_CARDS =
         'subtype': 'Dragon Berserker',
         'text': 'Spike Insatiable attacks each turn if able. \n\nWhenever Spike Insatiable attacks, each player exiles an artifact, enchantment or snack he or she controls. If a player can\'t, return the cards exiled that way to the battlefield under your control at end of combat.\n\nAt the beginning of each upkeep, if a player controls no artifacts, enchantments and/or snacks, transform Spike Insatiable.\n\n',
         'pt': '5/5',
+        'transformsFrom': 'Spike',
     },
     {
         'name': 'Ursa Minor',
@@ -168,6 +180,7 @@ var IPU_CARDS =
         'subtype': 'Giant Bear Critter',
         'text': 'When Ursa Minor dies, if a source an opponent controls targeted or damaged Ursa Minor this turn, return it to the battlefield transformed under your control at the beginning of the next end step.',
         'pt': '6/6',
+        'transformsInto': 'Ursa Major',
     },
     {
         'name': 'Ursa Major',
@@ -178,6 +191,7 @@ var IPU_CARDS =
         'subtype': 'Giant Bear Critter',
         'text': 'Annihilator 3 (Whenever this creature attacks, defending player sacrifices three permanents.)\n\nUrsa Major attacks each turn if able.\n\n',
         'pt': '12/12',
+        'transformsFrom': 'Ursa Minor',
     },
     {
         'name': 'Derpy Hooves // Ditzy Doo',
@@ -685,6 +699,7 @@ var IPU_CARDS =
         'subtype': 'Bird Critter',
         'text': 'Haste\n\nPhilomena attacks each turn if able and is indestructible.\n\nWhen Philomena dies, return her to the battlefield transformed under your control at the beginning of the next end step.\n\n',
         'pt': '1/1',
+        'transformsInto': 'Philomena Reborn',
     },
     {
         'name': 'Philomena Reborn',
@@ -695,6 +710,7 @@ var IPU_CARDS =
         'subtype': 'Phoenix',
         'text': 'Flying\n\nWhen Philomena Reborn dies, return her from her owner\'s graveyard to her owner\'s hand at the beginning of the next end step.\n\n',
         'pt': '3/1',
+        'transformsFrom': 'Philomena',
     },
     {
         'name': 'Reclusive Gemhoarder',
@@ -1903,6 +1919,7 @@ var IPU_CARDS =
         'subtype': 'Earth Pony',
         'text': 'Whenever this creature transforms into Caramel, he gains hexproof until end of turn.\n\n{1}{R/W}: Transform Caramel.',
         'pt': '1/3',
+        'transformsInto': 'Toffee',
     },
     {
         'name': 'Toffee',
@@ -1913,6 +1930,7 @@ var IPU_CARDS =
         'subtype': 'Earth Pony',
         'text': 'Whenever this creature transforms into Toffee, she gains first strike until end of turn.\n\n{1}{G/U}: Transform Toffee.',
         'pt': '3/1',
+        'transformsFrom': 'Caramel',
     },
     {
         'name': 'Berry Punch',

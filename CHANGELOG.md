@@ -1,5 +1,9 @@
+## 1.4.3
+* Added several Miscellany cards.
+* Updated the IPU parser to add in some missing data for double-sized cards.
+
 ## 1.4.2
-* Made all subpages open in the same tab isntead of opening a new one.
+* Made all subpages open in the same tab instead of opening a new one.
 * Added the source file for the booster pack art.
 * Added new booster pack art: Daybreaker
 

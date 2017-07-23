@@ -7228,7 +7228,7 @@ var CARDS = [
         'cost': '2RRR',
         'supertype': 'Legendary Creature',
         'subtype': 'Pony',
-        'text': 'Flying, haste\n\nWhenever Havocwing attacks, blocks, or becomes the target of a spell or ability an opponent controls, it deals 1 damage to each creature and each player.\n\nWhenever Havocwing is dealt damage, put a +1/+1 counter on it.\n\nReove a +1/+1 counter from Havocwing: Havocwing deals 1 damage to another target creature.',
+        'text': 'Flying, haste\n\nWhenever Havocwing attacks, blocks, or becomes the target of a spell or ability an opponent controls, it deals 1 damage to each creature and each player.\n\nWhenever Havocwing is dealt damage, put a +1/+1 counter on it.\n\nRemove a +1/+1 counter from Havocwing: Havocwing deals 1 damage to another target creature.',
         'pt': '4/3',
     },
     {

@@ -6,6 +6,22 @@ SET_NAME = 'Friendship is Magic the Gathering (IPU)'
 CREATOR = 'Sorden'
 COCKATRICE_FILE_PATH = 'data/cockatrice/cockatrice_database_for_mlp_fimtg_v1_4_2_by_sorden-d5k49mg.xml'
 
+# Some of Sorden's cards are double-sided, but the XML file doesn't include that information; therefore, we'll hardcode
+# it so that the `transformsFrom` and `transformsInto` properties can be included in the JSON output.
+TRANSFORM_MAPPINGS = {
+    'Fluttershy': 'Fluttershy Scorned',
+    'Pinkie Pie': 'Pinkie Pie Forsaken',
+    'Twilight Sparkle': 'Twilight Sparkle Unhinged',
+    'Caramel': 'Toffee',
+    'The Queen of the Changelings': 'Chrysalis Unmasked',
+    'Nightmare Moon': 'Princess Luna',
+    'Spike': 'Spike Insatiable',
+    'Ursa Minor': 'Ursa Major',
+    'Philomena': 'Philomena Reborn',
+}
+
+INVERTED_TRANSFORM_MAPPINGS = {value: key for key, value in TRANSFORM_MAPPINGS.items()}
+
 tree = et.parse(COCKATRICE_FILE_PATH)
 root = tree.getroot()
 
@@ -79,12 +95,18 @@ for cardElement in cardElements:
         if ptElement is not None:
             card_data_entry['loyalty'] = ptElement.text
 
+    # If we know that this card transforms, include the name of the card that it transforms to (or from).
+    if card_data_entry['name'] in TRANSFORM_MAPPINGS:
+        card_data_entry['transformsInto'] = TRANSFORM_MAPPINGS[card_data_entry['name']]
+    if card_data_entry['name'] in INVERTED_TRANSFORM_MAPPINGS:
+        card_data_entry['transformsFrom'] = INVERTED_TRANSFORM_MAPPINGS[card_data_entry['name']]
+
     card_data_entry['set'] = SET_NAME
     card_data_entry['creator'] = CREATOR
 
     card_data_entries.append(card_data_entry)
 
-card_properties = ['name', 'image', 'set', 'creator', 'cost', 'supertype', 'subtype', 'text', 'flavorText', 'pt', 'loyalty']
+card_properties = ['name', 'image', 'set', 'creator', 'cost', 'supertype', 'subtype', 'text', 'flavorText', 'pt', 'transformsInto', 'transformsFrom', 'loyalty']
 
 cards_js_variable = mtgJson.encapsulate_dict_list_in_js_variable(card_data_entries, card_properties, 'IPU_CARDS')
-print cards_js_variable.encode('utf-8')
+print(cards_js_variable)

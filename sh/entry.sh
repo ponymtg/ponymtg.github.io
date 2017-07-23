@@ -10,17 +10,17 @@
 #
 # When invoked, the script will read all the card image files and combine their tops into one long easy-to-read list. It
 # then opens this combined image in an image viewer. On the terminal, you will then be prompted to enter the names of
-# each card, one-by-one. When all names have been entered, the script will then transform the resulting list into a JSON
-# file.
+# each card, one-by-one. When all names have been entered, the script will then transform the resulting list into JSON
+# format, and write it to the standard output stream.
 
-# The image viewer application to use.
+# The image viewer application to use for viewing the combined cards image.
 IMAGE_VIEWER=viewnior
 
-# Name of the temporary directory the script will be using.
+# Name of the temporary directory the script will be using. This will be deleted when the script finishes.
 DATESTAMP=$(date +%Y%m%d%H%M%S)
 TMP_DIR=".ponymtg_tmp_$DATESTAMP"
 
-# Names for the temporary output files (these will be deleted after the script finishes).
+# Names for the temporary output files.
 OUTPUT_CARD_TOPS_IMAGE_FILENAME=card_tops.png
 
 # Create the temporary directory.
