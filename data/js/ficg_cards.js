@@ -31388,6 +31388,7 @@ var FICG_CARDS =
         'subtype': 'Avatar',
         'text': 'Alicorn (This card is a Pony Pegasus Unicorn.)\n\nFlying, indestructible\n\nWhenever Luna, the Regretful becomes the target of a black spell, it loses indestructible until end of turn.\n\n1W, T, Tap two untapped creatures you control: Transform Luna.',
         'pt': '2/2',
+        'transformsInto': 'Luna, the Light in the Dark',
     },
     {
         'name': 'Luna, the Light in the Dark',
@@ -31398,6 +31399,7 @@ var FICG_CARDS =
         'subtype': 'Avatar',
         'text': 'Alicorn\n\nFlying, indestructible, protection from black\n\nWhenever another creature you control becomes the target of a spell or ability you don’t control, that creature gains indestructible until end of turn.',
         'pt': '4/4',
+        'transformsFrom': 'Luna, the Regretful',
     },
     {
         'name': 'Rule Through Fear',

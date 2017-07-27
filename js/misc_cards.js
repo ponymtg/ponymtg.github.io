@@ -23,13 +23,6 @@ function initialize() {
     }
 
     var propertiesToDisplay = global.lists.cardPropertiesToDisplay;
-    propertiesToDisplay = propertiesToDisplay.concat(
-        [
-            'notes',
-            'sourceUrl',
-            'createdAt',
-        ]
-    );
     var containerElement = document.querySelector('#container');
     containerElement.appendChild(generateCardTableElement(cardsToDisplay, propertiesToDisplay));
 }

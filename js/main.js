@@ -104,11 +104,6 @@ var global = {
             'creator': 'AznDemonLord',
             'url': 'http://azndemonlord.deviantart.com/gallery/34272231/MLP-FiM-Season-2-MTG-Set',
         },
-        'MTG mlp': {
-            'path': 'Modernwater/MTG mlp/cards',
-            'creator': 'Modernwater',
-            'url': 'http://modernwater.deviantart.com/gallery/46986050/MTG-mlp',
-        },
         'Elements of Harmony': {
             'path': 'Shadic-X-Hedgehog/Elements of Harmony/cards',
             'creator': 'Shadic-X-Hedgehog',

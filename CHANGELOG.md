@@ -1,3 +1,8 @@
+## 1.4.5
+* Reclassified Modernwater's "MTG mtg" as a Miscellany collection, and moved it out of the main sets.
+* Fixed a small property display bug on the Miscellany page.
+* Made a small improvement to the double-sided card detection in the FICG parser.
+
 ## 1.4.4
 * Updated "Friendship is Card Games" with the 2017 Equestria Girls specials, plus a couple more comic editions.
 * Fixed a small bug in the FICG parser which caused it to incorrectly detect some card text lines as type lines.

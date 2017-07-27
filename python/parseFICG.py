@@ -648,6 +648,11 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     # - "transform it"
     # - "return it to the battlefield transformed"
     first_word_of_card_name = card_data_entry['name'].split(' ')[0]
+    
+    # Sometimes, the first word will have a trailing comma (eg. "Luna, the Light in the Dark"). This needs to be removed
+    # if present.
+    if first_word_of_card_name[-1] == ',':
+        first_word_of_card_name = first_word_of_card_name[0:-1]
     if (
         'transform '+card_data_entry['name'].lower() in card_data_entry['text'].lower()
         or 'transform '+first_word_of_card_name.lower() in card_data_entry['text'].lower()
