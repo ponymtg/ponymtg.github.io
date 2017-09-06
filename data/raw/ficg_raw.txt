@@ -22426,3 +22426,684 @@ Land — Forest Island
 (T: Add G or U to your mana pool.)
 Conceptual Grove enters the battlefield tapped.
 Cycling 2 (2, Discard this card: Draw a card.)
+Normalize 1W
+Sorcery
+Detain target creature. If that creature is black or red, exile it. (Until your next turn, that creature can’t attack or block and its activated abilities can’t be activated.)
+“Conformity is death.”
+—Discord
+Clean House 2WW
+Instant
+Destroy all enchantments target player controls.
+Chaotic 1W (You may cast this spell for its chaotic cost. If you do, choose its target at random.)
+“Everything must go!”
+—Discord
+Stubborn Leak 2U
+Enchantment
+At the beginning of each player’s upkeep, that player puts a flood counter on target non-Island land he or she controls of his or her choice. That land is an Island for as long as it has a flood counter on it.
+U: Remove a flood counter from target land. Any player may activate this ability.
+Bury in Bits 1B
+Sorcery
+Destroy target creature. Its controller creates X colorless token artifacts named Gold, where X is that creature’s power. Those tokens have “Sacrifice this artifact: Add one mana of any color to your mana pool.”
+Piñata Hunters 1B
+Creature — Bat
+Flying
+Whenever Piñata Hunters blocks or becomes blocked by an artifact creature, Piñata Hunters gains deathtouch until end of turn.
+Their fangs are optimized for tearing through papier mache.
+1/2
+Messy Divorce 3B
+Sorcery
+Destroy target creature. If that creature was paired with a creature, destroy that creature.
+After his second wife, Gunther VIII decided to divorce and behead his spouses once he lost interest in them.
+Feeding Fingers R
+Creature — Chimera
+Whenever an opponent gains life, put a +1/+1 counter on Feeding Fingers.
+”There is absolutely no deeper meaning to my creating smaller versions of myself with Fluttershy.”
+—Discord
+1/1
+Cerebral Detonation 2R
+Sorcery
+Buyback 2R (You may pay an additional 2R as you cast this spell. If you do, put this card into your hand as it resolves.)
+Target player reveals the top card of his or her library. Cerebral Detonation deals damage equal to the revealed card’s converted mana cost to that player.
+Desperate Chaos 2R
+Sorcery
+Madness 2R (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)
+Discard your hand, then draw two cards. If Desperate Chaos’s madness cost was paid, instead discard your hand, then draw four cards.
+Discord’s Consultants 3R
+Creature — Chimera Advisor
+T, Discard a card: Draw a card.
+Whenever you cast a red spell, untap Discord’s Consultants.
+”Finally, people whose judgement I can trust.”
+—Discord
+2/2
+Talk Amongst Yourself XXRR
+Sorcery
+Create X tokens that are copies of target creature. Those tokens gain haste until end of turn. Exile them at the beginning of the next end step. The “legend rule” doesn’t apply to creatures with that creature’s name this turn.
+Chaotic XRR (You may cast this spell for its chaotic cost. If you do, choose its target at random.)
+Absorbent Sheep 1G
+Creature — Sheep
+Whenever a player casts a blue spell, put a +1/+1 counter on Absorbent Sheep.
+”Ain’t much angrier than a sodden ram.”
+—Applejack, Bearer of Honesty
+1/3
+Hip Roses 1G
+Enchantment — Aura
+Enchant creature
+Whenever enchanted creature attacks or deals combat damage to a player, add G to your mana pool at the beginning of your next postcombat main phase.
+Shelfbranch Sapling 2G
+Creature — Plant
+Defender
+When Shelfbranch Sapling enters the battlefield or dies, draw a card.
+”Don’t tell Princess Purple. I’m going to surprise her with it in a few decades.”
+—Discord
+0/3
+Self-Folding Napkin 2
+Artifact
+1: Self-Folding Napkin becomes a copy of target creature until end of turn, except it’s 1/1.
+Discord couldn’t determine the best way to make napkins more interesting, so he gave the napkins the ability to decide for themselves.
+Chase Lounge 3
+Artifact Creature — Construct
+Chase Lounge blocks each combat if able.
+Discord befriended Fluttershy, the Bearer of Kindness. Their passion inspired his most astounding works of wordplay.
+3/2
+Experimental Jetpack 3
+Artifact — Equipment
+Equipped creature has flying.
+Whenever equipped creature attacks, it gets +X/+0 until end of turn, where X is its power. Flip a coin. If you lose the flip, that creature’s controller sacrifices it at end of combat.
+Equip 2
+Musical Ginseng 3
+Artifact Creature — Construct
+Flying
+Sacrifice Musical Ginseng: Put a verse counter on each Song you control.
+”I’m thinking of getting some loose tisanes for the orchestra.”
+—Discord
+1/1
+Low Tea 2(ur)
+Sorcery
+Each player puts the cards in his or her hand on the bottom of his or her library in any order, then draws that many cards.
+”Discord always has the most interesting things to talk about.”
+—Fluttershy, Bearer of Kindness
+Beehive Graft 2GU
+Enchantment — Aura
+Enchant creature
+When Beehive Graft enters the battlefield, put a +1/+1 counter on enchanted creature.
+Whenever one or more +1/+1 counters are put on enchanted creature, create a 1/1 green Insect creature token with flying and deathtouch.
+Ceiling Volcano XRG
+Instant
+Choose one —
+• Ceiling Volcano deals X damage to each creature with flying.
+• Ceiling Volcano deals X damage to each creature without flying.
+”Gravity’s more interesting when it’s optional.”
+—Discord
+Cultural Appropriation 1W
+Instant
+Creatures you control get +1/+1 and become the creature type of your choice in addition to their other types until end of turn.
+”There’s more to farming than a hat and an accent.”
+—Applejack, Bearer of Honesty
+Quest for Assertiveness 1WW
+Enchantment
+Whenever a creature attacking you or a planeswalker you control becomes blocked, put a quest counter on Quest for Assertiveness.
+As long as there are three or more quest counters on Quest for Assertiveness, each creature you control gets +1/+1, has vigilance, and can block an additional creature each combat.
+Curse of Hilarity 3W
+Enchantment — Aura Curse
+Enchant opponent
+Whenever enchanted player casts a spell, you gain 2 life.
+”May you be as respected as those who speak truth to power.”
+—Princess Luna
+Stress Sewing 3W
+Enchantment
+Whenever a source an opponent controls deals damage to you, reveal the top card of your library. If it’s an artifact or enchantment card, you may put it onto the battlefield. Otherwise, put it into your graveyard.
+Fabric flew through the boutique in shapes no sane mare would consider.
+Boycott 3WW
+Enchantment
+As Boycott enters the battlefield, choose a color.
+Players can’t cast spells of the last chosen color.
+3: Choose a color. Any player may activate this ability but only during his or her turn.
+Investment Collector 4W
+Creature — Pony Citizen
+Each artifact you control enters the battlefield with an additional mint counter on it.
+Each artifact you control with a mint counter on it has indestructible.
+Whenever an artifact you control attacks, blocks, or becomes tapped, remove all mint counters from it.
+3/3
+Miss the Point U
+Instant
+Counter target noncreature spell. That spell’s controller draws a card.
+”Did you ponies even read the journal!?”
+—Princess Twilight Sparkle
+Marksist Propaganda 1UU
+Enchantment
+Whenever a face-up creature deals damage to you, you may turn it face down. (It becomes a 2/2 creature.)
+“I forgive you. You’re only lashing out because you don’t yet understand why this is for the best.”
+—Starlight Glimmer
+Elegant Calligraphy 3UU
+Enchantment
+If you would draw one or more cards, instead draw that many plus one cards.
+”Why bother doing anything if you cannot do it beautifully?”
+—Rarity, Bearer of Generosity
+Canterlot Chronicler 4U
+Creature — Unicorn Advisor
+T: Look at the top card of your library. You may put that card into your graveyard. Then draw a card.
+”Ugh. Nopony needs to read about that.”
+1/2
+Starlight’s Duplication 4UU
+Sorcery
+Reveal your hand. For each instant or sorcery card revealed this way, copy that card. You may cast any number of those copies without paying their mana costs.
+All things are equal to themselves.
+Bury in the Stacks 2BB
+Sorcery
+Kicker B (You may pay an additional B as you cast this spell.)
+Target player puts two cards from his or her hand on top of his or her library. If Bury in the Stacks was kicked, that player shuffles his or her library.
+Casual Slanderers 3B
+Creature — Pony Citizen
+At the beginning of your upkeep, target creature other than Casual Slanderers gets -1/-1 until end of turn.
+”Apologize? Why? Don’t you know it’s rude to eavesdrop?”
+2/2
+Aggressive Lessons R
+Enchantment — Aura
+Enchant creature
+Enchanted creature has trample and “Whenever this creature deals combat damage to a player, you may discard a card. If you do, draw a card.”
+Rainbow Dash rarely remembers lessons that didn’t involve at least one kick.
+Sundae Assault R
+Snow Instant
+Sundae Assault deals 2 damage to target nonsnow creature. If S was spent to cast Sundae Assault, it deals 3 damage to that creature instead. (S can be paid with one mana from a snow source.)
+For a few dark decades, Celestia was forced to outlaw vanilla beans.
+Unceasing Admirers 2R
+Creature — Pegasus Minion
+Flying
+Lieutenant — As long as you control your commander, Unceasing Admirers gets +2/+0 and attacks each turn if able.
+Rainbow Dash: “Don’t tell me I was that bad.”
+Pinkie Pie: “Okay, I won’t tell you.”
+2/1
+“Flawless” 1G
+Enchantment — Song
+At the beginning of your upkeep, put a verse counter on “Flawless”.
+1G, Sacrifice “Flawless”: Up to X target creatures gain indestructible and “Whenever this creature is dealt damage, put a +1/+1 counter on it” until end of turn, where X is the number of verse counters on “Flawless”.
+Stress Couture 4
+Artifact — Equipment
+Whenever you lose life, put that many +1/+1 counters on equipped creature.
+When Rarity wears her emotions on her sleeve, she isn’t being metaphorical.
+Equip 4
+Friendship Journal 5
+Artifact
+T, Tap two untapped creatures you control: Draw a card.
+The collected wisdom and experience of the Bearers lies within… and requires nearly as much wisdom and experience to properly appreciate.
+Sweet Apple Admirers 2(rg)(rg)
+Creature — Pony Minion
+Trample, haste
+At the beginning of your upkeep, sacrifice Sweet Apple Admirers unless you pay (rg)(rg)(rg).
+Strangely, they had all vanished when the family started their chores.
+6/6
+Generational Echo 3(ur)B
+Enchantment
+Whenever you cast a creature spell, you may create a token that’s a copy of target creature card in your graveyard that shares a creature type with that spell. That token gains haste. Exile it at the beginning of the next end step.
+Slip Under the Floorboards 2WW
+Sorcery
+Put target artifact, creature, or enchantment on the bottom of its owner’s library.
+The only difference between planting and burying is what you expect will come of it.
+Scion of Integrity 3W
+Creature — Pony Rebel Warrior
+Soulbond (You may pair this creature with another unpaired creature when either enters the battlefield. They remain paired for as long as you control both of them.)
+As long as Scion of Integrity is paired with another creature, both creatures have protection from instants.
+3/3
+Courier Jay 2U
+Creature — Bird
+Flying
+Whenever Courier Jay deals combat damage to a player, you draw two cards and that player gains control of Courier Jay.
+Communication is a two-way flightpath.
+2/1
+Cold Feud 2UU
+Enchantment
+As Cold Feud enters the battlefield, choose two players.
+Whenever one of the chosen players casts a spell, the other chosen player may draw a card.
+The Apples and Pears fought not with weapons but with feats, each seeking to shame and outdo the other.
+Overflowing Lore 5UUU
+Sorcery
+Exchange your hand and library. Then shuffle your library.
+Shelf space is Goldie Delicious’s primary concern. Living space is somewhere around number twelve.
+Burden of Regret 2B
+Sorcery
+Choose a card type. Target player loses 1 life for each card of the chosen type in his or her graveyard.
+Even earth pony strength can’t carry a heavy heart.
+Last Legacy 4B
+Sorcery
+As an additional cost to cast Last Legacy, exile a creature card from your graveyard.
+Draw cards equal to the exiled card’s power.
+A final gift to those who seek it.
+Talent Scout 1R
+Creature — Pony Rebel Scout
+Soulbond
+As long as Talent Scout is paired with a creature, both creatures have “Whenever this creature attacks, scry 1.”
+2/1
+Forbidden Love 1RR
+Sorcery
+Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. You may pair that creature with a creature you control with soulbond. (They become unpaired when you lose control of one.)
+Firewood Salespony 2R
+Creature — Pony Monger
+Sacrifice a land: Add RR to your mana pool. Any player may activate this ability but each player may only activate it once each turn.
+"I just sell the stuff. You're the one who has to be careful not to burn your house down."
+2/1
+Runaway Plowing 2R
+Enchantment — Aura
+Enchant creature
+Enchanted creature gets +3/+0 and has trample.
+Whenever enchanted creature deals combat damage to a player, you may sacrifice Runaway Plowing. If you do, destroy target land that player controls.
+Heartfelt Love Song G
+Enchantment — Song
+At the beginning of your upkeep, put a verse counter on Heartfelt Love Song.
+G, Sacrifice Heartfelt Love Song: Target creature gets +X/+X until end of turn, where X is the number of verse counters on Heartfelt Love Song. If that creature is paired with another creature, that creature also gets +X/+X until end of turn.
+Helical Hybrid 1G
+Creature — Plant
+Soulbond
+As long as Helical Hybrid is paired with a creature, both creatures have “T: Add G to your mana pool.”
+0/3
+Moonclutch Tree 1G
+Creature — Plant
+Reach
+Whenever Moonclutch Tree blocks a creature with flying, put a +1/+1 counter on Moonclutch Tree.
+”At least there is something that appreciates my night.”
+—Princess Luna
+0/3
+Branch Blanketer 2G
+Creature — Pony Druid
+Lands you control have hexproof.
+”I shelter the boughs as they shelter me.”
+2/3
+Feuding Bear 2GG
+Creature — Bear
+When Feuding Bear enters the battlefield, you may have it fight target creature you don’t control.
+”Sometimes you massage the bear, and sometimes the bear massages you.”
+—Fluttershy, Bearer of Kindness
+3/3
+Historian’s Cheetah 3G
+Creature — Cat
+If an opponent drew two or more cards this turn, you may cast Historian’s Cheetah without paying its mana cost.
+Flash
+Borrowing books from Goldie Delicious is strongly discouraged.
+4/2
+Hoarder’s Clowdersphere 3GG
+Creature — Cat Construct
+Hoarder’s Clowdersphere enters the battlefield with a +1/+1 counter on it for each other Cat you control.
+Whenever another Cat enters the battlefield under your control, put a +1/+1 counter on Hoarder’s Clowdersphere.
+When Hoarder’s Clowdersphere dies, create X 1/1 green Cat creature tokens, where X is the number of +1/+1 counters on Hoarder’s Clowdersphere.
+3/3
+Lovers’ Petroglyphs 2
+Artifact
+T: Add C to your mana pool.
+T: Add one mana of any color to your mana pool. Spend this mana only to cast a spell with soul bond or to activate an activated ability of a paired creature.
+Earth ponies inscribe their devotion on the land itself.
+Sudden Sneeze (gw)
+Instant
+Prevent all combat damage that would be dealt this turn. Each attacking player and defending player gains 2 life.
+”The right joke at the right moment can make all the difference.”
+—Pinkie Pie, Bearer of Laughter
+Breakfast for Dinner 3GU
+Enchantment
+At the beginning of your postcombat main phase, you get an additional beginning phase after this phase. (The beginning phase consists of the untap step, upkeep step, and draw step.)
+There is magic in all things earth ponies make, including pancakes.
+Four-Season Promenade
+Land
+When Four-Season Promenade enters the battlefield, you gain 1 life.
+T: Add C to your mana pool.
+1, T: Add G, W, or U to your mana pool.
+Works nearly impossible on any other plane are easily crafted on Ungula.
+Ponyville Trumpeters 2W
+Creature — Unicorn Citizen
+Whenever Ponyville Trumpeters or another creature enters the battlefield under your control, creatures you control get +1/+1 until end of turn.
+Every brass player in Equestria dreams of announcing royalty.
+1/1
+Blend Together 1U
+Instant
+Creatures you control of the creature type of your choice gain hexproof until end of turn.
+Draw a card.
+”It’s not my fault you’re all shaped the same.”
+—Dragonlord Ember
+Digestive Issues B
+Enchantment — Aura
+Enchant creature
+At the beginning of your upkeep, put a -1/-1 counter on enchanted creature.
+Prior to their reformation, the changelings’ stomachs were vestigial at best.
+Renegade Lovebug 3B
+Creature — Insect Pony Rogue
+Whenever you gain life, target opponent loses that much life.
+1B: Renegade Lovebug gains lifelink until end of turn.
+”My new carapace changes nothing. I remain a predator.”
+2/3
+Ember’s Introduction R
+Sorcery
+Target creature gets +3/+0 and gains menace until end of turn.
+”Ponies usually don’t punctuate hellos with fire,” said Twilight.
+“Huh.” Ember considered that. “Why not?”
+Dragonlands Ambassador 2R
+Creature — Dragon Advisor
+When Dragonlands Ambassador enters the battlefield, you may search your library for a Dragon card, reveal it, then shuffle your library and put that card on top of it.
+”How many tons of rubies were we willing to spend again?”
+2/2
+Fire Duel 2R
+Sorcery
+Clash with an opponent. If you win, Fire Duel deals 4 damage to that player. Otherwise, return Fire Duel to its owner’s hand. (Each clashing player reveals the top card of his or her library, then puts that card on the top or bottom. A player wins if his or her card had a higher converted mana cost.)
+Burning Allure 3R
+Instant
+All creatures attack target player or planeswalker this turn if able. (Creatures can’t attack their controllers or planeswalkers their controllers control.)
+Some fight for honor. Some for survival. Some because there’s a shiny thing on the horizon.
+Badlands Siege 4R
+Enchantment
+As Badlands Siege enters the battlefield, choose Changelings or Dragons.
+• Changelings — At the beginning of combat on your turn, create a token that’s a copy of target creature you control. That token gains haste until end of turn. Exile it at the beginning of your next end step.
+• Dragons — Attacking creatures you control get +2/+0.
+Eat the Decorations 4R
+Sorcery
+Exile target land and all Fortifications attached to it.
+”In hindsight, bringing a dragon to a castle made of crystal wasn’t my best idea.”
+—Spike
+Curse of Competition 4RR
+Enchantment — Aura Curse
+Enchant player
+At the beginning of enchanted player’s upkeep, that player chooses two target creatures he or she controls. Those creatures fight each other.
+”This is why we can’t have nice things.”
+—Dragonlord Ember
+Global Ruination 4RRR
+Sorcery
+Each player sacrifices half the lands he or she controls, rounded up. Global Ruination deals 6 damage to each creature.
+”I don’t know where Spike gets these ridiculous fears.”
+—Princess Twilight Sparkle
+Push Past the Pain G
+Instant
+Target creature gains undying until end of turn. (When it dies, if it has no +1/+1 counters on it, return it to the battlefield under its owner’s control with a +1/+1 counter on it.)
+Draconic has no word for “Ouch.”
+Confluence of Champions 2G
+Enchantment
+When Confluence of Champions enters the battlefield, draw a card.
+Whenever a player casts a commander spell, each other player may put a commander card he or she owns from the command zone onto the battlefield.
+Tedious Paperwork 1
+Artifact
+1(wu), Sacrifice Tedious Paperwork: Detain target creature you don’t control. Activate this ability only any time you could cast a sorcery. (Until your next turn, that creature can’t attack or block, and its activated abilities can’t be activated.)
+When Tedious Paperwork is put into a graveyard from the battlefield, draw a card.
+Comfy Chair 3
+Artifact
+3, T: Target player loses 3 life unless he or she sacrifices a nonland permanent or discards a card.
+Among the most unspeakable torture devices in the Equestrian Inquisition’s vault of horrors.
+Dragonflame Pedestal 3
+Artifact
+T: Add R to your mana pool.
+T: Add RR to your mana pool. Spend this mana only to cast Dragon spells or to activate abilities of Dragon sources.
+As furious and long-lasting as the ones it honors.
+Ember Monument 3
+Artifact
+T: Add U or R to your mana pool.
+4UR: Ember Monument becomes a 4/4 blue and red Dragon artifact creature with flying until end of turn.
+Ember was most impressed when she saw ponies could to turn rock into treasure.
+Emblazoned Banner RW
+Tribal Enchantment — Flagbearer
+When choosing targets as part of casting a spell or activating an ability, your opponents must choose one Flagbearer on the battlefield if able.
+Whenever Emblazoned Banner becomes the target of a spell or ability an opponent controls, it deals 3 damage to that opponent.
+Charging Bruin 2(rg)(rg)
+Creature — Bear
+Haste
+When Charging Bruin enters the battlefield, put two -1/-1 counters on it at the beginning of the next turn’s upkeep.
+”Let him tire himself out. He’ll calm down soon.”
+—Fluttershy, Bearer of Kindness
+5/5
+Dominant Dragon 3RG
+Creature — Dragon
+Flying
+RG: Dominant Dragon gets +X/+X until end of turn, where X is the greatest power among other creatures you control. Activate this ability only once each turn.
+Dragons adapt to many stimuli, including bigger dragons.
+3/3
+Live 1G//Learn 2U
+Sorcery//Sorcery
+Live: Target land becomes a 4/4 Elemental creature with trample and haste until end of turn. It’s still a land.
+Learn: Whenever a creature you control deals combat damage to a player this turn, you may draw a card.
+Fuse (You may cast one or both halves of this card from your hand.)
+Heroic Effort 1W
+Instant
+Target creature gets +2/+0 and gains indestructible until end of turn.
+The lava crept closer. The Mighty Helm had cast off. But Rockhoof had a duty.
+Flash Magnus 3WW
+Legendary Creature — Pegasus Soldier
+Flash
+Flying, vigilance
+When Flash Magnus enters the battlefield, you may exile any number of target creatures you control. Return them to the battlefield under your control at the beginning of the next end step.
+Flash Magnus can block any number of creatures.
+2/4
+Forbidden City 3WW
+Legendary Enchantment
+When Forbidden City enters the battlefield, you become the monarch.
+As long as you’re the monarch, creatures can’t attack you or a planeswalker you control unless attacking player pays 5. (Any number of creatures can then attack.)
+Mistmane, Beautiful Soul 3WW
+Legendary Creature — Unicorn Wizard
+Mistmane, Beautiful Soul enters the battlefield with a divinity counter on it if mana was spent to cast it.
+Mistmane has indestructible as long as it has a divinity counter on it.
+Remove a divinity counter from Mistmane: Return to the battlefield all permanent cards in your graveyard that were put there from the battlefield this turn.
+3/3
+Call the Mighty Helm 4W
+Instant
+Create two 2/2 white Pony Soldier tokens.
+The Mighty Helm galloped to the defense of those in need, ensuring safety in uncertain times.
+Mystic Soulshard 3UU
+Creature — Dragon Spirit
+Flying
+When Mystic Soulshard dies, you may cast target instant or sorcery card from your graveyard without paying its mana cost. If that card would be put into your graveyard this turn, exile it instead.
+2/3
+Palace Toilers 2B
+Creature — Unicorn Serf
+When Palace Toilers dies, you become the monarch.
+”I am your empress. I am the reason for your existence. Why should you not give everything you have to serve me?”
+—Empress Sable Spirit
+2/1
+Covetous Soulshard 2BB
+Creature — Dragon Spirit
+Flying
+When Covetous Soulshard dies, target opponent reveals his or her hand. You choose an instant or sorcery card from that hand. That player discards that card.
+A unicorn’s dueling dragon reflects what lies in her heart.
+2/2
+Mental Scar 6B
+Enchantment — Aura Curse
+Enchant player
+Mental Scar enters the battlefield with X despair counters on it, where X is the amount of life enchanted player lost this turn. (Damage causes loss of life.)
+At the beginning of enchanted player’s end step, that player loses life equal to the number of despair counters on Mental Scar.
+Campfire Legend 1R
+Sorcery
+Create a token that's a copy of target commander or commander card in the command zone. That token has haste and “At the beginning of the end step, exile this permanent.”
+Amid the flickering flames, heroes and villains come to brief, glorious life.
+Avalanche Strike 2R
+Sorcery
+As an additional cost to cast Avalanche Strike, sacrifice a land.
+Avalanche Strike deals 2 damage to each creature target player controls. The damage can’t be prevented.
+Applejack felt conflicted. The bats were gone, but so was the west orchard.
+Pyre Hauler 3R
+Creature — Pegasus Warrior
+Flying
+When Pyre Hauler dies, it deals 2 damage to target creature or player.
+She knew it was a bad idea from the start, but she’d rather endure than admit her own foolishness.
+2/1
+Encroaching Lava 4R
+Enchantment
+At the beginning of your upkeep, put a blaze counter on Encroaching Lava.
+At the beginning of your end step, Encroaching Lava deals X damage to each creature without flying, where X is the number of blaze counters on it.
+Sacrifice a land: Remove a blaze counter from Encroaching Lava. Any player may activate this ability, but only during his or her turn.
+Immense Thunderhead XRR
+Sorcery
+Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for 1 or one mana of that creature's color.)
+Immense Thunderhead deals X damage divided as you choose among any number of target creatures.
+Noxious Harvest G
+Sorcery
+Search your library for a basic land card, reveal it, and put it into your hand. If an opponent is poisoned, you may put that card onto the battlefield instead. Then shuffle your library.
+”I think the trees like this new fertilizer.”
+—Applejack, Voice of Vigor
+Rockhoof of the Spade 1G
+Legendary Creature — Pony Warrior
+At the beginning of your upkeep, you may put the top two cards of your library into your graveyard.
+Threshold — Rockhoof of the Spade gets +3/+3 and has trample and vigilance as long as seven or more cards are in your graveyard.
+2/2
+Stubborn Settlers 2G
+Creature — Pony Citizen
+Stubborn Settlers can’t be returned to its owner’s hand.
+It’s easier to move a village away from earth ponies than the other way around.
+2/3
+Mass Migration XGG
+Sorcery
+Choose a creature type, then reveal the top X cards of your library. Put all creature cards of the chosen type revealed this way onto the battlefield and the rest into your graveyard.
+Ponies aren't the only ones who seek more promising lands.
+Netitus, the Unyielding 4
+Legendary Artifact — Equipment
+Indestructible
+Equipped creature has indestructible.
+All creatures able to block equipped creature do so.
+Equip 4
+Call for Retreat (wu)(wu)
+Instant
+Return any number of target creatures you own to your hand.
+”I will not throw away my ponies’ lives when one order can let them see a battle they can win.”
+—Ironhead, legion commander
+Flyder Swarm BG
+Creature — Spider
+Flying
+Wither (This deals damage to creatures in the form of -1/-1 counters.)
+Whenever Flyder Swarm deals combat damage to a player, create a token that’s a copy of Flyder Swarm.
+Some spiders aren’t content to wait in their webs.
+1/1
+Thorny Embrace W(wb)B
+Enchantment — Aura
+Enchant creature
+Enchanted creature can’t attack or block.
+At the beginning of the upkeep of enchanted creature’s controller, that player loses 1 life and you gain 1 life.
+Dancing Shadow 1UB
+Creature — Shade
+U: Exile Dancing Shadow. Return it to the the battlefield under its owner's control at the beginning of the next end step.
+B: Dancing Shadow gets +1/+1 until end of turn.
+”Darkness can be far more elegant than nightmares and tyrant kings.”
+—Princess Luna
+1/1
+Venom Assault 2(bg)
+Instant
+Creatures you control gain wither until end of turn.
+”It only hurts when my heart beats.”
+—Rainbow Dash, Bearer of Loyalty
+Syphon Beauty 2WB
+Sorcery
+Remove up to one counter from each creature you don’t control. Put a +1/+1 counter on each creature you control.
+The empress adorned those few who earned her favor with the treasures of the many who didn’t.
+Empress Sable Spirit 3WB
+Legendary Creature — Unicorn Wizard
+When Empress Sable Spirit enters the battlefield, you become the monarch.
+Whenever you cast a spell, if you’re the monarch, you gain 3 life.
+Whenever an opponent casts a spell, if that player is the monarch, he or she loses 3 life.
+3/3
+Torch, Herd Roaster 4RG
+Legendary Creature — Dragon
+Flying
+Whenever a Dragon you control attacks, target creature defending player controls can’t block this turn.
+”Sister wishes to parlay with him. I say his scales will make fine armor.”
+—Princess Luna
+6/5
+Mineighmo, School at the Horizon
+Legendary Land
+T: Add U to your mana pool.
+UU, T: Copy target activated ability of a legendary creature you control. You may choose new targets for the copy.
+Its students begin with alchemy and end as myths.
+Nhorse Settlement
+Land — Island Mountain
+(T: Add U or R to your mana pool.)
+Nhorse Settlement enters the battlefield tapped.
+Cycling 2 (2, Discard this card: Draw a card.)
+Cunning Maneuver W
+Instant
+If target creature would deal damage this turn, it deals that damage to itself instead.
+”Your strengths are our strengths. Your weaknesses you can keep.”
+—Pharynx, Prince of Defense
+Kinder and Gentler 1W
+Instant
+Up to two target creatures can’t attack or block this turn.
+Thorax had greatly enriched his subjects lives, but at the cost of combat preparedness.
+Pharynx’s Fortifications 2W
+Enchantment
+Whenever a creature attacks you or a planeswalker you control, Pharynx’s Fortifications deals 1 damage to that creature.
+”Obsidian’s getting hard to find these days, but these thorns should do for now.”
+Creative Outlets 3W
+Enchantment
+Nontoken creatures you control have fabricate 1. (Whenever a nontoken creature enters the battlefield under your control, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)
+All social insects are industrious. Changelings just take it further than most.
+Jeweled Lovebug 3W
+Creature — Insect Pony
+Flying
+Whenever Jeweled Lovebug deals combat damage to a player, choose a color. You gain 1 life for each permanent of the chosen color defending player controls.
+”I feel blue today.”
+2/2
+Inspired March 3WW
+Sorcery
+Creatures you control get +2/+1 and gain vigilance until end of turn. Exile Inspired March with three time counters on it.
+Suspend 3 — 1W (Rather than cast this card from your hand, you may pay 1W and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, cast it without paying its mana cost.)
+Buck Tradition 1UU
+Instant
+Counter target spell. If that spell was green, look at the top card of its owner’s library. You may put that card on the bottom of that library.
+”The future does not belong to the past.”
+—King Thorax
+Lovebug Thespian 3UU
+Creature — Insect Pony
+1UU: Lovebug Thespian becomes a copy of target creature and gains this ability.
+”We’re not so different from ponies. We just have an easier time with costumes.”
+2/3
+Cultural Enrichment 5UU
+Sorcery
+Draw a card for each creature target opponent controls. Detain those creatures. (Until your next turn, they can’t attack or block and their activated abilities can’t be activated.)
+After a lifetime of war, anything else is a welcome alternative.
+Head of Patrols 2B
+Creature — Shapeshifter Warrior
+Head of Patrols can’t attack unless defending player has 10 or less life.
+”As long as our prey is strong enough to resist, I’ll leave them to the hunters.”
+4/4
+Hive Hulk 4BB
+Creature — Insect
+Flying, trample
+At the beginning of your upkeep, sacrifice Hive Hulk unless you pay 3 life.
+Chrysalis encouraged nymphs to imagine ever more horrible forms to wear.
+6/6
+Feelings Guru 2RR
+Creature — Insect Pony Shaman
+At the beginning of each player’s upkeep, that player exiles the top card of his or her library. He or she may play that card this turn.
+”The forum is open to anyone and everyone.”
+3/3
+Potluck Lunch G
+Sorcery
+Join forces — Starting with you, each player may pay any amount of mana. Each player reveals the top X cards of his or her library, then may put a creature card with convered mana cost X or less revealed this way onto the battlefield, where X is the amount of mana paid this way, then shuffles his or her library.
+Dread Maulwurf 4G
+Creature — Mole
+Dread Maulwurf has hexproof and trample as long as an opponent controls a nonbasic land.
+”Sure, it’s herbivorous. So are ponies, and we’ve seen what they can do.”
+—Reasonable Caution, former patroller
+4/4
+Ravage the Novel 4G
+Sorcery
+Destroy target noncreature permanent. If B was spent to cast Ravage the Novel, put two -1/-1 counters on up to one target creature.
+Pharynx destroyed everything unfamiliar, seeing only potential dangers to the hive.
+Throne of the Symbiote King 3
+Legendary Artifact
+Whenever you gain life, you may draw a card.
+4, T: You gain 1 life.
+From policy to furniture, Thorax tries to be as different from his mother as possible.
+Pharynx, the Isolated 2BR
+Legendary Creature — Shapeshifter
+Flying
+Pharynx, the Isolated can’t be the target of spells or abilities you control.
+1W: Transform Pharynx. Activate this ability only if you control four or more creatures.
+”I know when I’m not wanted.”
+4/3
+Pharynx, Prince of Defense
+(WBR) Legendary Creature — Insect
+Alicorn (This creature is also a Pony Pegasus Unicorn.)
+Flying
+Whenever a creature you control becomes the target of a spell or ability you don’t control, you gain 2 life and that spell or ability’s controller loses 2 life.
+5/5
+Pouncing Practice 3(br)(br)
+Instant
+Creatures you control get +3/+0 until end of turn.
+”I don’t actually want them to tear out throats once they’re in the field. It just amuses me.”
+—Queen Chrysalis
+Demand Banishment 3WB
+Sorcery
+Target creature’s controller exiles it unless that player exiles all other creatures he or she controls.
+The ultimatum was clear: If Pharynx didn’t leave, the rest of the hive would.
+Flourishing Wastes
+Land
+Flourishing Wastes enters the battlefield tapped.
+As long as Flourishing Wastes is on the battlefield, it has the activated abilities of all land cards in all graveyards.
+Around the hive, forgotten biomes live anew.

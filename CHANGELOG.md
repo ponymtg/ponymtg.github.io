@@ -1,3 +1,6 @@
+## 1.4.6
+* Updated "Friendship is Card Games" to the latest episode cards.
+
 ## 1.4.5
 * Reclassified Modernwater's "MTG mtg" as a Miscellany collection, and moved it out of the main sets.
 * Fixed a small property display bug on the Miscellany page.
