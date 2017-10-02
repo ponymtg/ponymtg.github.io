@@ -1,3 +1,8 @@
+## 1.5.1
+* Updated "Friendship is Card Games" to the latest episode cards.
+* Added Zennistrad's "My Little Planeswalker" cards to the Miscellany.
+* Added some miscellaneous cards.
+
 ## 1.5.0
 * Moved set data into its own file.
 
