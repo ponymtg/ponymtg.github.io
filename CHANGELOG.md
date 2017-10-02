@@ -1,3 +1,6 @@
+## 1.5.0
+* Moved set data into its own file.
+
 ## 1.4.6
 * Updated "Friendship is Card Games" to the latest episode cards.
 

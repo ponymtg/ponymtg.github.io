@@ -35,7 +35,7 @@ function initialize() {
     global.urlParameters = getUrlParameters();
     if (Object.keys(global.urlParameters).length > 0) {
         if (global.urlParameters.set !== undefined) {
-            if (global.sets[global.urlParameters.set] !== undefined) {
+            if (SETS[global.urlParameters.set] !== undefined) {
                 setName = global.urlParameters.set; 
             }
         }

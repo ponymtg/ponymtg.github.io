@@ -21,8 +21,8 @@ function initialize() {
     var addSetMenuElement = document.querySelector('#addSetMenu');
     for (var i=0; i < global.information.sets.length; i++) {
         var setName = global.information.sets[i];
-        if (global.sets[setName] === undefined) {
-            // If we can't find any details for a set by this name in `global.sets`, ignore it and skip to the next one.
+        if (SETS[setName] === undefined) {
+            // If we can't find any details for a set by this name in `SETS`, ignore it and skip to the next one.
             continue;
         }
         var setElement = document.createElement('li');

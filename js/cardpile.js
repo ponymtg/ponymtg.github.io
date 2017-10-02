@@ -90,7 +90,7 @@ function getCardImageUrls(cards) {
     for (var i=0; i < cards.length; i++) {
         var card = cards[i];
         if (card.image !== undefined && card.set !== undefined) {
-            var cardImageUrl = global.paths.sets+'/'+global.sets[card.set].path+'/'+card.image;
+            var cardImageUrl = global.paths.sets+'/'+SETS[card.set].path+'/'+card.image;
             cardImageUrls.push(cardImageUrl);
         }
     }

@@ -47,11 +47,11 @@ function getSetsTableElement(sets) {
 
     for (var i=0; i < sets.length; i++) {
         var setName = sets[i];
-        if (global.sets[setName] === undefined) {
-            // If we can't find any details for a set by this name in `global.sets`, ignore it and skip to the next one.
+        if (SETS[setName] === undefined) {
+            // If we can't find any details for a set by this name in `SETS`, ignore it and skip to the next one.
             continue;
         }
-        var setDetails = global.sets[setName];
+        var setDetails = SETS[setName];
         var tableRowElement = document.createElement('tr');
 
         var nameTableCellElement = document.createElement('td');

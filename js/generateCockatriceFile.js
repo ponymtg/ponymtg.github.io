@@ -117,9 +117,9 @@ function getCockatriceXml(sets) {
             if (card.image !== undefined) {
                 var baseUrl = window.location.origin;
                 baseUrl += window.location.pathname.split('/').slice(0, -1).join('/');
-                if (global.sets[card.set] !== undefined) {
-                    if (global.sets[card.set].path !== undefined) {
-                        var picURL = baseUrl+'/'+global.paths.sets+'/'+global.sets[card.set].path+'/'+card.image;
+                if (SETS[card.set] !== undefined) {
+                    if (SETS[card.set].path !== undefined) {
+                        var picURL = baseUrl+'/'+global.paths.sets+'/'+SETS[card.set].path+'/'+card.image;
                     }
                 }
             }
