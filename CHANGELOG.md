@@ -1,3 +1,6 @@
+## 1.5.2
+* Added more of Zennistrad's "My Little Planeswalker" cards, plus some corrections.
+
 ## 1.5.1
 * Updated "Friendship is Card Games" to the latest episode cards.
 * Added Zennistrad's "My Little Planeswalker" cards to the Miscellany.
