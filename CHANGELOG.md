@@ -1,3 +1,10 @@
+## 1.5.4
+* Updated "Friendship is Card Games" to the end of Season 7, plus Summertime Shorts Part 1.
+
+## 1.5.3
+* Added cards from Mawbane and STANTONBEN to the Miscellany.
+* Added an "unused cards" file, to record cards that, while still archived, aren't included in the database for various reasons.
+
 ## 1.5.2
 * Added more of Zennistrad's "My Little Planeswalker" cards, plus some corrections.
 
