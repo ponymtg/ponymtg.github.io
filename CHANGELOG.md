@@ -1,3 +1,8 @@
+## 1.6.6
+* Completed the set of Zennistrad's "My Little Planeswalker: Twilight's Spark" cards.
+* Added cards for Zennistrad's "My Little Planeswalker: Shattered Sunset" to the Miscellany.
+* Added cards for Zennistrad's "My Little Planeswalker: Sideboard Stories" to the Miscellany.
+
 ## 1.6.5
 * Added an in-progress statistics page for "Friendship is Card Games".
 

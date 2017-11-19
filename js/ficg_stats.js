@@ -73,6 +73,22 @@ function initialize() {
 
     var container = d3.select('#container');
 
+    var overallStatsDiv = container.append('div')
+        .style('width', defaultChartWidth + 'px')
+        .style('border', '1px solid rgb(0, 0, 0)')
+        .style('padding', '32px')
+        .style('margin', '16px auto');
+
+    overallStatsDiv
+        .append('div')
+        .style('width', '100%')
+        .style('text-align', 'center')
+        .style('font-size', '150%')
+        .style('font-weight', 'bold')
+        .text('Overall statistics');
+
+    overallStatsDiv.append('p').html('<b>Number of cards:</b> '+CARDS.length);
+
     Chart.generatePieChart(
         container,
         cardAnalyzer.getNumberOfCardsByColor(cardSubsets.spell),

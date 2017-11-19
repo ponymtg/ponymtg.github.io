@@ -66,4 +66,16 @@ var UNUSED_CARDS = [
         'notes': 'A combining-mecha-themed joke card released by FanOfMostEverything in the Unhinged Discord chat.',
         'createdAt': '2017-11-12',
     },
+    {
+        'name': 'Fluttershy, Keeper of Fauna',
+        'creator': 'Zennistrad',
+        'cost': '3GW',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Pegasus',
+        'text': 'If another creature you control would be destroyed, if its power is 2 or less, it gains indestructible until end of turn.\n\n1W, T: Tap target creature.\n\n2G, T: Populate.',
+        'flavorText': '"Don\'t worry little ones, I\'ll take care of you."',
+        'pt': '1/5',
+        'sourceUrl': 'https://www.fimfiction.net/blog/761109/mane-6-minus-twilight-as-magic-cards',
+        'notes': 'A My Little Planeswalker-related card from a card blog post by Zennistrad. This appears to be the original version of what would eventually become Fluttershy, Fauna Keeper.',
+    },
 ];
