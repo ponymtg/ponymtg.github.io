@@ -1,3 +1,6 @@
+## 1.6.5
+* Added an in-progress statistics page for "Friendship is Card Games".
+
 ## 1.5.5
 * Updated "Friendship is Card Games" with Summertime Shorts Part 2 and Better Together, Part 1.
 
