@@ -943,6 +943,9 @@ function getCardHash(card) {
  * Note that a card's colors is not the same thing as its "color identity". Color identity is a concept used in
  * Commander games, and it means "all colors in a card's mana cost, plus any that appear in its rules text, not
  * including reminder text".
+ *
+ * @param Object card
+ * @return string[]
  */
 function getCardColors(card) {
     var cardColors = [];
@@ -950,11 +953,9 @@ function getCardColors(card) {
     // Before doing anything, check to see if the card has a color indicator. If it does, we consider this to be the
     // definitive source of the card's color, overriding the mana cost.
     if (card.colorIndicator !== undefined) {
-        // We're doing this very straightforwardly; for each of the five colors of mana, check the mana cost to see if it
-        // contains a symbol for that color of mana. If it does, this card is that color.
         for (var i=0; i < global.lists.manaColorSymbols.length; i++) {
             var manaColorSymbol = global.lists.manaColorSymbols[i];
-            if (card.colorIndicator.includes(manaColorSymbol)) {
+            if (card.colorIndicator.toUpperCase().includes(manaColorSymbol)) {
                 cardColors.push(manaColorSymbol);
             }
         }
@@ -970,7 +971,7 @@ function getCardColors(card) {
     // contains a symbol for that color of mana. If it does, this card is that color.
     for (var i=0; i < global.lists.manaColorSymbols.length; i++) {
         var manaColorSymbol = global.lists.manaColorSymbols[i];
-        if (card.cost.includes(manaColorSymbol)) {
+        if (card.cost.toUpperCase().includes(manaColorSymbol)) {
             cardColors.push(manaColorSymbol);
         }
     }

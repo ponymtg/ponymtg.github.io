@@ -29,6 +29,7 @@ META['previous_card_was_reverse_side'] = False
 # the dump.
 SPELLING_CORRECTIONS = {}
 SPELLING_CORRECTIONS['Enchatment'] = 'Enchantment'
+SPELLING_CORRECTIONS['Sorcey'] = 'Sorcery'
 
 ########################################################################################################################
 # FUNCTIONS
@@ -218,6 +219,7 @@ def is_type_line(line):
     # - "Artifact" is preceded by the word "Legendary".
     # - "Artifact" is preceded by the word "Snow".
     # - "Artifact" is preceded by the word "Enchantment".
+    # - "Artifact" is preceded by the word "World".
     # - "Artifact" is succeeded by a long dash.
     # - "Artifact" is succeeded by the word "Creature".
     if 'Artifact' in line:
@@ -227,6 +229,7 @@ def is_type_line(line):
             and 'Snow Artifact' not in line
             and 'Artifact Creature' not in line
             and 'Enchantment Artifact' not in line
+            and 'World Artifact' not in line
             and 'Artifact —' not in line
         ):
             return False
@@ -541,12 +544,11 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         card_data_entry['pt'] = individual_card_dump_lines[-1]
         text_lines = individual_card_dump_lines[2:-1]
 
-        if card_data_entry['pt'].split()[0] == 'Level':
-            # Special exception to the above: Leveler cards don't end with a power/toughness line. Instead, they have
-            # multiple lines in their rules text which end in a power/toughness.
-            # We're going to assume that if the power/toughness we obtained begins with the word "Level", then this is
-            # obviously not a power/toughness line, but a leveler line. In this case, we will not give this card a
-            # power/toughness, and just let the rules text speak for it.
+        if re.match(r'^Level up', individual_card_dump_lines[2]):
+            # Special exception to the above: If the card text begins with "Level up", we will assume this is a Leveler
+            # card. Leveler cards don't have a single power/toughness value, so it doesn't make sense to give these a
+            # power/toughness property; instead, we simply allow the rules text to state the power/toughness values for
+            # the card.
             del card_data_entry['pt']
             text_lines = individual_card_dump_lines[2:]
     elif 'Planeswalker' in card_data_entry['supertype']:

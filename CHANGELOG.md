@@ -1,3 +1,6 @@
+## 1.5.5
+* Updated "Friendship is Card Games" with Summertime Shorts Part 2 and Better Together, Part 1.
+
 ## 1.5.4
 * Updated "Friendship is Card Games" to the end of Season 7, plus Summertime Shorts Part 1.
 

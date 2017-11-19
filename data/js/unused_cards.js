@@ -57,4 +57,13 @@ var UNUSED_CARDS = [
         'creator': 'Sorden',
         'notes': 'One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden\'s "Friendship is Magic the Gathering" set.',
     },
+    {
+        'name': 'Gattai!',
+        'creator': 'FanOfMostEverything',
+        'cost': '2R',
+        'supertype': 'Enchantment',
+        'text': 'Whenever one or more Vehicles you control crew another Vehicle, the crewed Vehicle gets +3/+3 and gains trample until end of turn.',
+        'notes': 'A combining-mecha-themed joke card released by FanOfMostEverything in the Unhinged Discord chat.',
+        'createdAt': '2017-11-12',
+    },
 ];
