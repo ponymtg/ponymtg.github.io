@@ -1,3 +1,6 @@
+## 1.7.2
+* Fixed syntax error in the FICG tokens list.
+
 ## 1.7.1
 * Updated "Friendship is Card Games" with all latest cards.
 * Made a fix to the FICG parser to account for Legendary Planeswalkers and Arcane Instants.

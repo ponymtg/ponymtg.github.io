@@ -618,6 +618,7 @@ var FICG_TOKENS =
         'text': 'Sacrifice this artifact: Add one mana of any color to your mana pool.',
         'cardType': 'token',
     },
+    {
         'name': 'Insect',
         'colorIndicator': '(R)',
         'supertype': 'Creature',
