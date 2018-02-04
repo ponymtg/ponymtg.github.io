@@ -1,3 +1,146 @@
+/**
+ * Various chart generation and helper functions.
+ *
+ * One of the biggest difficulties in generating and presenting a chart is
+ * determining the positions and dimensions of each component, while ensuring
+ * that components don't overlap where they're not supposed to. The reason for
+ * this difficulty is that each component must be made aware of other
+ * components and the space that they take up, so that they can position/resize
+ * themselves accordingly. This becomes increasingly unwieldy the more
+ * components a chart has.
+ *
+ * In general, charts break down into the following. Each sublevel represents a
+ * distinct grouping of separate non-overlapping components (that is, all items
+ * in the same group should not overlap).
+ *
+ * - SVG container
+ *   - Top padding
+ *   - Bottom padding
+ *   - Left padding
+ *   - Right padding
+ *   - Title (optional)
+ *   - Chart
+ *     - x-axis label (optional)
+ *     - x-axis value labels (optional)
+ *     - y-axis label (optional)
+ *     - y-axis value labels (optional)
+ *     - Chart area
+ *       - x-axis
+ *       - x-axis guidelines
+ *       - y-axis
+ *       - y-axis guidelines
+ *       - anything plotted or drawn on the chart
+ *    - Chart legend (optional)
+ *
+ * The above assumes that we're talking about a standard 2D chart with axes.
+ *
+ * For the above, we can see that we would need the following pieces of
+ * information in order to correctly size and position every component on this
+ * chart:
+ *
+ * - SVG width and height
+ * - Padding: top, right, bottom, left
+ * - Title height (assuming the title will always sit above the chart)
+ * - y-axis label width
+ * - y-axis value labels width
+ * - x-axis label height
+ * - x-axis value labels height
+ * - Chart legend (assuming the legend will always sit to the right)
+ *
+ * If we know all of the above (even if the answer to some of them is 0), we
+ * can deduce from this the position and dimensions of the chart area.
+ */
+
+/**
+ * Given a minimal set of chart component dimensions, calculate and return a
+ * complete set of position and dimensions for all chart components.
+ */
+function calculateChartDimensions(
+    containerWidth,
+    containerHeight,
+    paddingTop,
+    paddingRight,
+    paddingBottom,
+    paddingLeft,
+    titleHeight,
+    xAxisLabelHeight,
+    xAxisValueLabelHeight,
+    yAxisLabelWidth,
+    yAxisValueLabelWidth,
+    chartLegendWidth,
+    chartLegendMargin
+) {
+    // Create an object to return, which will contain all the position and
+    // dimension information that we can calculate for the given parameters.
+    //
+    // Some of the information is given in the form of Box objects; these are
+    // simple representations of a 2D area, with margins.
+    var d = {
+        'container': {},
+        'padding': {},
+        'title': new Box(),
+        'xAxisLabel': new Box(),
+        'xAxisValueLabel': new Box(),
+        'yAxisLabel': new Box(),
+        'yAxisValueLabel': new Box(),
+        'legend': new Box(),
+        'chartArea': new Box(),
+    };
+
+    // Calculate dimensions and positions.
+    // x-dimensions
+    d.container.w = containerWidth;
+    d.padding.e = paddingRight;
+    d.padding.w = paddingLeft;
+    d.yAxisLabel.w = yAxisLabelWidth;
+    d.yAxisValueLabel.w = yAxisValueLabelWidth;
+    d.legend.w = chartLegendWidth;
+    d.legend.margin.e = chartLegendMargin;
+    d.legend.margin.w = chartLegendMargin;
+    d.chartArea.w
+        = d.container.w - (
+            d.padding.w
+            + d.yAxisLabel.getFullWidth()
+            + d.yAxisValueLabel.getFullWidth()
+            + d.legend.getFullWidth()
+            + d.padding.e
+        );
+
+    // x-positions
+    d.title.x = d.container.w / 2;
+    d.yAxisLabel.x = d.padding.w;
+    d.yAxisValueLabel.x = d.yAxisLabel.x + d.yAxisLabel.getFullWidth();
+    d.xAxisLabel.x = d.chartArea.x + (d.chartArea.getFullWidth() / 2);
+    d.chartArea.x = d.yAxisValueLabel.x + d.yAxisValueLabel.getFullWidth();
+    d.legend.x = d.chartArea.x + d.chartArea.getFullWidth();
+
+    // y-dimensions
+    d.container.h = containerHeight;
+    d.padding.n = paddingTop
+    d.padding.s = paddingBottom;
+    d.title.h = titleHeight;
+    d.xAxisLabel.h = xAxisLabelHeight;
+    d.xAxisValueLabel.h = xAxisValueLabelHeight;
+    d.legend.margin.n = chartLegendMargin;
+    d.legend.margin.s = chartLegendMargin;
+    d.chartArea.h = d.container.h - (
+        d.padding.n
+        + d.title.getFullHeight()
+        + d.xAxisValueLabel.getFullHeight()
+        + d.xAxisLabel.getFullHeight()
+        + d.padding.s
+    );
+    d.legend.h = d.chartArea.h / 2;
+
+    // y-positions
+    d.title.y = d.padding.n;
+    d.chartArea.y = d.padding.n + d.title.getFullHeight();
+    d.yAxisLabel.y
+        = d.chartArea.y + (d.chartArea.height / 2);
+
+    return d;
+}
+
 function Chart() {};
 
 Chart.generatePieChart = function(selection, data, options) {
@@ -780,7 +923,16 @@ Chart.generateHorizontalBarChart = function(selection, data, options) {
                 return params.colorFunction(index, keys);
             }
         )
-        .attr('stroke', '#202020')
+        .attr(
+            'stroke',
+            function (key, index) {
+                var color = d3.color(params.colorFunction(index, keys));
+                if (color !== null) {
+                    return color.darker(4);
+                }
+                return d3.rgb(0, 0, 0);
+            }
+        )
         .attr('stroke-width', '1')
         .attr(
             'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
@@ -858,6 +1010,235 @@ Chart.generateHorizontalBarChart = function(selection, data, options) {
                     );
             }
         );
+}
+
+/**
+ * Generate a scatter plot from the supplied data.
+ *
+ * Scatter plots display [x, y, k] tuples as points on a chart, where x and y
+ * are the coordinates of the point, and k is the name of the point.
+ *
+ * @param selection A D3 element selection to which the chart will be appended.
+ * @param object data A set of [x, y, k] tuples.
+ * @param object options An array of chart options.
+ */
+Chart.generateScatterPlot = function(
+    selection,
+    data,
+    options
+) {
+    // Get the largest values of each tuple coordinate. We'll need these to
+    // appropriately scale the chart.
+    var largestValues = {
+        'x': Chart.getMaxValueInArray(
+            data.map(function(tuple){ return tuple[0]; })
+        ),
+        'y': Chart.getMaxValueInArray(
+            data.map(function(tuple){ return tuple[1]; })
+        ),
+    };
+
+    // Parse the options to obtain useful parameters and dimensions with which
+    // to construct the chart.
+    var params = Chart.parse2dChartOptions(options);
+
+    // Define scales for each axis.
+    params.scales = {};
+
+    params.scales.x = d3.scaleLinear()
+        .domain([0, largestValues.x])
+        .range([0, params.dimensions.x.chartArea]);
+    params.scales.y = d3.scaleLinear()
+        .domain([0, largestValues.y])
+        .range([params.dimensions.y.chartArea, 0]);
+
+    // Create an axis generator for each axis.
+    params.axisGenerators = {};
+
+    params.axisGenerators.x = d3.axisBottom(params.scales.x)
+    params.axisGenerators.y = d3.axisLeft(params.scales.y);
+
+    // Define the plot cross size.
+    params.crossSize = 5;
+
+    if (options.crossSize !== undefined) {
+        params.crossSize = options.crossSize;
+    }
+
+    // Create the SVG to hold the chart and add it to the specified DOM
+    // selection.
+    var svg = selection
+        .append('svg')
+        .attr('width', params.svgWidth)
+        .attr('height', params.svgHeight)
+        .style('border', '1px solid rgb(0, 0, 0)');
+
+    // Create the chart group.
+    var chartAreaGroup = svg.append('g')
+        .attr(
+            'transform',
+            'translate('
+                + params.dimensions.x.padding + ', '
+                + (params.dimensions.y.padding
+                + params.dimensions.y.title)
+                + ')'
+        );
+
+    // Add vertical guide lines at each x-axis tick.
+    chartAreaGroup
+        .append('g')
+        .style('opacity', '0.1')
+        .selectAll('line')
+        .data(params.scales.x.ticks())
+        .enter()
+        .append('line')
+        .attr('stroke', 'rgb(0, 0, 0)')
+        .attr('stroke-width', '1')
+        .attr('x1', function(n) { return params.scales.x(n); })
+        .attr('y1', 0)
+        .attr('x2', function(n) { return params.scales.x(n); })
+        .attr('y2', params.dimensions.y.chartArea)
+        .attr(
+            'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
+        );
+        
+    // Add horizontal guide lines at each y-axis tick.
+    chartAreaGroup
+        .append('g')
+        .style('opacity', '0.1')
+        .selectAll('line')
+        .data(params.scales.y.ticks())
+        .enter()
+        .append('line')
+        .attr('stroke', 'rgb(0, 0, 0)')
+        .attr('stroke-width', '1')
+        .attr('x1', 0)
+        .attr('y1', function(n) { return params.scales.y(n); })
+        .attr('x2', params.dimensions.x.chartArea)
+        .attr('y2', function(n) { return params.scales.y(n); })
+        .attr(
+            'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
+        );
+        
+    if (params.title !== undefined) {
+        // Add the title, if there is one. (The title is appended to the SVG
+        // directly, so that it's independent of the chart area).
+        svg.append('text')
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '150%')
+            .attr('font-weight', 'bold')
+            .text(params.title)
+            .attr(
+                'transform',
+                'translate('
+                    + (params.svgWidth / 2) + ', '
+                    + params.dimensions.y.padding
+                    + ')'
+            );
+    }
+
+    // Add the x-axis (making sure to translate it to the correct position)
+    chartAreaGroup
+        .append('g')
+        .call(params.axisGenerators.x)
+        .attr(
+            'transform',
+            'translate('
+            + params.dimensions.x.yAxisLabel + ', '
+            + params.dimensions.y.chartArea
+            + ')'
+        );
+    // Add the y-axis.
+    chartAreaGroup
+        .append('g')
+        .call(params.axisGenerators.y)
+        .attr(
+            'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
+        );
+    if (params.xAxisLabel !== undefined) {
+        // Add the x-axis label to the chart area, if defined.
+        chartAreaGroup.append('text')
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '100%')
+            .attr('font-weight', 'bold')
+            .text(params.xAxisLabel)
+            .attr(
+                'transform',
+                'translate('
+                    + ((params.dimensions.x.yAxisLabel)
+                    + (params.dimensions.x.chartArea / 2)) + ', '
+                    + (params.dimensions.y.chartArea + 48)
+                    + ')'
+            );
+    }
+
+    if (params.yAxisLabel !== undefined) {
+        // Add the y-axis label to the chart area, if defined.
+        chartAreaGroup.append('text')
+            .attr('text-anchor', 'middle')
+            .attr('font-size', '100%')
+            .attr('font-weight', 'bold')
+            .text(params.yAxisLabel)
+            .attr(
+                'transform',
+                'translate('
+                    + '0, '
+                    + (params.dimensions.y.chartArea / 2)
+                    + ') rotate(-90)'
+            );
+    }
+
+    // Plot a cross for each value.
+    var cs = params.crossSize;
+    var crosses = chartAreaGroup
+        .append('g')
+        .attr(
+            'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
+        )
+        .selectAll('line')
+        .data(data)
+        .enter();
+
+    var cross = crosses.append('g')
+        .attr('data-key', function (k) { return k[2]; });
+
+    cross
+        .append('line')
+        .attr('x1', function(k) { return params.scales.x(k[0]) - cs; })
+        .attr('y1', function(k) { return params.scales.y(k[1]) - cs; })
+        .attr('x2', function(k) { return params.scales.x(k[0]) + cs; })
+        .attr('y2', function(k) { return params.scales.y(k[1]) + cs; })
+        .attr('stroke-width', '3')
+        .attr('stroke', 'rgb(0, 0, 0)');
+
+    cross
+        .append('line')
+        .attr('x1', function(k) { return params.scales.x(k[0]) + cs; })
+        .attr('y1', function(k) { return params.scales.y(k[1]) - cs; })
+        .attr('x2', function(k) { return params.scales.x(k[0]) - cs; })
+        .attr('y2', function(k) { return params.scales.y(k[1]) + cs; })
+        .attr('stroke-width', '3')
+        .attr('stroke', 'rgb(0, 0, 0)');
+
+    cross
+        .append('text')
+        .text(
+            function(k) {
+                if (options.labelOnly !== undefined) {
+                    if (options.labelOnly.indexOf(k[2]) !== -1) {
+                        return k[2];
+                    }
+                    return '';
+                }
+            }
+        )
+        .attr('x', function(k) { return params.scales.x(k[0]) + 2 + cs; })
+        .attr('y', function(k) { return params.scales.y(k[1]) + 5; })
+        .attr('text-anchor', 'left')
+        .attr('fill', 'rgb(96, 96, 96)')
+        .attr('font-size', '90%')
+        .attr('font-weight', 'bold');
+
 }
 
 /**
@@ -1120,6 +1501,367 @@ Chart.generateBubbleChart = function(
         .attr(
             'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
         );
+
+}
+
+/**
+ * Generate a line chart from the supplied data.
+ *
+ * Line charts are multivariate; that is, they can display multiple series of
+ * data overlaid on each other, making them useful for comparisons.
+ *
+ * Data must be supplied as an array of series, where each series is an array of
+ * the form `[name, tuples]`, where `name` is the series name and `tuples` is an
+ * array of `[key, value]` tuples.
+ * 
+ * @param selection A D3 element selection to which the chart will be appended.
+ * @param array data A dataset, an array of series.
+ * @param array An array of the values that run along the x-axis.
+ * @param object options An object containing chart options.
+ */
+Chart.generateLineChart = function(
+    selection,
+    data,
+    options
+) {
+//    var dimensions = calculateChartDimensions(
+//        options.width,  // container width
+//        options.height, // container height
+//        64,             // top margin
+//        64,             // right margin
+//        64,             // bottom margin
+//        64,             // left margin
+//        32,             // title height
+//        32,             // x-axis label width
+//        32,             // x-axis values label width
+//        32,             // y-axis label width
+//        32,             // y-axis values label width
+//        64,             // legend width
+//        16,             // legend margin
+//    );
+//    console.log(dimensions);
+//        
+//
+//    // Get the largest x and y values that occurs in any of the supplied series.
+//    var largestValues = {};
+//
+//    largestValues.x = Chart.getMaxValueInArray(
+//        data.reduce(
+//            function(accumulator, series) {
+//                return accumulator.concat(
+//                    series.map(
+//                        function (s) {
+//                            return s[1].map(
+//                                function (tuple) {
+//                                    return tuple[0];
+//                                }
+//                            );
+//                        }
+//                    )
+//                );
+//            },
+//            0
+//        )
+//    );
+//
+//    console.log(largestValues.x);
+///*
+//    largestValues.y = Chart.getMaxValueInArray(
+//        data.reduce(
+//            function(accumulator, series) {
+//                return accumulator.concat(
+//                    series.map(
+//                        function (s) {
+//                            return s[1].map(
+//                                function (tuple) {
+//                                    return tuple[1];
+//                                }
+//                            );
+//                        }
+//                    );
+//                )
+//            }
+//        )
+//    );
+//
+//    // Parse the options to obtain useful parameters and dimensions with which
+//    // to construct the chart.
+//    var params = Chart.parse2dChartOptions(options);
+//
+//    // Define scales for each axis.
+//    params.scales = {};
+//
+//    params.scales.x = d3.scaleLinear()
+//        .domain([0, largestValues.x])
+//        .range([0, params.dimensions.x.chartArea]);
+//    params.scales.y = d3.scaleLinear()
+//        .domain([0, largestValue])
+//        .range([params.dimensions.y.chartArea, 0]);
+//
+//    // Create an axis generator for each axis.
+//    params.axisGenerators = {};
+//
+//    params.axisGenerators.x = d3.axisBottom(params.scales.x)
+//    params.axisGenerators.y = d3.axisLeft(params.scales.y);
+//
+//    // Create the SVG to hold the chart and add it to the specified DOM
+//    // selection.
+//    var svg = selection
+//        .append('svg')
+//        .attr('width', params.svgWidth)
+//        .attr('height', params.svgHeight)
+//        .style('border', '1px solid rgb(0, 0, 0)');
+//
+//    // Create the chart group.
+//    var chartAreaGroup = svg.append('g')
+//        .attr(
+//            'transform',
+//            'translate('
+//                + params.dimensions.x.padding + ', '
+//                + (params.dimensions.y.padding
+//                + params.dimensions.y.title)
+//                + ')'
+//        );
+//
+//    // Add vertical guide lines at each x-axis tick.
+//    chartAreaGroup
+//        .append('g')
+//        .style('opacity', '0.1')
+//        .selectAll('line')
+//        .data(params.scales.x.ticks())
+//        .enter()
+//        .append('line')
+//        .attr('stroke', 'rgb(0, 0, 0)')
+//        .attr('stroke-width', '1')
+//        .attr('x1', function(n) { return params.scales.x(n); })
+//        .attr('y1', 0)
+//        .attr('x2', function(n) { return params.scales.x(n); })
+//        .attr('y2', params.dimensions.y.chartArea)
+//        .attr(
+//            'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
+//        );
+//        
+//    // Add horizontal guide lines at each y-axis tick.
+//    chartAreaGroup
+//        .append('g')
+//        .style('opacity', '0.1')
+//        .selectAll('line')
+//        .data(params.scales.y.ticks())
+//        .enter()
+//        .append('line')
+//        .attr('stroke', 'rgb(0, 0, 0)')
+//        .attr('stroke-width', '1')
+//        .attr('x1', 0)
+//        .attr('y1', function(n) { return params.scales.y(n); })
+//        .attr('x2', params.dimensions.x.chartArea)
+//        .attr('y2', function(n) { return params.scales.y(n); })
+//        .attr(
+//            'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
+//        );
+//        
+//    if (params.title !== undefined) {
+//        // Add the title, if there is one. (The title is appended to the SVG
+//        // directly, so that it's independent of the chart area).
+//        svg.append('text')
+//            .attr('text-anchor', 'middle')
+//            .attr('font-size', '150%')
+//            .attr('font-weight', 'bold')
+//            .text(params.title)
+//            .attr(
+//                'transform',
+//                'translate('
+//                    + (params.svgWidth / 2) + ', '
+//                    + params.dimensions.y.padding
+//                    + ')'
+//            );
+//    }
+//
+//    // Add the x-axis (making sure to translate it to the correct position)
+//    chartAreaGroup
+//        .append('g')
+//        .call(params.axisGenerators.x)
+//        .attr(
+//            'transform',
+//            'translate('
+//            + params.dimensions.x.yAxisLabel + ', '
+//            + params.dimensions.y.chartArea
+//            + ')'
+//        );
+//    // Add the y-axis.
+//    chartAreaGroup
+//        .append('g')
+//        .call(params.axisGenerators.y)
+//        .attr(
+//            'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
+//        );
+//    if (params.xAxisLabel !== undefined) {
+//        // Add the x-axis label to the chart area, if defined.
+//        chartAreaGroup.append('text')
+//            .attr('text-anchor', 'middle')
+//            .attr('font-size', '100%')
+//            .attr('font-weight', 'bold')
+//            .text(params.xAxisLabel)
+//            .attr(
+//                'transform',
+//                'translate('
+//                    + ((params.dimensions.x.yAxisLabel)
+//                    + (params.dimensions.x.chartArea / 2)) + ', '
+//                    + (params.dimensions.y.chartArea + 48)
+//                    + ')'
+//            );
+//    }
+//
+//    if (params.yAxisLabel !== undefined) {
+//        // Add the y-axis label to the chart area, if defined.
+//        chartAreaGroup.append('text')
+//            .attr('text-anchor', 'middle')
+//            .attr('font-size', '100%')
+//            .attr('font-weight', 'bold')
+//            .text(params.yAxisLabel)
+//            .attr(
+//                'transform',
+//                'translate('
+//                    + '0, '
+//                    + (params.dimensions.y.chartArea / 2)
+//                    + ') rotate(-90)'
+//            );
+//    }
+//
+//    // Add a line for each series.
+//    for (var i=0; i < data.length; i++) {
+//        var series = data[i];
+//        var seriesName = series[0];
+//        var tuples = series[1];
+//
+//        chartAreaGroup
+//            .append('g')
+//            .selectAll('circle')
+//            .data(tuples)
+//            .enter()
+//            .append('circle')
+//            .attr(
+//                'cx',
+//                function(key, index) {
+//                    return params.scales.x(key[0]);
+//                }
+//            )
+//            .attr(
+//                'cy',
+//                function(key) {
+//                    return params.scales.y(key[1]);
+//                }
+//            )
+//            .attr(
+//                'r',
+//                function(key) {
+//                    return 7 + (12 * params.scales.z(key[2]));
+//                }
+//                
+//            )
+//            .attr('fill-opacity', '0.9')
+//            .attr(
+//                'fill',
+//                function (key, index) {
+//                    return 'rgb(0, 0, 0)'; //params.colorFunction(index, keys);
+//                }
+//            )
+//            .attr(
+//                'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
+//            );
+//
+//    chartAreaGroup
+//        .append('g')
+//        .selectAll('text')
+//        .data(tuples)
+//        .enter()
+//        .append('text')
+//        .attr(
+//            'x',
+//            function(key, index) {
+//                return params.scales.x(key[0]);
+//            }
+//        )
+//        .attr(
+//            'y',
+//            function(key) {
+//                return params.scales.y(key[1]);
+//            }
+//        )
+//        .attr(
+//            'font-size',
+//            function(key) {
+//                return 70 + (40 * params.scales.z(key[2]))+ '%';
+//            }
+//        )
+//        .text(
+//            function(key) {
+//                return key[2];
+//            }
+//        )
+//        .attr(
+//            'fill',
+//            function (key, index) {
+//                return 'rgb(255, 255, 255)'; //params.colorFunction(index, keys);
+//            }
+//        )
+//        .attr('dy', 4)
+//        .attr('font-weight', 'bold')
+//        .attr('text-anchor', 'middle')
+//        .attr(
+//            'transform', 'translate(' + params.dimensions.x.yAxisLabel + ', 0)'
+//        );
+//*/
+}
+
+/**
+ * Generate a vertical list of key/value pairs. Useful for things like top 10
+ * lists where you don't need a graphical representation, but do want to
+ * represent the order of information somehow.
+ *
+ * This produces a `<div>` rather than an SVG.
+ *
+ * @param selection A D3 selection.
+ * @param array[] data An array of [key, value] tuples.
+ * @param function displayFunction A function which returns display HTML.
+ * @param object options A set of options for the list.
+ */
+Chart.generateList = function(selection, data, displayFunction, options) {
+    var listDiv = selection.append('div');
+
+    if (options.style !== undefined) {
+        listDiv.attr('style', options.style);
+    }
+
+    listDiv
+        .style('width', options.width + 'px')
+        .style('border', '1px solid rgb(0, 0, 0)')
+        .style('padding', '32px')
+        .style('margin', '16px auto');
+
+    if (options.display !== undefined) {
+        listDiv.style('display', options.display);
+    }
+    if (options.margin !== undefined) {
+        listDiv.style('margin', options.margin);
+    }
+
+    listDiv
+        .selectAll('div')
+        .data(data)
+        .enter()
+        .append('div')
+        .html(displayFunction);
+
+    if (options.title !== undefined) {
+        listDiv
+            .insert('div', ':first-child')
+            .style('width', '100%')
+            .style('text-align', 'center')
+            .style('font-size', '150%')
+            .style('font-weight', 'bold')
+            .style('margin-bottom', '16px')
+            .text(options.title);
+    }
 
 }
 
@@ -1538,3 +2280,27 @@ Chart.getSumOfArrayValues = function(values) {
     );
 }
 
+/**
+ * A Box is a theoretical portion of 2D space, with margins.
+ */
+function Box() {
+    this.x = 0;
+    this.y = 0;
+    this.w = 0;
+    this.h = 0;
+
+    this.margin = {
+        'n': 0,
+        'e': 0,
+        's': 0,
+        'w': 0,
+    };
+
+    this.getFullWidth = function() {
+        return this.w + this.margin.w + this.margin.e;
+    };
+
+    this.getFullHeight = function() {
+        return this.h + this.margin.n + this.margin.s;
+    };
+}

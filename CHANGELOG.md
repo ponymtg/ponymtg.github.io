@@ -1,3 +1,7 @@
+## 1.7.0
+* Completed the FICG stats page.
+* Updated "Friendship is Card Games" for the 5000-cards celebration.
+
 ## 1.6.6
 * Completed the set of Zennistrad's "My Little Planeswalker: Twilight's Spark" cards.
 * Added cards for Zennistrad's "My Little Planeswalker: Shattered Sunset" to the Miscellany.

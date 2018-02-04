@@ -2,6 +2,43 @@ function Sort() {};
 
 /**
  * Given an object containing a number of key-value pairs, return an array of
+ * (key, value) tuples sorted by the return value of a function on the value.
+ */
+Sort.by = function(object, func, sortOrder)  {
+    if (sortOrder === undefined) {
+        sortOrder = 'ascending';
+    }
+
+    var keys = Object.keys(object);
+
+    keys.sort(
+        function(keyA, keyB) {
+            var sortResult = func(object[keyA]) - func(object[keyB]);
+            if (sortResult == 0) {
+                // If the sort result is 0 (both values are the same), use the
+                // key to decide ordering instead.
+                sortResult = keyA.localeCompare(keyB);
+                if (sortOrder === 'descending') {
+                    sortResult = 0 - sortResult;
+                }
+            }
+            return sortResult;
+        }
+    );
+
+    if (sortOrder === 'descending') {
+        keys.reverse(); 
+    }
+
+    return keys.map(
+        function(key) {
+            return [key, object[key]];
+        }
+    );
+}
+
+/**
+ * Given an object containing a number of key-value pairs, return an array of
  * the keys sorted.
  */
 Sort.objectByKey = function(object, sortOrder) {

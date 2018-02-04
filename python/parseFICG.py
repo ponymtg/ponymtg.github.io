@@ -334,7 +334,11 @@ def split_name_and_cost_line_into_name_and_cost(name_and_cost_line, use_strict_c
                 # If any characters were found in the cost that aren't on the whitelist, we can be reasonably sure that
                 # the "cost" we obtained is not really a mana cost, but is actually the last word in the card's name. In
                 # that case, we just return the (full) name and don't return a cost.
-                name = name + ' ' + cost
+
+                if len(name) == 0:
+                    name = cost
+                else:
+                    name = name + ' ' + cost
                 return {'name': name}
 
         return {'name': name, 'cost': cost}
@@ -407,6 +411,23 @@ def split_type_line(type_line):
 
     return type_line_parts
 
+
+
+# Given two card data entries, join them together into a single split card.
+def join_card_halves(first_card_half, second_card_half):
+    joined_card = {}
+    joined_card['name'] = first_card_half['name'] + ' // ' + second_card_half['name']
+    joined_card['cost'] = first_card_half['cost']
+    joined_card['cost2'] = second_card_half['cost']
+    joined_card['supertype'] = first_card_half['supertype']
+    joined_card['supertype2'] = second_card_half['supertype']
+    if 'subtype' in first_card_half:
+        joined_card['subtype'] = first_card_half['subtype']
+    if 'subtype' in second_card_half:
+        joined_card['subtype2'] = second_card_half['subtype']
+    joined_card['text'] = first_card_half['name'] + ': ' + first_card_half['text'] + r'\n\n'
+    joined_card['text'] += second_card_half['name'] + ': ' + second_card_half['text']
+    return joined_card
 
 
 # Given a dump `dump` of raw FICG data, break it into a list of sub-dumps, each of which should represent a single card.
@@ -610,7 +631,6 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     # we cannot use this trick. If, however, the first non-dialogue line is not the last line of the text (or, more
     # rarely, we don't find any non-dialogue lines, which would indicate a card that is _all_ dialogue), then we know
     # that the card has dialogue, and will capture that as the flavor text.
-
     index_of_first_nondialogue_line = None
     for i in range(len(text_lines)-1, -1, -1):
         text_line = text_lines[i]
@@ -622,6 +642,7 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         flavor_text_lines = text_lines[index_of_first_nondialogue_line+1:]
         
     rules_text = '\\n\\n'.join(rules_text_lines)
+
     # We'll only join flavor text with one newline, not two. FanOfMostEverything leaves the exact number of newlines a
     # little ambiguous, but it looks better this way.
     flavor_text = '\\n'.join(flavor_text_lines)
@@ -700,11 +721,48 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump):
     for card_data_entry in card_data_entries:
         if 'transformsFrom' in card_data_entry:
             transformsIntoDict[card_data_entry['transformsFrom']] = card_data_entry['name']
-
     for card_data_entry in card_data_entries:
         if card_data_entry['name'] in transformsIntoDict:
             card_data_entry['transformsInto'] = transformsIntoDict[card_data_entry['name']]
 
+    # A third pass is required to deal with "Aftermath" cards. These are a kind of split card (two cards on the same
+    # face). In the raw FICG dump, FanOfMostEverything formats these like this:
+    #
+    #     Road U
+    #     Sorcery
+    #     Target creature can’t be blocked this turn.
+    #     Ruin 4BB
+    #     Sorcery
+    #     Aftermath (Cast this spell only from your graveyard. Then exile it.)
+    #     Target player loses life equal to the damage already dealt to him or her this turn.
+    #
+    # Since we need to preserve the connection between the two cards, we must combine them into one card.
+    #
+    # To do this, we first search through the card data entries for Aftermath cards. For each one that we find, we make
+    # the assumption that the card immediately preceding it is the other half of the card. We join the two halves
+    # together into a single card, then replace the two cards with the joined version.
+    i = 0
+    while i < len(card_data_entries):
+        card_data_entry = card_data_entries[i]
+        if 'text' in card_data_entry and '//' not in card_data_entry['name']:
+            # Check to see if the card is an Aftermath card.
+            if re.search(r'(^|\n)Aftermath', card_data_entry['text']):
+                # This card is an Aftermath card, so join the two halves together.
+                first_card_half = card_data_entries[i-1]
+                second_card_half = card_data_entries[i]
+
+                joined_card = join_card_halves(first_card_half, second_card_half)
+
+                # Delete this card (the second card half), and replace the preceding card (the first card half) with the
+                # joined version.
+                del card_data_entries[i]
+                card_data_entries[i-1] = joined_card
+
+                # Decrement the index counter by 1 (since we just removed a card).
+                i -= 1
+
+        i += 1
+        
     return card_data_entries
 
 ########################################################################################################################

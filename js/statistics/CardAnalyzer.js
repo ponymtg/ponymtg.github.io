@@ -35,7 +35,7 @@ function CardAnalyzer() {
         numberOfColors
     ) {
         return Categorize.byComposite(
-            CARDS,
+            cards,
             function (card) {
                 var cardColors = getCardColors(card);
                 if (cardColors.length == numberOfColors) {
@@ -163,8 +163,8 @@ function CardAnalyzer() {
         return Categorize.by(
             cards,
             function(card) {
-                return card.name.split(/\s+/).length;
-            }
+                return this.splitStringIntoWords(card.name).length;
+            }.bind(this)
         );
     }
 
@@ -196,7 +196,7 @@ function CardAnalyzer() {
             cards,
             function(card) {
                 // Lenient regex to allow for generic and fancy punctuation.
-                var possessiveRegex = /^"?(.+)['’]s(.+)$"?/;
+                var possessiveRegex = /^"?(.+['’]s)(.+)$"?/;
 
                 var matches = card.name.match(possessiveRegex);
                 if (matches === null) {
@@ -466,7 +466,7 @@ function CardAnalyzer() {
         );
     }
                 
-    this.getPossessiveCardNames = function(cards) {
+    this.getEponymousCardNames = function(cards) {
         return cards.map(
             function(card) {
 
@@ -498,8 +498,13 @@ function CardAnalyzer() {
         );
     };
 
-    this.getTextWords = function(text) {
-        return text.split(/\s+/).map(
+    /**
+     * Split a given string into words, disregarding all unnecessary punctuation
+     * (eg. quote marks, commas, parentheses). Words that contain internal
+     * punctuation (eg. apostrophes, hyphens) are still considered to be words.
+     */
+    this.splitStringIntoWords = function(string) {
+        return string.split(/\s+/).map(
             function(word) {
                 // Remove any common non-word punctuation from the beginning and
                 // end of the word.
@@ -515,10 +520,10 @@ function CardAnalyzer() {
      * Return an object mapping each word in the given text to its frequency of
      * occurrence.
      */
-    this.getTextWordFrequencies = function(text) {
+    this.getWordFrequencies = function(text) {
         var wordFrequencies = {};
 
-        var words = this.getTextWords(text.toLowerCase());
+        var words = this.splitStringIntoWords(text.toLowerCase());
 
         for (var i=0; i < words.length; i++) {
             var word = words[i];
@@ -537,7 +542,7 @@ function CardAnalyzer() {
         var propertyWordFrequenciesByCard = cards.map(
             function(card) {
                 if (card[property] !== undefined) {
-                    return this.getTextWordFrequencies(card[property]);
+                    return this.getWordFrequencies(card[property]);
                 }
                 return [];
             }.bind(this)
@@ -610,6 +615,135 @@ function CardAnalyzer() {
         return ponyTribes;
     }
 
+    /**
+     * Given a card subtype, for all cards that have that subtype, return an
+     * object categorizing those cards by any other subtypes that the cards
+     * have.
+     */
+    this.categorizeCardsByOtherSubtypes = function(cards, subtype) {
+        var subtypeCards = Categorize.byProperty(cards,'subtype',true)[subtype];
+        return categorizedCards = Categorize.by(
+            subtypeCards,
+            function (card) {
+                if (card.subtype == subtype) {
+                    return '(No subtype)';
+                }
+                var cardSubtypes = card.subtype.split(/\s+/);
+                return cardSubtypes.filter(
+                    function (cardSubtype) {
+                        return cardSubtype != subtype;
+                    }
+                );
+                
+            }
+        );
+        
+    };
+
+    /**
+     * Return an array of cards and their reprints. We consider a "reprint" to
+     * be a counterpart card that is identical in all important respects to an
+     * original. (For our purposes, the "original" card is simply the first one
+     * encountered in the supplied dataset).
+     */
+    this.getReprints = function(cards) {
+        
+        // Get all cards categorized by name, and filter out all those with
+        // unique names (which can't, be definition, have or be reprints).
+        var cardsCategorizedByName = Categorize.byProperty(cards, 'name');
+
+        var nonUniqueCardSets = Sort.by(
+            cardsCategorizedByName,
+            function (cards) {
+                return cards.length;
+            }
+        ).filter(
+            function(a) {
+                return a[1].length >= 2;
+            }
+        ).map(
+            function(a) {
+                return a[1];
+            }
+        );
+
+        // We now have an array of sets of cards with the same names. This
+        // doesn't necessarily mean that these are all reprints; some might be
+        // sets of functionally-different cards which just happen to have the
+        // same name.
+        //
+        // We have to be somewhat thorough with the check, since we don't
+        // necessarily know ahead of time how many cards in a given set might
+        // have reprints, or how many reprints there might be.
+        var originals = [];
+        var reprints = [];
+        for (var i=0; i < nonUniqueCardSets.length; i++) {
+            var cards = nonUniqueCardSets[i];
+
+            // For each "pool" of cards with the same names, go through and
+            // identify cards that have reprints, recording the originals and
+            // the reprints separately. We discard cards from the pool after
+            // we've catalogued them to ensure that we don't catalogue the same
+            // cards multiple times (which could happen if a card has multiple
+            // reprints).
+            while (cards.length > 0) {
+                // For each card, count its reprints.
+                for (var j=0; j < cards.length; j++) {
+                    var originalCard = cards[j];
+                    var reprintsOfOriginalCard = cards.filter(
+                        function(card) {
+                            if (originalCard == card) {
+                                // Obviously, don't compare a card to itself.
+                                return false;
+                            }
+                            if (originalCard.name != card.name) {
+                                return false;
+                            }
+                            if (originalCard.cost != card.cost) {
+                                return false;
+                            }
+                            if (originalCard.supertype != card.supertype) {
+                                return false;
+                            }
+                            if (originalCard.subtype != card.subtype) {
+                                return false;
+                            }
+                            if (originalCard.text.split(' ').slice(0, 5)
+                                .join(' ')
+                                != card.text.split(' ').slice(0, 5).join(' ')
+                            ) {
+                                // We check the first 5 words of the card text
+                                // to see if they match (full card texts aren't
+                                // reliable since we can't separate rules and
+                                // flavor text yet).
+                                return false;
+                            }
+                            return true;
+                        }
+                    );
+                    originals.push(originalCard);
+                    reprints = reprints.concat(reprintsOfOriginalCard);
+
+                    // Expunge the originals and reprints from the pool.
+                    cards = cards.filter(
+                        function(card) {
+                            if (originals.indexOf(card) !== -1) {
+                                return false;
+                            }
+                            if (reprints.indexOf(card) !== -1) {
+                                return false;
+                            }
+                            return true;
+                        }
+                    );
+                }
+            }
+        }
+        return {
+            'originals': originals,
+            'reprints': reprints,
+        };
+    };
     /**
      * Given an array of strings, return an array of all possible combinations
      * of those strings of the given number.
