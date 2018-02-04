@@ -106,9 +106,9 @@ def is_type_line(line):
     # If the first word is "Legendary", then it must be followed by one of a small set of strings. If it doesn't, this
     # is not a type line.
     # If the line contains the word "Legendary", then it must meet one of the following conditions:
-    # - "Legendary" is succeeded by one of: Artifact, Creature, Enchantment, Instant, Land, Sorcery.
+    # - "Legendary" is succeeded by one of: Artifact, Creature, Enchantment, Instant, Land, Planeswalker, Sorcery.
     if 'Legendary' in line:
-        legendary_successors = ['Artifact', 'Creature', 'Enchantment', 'Instant', 'Land', 'Sorcery']
+        legendary_successors = ['Artifact', 'Creature', 'Enchantment', 'Instant', 'Land', 'Planeswalker', 'Sorcery']
         
         contains_legendary_successor = False
         for legendary_successor in legendary_successors:
@@ -163,6 +163,7 @@ def is_type_line(line):
     # - The line must contain only the words "Legendary Instant".
     # - "Instant" must be preceded by "Tribal".
     # - "Instant" must be preceded by "Snow".
+    # - "Instant" must be followed by a long dash.
     # - The line must begin with a bracket, which means that it begins with a color indicator.
     # - The line must contain only the words "Trope Instant". ("Trope" is a custom supertype created by
     #   FanOfMostEverything).
@@ -171,6 +172,7 @@ def is_type_line(line):
     if 'Instant' in line:
         if (
             line not in ['Instant', 'Legendary Instant', 'Trope Instant']
+            and 'Instant —' not in line
             and 'Tribal Instant' not in line
             and 'Snow Instant' not in line
             and '//' not in line

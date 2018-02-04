@@ -1,3 +1,7 @@
+## 1.7.1
+* Updated "Friendship is Card Games" with all latest cards.
+* Made a fix to the FICG parser to account for Legendary Planeswalkers and Arcane Instants.
+
 ## 1.7.0
 * Completed the FICG stats page.
 * Updated "Friendship is Card Games" for the 5000-cards celebration.
