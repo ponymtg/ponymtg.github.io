@@ -1,3 +1,6 @@
+## 1.7.3
+* Updated "Friendship is Card Games" up to "Marks for Effort".
+
 ## 1.7.2
 * Fixed syntax error in the FICG tokens list.
 
