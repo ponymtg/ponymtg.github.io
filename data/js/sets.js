@@ -184,5 +184,11 @@ var SETS = {
         'url': 'http://www.fimfiction.net/blog/302475/oops-i-accidentally-changelings',
         'notes': 'This is a collection of changeling-themed cards. (The MLP kind, not the MTG kind).',
     },
+    'My Little Planeswalker': {
+        'path': 'Zennistrad/My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'url': 'https://www.fimfiction.net/story/382734/my-little-planeswalker-twilights-spark',
+        'notes': 'A collection of cards created by Zennistrad for his <i>My Little Planeswalker</i> universe.',
+    },
 };
 

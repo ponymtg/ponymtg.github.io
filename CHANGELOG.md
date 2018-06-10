@@ -1,3 +1,6 @@
+## 1.7.4
+* Added Zennistrad's "My Little Planeswalker".
+
 ## 1.7.3
 * Updated "Friendship is Card Games" up to "Marks for Effort".
 

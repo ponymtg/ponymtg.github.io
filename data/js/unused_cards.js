@@ -78,4 +78,38 @@ var UNUSED_CARDS = [
         'sourceUrl': 'https://www.fimfiction.net/blog/761109/mane-6-minus-twilight-as-magic-cards',
         'notes': 'A My Little Planeswalker-related card from a card blog post by Zennistrad. This appears to be the original version of what would eventually become Fluttershy, Fauna Keeper.',
     },
+    {
+        'name': 'Luna’s Defeat',
+        'creator': 'Zennistrad',
+        'cost': '1UB',
+        'supertype': 'Sorcery',
+        'text': 'Put target creature on top of its owner’s library. If a creature named Luna of the Night is put on top of a library this way, its controller then puts the top eleven cards of his or her library into his or her graveyard.',
+        'flavorText': '“Don’t worry, this is all just a dream. You’ll disappear when I wake up.”\n— Sunset the Exiled',
+        'sourceUrl': 'https://www.fimfiction.net/story/387331/my-little-planeswalker-shattered-sunset',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad. This is the old version, before it was later amended in a blog post.',
+    },
+    {
+        'name': 'Celestia of the Dawn',
+        'creator': 'Zennistrad',
+        'set': 'My Little Planeswalker',
+        'cost': '3WWW',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Horse Advisor',
+        'text': 'Alicorn (This card is a Horse, Pegasus, and Unicorn in addition to its other creature types.)\n\nFlying, vigilance\n\nOther Horses, Unicorns, and Pegasi you control get +1/+1 and have vigilance.\n\n2WW, T: Exile target attacking creature. Its controller creates a colorless land token named Lunar Prison with "T: Add C to your mana pool."',
+        'pt': '4/5',
+        'sourceUrl': 'https://www.fimfiction.net/blog/762878/more-mlp-characters-as-magic-cards',
+        'notes': 'This appears to be an early version of the card that would later appear in My Little Planeswalker: Sideboard Stories.'
+    },
+    {
+        'name': 'Luna of the Night',
+        'creator': 'Zennistrad',
+        'set': 'My Little Planeswalker',
+        'cost': '3UUB',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Horse Wizard',
+        'text': 'Alicorn (This card is a Horse, Pegasus, and Unicorn in addition to its other creature types.)\n\nFlying, hexproof\n\nWhen Luna of the Night deals combat damage to a player, that player puts the top X cards of his or her library into his or her graveyard and you draw X cards, where X is the number of tapped creatures that player controls.\n\n2U, T: Tap target creature. It doesn\'t untap during its controller\'s next untap step.',
+        'pt': '3/4',
+        'sourceUrl': 'https://www.fimfiction.net/blog/762878/more-mlp-characters-as-magic-cards',
+        'notes': 'This appears to be an early version of the card that would later appear in My Little Planeswalker: Sideboard Stories.'
+    },
 ];

@@ -479,8 +479,8 @@ function getStatistics(cards) {
 }
 
 /**
- * Given an array of cards `cards`, returns an object containing certain information about the cards in it (eg. a list
- * of all sets that are represented in those cards).
+ * Given an array of cards `cards`, return an object containing certain information about the cards in it (eg. a list of
+ * all sets that are represented in those cards).
  */
 function getInformation(cards) {
     var information = {};

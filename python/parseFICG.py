@@ -332,6 +332,7 @@ def split_name_and_cost_line_into_name_and_cost(name_and_cost_line, use_strict_c
             # that we might expect to appear in a mana cost.
             manaCostCharacters = r"WUBRGCXS0123456789(){}\[\]/"
             nonManaCostRegex = "[^"+manaCostCharacters+"]"
+
             if re.search(nonManaCostRegex, cost, re.IGNORECASE) is not None:
                 # If any characters were found in the cost that aren't on the whitelist, we can be reasonably sure that
                 # the "cost" we obtained is not really a mana cost, but is actually the last word in the card's name. In
@@ -531,6 +532,11 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
             # Therefore, in # this situation, we'll request strict cost checking on the name and cost line. This will
             # add an extra level of scrutiny which will make it easier for the function to tell whether there is a mana
             # cost or not.
+            name_and_cost_line_properties = split_name_and_cost_line_into_name_and_cost(name_and_cost_line, True)
+            
+        if 'subtype' in card_data_entry and card_data_entry['subtype'] == 'Contraption':
+            # Special case: Contraptions don't always have costs, so like with the color indicator, we need to use
+            # strict cost checking to prevent the parser from interpreting the last word of the name as a cost.
             name_and_cost_line_properties = split_name_and_cost_line_into_name_and_cost(name_and_cost_line, True)
             
         card_data_entry['name'] = name_and_cost_line_properties['name']
