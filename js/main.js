@@ -2439,6 +2439,12 @@ function generateSetCode(setName) {
 function generateUniqueSetCodes(sets) {
     var setCodes = [];
     for (var i=0; i < sets.length; i++) {
+        // It's possible that the set name may be `undefined` (this is a special set used for miscellany cards that
+        // otherwise don't belong to a defined set). We can't deal with those, so we'll ignore them.
+        if (sets[i] === undefined) {
+            continue;
+        }
+
         // Some sets have pre-set codes, but if they don't, we'll generate one based on the set's name.
         var setName = sets[i];
         var setCode = SETS[setName].code;

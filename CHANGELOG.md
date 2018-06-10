@@ -1,3 +1,6 @@
+## 1.7.5
+* Fixed a bug in the Cockatrice XML generator which was preventing it from generating the file data.
+
 ## 1.7.4
 * Added Zennistrad's "My Little Planeswalker".
 
