@@ -1,5 +1,5 @@
 /**
- * Generates new cards by analyzing an existing set, deriving frequency data, and using it as the basis for
+ * RoboFoME: Generates new cards by analyzing an existing set, deriving frequency data, and using it as the basis for
  * probabalistic text generation.
  */
 
@@ -190,21 +190,41 @@ function generateCard(frequencyDataSuites) {
     generatedCardContainer.appendChild(generatedCardElement);
 }
 
+// Card property generation functions.
+
 /**
- * Card property generation functions.
+ * Generate a card name. We apply a special check to this: It's possible (and surprisingly likely) for RoboFoME to
+ * generate a name that is exactly the same as an existing card, which is unsatisfying. To prevent this, we just keep
+ * generating card names and checking them until we've made one that doesn't already exist.
+ *
+ * @param object frequencyDataSuite
+ * @return string
  */
 function generateCardName(frequencyDataSuite) {
-    return generateCardProperty(
-        frequencyDataSuite,
-        frequencyDataSuite.frequencyTables.counts.word,
-        ' ',
-        1.5,
-        {
-            'general': 1,
-            'end': 3,
-            'endReversed': 3,
+    var cardNames = [];
+    for (var i=0; i < FICG_CARDS.length; i++) {
+        var card = FICG_CARDS[i];
+        if (card.name !== undefined) {
+            cardNames.push(card.name);
         }
-    );
+    }
+
+    var cardName = undefined;
+    do {
+        cardName = generateCardProperty(
+            frequencyDataSuite,
+            frequencyDataSuite.frequencyTables.counts.word,
+            ' ',
+            1.5,
+            {
+                'general': 1,
+                'end': 3,
+                'endReversed': 3,
+            }
+        );
+    } while (cardName === undefined || cardNames.indexOf(cardName) !== -1);
+
+    return cardName;
 }
 function generateCardText(frequencyDataSuite) {
     return generateCardProperty(

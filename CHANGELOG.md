@@ -1,3 +1,8 @@
+## 1.7.6
+* Updated "Friendship is Card Games" to the end of Season 8.
+* Fixed a bug with parsing Instants in the FICG parser.
+* Fixed RoboFoME so that it doesn't generate card names that already exist.
+
 ## 1.7.5
 * Fixed a bug in the Cockatrice XML generator which was preventing it from generating the file data.
 

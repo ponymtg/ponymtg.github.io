@@ -159,6 +159,8 @@ def is_type_line(line):
             return False
 
     # If the line contains the word "Instant", then it must meet one of the following conditions:
+    # - The "." character must not be present in the line. This eliminates some rules lines that refer to Instant cards.
+    # - The line shouldn't end in something that looks like a mana cost.
     # - The line must contain only the word "Instant".
     # - The line must contain only the words "Legendary Instant".
     # - "Instant" must be preceded by "Tribal".
@@ -169,13 +171,20 @@ def is_type_line(line):
     #   FanOfMostEverything).
     # - The line must contain a double slash (//), which indicates that this is a split card for which one of the
     #   halves is an Instant.
+    # - The word "Instant" must be succeeded by a word boundary; ie. it can't have letters directly after it. This
+    #   prevents an issue with cards like "Insinuate 1(ub)//Instantiate 4UB", where the word "Instant" is in the name of
+    #   the card _and_ it looks like a split type line.
     if 'Instant' in line:
+        if '.' in line:
+            return False
+        if re.search(r'^[0-9WUBRGX(/)]+$', line.split()[-1]):
+            return False
         if (
             line not in ['Instant', 'Legendary Instant', 'Trope Instant']
             and 'Instant —' not in line
             and 'Tribal Instant' not in line
             and 'Snow Instant' not in line
-            and '//' not in line
+            and not re.search(r'Instant\b', line)
         ):
             return False
 
@@ -271,6 +280,13 @@ def is_type_line(line):
             and 'Land —' not in line
         ):
             return False
+
+    # If the line contains the word "Planeswalker", then it must meet one of the following conditions:
+    # - "Planeswalker" is succeeded by a long dash.
+    if 'Planeswalker' in line:
+        if 'Planeswalker —' not in line:
+            return False
+            
             
     # At this point, we're reasonably sure that we're ruled out a lot of false positives, so we will identify this as a
     # type line.
