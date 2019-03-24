@@ -1,3 +1,7 @@
+## 1.8.0
+* Added unit tests for the FICG parser.
+* Updated "Friendship is Card Games" to Legends of Magic #11 & #12
+
 ## 1.7.6
 * Updated "Friendship is Card Games" to the end of Season 8.
 * Fixed a bug with parsing Instants in the FICG parser.

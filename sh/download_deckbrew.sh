@@ -1,5 +1,5 @@
-# This script can be used to download all pages of Deckbrew's card JSON listings (if you know how many pages there are;
-# I had to experiment to find out).
+# This script can be used to download all pages of Deckbrew's card JSON listings
+# (if you know how many pages there are; I had to experiment to find out).
 
 LAST_PAGE=168
 SLEEP_DURATION=5
