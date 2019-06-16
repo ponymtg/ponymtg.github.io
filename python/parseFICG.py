@@ -69,6 +69,7 @@ card_properties = [
     'subtype2',
     'text',
     'flavorText',
+    'watermark',
     'pt',
     'loyalty',
     'transformsInto',

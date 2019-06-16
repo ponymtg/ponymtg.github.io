@@ -35,6 +35,7 @@ var global = {
             'subtype2': '2nd Subtype',
             'text': 'Text',
             'flavorText': 'Flavor text',
+            'watermark': 'Watermark',
             'pt': 'Power/Toughness',
             'loyalty': 'Loyalty',
             'transformsInto': 'Transforms into',
@@ -242,6 +243,7 @@ var global = {
             'subtype2',
             'text',
             'flavorText',
+            'watermark',
             'pt',
             'loyalty',
             'transformsInto',
@@ -264,6 +266,7 @@ var global = {
             'subtype',
             'text',
             'flavorText',
+            'watermark',
             'pt',
             'loyalty',
             'transformsInto',
@@ -445,17 +448,22 @@ function initiateSearch(isExactSearch) {
 }
 
 /**
- * Given a set of card data entries, return some statistics about that set.
+ * Given an array of card data entries, return some statistics about the cards,
+ * such as total number of cards, how many cards there are per set, per creator,
+ * etc.
+ *
+ * @param {Object[]} cards
+ * @return {Object}
  */
 function getStatistics(cards) {
     var statistics = {};
     statistics.counts = {};
-    statistics.perSet = {};
 
     // Count the total number of cards.
     statistics.counts.numberOfCards = cards.length;
 
-    // Count the number of cards in each card set (we mean "set" in the "fan-made set" sense).
+    // Count the number of cards in each card set (we mean "set" in the
+    // "fan-made set" sense).
     statistics.counts.cardsPerSet = {};
     for (var i=0; i < cards.length; i++) {
         var set = cards[i].set;
@@ -479,8 +487,12 @@ function getStatistics(cards) {
 }
 
 /**
- * Given an array of cards `cards`, return an object containing certain information about the cards in it (eg. a list of
- * all sets that are represented in those cards).
+ * Given an array of cards, return an object containing certain information
+ * about the cards in it (eg. a list of all sets that are represented in those
+ * cards).
+ *
+ * @param {Object[]} cards
+ * @return {Object}
  */
 function getInformation(cards) {
     var information = {};
@@ -516,7 +528,8 @@ function getInformation(cards) {
     information.sets.sort();
 
     // Collect statistics about each set.
-    // Create a per-set entry for each set, to hold information gathered about each specific set.
+    // Create a per-set entry for each set, to hold information gathered about
+    // each specific set.
     information.perSet = {};
     for (var i=0; i < information.sets.length; i++) {
         var set = information.sets[i];
@@ -526,8 +539,9 @@ function getInformation(cards) {
     // Count up the number of cards in each set.
     for (var i=0; i < cards.length; i++) {
         var set = cards[i].set;
-        // If the card has no set recorded, we considered this to be in a special "undefined" set, and will add to the
-        // count of that set.
+
+        // If the card has no set recorded, we considered this to be in a
+        // special "undefined" set, and will add to the count of that set.
         if (set === undefined) {
             information.perSet[undefined] = {};
         }
@@ -537,7 +551,8 @@ function getInformation(cards) {
         information.perSet[set].numberOfCards++;
     }
 
-    // Get a list of all distinct card set creators that the supplied cards were made by.
+    // Get a list of all distinct card set creators that the supplied cards were
+    // made by.
     information.creators = [];
     for (var i=0; i < cards.length; i++) {
         var card = cards[i];
@@ -553,16 +568,38 @@ function getInformation(cards) {
  * Performs a full search, using the entered search term and applying all filters, and returns the resulting cards.
  */
 function getSearchResults(regex, cards) {
-    return getMatchingCards(regex, getFilteredCards(cards));
+    let setChoices = getFilterBySetChoices();
+    let manaTypeChoices = getFilterByManaTypeChoices();
+    var manaTypeSearchType = document.querySelector('#filterByManaTypeSearchType').value;
+    let onlyShowCardsWithImages = document.querySelector(
+        '#' + global.advancedSearchIdPrefix + '_generalOptions_onlyShowCardsWithImages'
+    ).checked;
+
+    let filteredCards = getFilteredCards(
+        cards,
+        setChoices,
+        manaTypeChoices,
+        manaTypeSearchType,
+        onlyShowCardsWithImages
+    );
+
+    let cardPropertiesToSearchIn = getSearchByChoices();
+
+    return getMatchingCards(filteredCards, regex, cardPropertiesToSearchIn);
 }
 
 /**
- * From the set of card data objects in `cards`, return an array containing only those card data objects which have a
- * property that matches the regular expression `regex`.
+ * From the set of card data objects in `cards`, return an array containing only
+ * those card data objects which have a property that matches the regular
+ * expression `regex`.
+ *
+ * @param {Object[]} cards
+ * @param {RegExp} regex
+ * @param {string[]} propertiesToSearchIn
+ * @return {Object[]}
  */
-function getMatchingCards(regex, cards) {
-    var matchingCards = [];
-    var cardPropertiesToSearchIn = getSearchByChoices();
+function getMatchingCards(cards, regex, propertiesToSearchIn) {
+    let matchingCards = [];
 
     for (var i=0; i < cards.length; i++) {
         var card = cards[i];
@@ -571,9 +608,9 @@ function getMatchingCards(regex, cards) {
         for (var j=0; j < cardPropertyNames.length; j++) {
             var cardPropertyName = cardPropertyNames[j];
 
-            // If the card property isn't one that the user has opted to search in, don't bother and skip to the next
-            // property.
-            if (cardPropertiesToSearchIn.indexOf(cardPropertyName) === -1) {
+            // If the card property isn't one that the user has opted to search
+            // in, don't bother and skip to the next property.
+            if (propertiesToSearchIn.indexOf(cardPropertyName) === -1) {
                 continue;
             }
 
@@ -590,28 +627,43 @@ function getMatchingCards(regex, cards) {
 }
 
 /**
- * Runs a set of cards `cards` through the filters defined in the advanced search options (eg. filter by set) and
- * returns the subset of cards that the filters will allow.
+ * Run a set of cards `cards` through the filters defined in the advanced search
+ * options (eg. filter by set) and return the subset of cards that the filters
+ * will allow.
+ *
+ * @param {Object[]} cards
+ * @param {string[]} setChoices
+ * @param {string[]} manaTypeChoices
+ * @param {string} manaTypeSearchType
+ * @param {boolean} onlyShowCardsWithImages
+ * @return {Object[]}
  */
-function getFilteredCards(cards) {
+function getFilteredCards(
+    cards,
+    setChoices,
+    manaTypeChoices,
+    manaTypeSearchType,
+    onlyShowCardsWithImages
+) {
     var filteredCards = cards;
-
-    var onlyShowCardsWithImages = document.querySelector('#'+global.advancedSearchIdPrefix+'_generalOptions_onlyShowCardsWithImages').checked;
-    var filterBySetChoices = getFilterBySetChoices();
-    var filterByManaTypeChoices = getFilterByManaTypeChoices();
 
     if (onlyShowCardsWithImages) {
         filteredCards = getCardsForWhichPropertiesExist(cards, ['image']);    
     }
-    filteredCards = getCardsFilteredBySet(filteredCards, filterBySetChoices);
-    filteredCards = getCardsFilteredByManaType(filteredCards, filterByManaTypeChoices);
+    filteredCards = getCardsFilteredBySet(filteredCards, setChoices);
+    filteredCards = getCardsFilteredByManaType(
+        filteredCards,
+        manaTypeChoices,
+        manaTypeSearchType
+    );
 
     return filteredCards;
 }
 
 /**
- * Given a collection of cards `cards`, and an object `properties` containing arrays of property values keyed to
- * property names, filter and return the subset of cards which have those specified properties.
+ * Given an array of cards, and an object containing arrays of property values
+ * keyed to property names, filter and return the subset of cards which have
+ * those specified properties.
  *
  * For example:
  *
@@ -623,31 +675,39 @@ function getFilteredCards(cards) {
  *         }
  *     );
  *
- * would return all cards named exactly "Applejack" or "Rarity" in either the "A Warm Welcome" set or the "Friendship is
- * Card Games" set (if such cards exist).
+ * would return all cards named exactly "Applejack" or "Rarity" in either the "A
+ * Warm Welcome" set or the "Friendship is Card Games" set (if such cards
+ * exist).
+ *
+ * @param {Object[]} cards
+ * @param {Object} properties
+ * @return {Object[]}
  */
 function getCardsFilteredByProperties(cards, properties) {
     var filteredCards = [];
-    // Go through each card.
+
     for (var i=0; i < cards.length; i++) {
         var card = cards[i];
-
         var propertyNames = Object.keys(properties);
-
         var cardMatchedAllProperties = true;
+
         // Go through each property that we're interested in for each card.
         for (var j=0; j < propertyNames.length; j++) {
             var propertyName = propertyNames[j];
             var propertyValues = properties[propertyName];
-            // Check to see if the card matches any of the specified property values.
-                if (propertyValues.indexOf(card[propertyName]) === -1) {
-                    cardMatchedAllProperties = false;
-                    break;
-                }
+
+            // Check to see if the card matches any of the specified property
+            // values.
+            if (propertyValues.indexOf(card[propertyName]) === -1) {
+                cardMatchedAllProperties = false;
+                break;
+            }
+
             if (!cardMatchedAllProperties) {
-                // If the card failed to match a property, we won't consider it for inclusion in our filtered set. (It
-                // isn't enough for a card to match one property, because that's quite easy; it has to match everything
-                // that we're looking for).
+                // If the card failed to match a property, we won't consider it
+                // for inclusion in our filtered set. (It isn't enough for a
+                // card to match one property, because that's quite easy; it has
+                // to match everything that we're looking for).
                 break;
             }
         }
@@ -660,6 +720,13 @@ function getCardsFilteredByProperties(cards, properties) {
     return filteredCards;
 }
 
+/**
+ * Given an array of cards, filter and return all cards which have values set
+ * for all of the given properties.
+ *
+ * @param {Object[]} cards
+ * @param {string[]} propertyNames
+ */
 function getCardsForWhichPropertiesExist(cards, propertyNames) {
     var filteredCards = [];
     for (var i=0; i < cards.length; i++) {
@@ -680,12 +747,21 @@ function getCardsForWhichPropertiesExist(cards, propertyNames) {
     return filteredCards;
 }
 
+/**
+ * Given an array of cards and an array of set names, return only those cards
+ * that are in any of the given sets.
+ *
+ * @param {Object[]} cards
+ * @param {string[]} sets
+ * @return {Object[]}
+ */
 function getCardsFilteredBySet(cards, sets) {
     var filteredCards = [];
     for (var i=0; i < cards.length; i++) {
         var card = cards[i];
 
-        // If this card isn't in a set that the user has opted to search in, then skip to the next.
+        // If this card isn't in a set that the user has opted to search in,
+        // then skip to the next.
         if (sets.indexOf(card.set) === -1) {
             continue;
         }
@@ -717,21 +793,42 @@ function getCardsFilteredBySupertype(cards, supertypes) {
     return filteredCards;
 }
 
-function getCardsFilteredByManaType(cards, manaTypes) {
+/**
+ * Given an array of cards, return an array which contains only those cards that
+ * match the given mana type.
+ *
+ * There are 4 different ways to search for mana types:
+ *
+ * - anyInclusive: match cards that contain any of the given mana types, even if
+ *   they contain other mana types too
+ * - allInclusive: match cards that contain all of the given mana types, even if
+ *   they contain other mana types too
+ * - anyExclusive: match cards that contain any of the given mana types but no
+ *   others
+ * - allExclusive: match cards that contain all of the given mana types and no
+ *   others
+ *
+ * Note that "generic", "colorless", and "none" are all considered types of
+ * mana. That means that if you do an "anyExclusive" search for white and blue,
+ * it will not find a card with cost "1WU" because that has generic mana in (and
+ * the search is exclusive, meaning it excludes anything that isn't exactly
+ * white or blue).
+ *
+ * @param {object[]} cards
+ * @param {string[]} manaTypes
+ * @param {string} manaType
+ * @return {object[]}
+ */
+function getCardsFilteredByManaType(cards, manaTypes, manaTypeSearchType) {
     var filteredCards = [];
     for (var i=0; i < cards.length; i++) {
         var card = cards[i];
         cardSatisfiesFilterByManaTypeSearch = false;
 
-        // There are four different ways we can filter by set, which the user can select between. First, let's find
-        // out what was selected.
-        var filterByManaTypeSearchType = document.querySelector('#filterByManaTypeSearchType').value;
-
-        // And get the mana types of this card, so we can compare the two to decide if it satisfies the mana type search.
         var cardManaTypes = card.derivedProperties.manaTypes;
 
-        // There are three facts about the card that will help us decide whether the card satisfies the mana type
-        // search:
+        // There are three facts about the card that will help us decide whether
+        // the card satisfies the mana type search:
         //
         // - whether it contains at least one of the selected mana types
         // - whether it contains only the selected mana types (and no others)
@@ -745,7 +842,8 @@ function getCardsFilteredByManaType(cards, manaTypes) {
         for (var j=0; j < cardManaTypes.length; j++) {
             var cardManaType = cardManaTypes[j];
             if (manaTypes.indexOf(cardManaType) !== -1) {
-                // One of the card's mana types does match one that was selected by the user.
+                // One of the card's mana types does match one that was selected
+                // by the user.
                 cardContainsAtLeastOneSelectedManaType = true;
                 break;
             }
@@ -753,7 +851,8 @@ function getCardsFilteredByManaType(cards, manaTypes) {
         for (var j=0; j < cardManaTypes.length; j++) {
             var cardManaType = cardManaTypes[j];
             if (manaTypes.indexOf(cardManaType) === -1) {
-                // The card contains a mana type that wasn't selected by the user.
+                // The card contains a mana type that wasn't selected by the
+                // user.
                 cardContainsOnlySelectedManaTypes = false;
                 break;
             }
@@ -761,46 +860,55 @@ function getCardsFilteredByManaType(cards, manaTypes) {
         for (var j=0; j < manaTypes.length; j++) {
             var manaType = manaTypes[j];
             if (cardManaTypes.indexOf(manaType) === -1) {
-                // The card did not contain one of the mana types selected by the user.
+                // The card did not contain one of the mana types selected by
+                // the user.
                 cardContainsAllSelectedManaTypes = false;
                 break;
             }
         }
 
-        // Now that we know those facts, we can see if the card satisfies the user's mana type search conditions.
-
-        switch (filterByManaTypeSearchType) {
-            // "All Exclusive": The least permissive search. Searches for all cards which contain all of the selected
-            // mana type, and no others. For example, a search for white and blue would be satisfied by "1WU", "2WUU"
-            // (these contain both white and blue), but not "3W" (this does not contain blue), "4UU" (this does not
-            // contain white), "5WUB" (this contains white and blue, but also black).
+        // Now that we know those facts, we can see if the card satisfies the
+        // user's mana type search conditions.
+        switch (manaTypeSearchType) {
+            // "All Exclusive": The least permissive search. Searches for all
+            // cards which contain all of the selected mana type, and no others.
+            // For example, a search for white and blue would be satisfied by
+            // "1WU", "2WUU" (these contain both white and blue), but not "3W"
+            // (this does not contain blue), "4UU" (this does not contain
+            // white), "5WUB" (this contains white and blue, but also black).
             case 'allExclusive':
                 if (cardContainsOnlySelectedManaTypes && cardContainsAllSelectedManaTypes) {
                     cardSatisfiesFilterByManaTypeSearch = true;
                 }
                 break;
-            // "Any Exclusive": Searches for all cards which contain any of the selected mana types, but no others. For
-            // example, a search for white and blue would be satisfied by "1W" (it contains white), "2UU" (it
-            // contains blue), "3WU" (it contains white and blue), but not "4WUG" (it contains white and blue, but
-            // also green).
+            // "Any Exclusive": Searches for all cards which contain any of the
+            // selected mana types, but no others. For example, a search for
+            // white and blue would be satisfied by "1W" (it contains white),
+            // "2UU" (it contains blue), "3WU" (it contains white and blue),
+            // but not "4WUG" (it contains white and blue, but also green).
             case 'anyExclusive':
                 if (cardContainsOnlySelectedManaTypes) {
                     cardSatisfiesFilterByManaTypeSearch = true;
                 }
                 
                 break;
-            // "All Inclusive ": Searches for all cards which contain all of the selected mana types. For example, a
-            // search for white and blue would be satisfied by "1WU" (it contains white and blue), "2WUR" (it
-            // contains white and blue, as well as red), but not "3WG" (it contains white, but not blue).
+            // "All Inclusive ": Searches for all cards which contain all of
+            // the selected mana types. For example, a search for white and
+            // blue would be satisfied by "1WU" (it contains white and blue),
+            // "2WUR" (it contains white and blue, as well as red), but not
+            // "3WG" (it contains white, but not blue).
             case 'allInclusive':
                 if (cardContainsAllSelectedManaTypes) {
                     cardSatisfiesFilterByManaTypeSearch = true;
                 }
                 break;
-            // "Any Inclusive": The most permissive search type. This searches for all cards which contain any of
-            // the selected mana types. For example, a search for white and blue would be satisfied by "1WG" (it
-            // contains white), "2UR" (it contains blue), "3WUB" (it contains white and blue), and many others. The
-            // only way for a card not to appear in this search is if it contains none of the selected mana types.
+            // "Any Inclusive": The most permissive search type. This searches
+            // for all cards which contain any of the selected mana types. For
+            // example, a search for white and blue would be satisfied by "1WG"
+            // (it contains white), "2UR" (it contains blue), "3WUB" (it
+            // contains white and blue), and many others. The only way for a
+            // card not to appear in this search is if it contains none of the
+            // selected mana types.
             case 'anyInclusive':
             default:
                 if (cardContainsAtLeastOneSelectedManaType) {
@@ -810,8 +918,8 @@ function getCardsFilteredByManaType(cards, manaTypes) {
         }
 
         if (!cardSatisfiesFilterByManaTypeSearch) {
-            // The card didn't satisfy the mana type search, so we won't consider it any further, and skip to the next
-            // card.
+            // The card didn't satisfy the mana type search, so we won't
+            // consider it any further, and skip to the next card.
             continue;
         }
 
@@ -986,42 +1094,65 @@ function getCardConvertedManaCost(card) {
     return convertManaCost(card.cost);
 }
 
+/**
+ * Given a mana cost (eg. "1UUB"), return its converted mana cost.
+ *
+ * @param {string} cost
+ * @return {number}
+ */
 function convertManaCost(cost) {
-    var convertedManaCost = 0;
+    let convertedManaCost = 0;
     // Get a list of mana symbol regex strings (strings).
-    var manaSymbolRegexStrings = Object.keys(global.mappings.manaSymbolsToManaTypes);
+    let manaSymbolRegexStrings = Object.keys(
+        global.mappings.manaSymbolsToManaTypes
+    );
 
-    var manaSymbolRegexes = []
-    for (var i=0; i < manaSymbolRegexStrings.length; i++) {
-        var manaSymbolRegex = new RegExp(manaSymbolRegexStrings[i]);
+    let manaSymbolRegexes = []
+    for (let i=0; i < manaSymbolRegexStrings.length; i++) {
+        let manaSymbolRegex = new RegExp(manaSymbolRegexStrings[i]);
         manaSymbolRegexes.push(manaSymbolRegex);
     }
 
-    // Tokenize the cost into a sequence containing token pieces and non-token pieces (in order).
-    var tokenizedCost = tokenizeString(cost, manaSymbolRegexes);
+    // Tokenize the cost into a sequence containing token pieces and non-token
+    // pieces (in order).
+    let tokenizedCost = tokenizeString(cost, manaSymbolRegexes);
+    // Go through the tokenized cost pieces, and for each one, if it's a mana
+    // symbol, add the appropriate amount of mana to the converted mana cost.
+    for (let i=1; i < tokenizedCost.length; i += 2) {
+        let costToken = tokenizedCost[i];
 
-    // Go through the tokenized cost pieces, and for each one, if it's a mana symbol, add the appropriate amount of mana
-    // to the converted mana cost.
-    for (var i=0; i < tokenizedCost.length; i++) {
-        for (var j=0; j < manaSymbolRegexStrings.length; j++) {
-            // If this string piece is a token (ie. something that we identified to be a mana symbol), we now need to
-            // figure out which mana symbol it is.
-            var manaSymbolRegexString = manaSymbolRegexStrings[j];
-            var manaSymbolRegex = manaSymbolRegexes[j];
-            if (manaSymbolRegex.test(tokenizedCost[i])) {
-                // This is a mana symbol. Now we can figure out how much that adds to the converted mana cost.
-                // If it is a generic mana symbol, then it is worth the amount of mana corresponding to the number on
-                // the symbol.
-                var manaTypeArray = global.mappings.manaSymbolsToManaTypes[manaSymbolRegexString]; 
+        // Special case: If this cost token is one of the "split" costs (eg.
+        // "(WU)", "(B/R)"), it's only worth 1 mana.
+        if (isSplitManaSymbol(costToken)) {
+            convertedManaCost += 1;
+            continue;
+        }
+
+        for (let j=0; j < manaSymbolRegexStrings.length; j++) {
+            // If this string piece is a token (ie. something that we identified
+            // to be a mana symbol), we now need to figure out which mana symbol
+            // it is.
+            let manaSymbolRegexString = manaSymbolRegexStrings[j];
+            let manaSymbolRegex = manaSymbolRegexes[j];
+            if (manaSymbolRegex.test(costToken)) {
+                // This is a mana symbol. Now we can figure out how much that
+                // adds to the converted mana cost.
+
+                // If it is a generic mana symbol, then it is worth the amount
+                // of mana corresponding to the number on the symbol.
+                let manaTypeArray = global.mappings.manaSymbolsToManaTypes[
+                    manaSymbolRegexString
+                ]; 
                 if (manaTypeArray[0] == 'generic') {
-                    if (tokenizedCost[i] === 'X') {
-                        // Special case: "X" is considered generic mana, but is worth zero, so disregard it.
+                    if (costToken === 'X') {
+                        // Special case: "X" is considered generic mana, but is
+                        // worth zero, so disregard it.
                         continue;
                     }
-                    convertedManaCost += parseInt(tokenizedCost[i]);
-                }
-                else {
-                    // All other occurrences of a mana symbol are worth 1 mana each.
+                    convertedManaCost += parseInt(costToken);
+                } else {
+                    // All other occurrences of a mana symbol are worth 1 mana
+                    // each.
                     convertedManaCost += 1;
                 }
             }
@@ -1052,7 +1183,11 @@ function getCardManaTypes(card) {
 }
 
 /**
- * Given an mana cost, attempt to determine the types of mana in that cost (ie. "white", "generic", "colorless", etc.)
+ * Given an mana cost, attempt to determine the types of mana in that cost (ie.
+ * "white", "generic", "colorless", etc.)
+ *
+ * @param {string} cost
+ * @return {string[]}
  */
 function getCostManaTypes(cost) {
     var cardManaTypes = [];
@@ -1062,7 +1197,9 @@ function getCostManaTypes(cost) {
     }
 
     // Get a list of mana symbol regex strings (strings).
-    var manaSymbolRegexStrings = Object.keys(global.mappings.manaSymbolsToManaTypes);
+    var manaSymbolRegexStrings = Object.keys(
+        global.mappings.manaSymbolsToManaTypes
+    );
 
     var manaSymbolRegexes = []
     for (var i=0; i < manaSymbolRegexStrings.length; i++) {
@@ -1070,22 +1207,30 @@ function getCostManaTypes(cost) {
         manaSymbolRegexes.push(manaSymbolRegex);
     }
 
-    // Tokenize the cost into a sequence containing token pieces and non-token pieces (in order).
+    // Tokenize the cost into a sequence containing token pieces and non-token
+    // pieces (in order).
     var tokenizedCost = tokenizeString(cost, manaSymbolRegexes);
 
-    // Go through the tokenized cost pieces, and for each one, if it's a mana symbol, figure out what kind of mana that
-    // symbol represents, then add it to our list of mana types (if we don't already have it).
+    // Go through the tokenized cost pieces, and for each one, if it's a mana
+    // symbol, figure out what kind of mana that symbol represents, then add it
+    // to our list of mana types (if we don't already have it).
     for (var i=0; i < tokenizedCost.length; i++) {
         for (var j=0; j < manaSymbolRegexStrings.length; j++) {
-            // If this string piece is a token (ie. something that we identified to be a mana symbol), we now need to
-            // figure out which mana symbol it is. To do this, we just run through our list of mana symbol regexes until
-            // we find the one that matches.
+            // If this string piece is a token (ie. something that we
+            // identified to be a mana symbol), we now need to figure out which
+            // mana symbol it is. To do this, we just run through our list of
+            // mana symbol regexes until we find the one that matches.
             var manaSymbolRegexString = manaSymbolRegexStrings[j];
             var manaSymbolRegex = manaSymbolRegexes[j];
+
             if (manaSymbolRegex.test(tokenizedCost[i])) {
-                // We've found the mana symbol that corresponds to this token. Now, figure out what type of mana this
-                // is. Some symbols represent more than one kind of mana (eg. hybrid mana symbols).
-                var manaTypeArray = global.mappings.manaSymbolsToManaTypes[manaSymbolRegexString]; 
+                // We've found the mana symbol that corresponds to this token.
+                // Now, figure out what type of mana this is. Some symbols
+                // represent more than one kind of mana (eg. hybrid mana
+                // symbols).
+                var manaTypeArray = global.mappings.manaSymbolsToManaTypes[
+                    manaSymbolRegexString
+                ];
                 for (var k=0; k < manaTypeArray.length; k++) {
                     var manaType = manaTypeArray[k];
                     // If this isn't in our list of mana types, add it.
@@ -1096,7 +1241,20 @@ function getCostManaTypes(cost) {
             }
         }
     }
+
     return cardManaTypes;
+}
+
+/**
+ * Return true if the given symbol (in text form) is a "split" symbol, eg.
+ * "(WU)", "(R/B)", "(B/R/G)"
+ *
+ * @param {string} symbol
+ * return {boolean}
+ */
+function isSplitManaSymbol(symbol) {
+    let splitSymbolRegex = new RegExp('^\\([1-9WUBRGC/]{2,}\\)$', 'i');
+    return splitSymbolRegex.test(symbol);
 }
 
 /**
@@ -1120,9 +1278,6 @@ function getCardMonocolor(card) {
  * property names.
  */
 function getSearchByChoices() {
-    // This is currently disabled; for now, only allow searching by name.
-    return ['name'];
-/*
     var choices = [];
 
     for (var i=0; i < global.lists.searchableCardProperties.length; i++) {
@@ -1135,9 +1290,15 @@ function getSearchByChoices() {
     }
 
     return choices;
-*/
+
 }
 
+/**
+ * Read the DOM and get a list of names of all sets checked in the "Search by
+ * sets" box.
+ *
+ * @return {string[]}
+ */
 function getFilterBySetChoices() {
     var choices = [];
 
@@ -1243,7 +1404,7 @@ function generateAdvancedSearchElement() {
     var advancedSearchInformationAlert = document.createElement('div');
     advancedSearchInformationAlert.className = 'alert alert-warning';
     advancedSearchInformationAlert.innerHTML = '<strong>NOTE:</strong> PonyMTG does not yet have full property listings for all cards (many cards, for example, only have a name, set, and image). This means that advanced filters won\'t be useful on cards which have incomplete listings.';
-/*
+
     // First, do the "Search by card property" section. This will be a list of all card properties that we want to allow
     // the user to search by.
     var searchByCardPropertyPanelElement = document.createElement('div');
@@ -1274,7 +1435,7 @@ function generateAdvancedSearchElement() {
             true
         )
     );
-*/
+
     // First section: General options.
     var generalOptionsPanel = document.createElement('div');
     generalOptionsPanel.className = 'panel panel-default';
@@ -1395,9 +1556,9 @@ function generateAdvancedSearchElement() {
     // Finally, add all sections to the advanced search table.
     advancedSearchPanelElement.appendChild(advancedSearchInformationAlert);
 
-    //searchByCardPropertyPanelElement.appendChild(searchByCardPropertyHeaderElement);
-    //searchByCardPropertyPanelElement.appendChild(searchByCardPropertyBodyElement);
-    //advancedSearchPanelElement.appendChild(searchByCardPropertyPanelElement);
+    searchByCardPropertyPanelElement.appendChild(searchByCardPropertyHeaderElement);
+    searchByCardPropertyPanelElement.appendChild(searchByCardPropertyBodyElement);
+    advancedSearchPanelElement.appendChild(searchByCardPropertyPanelElement);
 
     generalOptionsPanel.appendChild(generalOptionsHeading);
     generalOptionsPanel.appendChild(generalOptionsBody);
@@ -2235,55 +2396,74 @@ function applyMagicStylingToText(text) {
 }
 
 /**
- * Given a string `string`, and an array of token regexes `tokens`, break up the string into an array of substrings,
- * where each substring is either a match for a token, or a non-token.
+ * Given a string `string`, and an array of token regexes `tokens`, break up the
+ * string into an array of substrings, where each substring is either a match
+ * for a token, or a non-token.
+ *
+ * The tokenization algorithm works as follows:
+ * 
+ * 1. Find the index of the first appearance of a token in the string.
+ * 2. By definition, everything up to that index must be a non-token. (It could
+ *    be the empty string, if the string happens to start with a token).
+ * 3. Slice off the non-token, and the found token, and store them.
+ * 4. Repeat steps 1-3 on the resulting shorter string, until no more tokens can
+ *    be found.
+ * 5. Store the remainder of the string (which, by definition, must also be a
+ *    non-token, and may be the empty string).
+ *
+ * @param {string} string
+ * @param {RegExp[]} tokenRegexes
+ * @return {string[]}
  */
-function tokenizeString(string, tokens) {
+function tokenizeString(string, tokenRegexes) {
     var decomposableString = string;
     var stringPieces = [];
 
-    // The tokenization algorithm works like this:
-    // 
-    // 1. Find the index of the first appearance of a token in the string.
-    // 2. By definition, everything up to that index must be a non-token. (It could be the empty string, if the string
-    //   happens to start with a token).
-    // 3. Slice off the non-token, and the found token, and store them.
-    // 4. Repeat steps 1-3 on the resulting shorter string, until no more tokens can be found.
-    // 5. Store the remainder of the string (which, by definition, must also be a non-token, and may be the empty
-    // string).
-
+    // Force all the token regexes to be case-insensitive.
+    for (var i=0; i < tokenRegexes.length; i++) {
+        tokenRegexes[i] = new RegExp(tokenRegexes[i], 'i');
+    }
+    
     while (decomposableString.length > 0) {
-        // Go through all tokens to find out which one has the earliest match in the string.
+        // Go through all tokens to find out which one has the earliest match in
+        // the string.
         var earliestTokenMatch = undefined;
         var earliestMatchIndex = undefined;
-        for (var i=0; i < tokens.length; i++) {
-            var token = tokens[i];
-            var result = token.exec(decomposableString);
+        for (var i=0; i < tokenRegexes.length; i++) {
+            var tokenRegex = tokenRegexes[i];
+            var result = tokenRegex.exec(decomposableString);
             if (result === null) {
-                // If the token has no match in the string at all, try the next one.
+                // If the token has no match in the string at all, try the next
+                // one.
                 continue;
             }
             var matchedString = result[0];
             var tokenMatchIndex = result.index;
 
-            if (earliestMatchIndex === undefined || tokenMatchIndex < earliestMatchIndex) {
+            if (earliestMatchIndex === undefined
+                || tokenMatchIndex < earliestMatchIndex
+            ) {
                 earliestMatchIndex = tokenMatchIndex;
                 earliestTokenMatch = matchedString;
             }
         }
 
         if (earliestTokenMatch === undefined) {
-            // If no token was found at all, at any position, then the entire string must be non-token (and it must also
-            // be the last piece of string that we'll need to deal with, as there can be no more tokens after this).
-            // We just need to add this final piece of string to our collection of string pieces, and we're done.
+            // If no token was found at all, at any position, then the entire
+            // string must be non-token (and it must also be the last piece of
+            // string that we'll need to deal with, as there can be no more
+            // tokens after this).  We just need to add this final piece of
+            // string to our collection of string pieces, and we're done.
             stringPieces.push(decomposableString);
 
             // Slice the entire string down to nothing (empty string).
-            decomposableString = decomposableString.slice(decomposableString.length);
-        }
-        else {
-            // We've found which token matches earliest in the string. Everything prior to this match must be a
-            // non-token, so we'll collect that first.
+            decomposableString = decomposableString.slice(
+                decomposableString.length
+            );
+        } else {
+            // We've found which token matches earliest in the string.
+            // Everything prior to this match must be a non-token, so we'll
+            // collect that first.
             var nonToken = decomposableString.slice(0, earliestMatchIndex);
 
             // Now collect the bit that matched the token.
@@ -2294,13 +2474,17 @@ function tokenizeString(string, tokens) {
             stringPieces.push(nonToken);
             stringPieces.push(tokenMatch);
 
-            // With these pieces now accounted for, we can slice them off the string, and repeat the process if needed.
-            decomposableString = decomposableString.slice(nonToken.length+tokenMatch.length);
+            // With these pieces now accounted for, we can slice them off the
+            // string, and repeat the process if needed.
+            decomposableString = decomposableString.slice(
+                nonToken.length + tokenMatch.length
+            );
         }
     }
 
-    // The entire string has been consumed, so we should now have an array of non-tokens and tokens which, when joined
-    // together, will recreate the string.
+    // The entire string has been consumed, so we should now have an array of
+    // non-tokens and tokens which, when joined together, will recreate the
+    // string.
     return stringPieces;
 }
 

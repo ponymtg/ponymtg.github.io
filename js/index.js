@@ -131,8 +131,8 @@ function initialize() {
     }
 
     // Default to search by name only.
-    //var searchByNameCheckbox = document.querySelector('#'+global.advancedSearchIdPrefix+'_searchByCardProperty_name');
-    //searchByNameCheckbox.checked = true;
+    var searchByNameCheckbox = document.querySelector('#'+global.advancedSearchIdPrefix+'_searchByCardProperty_name');
+    searchByNameCheckbox.checked = true;
 
     // Default to displaying cards from all available sets.
     var filterBySetCheckbox = document.querySelector('#'+global.advancedSearchIdPrefix+'_filterBySet_selectAll');

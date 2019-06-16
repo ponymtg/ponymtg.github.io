@@ -464,6 +464,22 @@ a.logo-small {
     height: 100%;
 }
 
+.test-success {
+    color: rgb(0, 128, 0);
+    font-weight: bold;
+}
+
+.test-failure {
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+}
+
+pre.test {
+    font-size: 1.25em;
+    background-color: rgba(128, 128, 255, 0.25);
+    border: 1px solid rgba(128, 128, 255, 0.5);
+    padding: 0.5em;
+}
 /***********************************************************************************************************************
  * Bootstrap tweaks
  *

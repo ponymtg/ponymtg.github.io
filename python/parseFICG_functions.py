@@ -17,6 +17,18 @@ import mtgJson, re
 # Define a long dash, just so we don't have to keep copy-pasting it.
 EM_DASH = '—'
 
+# A list of mappings from Fimfiction emoticons to faction names. These are used
+# to correctly apply watermarks on contraptions. The faction list is defined
+# here: <https://www.fimfiction.net/blog/859184/fic-or-faction>
+FACTIONS = {
+    ':twilightsmile:': 'Northstar R&D',
+    ':raritystarry:': 'Carousel Innovations',
+    ':rainbowdetermined2:': 'Cloudsdale Awesomatics',
+    ':yay:': 'Sweetfeather Biotech',
+    ':ajsmug:': 'Apple Company',
+    ':pinkiehappy:': 'P.O.N.K. (Party Operations Neo-Korp)',
+}
+
 # Use a global dictionary to keep track of meta-information about the set. There
 # are some things, such as which cards transform into which others, that we can
 # only determine by keeping track of previously-seen cards.
@@ -169,8 +181,15 @@ def is_type_line(line):
     #   lenient about this and say that there doesn't have to be a space between
     #   "Creature" and the dash. This is due to the misprinted card "Chrysalis,
     #   Changeling Queen", which has a minor error in its type line.
+    # - The word "Creature" must be completely on its own. This is a unique
+    #   situation which occurs for the card "Sibling Supreme", which is every
+    #   creature type at all times.
     if 'Creature' in line:
-        if not 'Creature —' in line and not 'Creature—' in line:
+        if (
+            line != 'Creature'
+            and not 'Creature —' in line
+            and not 'Creature—' in line
+        ):
             return False
 
     # If the line contains the word "Instant", then it must meet one of the
@@ -313,7 +332,6 @@ def is_type_line(line):
     if 'Planeswalker' in line:
         if 'Planeswalker —' not in line:
             return False
-            
             
     # At this point, we're reasonably sure that we're ruled out a lot of false
     # positives, so we will identify this as a type line.
@@ -657,7 +675,8 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
             # we'll just use the name.
             card_data_entry['transformsFrom'] = META['previous_card_data_entry']['name']
 
-    # We can now use the supertype to make some further decisions:
+    # We can now use the supertype and subtype to make some further decisions about where the text is on this card, and
+    # what the fields below the text are.
     if 'Creature' in card_data_entry['supertype']:
         # If the card is a creature, we expect that the last line in the dump will be the creature's power/toughness,
         # and everything else will be card text.
@@ -682,7 +701,28 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         if card_data_entry['name'] == 'Discord Released':
             del card_data_entry['loyalty']
             text_lines = individual_card_dump_lines[2:]
-            
+    elif (
+        'subtype' in card_data_entry
+        and 'Contraption' in card_data_entry['subtype']
+        and individual_card_dump_lines[-1] in FACTIONS
+    ):
+        # If this card is a Contraption and the final line is recognized as a faction watermark, we record the watermark
+        # on the card.
+        #
+        # As explained by FoME in <https://www.fimfiction.net/blog/859184/fic-or-faction>, FICG uses Fimfiction
+        # emoticons as faction watermarks. Fortunately for us, these emoticon images do get captured in the FICG text
+        # dump, as colon-enclosed strings (eg. `:ajsmug:`). So, to record the watermark, we just need to map the
+        # emoticon string to the correct watermark name.
+        faction_emoticon = individual_card_dump_lines[-1]
+        card_data_entry['watermark'] = FACTIONS[faction_emoticon]
+        text_lines = individual_card_dump_lines[2:-1]
+    elif card_data_entry['name'] == 'Power Converter':
+        # SPECIAL CASE: "Power Converter" (from
+        # <https://www.fimfiction.net/blog/789008/friendship-is-card-games-2014-annual-power-ponies>) was meant to have
+        # an image of the League of Dastardly Doom's faction watermark (I think), but the link is broken; in any case,
+        # we probably wouldn't be able to process it anyway. For this card, we add the watermark manually.
+        text_lines = individual_card_dump_lines[2:-1]
+        card_data_entry['watermark'] = 'League of Dastardly Doom'
     else:
         # In all other cases (ie. enchantments, instants, artifacts), we expect that everything after the first two
         # lines is card text.
@@ -801,8 +841,6 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         META['previous_card_was_reverse_side'] = False
 
     return card_data_entry
-
-
 
 def parse_ficg_dump_into_card_data_entries(ficg_dump):
     # Break up the dump into a number of sub-dumps, each of which (we hope) is a chunk of text that represents a single

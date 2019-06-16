@@ -1,3 +1,10 @@
+## 1.9.0
+* Added Javascript unit tests for some PonyMTG functions.
+* Added faction watermark support to the FICG parser.
+* Re-enabled the "Search By" panel.
+* Added search by watermark functionality.
+* Updated "Friendship is Card Games" to "Student Counsel".
+
 ## 1.8.0
 * Added unit tests for the FICG parser.
 * Updated "Friendship is Card Games" to Legends of Magic #11 & #12

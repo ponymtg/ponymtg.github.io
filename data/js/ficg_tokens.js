@@ -988,6 +988,7 @@ var FICG_TOKENS =
         'subtype': 'Beast Band',
         'text': 'Finale — Whenever you sacrifice a Song, create a token that’s a copy of Wild Chorus.\n\nBy the time Fluttershy graduated, every animal within twenty miles of Canterlot knew her voice.',
         'pt': '2/2',
+        'cardType': 'token',
     },
     {
         'name': 'Self-Playing Ensemble',
@@ -995,6 +996,7 @@ var FICG_TOKENS =
         'subtype': 'Band',
         'text': 'Finale — Whenever you sacrifice a Song, you may pay 1. If you do, create a token that’s a copy of Self-Playing Ensemble.',
         'pt': '2/2',
+        'cardType': 'token',
     },
     {
         'name': 'Fish',
@@ -1046,6 +1048,7 @@ var FICG_TOKENS =
         'subtype': 'Pegasus Soldier',
         'text': 'Flying\n\nSkirmish 1W (Whenever this creature attacks, you may pay 1W. If you do, create a token copy of it that’s tapped and attacking. Exile the token at end of combat.)',
         'pt': '2/2',
+        'cardType': 'token',
     },
     {
         'name': 'Legion Elite',
@@ -1054,6 +1057,7 @@ var FICG_TOKENS =
         'subtype': 'Pegasus Soldier',
         'text': 'Flying, first strike\n\nSkirmish 1(rw), skirmish 1(rw) (Whenever this creature attacks, you may pay 1(rw) up to two times. For each time you do, create a token copy of it that’s tapped and attacking. Exile the tokens at end of combat.)',
         'pt': '2/1',
+        'cardType': 'token',
     },
     {
         'name': 'Ox Warrior',
@@ -1070,6 +1074,7 @@ var FICG_TOKENS =
         'subtype': 'Pony Zombie',
         'text': 'Whenever a creature dealt damage by Plague Zombies this turn dies, create a token that’s a copy of Plague Zombies.',
         'pt': '4/3',
+        'cardType': 'token',
     },
     {
         'name': 'Elk',
@@ -1086,5 +1091,48 @@ var FICG_TOKENS =
         'subtype': 'Pegasus Soldier',
         'text': 'Flying, vigilance, lifelink\n\nSkirmish 1W (Whenever this creature attacks, you may pay 1W. If you do, create a token copy of it that’s tapped and attacking. Exile the token at end of combat.)',
         'pt': '2/3',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Zombie Army',
+        'colorIndicator': '(B)',
+        'supertype': 'Creature',
+        'subtype': 'Zombie Army',
+        'pt': '0/0',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Dragon',
+        'colorIndicator': '(R)',
+        'supertype': 'Creature',
+        'subtype': 'Dragon',
+        'text': 'Flying',
+        'pt': '4/4',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Dragon Egg',
+        'colorIndicator': '(R)',
+        'supertype': 'Creature',
+        'subtype': 'Dragon Egg',
+        'text': 'Defender\n\nWhen this creature dies, create a 2/2 red Dragon creature token with flying and "R: This creature gets +1/+0 until end of turn."',
+        'pt': '0/2',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Golem',
+        'supertype': 'Artifact Creature',
+        'subtype': 'Golem',
+        'pt': '3/3',
+        'cardType': 'token',
+    },
+    {
+        'name': 'Hazardous Fauna',
+        'colorIndicator': '(G)',
+        'supertype': 'Creature',
+        'subtype': 'Beast',
+        'text': 'Myriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token that\'s a copy of this creature that\'s tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.\n\nHazardous Fauna can’t be blocked by creatures with power 2 or less.)',
+        'pt': '4/3',
+        'cardType': 'token',
     },
 ];
