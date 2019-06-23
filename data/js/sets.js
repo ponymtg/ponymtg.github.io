@@ -21,6 +21,7 @@ var SETS = {
     },
     'Friendship is Magic the Gathering': {
         'path': 'Kitonin/Friendship is Magic the Gathering/cards',
+        'creator': 'Kitonin',
         'url': 'http://kitonin.deviantart.com/gallery/30807826/Friendship-is-Magic-the-Gathering',
     },
     'CRISIS EQUESTRIA': {
@@ -157,7 +158,7 @@ var SETS = {
     'Friendship is Card Games': {
         'creator': 'FanOfMostEverything',
         'url': 'http://www.fimfiction.net/blog/406600/gathered-friendship-the-ficg-index',
-        'notes': 'This is a collection of text-only cards from the long-running  <i>Friendship is Card Games</i> blog. As the blog is continually updated, this collection may not necessarily be complete.',
+        'notes': 'A collection of text-only cards from the long-running  <i>Friendship is Card Games</i> blog. As the blog is continually updated, this collection may not necessarily be complete.',
     },
     'Elementals of Harmony': {
         'creator': 'FanOfMostEverything',
@@ -182,13 +183,23 @@ var SETS = {
     'Oops, I Accidentally Changelings': {
         'creator': 'FanOfMostEverything',
         'url': 'http://www.fimfiction.net/blog/302475/oops-i-accidentally-changelings',
-        'notes': 'This is a collection of changeling-themed cards. (The MLP kind, not the MTG kind).',
+        'notes': 'A collection of changeling-themed cards. (The MLP kind, not the MTG kind).',
     },
     'My Little Planeswalker': {
         'path': 'Zennistrad/My Little Planeswalker',
         'creator': 'Zennistrad',
         'url': 'https://www.fimfiction.net/story/382734/my-little-planeswalker-twilights-spark',
         'notes': 'A collection of cards created by Zennistrad for his <i>My Little Planeswalker</i> universe.',
+    },
+    'Merodi is Card Games': {
+        'creator': 'FanOfMostEverything',
+        'url': 'https://www.fimfiction.net/group/213761/songs-of-the-spheres-extended-multiverse/thread/401439/merodi-is-card-games',
+        'notes': 'A collection of cards based on the <i>Songs of the Spheres</i> setting by GMBlackjack.',
+    },
+    'Friendship is Card Games: When It Rains': {
+        'creator': 'Void Knight',
+        'url': 'https://www.fimfiction.net/blog/759461/friendship-is-card-games-when-it-rains',
+        'notes': 'A small FICG-inspired collection by Void Knight, based on the fic <i>When It Rains</i>',
     },
 };
 

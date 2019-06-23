@@ -1,3 +1,10 @@
+## 1.9.1
+* Added card rarity to displayed properties.
+* Added card rarity to searchable properties.
+* Updated "My Little Planeswalker" with all known latest cards.
+* Added "Merodi is Card Games" set.
+* Added "Friendship is Card Games: When It Rains" set.
+
 ## 1.9.0
 * Added Javascript unit tests for some PonyMTG functions.
 * Added faction watermark support to the FICG parser.

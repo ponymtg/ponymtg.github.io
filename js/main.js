@@ -38,6 +38,7 @@ var global = {
             'watermark': 'Watermark',
             'pt': 'Power/Toughness',
             'loyalty': 'Loyalty',
+            'rarity': 'Rarity',
             'transformsInto': 'Transforms into',
             'transformsFrom': 'Transforms from',
             'artist': 'Artist',
@@ -246,6 +247,7 @@ var global = {
             'watermark',
             'pt',
             'loyalty',
+            'rarity',
             'transformsInto',
             'transformsFrom',
             'artist',
@@ -269,6 +271,7 @@ var global = {
             'watermark',
             'pt',
             'loyalty',
+            'rarity',
             'transformsInto',
             'transformsFrom',
             'artist',
@@ -1413,6 +1416,7 @@ function generateAdvancedSearchElement() {
     searchByCardPropertyHeaderElement.className = 'panel-heading';
     var searchByCardPropertyBodyElement = document.createElement('div');
     searchByCardPropertyBodyElement.className = 'panel-body';
+    searchByCardPropertyBodyElement.style.textAlign = 'left';
 
     // Generate checkboxes for all properties that we'll allow the user to search by.
     var data = [];

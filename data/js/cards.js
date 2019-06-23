@@ -1,36 +1,48 @@
 /**
- * The master list of cards. The majority of cards should be kept in this list. There are a couple of exceptions,
- * notably Friendship is Card Games, which we prefer to keep in a separate list for ease of updating.
+ * The master list of cards. The majority of cards should be kept in this list.
+ * There are a couple of exceptions, notably Friendship is Card Games, which we
+ * prefer to keep in a separate list for ease of updating.
  *
- * This list must be a flat (non-nested) array of card data objects. Each card data object may have the following
- * properties:
+ * This list must be a flat (non-nested) array of card data objects. Each card
+ * data object may have the following properties:
  *
- * - name:              The name of the card, as usually printed at the top. Example: "Applejack, Element of Honesty".
- * - image:             The name of the image file which represents this card, if known. All images for a particular set
- *                      are stored in the same directory. The location of that directory is defined in the global
- *                      configuration for this app.
- * - set:               The name of the set to which this card belongs. Being fan-made sets, there is generally no
- *                      "official" name for them; in cases where the set didn't have a well-defined name, we have
- *                      attempted to give it an appropriate one.
- * - setCode:           A short code (usually 3 characters) to identify the set.
- * - creator:           The creator of the card. Since each set was mostly created by a single person, this is generally
- *                      the same for all cards in the same set.
- * - cost:              The mana cost of the card in standard Magic format. Example: "4GG".
- * - supertype:         The supertype of this card. Example: "Legendary Creature".
- * - subtype:           The subtype of this card. Example: "Earth Pony".
- * - text:              The card text. Generally, this does not include flavor text. The card text may contain escaped
- *                      newlines (\n). Example: "Reach,hexproof\n\nSpells you cast cannot be countered.".
- * - flavorText:        The card's flavor text. Example: "I didn't learn anything."
- * - pt:                The card's power and toughness. Generally, only creature cards will have this defined. Example:
- *                      "3/3".
- * - loyalty:           The card's loyalty. Generally, only Planeswalkers will have this defined.
- * - transformsInto:    The name of the card that this card transforms into, if it's a double-sided card.
- * - transformsFrom:    The name of the card that this card transforms from, if it's a double-sided card.
- * - artist:            The artist who created the card art.
- * - border:            The type of border this card has (eg. "silver"). If not given, the standard border is assumed.
+ * - name: The name of the card, as usually printed at the top. Example:
+ *  "Applejack, Element of Honesty".
+ * - image: The name of the image file which represents this card, if known. All
+ *   images for a particular set are stored in the same directory. The location
+ *   of that directory is defined in the global configuration for this app.
+ * - set: The name of the set to which this card belongs. Being fan-made sets,
+ *   there is generally no "official" name for them; in cases where the set
+ *   didn't have a well-defined name, I have attempted to give it an appropriate
+ *   one.
+ * - creator: The creator of the card. Since each set was mostly created by a
+ *   single person, this is generally the same for all cards in the same set.
+ * - cost: The mana cost of the card in standard Magic format. Example: "4GG".
+ * - supertype: The supertype of this card. Example: "Legendary Creature".
+ * - subtype: The subtype of this card. Example: "Earth Pony".
+ * - text: The card text. Generally, this does not include flavor text, although
+ *   this is not guaranteed. The card text may contain escaped newlines (\n).
+ *   Example: "Reach, hexproof\n\nSpells you cast cannot be countered.".
+ * - flavorText: The card's flavor text. Example: "I didn't learn anything!"
+ * - watermark: The name of the card's watermark. Example: "Cloudsdale
+ *   Awesomatics"
+ * - pt: The card's power and toughness. Generally, only creature cards will
+ *   have this defined. Example: "3/3".
+ * - loyalty: The card's loyalty. Generally, only Planeswalkers will have this
+ *   defined.
+ * - rarity: The card's rarity: "common", "uncommon", "rare", "mythic rare".
+ * - transformsInto: The name of the card that this card transforms into, if
+ *   it's a double-sided card.
+ * - transformsFrom: The name of the card that this card transforms from, if
+ *   it's a double-sided card.
+ * - artist: The artist who created the card art.
+ * - border: The type of border this card has (eg. "silver"). If not given, the
+ *   standard black border is assumed.
  *
- * Most of these properties are optional; the application will attempt to do the best it can with the data that is
- * available. At the very least, "name" should be set, as this is what the application looks for when a search is made.
+ * Most of these properties are optional; the application will attempt to do
+ * the best it can with the data that is available. At the very least, "name"
+ * should be set, as this is what the application looks for when a search is
+ * made.
  */
 var CARDS = [
     {
@@ -22897,7 +22909,61 @@ var CARDS = [
         'subtype': 'Sunset',
         'text': '+1: Sunset as One deals 2 damage to target opponent and you gain 2 life.\n-1: Target creature gets +2/+0 and gains first strike and deathtouch until your next turn.\n-8: Create a legendary 8/8 white, black, and red Avatar creature token with flying, first strike, haste, vigilance, deathtouch, lifelink, and indestructible named Sunset Equinox.',
         'loyalty': '4',
-
+    },
+    {
+        'name': 'Sunset, Apotheon',
+        'image': 'Sunset-Apotheon.jpg',
+        'creator': 'Zennistrad',
+        'set': 'My Little Planeswalker',
+        'cost': '2WUBRG',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Sunset Harmony',
+        'text': '+2: Add three mana in any combination of colors.\n-3: Exile target permanent.\n-4: Reveal the top seven cards of your library. You may cast a nonland card from among them without paying its mana cost. Put the rest on the bottom of your library in a random order.\n-21: You win the game.',
+        'loyalty': '7',
+    },
+    {
+        'name': 'Sunset, the Heliopath',
+        'image': 'Sunset-the-Heliopath.jpg',
+        'creator': 'Zennistrad',
+        'set': 'My Little Planeswalker',
+        'cost': '1RW',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Sunset',
+        'text': '0: Put a loyalty counter on Sunset, the Heliopath for each color among permanents you control.\n-2: Create Sunset\'s Prominence, a legendary 4/4 red and white Phoenix Avatar creature token with flying, vigilance, and haste. Exile the token at the beginning of your next upkeep.\n-8: You get an emblem with "Creatures you control have double strike, vigilance, and lifelink.',
+        'loyalty': '2',
+    },
+    {
+        'name': 'Twilight, Celestial Scion',
+        'image': 'Twilight-Celestial-Scion.jpg',
+        'creator': 'Zennistrad',
+        'set': 'My Little Planeswalker',
+        'cost': '2URW',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Twilight',
+        'text': '+1: Draw a card and reveal it. If it\'s a noncreature, nonland card, Twilight, Celestia Scion deals 2 damage to any target.\n-3: Until your next turn, your opponents can\'t cast noncreature spells.\n-8: Return all noncreature, nonland cards from your graveyard to your hand. You get an emblem with "You have no maximum hand size" and "Noncreature spells you cast cost 2 less to cast.',
+        'loyalty': '5',
+    },
+    {
+        'name': 'Twilight, Without Hope',
+        'image': 'Twilight-Without-Hope.jpg',
+        'creator': 'Zennistrad',
+        'set': 'My Little Planeswalker',
+        'cost': '1UBR',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Twilight',
+        'text': '0: Draw a card, then sacrifice a permanent.\n0: Choose a number between 1 and 3. Twilight, Without Hope deals that much damage to each creature and twice that much damage to herself.\n:0: Return target creature card from your graveyard to the battlefield. That creature deals damage equal to twice its power to Twilight, Without Hope.',
+        'loyalty': '6',
+    },
+    {
+        'name': 'Wallflower Blush',
+        'image': 'Wallflower-Blush.jpg',
+        'creator': 'Zennistrad',
+        'set': 'My Little Planeswalker',
+        'cost': 'BGU',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Wallflower',
+        'text': '+1: Each player puts the top three cards of their library into their graveyard.\n-2: Creature a 0/1 black and green Plant creature token with "When this creature dies, return target permanent card from your graveyard to your hand."\n-6: You get an emblem with "Once each turn, you may play a card from any graveyard. If an instant or sorcery card cast this way would be put into a graveyard, exile it instead.',
+        'loyalty': '3',
     },
     {
         'name': 'Phyrexian High School',
@@ -22917,7 +22983,6 @@ var CARDS = [
         'text': 'Nonlegendary creatures lose all abilities.\nCreatures you control with no abilities get +2/+2.',
         'flavorText': '“Surrender your individuality. Join us in the harmony of mind and flesh.”',
         'pt': '2/4',
-
     },
     {
         'name': 'Concordant Consecration',
@@ -22928,6 +22993,8 @@ var CARDS = [
         'subtype': 'Aura',
         'text': 'Enchant land\nWhen Concordant Consecration enters the battlefield, remove all -1/-1 counters from creatures you control.\nWhenever enchanted land is tapped for mana, target creature you control gains protection from creatures with infect until end of turn.',
         'flavorText': 'Harmony’s power is anathema to Phyrexia, and her slightest touch can drive away the strongest contagions.',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
     {
         'name': 'Crazy Idea',
@@ -22937,6 +23004,8 @@ var CARDS = [
         'supertype': 'Instant',
         'text': 'Draw three cards, then discard a card at random.',
         'flavorText': 'There’s a very fine line between “crazy enough to work” and “crazy enough to get us all killed.”',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
     {
         'name': 'Carjack',
@@ -22946,7 +23015,8 @@ var CARDS = [
         'supertype': 'Sorcery',
         'text': 'Gain control of target Vehicle until end of turn. Untap it. It gains haste until end of turn. If it’s not a creature, it becomes an artifact creature until end of turn.',
         'flavorText': '”Where did you learn this, Sunset?” Twilight asked.\n“I should probably speak to a lawyer before answering that,” Sunset replied.',
-
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
     {
         'name': 'Phyrexian Junker',
@@ -22957,6 +23027,8 @@ var CARDS = [
         'subtype': 'Construct',
         'text': 'Reach\n1, T, Sacrifice another artifact: Proliferate. (You choose any number of permanents and/or players with counters on them, then give each another counter of a kind already there.)',
         'pt': '2/3',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
     {
         'name': 'Gaea Everfree',
@@ -22968,6 +23040,8 @@ var CARDS = [
         'text': 'Hexproof, menace\nPlayers can’t get counters.\nCreatures can’t have counters placed on them.',
         'flavorText': 'Death’s shadow walks on shards of glittering earth.',
         'pt': '4/3',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
     {
         'name': 'Nightmare in the Woods',
@@ -22977,7 +23051,8 @@ var CARDS = [
         'supertype': 'Sorcery',
         'text': 'When you cast Nightmare in the Woods, any opponent may pay 3 life. If a player does, counter Nightmare in the Woods\nTarget player reveals their hand. You choose a nonland card from it. That player discards that card.',
         'flavorText': '”Filthy creature, you are not chosen. There is nothing to choose you. Your friends are forgetting you, while we are remembering you.”\n—Gaea Everfree',
-
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
     {
         'name': 'Collapse the Cliffs',
@@ -22987,6 +23062,8 @@ var CARDS = [
         'supertype': 'Sorcery',
         'text': 'Destroy target land. Collapse the Cliffs deals 2 damage to each creature without flying and each planeswalker.',
         'flavorText': 'Some stories end in cliffhangers. Others end without any cliffs left to hang from.',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
     {
         'name': 'Phyrexian Antlermaul',
@@ -22998,6 +23075,8 @@ var CARDS = [
         'text': '({g/p} can be paid with either G or 2 life.)\nInfect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nWhen Phyrexian Antlermaul enters the battlefield, you may have it fight target creature you don’t control.',
         'flavorText': 'In Phyrexia, ‘survival of the fittest’ becomes ‘survival of the cruelest.’',
         'pt': '2/3',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
     {
         'name': 'The Dazzling Triad',
@@ -23008,6 +23087,54 @@ var CARDS = [
         'subtype': 'Human Siren',
         'text': '{u/r}, T: Goad target creature you don’t control. Activate this ability only during your turn. (Until your next turn, that creature attacks each combat if able and attacks a player other than you if able.)\nWhenever a creature you don’t control attacks an opponent, defending player loses 1 life and you gain 1 life.',
         'pt': '3/3',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
+    },
+    {
+        'name': 'Tactical Distraction',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2U',
+        'supertype': 'Enchantment',
+        'text': 'Tap three untapped creatures you control: Creatures you control can’t be blocked this turn.',
+        'flavorText': '"You could say it’s the oldest trick in the book," said Sunset, "but it wouldn’t be in the book if it didn’t work."',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
+    },
+    {
+        'name': 'Purposeful Summoning',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2WB',
+        'supertype': 'Sorcery',
+        'text': 'Put your commander onto the battlefield from the command zone.',
+        'flavorText': '"Our purpose is not fulfilled until there are no worlds left uncompleat."\n— Atraxa, Praetors’ Voice',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
+    },
+    {
+        'name': 'Critical Meltdown',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3RR',
+        'supertype': 'Sorcery',
+        'text': 'Exile target artifact. Critical Meltdown deals 5 damage to each creature.',
+        'flavorText': '"To destroy the indestructible is not without consequence, for darksteel never dies alone." — Koth, the Last Vulshok',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
+    },
+    {
+        'name': 'Starlight, Phyrexia’s Wrath',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3RBW',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Demon Horror',
+        'text': 'Flying; lifelink; infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\n\nWhen Starlight, Phyrexia\'s Wrath enters the battlefield, if a source an opponent controlled dealt damage to you since your last turn, it gets +1/+0 and gains haste until end of turn.',
+        'flavorText': '"Compleation is too good for vermin like you. I’ll tear you to shreds before I let you take one more step in my world."',
+        'pt': '3/4',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
     {
         'name': 'Rarity, Gem Weaver',
@@ -23016,7 +23143,7 @@ var CARDS = [
         'cost': '1URB',
         'supertype': 'Legendary Creature',
         'subtype': 'Unicorn Vampire',
-        'text': 'UR, T: Target opponent gains control of target permanent you control.\n\nAt the beginning of your upkeep, each opponent loses X life, where X is the number of permanents you own that your opponents control. You gain life equal to the life lost this way.',
+        'text': 'UR, T: Target opponent gains control of target permanent you control.\n\nAt the beginning of your upkeep, each opponent loses X life, where X is the number of permanents you own that your opponents control. You gain life equal to half the life lost this way, rounded up.',
         'flavorText': '"Be careful with that jewelry, darling. It\'s quite sharp."',
         'pt': '2/4',
         'sourceUrl': 'https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories',
@@ -23126,7 +23253,7 @@ var CARDS = [
         'cost': '3WWW',
         'supertype': 'Legendary Creature',
         'subtype': 'Horse Advisor',
-        'text': 'Alicorn (This card is a Horse, Pegasus, and Unicorn in addition to its other creature types.)\n\nFlying, vigilance\n\nOther Horses, Unicorns, and Pegasi you control get +1/+1 and have vigilance.\n\nWhenever another Horse, Pegasus, or Unicorn enters the battlefield under your control, you gain 2 life.',
+        'text': 'Alicorn (This card is a Horse, Pegasus, and Unicorn in addition to its other creature types.)\n\nFlying, vigilance, lifelink\n\nOther Horses, Unicorns, and Pegasi you control get +1/+1 and have vigilance.\n\nWhenever another Horse, Pegasus, or Unicorn enters the battlefield under your control, you gain 1 life.',
         'pt': '4/4',
         'sourceUrl': 'https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories',
         'notes': 'A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad.',
@@ -23249,30 +23376,40 @@ var CARDS = [
         'notes': 'A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad.',
     },
     {
+        'name': 'Tamiyo’s Memento',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3',
+        'supertype': 'Artifact',
+        'text': 'Whenever a card is put into your graveyard from anywhere other than the battlefield, you gain 1 life.\n\n2, T: Draw a card, then discard a card.',
+        'flavorText': 'A relic of a world lost to darkness, and a memory of a cherished friend.',
+        'sourceUrl': 'https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad.',
+    },
+    {
         'name': 'Rainbow Dash, Wonderbolt',
         'creator': 'Zennistrad',
         'set': 'My Little Planeswalker',
-        'cost': '1RWB',
+        'cost': '2RWB',
         'supertype': 'Legendary Creature',
-        'subtype': 'Pegasus',
-        'text': 'Flying, Haste\n\nWhen Rainbow Dash, Wonderbolt attacks, all combat damage that would be dealt to other creatures you control this turn is dealt to Rainbow Dash instead.\n\nWhenever Rainbow Dash, Wonderbolt deals combat damage to a player, put a +1/+1 counter on Rainbow Dash.',
-        'flavorText': '"I\'ll always have your back. That\'s what makes me the awesomest!"',
-        'pt': '4/2',
-        'sourceUrl': 'https://www.fimfiction.net/blog/761109/mane-6-minus-twilight-as-magic-cards',
-        'notes': 'One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad.',
+        'subtype': 'Pegasus Soldier',
+        'text': 'Flying, haste\n\nRW: All damage that would be dealt to other creatures you control this turn is dealt to Rainbow Dash, Wonderbolt instead.\n\n2WB: Choose target creature attacking you. Return Rainbow from your graveyard to the battlefield blocking that creature. Exile Rainbow at end of combat. If Rainbow would die this turn, exile it instead.',
+        'pt': '5/3',
+        'sourceUrl': 'https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad.',
     },
     {
-        'name': 'Pinkie Pie, Joyful Hedonist',
+        'name': 'Pinkie, Joyful Hedonist',
         'creator': 'Zennistrad',
         'set': 'My Little Planeswalker',
-        'cost': '2BR',
+        'cost': '2BRR',
         'supertype': 'Legendary Creature',
         'subtype': 'Horse',
-        'text': 'Each nonland card you own that isn\'t on the battlefield has madness. The madness cost is equal to the card\'s mana cost.\n\nAt the beginning of your upkeep, discard a card at random.\n\nWhenever you cast a spell for its madness cost, each opponent discards a card at random.',
-        'flavorText': '"All right, partygoers! Are you ready to go KA-RAZY!?"',
-        'pt': '4/1',
-        'sourceUrl': 'https://www.fimfiction.net/blog/761109/mane-6-minus-twilight-as-magic-cards',
-        'notes': 'One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad.',
+        'text': 'Each nonland card you own that isn\'t on the battlefield has madness. The madness cost is equal to the card\'s mana cost reduced by 1.\n\n(If you discard a card with madness, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)\n\nAt the beginning of your upkeep, discard a card at random.',
+        'flavorText': '"What can I say? Sometimes I even surprise myself!"',
+        'pt': '3/3',
+        'sourceUrl': 'https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad.',
     },
     {
         'name': 'Twilight, Thaumatologist',
@@ -23535,5 +23672,780 @@ var CARDS = [
         'flavorText': 'The mind and madness of a lightning storm.',
         'pt': '4/4',
         'sourceUrl': 'https://www.fimfiction.net/blog/790146/the-four-elemental-lords',
+    },
+    {
+        'name': 'Once-Queen Chrysalis',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '4BB',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Insect Horse Shapeshifter',
+        'text': 'Flying; menace; changeling (This card is every creature type.)\n\n4U, T: Create a token that\'s a copy of target creature an opponent controls, except it has "1G, T: This creature fights another target creature with the same name as this creature."',
+        'flavorText': 'Her army deserted, her authority shattered, and her dignity in tatters, Chrysalis still looked in the mirror and saw only perfection.',
+        'pt': '4/4',
+        'sourceUrl': 'https://www.fimfiction.net/blog/825264/friendship-the-gathering-villains-edition',
+        'notes': 'One of 4 villain cards, from a card blog post by Zennistrad.'
+    },
+    {
+        'name': 'Verko, Crimelord of Klugetown',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3BB',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Rat Rogue',
+        'text': 'Assassins, Mercenaries, and other Rogues you control get +1/+1 and have menace.\n\nWhenever a creature you control deals combat damage to a player, that player discards a card.',
+        'flavorText': 'Every crook, thug, and scoundrel south of Equestria answers to him.',
+        'pt': '3/3',
+        'sourceUrl': 'https://www.fimfiction.net/blog/825264/friendship-the-gathering-villains-edition',
+        'notes': 'One of 4 villain cards, from a card blog post by Zennistrad.'
+    },
+    {
+        'name': 'Lord Tirek the Devourer',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3UBR',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Demon Centaur',
+        'text': 'Menace\n\nWhenever Lord Tirek the Devourer attacks, you may put a drain counter on another target creature. For as long as it has a drain counter on it, it loses all abilities and has base power and toughness 1/1.\n\nLord Tirek gets +1/+1 for each creature with a drain counter on it.\n\nWhen Lord Tirek leaves the battlefield, remove all drain counters from all creatures.',
+        'pt': '3/3',
+        'sourceUrl': 'https://www.fimfiction.net/blog/825264/friendship-the-gathering-villains-edition',
+        'notes': 'One of 4 villain cards, from a card blog post by Zennistrad.'
+    },
+    {
+        'name': 'The Storm King',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2GUR',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Yeti Shaman',
+        'text': 'Flash\n\nYou may cast creature spells as though they had flash.\n\nWhenever you cast a creature spell, The Storm King deals X damage to target player, where X is 1 plus the number of creature spells cast before it this turn.',
+        'flavorText': 'Few can distinguish his armies from the lightning that follows.',
+        'pt': '3/4',
+        'sourceUrl': 'https://www.fimfiction.net/blog/825264/friendship-the-gathering-villains-edition',
+        'notes': 'One of 4 villain cards, from a card blog post by Zennistrad.'
+    },
+    {
+        'name': 'Twilight, Soul of Magic',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2URW',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Twilight',
+        'text': '+2: Draw a card, then discard a card. If an instant or sorcery card is discarded this way, draw another card.\n\n-3: Exile target instant or sorcery card from your graveyard. Copy that card, except the copy has lifelink. You may cast the copy this turn.\n\n-12: You may exile an instant or sorcery card from your hand or graveyard. If you do, copy that card three times. You may cast each copy without paying its mana cost.\n\nTwilight, Soul of Magic can be your commander.',
+        'loyalty': '4',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841700/commander-twentyneighnteen-arcane-royalty',
+        'notes': 'A custom card from the "Arcane Royalty" commander set.'
+    },
+    {
+        'name': 'Sun-Tail, War Calligrapher',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2URW',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Fox Samurai',
+        'text': 'First strike; vigilance; bushido 2 (When this blocks or becomes blocked, it gets +2/+2 until end of turn)\n\nWhenever Sun-Tail, War Calligrapher attacks, reveal the top card of your library. If it’s an instant or sorcery card, you may cast it without paying its mana cost. Otherwise, draw a card.',
+        'flavorText': '"She thinks she can kill us with a brush! What a joke!"\n— Bandit Lord Yamamuro, last words',
+        'pt': '2/3',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841700/commander-twentyneighnteen-arcane-royalty',
+        'notes': 'A custom card from the "Arcane Royalty" commander set.'
+    },
+    {
+        'name': 'Martello, Envoy of Trest',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': 'URW',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Elf Advisor',
+        'text': 'Whenever a permanent you control becomes the target of a spell, you gain 1 life.\n\nWhenever a player becomes the target of a spell, each other player draws a card.',
+        'flavorText': '"Apologies, but I’m afraid Leovold isn’t available. Now, shall we discuss the terms of our arrangement?"',
+        'pt': '2/2',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841700/commander-twentyneighnteen-arcane-royalty',
+        'notes': 'A custom card from the "Arcane Royalty" commander set.'
+    },
+    {
+        'name': 'Chancellor\'s Judgment',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3WU',
+        'supertype': 'Sorcery',
+        'text': 'Council\'s dilemma — Starting with you, each player votes yay or neigh. For each player who voted yay, you draw a card. For each player who voted neigh, that player can’t cast spells until your next turn.',
+        'flavorText': 'He follows the law to the letter, and both of them spell ‘no.’',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841700/commander-twentyneighnteen-arcane-royalty',
+        'notes': 'A custom card from the "Arcane Royalty" commander set.'
+    },
+    {
+        'name': 'Magical Mishap',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3RU',
+        'supertype': 'Instant',
+        'text': 'Counter target instant or sorcery spell. Its controller exiles cards from the top of their library until they exile an instant or sorcery card. You may cast that card without paying its mana cost. Then put the exiled cards that weren\'t cast this way on the bottom of that library in a random order.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841700/commander-twentyneighnteen-arcane-royalty',
+        'notes': 'A custom card from the "Arcane Royalty" commander set.'
+    },
+    {
+        'name': 'Turn to the Light',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2RW',
+        'supertype': 'Instant',
+        'text': 'Exile target creature that’s attacking you or a planeswalker you control. At the beginning of your next upkeep, put that card onto the battlefield under your control. It gains haste. Its owner gains control of it at the end of that turn.',
+        'flavorText': 'If only for a moment, once mortal enemies were united in cause.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841700/commander-twentyneighnteen-arcane-royalty',
+        'notes': 'A custom card from the "Arcane Royalty" commander set.'
+    },
+    {
+        'name': 'Biolectric Feedback',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '1RU',
+        'supertype': 'Instant',
+        'text': 'Choose one:\n\n• Counter target creature spell. Biolectric Feedback deals 2 damage to its controller.\n\n• Biolectric Feedback deals 2 damage to target creature and 2 damage to that creature’s controller.',
+        'flavorText': 'New Selesnya evokers quickly learn not to summon in a thunderstorm.',
+        'rarity': 'uncommon',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841700/commander-twentyneighnteen-arcane-royalty',
+        'notes': 'A custom card from the "Arcane Royalty" commander set.'
+    },
+    {
+        'name': 'Discarded Insight',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '1U',
+        'supertype': 'Sorcery',
+        'text': 'You may cast Discarded Insight from your graveyard, but not from your hand.\n\nDraw two cards. Exile Discarded Insight.',
+        'flavorText': '"Now, where did I leave those notes?"',
+        'rarity': 'uncommon',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841700/commander-twentyneighnteen-arcane-royalty',
+        'notes': 'A custom card from the "Arcane Royalty" commander set.'
+    },
+    {
+        'name': 'Scholarly Bargain',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2U',
+        'supertype': 'Sorcery',
+        'text': 'Target opponent may draw two cards. If they do, search your library for a card, put it into your hand, then shuffle your library. Otherwise, scry 2, then draw two cards.',
+        'flavorText': 'A timely exchange of ideas.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841700/commander-twentyneighnteen-arcane-royalty',
+        'notes': 'A custom card from the "Arcane Royalty" commander set.'
+    },
+    {
+        'name': 'Starlight Swirl',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': 'URW',
+        'supertype': 'Instant',
+        'text': 'Starlight Swirl deals 3 damage to any target and you gain 3 life. Look at the top three cards of your library, then put them back in any order.',
+        'flavorText': 'In Equestria, stars are said to be born from long-abandoned dreams. The few who can harness their power weave galaxies of untapped potential.',
+        'rarity': 'uncommon',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841700/commander-twentyneighnteen-arcane-royalty',
+        'notes': 'A custom card from the "Arcane Royalty" commander set.'
+    },
+    {
+        'name': 'Sunset, Radiant Dusk',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '1RWB',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Sunset',
+        'text': '0: Create Sunset Flare, a legendary 3/3 red and white Elemental Avatar creature token with vigilance, lifelink, and haste.\n\n-2: Scry 1. If you gained life this turn, draw a card.\n\n-7: Destroy target artifact, creature, or enchantment. You lose 7 life.\n\nWhenever you gain life, put a loyalty counter on Sunset, Radiant Dusk\n\nSunset, Radiant Dusk can be your commander.',
+        'loyalty': '4',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841997/commander-twentyneighnteen-vital-equinox',
+        'notes': 'A custom card from the "Vital Equinox" commander set.'
+    },
+    {
+        'name': 'Cylia, Anima Arisen',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': 'RWB',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Zombie Elf Shaman',
+        'text': '2, T, Sacrifice another creature: You gain life equal to the sacrificed creature’s power. Then if you gained 5 or more life this turn, each opponent loses 5 life.',
+        'flavorText': '"Life cannot continue while Progenitus remains blind to the world he embodies. Lord Nefarox has shown me that our hope lies only in death."',
+        'pt': '2/3',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841997/commander-twentyneighnteen-vital-equinox',
+        'notes': 'A custom card from the "Vital Equinox" commander set.'
+    },
+    {
+        'name': 'Captain Valenta, Defector',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3RWB',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Vampire Pirate',
+        'text': 'First strike, lifelink, menace\n\nWhenever a nontoken creature you control attacks, create a 2/2 black Vampire Pirate creature token with lifelink and menace that’s tapped and attacking.',
+        'flavorText': '"Forget the Legion and their stuffy old religion. What’s the point of immortality if you don’t have the freedom to enjoy it?"',
+        'pt': '4/3',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841997/commander-twentyneighnteen-vital-equinox',
+        'notes': 'A custom card from the "Vital Equinox" commander set.'
+    },
+    {
+        'name': 'Unfettered Id',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '1RB',
+        'supertype': 'Enchantment',
+        'text': 'Whenever a creature attacks one of your opponents, its controller may have it gain +2/+0 until end of turn. If they do, that creature’s controller sacrifices it at end of combat.',
+        'flavorText': '"Life’s too short not to give it your all."\n— Sinev, Rakdos Riot Mage',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841997/commander-twentyneighnteen-vital-equinox',
+        'notes': 'A custom card from the "Vital Equinox" commander set.'
+    },
+    {
+        'name': 'Afterlife Auction',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3WB',
+        'supertype': 'Sorcery',
+        'text': 'Exile target creature, then each player may bid life. You start the bidding with a bid of any number. In turn order, each player may top the high bid. The bidding ends if the high bid stands. The high bidder loses life equal to the high bid, then creates a number of 1/1 white Spirit creature tokens with flying equal to the power of the exiled creature card.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841997/commander-twentyneighnteen-vital-equinox',
+        'notes': 'A custom card from the "Vital Equinox" commander set.'
+    },
+    {
+        'name': 'Cycle of Souls',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2WB',
+        'supertype': 'Enchantment',
+        'text': 'At the beginning of your upkeep, you may return target creature card with power 3 or less from your graveyard to your hand.',
+        'flavorText': 'For the faithful, there is little distinction between birth and death.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841997/commander-twentyneighnteen-vital-equinox',
+        'notes': 'A custom card from the "Vital Equinox" commander set.'
+    },
+    {
+        'name': 'Ultranova',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': 'X2RW',
+        'supertype': 'Instant',
+        'text': 'This spell can’t be countered.\n\nLifelink\n\nUltranova deals X damage to each creature. The damage can’t be prevented.',
+        'flavorText': '"The flames of justice are not merely a metaphor."\n— Aurelia, the Warleader',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841997/commander-twentyneighnteen-vital-equinox',
+        'notes': 'A custom card from the "Vital Equinox" commander set.'
+    },
+    {
+        'name': 'Sweltering Bargain',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '1R',
+        'supertype': 'Sorcery',
+        'text': 'Choose target opponent. Exile the top card of your library, until the end of your next turn, you may play that card. The chosen opponent may then create a 4/4 red Elemental creature token. If they do, instead you may play the exiled card without paying its mana cost until the end of your next turn.',
+        'flavorText': 'A fiery exchange of passions.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841997/commander-twentyneighnteen-vital-equinox',
+        'notes': 'A custom card from the "Vital Equinox" commander set.'
+    },
+    {
+        'name': 'Eventide’s Gleam',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '1RWB',
+        'supertype': 'Instant',
+        'text': 'Destroy target creature with toughness 3 or less. Eventide’s Gleam deals 3 damage to that creature’s controller and you gain 3 life.',
+        'flavorText': 'Since time immemorial, Heliomancers have known the sun as both a symbol of life’s creation and a harbinger of its final destruction.',
+        'rarity': 'uncommon',
+        'sourceUrl': 'https://www.fimfiction.net/blog/841997/commander-twentyneighnteen-vital-equinox',
+        'notes': 'A custom card from the "Vital Equinox" commander set.'
+    },
+    {
+        'name': 'Wallflower, the Forgotten',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '1BGU',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Wallflower',
+        'text': '+1: Put the top three cards of your library into your graveyard. If at least one of them is a permanent card, create a 0/1 green Plant creature token with defender.\n\n-2: Exile target permanent card in your graveyard or target instant or sorcery card in an opponent’s graveyard. Until the end of your next turn, you may play that card.\n\n-7: Choose up to one card from each player’s graveyard. Put all land cards chosen this way onto the battlefield under your control, then cast all nonland cards chosen this way without paying their mana costs.\n\nWallflower, the Forgotten can be your commander.',
+        'loyalty': '3',
+        'sourceUrl': 'https://www.fimfiction.net/blog/856787/commander-twentyneighnteen-psychic-compost-decklist',
+        'notes': 'A custom card from the "Psychic Compost" commander set.'
+    },
+    {
+        'name': 'Trosis, Simic Outcast',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3GU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Zombie Vedalken',
+        'text': 'XB, T: Exile target creature card from a graveyard with converted mana cost X. Create a token that’s a copy of it, except it’s a green Ooze.\n\nWhen Trosis, Simic Outcast leaves the battlefield, destroy all Ooze tokens, then return all cards exiled with Trosis to their owners’ hands.',
+        'flavorText': '"Why limit inquiry to matters of life when death has such grand possibilities?"',
+        'pt': '2/4',
+        'sourceUrl': 'https://www.fimfiction.net/blog/856787/commander-twentyneighnteen-psychic-compost-decklist',
+        'notes': 'A custom card from the "Psychic Compost" commander set.'
+    },
+    {
+        'name': 'Groza Morz, Mindmulcher',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': 'BGU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Troll',
+        'text': 'Defender, hexproof\n\nWhenever a creature you control with defender is dealt combat damage, each player puts that many cards from the top of their library into their graveyard.',
+        'flavorText': '"Build ‘em filth walls high enough, and people’s brains start rottin’ from the smell."',
+        'pt': '0/5',
+        'sourceUrl': 'https://www.fimfiction.net/blog/856787/commander-twentyneighnteen-psychic-compost-decklist',
+        'notes': 'A custom card from the "Psychic Compost" commander set.'
+    },
+    {
+        'name': 'Underworld Sentinel',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2BB',
+        'supertype': 'Creature',
+        'subtype': 'Hound',
+        'text': 'Deathtouch, lifelink, defender\n\nWhenever one or more creature cards leave a graveyard, if Underworld Sentinel isn’t monstrous, put a +1/+1 counter on it and it becomes monstrous.\n\nAs long as Underworld Sentinel is monstrous, it can attack as though it didn’t have defender.',
+        'pt': '3/3',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/856787/commander-twentyneighnteen-psychic-compost-decklist',
+        'notes': 'A custom card from the "Psychic Compost" commander set.'
+    },
+    {
+        'name': 'Rot Harvester',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2',
+        'supertype': 'Artifact',
+        'text': 'If a spell or ability an opponent controls would exile a card from your graveyard, put that card on the bottom of your library instead.\n\nSacrifice Rot Harvester: Draw a card.',
+        'flavorText': '"To claim death is the opposite of life is the height of arrogance. It is only through death that life finds sustenance."\n— Ezoc, Golgari rot farmer',
+        'rarity': 'uncommon',
+        'sourceUrl': 'https://www.fimfiction.net/blog/856787/commander-twentyneighnteen-psychic-compost-decklist',
+        'notes': 'A custom card from the "Psychic Compost" commander set.'
+    },
+    {
+        'name': 'Dementia Bloom',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '1GU',
+        'supertype': 'Enchantment',
+        'text': 'At the beginning of each player’s upkeep, that player puts the top two cards of their library into their graveyard.\n\nAt the beginning of your precombat main phase, you may exile target land card from a graveyard. If you do, add one mana of any color. Until end of turn, you don’t lose that mana as steps or phases end.',
+        'flavorText': 'The most treasured memories make the best fertilizer.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/856787/commander-twentyneighnteen-psychic-compost-decklist',
+        'notes': 'A custom card from the "Psychic Compost" commander set.'
+    },
+    {
+        'name': 'Mnemonic Squelch',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '1UB',
+        'supertype': 'Instant',
+        'text': 'Counter target instant or sorcery spell an opponent controls, then you and that player each reveal the top card of your library. If both the revealed cards have the same converted mana cost, return Mnemonic Squelch to its owner’s hand. Then put each card revealed this way into its owner’s graveyard.',
+        'flavorText': '"Wait, what was that spell again?"',
+        'rarity': 'uncommon',
+        'sourceUrl': 'https://www.fimfiction.net/blog/856787/commander-twentyneighnteen-psychic-compost-decklist',
+        'notes': 'A custom card from the "Psychic Compost" commander set.'
+    },
+    {
+        'name': 'Necrotic Bargain',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3B',
+        'supertype': 'Sorcery',
+        'text': 'Target opponent may exile up to three cards from your graveyard. If they do, put a creature card from that player’s graveyard onto the battlefield under your control. Otherwise, return a creature card from your graveyard to the battlefield.',
+        'flavorText': 'A deathly exchange of corpses.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/856787/commander-twentyneighnteen-psychic-compost-decklist',
+        'notes': 'A custom card from the "Psychic Compost" commander set.'
+    },
+    {
+        'name': 'Underrealm Genesis',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': 'XBGG',
+        'supertype': 'Sorcery',
+        'text': 'Exile all cards from target player\'s graveyard in a face-down pile, then shuffle that pile. Reveal the top X cards of that pile. You may put any number of permanent cards with converted mana cost X or less from among them onto the battlefield under your control. Then put all other cards in that pile that weren\'t put onto the battlefield into their owner\'s graveyard.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/856787/commander-twentyneighnteen-psychic-compost-decklist',
+        'notes': 'A custom card from the "Psychic Compost" commander set.'
+    },
+    {
+        'name': 'Time Turner, Chronosavant',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '1WUU',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Doctor',
+        'text': '+2: Exile another target permanent you own. Until the end of your next turn, you may return it to the battlefield under your control any time you could cast an instant.\n\n-1: If a permanent entering the battlefield causes a triggered ability of a permanent you control to trigger this turn, that ability triggers an additional time.\n\n-10: Take two extra turns after this one. You can’t activate loyalty abilities of planeswalkers during those turns.\n\nTime Turner, Chronosavant can be your commander',
+        'loyalty': '3',
+        'sourceUrl': 'https://www.fimfiction.net/blog/826421/commander-twentyneighteen-take-ii',
+        'notes': 'A preview custom card from a planned commander set "Blink Through Time".'
+    },
+    {
+        'name': 'Phemera, Riftborn Angel',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3WU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Angel',
+        'text': 'Flying, vigilance\n\nWhenever another creature enters the battlefield under your control from exile, you gain 1 life and draw a card.\n\n2, T: Exile another target creature. Return it to the battlefield under its owner’s control at the beginning of their next upkeep. It gains haste.',
+        'pt': '3/3',
+        'sourceUrl': 'https://www.fimfiction.net/blog/826421/commander-twentyneighteen-take-ii',
+        'notes': 'A preview custom card from a planned commander set "Blink Through Time".'
+    },
+    {
+        'name': 'Rugosi of the Blessed Winds',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '4UW',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Angel',
+        'text': 'Flash\n\nFlying\n\nYou may cast Angel spells as though they had flash.\n\nWhenever Rugosi of the Blessed Winds or another Angel enters the battlefield under your control, you may exile target non-Angel creature you control, then return that card to the battlefield under your control.',
+        'pt': '4/6',
+        'sourceUrl': 'https://www.fimfiction.net/blog/826421/commander-twentyneighteen-take-ii',
+        'notes': 'A preview custom card from a planned commander set "Blink Through Time".'
+    },
+    {
+        'name': 'Clover, Mystic Mind',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3GU',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Clover',
+        'text': '+2: Draw a card, then return a land you control to its owner’s hand. You may play an additional land this turn.\n\n+1: Add an amount of C equal to the number of cards in your hand minus 4.\n\n-10: Put X +1/+1 counters on each creature you control, where X is half the number of cards in your hand, rounded up.\n\nYou have no maximum hand size.\n\nClover, Mystic Mind can be your commander.',
+        'loyalty': '4',
+        'sourceUrl': 'https://www.fimfiction.net/blog/826421/commander-twentyneighteen-take-ii',
+        'notes': 'A preview custom card from a planned commander set "Shamrock\'s Fortune".'
+    },
+    {
+        'name': 'Nuphara, River’s Rose',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2GGUU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Elemental',
+        'text': 'Nuphara, River’s Rose gets +X/+X, where X is the total number of cards in all players’ hands.\n\nYou have no maximum hand size.\n\nAt the beginning of each player’s draw step, that player draws an additional card.\n\nDiscard three cards: Tap Nuphara. It gains hexproof and indestructible until end of turn.',
+        'pt': '0/0',
+        'sourceUrl': 'https://www.fimfiction.net/blog/826421/commander-twentyneighteen-take-ii',
+        'notes': 'A preview custom card from a planned commander set "Shamrock\'s Fortune".'
+    },
+    {
+        'name': 'Opogojo, Lake Tyrant',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '3GU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Serpent',
+        'text': 'Vigilance, trample\n\nLandfall — Whenever a land enters the battlefield under your control, tap target creature an opponent controls. If that land is an Island, that creature doesn’t untap during its controller’s next untap step. If that land is a Forest, put a +1/+1 counter on Opogojo, Lake Tyrant. If that land is nonbasic, put an additional +1/+1 counter on Opogojo.',
+        'pt': '4/4',
+        'sourceUrl': 'https://www.fimfiction.net/blog/826421/commander-twentyneighteen-take-ii',
+        'notes': 'A preview custom card from a planned commander set "Shamrock\'s Fortune".'
+    },
+    {
+        'name': 'Celia, Crystalline Advocate',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '3WW',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Illusion Advisor',
+        'text': 'Creatures can\'t attack you or a planeswalker you control unless their controller pays 2 for each of those creatures.\n\nIf Celia, Crystalline Advocate would die, instead transform it and put three time counters on it.',
+        'flavorText': '"I’m sure we can talk this out rationally..."',
+        'pt': '3/3',
+        'transformsInto': 'Celia’s Gems',
+    },
+    {
+        'name': 'Celia’s Gems',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'supertype': 'Legendary Artifact',
+        'text': 'At the beginning of your upkeep, remove a time counter from Celia’s Gems. Then, if there are no time counters on Celia’s Gems, transform it.',
+        'flavorText': '"... After all, it’s not like I’m going anywhere."\n—Celia Chalcedony',
+        'transformsFrom': 'Celia, Crystalline Advocate',
+    },
+    {
+        'name': 'Blink, Witch of Void',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '3UU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Unicorn Spirit Wizard',
+        'text': 'Hexproof\n\n2U: Choose one —\n\n• Target creature can’t be blocked this turn.\n\n• Target nonland permanent phases out. (While it’s phased out, it’s treated as though it didn’t exist. It phases in before its controller untaps during their next untap step.)',
+        'pt': '2/2',
+    },
+    {
+        'name': 'Nira, the Paincaster',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '3BB',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Unicorn Wizard',
+        'text': 'T: The next time you cast a spell from your hand this turn, you may pay life equal to that spell’s converted mana cost rather than pay its mana cost.\n\nWhenever you pay life, Nira, the Paincaster gains deathtouch and indestructible until end of turn.',
+        'pt': '3/2',
+    },
+    {
+        'name': 'Cinder, Innocent Flame',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '2R',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Unicorn Shaman',
+        'text': 'Whenever a player planeswalks, put a +1/+1 counter on Cinder, Innocent Flame.\n\nXRR, T: Cinder deals X damage to any target. X can’t be greater than Cinder’s power.\n\nEvery new world presents wonders and horrors to wide, orange eyes.',
+        'pt': '1/2',
+    },
+    {
+        'name': 'Swip, Portal Corvette',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '7',
+        'supertype': 'Legendary Artifact Creature',
+        'subtype': 'Construct',
+        'text': 'Flying\n\nAbsorb 2 (If a source could deal damage to this creature, prevent 2 of that damage.)\n\nWhenever Swip, Portal Corvette deals combat damage to a player, you may planeswalk.',
+        'pt': '6/4',
+    },
+    {
+        'name': 'Squiddy, the Instigator',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': 'UR',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Squid Scout',
+        'text': 'U, T: Tap or untap another target creature.\n\nR, T: Squiddy, the Instigator deals 1 damage to any target.',
+        'flavorText': '"Oh, relax. It won’t stain forever."',
+        'pt': '2/1',
+    },
+    {
+        'name': 'Sweetaloo Blume, PsyD',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': 'GWU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Advisor',
+        'text': 'Alicorn (This card is also a Pony Pegasus Unicorn.)\n\nOther creatures you control get +1/+1.\n\nSpells and abilities your opponents control can\'t cause you to discard cards or sacrifice permanents.',
+        'flavorText': '"Somepony’s got to keep them all sane."',
+        'pt': '2/2',
+    },
+    {
+        'name': 'Seren, Quantum Arcanist',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '1URW',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Unicorn Wizard',
+        'text': 'Each noncreature spell you cast cost 1 less to cast for each of its colors.\n\n1BG, T: Return a multicolored card at random from your graveyard to your hand.',
+        'flavorText': '"Pentachromatic mana, you say? Fascinating…"',
+        'pt': '2/3',
+    },
+    {
+        'name': 'Captain Suzie Mash',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '2WU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Human Scout',
+        'text': 'When Captain Suzie Mash enters the battlefield, reveal cards from the top of your library until you reveal a nonlegendary card, then put all cards revealed this way into your hand.\n\nCaptain Suzie Mash has bushido 3 as long as you control a Ninja or Samurai. (Whenever it blocks or becomes blocked, it gets +3/+3 until end of turn.)',
+        'pt': '2/2',
+    },
+    {
+        'name': 'Memelady Burgerbelle',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '2BGU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Elemental',
+        'text': 'Whenever Memelady Burgerbelle attacks, each player puts the top two cards of their library into their graveyard. Then choose a nonland card in a graveyard. You may cast that card without paying its mana cost. If an instant or sorcery spell cast this way would be put into a graveyard this turn, exile it instead.',
+        'pt': '5/5',
+    },
+    {
+        'name': 'Emanation of Shimmy',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '1W',
+        'supertype': 'Creature',
+        'subtype': 'Avatar',
+        'text': 'Lifelink\n\nEmanation of Shimmy’s power and toughness are each equal to the number of creatures you control named Emanation of Shimmy.\n\nA deck can have any number of cards named Emanation of Shimmy.',
+        'pt': '*/*',
+    },
+    {
+        'name': 'Twilence, the Metascribe',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '5UU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Wizard',
+        'text': 'Alicorn (I’m also a Pony Pegasus Unicorn.)\n\nFlying\n\nWhen I enter the battlefield, scry 4.\n\nIf I would leave the battlefield, you may instead put me on top of my owner’s library. Then that player shuffles their library.\n\nWhile you’re searching your library, you may cast me from your library.',
+        'pt': '4/4',
+    },
+    {
+        'name': 'Funny Valentine',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '2R(wu)',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Human Warrior',
+        'text': '(wu)(wu): Exile Funny Valentine. Return it to the battlefield under its owner’s control at the beginning of the next end step.\n\nWhen Valentine enters the battlefield from exile, you may pay XR. When you do, Valentine deals X damage to target creature. If that creature would die this turn, exile it instead.',
+        'pt': '3/4',
+    },
+    {
+        'name': 'Seraphic Command',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '2WU',
+        'supertype': 'Instant',
+        'text': 'Choose two —\n\n• Target player can’t cast instant or sorcery spells this turn.\n\n• Target player can’t activate abilities this turn unless they’re mana abilities.\n\n• Tap all creatures target player controls.\n\n• Counter target spell.',
+    },
+    {
+        'name': 'Evening Sparkle',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': 'WUBRG',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Wizard',
+        'text': 'Alicorn\n\nFlying, first strike\n\nYou may spend mana as though it were mana of any color.\n\nWhen Evening Sparkle dies, if it isn’t a token, create a token that’s a copy of it.',
+        'pt': '4/4',
+    },
+    {
+        'name': 'Skarn the Shaper',
+        'set': 'Merodi is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '1BRG',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Skarn',
+        'text': '+2: You may sacrifice another permanent. If you do, you gain 2 life and draw a card.\n\n-3: Sacrifice another nonland permanent. You may put a permanent card from your hand onto the battlefield.\n\n-9: You get an emblem with "You may sacrifice two permanents rather than pay the mana cost for spells that you cast."',
+        'loyalty': '4',
+    },
+    {
+        'name': 'Chroma, Bringer Of Endless Storms',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '3RR',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Soldier',
+        'text': 'Flying, Haste, Indestructible\n\nAlicorn (This card is a Pegasus Pony Unicorn at all times)\n\n Whenever an opponent would gain control of a creature you control, sacrifice that creature.',
+        'pt': '4/4',
+    },
+    {
+        'name': 'Chroma’s Offer',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': 'XXRR',
+        'supertype': 'Sorcery',
+        'text': 'Gain control of up to X target creatures until end of turn. Untap them and they gain haste.\n\nChroma’s Stormcrows 1RR\n\nCreature – Bird Spirit\n\nFlying, Prowess\n\n2/2',
+    },
+    {
+        'name': 'Chroma’s Fury',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': 'RR',
+        'supertype': 'Instant',
+        'text': 'Deal 3 damage to each non-Pegasus, non-Pony, non-Unicorn creature.'
+    },
+    {
+        'name': 'Baroness Adagio Dazzle',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '2WB',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Unicorn Noble',
+        'text': 'First strike\n\nAt the beginning of your upkeep, you may add or remove a verse counter from target permanent.\n\n1WW: Creatures you control get +1/+1 until end of turn.\n\n1BB: Creatures you do not control get -1/-1 until end of turn.',
+        'pt': '2/2',
+    },
+    {
+        'name': 'Starlight Glimmer',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '2WU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Unicorn Wizard',
+        'text': '2WU: Detain target creature. (Until your next turn, that creature can’t attack or block and its activated abilities can’t be activated)\n\n2U, Tap: Copy target instant or sorcery spell you control. You may choose new targets for the copy.',
+        'pt': '1/2',
+    },
+    {
+        'name': 'Sonata Dusk',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '1GW',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Pony Chef',
+        'text': 'Whenever Sonata Dusk becomes untapped, create a colorless Taco artifact token with "2, Sacrifice this token: Gain 3 life or put a +1/+1 counter on target creature."',
+        'pt': '1/3',
+    },
+    {
+        'name': 'Lightning Dust',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '1BR',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Pegasus Soldier',
+        'text': 'Flying\n\nTap, Exert Lightning Dust: Lightning Dust deals damage equal to its power to target creature or player.',
+        'pt': '2/2',
+    },
+    {
+        'name': 'Aria Blaze',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '1GR',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Pegasus Warrior',
+        'text': 'Flying\n\nWhenever Aria Blaze attacks, you may put a 1/1 white Legendary Bird creature token named Deathclaw into play tapped and attacking. Exile it at the end of your turn.',
+        'pt': '2/3',
+    },
+    {
+        'name': 'Suri Polomare',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '1RW',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Pony Artificer',
+        'text': 'When Suri Polomare enters the battlefield, you may search your library for an Equipment card and put it on the battlefield.',
+        'pt': '2/2',
+    },
+    {
+        'name': 'Staff of Generosity',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '4',
+        'supertype': 'Legendary Artifact',
+        'subtype': 'Equipment',
+        'text': 'Equip 0\n\nStaff of Generosity can only be equipped to a blue permanent.\n\nEquipped creature gets +1/+0.\n\nWhenever equipped creature activates an activated ability, copy that ability. You may choose new targets for the copy.\n\nEquipped creature has "Tap: Put a generosity counter on target creature. Remove that counter at the end of turn."',
+    },
+    {
+        'name': 'Crossbow of Laughter',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '4',
+        'supertype': 'Legendary Artifact',
+        'subtype': 'Equipment',
+        'text': 'Equip 0\n\nCrossbow of Laughter can only be equipped to a black permanent.\n\nEquipped creature has "Tap, Exert equipped creature: Equipped creature gains lifelink until end of turn, then deals damage equal to twice its power to target creature or player."\n\nEquipped creature has "Tap: Put a laughter counter on target creature. Remove that counter at the end of turn."',
+    },
+    {
+        'name': 'Frying Pan of Kindness',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '4',
+        'supertype': 'Legendary Artifact',
+        'subtype': 'Equipment',
+        'text': 'Equip 0\n\nFrying Pan of Kindness can only be equipped to a white permanent.\n\nEquipped creature has "Whenever a creature would block or be blocked by this creature, remove it from combat and tap it. It does not untap during its controller’s next untap step."\n\nEquipped creature has "Tap: Put a kindness counter on target permanent. Remove that counter at the end of turn."',
+    },
+    {
+        'name': 'Gauntlets of Honesty',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '4',
+        'supertype': 'Legendary Artifact',
+        'subtype': 'Equipment',
+        'text': 'Equip 0\n\nGauntlets of Honesty can only be equipped to a green permanent.\n\nEquipped creature gets +2/+2, trample, and hexproof.\n\nEquipped creature has "Tap: put an honesty counter on target permanent. Remove that counter at the end of turn."',
+    },
+    {
+        'name': 'Needle of Loyalty',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '4',
+        'supertype': 'Legendary Artifact',
+        'subtype': 'Equipment',
+        'text': 'Equip 0\n\nNeedle of Loyalty can only be equipped to a red permanent.\n\nEquipped creature gets "Tap: Target creature can’t attack or block until end of turn" and "Tap: Put a loyalty counter on target permanent. Remove that counter at the end of turn."',
+    },
+    {
+        'name': 'Rapier of Friendship',
+        'set': 'Friendship is Card Games: When It Rains',
+        'creator': 'Void Knight',
+        'cost': '4',
+        'supertype': 'Legendary Artifact',
+        'subtype': 'Equipment',
+        'text': 'Equip 0\n\nRapier of Friendship can only be equipped to a multicolored permanent.\n\nEquipped creature gets +2/+1 and first strike. If equipped creature already had first strike, it gets double strike.\n\nEquipped creature has "Tap, Remove an honesty counter, a generosity counter, a loyalty counter, a kindness counter, and a laughter counter from this creature: Exile all permanents. You may return any number of those permanents to the battlefield under their owners’ control. Put the rest on top of their owners’ libraries in random order."',
     },
 ];
