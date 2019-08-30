@@ -1,3 +1,6 @@
+## 1.9.2
+* Updated "My Little Planeswalker" with all known latest cards.
+
 ## 1.9.1
 * Added card rarity to displayed properties.
 * Added card rarity to searchable properties.

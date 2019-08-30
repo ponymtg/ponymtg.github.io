@@ -1,6 +1,7 @@
 /**
- * This class contains data for cards that are currently being left out of the database for various reasons; usually
- * because they're beta versions of other cards, and including them would be redundant.
+ * This class contains data for cards that are currently being left out of the
+ * database for various reasons; usually because they're beta versions of other
+ * cards, and including them would be redundant.
  */
 var UNUSED_CARDS = [
     {
@@ -137,5 +138,57 @@ var UNUSED_CARDS = [
         'pt': '4/1',
         'sourceUrl': 'https://www.fimfiction.net/blog/761109/mane-6-minus-twilight-as-magic-cards',
         'notes': 'One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Sideboard Stories.',
+    },
+    {
+        'name': 'Sunset as One',
+        'image': 'Sunset-as-One.jpg',
+        'creator': 'Zennistrad',
+        'set': 'My Little Planeswalker',
+        'cost': '2WBR',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Sunset',
+        'text': '+1: Sunset as One deals 2 damage to target player and you gain 2 life.\n-2: Target creature gets +2/+0 and gains first strike and deathtouch until your next turn.\n-8: Create a legendary 8/8 white, black, and red Avatar creature token with flying, first strike, haste, vigilance, deathtouch, lifelink, and indestructible named Sunset Equinox.',
+        'loyalty': '4',
+        'sourceUrl': 'https://www.fimfiction.net/blog/797686/my-little-planeswalker-but-the-planeswalkers-are-actual-cards',
+        'notes': 'One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Shattered Sunset.',
+    },
+    {
+        'name': 'Sunset as One',
+        'image': 'Sunset-as-One-2.jpg',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2RWB',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Sunset',
+        'text': '+1: Sunset as One deals 2 damage to target player and you gain 2 life.\n-2: Target creature gets +2/+0 and gains first strike and deathtouch until your next turn.\n-8: Create Sunset Equinox, a legendary 8/8 red, white, and black Avatar creature token with flying, first strike, haste, vigilance, deathtouch, lifelink, and indestructible.',
+        'loyalty': '4',
+        'sourceUrl': 'https://www.fimfiction.net/blog/817451/my-little-planeswalker-cards-take-2',
+        'notes': 'One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Shattered Sunset.',
+    },
+    {
+        'name': 'Twilight, Alicorn Ascendant',
+        'image': 'Twilight-Alicorn-Ascendant.jpg',
+        'creator': 'Zennistrad',
+        'set': 'My Little Planeswalker',
+        'cost': '1URW',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Twilight',
+        'text': '+1: Twilight deals 1 damage to up to one target creature. Up to one other target creature gains prowess until end of turn.\n-1: Discard a card, then draw two cards.\n-6: You get an emblem with “Whenever you cast an instant or sorcery spell from your hand, return that card to your hand as it resolves” and “You have no maximum hand size.”',
+        'loyalty': '3',
+        'sourceUrl': 'https://www.fimfiction.net/blog/817451/my-little-planeswalker-cards-take-2',
+        'notes': 'One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Twilight\'s Spark.',
+    },
+    {
+        'name': 'Sunset, Apotheon',
+        'image': 'Sunset-Apotheon.jpg',
+        'creator': 'Zennistrad',
+        'set': 'My Little Planeswalker',
+        'cost': '2WUBRG',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Sunset Harmony',
+        'text': '+2: Add three mana in any combination of colors.\n-3: Exile target permanent.\n-4: Reveal the top seven cards of your library. You may cast a nonland card from among them without paying its mana cost. Put the rest on the bottom of your library in a random order.\n-21: You win the game.',
+        'loyalty': '7',
+        'sourceUrl': 'https://www.fimfiction.net/blog/817451/my-little-planeswalker-cards-take-2',
+        'notes': 'This card was originally posted on Zennistrad\'s blog as a spoiler for a future My Little Planeswalker story. A refined version of this card later appeared in My Little Planeswalker: Glimmering Oil.',
     },
 ];

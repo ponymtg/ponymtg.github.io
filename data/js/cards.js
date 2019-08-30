@@ -1,6 +1,6 @@
 /**
  * The master list of cards. The majority of cards should be kept in this list.
- * There are a couple of exceptions, notably Friendship is Card Games, which we
+ * There are a couple of exceptions, notably Friendship is Card Games, which I
  * prefer to keep in a separate list for ease of updating.
  *
  * This list must be a flat (non-nested) array of card data objects. Each card
@@ -22592,7 +22592,7 @@ var CARDS = [
         'cost': '1URW',
         'supertype': 'Legendary Planeswalker',
         'subtype': 'Twilight',
-        'text': '+1: Twilight deals 1 damage to up to one target creature. Up to one other target creature gains prowess until end of turn.\n-1: Discard a card, then draw two cards.\n-6: You get an emblem with “whenever you cast an instant or sorcery spell from your hand, you may return that card to your hand as it resolves” and “you have no maximum hand size.”',
+        'text': '+1: Twilight deals 1 damage to up to one target creature. Up to one other target creature gains prowess until end of turn.\n-1: Discard a card. If you do, draw two cards.\n-6: You get an emblem with “You have no maximum hand size” and “Whenever you cast an instant or sorcery spell from your hand, you may put that card into your hand instead of into your graveyard as it resolves.”',
         'loyalty': '3',
         'sourceUrl': 'https://www.fimfiction.net/story/382734/my-little-planeswalker-twilights-spark',
         'notes': 'A chapter card from the fic My Little Planeswalker: Twilight\'s Spark, by Zennistrad.',
@@ -22851,6 +22851,8 @@ var CARDS = [
         'supertype': 'Instant',
         'text': 'Rainbow Dash’s Defeat deals 3 damage to target creature or player and you gain 3 life. If a creature named Rainbow Dash, Wonderbolt is dealt damage this way, its controller loses 3 life.',
         'flavorText': '“Live for the ‘Bolts, die by the bolt. Or something like that.”\n— Sunset the Exiled',
+        'sourceUrl': 'https://www.fimfiction.net/story/387331/my-little-planeswalker-shattered-sunset',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad.',
     },
     {
         'name': 'Applejack’s Defeat',
@@ -22860,6 +22862,8 @@ var CARDS = [
         'supertype': 'Instant',
         'text': 'Create a 1/1 green insect creature token with flying and deathtouch. When a creature named Applejack, Orchard Tender dies this turn, its controller sacrifices a land.',
         'flavorText': '“I’ll admit, your trees make for excellent firewood.”\n— Sunset the Exiled',
+        'sourceUrl': 'https://www.fimfiction.net/story/387331/my-little-planeswalker-shattered-sunset',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad.',
     },
     {
         'name': 'Rarity’s Defeat',
@@ -22869,7 +22873,8 @@ var CARDS = [
         'supertype': 'Sorcery',
         'text': 'Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. If that creature is named Rarity, Gem Weaver, sacrifice it at the beginning of the next end step.',
         'flavorText': '“You remind me of your clothing. Pretty, but useless.”\n— Sunset the Exiled',
-
+        'sourceUrl': 'https://www.fimfiction.net/story/387331/my-little-planeswalker-shattered-sunset',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad.',
     },
     {
         'name': 'Pinkie Pie’s Defeat',
@@ -22879,7 +22884,8 @@ var CARDS = [
         'supertype': 'Sorcery',
         'text': 'Destroy target creature. Then, if that creature was named Pinkie, Joyful Hedonist, exile all cards from its controller’s graveyard.',
         'flavorText': '“Oh, don’t look so glum. I’m smiling, aren’t I?”\n— Sunset the Exiled',
-
+        'sourceUrl': 'https://www.fimfiction.net/story/387331/my-little-planeswalker-shattered-sunset',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad.',
     },
     {
         'name': 'Incepted Insight',
@@ -22889,6 +22895,8 @@ var CARDS = [
         'supertype': 'Sorcery',
         'text': 'Search another target player’s library for a card and exile it. That player puts that card into his or her hand, then shuffles his or her library afterwards.',
         'flavorText': 'Ideas are only as valuable as the person who has them.',
+        'sourceUrl': 'https://www.fimfiction.net/story/387331/my-little-planeswalker-shattered-sunset',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad.',
     },
     {
         'name': 'Celestia’s Defeat',
@@ -22898,28 +22906,30 @@ var CARDS = [
         'supertype': 'Instant',
         'text': 'Exile target creature with power 4 or greater. If that creature was named Celestia of the Dawn, you may search your library for a basic Plains card and put it onto the battlefield tapped. If you do, shuffle your library afterwards.',
         'flavorText': '“I’m sorry, Princess, but you’re the one who made this happen.”\n— Sunset the Exiled',
+        'sourceUrl': 'https://www.fimfiction.net/story/387331/my-little-planeswalker-shattered-sunset',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad.',
     },
     {
         'name': 'Sunset as One',
-        'image': 'Sunset-as-One.jpg',
-        'creator': 'Zennistrad',
         'set': 'My Little Planeswalker',
-        'cost': '2WRB',
+        'creator': 'Zennistrad',
+        'cost': '2RWB',
         'supertype': 'Legendary Planeswalker',
         'subtype': 'Sunset',
-        'text': '+1: Sunset as One deals 2 damage to target opponent and you gain 2 life.\n-1: Target creature gets +2/+0 and gains first strike and deathtouch until your next turn.\n-8: Create a legendary 8/8 white, black, and red Avatar creature token with flying, first strike, haste, vigilance, deathtouch, lifelink, and indestructible named Sunset Equinox.',
+        'text': '+1: Sunset as One deals 2 damage to target opponent and you gain 2 life.\n-1: Target creature gets +2/+0 and gains first strike and deathtouch until your next turn.\n-8: Create a legendary 8/8 red, white, and black Avatar creature token with flying, first strike, haste, vigilance, deathtouch, lifelink, and indestructible named Sunset Equinox.',
         'loyalty': '4',
+        'sourceUrl': 'https://www.fimfiction.net/story/387331/my-little-planeswalker-shattered-sunset',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad.',
     },
     {
-        'name': 'Sunset, Apotheon',
-        'image': 'Sunset-Apotheon.jpg',
+        'name': 'Phyrexian High School',
         'creator': 'Zennistrad',
         'set': 'My Little Planeswalker',
-        'cost': '2WUBRG',
-        'supertype': 'Legendary Planeswalker',
-        'subtype': 'Sunset Harmony',
-        'text': '+2: Add three mana in any combination of colors.\n-3: Exile target permanent.\n-4: Reveal the top seven cards of your library. You may cast a nonland card from among them without paying its mana cost. Put the rest on the bottom of your library in a random order.\n-21: You win the game.',
-        'loyalty': '7',
+        'supertype': 'Land',
+        'text': 'T: Add C to your mana pool.\n5, T, pay 2 life: Target creature gains infect until end of turn. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)',
+        'flavorText': 'Where independent thought goes to die.',
+        'sourceUrl': 'https://www.fimfiction.net/story/387331/my-little-planeswalker-shattered-sunset',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad.',
     },
     {
         'name': 'Sunset, the Heliopath',
@@ -22931,6 +22941,8 @@ var CARDS = [
         'subtype': 'Sunset',
         'text': '0: Put a loyalty counter on Sunset, the Heliopath for each color among permanents you control.\n-2: Create Sunset\'s Prominence, a legendary 4/4 red and white Phoenix Avatar creature token with flying, vigilance, and haste. Exile the token at the beginning of your next upkeep.\n-8: You get an emblem with "Creatures you control have double strike, vigilance, and lifelink.',
         'loyalty': '2',
+        'sourceUrl': 'https://www.fimfiction.net/blog/817451/my-little-planeswalker-cards-take-2',
+        'notes': 'A spoiler card for an upcoming My Little Planeswalker story, from a card blog post by Zennistrad.',
     },
     {
         'name': 'Twilight, Celestial Scion',
@@ -22942,6 +22954,8 @@ var CARDS = [
         'subtype': 'Twilight',
         'text': '+1: Draw a card and reveal it. If it\'s a noncreature, nonland card, Twilight, Celestia Scion deals 2 damage to any target.\n-3: Until your next turn, your opponents can\'t cast noncreature spells.\n-8: Return all noncreature, nonland cards from your graveyard to your hand. You get an emblem with "You have no maximum hand size" and "Noncreature spells you cast cost 2 less to cast.',
         'loyalty': '5',
+        'sourceUrl': 'https://www.fimfiction.net/blog/817451/my-little-planeswalker-cards-take-2',
+        'notes': 'A spoiler card for an upcoming My Little Planeswalker story, from a card blog post by Zennistrad.',
     },
     {
         'name': 'Twilight, Without Hope',
@@ -22953,6 +22967,8 @@ var CARDS = [
         'subtype': 'Twilight',
         'text': '0: Draw a card, then sacrifice a permanent.\n0: Choose a number between 1 and 3. Twilight, Without Hope deals that much damage to each creature and twice that much damage to herself.\n:0: Return target creature card from your graveyard to the battlefield. That creature deals damage equal to twice its power to Twilight, Without Hope.',
         'loyalty': '6',
+        'sourceUrl': 'https://www.fimfiction.net/blog/817451/my-little-planeswalker-cards-take-2',
+        'notes': 'A spoiler card for an upcoming My Little Planeswalker story, from a card blog post by Zennistrad.',
     },
     {
         'name': 'Wallflower Blush',
@@ -22964,14 +22980,8 @@ var CARDS = [
         'subtype': 'Wallflower',
         'text': '+1: Each player puts the top three cards of their library into their graveyard.\n-2: Creature a 0/1 black and green Plant creature token with "When this creature dies, return target permanent card from your graveyard to your hand."\n-6: You get an emblem with "Once each turn, you may play a card from any graveyard. If an instant or sorcery card cast this way would be put into a graveyard, exile it instead.',
         'loyalty': '3',
-    },
-    {
-        'name': 'Phyrexian High School',
-        'creator': 'Zennistrad',
-        'set': 'My Little Planeswalker',
-        'supertype': 'Land',
-        'text': 'T: Add C to your mana pool.\n5, T, pay 2 life: Target creature gains infect until end of turn. (It deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)',
-        'flavorText': 'Where independent thought goes to die.',
+        'sourceUrl': 'https://www.fimfiction.net/blog/817451/my-little-planeswalker-cards-take-2',
+        'notes': 'A spoiler card for an upcoming My Little Planeswalker story, from a card blog post by Zennistrad.',
     },
     {
         'name': 'Starlight, Voice of Oneness',
@@ -22983,6 +22993,8 @@ var CARDS = [
         'text': 'Nonlegendary creatures lose all abilities.\nCreatures you control with no abilities get +2/+2.',
         'flavorText': '“Surrender your individuality. Join us in the harmony of mind and flesh.”',
         'pt': '2/4',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
     {
         'name': 'Concordant Consecration',
@@ -23133,6 +23145,18 @@ var CARDS = [
         'text': 'Flying; lifelink; infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\n\nWhen Starlight, Phyrexia\'s Wrath enters the battlefield, if a source an opponent controlled dealt damage to you since your last turn, it gets +1/+0 and gains haste until end of turn.',
         'flavorText': '"Compleation is too good for vermin like you. I’ll tear you to shreds before I let you take one more step in my world."',
         'pt': '3/4',
+        'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
+        'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
+    },
+    {
+        'name': 'Sunset, Apotheon',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2WUBRG',
+        'supertype': 'Legendary Planeswalker',
+        'subtype': 'Sunset Harmony',
+        'text': '+2: Scry 2, then add three mana in any combination of colors.\n-3: Exile target permanent.\n-7: Reveal the top seven cards of your library. You may cast any number of nonland cards from among them with total converted mana cost seven or less without paying their mana costs. Put the rest on the bottom of your library in a random order.\n-21: You win the game.',
+        'loyalty': '7',
         'sourceUrl': 'https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil',
         'notes': 'A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.',
     },
@@ -24107,22 +24131,22 @@ var CARDS = [
         'cost': '3GU',
         'supertype': 'Legendary Planeswalker',
         'subtype': 'Clover',
-        'text': '+2: Draw a card, then return a land you control to its owner’s hand. You may play an additional land this turn.\n\n+1: Add an amount of C equal to the number of cards in your hand minus 4.\n\n-10: Put X +1/+1 counters on each creature you control, where X is half the number of cards in your hand, rounded up.\n\nYou have no maximum hand size.\n\nClover, Mystic Mind can be your commander.',
+        'text': 'You have no maximum hand size.\n\n+2: Draw a card, then return a land you control to its owner’s hand. You may play an additional land this turn.\n\n+1: Add an amount of C equal to the number of cards in your hand minus 4.\n\n-10: Put X +1/+1 counters on each creature you control, where X is half the number of cards in your hand, rounded up.\n\nClover, Mystic Mind can be your commander.',
         'loyalty': '4',
-        'sourceUrl': 'https://www.fimfiction.net/blog/826421/commander-twentyneighteen-take-ii',
-        'notes': 'A preview custom card from a planned commander set "Shamrock\'s Fortune".'
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
     },
     {
         'name': 'Nuphara, River’s Rose',
         'set': 'My Little Planeswalker',
         'creator': 'Zennistrad',
-        'cost': '2GGUU',
+        'cost': 'GGGUUU',
         'supertype': 'Legendary Creature',
-        'subtype': 'Elemental',
-        'text': 'Nuphara, River’s Rose gets +X/+X, where X is the total number of cards in all players’ hands.\n\nYou have no maximum hand size.\n\nAt the beginning of each player’s draw step, that player draws an additional card.\n\nDiscard three cards: Tap Nuphara. It gains hexproof and indestructible until end of turn.',
+        'subtype': 'Elemental Shaman',
+        'text': 'Nuphara, River’s Rose gets +X/+X, where X the number of cards in your hand.\n\nYou have no maximum hand size.\n\nAt the beginning of your draw step, draw an additional card.\n\nDiscard three cards: Nuphara gains indestructible until end of turn. Prevent all damage it would deal this turn.',
         'pt': '0/0',
-        'sourceUrl': 'https://www.fimfiction.net/blog/826421/commander-twentyneighteen-take-ii',
-        'notes': 'A preview custom card from a planned commander set "Shamrock\'s Fortune".'
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
     },
     {
         'name': 'Opogojo, Lake Tyrant',
@@ -24131,10 +24155,120 @@ var CARDS = [
         'cost': '3GU',
         'supertype': 'Legendary Creature',
         'subtype': 'Serpent',
-        'text': 'Vigilance, trample\n\nLandfall — Whenever a land enters the battlefield under your control, tap target creature an opponent controls. If that land is an Island, that creature doesn’t untap during its controller’s next untap step. If that land is a Forest, put a +1/+1 counter on Opogojo, Lake Tyrant. If that land is nonbasic, put an additional +1/+1 counter on Opogojo.',
+        'text': 'Vigilance, trample\n\nLandfall — Whenever a land enters the battlefield under your control, tap up to one target creature an opponent controls. If that land is an Island, that creature doesn’t untap during its controller’s next untap step. If that land is a Forest, put a +1/+1 counter on Opogojo, Lake Tyrant. If that land is nonbasic, draw a card.',
         'pt': '4/4',
-        'sourceUrl': 'https://www.fimfiction.net/blog/826421/commander-twentyneighteen-take-ii',
-        'notes': 'A preview custom card from a planned commander set "Shamrock\'s Fortune".'
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
+    },
+    {
+        'name': 'Verdant Bargain',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2G',
+        'supertype': 'Sorcery',
+        'text': 'Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library. Target opponent may search their library for a basic land card, put it onto the battlefield tapped, then shuffle their library. If they do, untap up to four lands.',
+        'flavorText': 'An earthly exchange of horizons.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
+    },
+    {
+        'name': 'Mark of Nuphara',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2GG',
+        'supertype': 'Enchantment',
+        'subtype': 'Aura',
+        'text': 'Enchanted creature gets +1/+1 for each card in your hand.\n\nDiscard two cards: Enchanted creature gains hexproof until end of turn.',
+        'flavorText': 'Aspiring shapers seek the teachings of the River’s Rose, drawing strength from boundless imagination.',
+        'rarity': 'uncommon',
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
+    },
+    {
+        'name': 'Infornado',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '4UU',
+        'supertype': 'Sorcery',
+        'text': 'Each player discards all cards in their hand, then draws that many cards. Return all nonland permanents with converted mana cost X or less to their owners\' hands, where X is the greatest number of cards drawn this way.',
+        'flavorText': '"Due to damages from an unauthorized gnostikinesis spell, tuition will increase by 2000%."\n\n— Notice from Breyon Lennis, Tolarian Adjunct',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
+    },
+    {
+        'name': 'Tolarian Adjunct',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2U',
+        'supertype': 'Creature',
+        'subtype': 'Human Wizard',
+        'text': 'When you cast this spell, reveal any number of blue cards in your hand. Tolarian Adjunct enters the battlefield with that many lore counters on it.\n\nU, T, Remove all lore counters from Tolarian Adjunct: Counter target spell unless its controller pays 1 for each counter removed this way.',
+        'flavorText': 'As tuition rises, many students ask if it\'s worth it to attend.',
+        'pt': '1/2',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
+    },
+    {
+        'name': 'Identity Anchor',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2',
+        'supertype': 'Artifact',
+        'text': 'Permanents can\'t become copies or enter the battlefield as copies.\n\nTokens that are copies can\'t be created.\n\n3, T, Sacrifice Identity Anchor: Create a token that\'s a copy of target creature you control.',
+        'flavorText': 'Hold fast or you\'ll lose yourself.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
+    },
+    {
+        'name': 'Star Swirl the Bearded',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '5UU',
+        'supertype': 'Legendary Creature',
+        'subtype': 'Unicorn Wizard',
+        'text': 'Once during each of your turns, rather than pay the mana cost for a spell you cast, you may pay 1 life and exile a card from your hand that shares a color with that spell.',
+        'flavorText': '"The universe contains vast possibilities. Learn what is possible, and you will master the universe itself."',
+        'pt': '4/4',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
+    },
+    {
+        'name': 'Ethereal Conservation',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': '2GU',
+        'supertype': 'Enchantment',
+        'text': 'Lands you control have hexproof.\n\nUntapped lands you control have indestructible.\n\nGU, Sacrifice Ethereal Conservation: All tapped lands you control phase out. (While they\'re phased out, they\'re treated as though they don\'t exist. They phase in before you untap during your untap step.)',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
+    },
+    {
+        'name': 'Sundering Runes',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': 'GU',
+        'supertype': 'Instant',
+        'text': 'Choose one:\n\n• Destroy target artifact or enchantment.\n\n• Counter target artifact or enchantment spell.',
+        'rarity': 'uncommon',
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
+    },
+    {
+        'name': 'Mythic Divination',
+        'set': 'My Little Planeswalker',
+        'creator': 'Zennistrad',
+        'cost': 'GGU',
+        'supertype': 'Enchantment',
+        'text': 'As Mythic Divination enters the battlefield, choose Past, Present, or Future.\n\n• Past — You may play land cards from your graveyard.\n\n• Present — Creature spells you control can\'t be countered.\n\n• Future — At the beginning of your upkeep, Scry 1.',
+        'rarity': 'rare',
+        'sourceUrl': 'https://www.fimfiction.net/blog/867397/commander-twentyneighteen-decklists-shamrocks-fortune',
+        'notes': 'A custom card from the "Shamrock\'s Fortune" commander set.'
     },
     {
         'name': 'Celia, Crystalline Advocate',
