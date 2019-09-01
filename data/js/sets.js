@@ -10,10 +10,16 @@ var SETS = {
         'path': 'Shards of Equestria/Shards of Equestria pack/cards',
     },
     'Nightfall in Equestria': {
-        'path': 'Nightfall 1.15/cards',
+        'path': 'DoomSp0rk/Nightfall 1.15/cards',
         'creator': 'DoomSp0rk',
         'url': 'http://www.fimtg-nightfall.com/',
-        'notes': '<i>Nightfall in Equestria</i> is the first set in a planned 3-set block of completely custom pony MTG cards.',
+        'notes': '<i>Nightfall in Equestria</i> is the first set in a planned 3-set block of custom pony MTG cards, created by Christopher Blendermann (DoomSp0rk)',
+    },
+    'Empire of Shadows (PREVIEW)': {
+        'path': 'DoomSp0rk/Empire of Shadows/cards',
+        'creator': 'DoomSp0rk',
+        'url': 'https://www.artstation.com/artwork/XQLdL',
+        'notes': '<i>Empire of Shadows</i> is the second set in a planned 3-set block of completely custom pony MTG cards, created by Christopher Blendermann (DoomSp0rk). This set is unfinished, so some cards are missing artwork.',
     },
     'Ponylude': {
         'path': 'Ponylude/cards',

@@ -1,3 +1,6 @@
+## 1.9.3
+* Added "Empire of Shadows (PREVIEW)" set.
+
 ## 1.9.2
 * Updated "My Little Planeswalker" with all known latest cards.
 
