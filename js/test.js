@@ -11,7 +11,8 @@ var tests = [
     testConvertManaCost,
     testGetCostManaTypes,
     testIsSplitManaSymbol,
-    testTokenizeString
+    testTokenizeString,
+    testGetCardColorSchemeFromManaCost,
 ];
 
 function test() {
@@ -474,6 +475,124 @@ function testTokenizeString() {
     UTIL.assertEquals('DDDD', tokenizedString[7]);
     UTIL.assertEquals('4', tokenizedString[8]);
     UTIL.assertEquals('EEEEE', tokenizedString[9]);
+
+    // Try a more standard test. In this test, the expected tokens are `1`
+    // (which matches `/\d+/`, and `(wu)` (which matches `/\(WU\)/`).
+    //
+    // Even though we are also checking for the tokens `/W/` and `/U/`, we
+    // expect that these will not be picked up because `/\(WU\)/` would match
+    // before either of those.
+    tokenizedString = tokenizeString(
+        '1(wu)',
+        [/\d+/, /W/, /U/, /\(WU\)/]
+    );
+
+    UTIL.assertEquals(4, tokenizedString.length);
+    UTIL.assertEquals('', tokenizedString[0]);
+    UTIL.assertEquals('1', tokenizedString[1]);
+    UTIL.assertEquals('', tokenizedString[2]);
+    UTIL.assertEquals('(wu)', tokenizedString[3]);
+
+    // Test for token idempotence. This is the idea that if you tokenize
+    // something that is already a complete token, you should expect to get that
+    // single token back. In this case, we're testing the `(wu)` string with the
+    // same regexes as in the previous test. Since we know that `(wu)` was a
+    // token, we can expect the result to be precisely `['', '(wu)']`.
+    tokenizedString = tokenizeString(
+        '(wu)',
+        [/\d+/, /W/, /U/, /\(WU\)/]
+    );
+
+    UTIL.assertEquals(2, tokenizedString.length);
+    UTIL.assertEquals('', tokenizedString[0]);
+    UTIL.assertEquals('(wu)', tokenizedString[1]);
+
+    tokenizedString = tokenizeString(
+        '(wu)',
+        [/\(WU\)/]
+    );
+
+    UTIL.assertEquals(2, tokenizedString.length);
+    UTIL.assertEquals('', tokenizedString[0]);
+    UTIL.assertEquals('(wu)', tokenizedString[1]);
+}
+
+function testGetCardColorSchemeFromManaCost() {
+    UTIL.assertEquals('colorless', getCardColorSchemeFromManaCost());
+    UTIL.assertEquals('colorless', getCardColorSchemeFromManaCost(''));
+    UTIL.assertEquals('colorless', getCardColorSchemeFromManaCost('1'));
+    UTIL.assertEquals('colorless', getCardColorSchemeFromManaCost('9'));
+    UTIL.assertEquals('colorless', getCardColorSchemeFromManaCost('10'));
+    UTIL.assertEquals('colorless', getCardColorSchemeFromManaCost('X'));
+    UTIL.assertEquals('white', getCardColorSchemeFromManaCost('W'));
+    UTIL.assertEquals('white', getCardColorSchemeFromManaCost('W'));
+    UTIL.assertEquals('white', getCardColorSchemeFromManaCost('1W'));
+    UTIL.assertEquals('white', getCardColorSchemeFromManaCost('5W'));
+    UTIL.assertEquals('white', getCardColorSchemeFromManaCost('XW'));
+    UTIL.assertEquals('white', getCardColorSchemeFromManaCost('WW'));
+    UTIL.assertEquals('white', getCardColorSchemeFromManaCost('1WW'));
+    UTIL.assertEquals('blue', getCardColorSchemeFromManaCost('1U'));
+    UTIL.assertEquals('black', getCardColorSchemeFromManaCost('1B'));
+    UTIL.assertEquals('red', getCardColorSchemeFromManaCost('1R'));
+    UTIL.assertEquals('green', getCardColorSchemeFromManaCost('1G'));
+    UTIL.assertEquals('multicolored', getCardColorSchemeFromManaCost('WU'));
+    UTIL.assertEquals('multicolored', getCardColorSchemeFromManaCost('BRG'));
+    UTIL.assertEquals('multicolored', getCardColorSchemeFromManaCost('WUBRG'));
+    UTIL.assertEquals(
+        'multicolored',
+        getCardColorSchemeFromManaCost('1XWUBRG')
+    );
+    UTIL.assertEquals(
+        'multicolored',
+        getCardColorSchemeFromManaCost('1XCWUBRG')
+    );
+
+    UTIL.assertEquals('whiteBlue',  getCardColorSchemeFromManaCost('(WU)'));
+    UTIL.assertEquals('whiteBlack', getCardColorSchemeFromManaCost('(WB)'));
+    UTIL.assertEquals('whiteRed',   getCardColorSchemeFromManaCost('(WR)'));
+    UTIL.assertEquals('whiteGreen', getCardColorSchemeFromManaCost('(WG)'));
+    UTIL.assertEquals('blueBlack',  getCardColorSchemeFromManaCost('(UB)'));
+    UTIL.assertEquals('blueRed',    getCardColorSchemeFromManaCost('(UR)'));
+    UTIL.assertEquals('blueGreen',  getCardColorSchemeFromManaCost('(UG)'));
+    UTIL.assertEquals('blackRed',   getCardColorSchemeFromManaCost('(BR)'));
+    UTIL.assertEquals('blackGreen', getCardColorSchemeFromManaCost('(BG)'));
+    UTIL.assertEquals('redGreen',   getCardColorSchemeFromManaCost('(RG)'));
+
+    UTIL.assertEquals('whiteBlue',  getCardColorSchemeFromManaCost('(UW)'));
+    UTIL.assertEquals('whiteBlack', getCardColorSchemeFromManaCost('(BW)'));
+    UTIL.assertEquals('whiteRed',   getCardColorSchemeFromManaCost('(RW)'));
+    UTIL.assertEquals('whiteGreen', getCardColorSchemeFromManaCost('(GW)'));
+    UTIL.assertEquals('blueBlack',  getCardColorSchemeFromManaCost('(BU)'));
+    UTIL.assertEquals('blueRed',    getCardColorSchemeFromManaCost('(RU)'));
+    UTIL.assertEquals('blueGreen',  getCardColorSchemeFromManaCost('(GU)'));
+    UTIL.assertEquals('blackRed',   getCardColorSchemeFromManaCost('(RB)'));
+    UTIL.assertEquals('blackGreen', getCardColorSchemeFromManaCost('(GB)'));
+    UTIL.assertEquals('redGreen',   getCardColorSchemeFromManaCost('(GR)'));
+
+    UTIL.assertEquals('whiteBlue',  getCardColorSchemeFromManaCost('(W/U)'));
+    UTIL.assertEquals('whiteBlack', getCardColorSchemeFromManaCost('(W/B)'));
+    UTIL.assertEquals('whiteRed',   getCardColorSchemeFromManaCost('(W/R)'));
+    UTIL.assertEquals('whiteGreen', getCardColorSchemeFromManaCost('(W/G)'));
+    UTIL.assertEquals('blueBlack',  getCardColorSchemeFromManaCost('(U/B)'));
+    UTIL.assertEquals('blueRed',    getCardColorSchemeFromManaCost('(U/R)'));
+    UTIL.assertEquals('blueGreen',  getCardColorSchemeFromManaCost('(U/G)'));
+    UTIL.assertEquals('blackRed',   getCardColorSchemeFromManaCost('(B/R)'));
+    UTIL.assertEquals('blackGreen', getCardColorSchemeFromManaCost('(B/G)'));
+    UTIL.assertEquals('redGreen',   getCardColorSchemeFromManaCost('(R/G)'));
+
+    UTIL.assertEquals('whiteBlue',  getCardColorSchemeFromManaCost('(U/W)'));
+    UTIL.assertEquals('whiteBlack', getCardColorSchemeFromManaCost('(B/W)'));
+    UTIL.assertEquals('whiteRed',   getCardColorSchemeFromManaCost('(R/W)'));
+    UTIL.assertEquals('whiteGreen', getCardColorSchemeFromManaCost('(G/W)'));
+    UTIL.assertEquals('blueBlack',  getCardColorSchemeFromManaCost('(B/U)'));
+    UTIL.assertEquals('blueRed',    getCardColorSchemeFromManaCost('(R/U)'));
+    UTIL.assertEquals('blueGreen',  getCardColorSchemeFromManaCost('(G/U)'));
+    UTIL.assertEquals('blackRed',   getCardColorSchemeFromManaCost('(R/B)'));
+    UTIL.assertEquals('blackGreen', getCardColorSchemeFromManaCost('(G/B)'));
+    UTIL.assertEquals('redGreen',   getCardColorSchemeFromManaCost('(G/R)'));
+
+    UTIL.assertEquals('whiteBlue', getCardColorSchemeFromManaCost('1(WU)'));
+    UTIL.assertEquals('redGreen', getCardColorSchemeFromManaCost('1(R/G)'));
 }
 
 /**

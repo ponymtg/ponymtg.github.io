@@ -35783,7 +35783,16 @@ var FICG_CARDS =
         'creator': 'FanOfMostEverything',
         'cost': '3U',
         'supertype': 'Sorcery',
-        'text': 'Choose one —\n\n• Put target nonland permanent on top of its owner’s library.\n\n• Target player puts the top eight cards of his or her library into his or her graveyard.\n\nEntwine 1B (Choose both if you pay the entwine cost.)\n\nObsidian Transmutation 3U\n\nEnchantent — Aura\n\nEnchant artifact, creature, or planeswalker\n\nEnchanted permanent is a colorless artifact and loses all other card types and abilities.\n\nTo Sombra, it was justice; Amore was now cold and dark without as within.',
+        'text': 'Choose one —\n\n• Put target nonland permanent on top of its owner’s library.\n\n• Target player puts the top eight cards of his or her library into his or her graveyard.\n\nEntwine 1B (Choose both if you pay the entwine cost.)',
+    },
+    {
+        'name': 'Obsidian Transmutation',
+        'set': 'Friendship is Card Games',
+        'creator': 'FanOfMostEverything',
+        'cost': '3U',
+        'supertype': 'Enchantment',
+        'subtype': 'Aura',
+        'text': 'Enchant artifact, creature, or planeswalker\n\nEnchanted permanent is a colorless artifact and loses all other card types and abilities.\n\nTo Sombra, it was justice; Amore was now cold and dark without as within.',
     },
     {
         'name': 'Rapid Response',

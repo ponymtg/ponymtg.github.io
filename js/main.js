@@ -1,27 +1,29 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                    //
-// The main PonyMTG class. Contains the majority of the functionality, and sets up all global variables used by the   //
-// application.                                                                                                       //
-//                                                                                                                    //
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Global definitions
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ *
+ * The main PonyMTG class. Contains the majority of the functionality, and sets
+ *  up all global variables used by the application.
+ */
 
 /**
- * Global object that can be used by all functions. Configuration and common definitions are stored here.
+ * Global object that can be used by all functions. Configuration and common
+ * definitions are stored here.
  */
 var global = {
     'paths': {
         /** Path to the directory containing all the card sets. */
         'sets': 'data/sets',
-        /** Path to the miscellany directory containing images for cards that don't have a defined set. */
+        /**
+         * Path to the miscellany directory containing images for cards that
+         * don't have a defined set.
+         */
         'misc': 'data/misc'
     },
     /** Various useful and commonly-used mappings. */
     'mappings': {
-        /** Maps the various properties of a card to a more human-readable display name.*/
+        /**
+         * Maps the various properties of a card to a more human-readable
+         * display name.
+         */
         'cardPropertiesToDisplayNames': {
             'name': 'Name',
             'set': 'Set',
@@ -47,8 +49,9 @@ var global = {
             'notes': 'Notes',
         },
         /**
-         * Maps regular expressions representing parts of a mana cost, to the color scheme that the card would have if
-         * that mana cost was the only source of the card's color.
+         * Maps regular expressions representing parts of a mana cost, to the
+         * color scheme that the card would have if that mana cost was the only
+         * source of the card's color.
          */
         'manaSymbolRegexesToCardColorSchemes': {
             'W': 'white',
@@ -76,10 +79,31 @@ var global = {
             '\\(rb\\)': 'blackRed',
             '\\(gb\\)': 'blackGreen',
             '\\(gr\\)': 'redGreen',
+            '\\(w/u\\)': 'whiteBlue',
+            '\\(w/b\\)': 'whiteBlack',
+            '\\(w/r\\)': 'whiteRed',
+            '\\(w/g\\)': 'whiteGreen',
+            '\\(u/b\\)': 'blueBlack',
+            '\\(u/r\\)': 'blueRed',
+            '\\(u/g\\)': 'blueGreen',
+            '\\(b/r\\)': 'blackRed',
+            '\\(b/g\\)': 'blackGreen',
+            '\\(r/g\\)': 'redGreen',
+            '\\(u/w\\)': 'whiteBlue',
+            '\\(b/w\\)': 'whiteBlack',
+            '\\(r/w\\)': 'whiteRed',
+            '\\(g/w\\)': 'whiteGreen',
+            '\\(b/u\\)': 'blueBlack',
+            '\\(r/u\\)': 'blueRed',
+            '\\(g/u\\)': 'blueGreen',
+            '\\(r/b\\)': 'blackRed',
+            '\\(g/b\\)': 'blackGreen',
+            '\\(g/r\\)': 'redGreen',
         },
         /**
-         * Maps a regular expression representing a mana symbol (in standard WUBRG form) to a CSS style that emulates
-         * the look-and-feel of that symbol as it would appear on a Magic card.
+         * Maps a regular expression representing a mana symbol (in standard
+         * WUBRG form) to a CSS style that emulates the look-and-feel of that
+         * symbol as it would appear on a Magic card.
          */
         'manaSymbolsToStyles': {
             'W': 'manaDecorationWhite',
@@ -109,6 +133,26 @@ var global = {
             '\\(rb\\)': 'manaDecorationHybridBlackRed',
             '\\(gb\\)': 'manaDecorationHybridBlackGreen',
             '\\(gr\\)': 'manaDecorationHybridRedGreen',
+            '\\(w/u\\)': 'manaDecorationHybridWhiteBlue',
+            '\\(w/b\\)': 'manaDecorationHybridWhiteBlack',
+            '\\(w/r\\)': 'manaDecorationHybridWhiteRed',
+            '\\(w/g\\)': 'manaDecorationHybridWhiteGreen',
+            '\\(u/b\\)': 'manaDecorationHybridBlueBlack',
+            '\\(u/r\\)': 'manaDecorationHybridBlueRed',
+            '\\(u/g\\)': 'manaDecorationHybridBlueGreen',
+            '\\(b/r\\)': 'manaDecorationHybridBlackRed',
+            '\\(b/g\\)': 'manaDecorationHybridBlackGreen',
+            '\\(r/g\\)': 'manaDecorationHybridRedGreen',
+            '\\(u/w\\)': 'manaDecorationHybridWhiteBlue',
+            '\\(b/w\\)': 'manaDecorationHybridWhiteBlack',
+            '\\(r/w\\)': 'manaDecorationHybridWhiteRed',
+            '\\(g/w\\)': 'manaDecorationHybridWhiteGreen',
+            '\\(b/u\\)': 'manaDecorationHybridBlueBlack',
+            '\\(r/u\\)': 'manaDecorationHybridBlueRed',
+            '\\(g/u\\)': 'manaDecorationHybridBlueGreen',
+            '\\(r/b\\)': 'manaDecorationHybridBlackRed',
+            '\\(g/b\\)': 'manaDecorationHybridBlackGreen',
+            '\\(g/r\\)': 'manaDecorationHybridRedGreen',
             'C': 'manaDecorationColorless',
         },
         'colorIndicatorsToCardColorSchemes': {
@@ -139,7 +183,8 @@ var global = {
             '(GR)': 'redGreen',
         },
         /**
-         * Maps the name of a card color scheme to the CSS style that defines that color scheme for the browser.
+         * Maps the name of a card color scheme to the CSS style that defines
+         * that color scheme for the browser.
          */
         'cardColorSchemesToCssClasses': {
             'black': 'cardColorBlack',
@@ -196,6 +241,26 @@ var global = {
             '\\(rb\\)': ['red',   'black'],
             '\\(gb\\)': ['green', 'black'],
             '\\(gr\\)': ['green', 'red'],
+            '\\(w/u\\)': ['white', 'blue'],
+            '\\(w/b\\)': ['white', 'black'],
+            '\\(w/r\\)': ['white', 'red'],
+            '\\(w/g\\)': ['white', 'green'],
+            '\\(u/b\\)': ['blue',  'black'],
+            '\\(u/r\\)': ['blue',  'red'],
+            '\\(u/g\\)': ['blue',  'green'],
+            '\\(b/r\\)': ['black', 'red'],
+            '\\(b/g\\)': ['black', 'green'],
+            '\\(r/g\\)': ['red',   'green'],
+            '\\(u/w\\)': ['blue' , 'white'],
+            '\\(b/w\\)': ['black', 'white'],
+            '\\(r/w\\)': ['red',   'white'],
+            '\\(g/w\\)': ['green', 'white'],
+            '\\(b/u\\)': ['black', 'blue'],
+            '\\(r/u\\)': ['red',   'blue'],
+            '\\(g/u\\)': ['green', 'blue'],
+            '\\(r/b\\)': ['red',   'black'],
+            '\\(g/b\\)': ['green', 'black'],
+            '\\(g/r\\)': ['green', 'red'],
             'C': ['colorless'],
         },
         'manaTypesToRepresentativeSymbols': {
@@ -230,7 +295,10 @@ var global = {
         'titleReference': undefined,
     },
     'lists': {
-        /** A list of card properties that the application will display in search results (if the card has them).*/
+        /**
+         * A list of card properties that the application will display in search
+         * results (if the card has them).
+         */
         'cardPropertiesToDisplay':[
             'name',
             'set',
@@ -255,8 +323,8 @@ var global = {
             'sourceUrl',
         ],
         /**
-         * A list of card properties that we will allow the user to search for text matches in (ie. the options for the
-         * "Search by" functionality).
+         * A list of card properties that we will allow the user to search for
+         * text matches in (ie. the options for the "Search by" functionality).
          */
         'searchableCardProperties':[
             'name',
@@ -276,11 +344,14 @@ var global = {
             'transformsFrom',
             'artist',
         ],
-        /** A list of metacharacters used in regular expressions. We need to escape these when searching. */
-        'regexMetacharacters': ['\\', '.','^','$','*','+','?','(',')','[',']','{','}','|'],
         /**
-         * A list of regexes that represent hybrid mana symbols.
+         * A list of metacharacters used in regular expressions. We need to
+         * escape these when searching.
          */
+        'regexMetacharacters': [
+            '\\', '.','^','$','*','+','?','(',')','[',']','{','}','|'
+        ],
+        /** A list of regexes that represent hybrid mana symbols. */
         'hybridManaSymbolRegexes': [
             '\\(wu\\)',
             '\\(wb\\)',
@@ -308,7 +379,9 @@ var global = {
     },
     'advancedSearchIdPrefix': 'advancedSearch',
     'dimensions': {
-        /** Dimensions for a standard Magic card as produced by Magic Set Editor. */
+        /**
+         * Dimensions for a standard Magic card as produced by Magic Set Editor.
+         */
         'standardCard': {
             'px': {
                 'width': 375,
@@ -327,14 +400,16 @@ var global = {
         },
         'proxy': {
             /**
-             * The font size, in pixels, of proxy card text. In order to ensure consistent rendering of proxy cards
-             * across all browsers, it is necessary to use absolute font dimensions.
+             * The font size, in pixels, of proxy card text. In order to ensure
+             * consistent rendering of proxy cards across all browsers, it is
+             * necessary to use absolute font dimensions.
              */
             'fontSize': 16,
             /**
-             * The amount of padding between the border and the interior of a proxy card. We're defining it here rather
-             * than in the stylesheet, because we need to know the value in order to correctly calculate dimensions when
-             * rendering a proxy card.
+             * The amount of padding between the border and the interior of a
+             * proxy card. We're defining it here rather than in the stylesheet,
+             * because we need to know the value in order to correctly calculate
+             * dimensions when rendering a proxy card.
              */
             'padding': 4
         },
@@ -354,7 +429,8 @@ var global = {
         'search': {
             'placeholder': 'Search for something',
             /**
-             * A list of search terms that the search field will randomly offer as suggestions in its placeholder text.
+             * A list of search terms that the search field will randomly offer
+             * as suggestions in its placeholder text.
              */
             'suggestions': [
                 'Applejack',
@@ -366,6 +442,7 @@ var global = {
                 'Derpy',
                 'Discord',
                 'Fluttershy',
+                'Maud',
                 'Luna',
                 'Octavia',
                 'Pinkie',
@@ -389,7 +466,8 @@ var global = {
     /** Various useful values. */
     'values': {
         /**
-         * How often tips should be displayed on the main page. A value of 5 means "every 5 visits".
+         * How often tips should be displayed on the main page. A value of 5
+         * means "every 5 visits".
          */
         'tipFrequency': 5,
         'proxyTextGenerosity': {
@@ -397,7 +475,10 @@ var global = {
             'printSheet': 0.65,
         },
     },
-    /** Information about how to paginate the results set, including the current page that the user is viewing. */
+    /**
+     * Information about how to paginate the results set, including the current
+     * page that the user is viewing.
+     */
     'pagination': {
         'currentPage': 0,
         'cardsPerPage': 10,
@@ -408,7 +489,8 @@ var global = {
         'results': []
     },
     /**
-     * Statistics that have been gathered about the current card collection, filled in upon initialization of the app.
+     * Statistics that have been gathered about the current card collection,
+     * filled in upon initialization of the app.
      */
     'statistics': {
         'perSet': {},
@@ -419,28 +501,28 @@ var global = {
             'cardsPerCreator': {}
         }
     },
-    /** Information about the card collection (eg. which sets are in it), filled in upon initialization. */
+    /**
+     * Information about the card collection (eg. which sets are in it), filled
+     * in upon initialization.
+     */
     'information': {},
     /** Any URL parameters passed to the application. */
     'urlParameters': {}
 };
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Function definitions
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 /**
- * Initiate a search and display the results. This function is called when you press enter in the search field, or click
- * the "Search" button.
+ * Initiate a search and display the results. This function is called when you
+ * press Enter in the search field, or click the "Search" button.
  */
 function initiateSearch(isExactSearch) {
     var searchString = global.elements.searchField.value;
-    // We do actually want to do a string search and not a regex search, so we need to escape any regex
-    // characters that the user may have entered.
+    // We do actually want to do a string search and not a regex search, so we
+    // need to escape any regex characters that the user may have entered.
     searchString = escapeRegex(searchString);
 
     if (isExactSearch === true) {
-        // If an exact search has been requested, add the appropriate regex for a whole string match.
+        // If an exact search has been requested, add the appropriate regex for
+        // a whole string match.
         searchString = '^'+searchString+'$';
     }
     var searchRegex = new RegExp(searchString, 'i');
@@ -568,14 +650,22 @@ function getInformation(cards) {
 }
 
 /**
- * Performs a full search, using the entered search term and applying all filters, and returns the resulting cards.
+ * Perform a full search, using the entered search term and applying all
+ * filters, and return the resulting cards.
+ *
+ * @param {string} regex
+ * @param {Object[]} cards
+ * @return {Object[]}
  */
 function getSearchResults(regex, cards) {
     let setChoices = getFilterBySetChoices();
     let manaTypeChoices = getFilterByManaTypeChoices();
-    var manaTypeSearchType = document.querySelector('#filterByManaTypeSearchType').value;
+    let manaTypeSearchType = document.querySelector(
+        '#filterByManaTypeSearchType'
+    ).value;
     let onlyShowCardsWithImages = document.querySelector(
-        '#' + global.advancedSearchIdPrefix + '_generalOptions_onlyShowCardsWithImages'
+        '#' + global.advancedSearchIdPrefix
+        + '_generalOptions_onlyShowCardsWithImages'
     ).checked;
 
     let filteredCards = getFilteredCards(
@@ -598,26 +688,26 @@ function getSearchResults(regex, cards) {
  *
  * @param {Object[]} cards
  * @param {RegExp} regex
- * @param {string[]} propertiesToSearchIn
+ * @param {string[]} properties
  * @return {Object[]}
  */
-function getMatchingCards(cards, regex, propertiesToSearchIn) {
+function getMatchingCards(cards, regex, properties) {
     let matchingCards = [];
 
-    for (var i=0; i < cards.length; i++) {
-        var card = cards[i];
-        var cardPropertyNames = Object.keys(card);
+    for (let i=0; i < cards.length; i++) {
+        let card = cards[i];
+        let cardPropertyNames = Object.keys(card);
 
-        for (var j=0; j < cardPropertyNames.length; j++) {
-            var cardPropertyName = cardPropertyNames[j];
+        for (let j=0; j < cardPropertyNames.length; j++) {
+            let cardPropertyName = cardPropertyNames[j];
 
             // If the card property isn't one that the user has opted to search
             // in, don't bother and skip to the next property.
-            if (propertiesToSearchIn.indexOf(cardPropertyName) === -1) {
+            if (properties.indexOf(cardPropertyName) === -1) {
                 continue;
             }
 
-            var cardPropertyValue = card[cardPropertyName];
+            let cardPropertyValue = card[cardPropertyName];
 
             if (regex.test(cardPropertyValue)) {
                 matchingCards.push(card);
@@ -630,9 +720,9 @@ function getMatchingCards(cards, regex, propertiesToSearchIn) {
 }
 
 /**
- * Run a set of cards `cards` through the filters defined in the advanced search
- * options (eg. filter by set) and return the subset of cards that the filters
- * will allow.
+ * Run a set of cards `cards` through the filters defined in the advanced
+ * search options (eg. filter by set) and return the subset of cards that the
+ * filters will allow.
  *
  * @param {Object[]} cards
  * @param {string[]} setChoices
@@ -651,9 +741,16 @@ function getFilteredCards(
     var filteredCards = cards;
 
     if (onlyShowCardsWithImages) {
-        filteredCards = getCardsForWhichPropertiesExist(cards, ['image']);    
+        filteredCards = getCardsForWhichPropertiesExist(
+            cards,
+            ['image']
+        );    
     }
-    filteredCards = getCardsFilteredBySet(filteredCards, setChoices);
+    filteredCards = getCardsFilteredBySet(
+        filteredCards,
+        setChoices
+    );
+
     filteredCards = getCardsFilteredByManaType(
         filteredCards,
         manaTypeChoices,
@@ -678,8 +775,8 @@ function getFilteredCards(
  *         }
  *     );
  *
- * would return all cards named exactly "Applejack" or "Rarity" in either the "A
- * Warm Welcome" set or the "Friendship is Card Games" set (if such cards
+ * would return all cards named exactly "Applejack" or "Rarity" in either the
+ * "A Warm Welcome" set or the "Friendship is Card Games" set (if such cards
  * exist).
  *
  * @param {Object[]} cards
@@ -708,9 +805,9 @@ function getCardsFilteredByProperties(cards, properties) {
 
             if (!cardMatchedAllProperties) {
                 // If the card failed to match a property, we won't consider it
-                // for inclusion in our filtered set. (It isn't enough for a
-                // card to match one property, because that's quite easy; it has
-                // to match everything that we're looking for).
+                // for inclusion in our filtered set.  (It isn't enough for a
+                // card to match one property, because that's quite easy; it
+                // has to match everything that we're looking for).
                 break;
             }
         }
@@ -774,6 +871,14 @@ function getCardsFilteredBySet(cards, sets) {
     return filteredCards;
 }
 
+/**
+ * Given an array of cards and an array of supertypes, return only those cards
+ * that have at least one of those supertypes.
+ *
+ * @param {Object[]} cards
+ * @param {string[]} supertypes
+ * @return {Object[]}
+ */
 function getCardsFilteredBySupertype(cards, supertypes) {
     var filteredCards = [];
     for (var i=0; i < cards.length; i++) {
@@ -933,39 +1038,52 @@ function getCardsFilteredByManaType(cards, manaTypes, manaTypeSearchType) {
 }
 
 /**
- * Generate and display a table of the card data objects in `cards`, in the "results" section of the application.
+ * Generate and display a table of the card data objects in `cards`, in the
+ * "results" section of the application.
+ *
+ * @param {Object[]} cards
  */
 function displayResults(cards) {
-    // Normally, if we were about to refresh the contents of a container element, we would empty it out first by
-    // deleting all its child nodes. However, our application happens to utilize a particular behavior that will prevent
-    // this approach from working correctly.
+    // Normally, if we were about to refresh the contents of a container
+    // element, we would empty it out first by deleting all its child nodes.
+    // However, our application happens to utilize a particular behavior that
+    // will prevent this approach from working correctly.
     //
-    // The problem we have is that when we generate proxy cards (the imageless placeholder cards that we construct
-    // ourselves), we make use of the `offsetHeight` function as part of a clever hack to ensure that their text is
-    // correctly sized.
+    // The problem we have is that when we generate proxy cards (the imageless
+    // placeholder cards that we construct ourselves), we make use of the
+    // `offsetHeight` function as part of a clever hack to ensure that their
+    // text is correctly sized.
     //
-    // `offsetHeight` just happens to be one of a number of commands that forces _browser reflow_; that is, when called,
-    // it will force the browser to recalculate its layout.
+    // `offsetHeight` just happens to be one of a number of commands that
+    // forces _browser reflow_; that is, when called, it will force the browser
+    // to recalculate its layout.
     //
-    // This causes an unexpected issue. If we empty the results container first, then call `offsetHeight`, the page
-    // actually jumps to a different position! This is because the browser recalculated its layout, discovered that the
-    // results container was empty, and therefore scrolled up (because the page now ends earlier).
+    // This causes an unexpected issue. If we empty the results container
+    // first, then call `offsetHeight`, the page actually jumps to a different
+    // position! This is because the browser recalculated its layout,
+    // discovered that the results container was empty, and therefore scrolled
+    // up (because the page now ends earlier).
     //
-    // So, when the results container is refilled, it looks like the page jumps up, which is unacceptable from a UI
-    // point of view.
+    // So, when the results container is refilled, it looks like the page jumps
+    // up, which is unacceptable from a UI point of view.
     //
-    // What this means is that we cannot empty out the results container first. So here is the solution; we don't.
-    // Instead, what we do is, we store a list of every child node in the results container at the time that we want to
-    // clear it. Then, we perform whatever actions are needed to add the new result set in. Then, because we made a
-    // record of every node we wanted to clear, we remove them one-by-one. Because the container was never emptied while
-    // `offsetHeight` was being called, the page does not jump.
+    // What this means is that we cannot empty out the results container first.
+    // So here is the solution; we don't. Instead, what we do is, we store a
+    // list of every child node in the results container at the time that we
+    // want to clear it. Then, we perform whatever actions are needed to add
+    // the new result set in. Then, because we made a record of every node we
+    // wanted to clear, we remove them one-by-one. Because the container was
+    // never emptied while `offsetHeight` was being called, the page does not
+    // jump.
     //
-    // In essence, we are deferring the emptying of the div to the end of this function, instead of doing it at the
-    // beginning.
+    // In essence, we are deferring the emptying of the div to the end of this
+    // function, instead of doing it at the beginning.
 
-    // Store a list of all child nodes in the results element. We specifically build an array of those elements; we
-    // can't just use `childNodes`, because that is a live collection, which changes when we change the DOM. We want a
-    // static record of the result element's contents at this very specific time.
+    // Store a list of all child nodes in the results element. We specifically
+    // build an array of those elements; we can't just use `childNodes`,
+    // because that is a live collection, which changes when we change the DOM.
+    // We want a static record of the result element's contents at this very
+    // specific time.
     var resultsChildNodes = [];
     for (var i=0; i < global.elements.results.childNodes.length; i++) {
         var resultsChildNode = global.elements.results.childNodes[i];
@@ -985,7 +1103,11 @@ function displayResults(cards) {
     var foundCardsMessage = global.text.search.noResults+'.';
     if (cards.length > 0) {
         foundCardsMessageElement.className = 'alert alert-success';
-        foundCardsMessage = global.text.search.foundResults.replace('{NUMBER_OF_RESULTS}', '<strong>'+cards.length+'</strong>') + '.';
+        foundCardsMessage = global.text.search.foundResults.replace(
+            '{NUMBER_OF_RESULTS}',
+            '<strong>' + cards.length + '</strong>'
+        ) + '.';
+
         if (cards.length === 1) {
             foundCardsMessage = foundCardsMessage.replace('cards.', 'card.');
         }
@@ -993,23 +1115,38 @@ function displayResults(cards) {
 
     foundCardsMessageElement.innerHTML = foundCardsMessage;
 
-    // We only want to display a page of results, not all of them. The application is keeping track of which page the
-    // user is on, so we just need to figure out what subset of the results should be on the current page, generate a
-    // table for those only, and display it.
+    // We only want to display a page of results, not all of them. The
+    // application is keeping track of which page the user is on, so we just
+    // need to figure out what subset of the results should be on the current
+    // page, generate a table for those only, and display it.
     var indexOfFirstCardOnPage = global.pagination.currentPage * global.pagination.cardsPerPage;
     var indexOfLastCardOnPage = indexOfFirstCardOnPage + global.pagination.cardsPerPage;
-    var currentPageOfCards = cards.slice(indexOfFirstCardOnPage, indexOfLastCardOnPage);
+    var currentPageOfCards = cards.slice(
+        indexOfFirstCardOnPage,
+        indexOfLastCardOnPage
+    );
 
     global.elements.results.appendChild(foundCardsMessageElement);
     if (cards.length > 0) {
         if (global.pagination.numberOfPages > 1) {
-            global.elements.results.appendChild(generatePaginationControlElement('paginationControlTop'));
+            global.elements.results.appendChild(
+                generatePaginationControlElement('paginationControlTop')
+            );
         }
-        global.elements.results.appendChild(generateCardTableElement(currentPageOfCards));
+
+        global.elements.results.appendChild(
+            generateCardTableElement(currentPageOfCards)
+        );
+
         if (global.pagination.numberOfPages > 1) {
-            // For the pagination control at the bottom of the page, make it scroll the page back to the top when the
-            // user changes pages.
-            global.elements.results.appendChild(generatePaginationControlElement('paginationControlBottom', 'paginationControlTop'));
+            // For the pagination control at the bottom of the page, make it
+            // scroll the page back to the top when the user changes pages.
+            global.elements.results.appendChild(
+                generatePaginationControlElement(
+                    'paginationControlBottom',
+                    'paginationControlTop'
+                )
+            );
         }
     }
 
@@ -1020,9 +1157,13 @@ function displayResults(cards) {
 }
 
 /**
- * Given an object containing the properties of a single card, analyze them to see if there are any additional
- * properties we can derive from them. An example would be a card's colors: these are usually not explicitly defined,
+ * Given an object containing the properties of a single card, analyze them to
+ * see if there are any additional properties we can derive from them. An
+ * example would be a card's colors: these are usually not explicitly defined,
  * but can be derived from the card's mana cost.
+ *
+ * @param {Object}
+ * @return {Object}
  */
 function getDerivedCardProperties(card) {
     var derivedProperties = {};
@@ -1034,6 +1175,12 @@ function getDerivedCardProperties(card) {
     return derivedProperties;
 }
 
+/**
+ * Return a unique hash value for the given card.
+ *
+ * @param {Object}
+ * @return {string}
+ */
 function getCardHash(card) {
     var hashString = card.name + card.set;
     if (card.image !== undefined) {
@@ -1043,16 +1190,19 @@ function getCardHash(card) {
 }
 
 /**
- * Given an object containing the properties of a single card, attempt to determine the card's colors. A card's colors
- * are typically determined by the mana symbols that appear in the card's mana cost. If a card has any hybrid mana
- * then it has all of the colors that appear in those symbols (ie. a card with hybrid white-blue mana symbols is both
- * white and blue).
+ * Given an object containing the properties of a single card, attempt to
+ * determine the card's colors. A card's colors are typically determined by the
+ * mana symbols that appear in the card's mana cost. If a card has any hybrid
+ * mana then it has all of the colors that appear in those symbols (ie. a card
+ * with hybrid white-blue mana symbols is both white and blue).
  *
- * Card color may also be defined by fiat (ie. the card's rules text explicitly says that the card is a certain color or
- * colors). In these cases, there may be a color identifier on the card that would indicate what colors it has.
+ * Card color may also be defined by fiat (ie. the card's rules text explicitly
+ * says that the card is a certain color or colors). In these cases, there may
+ * be a color identifier on the card that would indicate what colors it has.
  *
- * Note that a card's colors is not the same thing as its "color identity". Color identity is a concept used in
- * Commander games, and it means "all colors in a card's mana cost, plus any that appear in its rules text, not
+ * Note that a card's colors is not the same thing as its "color identity".
+ * Color identity is a concept used in Commander games, and it means "all
+ * colors in a card's mana cost, plus any that appear in its rules text, not
  * including reminder text".
  *
  * @param Object card
@@ -1061,8 +1211,9 @@ function getCardHash(card) {
 function getCardColors(card) {
     var cardColors = [];
 
-    // Before doing anything, check to see if the card has a color indicator. If it does, we consider this to be the
-    // definitive source of the card's color, overriding the mana cost.
+    // Before doing anything, check to see if the card has a color indicator.
+    // If it does, we consider this to be the definitive source of the card's
+    // color, overriding the mana cost.
     if (card.colorIndicator !== undefined) {
         for (var i=0; i < global.lists.manaColorSymbols.length; i++) {
             var manaColorSymbol = global.lists.manaColorSymbols[i];
@@ -1078,8 +1229,9 @@ function getCardColors(card) {
         return cardColors;
     }
     
-    // We're doing this very straightforwardly; for each of the five colors of mana, check the mana cost to see if it
-    // contains a symbol for that color of mana. If it does, this card is that color.
+    // We're doing this very straightforwardly; for each of the five colors of
+    // mana, check the mana cost to see if it contains a symbol for that color
+    // of mana. If it does, this card is that color.
     for (var i=0; i < global.lists.manaColorSymbols.length; i++) {
         var manaColorSymbol = global.lists.manaColorSymbols[i];
         if (card.cost.toUpperCase().includes(manaColorSymbol)) {
@@ -1090,6 +1242,12 @@ function getCardColors(card) {
     return cardColors;
 }
 
+/**
+ * Calculate and return a card's converted mana cost.
+ *
+ * @param {Object} card
+ * @return {number}
+ */
 function getCardConvertedManaCost(card) {
     if (card.cost === undefined) {
         return 0;
@@ -1165,12 +1323,15 @@ function convertManaCost(cost) {
 }
 
 /**
- * Given an object containing the properties of a single card, attempt to determine the types of mana that are part of
- * this card's identity.
+ * Given an object containing the properties of a single card, attempt to
+ * determine the types of mana that are part of this card's identity.
+ *
+ * @param {Object} card
+ * @return {string[]}
  */
 function getCardManaTypes(card) {
-    // Check for a color indicator first. If the card has one, this will be considered the source of the card's mana
-    // types.
+    // Check for a color indicator first. If the card has one, this will be
+    // considered the source of the card's mana types.
     if (card.colorIndicator !== undefined) {
         return getCostManaTypes(card.colorIndicator);
     }
@@ -1179,9 +1340,10 @@ function getCardManaTypes(card) {
         return getCostManaTypes(card.cost);
     }
 
-    // If it has neither color indicator nor cost, return "none", indicating that this card does not have any mana types
-    // at all. Even though "none" is not really any type of mana, we would still like to know when a card has this
-    // property, as we would like to be able to filter by it.
+    // If it has neither color indicator nor cost, return "none", indicating
+    // that this card does not have any mana types at all. Even though "none"
+    // is not really any type of mana, we would still like to know when a card
+    // has this property, as we would like to be able to filter by it.
     return ['none'];
 }
 
@@ -1261,11 +1423,16 @@ function isSplitManaSymbol(symbol) {
 }
 
 /**
- * Given an object containing card properties for a single card, return the card's monocolor. This is a single word
- * which describes the color of a monocolored card. For example, if the card has a mana cost of "1W", this will return
- * "white", because the card is mono-white.
+ * Given an object containing card properties for a single card, return the
+ * card's monocolor. This is a single word which describes the color of a
+ * monocolored card. For example, if the card has a mana cost of "1W", this
+ * will return "white", because the card is mono-white.
  *
- * If the supplied card has no color, or multiple colors, this function returns `undefined`.
+ * If the supplied card has no color, or multiple colors, this function returns
+ * `undefined`.
+ *
+ * @param {Object} card
+ * @return string
  */
 function getCardMonocolor(card) {
     var cardColors = getCardColors(card);
@@ -1317,14 +1484,24 @@ function getFilterBySetChoices() {
     return choices;
 }
 
+/**
+ * Read the "filter by mana type" checkboxes in the advanced search, and return
+ * an array of all colors of mana selected. (eg. ["white", "blue"]), 
+ *
+ * @return {string[]}
+ */
 function getFilterByManaTypeChoices() {
     var choices = [];
 
-    var manaTypes = Object.keys(global.mappings.manaTypesToRepresentativeSymbols);
+    var manaTypes = Object.keys(
+        global.mappings.manaTypesToRepresentativeSymbols
+    );
     for (var i=0; i < manaTypes.length; i++) {
         var color = manaTypes[i]; 
-        var checkboxId = global.advancedSearchIdPrefix+'_filterByManaType_'+color;
-        var checkbox = document.querySelector('#'+checkboxId);
+        var checkboxId = global.advancedSearchIdPrefix + '_filterByManaType_'
+            + color;
+        var checkbox = document.querySelector('#' + checkboxId);
+
         if (checkbox.checked) {
             choices.push(color);
         }
@@ -1334,9 +1511,17 @@ function getFilterByManaTypeChoices() {
 }
 
 /**
- * Generates and returns a DOM element that the user can use to move between pages of the current result set.
- * If specified, `scrollToElementId` is the id of an element that the page should scroll to after the previous or next
- * page button is pressed. This can be used to return the user to the top of the page after changing pages, for example.
+ * Generate and return a DOM element that the user can use to move between pages
+ * of the current result set.
+ *
+ * If specified, `scrollToElementId` is the id of an element that the page
+ * should scroll to after the previous or next page button is pressed. This can
+ * be used to return the user to the top of the page after changing pages, for
+ * example.
+ *
+ * @param {string} id
+ * @param {string} scrollToElementId
+ * @return {Element}
  */
 function generatePaginationControlElement(id, scrollToElementId) {
     var navElement = document.createElement('nav');
@@ -1369,12 +1554,16 @@ function generatePaginationControlElement(id, scrollToElementId) {
         }
     };
 
-    pageNumberTableCellElement.innerHTML = '<span style="border:0">Page <strong>'+(global.pagination.currentPage+1)+'</strong> of <strong>'+global.pagination.numberOfPages+'</strong></span>';
+    pageNumberTableCellElement.innerHTML = '<span style="border:0">'
+        + 'Page <strong>' + (global.pagination.currentPage + 1)
+        + '</strong> of <strong>' + global.pagination.numberOfPages
+        + '</strong></span>';
 
     nextElement.innerHTML = '<a>Next page &rarr;</a>';
     if (global.pagination.currentPage == global.pagination.numberOfPages - 1) {
         nextElement.className += ' disabled';
     }
+
     nextElement.onclick = function() {
         global.pagination.currentPage++;
         if (global.pagination.currentPage >= global.pagination.numberOfPages) {
@@ -1395,21 +1584,27 @@ function generatePaginationControlElement(id, scrollToElementId) {
 }
 
 /**
- * Generates and returns a DOM element containing advanced search controls.
+ * Generate and return a DOM element containing advanced search controls.
+ *
+ * @return {Element}
  */
 function generateAdvancedSearchElement() {
     var advancedSearchPanelElement = document.createElement('div');
     advancedSearchPanelElement.id = global.advancedSearchIdPrefix+'_table';
     advancedSearchPanelElement.style.display = 'none';
 
-    // Display a warning that PonyMTG's search functions won't be useful for cards which don't have all their properties
-    // set.
+    // Display a warning that PonyMTG's search functions won't be useful for
+    // cards which don't have all their properties set.
     var advancedSearchInformationAlert = document.createElement('div');
     advancedSearchInformationAlert.className = 'alert alert-warning';
-    advancedSearchInformationAlert.innerHTML = '<strong>NOTE:</strong> PonyMTG does not yet have full property listings for all cards (many cards, for example, only have a name, set, and image). This means that advanced filters won\'t be useful on cards which have incomplete listings.';
+    advancedSearchInformationAlert.innerHTML = '<strong>NOTE:</strong>'
+    + ' PonyMTG does not yet have full property listings for all cards'
+    + ' (many cards, for example, only have a name, set, and image).'
+    + ' This means that advanced filters won\'t be useful on cards which have'
+    + ' incomplete listings.';
 
-    // First, do the "Search by card property" section. This will be a list of all card properties that we want to allow
-    // the user to search by.
+    // First, do the "Search by card property" section. This will be a list of
+    // all card properties that we want to allow the user to search by.
     var searchByCardPropertyPanelElement = document.createElement('div');
     searchByCardPropertyPanelElement.className = 'panel panel-default';
     var searchByCardPropertyHeaderElement = document.createElement('div');
@@ -1418,13 +1613,15 @@ function generateAdvancedSearchElement() {
     searchByCardPropertyBodyElement.className = 'panel-body';
     searchByCardPropertyBodyElement.style.textAlign = 'left';
 
-    // Generate checkboxes for all properties that we'll allow the user to search by.
+    // Generate checkboxes for all properties that we'll allow the user to
+    // search by.
     var data = [];
     for (var i=0; i < global.lists.searchableCardProperties.length; i++) {
         var datum = {};
         var cardPropertyName = global.lists.searchableCardProperties[i]; 
-        var cardPropertyDisplayName = global.mappings.cardPropertiesToDisplayNames[cardPropertyName];
-        datum.idSuffix = '_'+cardPropertyName;
+        var cardPropertyDisplayName
+            = global.mappings.cardPropertiesToDisplayNames[cardPropertyName];
+        datum.idSuffix = '_' + cardPropertyName;
         datum.label = cardPropertyDisplayName;
 
         data.push(datum);
@@ -1433,7 +1630,7 @@ function generateAdvancedSearchElement() {
     searchByCardPropertyHeaderElement.innerHTML = 'Search by';
     searchByCardPropertyBodyElement.appendChild(
         generateCheckboxListElement(
-            global.advancedSearchIdPrefix+'_searchByCardProperty',
+            global.advancedSearchIdPrefix + '_searchByCardProperty',
             data,
             '20%',
             true
@@ -1480,8 +1677,9 @@ function generateAdvancedSearchElement() {
     for (var i=0; i < global.information.sets.length; i++) {
         var datum = {};
         var set = global.information.sets[i]; 
-        // We can't use the set name in the id, as it may contain spaces or unsuitable characters; instead, we're using
-        // the index of the array that the set appears at.
+        // We can't use the set name in the id, as it may contain spaces or
+        // unsuitable characters; instead, we're using the index of the array
+        // that the set appears at.
         datum.idSuffix = '_'+i;
         if (set !== undefined) {
             datum.label = set;
@@ -1510,14 +1708,20 @@ function generateAdvancedSearchElement() {
     var filterByManaTypeBodyElement = document.createElement('div');
     filterByManaTypeBodyElement.className = 'panel-body';
 
-    // This section contains a drop-down list prompting the user to select how, exactly, they would like to search by
-    // color (as there are a few different ways that that can be interpreted).
-    var filterByManaTypeSearchTypeLabelElement = document.createElement('label');
-    filterByManaTypeSearchTypeLabelElement.innerHTML = 'Search for cards that: ';
+    // This section contains a drop-down list prompting the user to select how,
+    // exactly, they would like to search by color (as there are a few
+    // different ways that that can be interpreted).
+    var filterByManaTypeSearchTypeLabelElement = document.createElement(
+        'label'
+    );
+    filterByManaTypeSearchTypeLabelElement.innerHTML
+        = 'Search for cards that: ';
     filterByManaTypeSearchTypeLabelElement.style.margin = '4px';
     filterByManaTypeSearchTypeLabelElement.style.fontSize = '0.8em';
 
-    var filterByManaTypeSearchTypeSelectElement = document.createElement('select');
+    var filterByManaTypeSearchTypeSelectElement = document.createElement(
+        'select'
+    );
     filterByManaTypeSearchTypeSelectElement.id = 'filterByManaTypeSearchType';
     filterByManaTypeSearchTypeSelectElement.style.display = 'inline-block';
     var filterByManaTypeSearchTypeOptions = {
@@ -1527,42 +1731,69 @@ function generateAdvancedSearchElement() {
         'allExclusive': 'contain all of the selected mana types, and no others',
     };
 
-    var filterByManaTypeSearchTypeOptionValues = Object.keys(filterByManaTypeSearchTypeOptions);
+    var filterByManaTypeSearchTypeOptionValues = Object.keys(
+        filterByManaTypeSearchTypeOptions
+    );
     for (var i=0; i < filterByManaTypeSearchTypeOptionValues.length; i++) {
         var optionValue = filterByManaTypeSearchTypeOptionValues[i];
         var optionText = filterByManaTypeSearchTypeOptions[optionValue];
-        var filterByManaTypeSearchTypeOptionElement = document.createElement('option');
+        var filterByManaTypeSearchTypeOptionElement = document.createElement(
+            'option'
+        );
         filterByManaTypeSearchTypeOptionElement.value = optionValue;
         filterByManaTypeSearchTypeOptionElement.innerHTML = optionText;
-        filterByManaTypeSearchTypeSelectElement.appendChild(filterByManaTypeSearchTypeOptionElement);
+        filterByManaTypeSearchTypeSelectElement.appendChild(
+            filterByManaTypeSearchTypeOptionElement
+        );
     }
 
     // Generate checkboxes for the seven types of mana.
     var data = [];
-    var manaTypes = Object.keys(global.mappings.manaTypesToRepresentativeSymbols);
+    var manaTypes = Object.keys(
+        global.mappings.manaTypesToRepresentativeSymbols
+    );
     for (var i=0; i < manaTypes.length; i++) {
         var datum = {};
         var manaType = manaTypes[i]; 
-        var representativeSymbol = global.mappings.manaTypesToRepresentativeSymbols[manaType];
+        var representativeSymbol
+            = global.mappings.manaTypesToRepresentativeSymbols[manaType];
         datum.idSuffix = '_'+manaType;
         datum.label = applyManaStyling(representativeSymbol);
-        datum.title = global.mappings.manaRepresentativeSymbolsToDescriptions[representativeSymbol];
+        datum.title = global.mappings.manaRepresentativeSymbolsToDescriptions[
+            representativeSymbol
+        ];
 
         data.push(datum);
     }
 
-    filterByManaTypeCheckboxListElement = generateCheckboxListElement(global.advancedSearchIdPrefix+'_filterByManaType', data, '10%');
+    filterByManaTypeCheckboxListElement = generateCheckboxListElement(
+        global.advancedSearchIdPrefix + '_filterByManaType',
+        data,
+        '10%'
+    );
     filterByManaTypeHeaderElement.innerHTML = 'Search by mana type';
-    filterByManaTypeBodyElement.appendChild(filterByManaTypeSearchTypeLabelElement);
-    filterByManaTypeBodyElement.appendChild(filterByManaTypeSearchTypeSelectElement);
-    filterByManaTypeBodyElement.appendChild(filterByManaTypeCheckboxListElement);
+    filterByManaTypeBodyElement.appendChild(
+        filterByManaTypeSearchTypeLabelElement
+    );
+    filterByManaTypeBodyElement.appendChild(
+        filterByManaTypeSearchTypeSelectElement
+    );
+    filterByManaTypeBodyElement.appendChild(
+        filterByManaTypeCheckboxListElement
+    );
 
     // Finally, add all sections to the advanced search table.
     advancedSearchPanelElement.appendChild(advancedSearchInformationAlert);
 
-    searchByCardPropertyPanelElement.appendChild(searchByCardPropertyHeaderElement);
-    searchByCardPropertyPanelElement.appendChild(searchByCardPropertyBodyElement);
-    advancedSearchPanelElement.appendChild(searchByCardPropertyPanelElement);
+    searchByCardPropertyPanelElement.appendChild(
+        searchByCardPropertyHeaderElement
+    );
+    searchByCardPropertyPanelElement.appendChild(
+        searchByCardPropertyBodyElement
+    );
+    advancedSearchPanelElement.appendChild(
+        searchByCardPropertyPanelElement
+    );
 
     generalOptionsPanel.appendChild(generalOptionsHeading);
     generalOptionsPanel.appendChild(generalOptionsBody);
@@ -1580,21 +1811,31 @@ function generateAdvancedSearchElement() {
 }
 
 /**
- * Returns an element containing a list of checkboxes. `data` must be an array of objects representing the checkboxes
- * that should be created, each of which must have an `idSuffix` property and a `label` property, and may optionally
- * contain a `title` property for title (mouseover) text. Checkboxes will be created with an id of `idPrefix`+`idSuffix`.
+ * Returns an element containing a list of checkboxes. `data` must be an array
+ * of objects representing the checkboxes that should be created, each of which
+ * must have an `idSuffix` property and a `label` property, and may optionally
+ * contain a `title` property for title (mouseover) text. Checkboxes will be
+ * created with an id of `idPrefix`+`idSuffix`.
  *
- * `optionWidth` is how wide you want each checkbox+label block to be. It's best to set this to a percentage. For
- * example, `25%` will mean that every checkbox takes up 25% of the list, so you should get rows of four.
+ * `optionWidth` is how wide you want each checkbox+label block to be. It's
+ * best to set this to a percentage. For example, `25%` will mean that every
+ * checkbox takes up 25% of the list, so you should get rows of four.
  *
- * If `addSelectAll` is true, a "Select all" checkbox will be created at the beginning of the list, with an id of
- * `idPrefix`+`selectAll`; when clicked, this will toggle all other checkboxes in the list to its value.
+ * If `addSelectAll` is true, a "Select all" checkbox will be created at the
+ * beginning of the list, with an id of `idPrefix`+`selectAll`; when clicked,
+ * this will toggle all other checkboxes in the list to its value.
+ *
+ * @param {string} idPrefix
+ * @param {Object[]} data
+ * @param {string} optionWidth
+ * @param {boolean} addSelectAll
  */
 function generateCheckboxListElement(idPrefix, data, optionWidth, addSelectAll) {
     var checkboxListContainer = document.createElement('div');
     
     if (addSelectAll === true) {
-        // If requested, add a "Select all" checkbox which will check all the others when clicked.
+        // If requested, add a "Select all" checkbox which will check all the
+        // others when clicked.
         var selectAllCheckboxElementContainer = document.createElement('div');
         selectAllCheckboxElementContainer.style.display = 'inline-block';
         selectAllCheckboxElementContainer.style.width = optionWidth;
@@ -1606,7 +1847,9 @@ function generateCheckboxListElement(idPrefix, data, optionWidth, addSelectAll) 
         selectAllCheckboxElement.onclick = function(e) {
             for (var i=0; i < data.length; i++) {
                 var datum = data[i];
-                var otherCheckbox = document.querySelector('#'+idPrefix+datum['idSuffix']);
+                var otherCheckbox = document.querySelector(
+                    '#' + idPrefix + datum['idSuffix']
+                );
                 otherCheckbox.checked = selectAllCheckboxElement.checked;
             }
         };
@@ -1618,7 +1861,9 @@ function generateCheckboxListElement(idPrefix, data, optionWidth, addSelectAll) 
         selectAllCheckboxLabelElement.innerHTML = 'Select all';
 
         selectAllCheckboxElementContainer.appendChild(selectAllCheckboxElement);
-        selectAllCheckboxElementContainer.appendChild(selectAllCheckboxLabelElement);
+        selectAllCheckboxElementContainer.appendChild(
+            selectAllCheckboxLabelElement
+        );
         checkboxListContainer.appendChild(selectAllCheckboxElementContainer);
     }
 
@@ -1653,8 +1898,13 @@ function generateCheckboxListElement(idPrefix, data, optionWidth, addSelectAll) 
 }
 
 /**
- * Given a set of card data objects `cards`, generate a table of those cards, which displays an image (if available) and
- * known, relevant properties of the card. If `propertiesToDisplay` is given, only those properties will be shown; otherwise, it will use the global defaults.
+ * Given a set of card data objects `cards`, generate a table of those cards,
+ * which displays an image (if available) and known, relevant properties of the
+ * card. If `propertiesToDisplay` is given, only those properties will be
+ * shown; otherwise, it will use the global defaults.
+ *
+ * @param {Object[]} cards
+ * @param {string[]} propertiesToDisplay
  */
 function generateCardTableElement(cards, propertiesToDisplay) {
     if (propertiesToDisplay === undefined) {
@@ -1667,7 +1917,8 @@ function generateCardTableElement(cards, propertiesToDisplay) {
     for (var i=0; i < cards.length; i++) {
         var card = cards[i];
 
-        // Create a row for this card result. Card image on the left, card information on the right.
+        // Create a row for this card result. Card image on the left, card
+        // information on the right.
         var cardPanelRow = document.createElement('div');
         cardPanelRow.className = 'row';
 
@@ -1676,7 +1927,9 @@ function generateCardTableElement(cards, propertiesToDisplay) {
 
         var cardInfoPanelContainer = document.createElement('div');
         cardInfoPanelContainer.className = 'col-md-7';
-        cardInfoPanelContainer.style.minHeight = getCardHeightFromCardWidth(global.dimensions.displayCard.width)+'px';
+        cardInfoPanelContainer.style.minHeight = getCardHeightFromCardWidth(
+            global.dimensions.displayCard.width
+        ) + 'px';
         cardInfoPanelContainer.style.marginBottom = '4px';
 
         var cardInfoPanel = document.createElement('div');
@@ -1689,8 +1942,8 @@ function generateCardTableElement(cards, propertiesToDisplay) {
         var cardProxyElement = undefined;
         var isCardImageLocatable = card.image !== undefined;
         if (isCardImageLocatable) {
-            // If a card image is available, create the card image element and set its source to the appropriate image
-            // URL.
+            // If a card image is available, create the card image element and
+            // set its source to the appropriate image URL.
             var cardImageLinkElement = document.createElement('a');
             var cardImageElement = document.createElement('img');
             var cardImageUrl = getCardImageUrl(card);
@@ -1700,18 +1953,20 @@ function generateCardTableElement(cards, propertiesToDisplay) {
             cardImageLinkElement.target = '_blank';
 
             // Make all card images the same width (it looks better in results).
-            cardImageElement.style.width = global.dimensions.displayCard.width+'px';
+            cardImageElement.style.width = global.dimensions.displayCard.width
+                + 'px';
             cardImageLinkElement.appendChild(cardImageElement);
-        }
-        else {
-            // If a card image is not available, generate a "proxy" image from the available card information. This will
-            // be a div, but should have the same dimensions as a card image.
-
-            cardProxyElement = generateProxyElement(card, global.dimensions.displayCard.width);
+        } else {
+            // If a card image is not available, generate a "proxy" image from
+            // the available card information. This will be a div, but should
+            // have the same dimensions as a card image.
+            cardProxyElement = generateProxyElement(
+                card,
+                global.dimensions.displayCard.width
+            );
         }
 
         // Assemble relevant properties of the card into an information table.
-
         var cardInfoPanelHeading = document.createElement('div');
         cardInfoPanelHeading.className = 'panel-heading';
         cardInfoPanelHeading.innerHTML = card.name;
@@ -1721,32 +1976,42 @@ function generateCardTableElement(cards, propertiesToDisplay) {
 
         // Create a description list for this property.
         var cardPropertiesDescriptionList = document.createElement('dl');
-        // Use the Bootstrap `dl-horizontal` class to make it a two-column list, with titles on the left and
-        // descriptions on the right. This is a quick and easy way to list out property names and their values in a
-        // nice-looking format.
+
+        // Use the Bootstrap `dl-horizontal` class to make it a two-column
+        // list, with titles on the left and descriptions on the right. This is
+        // a quick and easy way to list out property names and their values in
+        // a nice-looking format.
         cardPropertiesDescriptionList.className = 'dl-horizontal';
         
         for (var j=0; j < propertiesToDisplay.length; j++) {
             var cardPropertyName = propertiesToDisplay[j];
             var cardPropertyValue = card[cardPropertyName];
 
-            // If the card doesn't have a value defined for this property, skip this property.
+            // If the card doesn't have a value defined for this property, skip
+            // this property.
             if (cardPropertyValue === undefined) {
-                // One exception to this is sets; if the card has no set, we will display that (as "(no set)").
+                // One exception to this is sets; if the card has no set, we
+                // will display that (as "(no set)").
                 if (cardPropertyName !== 'set') {
                     continue;
                 }
             }
 
-            // Check to see if this card property is one that we want to display. If it isn't, skip this property.
+            // Check to see if this card property is one that we want to
+            // display. If it isn't, skip this property.
             if (propertiesToDisplay.indexOf(cardPropertyName) === -1) {
                 continue;
             }
 
-            // Attempt to get a more human-readable display name for this property, if one is available.
+            // Attempt to get a more human-readable display name for this
+            // property, if one is available.
             var cardPropertyDisplayName = cardPropertyName;
-            if (global.mappings.cardPropertiesToDisplayNames[cardPropertyName] !== undefined) {
-                cardPropertyDisplayName = global.mappings.cardPropertiesToDisplayNames[cardPropertyName];
+            if (global.mappings.cardPropertiesToDisplayNames[cardPropertyName]
+                !== undefined) {
+                cardPropertyDisplayName
+                    = global.mappings.cardPropertiesToDisplayNames[
+                        cardPropertyName
+                    ];
             }
 
             var cardPropertyNameElement = document.createElement('dt');
@@ -1762,17 +2027,24 @@ function generateCardTableElement(cards, propertiesToDisplay) {
                 if (cardPropertyValue === undefined) {
                     cardPropertyValueElement.innerHTML = '<i>(no set)</i>';
                 }
-                // Special case for "set" property: We do have descriptions for some sets, which we can add as a title
-                // property, allowing the user to mouse over to find out information about the set.
-                if (SETS[cardPropertyValue] !== undefined && SETS[cardPropertyValue].notes !== undefined) {
-                    cardPropertyValueElement.title = SETS[cardPropertyValue].notes;
+                // Special case for "set" property: We do have descriptions for
+                // some sets, which we can add as a title property, allowing
+                // the user to mouse over to find out information about the
+                // set.
+                if (SETS[cardPropertyValue] !== undefined
+                    && SETS[cardPropertyValue].notes !== undefined) {
+                    cardPropertyValueElement.title = SETS[
+                        cardPropertyValue
+                    ].notes;
                 }
             }
-            // Special case for "flavorText" property: We'd like that to be italicized.
+            // Special case for "flavorText" property: We'd like that to be
+            // italicized.
             if (cardPropertyName === 'flavorText') {
                 cardPropertyValueElement.style.fontStyle = 'italic';
             }
-            // Special case for "sourceUrl" property: This is a URL, so we hyperlink it.
+            // Special case for "sourceUrl" property: This is a URL, so we
+            // hyperlink it.
             if (cardPropertyName === 'sourceUrl') {
                 cardPropertyValueElement.innerHTML = '';
                 cardSourceHyperlink = document.createElement('a');
@@ -1790,44 +2062,60 @@ function generateCardTableElement(cards, propertiesToDisplay) {
 
         var cardInfoPanelFooter = document.createElement('div');
 
-        var cardHyperlinkUrl = window.location.pathname+'?hash='+card.derivedProperties.hash;
+        var cardHyperlinkUrl = window.location.pathname + '?hash= '
+            + card.derivedProperties.hash;
         cardInfoPanelFooter.className = 'panel-footer';
         cardInfoPanelFooter.style.textAlign = 'right';
 
-        // Create the "Add to print sheet" button. For this button, we would like to include some indication of whether
-        // or not the user has already added the card to the print sheet (and how many they have added). Therefore, we
-        // will obtain the print sheet object from local storage and check to see if this card is on it.
+        // Create the "Add to print sheet" button. For this button, we would
+        // like to include some indication of whether or not the user has
+        // already added the card to the print sheet (and how many they have
+        // added). Therefore, we will obtain the print sheet object from local
+        // storage and check to see if this card is on it.
         var printSheetCardsObject = getPrintSheetCards();
-        var printSheetCardQuantity = printSheetCardsObject[card.derivedProperties.hash];
+        var printSheetCardQuantity = printSheetCardsObject[
+            card.derivedProperties.hash
+        ];
         if (printSheetCardQuantity === undefined) {
             printSheetCardQuantity = 0;
         }
 
         var addToPrintSheetButton = document.createElement('button');
         addToPrintSheetButton.className = 'btn btn-default';
-        var addToPrintSheetButtonText = '<span class="glyphicon glyphicon-file"></span> Add to print sheet'; 
+        var addToPrintSheetButtonText = '<span' +
+            ' class="glyphicon glyphicon-file"></span> Add to print sheet'; 
         addToPrintSheetButton.innerHTML = addToPrintSheetButtonText;
         if (printSheetCardQuantity > 0) {
-            addToPrintSheetButton.innerHTML += ' <span class="badge">'+printSheetCardQuantity+'</span>'; 
+            addToPrintSheetButton.innerHTML += ' <span class="badge">'
+                + printSheetCardQuantity + '</span>'; 
         }
         addToPrintSheetButton.ponymtg = {};
         addToPrintSheetButton.ponymtg.hash = card.derivedProperties.hash;
         addToPrintSheetButton.ponymtg.quantity = printSheetCardQuantity;
         addToPrintSheetButton.onclick = function(e) {
-            // Add the card to the print sheet and increment the number on the button's badge.
-            // NOTE: Use `currentTarget`, not `target`! `target` identifies the element that was clicked on; however,
-            // this is not _necessarily_ the button itself. Buttons can contain child elements such as images and icons;
-            // if you happened to click on the 'icon' part of a button, then `target` will be set to that, not the
-            // button itself!
+            // Add the card to the print sheet and increment the number on the
+            // button's badge.
             //
-            // Instead, use `currentTarget`, which identifies the element that actually has the event on it (in this
-            // case, `onclick`).
+            // NOTE: Use `currentTarget`, not `target`! `target` identifies the
+            // element that was clicked on; however, this is not _necessarily_
+            // the button itself. Buttons can contain child elements such as
+            // images and icons; if you happened to click on the 'icon' part of
+            // a button, then `target` will be set to that, not the button
+            // itself!
+            //
+            // Instead, use `currentTarget`, which identifies the element that
+            // actually has the event on it (in this case, `onclick`).
             addCardToPrintSheet(e.currentTarget.ponymtg.hash);
             e.currentTarget.ponymtg.quantity++;
-            e.currentTarget.innerHTML = addToPrintSheetButtonText+' <span class="badge">'+e.currentTarget.ponymtg.quantity+'</span>';
+            e.currentTarget.innerHTML = addToPrintSheetButtonText
+                + ' <span class="badge">' + e.currentTarget.ponymtg.quantity
+                + '</span>';
 
-            // Also increment the number on the main print sheets button in the navbar (if the navbar is on the page).
-            var printSheetCountBadge = document.querySelector('#printSheetCountBadge');
+            // Also increment the number on the main print sheets button in the
+            // navbar (if the navbar is on the page).
+            var printSheetCountBadge = document.querySelector(
+                '#printSheetCountBadge'
+            );
             if (printSheetCountBadge !== null) {
                 printSheetCountBadge.innerHTML = getNumberOfCardsInPrintSheet();
             }
@@ -1838,14 +2126,17 @@ function generateCardTableElement(cards, propertiesToDisplay) {
         if (isCardImageLocatable) {
             cardImageLink.href = getCardImageUrl(card); 
             cardImageLink.target = '_blank'; 
-            cardImageLink.innerHTML = '<span class="glyphicon glyphicon-picture"></span> View card image'; 
+            cardImageLink.innerHTML = '<span'
+                + ' class="glyphicon glyphicon-picture"></span>'
+                + ' View card image'; 
         }
 
         var cardLink = document.createElement('a');
         cardLink.className = 'btn btn-default';
         cardLink.href = cardHyperlinkUrl; 
         cardLink.target = '_blank'; 
-        cardLink.innerHTML = '<span class="glyphicon glyphicon-link"></span> Link'; 
+        cardLink.innerHTML = '<span class="glyphicon glyphicon-link"></span>'
+            + ' Link'; 
 
         cardInfoPanelFooter.appendChild(addToPrintSheetButton);
         if (isCardImageLocatable) {
@@ -2323,78 +2614,125 @@ function emptyElement(element) {
 }
 
 /**
- * Given a string `string`, add styling to mana characters in that string, such that the mana characters will be
- * appropriately decorated when rendered on the page.
+ * Given a string `string`, add styling to mana characters in that string, such
+ * that the mana characters will be appropriately decorated when rendered on
+ * the page.
  *
  * The mana characters are W, U, B, R, and G.
+ *
+ * @param {string} string
+ * @return {string}
  */
 function applyManaStyling(string) {
-    // Get a list of mana symbols (strings) for which we know how to apply styling.
-    var manaSymbolRegexStrings = Object.keys(global.mappings.manaSymbolsToStyles);
+    // Get a list of mana symbols (strings) for which we know how to apply
+    // styling.
+    var manaSymbolRegexStrings = Object.keys(
+        global.mappings.manaSymbolsToStyles
+    );
 
-    // For each mana symbol that we know about, produce a regex that will match that symbol. (For single colors of mana,
-    // this is generally straightforward: the mana symbol string will be a single letter (eg. "W"), and the regex will
-    // be the same (eg. /W/).
+    // For each mana symbol that we know about, produce a regex that will match
+    // that symbol. (For single colors of mana, this is generally
+    // straightforward: the mana symbol string will be a single letter (eg.
+    // "W"), and the regex will be the same (eg. /W/).
     var manaSymbolRegexes = []
     for (var i=0; i < manaSymbolRegexStrings.length; i++) {
         var manaSymbolRegex = new RegExp(manaSymbolRegexStrings[i]);
         manaSymbolRegexes.push(manaSymbolRegex);
     }
 
-    // Use the collection of regexes that we have to tokenize the string, breaking it down into an alternating sequence
-    // of non-tokens and tokens. The token parts should all be mana symbol strings, for which we know how to apply
-    // stylings.
+    // Use the collection of regexes that we have to tokenize the string,
+    // breaking it down into an alternating sequence of non-tokens and tokens.
+    // The token parts should all be mana symbol strings, for which we know how
+    // to apply stylings.
     var tokenizedString = tokenizeString(string, manaSymbolRegexes);
 
-    // Go through the tokenized string pieces, and figure out how to style each piece. If it's a non-token piece, we can
-    // safely ignore it. If it's a token piece, we need to figure out which token it is, and apply the appropriate
-    // styling to it.
+    // Go through the tokenized string pieces, and figure out how to style each
+    // piece. If it's a non-token piece, we can safely ignore it. If it's a
+    // token piece, we need to figure out which token it is, and apply the
+    // appropriate styling to it.
     for (var i=0; i < tokenizedString.length; i++) {
-
         for (var j=0; j < manaSymbolRegexStrings.length; j++) {
-            // If this string piece is a token (ie. something that we identified to be a mana symbol), we now need to
-            // figure out which mana symbol it is. To do this, we just run through our list of mana symbol regexes until
-            // we find the one that matches.
+            // If this string piece is a token (ie. something that we
+            // identified to be a mana symbol), we now need to figure out which
+            // mana symbol it is.
+            //
+            // To do this, we exploit the idempotence property of tokenization,
+            // which says that if we tokenize something that is already a token
+            // we should expect that same token back. Therefore, we can tokenize
+            // our candidate token against every mana symbol regex until we find
+            // an exact match. (This is more reliable than just testing against
+            // regexes, as some mana regexes could partially match in situations
+            // where we don't want them to - for example, inside hybrid mana).
             var manaSymbolRegexString = manaSymbolRegexStrings[j];
             var manaSymbolRegex = manaSymbolRegexes[j];
-            if (manaSymbolRegex.test(tokenizedString[i])) {
-                // We've found the mana symbol that corresponds to this string piece, which means we now know how to
-                // style it.
+            let candidateToken = tokenizedString[i];
+            let tokenizedCandidate = tokenizeString(
+                candidateToken,
+                [manaSymbolRegex]
+            );
 
-                // If the mana symbol is a hybrid mana symbol, we'll remove the string (it will be something like
-                // "(wu)", which is too cumbersome for the small space available on the card) and replace it with a
-                // single non-breaking space, and allow the style to indicate the color instead.
-                if (global.lists.hybridManaSymbolRegexes.indexOf(manaSymbolRegexString) !== -1) {
+            if (tokenizedCandidate.length === 2
+                && tokenizedCandidate[1] === candidateToken) {
+                // If tokenizing the candidate token yields an array like
+                // `['', candidateToken]`, then this is the correct mana regex,
+                // so we can now use the mapping to apply the correct style to
+                // this token.
+
+                // Special case: If the mana symbol is a hybrid mana symbol,
+                // we'll remove the string (it will be something like "(wu)",
+                // which is too cumbersome for the small space available on the
+                // card) and replace it with a non-breaking space; we then style
+                // the "space" to look like a hybrid mana symbol.
+                if (global.lists.hybridManaSymbolRegexes.indexOf(
+                    manaSymbolRegexString
+                    ) !== -1) {
                     tokenizedString[i] = tokenizedString[i].replace(
                         manaSymbolRegex,
-                        '<span class="manaDecoration '+global.mappings.manaSymbolsToStyles[manaSymbolRegexString]+'">&nbsp;&nbsp</span>'
+                        '<span class="manaDecoration '
+                            + global.mappings.manaSymbolsToStyles[
+                                manaSymbolRegexString
+                            ] + '">&nbsp;&nbsp;</span>'
                     );
-                }
-                else {
-                    // Otherwise, just apply a style to the mana symbol so that it looks vaguely like a Magic mana
-                    // symbol.
+                } else {
+                    // Otherwise, just apply a style to the mana symbol so that
+                    // it looks vaguely like a Magic mana symbol.
                     tokenizedString[i] = tokenizedString[i].replace(
                         manaSymbolRegex,
-                        '<span class="manaDecoration '+global.mappings.manaSymbolsToStyles[manaSymbolRegexString]+'">$&</span>'
+                        '<span class="manaDecoration '
+                        + global.mappings.manaSymbolsToStyles[
+                            manaSymbolRegexString
+                        ] + '">$&</span>'
                     );
                 }
 
-                // Having applied the styling, the string piece has now been altered, so we cannot perform any further
-                // modifications to it (it's no longer a pure mana symbol string). Skip to the next string piece.
+                // Having applied the styling, the string piece has now been
+                // altered, so we cannot perform any further modifications to
+                // it (it's no longer a pure mana symbol string). Skip to the
+                // next string piece.
                 break;
             }
         }
     }
 
-    // After the above processing has completed, we should have an alternating sequence of non-tokens, and tokens which
-    // now have appropriate styling applied to them. We can join them back together into a string again, and this will
-    // be the final result.
+    // After the above processing has completed, we should have an alternating
+    // sequence of non-tokens, and tokens which now have appropriate styling
+    // applied to them. We can join them back together into a string again, and
+    // this will be the final result.
     return tokenizedString.join('');
 }
 
+/**
+ * Process a piece of card text to apply Magic styling to it (for example,
+ * replacing mana letters with styled mana symbols).
+ *
+ * @param {string} text
+ * @return {string}
+ */
 function applyMagicStylingToText(text) {
-    // Search for certain strings that we know will generally contain some Magic markup. For example, if we find the
-    // string "T: ", it is safe to say that that T represents the tap symbol and should therefore be styled accordingly.
+    // Search for certain strings that we know will generally contain some
+    // Magic markup. For example, if we find the string "T: ", it is safe to
+    // say that that T represents the tap symbol and should therefore be styled
+    // accordingly.
 
     return text;
 }
@@ -2473,7 +2811,6 @@ function tokenizeString(string, tokenRegexes) {
             // Now collect the bit that matched the token.
             var tokenMatch = earliestTokenMatch;
 
-
             // Add them to our collection of string pieces.
             stringPieces.push(nonToken);
             stringPieces.push(tokenMatch);
@@ -2493,20 +2830,24 @@ function tokenizeString(string, tokenRegexes) {
 }
 
 /**
- * Given a string representing a mana cost, determine the most appropriate background color for a card that has that
- * cost.
+ * Given a string representing a mana cost, determine the most appropriate
+ * background color for a card that has that cost.
  *
  * Examples:
  *
- * - `getCardColorSchemeFromManaCost("2UU")` should return "blue", because the only colored mana in that cost is blue.
+ * - `getCardColorSchemeFromManaCost("2UU")` should return "blue", because the
+ *   only colored mana in that cost is blue.
  *
- * - `getCardColorSchemeFromManaCost("1BG")` should return "multicolored", because the mana cost contains two colors:
- * "B" (black) and "G" (green). In Magic, cards with more than one color of mana in their cost have a gold background.
+ * - `getCardColorSchemeFromManaCost("1BG")` should return "multicolored",
+ *   because the mana cost contains two colors: "B" (black) and "G" (green). In
+ *   Magic, cards with more than one color of mana in their cost have a gold
+ *   background.
  *
- * Note that a card's color scheme is _not_ the same as the card's color, which is a game mechanic. For example, it is
- * possible for a card to have colored mana in its cost, but to be colorless (this is the case for "Devoid" cards, which
- * define themselves as having no color). Although the two do usually coincide, it's important to maintain the
- * distinction.
+ * Note that a card's color scheme is _not_ the same as the card's color, which
+ * is a game mechanic. For example, it is possible for a card to have colored
+ * mana in its cost, but to be colorless (this is the case for "Devoid" cards,
+ * which define themselves as having no color). Although the two do usually
+ * coincide, it's important to maintain the distinction.
  */
 function getCardColorSchemeFromManaCost(cost) {
     // If `cost` isn't even defined, just say that it's colorless.
@@ -2514,55 +2855,81 @@ function getCardColorSchemeFromManaCost(cost) {
         return 'colorless';
     }
 
-    var manaSymbolRegexStrings = Object.keys(global.mappings.manaSymbolRegexesToCardColorSchemes);
+    var manaSymbolRegexStrings = Object.keys(
+        global.mappings.manaSymbolRegexesToCardColorSchemes
+    );
 
-    // For each mana symbol that we know about, produce a regex that will match that symbol. (For single colors of mana,
-    // this is generally straightforward: the mana symbol string will be a single letter (eg. "W"), and the regex will
-    // be the same (eg. /W/)).
+    // For each mana symbol that we know about, produce a regex that will match
+    // that symbol. (For single colors of mana, this is generally
+    // straightforward: the mana symbol string will be a single letter (eg.
+    // "W"), and the regex will be the same (eg. /W/)).
     var manaSymbolRegexes = []
     for (var i=0; i < manaSymbolRegexStrings.length; i++) {
         var manaSymbolRegex = new RegExp(manaSymbolRegexStrings[i]);
         manaSymbolRegexes.push(manaSymbolRegex);
     }
 
-    // Use the collection of regexes that we have to tokenize the cost, breaking it down into an alternating sequence
-    // of non-tokens and tokens.
+    // Use the collection of regexes that we have to tokenize the cost,
+    // breaking it down into an alternating sequence of non-tokens and tokens.
     var tokenizedCost = tokenizeString(cost, manaSymbolRegexes);
 
-    // Go through the tokenized cost pieces and count up all the distinct mana symbols that are present in the cost.
+    // Go through the tokenized cost pieces and count up all the distinct mana
+    // symbols that are present in the cost.
     var distinctManaSymbolRegexStringsInCost = [];
     for (var i=0; i < tokenizedCost.length; i++) {
         for (var j=0; j < manaSymbolRegexStrings.length; j++) {
-            // If this cost piece is a token (ie. something that we identified to be a mana symbol), we now need to
-            // figure out which mana symbol it is. To do this, we just run through our list of mana symbol regexes until
-            // we find the one that matches.
+            // If this cost piece is a token (ie. something that we identified
+            // to be a mana symbol), we now need to figure out which mana
+            // symbol it is.
             var manaSymbolRegex = manaSymbolRegexes[j];
             var manaSymbolRegexString = manaSymbolRegexStrings[j];
-            if (manaSymbolRegex.test(tokenizedCost[i])) {
-                // We've identified the mana symbol (or at least, the regex string that corresponds to it). We'll add
-                // that regex string to our collection and keep going.
-                if (distinctManaSymbolRegexStringsInCost.indexOf(manaSymbolRegexString) === -1) {
-                    // If we've already recorded an occurrence of this mana symbol regex string, we don't need to record
-                    // it again. We're only interested in how many distinct mana symbols there are in the cost.
-                    distinctManaSymbolRegexStringsInCost.push(manaSymbolRegexString);
+            let candidateToken = tokenizedCost[i];
+            let tokenizedCandidate = tokenizeString(
+                candidateToken,
+                [manaSymbolRegex]
+            );
+
+            if (tokenizedCandidate.length === 2
+                && tokenizedCandidate[1] === candidateToken) {
+                // We've identified the mana symbol (or at least, the regex
+                // string that corresponds to it). We'll add that regex string
+                // to our collection and keep going.
+                if (distinctManaSymbolRegexStringsInCost.indexOf(
+                        manaSymbolRegexString
+                    ) === -1) {
+                    // If we've already recorded an occurrence of this mana
+                    // symbol regex string, we don't need to record it again.
+                    // We're only interested in how many distinct mana symbols
+                    // there are in the cost.
+                    distinctManaSymbolRegexStringsInCost.push(
+                        manaSymbolRegexString
+                    );
                 }
-                // Having identified the mana symbol for this part of the cost, we can move on to the next.
+                // Having identified the mana symbol for this part of the cost,
+                // we can move on to the next.
                 break;
             }
         }
     }
 
-    // We should now have a list of all distinct mana symbols in the cost (that we know how to produce color schemes
-    // for, at least). With this information, we can now make our decision about what color scheme to use for this card.
-
-    // If there is one and only one type of mana symbol in the cost, we use the color scheme that is defined for that
-    // mana symbol. (A hybrid mana symbol, for example "(wu)" (white/blue) is still just one mana symbol, and it does
-    // have its own color scheme if it's the only type of colored mana present).
+    // We should now have a list of all distinct mana symbols in the cost (that
+    // we know how to produce color schemes for, at least). With this
+    // information, we can now make our decision about what color scheme to use
+    // for this card.
+    //
+    // If there is one and only one type of mana symbol in the cost, we use the
+    // color scheme that is defined for that mana symbol. (A hybrid mana
+    // symbol, for example "(wu)" (white/blue) is still just one mana symbol,
+    // and it does have its own color scheme if it's the only type of colored
+    // mana present).
     if (distinctManaSymbolRegexStringsInCost.length === 1) {
-        return global.mappings.manaSymbolRegexesToCardColorSchemes[distinctManaSymbolRegexStringsInCost[0]];
+        return global.mappings.manaSymbolRegexesToCardColorSchemes[
+            distinctManaSymbolRegexStringsInCost[0]
+        ];
     }
 
-    // If there is more than one type of mana symbol in the cost, we use the multicolored scheme.
+    // If there is more than one type of mana symbol in the cost, we use the
+    // multicolored scheme.
     if (distinctManaSymbolRegexStringsInCost.length > 1) {
         return 'multicolored';
     }

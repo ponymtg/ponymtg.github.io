@@ -1,7 +1,3 @@
-import sys
-from parseFICG_functions import *
-
-################################################################################
 # Friendship is Card Games text dump parser
 #
 # Given a text file containing a dump of card text from FanOfMostEverything's
@@ -9,6 +5,8 @@ from parseFICG_functions import *
 # structured format and output the result as JSON. A "dump of card text", in
 # this case, is a direct copy-paste of card listings from FanOfMostEverything's
 # card blog posts.
+import sys
+from parseFICG_functions import *
 
 # When typos appear in the type line, this causes problems for the parser as it
 # uses that line to determine where a card starts and ends. For this reason, we
@@ -16,6 +14,7 @@ from parseFICG_functions import *
 # processing the dump.
 SPELLING_CORRECTIONS = {}
 SPELLING_CORRECTIONS['Enchatment'] = 'Enchantment'
+SPELLING_CORRECTIONS['Enchantent'] = 'Enchantment'
 SPELLING_CORRECTIONS['Sorcey'] = 'Sorcery'
 
 # Read command line arguments.

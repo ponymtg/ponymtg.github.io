@@ -1,3 +1,9 @@
+## 1.9.4
+* Fixed a bug that prevented hybrid mana from being parsed and rendered correctly.
+* Added detection for a typo ("Enchantent") to the FICG parser.
+* Reformatted and added documentation to some Javascript code.
+* Updated unit tests.
+
 ## 1.9.3
 * Added "Empire of Shadows (PREVIEW)" set.
 
