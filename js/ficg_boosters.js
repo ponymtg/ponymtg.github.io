@@ -181,6 +181,9 @@ function pickFicgBoosterPackCards(cards) {
     const tokensAndEmblems = FICG_TOKENS.concat(FICG_EMBLEMS);
     boosterPackCards.push(tokensAndEmblems[rnd(tokensAndEmblems.length)]);
 
+    // 1:45 is apparently the real-life foil rarity as of the 2020 MtG Core Set.
+    let foilProbability = 1/45;
+
     // Give each card a small chance of being a foil (except tokens and emblems)
     boosterPackCards.forEach(
         function(card) {
@@ -193,7 +196,7 @@ function pickFicgBoosterPackCards(cards) {
                 return;
             }
 
-            if (UTIL.probability(1/20)) {
+            if (UTIL.probability(foilProbability)) {
                 card.foil = true;
             }
         }

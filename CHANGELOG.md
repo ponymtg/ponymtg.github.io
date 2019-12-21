@@ -1,3 +1,9 @@
+## 1.10.1
+* Updated "Friendship is Card Games" to "Ponyville Mysteries #2 and #3". All episodes of Friendship is Magic and Equestria Girls are now complete.
+* Updated the FICG parser to produce UTF-8 output.
+* Updates the FICG parser to auto-convert en dashes to em dashes.
+* Adjusted the foil probability in FICG boosters to be more like real life booster packs.
+
 ## 1.10.0
 * Updated the FICG booster generator to produce a fairer balance of colors in booster packs.
 * Added random "foil" cards to the FICG booster generator.

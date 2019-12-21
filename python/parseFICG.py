@@ -16,6 +16,7 @@ SPELLING_CORRECTIONS = {}
 SPELLING_CORRECTIONS['Enchatment'] = 'Enchantment'
 SPELLING_CORRECTIONS['Enchantent'] = 'Enchantment'
 SPELLING_CORRECTIONS['Sorcey'] = 'Sorcery'
+SPELLING_CORRECTIONS['Aritfact'] = 'Artifact'
 
 # Read command line arguments.
 if len(sys.argv) < 2:

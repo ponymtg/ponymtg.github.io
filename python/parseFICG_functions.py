@@ -18,6 +18,11 @@ from collections import OrderedDict
 # Define a long dash, just so we don't have to keep copy-pasting it.
 EM_DASH = '—'
 
+# Also define the en dash; this is rarely used, and in fact this parser
+# automatically replaces it with the em dash when it does occur. Unfortunately,
+# it looks nearly identical to the em dash.
+EN_DASH = '–'
+
 # A list of mappings from Fimfiction emoticons to faction names. These are used
 # to correctly apply watermarks on contraptions. The faction list is defined
 # here: <https://www.fimfiction.net/blog/859184/fic-or-faction>
@@ -43,6 +48,10 @@ META['previous_card_was_reverse_side'] = False
 
 # Return True if we can identify `line` as being a card's type line.
 def is_type_line(line):
+    # Replace the en dash with an em dash, if it's in the type line. That way we
+    # only have to check for one kind of dash.
+    line = re.sub(EN_DASH, EM_DASH, line)
+
     # An empty line never matches.
     if line.strip() == '':
         return False
@@ -516,7 +525,7 @@ def join_card_halves(first_card_half, second_card_half):
     if 'subtype' in second_card_half:
         joined_card['subtype2'] = second_card_half['subtype']
     joined_card['text'] = first_card_half['name'] + ': '  \
-        + first_card_half['text'] + r'\n\n'
+        + first_card_half['text'] + '\n\n'
     joined_card['text'] += second_card_half['name'] + ': ' \
         + second_card_half['text']
     return joined_card
@@ -525,6 +534,10 @@ def join_card_halves(first_card_half, second_card_half):
 # Given a dump `dump` of raw FICG data, break it into a list of sub-dumps, each
 # of which should represent a single card.
 def split_ficg_dump_into_individual_card_dumps(dump):
+    # Replace all occurrences of the en dash with the em dash, which is the one
+    # that seems to be used officially on Magic cards.
+    dump = re.sub(EN_DASH, EM_DASH, dump)
+
     # Split the dump into lines.
     dump_lines = dump.split('\n')
 
@@ -812,12 +825,12 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         rules_text_lines = text_lines[0:index_of_first_nondialogue_line+1]
         flavor_text_lines = text_lines[index_of_first_nondialogue_line+1:]
         
-    rules_text = '\\n\\n'.join(rules_text_lines)
+    rules_text = '\n\n'.join(rules_text_lines)
 
     # We'll only join flavor text with one newline, not two.
     # FanOfMostEverything leaves the exact number of newlines a little
     # ambiguous, but it looks better this way.
-    flavor_text = '\\n'.join(flavor_text_lines)
+    flavor_text = '\n'.join(flavor_text_lines)
 
     if rules_text:
         card_data_entry['text'] = rules_text
@@ -951,6 +964,10 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump):
 # JavaScript variable definition for an array containing those card data
 # entries as objects.
 #
+# Note that this is not JSON output (although it is very close). In fact, we are
+# using Python's `json` module to do most of the work of converting the objects
+# to JS.
+#
 # A list of `properties` must be given to define what properties will appear in
 # each card data entry (and their ordering).
 def convert_card_data_entries_to_js(
@@ -966,9 +983,14 @@ def convert_card_data_entries_to_js(
                 ordered_dict[prop] = entry[prop]
         ordered_dicts.append(ordered_dict)
 
-    js = json.dumps(ordered_dicts, indent = 4)
+    # Convert the set of card data entries to JSON. We need to explicitly
+    # suspend ASCII encoding and manually encode it to UTF-8 - this is a bit
+    # more human-readable than the default Unicode-escaping behavior.
+    js = json.dumps(ordered_dicts, indent = 4, ensure_ascii = False)
     js = 'var '+variable_name+' = ' + js + ';'
     js = re.sub(r'}$', '},', js, flags = re.MULTILINE)
     js = re.sub(r'"$', '",', js, flags = re.MULTILINE)
-    return js
+    js = js.encode('utf-8')
+
+    return js.decode()
 

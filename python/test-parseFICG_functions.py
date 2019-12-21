@@ -2,10 +2,18 @@ import unittest
 from parseFICG_functions import *
 
 class test_parseFICG_functions(unittest.TestCase):
+    # Test the `is_type_line` function to ensure it correctly identifies type
+    # lines. The type line is the primary signature that the parser looks for
+    # when figuring out which parts of the raw data are distinct cards. If the
+    # parser has produced a garbled card, it's probably a good idea to test the
+    # problematic type line here; most likely, the parser didn't recognize it as
+    # a real type line.
     def test_is_type_line(self):
         self.assertTrue(is_type_line('Tribal Enchantment — Hellion'))
         self.assertTrue(is_type_line('Creature — Rabbit'))
+        self.assertTrue(is_type_line('Creature — Rabbit Warrior'))
         self.assertTrue(is_type_line('Creature— Rabbit'))
+        self.assertTrue(is_type_line('Creature – Rabbit')) # contains en dash
         self.assertTrue(is_type_line('Creature'))
         self.assertTrue(is_type_line('Instant'))
         self.assertTrue(is_type_line('Instant — Trap'))
