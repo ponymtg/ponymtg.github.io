@@ -193,7 +193,7 @@ function pickFicgBoosterPackCards(cards) {
                 return;
             }
 
-            if (UTIL.probability(1/25)) {
+            if (UTIL.probability(1/20)) {
                 card.foil = true;
             }
         }
