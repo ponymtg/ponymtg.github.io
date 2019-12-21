@@ -2354,6 +2354,12 @@ function generateProxyElement(
         proxyElement.className += ' '+global.mappings.cardColorSchemesToCssClasses[proxyColorScheme];
     }
     
+    // If the card is marked as being a foil card, give the proxy a `foil`
+    // class, which adds a rainbow effect to it.
+    if (cardProperties.foil) {
+        proxyElement.className += ' foil';
+    }
+
     // Create the elements that will contain the various sections of the card.
     var proxyNameElement = document.createElement('p');
     var proxyNameAndCostLineElement = document.createElement('div');

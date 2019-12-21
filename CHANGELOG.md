@@ -1,3 +1,13 @@
+## 1.10.0
+* Updated the FICG booster generator to produce a fairer balance of colors in booster packs.
+* Added random "foil" cards to the FICG booster generator.
+* Added new "foil" styles for foil cards.
+* Added images for all Friendship is Card Games cards that have images so far (although the images are not yet associated to the cards, which are still using proxies).
+* Added images for some Sideboard of Harmony cards.
+* Updated "Merodi is Card Games" with some new cards.
+* Updated the FICG parser to output in a more JSON-like style (double quotes instead of single)
+* Updated the entire card database to use a more JSON-style format (double quotes)
+
 ## 1.9.4
 * Fixed a bug that prevented hybrid mana from being parsed and rendered correctly.
 * Added detection for a typo ("Enchantent") to the FICG parser.

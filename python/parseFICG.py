@@ -76,4 +76,10 @@ card_properties = [
 ]
 
 # Turn the dictionary of card data entries into a Javascript JSON variable, and output it.
-sys.stdout.write(mtgJson.encapsulate_dict_list_in_js_variable(card_data_entries, card_properties, js_variable_name))
+sys.stdout.write(
+    convert_card_data_entries_to_js(
+        card_data_entries,
+        card_properties,
+        js_variable_name
+    )
+)

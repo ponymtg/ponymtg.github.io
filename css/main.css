@@ -171,7 +171,14 @@ a.logo-small {
 }
 
 /**
- * The `cardColor` classes all define appropriate background colors for specific types of card.
+ * The `cardColor` classes all define appropriate background colors for specific
+ * types of card. There are 14 different proxy card backgrounds:
+ *
+ * - 5 colors of mana (white, blue, black, red, green)
+ * - 1 colorless (light gray)
+ * - 1 multicolored (gold)
+ * - 10 two-color combinations
+ * - 1 undefined (medium-gray)
  */
 .cardColorWhite {
     background-color: #f8f8f0;
@@ -188,11 +195,11 @@ a.logo-small {
 .cardColorGreen {
     background-color: #90c080;
 }
-.cardColorMulticolored {
-    background: linear-gradient(135deg, #b08010, #ffd060 50%, #b08010);
-}
 .cardColorColorless {
     background-color: #c0c0c0;
+}
+.cardColorMulticolored {
+    background: linear-gradient(135deg, #b08010, #ffd060 50%, #b08010);
 }
 .cardColorHybridWhiteBlue {
     background: linear-gradient(90deg, #f8f8f8, #f8f8f8 30%, #60a8f0 70%, #60a8f0);
@@ -229,8 +236,150 @@ a.logo-small {
 }
 
 /**
- * Decoration for a string to make it resemble a mana symbol, ie. rounded border, slight drop shadow. The color is not
- * decided at this point.
+ * Foil classes
+ *
+ * Each of the `cardColor` backgrounds can also have a "foil" variant, which
+ * adds a rainbow gradient to give the appearance of a foil card. Combining
+ * gradients is a bit clunky in CSS: we can't just define a single rainbow
+ * gradient class and overlay it, we have to specifically combine the rainbow
+ * with a gradient. Additionally, for the flat monocolored backgrounds, we still
+ * have to define them as gradients - just ones where the start and end color
+ * happens to be the same.
+ */
+.foil {
+    color: rgba(16, 16, 16, 75%);
+}
+.cardColorWhite.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(0deg, #f8f8f0, #f8f8f0);
+}
+
+.cardColorBlue.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(0deg, #60a8f0, #60a8f0);
+}
+.cardColorBlack.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(0deg, #383838, #383838);
+}
+.cardColorRed.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(0deg, #e04840, #e04840);
+}
+.cardColorGreen.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(0deg, #90c080, #90c080);
+}
+.cardColorColorless.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(0deg, #c0c0c0, #c0c0c0);
+}
+.cardColorMulticolored.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(135deg, #b08010, #ffd060 50%, #b08010);
+}
+.cardColorHybridWhiteBlue.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #f8f8f8, #f8f8f8 30%, #60a8f0 70%, #60a8f0);
+}
+.cardColorHybridWhiteBlack.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #f8f8f8, #f8f8f8 30%, #383838 70%, #383838);
+}
+.cardColorHybridWhiteRed.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #f8f8f8, #f8f8f8 30%, #e04840 70%, #e04840);
+}
+.cardColorHybridWhiteGreen.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #f8f8f8, #f8f8f8 30%, #90c080 70%, #90c080);
+}
+.cardColorHybridBlueBlack.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #60a8f0, #60a8f0 30%, #383838 70%, #383838);
+}
+.cardColorHybridBlueRed.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #60a8f0, #60a8f0 30%, #e04840 70%, #e04840);
+}
+.cardColorHybridBlueGreen.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #60a8f0, #60a8f0 30%, #90c080 70%, #90c080);
+}
+.cardColorHybridBlackRed.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #383838, #383838 30%, #e04840 70%, #e04840);
+}
+.cardColorHybridBlackGreen.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #383838, #383838 30%, #90c080 70%, #90c080);
+}
+.cardColorHybridRedGreen.foil {
+    background:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #e04840, #e04840 30%, #90c080 70%, #90c080);
+}
+.cardColorUndefined.foil {
+    background-color:
+        linear-gradient(135deg, rgba(255, 0, 0, 35%), rgba(255, 255, 0, 35%),
+            rgba(0, 255, 0, 35%), rgba(0, 255, 255, 35%), rgba(0, 0, 255, 35%),
+            rgba(255, 0, 255, 35%), rgba(255, 0, 0, 35%)),
+        linear-gradient(90deg, #808080, #808080);
+}
+
+/**
+ * Decoration for a string to make it resemble a mana symbol, ie. rounded
+ * border, slight drop shadow. The color is not decided at this point.
  */
 .manaDecoration {
     border: 0px solid #000000;

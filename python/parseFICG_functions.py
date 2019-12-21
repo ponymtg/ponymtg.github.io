@@ -1,4 +1,5 @@
-import mtgJson, re
+import json, re
+from collections import OrderedDict
 
 # coding=utf-8
 
@@ -644,60 +645,77 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
             )
             
         if 'subtype' in card_data_entry and card_data_entry['subtype'] == 'Contraption':
-            # Special case: Contraptions don't always have costs, so like with the color indicator, we need to use
-            # strict cost checking to prevent the parser from interpreting the last word of the name as a cost.
-            name_and_cost_line_properties = split_name_and_cost_line_into_name_and_cost(name_and_cost_line, True)
+            # Special case: Contraptions don't always have costs, so like with
+            # the color indicator, we need to use strict cost checking to
+            # prevent the parser from interpreting the last word of the name as
+            # a cost.
+            name_and_cost_line_properties = split_name_and_cost_line_into_name_and_cost(
+                name_and_cost_line,
+                True
+            )
             
         card_data_entry['name'] = name_and_cost_line_properties['name']
         if 'cost' in name_and_cost_line_properties:
             card_data_entry['cost'] = name_and_cost_line_properties['cost']
         if 'cost2' in name_and_cost_line_properties:
-            # If the card was a split card, we should have gotten back a second cost (`cost2`), so we'll include that in
-            # the card data.
+            # If the card was a split card, we should have gotten back a second
+            # cost (`cost2`), so we'll include that in the card data.
             card_data_entry['cost2'] = name_and_cost_line_properties['cost2']
 
-    # META CASE: If the card before this one made reference to "transforming" itself, then we can surmise that this card
-    # is the transformed version of it; that is, it is the reverse side of a double-sided card. Reverse sides of
-    # double-sided cards generally do not have a mana cost, which means we should take the entirety of the name-and-cost
-    # line to be the card's name.
+    # META CASE: If the card before this one made reference to "transforming"
+    # itself, then we can surmise that this card is the transformed version of
+    # it; that is, it is the reverse side of a double-sided card. Reverse sides
+    # of double-sided cards generally do not have a mana cost, which means we
+    # should take the entirety of the name-and-cost line to be the card's name.
     if META['previous_card_was_a_transformer']:
-        # There is one exception to this meta case: if we were able to identify the _previous_ card as being a
-        # reverse side (as well as one that wants to transform itself), then this card is _not_ the reverse side of
-        # that card. What's happened there is that the previous card is able to transform back to its original form,
-        # so any references it makes to transformation do not apply to this card.
+        # There is one exception to this meta case: if we were able to identify
+        # the _previous_ card as being a reverse side (as well as one that
+        # wants to transform itself), then this card is _not_ the reverse side
+        # of that card. What's happened there is that the previous card is able
+        # to transform back to its original form, so any references it makes to
+        # transformation do not apply to this card.
         if not META['previous_card_was_reverse_side']:
-            # Since this is the reverse side of a double-sided card, disregard the mana cost.
+            # Since this is the reverse side of a double-sided card, disregard
+            # the mana cost.
             card_data_entry['name'] = name_and_cost_line
             if 'cost' in card_data_entry:
                 del card_data_entry['cost']
-            # We can also record which card this actually transforms from, since we know what the previous card was.
-            # We should be more specific than just the card name (as that is not guaranteed to be unique), but for now
-            # we'll just use the name.
+            # We can also record which card this actually transforms from,
+            # since we know what the previous card was.  We should be more
+            # specific than just the card name (as that is not guaranteed to be
+            # unique), but for now we'll just use the name.
             card_data_entry['transformsFrom'] = META['previous_card_data_entry']['name']
 
-    # We can now use the supertype and subtype to make some further decisions about where the text is on this card, and
-    # what the fields below the text are.
+    # We can now use the supertype and subtype to make some further decisions
+    # about where the text is on this card, and what the fields below the text
+    # are.
     if 'Creature' in card_data_entry['supertype']:
-        # If the card is a creature, we expect that the last line in the dump will be the creature's power/toughness,
-        # and everything else will be card text.
+        # If the card is a creature, we expect that the last line in the dump
+        # will be the creature's power/toughness, and everything else will be
+        # card text.
         card_data_entry['pt'] = individual_card_dump_lines[-1]
         text_lines = individual_card_dump_lines[2:-1]
 
         if re.match(r'^Level up', individual_card_dump_lines[2]):
-            # Special exception to the above: If the card text begins with "Level up", we will assume this is a Leveler
-            # card. Leveler cards don't have a single power/toughness value, so it doesn't make sense to give these a
-            # power/toughness property; instead, we simply allow the rules text to state the power/toughness values for
-            # the card.
+            # Special exception to the above: If the card text begins with
+            # "Level up", we will assume this is a Leveler card. Leveler cards
+            # don't have a single power/toughness value, so it doesn't make
+            # sense to give these a power/toughness property; instead, we
+            # simply allow the rules text to state the power/toughness values
+            # for the card.
             del card_data_entry['pt']
             text_lines = individual_card_dump_lines[2:]
     elif 'Planeswalker' in card_data_entry['supertype']:
-        # If the card is a planeswalker, we expect that the last line in the dump will be the planeswalker's loyalty,
-        # and everything else will be card text.
+        # If the card is a planeswalker, we expect that the last line in the
+        # dump will be the planeswalker's loyalty, and everything else will be
+        # card text.
         card_data_entry['loyalty'] = individual_card_dump_lines[-1]
         text_lines = individual_card_dump_lines[2:-1]
 
-        # SPECIAL CASE: "Discord Released" has no loyalty box, due to a quirk of it being the reverse side of a
-        # double-sided card. For this card, all lines after the first two are the card text, and we won't set a loyalty.
+        # SPECIAL CASE: "Discord Released" has no loyalty box, due to a quirk
+        # of it being the reverse side of a double-sided card. For this card,
+        # all lines after the first two are the card text, and we won't set a
+        # loyalty.
         if card_data_entry['name'] == 'Discord Released':
             del card_data_entry['loyalty']
             text_lines = individual_card_dump_lines[2:]
@@ -706,54 +724,64 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         and 'Contraption' in card_data_entry['subtype']
         and individual_card_dump_lines[-1] in FACTIONS
     ):
-        # If this card is a Contraption and the final line is recognized as a faction watermark, we record the watermark
-        # on the card.
+        # If this card is a Contraption and the final line is recognized as a
+        # faction watermark, we record the watermark on the card.
         #
-        # As explained by FoME in <https://www.fimfiction.net/blog/859184/fic-or-faction>, FICG uses Fimfiction
-        # emoticons as faction watermarks. Fortunately for us, these emoticon images do get captured in the FICG text
-        # dump, as colon-enclosed strings (eg. `:ajsmug:`). So, to record the watermark, we just need to map the
-        # emoticon string to the correct watermark name.
+        # As explained by FoME in
+        # <https://www.fimfiction.net/blog/859184/fic-or-faction>, FICG uses
+        # Fimfiction emoticons as faction watermarks. Fortunately for us, these
+        # emoticon images do get captured in the FICG text dump, as
+        # colon-enclosed strings (eg. `:ajsmug:`). So, to record the watermark,
+        # we just need to map the emoticon string to the correct watermark
+        # name.
         faction_emoticon = individual_card_dump_lines[-1]
         card_data_entry['watermark'] = FACTIONS[faction_emoticon]
         text_lines = individual_card_dump_lines[2:-1]
     elif card_data_entry['name'] == 'Power Converter':
         # SPECIAL CASE: "Power Converter" (from
-        # <https://www.fimfiction.net/blog/789008/friendship-is-card-games-2014-annual-power-ponies>) was meant to have
-        # an image of the League of Dastardly Doom's faction watermark (I think), but the link is broken; in any case,
-        # we probably wouldn't be able to process it anyway. For this card, we add the watermark manually.
+        # <https://www.fimfiction.net/blog/789008/friendship-is-card-games-2014-annual-power-ponies>)
+        # was meant to have an image of the League of Dastardly Doom's faction
+        # watermark (I think), but the link is broken; in any case, we probably
+        # wouldn't be able to process it anyway. For this card, we add the
+        # watermark manually.
         text_lines = individual_card_dump_lines[2:-1]
         card_data_entry['watermark'] = 'League of Dastardly Doom'
     else:
-        # In all other cases (ie. enchantments, instants, artifacts), we expect that everything after the first two
-        # lines is card text.
+        # In all other cases (ie. enchantments, instants, artifacts), we expect
+        # that everything after the first two lines is card text.
         text_lines = individual_card_dump_lines[2:]
         
     rules_text_lines = text_lines
     flavor_text_lines = []
 
-    # We've assumed, by default, that all text lines are the card's rules text, and that it has no flavor text. This is
-    # because, in most cases, we cannot distinguish rules text from flavor text. However, there are a couple of tricks
-    # which we'll now try.
+    # We've assumed, by default, that all text lines are the card's rules text,
+    # and that it has no flavor text. This is because, in most cases, we cannot
+    # distinguish rules text from flavor text. However, there are a couple of
+    # tricks which we'll now try.
     #
-    # FanOfMostEverything often uses a fairly well-defined format for character quotes, like this:
+    # FanOfMostEverything often uses a fairly well-defined format for character
+    # quotes, like this:
     #
-    # "Something said by a character"
-    # — the character
+    # "Something said by a character" — the character
     #
-    # It's a good bet that if the second-to-last of the text lines is in double quotes, and the last line begins with a
-    # long dash, that those two lines are flavor text.
+    # It's a good bet that if the second-to-last of the text lines is in double
+    # quotes, and the last line begins with a long dash, that those two lines
+    # are flavor text.
 
-    # A note of explanation here: up to this point, we've been working with byte strings, which is usually fine. Even
-    # though the FICG dump is in UTF-8 encoding, we haven't needed to worry about what bytes are actually in our
-    # strings.
+    # A note of explanation here: up to this point, we've been working with
+    # byte strings, which is usually fine. Even though the FICG dump is in
+    # UTF-8 encoding, we haven't needed to worry about what bytes are actually
+    # in our strings.
     #
-    # At this point, however, we want to detect whether the first character is a long dash. In UTF-8, the long dash (em
-    # dash) is three bytes long. Because we're using byte strings, this means that in order to test for a long dash, we
-    # would need to look at the first _three_ characters of the string (ie. string[0:3]). This is just how Python
-    # strings work.
+    # At this point, however, we want to detect whether the first character is
+    # a long dash. In UTF-8, the long dash (em dash) is three bytes long.
+    # Because we're using byte strings, this means that in order to test for a
+    # long dash, we would need to look at the first _three_ characters of the
+    # string (ie. string[0:3]). This is just how Python strings work.
     #
-    # So we could do that, or we could decode our byte string into a proper Unicode string and examine the characters as
-    # actual characters, rather than bytes. The latter option is preferable, so we'll do that.
+    # So we could do that, or we could decode our byte string into a proper
+    # Unicode string and examine the characters as actual characters, rather
+    # than bytes. The latter option is preferable, so we'll do that.
     if (
         len(text_lines) >= 2
         and text_lines[-2][0] == '"'
@@ -763,13 +791,17 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         rules_text_lines = text_lines[0:-2]
         flavor_text_lines = text_lines[-2:]
 
-    # Another pattern we can search for is the presence of one or more fully-quoted strings at the end of the card text.
-    # These usually represent unattributed character dialogue, which makes them flavor text. To check for this, we'll
-    # search backward through the lines of card text until we find one that is not dialogue (ie. not fully enclosed in
-    # double quotes). If the first non-dialogue line is the last line of the text, then there _is_ no dialogue, and thus
-    # we cannot use this trick. If, however, the first non-dialogue line is not the last line of the text (or, more
-    # rarely, we don't find any non-dialogue lines, which would indicate a card that is _all_ dialogue), then we know
-    # that the card has dialogue, and will capture that as the flavor text.
+    # Another pattern we can search for is the presence of one or more
+    # fully-quoted strings at the end of the card text.  These usually
+    # represent unattributed character dialogue, which makes them flavor text.
+    # To check for this, we'll search backward through the lines of card text
+    # until we find one that is not dialogue (ie. not fully enclosed in double
+    # quotes). If the first non-dialogue line is the last line of the text,
+    # then there _is_ no dialogue, and thus we cannot use this trick. If,
+    # however, the first non-dialogue line is not the last line of the text
+    # (or, more rarely, we don't find any non-dialogue lines, which would
+    # indicate a card that is _all_ dialogue), then we know that the card has
+    # dialogue, and will capture that as the flavor text.
     index_of_first_nondialogue_line = None
     for i in range(len(text_lines)-1, -1, -1):
         text_line = text_lines[i]
@@ -782,8 +814,9 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         
     rules_text = '\\n\\n'.join(rules_text_lines)
 
-    # We'll only join flavor text with one newline, not two. FanOfMostEverything leaves the exact number of newlines a
-    # little ambiguous, but it looks better this way.
+    # We'll only join flavor text with one newline, not two.
+    # FanOfMostEverything leaves the exact number of newlines a little
+    # ambiguous, but it looks better this way.
     flavor_text = '\\n'.join(flavor_text_lines)
 
     if rules_text:
@@ -791,28 +824,30 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     if flavor_text:
         card_data_entry['flavorText'] = flavor_text
 
-    # Finally, add the creator attribution; the set and creator will be the same in all cases.
+    # Finally, add the creator attribution; the set and creator will be the
+    # same in all cases.
     if 'set_name' in META:
         card_data_entry['set'] = META['set_name']
     card_data_entry['creator'] = 'FanOfMostEverything'
 
-    # Sometimes, the card after this one will need to refer back to it, because it's related to it in some way (usually,
-    # by being the transformed version of it). We store any such meta-information in the global `META` dictionary.
+    # Sometimes, the card after this one will need to refer back to it, because
+    # it's related to it in some way (usually, by being the transformed version
+    # of it). We store any such meta-information in the global `META`
+    # dictionary.
     META['previous_card_data_entry'] = card_data_entry
 
-    # If this card referred to "transforming" itself, store that in the meta dictionary. The next card will need to
-    # know about that, because it's probably the transformed version of this card (and that will affect how we interpret
-    # it).
+    # If this card referred to "transforming" itself, store that in the meta
+    # dictionary. The next card will need to know about that, because it's
+    # probably the transformed version of this card (and that will affect how
+    # we interpret it).
     #
-    # The following condition checks the card text for any of the following:
-    # - "transform {FULL NAME OF CARD}"
-    # - "transform {FIRST WORD OF CARD NAME}"
-    # - "transform it"
-    # - "return it to the battlefield transformed"
+    # The following condition checks the card text for any of the following: -
+    # "transform {FULL NAME OF CARD}" - "transform {FIRST WORD OF CARD NAME}" -
+    # "transform it" - "return it to the battlefield transformed"
     first_word_of_card_name = card_data_entry['name'].split(' ')[0]
     
-    # Sometimes, the first word will have a trailing comma (eg. "Luna, the Light in the Dark"). This needs to be removed
-    # if present.
+    # Sometimes, the first word will have a trailing comma (eg. "Luna, the
+    # Light in the Dark"). This needs to be removed if present.
     if first_word_of_card_name[-1] == ',':
         first_word_of_card_name = first_word_of_card_name[0:-1]
     if (
@@ -823,36 +858,41 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     ):
         if META['previous_card_was_a_transformer']:
             if not META['previous_card_was_reverse_side']:
-                # If this card is a transformer, and the previous card was _also_ a transformer, _and_ the previous card
-                # wasn't a reverse side, then we can safely say that this card is the reverse side of the previous card.
-                # The next card needs to know that, because otherwise it will think that _it_ is the reverse side of
-                # _this_ card (which isn't possible; a card only has 2 sides).
+                # If this card is a transformer, and the previous card was
+                # _also_ a transformer, _and_ the previous card wasn't a
+                # reverse side, then we can safely say that this card is the
+                # reverse side of the previous card.  The next card needs to
+                # know that, because otherwise it will think that _it_ is the
+                # reverse side of _this_ card (which isn't possible; a card
+                # only has 2 sides).
                 META['previous_card_was_reverse_side'] = True
             else:
-                # If this card is a transformer, and the previous card was also a transformer, but we know that the
-                # previous card was the reverse side of the card before it, then we can safely say that this card is
-                # _not_ a reverse side (it's the front side). The next card needs to know that.
+                # If this card is a transformer, and the previous card was also
+                # a transformer, but we know that the previous card was the
+                # reverse side of the card before it, then we can safely say
+                # that this card is _not_ a reverse side (it's the front side).
+                # The next card needs to know that.
                 META['previous_card_was_reverse_side'] = False
         META['previous_card_was_a_transformer'] = True
     else:
-        # If this card didn't make any reference to transformation, then it's not a transformer, and it's not the
-        # reverse side of anything.
+        # If this card didn't make any reference to transformation, then it's
+        # not a transformer, and it's not the reverse side of anything.
         META['previous_card_was_a_transformer'] = False
         META['previous_card_was_reverse_side'] = False
 
     return card_data_entry
 
 def parse_ficg_dump_into_card_data_entries(ficg_dump):
-    # Break up the dump into a number of sub-dumps, each of which (we hope) is a chunk of text that represents a single
-    # card.
-
+    # Break up the dump into a number of sub-dumps, each of which (we hope) is
+    # a chunk of text that represents a single card.
     individual_card_dumps = split_ficg_dump_into_individual_card_dumps(ficg_dump)
     card_data_entries = []
     for individual_card_dump in individual_card_dumps:
         card_data_entry = parse_individual_card_dump_into_card_data_entry(individual_card_dump)
         card_data_entries.append(card_data_entry)
 
-    # Before we return it, we can do a second pass on this data; if we identified any "transformsFrom" properties, we
+    # Before we return it, we can do a second pass on this data; if we
+    # identified any "transformsFrom" properties, we
     # can now also add "transformsInto" on the cards that they transform from.
     transformsIntoDict = {}
     for card_data_entry in card_data_entries:
@@ -862,8 +902,9 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump):
         if card_data_entry['name'] in transformsIntoDict:
             card_data_entry['transformsInto'] = transformsIntoDict[card_data_entry['name']]
 
-    # A third pass is required to deal with "Aftermath" cards. These are a kind of split card (two cards on the same
-    # face). In the raw FICG dump, FanOfMostEverything formats these like this:
+    # A third pass is required to deal with "Aftermath" cards. These are a kind
+    # of split card (two cards on the same face). In the raw FICG dump,
+    # FanOfMostEverything formats these like this:
     #
     #     Road U
     #     Sorcery
@@ -873,11 +914,14 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump):
     #     Aftermath (Cast this spell only from your graveyard. Then exile it.)
     #     Target player loses life equal to the damage already dealt to him or her this turn.
     #
-    # Since we need to preserve the connection between the two cards, we must combine them into one card.
+    # Since we need to preserve the connection between the two cards, we must
+    # combine them into one card.
     #
-    # To do this, we first search through the card data entries for Aftermath cards. For each one that we find, we make
-    # the assumption that the card immediately preceding it is the other half of the card. We join the two halves
-    # together into a single card, then replace the two cards with the joined version.
+    # To do this, we first search through the card data entries for Aftermath
+    # cards. For each one that we find, we make the assumption that the card
+    # immediately preceding it is the other half of the card. We join the two
+    # halves together into a single card, then replace the two cards with the
+    # joined version.
     i = 0
     while i < len(card_data_entries):
         card_data_entry = card_data_entries[i]
@@ -890,14 +934,41 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump):
 
                 joined_card = join_card_halves(first_card_half, second_card_half)
 
-                # Delete this card (the second card half), and replace the preceding card (the first card half) with the
+                # Delete this card (the second card half), and replace the
+                # preceding card (the first card half) with the
                 # joined version.
                 del card_data_entries[i]
                 card_data_entries[i-1] = joined_card
 
-                # Decrement the index counter by 1 (since we just removed a card).
+                # Decrement the index counter by 1 (since we just removed a
+                # card).
                 i -= 1
-
         i += 1
         
     return card_data_entries
+
+# Given a list of card data entries (dicts), return a string containing a
+# JavaScript variable definition for an array containing those card data
+# entries as objects.
+#
+# A list of `properties` must be given to define what properties will appear in
+# each card data entry (and their ordering).
+def convert_card_data_entries_to_js(
+    card_data_entries,
+    properties,
+    variable_name
+):
+    ordered_dicts = []
+    for entry in card_data_entries:
+        ordered_dict = OrderedDict()
+        for prop in properties:
+            if prop in entry:
+                ordered_dict[prop] = entry[prop]
+        ordered_dicts.append(ordered_dict)
+
+    js = json.dumps(ordered_dicts, indent = 4)
+    js = 'var '+variable_name+' = ' + js + ';'
+    js = re.sub(r'}$', '},', js, flags = re.MULTILINE)
+    js = re.sub(r'"$', '",', js, flags = re.MULTILINE)
+    return js
+

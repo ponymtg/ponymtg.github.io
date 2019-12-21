@@ -51,10 +51,10 @@ done
 # Create a sed script to transform the interleaved list (once we interleave the
 # card names and images) to JSON.
 SED_SCRIPT=$(cat <<'SED'
-1~2 s/^.*$/        'name': '\0',/
-2~2 s/^.*$/        'image': '\0',/
+1~2 s/^.*$/        "name": "\0",/
+2~2 s/^.*$/        "image": "\0",/
 1~2 i \ \ \ \ {
-2~2 a \ \ \ \ \ \ \ \ 'creator': '',
+2~2 a \ \ \ \ \ \ \ \ "creator": "",
 2~2 a \ \ \ \ },
 SED
 )

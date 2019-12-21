@@ -1,6 +1,7 @@
 # Parses the Cockatrice XML file supplied by Sorden for his "IPU" set into JSON for our database.
 # coding=utf-8
-import xml.etree.ElementTree as et, mtgJson, sys
+import xml.etree.ElementTree as et, sys
+from parseFICG_functions import convert_card_data_entries_to_js
 
 SET_NAME = 'Friendship is Magic the Gathering (IPU)'
 CREATOR = 'Sorden'
@@ -108,5 +109,10 @@ for cardElement in cardElements:
 
 card_properties = ['name', 'image', 'set', 'creator', 'cost', 'supertype', 'subtype', 'text', 'flavorText', 'pt', 'transformsInto', 'transformsFrom', 'loyalty']
 
-cards_js_variable = mtgJson.encapsulate_dict_list_in_js_variable(card_data_entries, card_properties, 'IPU_CARDS')
+cards_js_variable = convert_card_data_entries_to_js(
+    card_data_entries,
+    card_properties,
+    'IPU_CARDS'
+)
+
 print(cards_js_variable)
