@@ -24419,7 +24419,7 @@ Enchantment
 Whenever you attack with one or more creatures, put a momentum counter on Building Steam.
 Attacking creatures you control get +1/+0 for each momentum counter on Building Steam.
 At the beginning of your end step, if you didn’t attack with a creature this turn, remove all momentum counters from Building Steam.
-“Shake Thing Up!” 2RR
+“Shake Things Up!” 2RR
 Enchantment — Song
 At the beginning of your upkeep, put a verse counter on “Shake Things Up!”
 RRR, Sacrifice “Shake Things Up!”: Each player puts X permanents he or she owns on the bottom of his or her library, reveals the top X cards of that library, puts all permanent cards revealed this way onto the battlefield, and puts the rest on the bottom of that library, where X is the number of verse counters on “Shake Things Up!”

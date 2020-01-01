@@ -49,7 +49,7 @@ UTIL.sleep = function(milliseconds) {
 UTIL.loadUrl = function(url, progressFunc) {
     return new Promise(
         function(resolve, reject) {
-            let xhr = new XMLHttpRequest();
+            const xhr = new XMLHttpRequest();
             xhr.open('GET', url);
 
             xhr.onload = function() {
@@ -88,8 +88,8 @@ UTIL.loadUrl = function(url, progressFunc) {
  */
 UTIL.filterObjectByValue = function(object, filterFunction) {
     let filteredObject = {};
-    for (let key in object) {
-        let value = object[key];
+    for (const key in object) {
+        const value = object[key];
         if (filterFunction(value)) {
             filteredObject[key] = value;
         }
@@ -117,15 +117,15 @@ UTIL.filterObjectByValue = function(object, filterFunction) {
 UTIL.sortByProperties = function (objects, properties, ignoreCase) {
     return objects.sort(
         function (objectA, objectB) {
-            for (let i=0; i < properties.length; i++) {
+            for (let i = 0; i < properties.length; i++) {
                 // Go through each of the listed properties, and attempt to
                 // compare objectA and objectB by each property. If any property
                 // comparison yields a definite "this is smaller" or "this is
                 // larger" answer, then we return that. If it determines that
                 // the two properties are the same, it moves on and tries to
                 // compare the next property.
-                let property = properties[i];
-                let comparisonResult = undefined;
+                const property = properties[i];
+                const comparisonResult = undefined;
 
                 // If the object does not have the specified property, assume
                 // the value of that property to be the empty string.
@@ -198,7 +198,7 @@ UTIL.sum = function(array)  {
 UTIL.getArrayMin = function(array) {
     let minValue = undefined;
     for (let i = 0; i < array.length; i++) {
-        let value = array[i];
+        const value = array[i];
 
         if (minValue === undefined || value < minValue) {
             minValue = value;
@@ -217,7 +217,7 @@ UTIL.getArrayMin = function(array) {
 UTIL.getArrayMax = function(array) {
     let maxValue = undefined;
     for (let i = 0; i < array.length; i++) {
-        let value = array[i];
+        const value = array[i];
 
         if (maxValue === undefined || value > maxValue) {
             maxValue = value;
@@ -226,6 +226,36 @@ UTIL.getArrayMax = function(array) {
 
     return maxValue;
 };
+
+/**
+ * Return true if variable is an object.
+ *
+ * @param {mixed} variable
+ * @return {boolean}
+ */
+UTIL.isObject = function(variable) {
+    return typeof variable === 'object' && !Array.isArray(variable)
+        && variable !== null;
+};
+
+////////////////////////////////////////////////////////////////////////////////
+// String functions
+////////////////////////////////////////////////////////////////////////////////
+
+/**
+ * Replace special characters in HTML with escaped entities.
+ *
+ * @param {string} html
+ * @return {string}
+ */
+UTIL.escapeHtml = function(html) {
+    return html
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 // Set functions
@@ -346,9 +376,10 @@ UTIL.scaleLinear = function (domainMin, domainMax, rangeMin, rangeMax) {
             // If the scale has zero length, just return 0.
             return 0;
         }
-        let relativeValue = domainValue - domainMin;
-        let domainCoefficient = relativeValue / (domainMax - domainMin);
-        let rangeValue = rangeMin + ((rangeMax - rangeMin) * domainCoefficient);
+        const relativeValue = domainValue - domainMin;
+        const domainCoefficient = relativeValue / (domainMax - domainMin);
+        const rangeValue = rangeMin
+            + ((rangeMax - rangeMin) * domainCoefficient);
         return rangeValue;
     };
 };
@@ -371,15 +402,16 @@ UTIL.scalePower = function (exponent, domainMin, domainMax, rangeMin, rangeMax) 
             return 0;
         }
 
-        let powerDomainMin = Math.pow(domainMin, exponent);
-        let powerDomainMax = Math.pow(domainMax, exponent);
-        let powerDomainValue = Math.pow(domainValue, exponent);
+        const powerDomainMin = Math.pow(domainMin, exponent);
+        const powerDomainMax = Math.pow(domainMax, exponent);
+        const powerDomainValue = Math.pow(domainValue, exponent);
 
-        let relativePowerValue = powerDomainValue - powerDomainMin;
-        let domainCoefficient = relativePowerValue
+        const relativePowerValue = powerDomainValue - powerDomainMin;
+        const domainCoefficient = relativePowerValue
             / (powerDomainMax - powerDomainMin);
 
-        let rangeValue = rangeMin + ((rangeMax - rangeMin) * domainCoefficient);
+        const rangeValue = rangeMin
+            + ((rangeMax - rangeMin) * domainCoefficient);
         return rangeValue;
     };
 };
@@ -397,12 +429,14 @@ UTIL.scalePower = function (exponent, domainMin, domainMax, rangeMin, rangeMax) 
  */
 UTIL.scaleLogarithmic = function (domainMin, domainMax, rangeMin, rangeMax) { 
     return function (domainValue) {
-        let logDomainMin = Math.log10(domainMin);
-        let logDomainMax = Math.log10(domainMax);
-        let logDomainValue = Math.log10(domainValue);
-        let relativeLogValue = logDomainValue - logDomainMin;
-        let domainCoefficient = relativeLogValue / (logDomainMax-logDomainMin);
-        let rangeValue = rangeMin + ((rangeMax - rangeMin) * domainCoefficient);
+        const logDomainMin = Math.log10(domainMin);
+        const logDomainMax = Math.log10(domainMax);
+        const logDomainValue = Math.log10(domainValue);
+        const relativeLogValue = logDomainValue - logDomainMin;
+        const domainCoefficient = relativeLogValue
+            / (logDomainMax-logDomainMin);
+        const rangeValue = rangeMin
+            + ((rangeMax - rangeMin) * domainCoefficient);
         return rangeValue;
     };
 }
@@ -506,16 +540,16 @@ UTIL.normalizeSeriesCollection = function(seriesCollection) {
     // Get the total of all y-values at each series index. We also detect at
     // this point if there are any irregular or mismatching series, and throw an
     // error if so.
-    let yValueTotals = [];
+    const yValueTotals = [];
     for (let i = 0; i < numberOfDataPoints; i++) {
         let yValueTotal = 0;
         for (let key in seriesCollection) {
-            let series = seriesCollection[key];
+            const series = seriesCollection[key];
             UTIL.assertEquals(firstSeries.length, series.length);
 
-            let dataPoint = series[i];
-            let x = dataPoint[0];
-            let y = dataPoint[1];
+            const dataPoint = series[i];
+            const x = dataPoint[0];
+            const y = dataPoint[1];
             UTIL.assertEquals(firstSeries[i][0], x);
 
             yValueTotal += y;
@@ -523,15 +557,15 @@ UTIL.normalizeSeriesCollection = function(seriesCollection) {
         yValueTotals[i] = yValueTotal;
     }
 
-    let normalizedSeriesCollection = {};
+    const normalizedSeriesCollection = {};
     for (let key in seriesCollection) {
-        let series = seriesCollection[key];
-        let normalizedSeries = [];
+        const series = seriesCollection[key];
+        const normalizedSeries = [];
         for (let i = 0; i < numberOfDataPoints; i++) {
-            let dataPoint = series[i];
-            let x = dataPoint[0];
-            let y = dataPoint[1];
-            let yValueTotal = yValueTotals[i];
+            const dataPoint = series[i];
+            const x = dataPoint[0];
+            const y = dataPoint[1];
+            const yValueTotal = yValueTotals[i];
 
             let normalizedYValue = 0;
             if (yValueTotal !== 0) {
@@ -563,27 +597,27 @@ UTIL.normalizeSeriesCollection = function(seriesCollection) {
  */
 UTIL.stackSeriesCollection = function(seriesCollection, keys) {
     UTIL.assertEquals(Object.keys(seriesCollection).length, keys.length);
-    let firstSeries = seriesCollection[Object.keys(seriesCollection)[0]];
-    let numberOfDataPoints = firstSeries.length;
+    const firstSeries = seriesCollection[Object.keys(seriesCollection)[0]];
+    const numberOfDataPoints = firstSeries.length;
 
-    let yValues = [];
-    let stackedSeriesCollection = {};
+    const yValues = [];
+    const stackedSeriesCollection = {};
     for (let j = 0; j < keys.length; j++) {
-        let key = keys[j];
+        const key = keys[j];
         stackedSeriesCollection[key] = [];
     }
 
     for (let i = 0; i < numberOfDataPoints; i++) {
         let sum = 0;
         for (let j = 0; j < keys.length; j++) {
-            let key = keys[j];
-            let series = seriesCollection[key];
+            const key = keys[j];
+            const series = seriesCollection[key];
             UTIL.assertNotEquals(undefined, series);
             UTIL.assertEquals(firstSeries.length, series.length);
 
-            let dataPoint = series[i];
-            let x = dataPoint[0];
-            let y = dataPoint[1];
+            const dataPoint = series[i];
+            const x = dataPoint[0];
+            const y = dataPoint[1];
             UTIL.assertEquals(firstSeries[i][0], x);
 
             sum += y;

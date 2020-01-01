@@ -13,6 +13,10 @@ var tests = [
     testIsSplitManaSymbol,
     testTokenizeString,
     testGetCardColorSchemeFromManaCost,
+    testIsObject,
+    testCreateXmlFromSpec,
+    testConvertManaCostToCockatriceFormat,
+    testEscapeXml,
 ];
 
 function test() {
@@ -595,6 +599,126 @@ function testGetCardColorSchemeFromManaCost() {
     UTIL.assertEquals('redGreen', getCardColorSchemeFromManaCost('1(R/G)'));
 }
 
+function testIsObject() {
+    UTIL.assertTrue(UTIL.isObject({'key': 'value'}));
+}
+
+function testCreateXmlFromSpec() {
+    let spec = undefined;
+
+    spec = {
+        'tag': 'example',
+    };
+    UTIL.assertEquals(
+        '<example></example>',
+        createXmlFromSpec(spec)
+    );
+
+    spec = {
+        'tag': 'example',
+    };
+    UTIL.assertEquals(
+        '    <example></example>',
+        createXmlFromSpec(spec, 1)
+    );
+
+    spec = {
+        'tag': 'example',
+        'attributes': {'attribute': '1'}
+    };
+    UTIL.assertEquals(
+        '<example attribute="1"></example>',
+        createXmlFromSpec(spec)
+    );
+
+    spec = {
+        'tag': 'example',
+        'attributes': {
+            'attribute1': '1',
+            'attribute2': '2',
+        }
+    };
+    UTIL.assertEquals(
+        '<example attribute1="1" attribute2="2"></example>',
+        createXmlFromSpec(spec)
+    );
+
+    spec = {
+        'tag': 'example',
+        'contents': ['value']
+    };
+    UTIL.assertEquals(
+        '<example>value</example>',
+        createXmlFromSpec(spec)
+    );
+
+    spec = {
+        'tag': 'example',
+        'attributes': {'attribute': '1'},
+        'contents': ['value']
+    };
+    UTIL.assertEquals(
+        '<example attribute="1">value</example>',
+        createXmlFromSpec(spec)
+    );
+
+    spec = {
+        'tag': 'example',
+        'attributes': {'attribute': '1'},
+        'contents': ['value1', 'value2']
+    };
+    UTIL.assertEquals(
+        '<example attribute="1">\n    value1\n    value2\n</example>',
+        createXmlFromSpec(spec)
+    );
+
+    spec = {
+        'tag': 'example',
+        'contents': [
+            {
+                'tag': 'key',
+                'contents': ['value']
+            }
+        ]
+    };
+    UTIL.assertEquals(
+        '<example>\n    <key>value</key>\n</example>',
+        createXmlFromSpec(spec)
+    );
+
+    spec = {
+        'tag': 'level1',
+        'contents': [
+            {
+                'tag': 'level2',
+                'contents': [
+                    {
+                        'tag': 'level3',
+                        'contents': ['value']
+                    }
+                ]
+            }
+        ]
+    };
+    UTIL.assertEquals(
+        '<level1>\n    <level2>\n        <level3>value</level3>\n    </level2>\n</level1>',
+        createXmlFromSpec(spec)
+    );
+}
+
+function testConvertManaCostToCockatriceFormat() {
+    UTIL.assertEquals('{W/U}', convertManaCostToCockatriceFormat('(wu)'));
+    UTIL.assertEquals('{W/U}', convertManaCostToCockatriceFormat('(WU)'));
+    UTIL.assertEquals('{W/U}B{R/G}', convertManaCostToCockatriceFormat('(wu)b(r/G)'));
+    UTIL.assertEquals('{W/U}', convertManaCostToCockatriceFormat('(wu)'));
+    UTIL.assertEquals('WU', convertManaCostToCockatriceFormat('wu'));
+    UTIL.assertEquals('WU', convertManaCostToCockatriceFormat('WU'));
+}
+
+function testEscapeXml() {
+    UTIL.assertEquals('&amp;', escapeXml('&'));
+}
+
 /**
  * Print a message to the screen.
  *
@@ -617,7 +741,10 @@ function outputError(error) {
     let stackTrace = error.stack;
 
     output('<span class="test-failure">***TEST FAILURE***</span>');
-    output('<pre class="test failure">' + error + '</pre>');
+    output(
+        '<pre class="test failure">' + UTIL.escapeHtml(error.toString())
+        + '</pre>'
+    );
     output('Stack trace:');
     output('<pre>' + error.stack + '</pre>');
 }

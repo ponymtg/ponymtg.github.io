@@ -1,0 +1,186 @@
+{
+    "title": "Card",
+    "description": "A representation of a Magic: the Gathering card.",
+    "type": "object",
+    "properties": {
+        "artist": {
+            "title": "Artist",
+            "description": "The artist who created the card art.",
+            "type": "string"
+        },
+        "border": {
+            "title": "Card border",
+            "description": "The type of border the card has. In Magic, a distinction is made between black-bordered cards (the normal kind) and silver-bordered cards, which are considered to be frivolous and not intended for serious play. If no card border is specified, assume it is black.",
+            "type": "string",
+            "enum": ["black", "silver"]
+        },
+        "cardType": {
+            "title": "Card type",
+            "description": "The type of the card. This is a term used by the PonyMTG database, not to be confused with the card's supertype or subtype, which are terms used by Magic. PonyMTG recognizes the types 'token' (indicating a token card) and 'emblem' (indicating an emblem card). If no card type is given, the card is assumed to be a regular spell card.",
+            "type": "string",
+            "enum": ["emblem", "token"]
+        },
+        "colorIndicator": {
+            "title": "Color indicator",
+            "description": "The card's color indicator, which indicates the color of the card for cards that have no mana cost (such as tokens, or the reverse side of double-sided cards). This is a string containing one or more of the mana symbols W, U, B, R, or G, enclosed in parentheses.",
+            "examples": [
+                "(U)",
+                "(BG)",
+                "(WBG)",
+                "(WUBRG)"
+            ],
+            "type": "string"
+        },
+        "cost": {
+            "title": "Mana cost",
+            "description": "The card's mana cost, in the standard Magic format.",
+            "examples": [
+                "0",
+                "3",
+                "B",
+                "C",
+                "3WG",
+                "1GGG",
+                "XUUU",
+                "(WU)(BR)G",
+                "1WUBRG"
+            ],
+            "type": "string"
+        },
+        "cost2": {
+            "title": "Mana cost 2",
+            "description": "The second mana cost on a split card.",
+            "type": "string"
+        },
+        "createdAt": {
+            "title": "Created at",
+            "description": "The date at which the card was created, in YYYY-MM-DD format.",
+            "examples": [
+                "2014-03-01"
+            ],
+            "type": "string"
+        },
+        "creator": {
+            "title": "Creator",
+            "description": "The name or handle of person who created the card.",
+            "type": "string"
+        },
+        "flavorText": {
+            "title": "Flavor text",
+            "description": "The card's flavor text.",
+            "type": "string",
+            "examples": [
+                "Friendship opens many doors."
+            ]
+        },
+        "image": {
+            "title": "Image file name",
+            "description": "The file name of an image representing this card. The path where the image resides is defined on the set itself.",
+            "examples": [
+                "Appleloosan Juncture.png"
+            ],
+            "type": "string"
+        },
+        "loyalty": {
+            "title": "Loyalty",
+            "description": "The starting loyalty value of the card. This only applies to Planeswalker cards.",
+            "type": "string"
+        },
+        "name": {
+            "title": "Card name",
+            "description": "The official name of the card, as would be printed at the top.",
+            "type": "string",
+            "examples": [
+                "Applejack, Element of Honesty"
+            ]
+        },
+        "notes": {
+            "title": "Notes",
+            "description": "Additional notes about the card, such as notable circumstances regarding its creation.",
+            "type": "string"
+        },
+        "pt": {
+            "title": "Power/toughness",
+            "description": "The power and toughness values of the card, expressed as two values separated by a slash. This only applies to Creature cards.",
+            "type": "string"
+        },
+        "rarity": {
+            "title": "Rarity",
+            "description": "The assigned rarity value of the card, if known. If no rarity is given, the card is assumed to be of 'common' rarity.",
+            "type": "string",
+            "enum": [
+                "common",
+                "uncommon",
+                "rare",
+                "mythic rare"
+            ]
+        },
+        "set": {
+            "title": "Set name",
+            "description": "The name of the set. If no set name is given, the card is assumed to be a 'miscellany' card that doesn't belong to any given set.",
+            "type": "string"
+        },
+        "sourceUrl": {
+            "title": "Source URL",
+            "description": "The URL of the source from which this card was found. This is generally used for miscellany cards found in unlikely places such as blog posts.",
+            "type": "string"
+        },
+        "subtype": {
+            "title": "Subtype",
+            "description": "The card's subtype.",
+            "examples": [
+                "Pony Wizard",
+                "Aura",
+                "Equipment"
+            ],
+            "type": "string"
+        },
+        "supertype": {
+            "title": "Supertype",
+            "description": "The card's supertype.",
+            "examples": [
+                "Creature",
+                "Tribal Sorcery",
+                "Legendary Enchantment Artifact"
+            ],
+            "type": "string"
+        },
+        "supertype2": {
+            "title": "Supertype 2",
+            "description": "The second supertype on a split card.",
+            "type": "string"
+        },
+        "text": {
+            "title": "Rules text",
+            "description": "The rules text written on the card. This does not include flavor text.",
+            "type": "string",
+            "examples": [
+                "When Angel Bunny enters the battlefield, target Pony, Pegasus, or Unicorn gains indestructible for as long as Angel Bunny is on the battlefield."
+            ]
+        },
+        "transformsFrom": {
+            "title": "Transforms from",
+            "description": "The name of the card that this card transforms from (for double-sided cards).",
+            "examples": [
+                "Twilight, Thaumatologist"
+            ],
+            "type": "string"
+        },
+        "transformsInto": {
+            "title": "Transforms into",
+            "description": "The name of the card that this card transforms into (for double-sided cards).",
+            "examples": [
+                "Midnight Sparkle, Planeripper"
+            ],
+            "type": "string"
+        },
+        "watermark": {
+            "title": "Watermark",
+            "description": "The card's watermark, if any.",
+            "examples": [
+                "Cloudsdale Awesomatics"
+            ],
+            "type": "string"
+        }
+    }
+}

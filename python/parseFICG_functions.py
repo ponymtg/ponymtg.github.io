@@ -863,11 +863,20 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     # Light in the Dark"). This needs to be removed if present.
     if first_word_of_card_name[-1] == ',':
         first_word_of_card_name = first_word_of_card_name[0:-1]
+
+    # Detect if the card is capable of transforming into another card (ie. it's
+    # double-sided. This is a bit difficult to do reliably, since there are lots
+    # of ways to express the notion of transformation. Just having the word
+    # "transform" in its rules text isn't enough to be sure.
     if (
         'transform '+card_data_entry['name'].lower() in card_data_entry['text'].lower()
         or 'transform '+first_word_of_card_name.lower() in card_data_entry['text'].lower()
         or 'transform it' in card_data_entry['text']
-        or 'return it to the battlefield transformed' in card_data_entry['text']
+        or re.search(
+            r'(put|return)( .+)? to the battlefield( .+)? transformed',
+            card_data_entry['text'],
+            flags = re.IGNORECASE
+        )
     ):
         if META['previous_card_was_a_transformer']:
             if not META['previous_card_was_reverse_side']:

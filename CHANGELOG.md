@@ -1,3 +1,10 @@
+## 1.11.0
+* Corrected a typo in one FICG card name ("Shake Thing Up!" -> "Shake Things Up!")
+* Fixed a bug in the FICG parser that prevented some transforming cards from being recognized as transformers.
+* Upgraded the Cockatrice XML generator to use Cockatrice XML v4.
+* Updated the Cockatrice XML generation function to something a bit more flexible and robust.
+* Added a JSON schema for PonyMTG card objects.
+
 ## 1.10.1
 * Updated "Friendship is Card Games" to "Ponyville Mysteries #2 and #3". All episodes of Friendship is Magic and Equestria Girls are now complete.
 * Updated the FICG parser to produce UTF-8 output.
