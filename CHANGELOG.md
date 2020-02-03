@@ -1,3 +1,8 @@
+## 1.12.0
+* Added flavor text detection to the FICG parser.
+* Updated Friendship is Card Games up to "Imposing Sovereigns I".
+* Renamed some Python scripts to a more consistent naming convention.
+
 ## 1.11.0
 * Corrected a typo in one FICG card name ("Shake Thing Up!" -> "Shake Things Up!")
 * Fixed a bug in the FICG parser that prevented some transforming cards from being recognized as transformers.

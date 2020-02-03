@@ -4,48 +4,50 @@ function initialize() {
     CARDS = CARDS.concat(FICG_CARDS);
     CARDS = CARDS.concat(IPU_CARDS);
 
-    var information = getInformation(CARDS);
-    var setsSelectElement = document.querySelector('#sets');
-    var generateCockatriceFileElement = document.querySelector('#generateCockatriceFile');
+    const information = getInformation(CARDS);
+    const setsSelect = document.querySelector('#sets');
+    const generateButton = document.querySelector('#generateCockatriceFile');
 
-    for (var i=0; i < information.sets.length; i++) {
-        var set = information.sets[i];
-        var setOptionElement = document.createElement('option');
-        setOptionElement.innerHTML = set;
-        setOptionElement.value = set;
-        setsSelectElement.appendChild(setOptionElement);
-    }
+    information.sets.forEach(
+        function(set) {
+            let setOption = document.createElement('option');
+            setOption.innerHTML = set;
+            setOption.value = set;
+            setsSelect.appendChild(setOption);
+        }
+    );
 
-    setsSelectElement.onchange = function() {
-        var selectedSet = setsSelectElement.value;
-        generateCockatriceFileElement.disabled = !selectedSet;
+    setsSelect.onchange = function() {
+        const selectedSet = setsSelect.value;
+        generateButton.disabled = !selectedSet;
         
     }
 
-    generateCockatriceFileElement.onclick = function() {
-        var selectedSet = setsSelectElement.value;
+    generateButton.onclick = function() {
+        const selectedSet = setsSelect.value;
         if (selectedSet) {
-            var generateCockatriceUrl = 'generateCockatriceFile.html?set='+selectedSet;
-        };
-        window.open(generateCockatriceUrl, '_blank');
+            const generateUrl = 'generateCockatriceFile.html?set='+selectedSet;
+        }
+        window.open(generateUrl, '_blank');
     }
 
-    var setName = undefined;
+    let setName = undefined;
 
     global.urlParameters = getUrlParameters();
     if (Object.keys(global.urlParameters).length > 0) {
         if (global.urlParameters.set !== undefined) {
-            if (SETS[global.urlParameters.set] !== undefined) {
-                setName = global.urlParameters.set; 
+            const urlSet = global.urlParameters.set;
+            if (SETS[urlSet] !== undefined) {
+                setName = urlSet;
             }
         }
     }
 
     if (setName !== undefined) {
-        for (var i=0; i < setsSelectElement.options.length; i++) {
-            if(setsSelectElement.options[i].value == setName) {
-                setsSelectElement.selectedIndex = i;
-                generateCockatriceFileElement.disabled = false;
+        for (let i = 0; i < setsSelect.options.length; i++) {
+            if (setsSelect.options[i].value == setName) {
+                setsSelect.selectedIndex = i;
+                generateButton.disabled = false;
                 break;
             }
         }

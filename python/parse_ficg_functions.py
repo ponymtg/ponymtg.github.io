@@ -18,9 +18,10 @@ from collections import OrderedDict
 # Define a long dash, just so we don't have to keep copy-pasting it.
 EM_DASH = '—'
 
-# Also define the en dash; this is rarely used, and in fact this parser
-# automatically replaces it with the em dash when it does occur. Unfortunately,
-# it looks nearly identical to the em dash.
+# Also define the en dash. This is rarely used - in fact, we believe it's only
+# used by mistake, since the official Magic rules appear to use em dashes
+# exclusively. For that reason, we automatically replace all occurrences of the
+# en dash with the em dash before parsing the card dump.
 EN_DASH = '–'
 
 # A list of mappings from Fimfiction emoticons to faction names. These are used
@@ -242,6 +243,7 @@ def is_type_line(line):
     # - The line must contain only the words "Legendary Sorcery".
     # - "Sorcery" must be preceded by "Tribal".
     # - "Sorcery" must be preceded by "Snow".
+    # - The line must be exactly "Sorcery — Arcane".
     # - The line must also contain a double slash (//), which indicates that
     #   this is a split card for which one of the halves is a Sorcery.
     if 'Sorcery' in line:
@@ -249,6 +251,7 @@ def is_type_line(line):
             line not in ['Sorcery', 'Legendary Sorcery']
             and 'Tribal Sorcery' not in line
             and 'Snow Sorcery' not in line
+            and line != 'Sorcery — Arcane'
             and '//' not in line
         ):
             return False
@@ -509,27 +512,48 @@ def split_type_line(type_line):
 
     return type_line_parts
 
-
-
 # Given two card data entries, join them together into a single split card.
 def join_card_halves(first_card_half, second_card_half):
     joined_card = {}
-    joined_card['name'] = first_card_half['name'] + ' // ' \
-        + second_card_half['name']
+    joined_card['name'] = '{} // {}'.format(
+        first_card_half['name'],
+        second_card_half['name']
+    )
     joined_card['cost'] = first_card_half['cost']
     joined_card['cost2'] = second_card_half['cost']
     joined_card['supertype'] = first_card_half['supertype']
     joined_card['supertype2'] = second_card_half['supertype']
+
     if 'subtype' in first_card_half:
         joined_card['subtype'] = first_card_half['subtype']
     if 'subtype' in second_card_half:
         joined_card['subtype2'] = second_card_half['subtype']
-    joined_card['text'] = first_card_half['name'] + ': '  \
-        + first_card_half['text'] + '\n\n'
-    joined_card['text'] += second_card_half['name'] + ': ' \
-        + second_card_half['text']
-    return joined_card
 
+    if 'text' not in first_card_half:
+        raise Exception(
+            'No rules text found on card half "{}" (flavorText = "{}")'.format(
+            first_card_half['name'],
+            first_card_half['flavorText']
+        )
+    )
+    if 'text' not in second_card_half:
+        raise Exception(
+            'No rules text found on card half "{}" (flavorText = "{}")'.format(
+            second_card_half['name'],
+            second_card_half['flavorText']
+        )
+    )
+
+    joined_card['text'] = '{}: {}\n\n'.format(
+        first_card_half['name'],
+        first_card_half['text']
+    )
+    joined_card['text'] += '{}: {}\n\n'.format(
+        second_card_half['name'],
+        second_card_half['text']
+    )
+
+    return joined_card
 
 # Given a dump `dump` of raw FICG data, break it into a list of sub-dumps, each
 # of which should represent a single card.
@@ -764,78 +788,14 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         # that everything after the first two lines is card text.
         text_lines = individual_card_dump_lines[2:]
         
-    rules_text_lines = text_lines
-    flavor_text_lines = []
+    rules_and_flavor_text = separate_rules_text_and_flavor_text(
+        '\n'.join(text_lines)
+    )
 
-    # We've assumed, by default, that all text lines are the card's rules text,
-    # and that it has no flavor text. This is because, in most cases, we cannot
-    # distinguish rules text from flavor text. However, there are a couple of
-    # tricks which we'll now try.
-    #
-    # FanOfMostEverything often uses a fairly well-defined format for character
-    # quotes, like this:
-    #
-    # "Something said by a character" — the character
-    #
-    # It's a good bet that if the second-to-last of the text lines is in double
-    # quotes, and the last line begins with a long dash, that those two lines
-    # are flavor text.
-
-    # A note of explanation here: up to this point, we've been working with
-    # byte strings, which is usually fine. Even though the FICG dump is in
-    # UTF-8 encoding, we haven't needed to worry about what bytes are actually
-    # in our strings.
-    #
-    # At this point, however, we want to detect whether the first character is
-    # a long dash. In UTF-8, the long dash (em dash) is three bytes long.
-    # Because we're using byte strings, this means that in order to test for a
-    # long dash, we would need to look at the first _three_ characters of the
-    # string (ie. string[0:3]). This is just how Python strings work.
-    #
-    # So we could do that, or we could decode our byte string into a proper
-    # Unicode string and examine the characters as actual characters, rather
-    # than bytes. The latter option is preferable, so we'll do that.
-    if (
-        len(text_lines) >= 2
-        and text_lines[-2][0] == '"'
-        and text_lines[-2][-1] == '"'
-        and text_lines[-1][0] == EM_DASH
-    ):
-        rules_text_lines = text_lines[0:-2]
-        flavor_text_lines = text_lines[-2:]
-
-    # Another pattern we can search for is the presence of one or more
-    # fully-quoted strings at the end of the card text.  These usually
-    # represent unattributed character dialogue, which makes them flavor text.
-    # To check for this, we'll search backward through the lines of card text
-    # until we find one that is not dialogue (ie. not fully enclosed in double
-    # quotes). If the first non-dialogue line is the last line of the text,
-    # then there _is_ no dialogue, and thus we cannot use this trick. If,
-    # however, the first non-dialogue line is not the last line of the text
-    # (or, more rarely, we don't find any non-dialogue lines, which would
-    # indicate a card that is _all_ dialogue), then we know that the card has
-    # dialogue, and will capture that as the flavor text.
-    index_of_first_nondialogue_line = None
-    for i in range(len(text_lines)-1, -1, -1):
-        text_line = text_lines[i]
-        if not (text_line[0] == '"' and text_line[-1] == '"'):
-            index_of_first_nondialogue_line = i
-            break
-    if index_of_first_nondialogue_line < len(text_lines)-1 or index_of_first_nondialogue_line is None:
-        rules_text_lines = text_lines[0:index_of_first_nondialogue_line+1]
-        flavor_text_lines = text_lines[index_of_first_nondialogue_line+1:]
-        
-    rules_text = '\n\n'.join(rules_text_lines)
-
-    # We'll only join flavor text with one newline, not two.
-    # FanOfMostEverything leaves the exact number of newlines a little
-    # ambiguous, but it looks better this way.
-    flavor_text = '\n'.join(flavor_text_lines)
-
-    if rules_text:
-        card_data_entry['text'] = rules_text
-    if flavor_text:
-        card_data_entry['flavorText'] = flavor_text
+    if rules_and_flavor_text[0]:
+        card_data_entry['text'] = rules_and_flavor_text[0]
+    if rules_and_flavor_text[1]:
+        card_data_entry['flavorText'] = rules_and_flavor_text[1]
 
     # Finally, add the creator attribution; the set and creator will be the
     # same in all cases.
@@ -869,13 +829,16 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     # of ways to express the notion of transformation. Just having the word
     # "transform" in its rules text isn't enough to be sure.
     if (
-        'transform '+card_data_entry['name'].lower() in card_data_entry['text'].lower()
-        or 'transform '+first_word_of_card_name.lower() in card_data_entry['text'].lower()
-        or 'transform it' in card_data_entry['text']
-        or re.search(
-            r'(put|return)( .+)? to the battlefield( .+)? transformed',
-            card_data_entry['text'],
-            flags = re.IGNORECASE
+        'text' in card_data_entry
+        and (
+            'transform '+card_data_entry['name'].lower() in card_data_entry['text'].lower()
+            or 'transform '+first_word_of_card_name.lower() in card_data_entry['text'].lower()
+            or 'transform it' in card_data_entry['text']
+            or re.search(
+                r'(put|return)( .+)? to the battlefield( .+)? transformed',
+                card_data_entry['text'],
+                flags = re.IGNORECASE
+            )
         )
     ):
         if META['previous_card_was_a_transformer']:
@@ -907,10 +870,15 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
 def parse_ficg_dump_into_card_data_entries(ficg_dump):
     # Break up the dump into a number of sub-dumps, each of which (we hope) is
     # a chunk of text that represents a single card.
-    individual_card_dumps = split_ficg_dump_into_individual_card_dumps(ficg_dump)
+    individual_card_dumps = split_ficg_dump_into_individual_card_dumps(
+        ficg_dump
+    )
+
     card_data_entries = []
     for individual_card_dump in individual_card_dumps:
-        card_data_entry = parse_individual_card_dump_into_card_data_entry(individual_card_dump)
+        card_data_entry = parse_individual_card_dump_into_card_data_entry(
+            individual_card_dump
+        )
         card_data_entries.append(card_data_entry)
 
     # Before we return it, we can do a second pass on this data; if we
@@ -1003,3 +971,427 @@ def convert_card_data_entries_to_js(
 
     return js.decode()
 
+# Given a piece of card text that may contain a combination of both rules text
+# and flavor text, return a 2-tuple containing the rules text and the flavor
+# text.
+#
+# If the text does not contain rules text and/or flavor text, the tuple will
+# contain empty strings for whichever is missing.
+#
+# This function makes several assumptions about the input text:
+#
+# - that the text consists only of rules text and/or flavor text
+# - that flavor text, if present, always comes after rules text, if present
+# - that the card text consists of a number of lines separated by line breaks
+# - that it is possible to determine whether a given line is rules text or not.
+#
+# The function works by examining each line of the text, starting with the last
+# line and going backward until it encounters a line that it can definitively
+# identify as rules text. Once it finds one, it classifies all lines after that
+# as flavor text and the rest as rules text.
+#
+# Because the function for identifying rules text is not 100% reliable, it is
+# possible for this function to misidentify one or more line of rules text as
+# flavor text.
+def separate_rules_text_and_flavor_text(text):
+    lines = text.split('\n')
+
+    for i in range(len(lines)-1, -1, -1):
+        line = lines[i]
+        if is_rules_text(line):
+            break
+
+        # If we reach this point and i has reached 0, that means that we never
+        # found any rules text in the text at all. That causes an off-by-one
+        # issue with the slices we're about to use to extract the rules and
+        # flavor text. To fix it, we just decrement the index once more to
+        # ensure that we slice off the whole list as flavor text.
+        if i == 0:
+            i -= 1
+            
+
+    rules_lines = lines[:i+1]
+    flavor_lines = lines[i+1:]
+
+    rules_text = '\n\n'.join(rules_lines)
+    flavor_text = '\n'.join(flavor_lines)
+
+    # If there happen to be any blank lines between the rules text and flavor
+    # text, these will be captured at the start of the flavor text. We usually
+    # don't want this, so strip off any that occur.
+    flavor_text = flavor_text.strip()
+
+    return (rules_text, flavor_text)
+
+# Return true if a given string can be identified as being a line of Magic: the
+# Gathering rules text (as opposed to flavor text).
+#
+# This function uses a large list of regular expressions designed to match
+# phrases that are commonly used in rules text, but not in flavor text. The list
+# is not exhaustive and may give false negatives if it is unable to match a
+# legitimate piece of rules text.
+def is_rules_text(string, card = None):
+    string = re.sub("’", "'", string)
+
+    patterns = [
+        '-1/-1 counter',
+        '1 plus the',
+        'activated abilit(y|ies)',
+        'activate this ability',
+        'activating an ability',
+        'add an amount of',
+        'after attackers are declared',
+        'all cards with that name',
+        'all creatures able to',
+        'all permanents',
+        'Alternative costs',
+        'any number of creatures',
+        'any player may',
+        'any time you could cast',
+        '(are|is) all colors',
+        'artifact card',
+        'artifact creature',
+        'as a copy of',
+        'As an additional cost',
+        'As an additional cost to cast',
+        'as it resolves',
+        'as long as you control',
+        'Assemble a Contraption',
+        'assigns combat damage',
+        'as though (it had|they had) (flash|reach)',
+        "as though it weren't blocked",
+        'as you cast this spell',
+        'at (end|the beginning) of (combat|your upkeep)',
+        'attacked with a creature',
+        'attackers are declared',
+        'attacking (creatures|player)',
+        'attack or block',
+        '(attacks?|attacks? this turn|blocked|each turn|next combat|this combat|this turn) (as though|if able)',
+        'attacks (each|this) combat',
+        'at the beginning of the upkeep',
+        '(aura|commanders|creature|Dragons|enchantment|Forest|Island|land|Mountain|permanent|Plains|planeswalker|source|Swamp|token)s? you control',
+        'auras attached to',
+        'becomes attached to a creature',
+        'becomes (blocked|tapped)',
+        'becomes the target of a spell( or ability)?',
+        'block(ed|ing) creatures?',
+        'block or be blocked',
+        'block this turn',
+        'both creatures have',
+        'can block (an additional|creatures|up to)',
+        "can only attack alone",
+        "can't attack (alone|unless)",
+        "can't be (activated|blocked|countered|equipped|exiled|targeted|tapped|the target of|triggered)",
+        "can't block( creatures| this turn|\.$)",
+        "can't block unless",
+        "can't cast( creature)? spells",
+        "can't have or gain",
+        "(can't|would) (gain|lose) life",
+        'card to the battlefield',
+        'change its text',
+        'change the targets',
+        '^Chaotic ',
+        'choose a (creature|target) at random',
+        'choose a planeswalker card',
+        'Choose both if',
+        #'choose %NAME% if able',
+        'choose( new)? targets',
+        'Choose one( or both)? *—',
+        'choosing targets',
+        'color of your choice',
+        'combat phase',
+        'Contraption deck',
+        'control an? (artifact|Forest|enchantment|Island|Mountain|Plains|Swamp)',
+        'converted mana cost',
+        'copy target',
+        'cost \d less',
+        'costs? \d (less|more) to (activate|cast)',
+        'costs \d to cast',
+        'counter on it',
+        "Counters can't be",
+        'counter target( \w+)? spell',
+        'creates? a .+ token',
+        'create .+ tokens',
+        "creatures can't block",
+        'creatures on the battlefield',
+        'creatures with flying',
+        "creatures (you|you don't|your opponents) control",
+        'creature (token|type|spell)s?',
+        'creature would be destroyed',
+        'damage can\'t be prevented',
+        'damage that would be dealt',
+        'deals( combat)? damage (equal to|to target)',
+        'deals damage to each',
+        'deals (\d|X) damage',
+        'deal(s|t) combat damage',
+        'dealt damage',
+        'dealt to a player',
+        'dealt to you instead',
+        'declare blockers',
+        'defending player',
+        '(destroy|exile)( at least)? (all|each|one|two|three|four|five|six|seven|eight|nine|ten)( black| blue| green| red| white)? (artifact|aura|card|creature|enchantment|permanent)s?',
+        "died this turn",
+        'discard cards',
+        '(discard|draw)s?( up to)? (a|one|two|three|four|five|six|seven|this|that many)( or more)? cards?',
+        'draw cards equal to',
+        'draw step',
+        'draw X cards',
+        'during your turn',
+        'each combat',
+        'each creature blocking',
+        'each opponent',
+        'each other (creature|player)',
+        "each player (abandons|can't|chooses|draws|may|puts|sacrifices)",
+        "each player's upkeep",
+        '(each|the|your) end step',
+        '^Enchanted creature ',
+        'enchanted creature (has|is)',
+        "enchanted (creature|permanent|player)('s)?",
+        'entered the battlefield (this turn|under)',
+        'enter(ing|s) the battlefield',
+        'enters? the battlefield as',
+        'Entwine \d',
+        'equal to its (power|toughness)',
+        'equal to the difference',
+        'equipped creature',
+        "except it's still",
+        '^Exile ',
+        'exiled card',
+        'exile it instead',
+        'exile (it|target)',
+        'face( |-)down',
+        'for each card',
+        'from all graveyards',
+        'from (their|your) graveyard',
+        'gains? control of (it|all)',
+        'gains? life equal to',
+        'greatest (power|toughness) among',
+        'he or she attacks',
+        'his or her (control|graveyard|hand|library|mana pool)',
+        'if a source',
+        'if [\w ]+ is an enchantment',
+        'in addition to its other types',
+        'in addition to their other types',
+        'instant and sorcery',
+        'instant or sorcery',
+        'into your graveyard',
+        'in your graveyard',
+        'in your opening hand',
+        'is a (forest|island|mountain|plains|swamp)',
+        'is tapped for mana',
+        'it has trample',
+        'its (controller|text box)',
+        "its owner's (control|library)",
+        'leaves the battlefield',
+        'legendary (creature|spell)s?',
+        '^Level \d',
+        'lifelink',
+        'life total',
+        'loses? flying',
+        'loses x life',
+        'mana abilities',
+        'mana cost',
+        'maximum hand size',
+        'may cast this (card|spell)',
+        '\(Melds with ',
+        'multikicker',
+        #"%NAME% can't (be countered|block)",
+        'named card',
+        'next (end step|untap step|upkeep)',
+        'non(basic|black|blue|blocking|creature|green|instant|land|red|snow|sorcery|token|white)',
+        'number of cards',
+        'number of( \w+)? permanents',
+        'of each upkeep',
+        'on each of your turns',
+        '(one|two|three|four|five|six|seven|eight|nine|ten) or fewer cards in your hand',
+        '(one|two|three|four|five|six|seven|eight|nine|ten) or more (counters|creatures)',
+        'ongoing scheme',
+        'only (as a sorcery|during combat)',
+        "on top of their owner's libraries",
+        'onto the battlefield',
+        'on your turn',
+        'opponent gains life',
+        "opponents can't",
+        "(opponent's|that player's|your) library",
+        'paired with another',
+        'pay [1-9X] life',
+        '(permanent|revealed) card',
+        '(plains|island|swamp|mountain|forest)walk',
+        "players can't ",
+        'players other than ',
+        'players vote secretly',
+        'play with the top card',
+        'poison counter',
+        'Pony, Pegasus, and Unicorn creatures',
+        'power [1-9X] or less',
+        'power and toughness',
+        'power (less|greater) than or equal to',
+        'prevent all combat damage',
+        'prevent that damage',
+        '^Proliferate',
+        'put any number of them',
+        'put a \w+ counter',
+        'put into a graveyard',
+        'put it into your hand',
+        'puts that many cards',
+        'put this card into your hand',
+        r'\+1/\+1 counter',
+        r'^affinity for ',
+        r'any number of \w+ cards',
+        r'attacking creature\b',
+        r'\bcounter all (white|blue|black|red|green) spells',
+        r"\bX is that",
+        r'creatures? without flying',
+        r'^\d+, ',
+        r'^\d+/\d+$',
+        r'\d damage',
+        r'destroy target \w+',
+        r'\d or greater',
+        r'draw a card.$',
+        r'\d: (Sacrifice|Scry|Tap)',
+        r'^\d+[WUBRG]+: ',
+        r'^\d+[WUBRG]+\b, ',
+        r'each land is a (plains|island|swamp|mountain|forest)',
+        'regenerate (it|target)',
+        r'enchanted creature\.$',
+        'replacing all instances of',
+        r'^Equip \(?[\dWUBRG]+\)?$',
+        'return all (creatures|land cards)',
+        'return it to the battlefield',
+        'Reveal (a creature card|your hand)',
+        'reveal that card',
+        r'(gain|lose)s? (\d+|that much) life',
+        r'gains \w+ until',
+        r'gets? (\+|-)\d+/(\+|-)\d+',
+        r'(has|have) (deathtouch|equip |first strike|flying|haste|hexproof|indestructible|menace|partner\b|split second|the abilities of each|trample)',
+        r'if .+ was kicked',
+        r'^Kicker',
+        r'(one|two|three|four|five|six|seven|eight|nine|ten) mana\b',
+        r'remove all (creatures|damage|\w+ counters)',
+        r'shuffles it\b',
+        r'^\w+ \(.*\.\)$',
+        r'^[WUBRG]+\b, ',
+        r'^[WUBRG]+\b: ',
+        r'^((\w+)( \w+)*)((,|;) (\w+)( \w+)*)*$',
+        r'you may pay [\dwubrg]+',
+        'sacrifice it',
+        #'sacrifice %NAME%',
+        'sacrifices? (a|an|another|this) (artifact|creature|Forest|Island|land|Mountain|permanent|Plains|Swamp)',
+        'sacrifices permanents',
+        '^Sacrifice [\w ]+:',
+        'Scry [1-9X]',
+        'search any number of',
+        'set a scheme in motion',
+        'set this scheme in motion',
+        'shuffle (their libraries|your library)',
+        'since his or or her last turn',
+        'skips his or her',
+        'spells? (and|or) abilit(y|ies)',
+        'spells cost .+ more to cast',
+        'spells you cast',
+        'spell this turn',
+        '^Suspend ',
+        '^T, ',
+        '^T: ',
+        'take an extra turn',
+        'tap (any number of|each creature|target|up to)',
+        'tapped creature',
+        'target( black| blue| green| red| white| wordy)? (artifact|attacking|card|creature|enchanted|enchantment|land|opponent|permanent|player|spell)',
+        "that creature's owner",
+        'that player (controls|discards|loses|sacrifices)',
+        "that's a copy of",
+        'the chosen creatures',
+        'the chosen names?',
+        "their owners' libraries",
+        "to its owner's hand",
+        'top card of their libraries',
+        'top card of your',
+        '(top|up to) (two|three|four|five|six|seven|eight|nine|ten) cards',
+        "to their owner'?s'? hands",
+        'to your mana pool',
+        'transform it',
+        'triggered abilities',
+        '(two|three|four|five|six|seven) target lands',
+        'unattach all',
+        "under its owner's control",
+        'unless [\w ]+ pays \d',
+        'untap',
+        'until end of turn',
+        'upkeep step',
+        'when a player casts',
+        'whenever a creature would ',
+        'whenever an opponent casts',
+        'Whenever a player',
+        'whenever enchanted creature ',
+        #'when(ever)? %NAME% ',
+        'whenever you sacrifice',
+        'When you cast (a|this) spell',
+        'When you control no( .+)? (creatures|Forests|Islands|Mountains|Plains|Swamps)',
+        'where X is',
+        'without paying its mana cost',
+        'would be destroyed',
+        'would deal( combat)?damage',
+        'would deal damage',
+        '^X, ',
+        'You become the monarch.',
+        "You can't cast more than ",
+        'you cast a spell,',
+        'you choose which creatures',
+        'you get two additional votes',
+        'you may attach',
+        'you may cast it for',
+        #'you may have %NAME% assign its combat damage'
+        'you may pay an additional',
+        'you may play an additional',
+        '^You may spend ',
+        'you or a planeswalker',
+        'your opponents (control|play)',
+        "your opponents' graveyards",
+    ]
+
+    if card is not None and 'name' in card:
+        name = card['name']
+        # Some patterns use `%NAME%` as a placeholder for the card's name (or
+        # for the first word of the name, for brevity). If the card has a name,
+        # we'll separate out the placeholder patterns and add new patterns that
+        # have the placeholders filled as appropriate.
+        name_patterns = [
+            pattern for pattern in patterns if '%NAME%' in pattern
+        ]
+
+        patterns = [
+            pattern for pattern in patterns if not 'NAME%' in pattern
+        ]
+
+        for name_pattern in name_patterns:
+            first_word_in_name = name.split()[0]
+            # patterns.append(re.sub('%NAME%', first_word_in_name, name_pattern))
+            patterns.append(re.sub('%NAME%', name, name_pattern))
+    else:
+        # If the card doesn't have a name (usually they do, but some of our
+        # tests don't bother with it) just ignore all patterns that look for
+        # placeholder names.
+        patterns = [
+            pattern for pattern in patterns if not 'NAME%' in pattern
+        ]
+
+#    print('+' * 80)
+#    print(string)
+#    print('+' * 80)
+#    print()
+
+    for pattern in patterns:
+        if re.search(pattern, string, re.IGNORECASE):
+#            print('+' * 80)
+#            print('FOUND: {}'.format(pattern))
+#            print('IN:    {}'.format(string))
+#            print('+' * 80)
+#            print()
+            return True
+#        print('/' * 80)
+#        print('NOT FOUND: {}'.format(pattern))
+#        print('IN:        {}'.format(string))
+#        print('/' * 80)
+#        print()
+
+    return False

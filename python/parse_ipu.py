@@ -1,7 +1,7 @@
 # Parses the Cockatrice XML file supplied by Sorden for his "IPU" set into JSON for our database.
 # coding=utf-8
 import xml.etree.ElementTree as et, sys
-from parseFICG_functions import convert_card_data_entries_to_js
+from parse_ficg_functions import convert_card_data_entries_to_js
 
 SET_NAME = 'Friendship is Magic the Gathering (IPU)'
 CREATOR = 'Sorden'
