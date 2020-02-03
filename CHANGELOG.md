@@ -1,3 +1,6 @@
+## 1.12.1
+* Fixed flavor detection bug.
+
 ## 1.12.0
 * Added flavor text detection to the FICG parser.
 * Updated Friendship is Card Games up to "Imposing Sovereigns I".

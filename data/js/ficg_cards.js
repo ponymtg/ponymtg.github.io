@@ -32390,8 +32390,7 @@ var FICG_CARDS = [
         "creator": "FanOfMostEverything",
         "cost": "2RW",
         "supertype": "Instant",
-        "text": "Cast Mutating Maze only before attackers are declared.\n\nYou choose which creatures attack this turn and who those creatures attack.\n\nYou choose which creatures block this turn and how those creatures block.",
-        "flavorText": "Awaken 3—5RW",
+        "text": "Cast Mutating Maze only before attackers are declared.\n\nYou choose which creatures attack this turn and who those creatures attack.\n\nYou choose which creatures block this turn and how those creatures block.\n\nAwaken 3—5RW",
     },
     {
         "name": "Hive Guards",
@@ -49270,8 +49269,7 @@ var FICG_CARDS = [
         "cost": "1U",
         "supertype": "Instant",
         "subtype": "Arcane",
-        "text": "Target creature has base power and toughness 1/1 until end of turn.",
-        "flavorText": "Splice onto Arcane 2U (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card’s effects to that spell.)",
+        "text": "Target creature has base power and toughness 1/1 until end of turn.\n\nSplice onto Arcane 2U (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card’s effects to that spell.)",
     },
     {
         "name": "Stylistic Melange",
@@ -65747,8 +65745,7 @@ var FICG_CARDS = [
         "creator": "FanOfMostEverything",
         "cost": "U",
         "supertype": "Instant",
-        "text": "Tap target creature.",
-        "flavorText": "Splice onto Trap 1U (As you cast a Trap spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card’s effects to that spell.)",
+        "text": "Tap target creature.\n\nSplice onto Trap 1U (As you cast a Trap spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card’s effects to that spell.)",
     },
     {
         "name": "Syrup Spill",

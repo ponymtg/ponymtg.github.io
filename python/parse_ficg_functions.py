@@ -1013,6 +1013,8 @@ def separate_rules_text_and_flavor_text(text):
     rules_lines = lines[:i+1]
     flavor_lines = lines[i+1:]
 
+    rules_lines = [line for line in rules_lines if len(line) > 0]
+
     rules_text = '\n\n'.join(rules_lines)
     flavor_text = '\n'.join(flavor_lines)
 
@@ -1071,6 +1073,7 @@ def is_rules_text(string, card = None):
         'at the beginning of the upkeep',
         '(aura|commanders|creature|Dragons|enchantment|Forest|Island|land|Mountain|permanent|Plains|planeswalker|source|Swamp|token)s? you control',
         'auras attached to',
+        '^Awaken \d',
         'becomes attached to a creature',
         'becomes (blocked|tapped)',
         'becomes the target of a spell( or ability)?',
@@ -1259,7 +1262,7 @@ def is_rules_text(string, card = None):
         'return all (creatures|land cards)',
         'return it to the battlefield',
         'Reveal (a creature card|your hand)',
-        'reveal that card',
+        'reveal (this|that) card',
         r'(gain|lose)s? (\d+|that much) life',
         r'gains \w+ until',
         r'gets? (\+|-)\d+/(\+|-)\d+',

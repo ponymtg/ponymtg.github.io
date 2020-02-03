@@ -2711,6 +2711,7 @@ class test_parse_ficg_functions(unittest.TestCase):
             "Whenever another creature dies, each player puts the top two cards of their library into their graveyard.",
             "When there are no creatures on the battlefield, sacrifice Out in the Cold.",
             "Sacrifice a non-Treasure artifact: Create two Treasures. (They’re artifacts with \"T, Sacrifice this artifact: Add one mana of any color.\")",
+            "Splice onto Trap 1U (As you cast a Trap spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card’s effects to that spell.)",
         ]
 
         for line in lines:
