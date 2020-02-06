@@ -130,7 +130,7 @@ class test_parse_ficg_functions(unittest.TestCase):
         # Test that empty text is separated correctly.
         self.assertEqual(('', ''), separate_rules_text_and_flavor_text(''))
 
-    def test_z_is_rules_text(self):
+    def test_is_rules_text(self):
         lines = [
             "At the beginning of your upkeep, put a verse counter on \"Giggle at the Ghosty\".",
             "W, Sacrifice \"Giggle at the Ghosty\": Choose a color. Up to X target creatures gain protection from that color until end of turn, where X is the number of verse counters on \"Giggle at the Ghosty\".",
@@ -2712,9 +2712,12 @@ class test_parse_ficg_functions(unittest.TestCase):
             "When there are no creatures on the battlefield, sacrifice Out in the Cold.",
             "Sacrifice a non-Treasure artifact: Create two Treasures. (They’re artifacts with \"T, Sacrifice this artifact: Add one mana of any color.\")",
             "Splice onto Trap 1U (As you cast a Trap spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card’s effects to that spell.)",
+            "Whenever you crank Sprinkle Cannon, proliferate.",
+             "Spells your opponents cast cost 1/2 more to cast.\n\"I’m not impossible to please. You’re just not good at this.\"",
+             "If a player would lose unspent mana, that mana becomes colorless instead.\n\"I can see forever, but forever is really washed out.\"\n—Spike",
         ]
 
         for line in lines:
-            self.assertTrue(is_rules_text(line))
+            self.assertTrue(is_rules_text(line), line)
 
 unittest.main()

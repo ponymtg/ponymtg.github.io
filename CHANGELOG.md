@@ -1,5 +1,11 @@
+## 1.12.2
+* Fixed flavor text detection bug.
+* Removed flavor text detection from RoboFoME.
+* Added better reporting to the FICG parser unit tests.
+* Updated Friendship is Card Games up to "Founding Day and Ponies & Parapets".
+
 ## 1.12.1
-* Fixed flavor detection bug.
+* Fixed flavor text detection bug.
 
 ## 1.12.0
 * Added flavor text detection to the FICG parser.
