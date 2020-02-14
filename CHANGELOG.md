@@ -1,3 +1,6 @@
+## 1.12.3
+* Fixed bug that was preventing Cockatrice XML from generating.
+
 ## 1.12.2
 * Fixed flavor text detection bug.
 * Removed flavor text detection from RoboFoME.

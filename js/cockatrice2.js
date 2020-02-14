@@ -25,9 +25,7 @@ function initialize() {
 
     generateButton.onclick = function() {
         const selectedSet = setsSelect.value;
-        if (selectedSet) {
-            const generateUrl = 'generateCockatriceFile.html?set='+selectedSet;
-        }
+        const generateUrl = 'generateCockatriceFile.html?set='+selectedSet;
         window.open(generateUrl, '_blank');
     }
 
