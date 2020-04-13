@@ -1,3 +1,8 @@
+## 1.13.0
+* Added "Spicy Cards", a newly-discovered set from 2014.
+* Added some some more Friendship is Card Games card images.
+* Added some Miscellany cards for "bbsartboutique".
+
 ## 1.12.3
 * Fixed bug that was preventing Cockatrice XML from generating.
 

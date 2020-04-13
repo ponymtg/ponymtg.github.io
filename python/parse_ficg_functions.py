@@ -1039,8 +1039,7 @@ def is_rules_text(string, card = None):
         '-1/-1 counter',
         '1 plus the',
         'activated abilit(y|ies)',
-        'activate this ability',
-        'activating an ability',
+        'activat(e|es|ing) (an|this) ability',
         'add an amount of',
         'after attackers are declared',
         'all cards with that name',
@@ -1051,11 +1050,9 @@ def is_rules_text(string, card = None):
         'any player may',
         'any time you could cast',
         '(are|is) all colors',
-        'artifact card',
-        'artifact creature',
+        'artifact (card|creature)',
         'as a copy of',
         'As an additional cost',
-        'As an additional cost to cast',
         'as it resolves',
         'as long as you control',
         'Assemble a Contraption',
@@ -1076,7 +1073,7 @@ def is_rules_text(string, card = None):
         '^Awaken \d',
         'becomes attached to a creature',
         'becomes (blocked|tapped)',
-        'becomes the target of a spell( or ability)?',
+        'becomes the target of a spell',
         'block(ed|ing) creatures?',
         'block or be blocked',
         'block this turn',
@@ -1085,8 +1082,7 @@ def is_rules_text(string, card = None):
         "can only attack alone",
         "can't attack (alone|unless)",
         "can't be (activated|blocked|countered|equipped|exiled|targeted|tapped|the target of|triggered)",
-        "can't block( creatures| this turn|\.$)",
-        "can't block unless",
+        "can't block( creatures| this turn| unless|\.$)",
         "can't cast( creature)? spells",
         "can't have or gain",
         "(can't|would) (gain|lose) life",
@@ -1097,7 +1093,6 @@ def is_rules_text(string, card = None):
         'choose a (creature|target) at random',
         'choose a planeswalker card',
         'Choose both if',
-        #'choose %NAME% if able',
         'choose( new)? targets',
         'Choose one( or both)? *—',
         'choosing targets',
@@ -1200,7 +1195,6 @@ def is_rules_text(string, card = None):
         'may cast this (card|spell)',
         '\(Melds with ',
         'multikicker',
-        #"%NAME% can't (be countered|block)",
         'named card',
         'next (end step|untap step|upkeep)',
         'non(basic|black|blue|blocking|creature|green|instant|land|red|snow|sorcery|token|white)',
@@ -1281,7 +1275,6 @@ def is_rules_text(string, card = None):
         r'^((\w+)( \w+)*)((,|;) (\w+)( \w+)*)*$',
         r'you may pay [\dwubrg]+',
         'sacrifice it',
-        #'sacrifice %NAME%',
         'sacrifices? (a|an|another|this) (artifact|creature|Forest|Island|land|Mountain|permanent|Plains|Swamp)',
         'sacrifices permanents',
         '^Sacrifice [\w ]+:',
@@ -1329,15 +1322,13 @@ def is_rules_text(string, card = None):
         'whenever an opponent casts',
         'Whenever a player',
         'whenever enchanted creature ',
-        #'when(ever)? %NAME% ',
         'whenever you (crank|sacrifice)',
         'When you cast (a|this) spell',
         'When you control no( .+)? (creatures|Forests|Islands|Mountains|Plains|Swamps)',
         'where X is',
         'without paying its mana cost',
         'would be destroyed',
-        'would deal( combat)?damage',
-        'would deal damage',
+        'would deal( combat)? damage',
         '^X, ',
         'You become the monarch.',
         "You can't cast more than ",
@@ -1346,7 +1337,6 @@ def is_rules_text(string, card = None):
         'you get two additional votes',
         'you may attach',
         'you may cast it for',
-        #'you may have %NAME% assign its combat damage'
         'you may pay an additional',
         'you may play an additional',
         '^You may spend ',
@@ -1355,49 +1345,7 @@ def is_rules_text(string, card = None):
         "your opponents' graveyards",
     ]
 
-    if card is not None and 'name' in card:
-        name = card['name']
-        # Some patterns use `%NAME%` as a placeholder for the card's name (or
-        # for the first word of the name, for brevity). If the card has a name,
-        # we'll separate out the placeholder patterns and add new patterns that
-        # have the placeholders filled as appropriate.
-        name_patterns = [
-            pattern for pattern in patterns if '%NAME%' in pattern
-        ]
-
-        patterns = [
-            pattern for pattern in patterns if not 'NAME%' in pattern
-        ]
-
-        for name_pattern in name_patterns:
-            first_word_in_name = name.split()[0]
-            # patterns.append(re.sub('%NAME%', first_word_in_name, name_pattern))
-            patterns.append(re.sub('%NAME%', name, name_pattern))
-    else:
-        # If the card doesn't have a name (usually they do, but some of our
-        # tests don't bother with it) just ignore all patterns that look for
-        # placeholder names.
-        patterns = [
-            pattern for pattern in patterns if not 'NAME%' in pattern
-        ]
-
-#    print('+' * 80)
-#    print(string)
-#    print('+' * 80)
-#    print()
-
     for pattern in patterns:
         if re.search(pattern, string, re.IGNORECASE):
-#            print('+' * 80)
-#            print('FOUND: {}'.format(pattern))
-#            print('IN:    {}'.format(string))
-#            print('+' * 80)
-#            print()
             return True
-#        print('/' * 80)
-#        print('NOT FOUND: {}'.format(pattern))
-#        print('IN:        {}'.format(string))
-#        print('/' * 80)
-#        print()
-
     return False

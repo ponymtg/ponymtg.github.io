@@ -207,5 +207,10 @@ var SETS = {
         "url": "https://www.fimfiction.net/blog/759461/friendship-is-card-games-when-it-rains",
         "notes": "A small FICG-inspired collection by Void Knight, based on the fic <i>When It Rains</i>",
     },
+    "Spicy Cards": {
+        "path": "spicy-cards/cards",
+        "url": "https://spicy-cards.tumblr.com/",
+        "notes": "A collection of pony cards found on a Tumblr dating back to 2014."
+    }
 };
 

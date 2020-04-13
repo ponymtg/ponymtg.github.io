@@ -1,6 +1,6 @@
 import json, sys
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 
 PROPERTIES = [
     'name',
@@ -43,7 +43,7 @@ if len(sys.argv) >= 3:
     try:
         presets = json.loads(presets_json)
     except json.decoder.JSONDecodeError:
-        print_stderr('Error when setting preset PROPERTIES; invalid JSON')
+        print_stderr('Error when setting preset properties; invalid JSON')
         sys.exit()
 try:
     open(output_file_path, 'w')
@@ -60,7 +60,7 @@ while True:
     card = {}
     print_stderr()
     print_stderr(
-        'Enter card PROPERTIES. If the property has no value, leave it blank.'
+        'Enter card properties. If the property has no value, leave it blank.'
     )
     print_stderr('-' * 80)
     for prop in PROPERTIES:
@@ -81,7 +81,7 @@ while True:
 
     repeat = None
     while repeat is None:
-        option = input('Add another card [a], or quit [q]?')
+        option = input('Add another card [a], or quit [q]? ')
 
         if option == 'a':
             repeat = True

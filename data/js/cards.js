@@ -3,46 +3,8 @@
  * There are a couple of exceptions, notably Friendship is Card Games, which I
  * prefer to keep in a separate list for ease of updating.
  *
- * This list must be a flat (non-nested) array of card data objects. Each card
- * data object may have the following properties:
- *
- * - name: The name of the card, as usually printed at the top. Example:
- *  "Applejack, Element of Honesty".
- * - image: The name of the image file which represents this card, if known. All
- *   images for a particular set are stored in the same directory. The location
- *   of that directory is defined in the global configuration for this app.
- * - set: The name of the set to which this card belongs. Being fan-made sets,
- *   there is generally no "official" name for them; in cases where the set
- *   didn't have a well-defined name, I have attempted to give it an appropriate
- *   one.
- * - creator: The creator of the card. Since each set was mostly created by a
- *   single person, this is generally the same for all cards in the same set.
- * - cost: The mana cost of the card in standard Magic format. Example: "4GG".
- * - supertype: The supertype of this card. Example: "Legendary Creature".
- * - subtype: The subtype of this card. Example: "Earth Pony".
- * - text: The card text. Generally, this does not include flavor text, although
- *   this is not guaranteed. The card text may contain escaped newlines (\n).
- *   Example: "Reach, hexproof\n\nSpells you cast cannot be countered.".
- * - flavorText: The card's flavor text. Example: "I didn't learn anything!"
- * - watermark: The name of the card's watermark. Example: "Cloudsdale
- *   Awesomatics"
- * - pt: The card's power and toughness. Generally, only creature cards will
- *   have this defined. Example: "3/3".
- * - loyalty: The card's loyalty. Generally, only Planeswalkers will have this
- *   defined.
- * - rarity: The card's rarity: "common", "uncommon", "rare", "mythic rare".
- * - transformsInto: The name of the card that this card transforms into, if
- *   it's a double-sided card.
- * - transformsFrom: The name of the card that this card transforms from, if
- *   it's a double-sided card.
- * - artist: The artist who created the card art.
- * - border: The type of border this card has (eg. "silver"). If not given, the
- *   standard black border is assumed.
- *
- * Most of these properties are optional; the application will attempt to do
- * the best it can with the data that is available. At the very least, "name"
- * should be set, as this is what the application looks for when a search is
- * made.
+ * This list must be a flat (non-nested) array of card data objects. See
+ * `schemas/card.json` for the complete schema of a card data object.
  */
 var CARDS = [
     {
@@ -24839,6 +24801,16 @@ var CARDS = [
         "notes": "A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.",
     },
     {
+        "name": "Anthropia Awakened",
+        "set": "My Little Planeswalker",
+        "creator": "Zennistrad",
+        "supertype": "Plane",
+        "subtype": "Anthropia",
+        "text": "When you planeswalk to Anthropia Awakened, each player creates a 1/1 white Human creature token.\n\nEach Human creature is a Horse in addition to its other creature types.\n\nEach Human creature on the battlefield has lifelink and is all colors.\n\nWhenever you roll {Chaos}, create two 1/1 white Human creature tokens.",
+        "sourceUrl": "https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil",
+        "notes": "A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad.",
+    },
+    {
         "name": "Rarity, Gem Weaver",
         "creator": "Zennistrad",
         "set": "My Little Planeswalker",
@@ -26343,5 +26315,655 @@ var CARDS = [
         "watermark": "Order of the Widget",
         "sourceUrl": "https://www.fimfiction.net/story/453901/1/assemble-a-conniption/its-not-sprocket-science",
         "notes": "The chapter card from Assemble a Conniption, the 2019 continuation of Elementals of Harmony."
+    },
+    {
+        "name": "Princess Celestia",
+        "image": "tumblr_n3zzuyfprs1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Princess Luna",
+        "image": "tumblr_n400a5nuHs1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Applejack",
+        "image": "tumblr_n400e80cif1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Fluttershy",
+        "image": "tumblr_n401fyYKIM1tybqevo1_r1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Pinkie Pie",
+        "image": "tumblr_n4023i3U8q1tybqevo1_r1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Rainbow Dash",
+        "image": "tumblr_n402jnpT5r1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Rarity",
+        "image": "tumblr_n4032fffSr1tybqevo1_r1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Twilight Sparkle",
+        "image": "tumblr_n407k9YsWv1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Queen Chrysalis",
+        "image": "tumblr_n408a5jNpL1tybqevo1_r1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Angel Bunny",
+        "image": "tumblr_n40b80GFMI1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Art of the Dress",
+        "image": "tumblr_n40bb9wC2x1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Banishment Decree",
+        "image": "tumblr_n40bm7cq9o1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Beseech the Queen",
+        "image": "tumblr_n40bwoSYlb1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Big Macintosh",
+        "image": "tumblr_n40c96Xtmp1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Blanked Pony",
+        "image": "tumblr_n40cjxkSk31tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Plains",
+        "image": "tumblr_n40cz1SEPf1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Island",
+        "image": "tumblr_n40cz1SEPf1tybqevo2_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Swamp",
+        "image": "tumblr_n40cz1SEPf1tybqevo3_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Mountain",
+        "image": "tumblr_n40cz1SEPf1tybqevo4_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Forest",
+        "image": "tumblr_n40cz1SEPf1tybqevo5_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Canterlot",
+        "image": "tumblr_n40ddyZZwM1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Appleloosa",
+        "image": "tumblr_n40dotQMh21tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Cloudsdale",
+        "image": "tumblr_n40dvkR26r1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Changeling Hive",
+        "image": "tumblr_n40e1l4K5o1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "The Badlands",
+        "image": "tumblr_n40e5rdfoO1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Celestia's Blessing",
+        "image": "tumblr_n45ih5tq6O1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Luna's Blessing",
+        "image": "tumblr_n45iitX4np1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Blanket of Night",
+        "image": "tumblr_n45irr6qv11tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Doctor Whooves",
+        "image": "tumblr_n45ixzTg691tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Deep Analysis",
+        "image": "tumblr_n45j1zoRRG1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Culling the Weak",
+        "image": "tumblr_n49pgqiD5I1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Conspiracy",
+        "image": "tumblr_n49pol8PXl1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Coerced Confession",
+        "image": "tumblr_n49pt4aMZZ1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Flim and Flam",
+        "image": "tumblr_n49q3ikh9y1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Daisy Wishes",
+        "image": "tumblr_n49qdjdd7C1tybqevo1_r1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Lily Dreams",
+        "image": "tumblr_n49qtdxBAh1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Roseluck",
+        "image": "tumblr_n49r1gpU8J1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Changeling Drone",
+        "image": "tumblr_n4apypEW7I1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Changeling Infiltrator",
+        "image": "tumblr_n4aq50Gnz11tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Changeling Soldier",
+        "image": "tumblr_n4aqlmq5nk1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Changeling",
+        "image": "tumblr_n4aqp8rYpK1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Apple",
+        "image": "tumblr_n4aqvclmH51tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Night Guard",
+        "image": "tumblr_n4ar31ytxD1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Glimpse Through the Glamor",
+        "image": "tumblr_n4cds4xdkM1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Parallel Action",
+        "image": "tumblr_n4cebi0D5H1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Personal Incarnation",
+        "image": "tumblr_n4cei8mndq1tybqevo1_r1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Control Magic",
+        "image": "tumblr_n4in8aBrB81tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Fear",
+        "image": "tumblr_n4inpr0ubj1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Winter Wrap Up",
+        "image": "tumblr_n4iphgSkW31tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Rapid Spawning",
+        "image": "tumblr_n4ipunupms1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Spawning Pod",
+        "image": "tumblr_n4ipy3yRiS1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Super Speedy Cider Squeezy 6000",
+        "image": "tumblr_n4iq31bgmi1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Will of the Queen",
+        "image": "tumblr_n4lq39eAHl1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Spitfire, Wonderbolts Captain",
+        "image": "tumblr_n4p9qgMsbB1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Soarin', Spitfire's Wingpony",
+        "image": "tumblr_n4pa753Df91tybqevo1_r1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Wonderbolts",
+        "image": "tumblr_n4paeigT9E1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Rapidfire",
+        "image": "tumblr_n4pard2tUE1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Misty Fly",
+        "image": "tumblr_n4pcl6IIir1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Fleetfoot",
+        "image": "tumblr_n4pctsBwkn1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Earth Pony",
+        "image": "tumblr_n4phcqGTw21tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Pegasus Pony",
+        "image": "tumblr_n4phjvGRRl1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Unicorn Pony",
+        "image": "tumblr_n4phxiYrq51tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Bat Pony",
+        "image": "tumblr_n4pi27CjEy1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Granny Smith",
+        "image": "tumblr_n4u4zzPg5d1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Royal Guard",
+        "image": "tumblr_n4u554WiXw1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Force Spike",
+        "image": "tumblr_n4u5c3C3uq1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Twilight's Barrier",
+        "image": "tumblr_n4u5x3t9uj1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Visions",
+        "image": "tumblr_n4u5zoUQwK1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Winds of Change",
+        "image": "tumblr_n4u61vloPE1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Nightmare Moon",
+        "image": "tumblr_n5uv4r9soj1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Celestia, The Solar Empress",
+        "image": "tumblr_n5uvb1Wg3d1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Shining Armor, Captain of the Guard",
+        "image": "tumblr_n5uvdgrIqV1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Princess Mi Amore Cadenza",
+        "image": "tumblr_n5uvfciiwi1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Applebloom",
+        "image": "tumblr_n5uvhpaXd81tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Sweetie Belle",
+        "image": "tumblr_n5uvlgmcOV1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Scootaloo",
+        "image": "tumblr_n5uvofxT4k1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Lyra's Song",
+        "image": "tumblr_n5y41qLhVt1tybqevo1_r1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Octavia's Waltz",
+        "image": "tumblr_n5y43uCd4j1tybqevo1_r1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Vinyl's Remix",
+        "image": "tumblr_n5y4dpQJHc1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Lyra Heartstrings",
+        "image": "tumblr_n5y4ldyBLA1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Lady Octavia",
+        "image": "tumblr_n5y4mxPVg21tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Vinyl Scratch",
+        "image": "tumblr_n5y4pgsFfV1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Tormented Soul",
+        "image": "tumblr_n5y4rjdPjN1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Recurring Nightmare",
+        "image": "tumblr_n5y4tcxteL1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Living Death",
+        "image": "tumblr_n5y4y8fUoP1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Dregs of Sorrow",
+        "image": "tumblr_n5y55bnmyu1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Deep Thought",
+        "image": "tumblr_n5y5a9kRBI1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Twilight Sparkle, Time Traveler",
+        "image": "tumblr_n5y5hsUwzW1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Element of Loyalty",
+        "image": "tumblr_n64yb3ZHRa1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Element of Laughter",
+        "image": "tumblr_n64yc7Dts21tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Element of Generosity",
+        "image": "tumblr_n64ydcRiZk1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Element of Honesty",
+        "image": "tumblr_n64yepocfY1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Element of Kindness",
+        "image": "tumblr_n64yfnEMf81tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Element of Magic",
+        "image": "tumblr_n64ylfUHsd1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Blinding Light",
+        "image": "tumblr_n65zbbERhH1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Celestia's Call",
+        "image": "tumblr_n65zefUQd01tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Rays of Light",
+        "image": "tumblr_n65zgfRVnh1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Zecora",
+        "image": "tumblr_n65zjdTM3z1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Discord, Lord of Chaos",
+        "image": "tumblr_n65znre0FS1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Derpy Hooves",
+        "image": "tumblr_n65zt21nAe1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Hurricane's Helmet",
+        "image": "tumblr_n65zwrlHgP1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Princess Platinum's Crown",
+        "image": "tumblr_n65zyuWN4Y1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "The Pudding Hat",
+        "image": "tumblr_n6601l8mnR1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Timberwolves",
+        "image": "tumblr_nf0r4nnBUg1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Mega Timberwolf",
+        "image": "tumblr_nf0r86SNPL1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Philomena, Celestia's Spark",
+        "image": "tumblr_nf0rb6eaQr1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Poison Joke",
+        "image": "tumblr_nf0rga4qZI1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Inner Fire",
+        "image": "tumblr_nf0rjh9n4H1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Illusory Wings",
+        "image": "tumblr_nf0rmkuwjx1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Burden of Guilt",
+        "image": "tumblr_nf0rrkrDvG1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Celestia, Reclaimer of Ponykind",
+        "image": "tumblr_nf4b5jdH4W1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Luna, the Sorrowful",
+        "image": "tumblr_nf4bcfGNbh1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Applejack, the Wanderer",
+        "image": "tumblr_nf4bveBJid1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Rarity, the Diamond of Equestria",
+        "image": "tumblr_nf4c7aM9Xl1tybqevo1_r1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Pinkamena Diane Pie",
+        "image": "tumblr_nf4cddrizM1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Flutterbat",
+        "image": "tumblr_nf7fykEb4t1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Rainbow Dash, the Mana Surged",
+        "image": "tumblr_nf7ghaIPS91tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Nightmare Eclipse",
+        "image": "tumblr_nf7gts06Gn1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Blanked Applebloom",
+        "image": "tumblr_nf7gz1o2ii1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Sweetie Belle, the Awakened",
+        "image": "tumblr_nf7h5xFPIj1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Scootaloo, the Tainted",
+        "image": "tumblr_nf7hc4VKMm1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Path to Exile",
+        "image": "tumblr_nfbo63ag0T1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Apathy",
+        "image": "tumblr_nfbof0NjoF1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Burning Earth",
+        "image": "tumblr_nfbolqCsgB1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Deep Meditation",
+        "image": "tumblr_nfbp6nvULg1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Sororicide",
+        "image": "tumblr_nfbpel9Laf1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Supersonic Rainboom",
+        "image": "tumblr_nfbpi2GfFz1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Trixie, the Great and Powerful",
+        "image": "tumblr_nfbpr2c9Vc1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Discord, Avatar of Chaos",
+        "image": "tumblr_nfbq1bTM4k1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
+    },
+    {
+        "name": "Redemption",
+        "image": "tumblr_nfbqclOwup1tybqevo1_400.jpg",
+        "set": "Spicy Cards",
     },
 ];

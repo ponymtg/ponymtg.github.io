@@ -2713,8 +2713,8 @@ class test_parse_ficg_functions(unittest.TestCase):
             "Sacrifice a non-Treasure artifact: Create two Treasures. (They’re artifacts with \"T, Sacrifice this artifact: Add one mana of any color.\")",
             "Splice onto Trap 1U (As you cast a Trap spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card’s effects to that spell.)",
             "Whenever you crank Sprinkle Cannon, proliferate.",
-             "Spells your opponents cast cost 1/2 more to cast.\n\"I’m not impossible to please. You’re just not good at this.\"",
-             "If a player would lose unspent mana, that mana becomes colorless instead.\n\"I can see forever, but forever is really washed out.\"\n—Spike",
+             "Spells your opponents cast cost 1/2 more to cast.",
+             "If a player would lose unspent mana, that mana becomes colorless instead.",
         ]
 
         for line in lines:

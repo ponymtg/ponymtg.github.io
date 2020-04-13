@@ -53,7 +53,7 @@ function initialize() {
     // - compilation of the corpuses
     // - rule/flavor text detection and separation
     // - analysis of the frequency data
-    var expectedNumberOfInitializationStages = 3;
+    var expectedNumberOfInitializationStages = 2;
     var currentInitializationStage = 0;
 
     // Generate the set of corpuses (the collections of text data that we'll be
