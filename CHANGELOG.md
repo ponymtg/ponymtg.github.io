@@ -1,5 +1,6 @@
 ## 1.13.1
 * Updated Friendship is Card Games up to "Friendship is Card Games: My Little Pony Comics & Quiz (Japanese Manga)".
+* Updated FICG tokens list.
 * Added more Friendship is Card Games card images.
 
 ## 1.13.0
