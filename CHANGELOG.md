@@ -1,6 +1,10 @@
+## 1.13.1
+* Updated Friendship is Card Games up to "Friendship is Card Games: My Little Pony Comics & Quiz (Japanese Manga)".
+* Added more Friendship is Card Games card images.
+
 ## 1.13.0
 * Added "Spicy Cards", a newly-discovered set from 2014.
-* Added some some more Friendship is Card Games card images.
+* Added some more Friendship is Card Games card images.
 * Added some Miscellany cards for "bbsartboutique".
 
 ## 1.12.3

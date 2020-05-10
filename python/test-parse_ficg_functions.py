@@ -2715,6 +2715,10 @@ class test_parse_ficg_functions(unittest.TestCase):
             "Whenever you crank Sprinkle Cannon, proliferate.",
              "Spells your opponents cast cost 1/2 more to cast.",
              "If a player would lose unspent mana, that mana becomes colorless instead.",
+            "When Discord, Clown Prince dies or is put into exile from the battlefield, return him to the battlefield transformed.",
+            "When you encounter Aether Fracture, the planar die costs 1 more to roll until a player planeswalks away from a plane. (Then planeswalk away from this phenomenon.)",
+            "You may look at the top card of any library any time.",
+            "Prevent all damage Ectothermic Dragon would deal to snow creatures.",
         ]
 
         for line in lines:

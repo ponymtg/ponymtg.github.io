@@ -2193,5 +2193,5 @@ var MISC_CARDS = [
         "pt": "5/5",
         "sourceUrl": "https://www.fimfiction.net/blog/873423/mlp-magic-cards",
         "notes": "One of 5 cards created in a blog post by Thought Prism, inspired by the official Ponies: The Gathering set."
-    }
+    },
 ];
