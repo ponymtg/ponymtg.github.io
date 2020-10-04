@@ -20,8 +20,10 @@
 # a detection algorithm to perform the separation automatically, although it
 # isn't perfect and sometimes mistakes lines of rules text for flavor text.
 
-import sys
+import os, sys
 from parse_ficg_functions import *
+
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 
 # When typos appear in the type line, this causes problems for the parser as it
 # uses that line to determine where a card starts and ends. For this reason, we
@@ -69,8 +71,18 @@ for typo in SPELLING_CORRECTIONS:
 if set_name is not None:
     META['set_name'] = set_name
 
+# Load a set of regular expression patterns which are used by the parser to
+# distinguish rules text from flavor text.
+with open(
+    f'{SCRIPT_DIR}/data/rules-text-patterns.txt'
+) as rules_text_patterns_file:
+    rules_text_patterns = [line.strip('\n') for line in rules_text_patterns_file]
+
 # Parse the raw dump into a dictionary of card data entries.
-card_data_entries = parse_ficg_dump_into_card_data_entries(ficg_raw_dump)
+card_data_entries = parse_ficg_dump_into_card_data_entries(
+    ficg_raw_dump,
+    rules_text_patterns
+)
 
 # Define the fields (and their ordering) which will be put into the JSON.
 # (Python dictionaries don't have an ordering by default, so we have to impose

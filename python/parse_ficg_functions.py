@@ -1,16 +1,7 @@
-import json, re
-from collections import OrderedDict
-
 # coding=utf-8
 
-################################################################################
-# Friendship is Card Games text dump parser
-#
-# Given a text file containing a dump of card text from FanOfMostEverything's
-# Friendship is Card Games posts, this script will attempt to parse it into a
-# structured format and output the result as JSON. A "dump of card text", in
-# this case, is a direct copy-paste of card listings from FanOfMostEverything's
-# card blog posts.
+import json, re, sys
+from collections import OrderedDict
 
 ################################################################################
 # GLOBALS
@@ -99,6 +90,7 @@ def is_type_line(line):
         'Tribal',
         'Snow',
     ]
+
     contains_type_word = False
     for type_word in type_words:
         if type_word in line:
@@ -370,7 +362,7 @@ def is_type_line(line):
 # scrutiny when attempting to extract the mana cost from the line, which is
 # helpful in some certain situations. (Strict cost checking shouldn't be used
 # all the time, as it might be _too_ strict in some cases).
-def split_name_and_cost_line_into_name_and_cost(
+def split_name_and_cost_line(
     name_and_cost_line,
     use_strict_cost_checking = False
 ):
@@ -385,10 +377,10 @@ def split_name_and_cost_line_into_name_and_cost(
         # they were regular individual name-and-cost lines to extract the names
         # and costs from each.
 
-        name_and_cost_1 = split_name_and_cost_line_into_name_and_cost(
+        name_and_cost_1 = split_name_and_cost_line(
             name_and_cost_line_halves[0]
         )
-        name_and_cost_2 = split_name_and_cost_line_into_name_and_cost(
+        name_and_cost_2 = split_name_and_cost_line(
             name_and_cost_line_halves[1]
         )
 
@@ -440,8 +432,6 @@ def split_name_and_cost_line_into_name_and_cost(
 
         return {'name': name, 'cost': cost}
 
-
-
 # Given a type line, returns a dictionary containing the component parts of the
 # type line. The component parts may be: color indicator, supertype, and
 # subtype. Of these, only supertype is guaranteed to be present; not all cards
@@ -488,7 +478,8 @@ def split_type_line(type_line):
         if color_indicator_match:
             # If we found a color indicator, store it and remove it from the string.
             type_line_parts['colorIndicator'] = color_indicator_match.group(0)
-            # The regex looks for a trailing space at the end, so we need to slice that off.
+            # The regex looks for a trailing space at the end, so we need to
+            # slice that off.
             type_line_parts['colorIndicator'] = type_line_parts['colorIndicator'][:-1]
 
             # For the rest of this function, we'll operate on the stuff after
@@ -513,45 +504,50 @@ def split_type_line(type_line):
     return type_line_parts
 
 # Given two card data entries, join them together into a single split card.
-def join_card_halves(first_card_half, second_card_half):
+def join_card_halves(first_card, second_card):
     joined_card = {}
     joined_card['name'] = '{} // {}'.format(
-        first_card_half['name'],
-        second_card_half['name']
+        first_card['name'],
+        second_card['name']
     )
-    joined_card['cost'] = first_card_half['cost']
-    joined_card['cost2'] = second_card_half['cost']
-    joined_card['supertype'] = first_card_half['supertype']
-    joined_card['supertype2'] = second_card_half['supertype']
+    joined_card['cost'] = first_card['cost']
+    joined_card['cost2'] = second_card['cost']
+    joined_card['supertype'] = first_card['supertype']
+    joined_card['supertype2'] = second_card['supertype']
 
-    if 'subtype' in first_card_half:
-        joined_card['subtype'] = first_card_half['subtype']
-    if 'subtype' in second_card_half:
-        joined_card['subtype2'] = second_card_half['subtype']
+    if 'subtype' in first_card:
+        joined_card['subtype'] = first_card['subtype']
+    if 'subtype' in second_card:
+        joined_card['subtype2'] = second_card['subtype']
 
-    if 'text' not in first_card_half:
+    if 'text' not in first_card:
         raise Exception(
             'No rules text found on card half "{}" (flavorText = "{}")'.format(
-            first_card_half['name'],
-            first_card_half['flavorText']
+            first_card['name'],
+            first_card['flavorText']
         )
     )
-    if 'text' not in second_card_half:
+    if 'text' not in second_card:
         raise Exception(
             'No rules text found on card half "{}" (flavorText = "{}")'.format(
-            second_card_half['name'],
-            second_card_half['flavorText']
+            second_card['name'],
+            second_card['flavorText']
         )
     )
 
     joined_card['text'] = '{}: {}\n\n'.format(
-        first_card_half['name'],
-        first_card_half['text']
+        first_card['name'],
+        first_card['text']
     )
-    joined_card['text'] += '{}: {}\n\n'.format(
-        second_card_half['name'],
-        second_card_half['text']
+    joined_card['text'] += '{}: {}'.format(
+        second_card['name'],
+        second_card['text']
     )
+
+    # Note that as per the convention established by Adventure cards, if the
+    # first card has a P/T value, the joined card has that same P/T value.
+    if 'pt' in first_card:
+        joined_card['pt'] = first_card['pt']
 
     return joined_card
 
@@ -621,21 +617,24 @@ def split_ficg_dump_into_individual_card_dumps(dump):
 
 # Given a dump of text which represents a single FICG card, extract and return a
 # dictionary of the card's properties.
-def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
+def parse_individual_card_dump_into_card_data_entry(
+    card_dump,
+    rules_text_patterns
+):
     card_data_entry = {}
 
     # Before starting, perform a replacement to replace decorative double quotes
     # (”) with regular ones ("). Just to keep things consistent.
-    individual_card_dump = individual_card_dump.replace('”', '"')
-    individual_card_dump = individual_card_dump.replace('“', '"')
+    card_dump = card_dump.replace('”', '"')
+    card_dump = card_dump.replace('“', '"')
 
     # Split the individual dump into lines.
-    individual_card_dump_lines = individual_card_dump.split('\n')
+    card_dump_lines = card_dump.split('\n')
 
     # Identify the name-and-cost line, and the type line. These, we assume, will
     # always be the first and second lines respectively.
-    name_and_cost_line = individual_card_dump_lines[0]
-    type_line = individual_card_dump_lines[1]
+    name_and_cost_line = card_dump_lines[0]
+    type_line = card_dump_lines[1]
 
     # Extract the supertype (and subtype, and color indicator, if present)
     # first. We need this because we want to make a decision about how to
@@ -664,7 +663,7 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
     else:
         # Otherwise, if not a land, we will assume that the line contains a name
         # and (probably) a cost, and will split it accordingly.
-        name_and_cost_line_properties = split_name_and_cost_line_into_name_and_cost(
+        name_and_cost_line_properties = split_name_and_cost_line(
             name_and_cost_line
         )
         if 'colorIndicator' in card_data_entry:
@@ -676,7 +675,7 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
             # on the name and cost line. This will add an extra level of
             # scrutiny which will make it easier for the function to tell
             # whether there is a mana cost or not.
-            name_and_cost_line_properties = split_name_and_cost_line_into_name_and_cost(
+            name_and_cost_line_properties = split_name_and_cost_line(
                 name_and_cost_line,
                 True
             )
@@ -686,7 +685,7 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
             # the color indicator, we need to use strict cost checking to
             # prevent the parser from interpreting the last word of the name as
             # a cost.
-            name_and_cost_line_properties = split_name_and_cost_line_into_name_and_cost(
+            name_and_cost_line_properties = split_name_and_cost_line(
                 name_and_cost_line,
                 True
             )
@@ -730,10 +729,10 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         # If the card is a creature, we expect that the last line in the dump
         # will be the creature's power/toughness, and everything else will be
         # card text.
-        card_data_entry['pt'] = individual_card_dump_lines[-1]
-        text_lines = individual_card_dump_lines[2:-1]
+        card_data_entry['pt'] = card_dump_lines[-1]
+        text_lines = card_dump_lines[2:-1]
 
-        if re.match(r'^Level up', individual_card_dump_lines[2]):
+        if re.match(r'^Level up', card_dump_lines[2]):
             # Special exception to the above: If the card text begins with
             # "Level up", we will assume this is a Leveler card. Leveler cards
             # don't have a single power/toughness value, so it doesn't make
@@ -741,13 +740,13 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
             # simply allow the rules text to state the power/toughness values
             # for the card.
             del card_data_entry['pt']
-            text_lines = individual_card_dump_lines[2:]
+            text_lines = card_dump_lines[2:]
     elif 'Planeswalker' in card_data_entry['supertype']:
         # If the card is a planeswalker, we expect that the last line in the
         # dump will be the planeswalker's loyalty, and everything else will be
         # card text.
-        card_data_entry['loyalty'] = individual_card_dump_lines[-1]
-        text_lines = individual_card_dump_lines[2:-1]
+        card_data_entry['loyalty'] = card_dump_lines[-1]
+        text_lines = card_dump_lines[2:-1]
 
         # SPECIAL CASE: "Discord Released" has no loyalty box, due to a quirk
         # of it being the reverse side of a double-sided card. For this card,
@@ -755,11 +754,11 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         # loyalty.
         if card_data_entry['name'] == 'Discord Released':
             del card_data_entry['loyalty']
-            text_lines = individual_card_dump_lines[2:]
+            text_lines = card_dump_lines[2:]
     elif (
         'subtype' in card_data_entry
         and 'Contraption' in card_data_entry['subtype']
-        and individual_card_dump_lines[-1] in FACTIONS
+        and card_dump_lines[-1] in FACTIONS
     ):
         # If this card is a Contraption and the final line is recognized as a
         # faction watermark, we record the watermark on the card.
@@ -771,9 +770,9 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         # colon-enclosed strings (eg. `:ajsmug:`). So, to record the watermark,
         # we just need to map the emoticon string to the correct watermark
         # name.
-        faction_emoticon = individual_card_dump_lines[-1]
+        faction_emoticon = card_dump_lines[-1]
         card_data_entry['watermark'] = FACTIONS[faction_emoticon]
-        text_lines = individual_card_dump_lines[2:-1]
+        text_lines = card_dump_lines[2:-1]
     elif card_data_entry['name'] == 'Power Converter':
         # SPECIAL CASE: "Power Converter" (from
         # <https://www.fimfiction.net/blog/789008/friendship-is-card-games-2014-annual-power-ponies>)
@@ -781,15 +780,16 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
         # watermark (I think), but the link is broken; in any case, we probably
         # wouldn't be able to process it anyway. For this card, we add the
         # watermark manually.
-        text_lines = individual_card_dump_lines[2:-1]
+        text_lines = card_dump_lines[2:-1]
         card_data_entry['watermark'] = 'League of Dastardly Doom'
     else:
         # In all other cases (ie. enchantments, instants, artifacts), we expect
         # that everything after the first two lines is card text.
-        text_lines = individual_card_dump_lines[2:]
+        text_lines = card_dump_lines[2:]
         
     rules_and_flavor_text = separate_rules_text_and_flavor_text(
-        '\n'.join(text_lines)
+        '\n'.join(text_lines),
+        rules_text_patterns
     )
 
     if rules_and_flavor_text[0]:
@@ -867,7 +867,7 @@ def parse_individual_card_dump_into_card_data_entry(individual_card_dump):
 
     return card_data_entry
 
-def parse_ficg_dump_into_card_data_entries(ficg_dump):
+def parse_ficg_dump_into_card_data_entries(ficg_dump, rules_text_patterns):
     # Break up the dump into a number of sub-dumps, each of which (we hope) is
     # a chunk of text that represents a single card.
     individual_card_dumps = split_ficg_dump_into_individual_card_dumps(
@@ -877,7 +877,8 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump):
     card_data_entries = []
     for individual_card_dump in individual_card_dumps:
         card_data_entry = parse_individual_card_dump_into_card_data_entry(
-            individual_card_dump
+            individual_card_dump,
+            rules_text_patterns
         )
         card_data_entries.append(card_data_entry)
 
@@ -927,6 +928,43 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump):
                 # Delete this card (the second card half), and replace the
                 # preceding card (the first card half) with the
                 # joined version.
+                del card_data_entries[i]
+                card_data_entries[i-1] = joined_card
+
+                # Decrement the index counter by 1 (since we just removed a
+                # card).
+                i -= 1
+        i += 1
+        
+    # Fourth pass: Adventure cards. These are similar to "Aftermath" cards; they
+    # are basically a mini-card bolted on to another one. FanOfMostEverything
+    # formats Adventure cards like this:
+    # 
+    #    Regal Shieldmage 2W
+    #    Creature — Unicorn Noble Wizard
+    #    Other creatures you control get +0/+1.
+    #    “A princess must defend her people.”
+    #    2/3
+    #    Royal Aegis 1W
+    #    Instant — Adventure
+    #    Prevent all damage that would be dealt to target creature this turn.
+    #
+    # As with Aftermath cards, we must combine them into one card, using the
+    # same technique.
+    i = 0
+    while i < len(card_data_entries):
+        card_data_entry = card_data_entries[i]
+        if 'text' in card_data_entry and '//' not in card_data_entry['name']:
+            # Check to see if the card is an Adventure card.
+            if (
+                'subtype' in card_data_entry
+                and 'Adventure' in card_data_entry['subtype']
+            ):
+                first_card_half = card_data_entries[i-1]
+                second_card_half = card_data_entries[i]
+
+                # Join the two cards and replace them with the joined version.
+                joined_card = join_card_halves(first_card_half, second_card_half)
                 del card_data_entries[i]
                 card_data_entries[i-1] = joined_card
 
@@ -993,12 +1031,12 @@ def convert_card_data_entries_to_js(
 # Because the function for identifying rules text is not 100% reliable, it is
 # possible for this function to misidentify one or more line of rules text as
 # flavor text.
-def separate_rules_text_and_flavor_text(text):
+def separate_rules_text_and_flavor_text(text, rules_text_patterns):
     lines = text.split('\n')
 
     for i in range(len(lines)-1, -1, -1):
         line = lines[i]
-        if is_rules_text(line):
+        if is_rules_text(line, rules_text_patterns):
             break
 
         # If we reach this point and i has reached 0, that means that we never
@@ -1008,7 +1046,6 @@ def separate_rules_text_and_flavor_text(text):
         # ensure that we slice off the whole list as flavor text.
         if i == 0:
             i -= 1
-            
 
     rules_lines = lines[:i+1]
     flavor_lines = lines[i+1:]
@@ -1032,321 +1069,10 @@ def separate_rules_text_and_flavor_text(text):
 # phrases that are commonly used in rules text, but not in flavor text. The list
 # is not exhaustive and may give false negatives if it is unable to match a
 # legitimate piece of rules text.
-def is_rules_text(string, card = None):
+def is_rules_text(string, rules_text_patterns):
     string = re.sub("’", "'", string)
 
-    patterns = [
-        '-1/-1 counter',
-        '1 plus the',
-        'activated abilit(y|ies)',
-        'activat(e|es|ing) (an|this) ability',
-        'add an amount of',
-        'after attackers are declared',
-        'all cards with that name',
-        'all creatures able to',
-        'all permanents',
-        'Alternative costs',
-        'any number of creatures',
-        'any player may',
-        'any time you could cast',
-        '(are|is) all colors',
-        'artifact (card|creature)',
-        'as a copy of',
-        'As an additional cost',
-        'as it resolves',
-        'as long as you control',
-        'Assemble a Contraption',
-        'assigns combat damage',
-        'as though (it had|they had) (flash|reach)',
-        "as though it weren't blocked",
-        'as you cast this spell',
-        'at (end|the beginning) of (combat|your upkeep)',
-        'attacked with a creature',
-        'attackers are declared',
-        'attacking (creatures|player)',
-        'attacks? or blocks?',
-        '(attacks?|attacks? this turn|blocked|each turn|next combat|this combat|this turn) (as though|if able)',
-        'attacks (each|this) combat',
-        'at the beginning of the upkeep',
-        '(aura|commanders|creature|Dragons|enchantment|Forest|Island|land|Mountain|permanent|Plains|planeswalker|source|Swamp|token)s? you control',
-        'auras attached to',
-        '^Awaken \d',
-        'becomes attached to a creature',
-        'becomes (blocked|tapped)',
-        'becomes the target of a spell',
-        'block(ed|ing) creatures?',
-        'block or be blocked',
-        'block this turn',
-        'both creatures have',
-        'can block (an additional|creatures|up to)',
-        "can only attack alone",
-        "can't attack (alone|unless)",
-        "can't be (activated|blocked|countered|equipped|exiled|targeted|tapped|the target of|triggered)",
-        "can't block( creatures| this turn| unless|\.$)",
-        "can't cast( creature)? spells",
-        "can't have or gain",
-        "(can't|would) (gain|lose) life",
-        'card to the battlefield',
-        'change its text',
-        'change the targets',
-        '^Chaotic ',
-        'choose a (creature|target) at random',
-        'choose a planeswalker card',
-        'Choose both if',
-        'choose( new)? targets',
-        'Choose one( or both)? *—',
-        'choosing targets',
-        'color of your choice',
-        'combat phase',
-        'Contraption deck',
-        'control an? (artifact|Forest|enchantment|Island|Mountain|Plains|Swamp)',
-        'converted mana cost',
-        'copy target',
-        'cost \d less',
-        'cost .+ more to cast',
-        'costs? \d (less|more) to (activate|cast)',
-        'costs \d to cast',
-        'counter on it',
-        "Counters can't be",
-        'counter target( \w+)? spell',
-        'creates? a .+ token',
-        'create .+ tokens',
-        "creatures can't block",
-        'creatures on the battlefield',
-        'creatures with flying',
-        "creatures (you|you don't|your opponents) control",
-        'creature (token|type|spell)s?',
-        'creature would be destroyed',
-        'damage can\'t be prevented',
-        'damage that would be dealt',
-        'deals( combat)? damage (equal to|to target)',
-        'deals damage to each',
-        'deals (\d|X) damage',
-        'deal(s|t) combat damage',
-        'dealt damage',
-        'dealt to a player',
-        'dealt to you instead',
-        'declare blockers',
-        'defending player',
-        '(destroy|exile)( at least)? (all|each|one|two|three|four|five|six|seven|eight|nine|ten)( black| blue| green| red| white)? (artifact|aura|card|creature|enchantment|permanent)s?',
-        "died this turn",
-        'discard cards',
-        '(discard|draw)s?( up to)? (a|one|two|three|four|five|six|seven|this|that many)( or more)? cards?',
-        'draw cards equal to',
-        'draw step',
-        'draw X cards',
-        'during your turn',
-        'each combat',
-        'each creature blocking',
-        'each opponent',
-        'each other (creature|player)',
-        "each player (abandons|can't|chooses|draws|may|puts|sacrifices)",
-        "each player's upkeep",
-        '(each|the|your) end step',
-        '^Enchanted creature ',
-        'enchanted creature (has|is)',
-        "enchanted (creature|permanent|player)('s)?",
-        'entered the battlefield (this turn|under)',
-        'enter(ing|s) the battlefield',
-        'enters? the battlefield as',
-        'Entwine \d',
-        'equal to its (power|toughness)',
-        'equal to the difference',
-        'equipped creature',
-        "except it's still",
-        '^Exile ',
-        'exiled card',
-        'exile it instead',
-        'exile (it|target)',
-        'face( |-)down',
-        'for each card',
-        'from all graveyards',
-        'from (their|your) graveyard',
-        'gains? control of (it|all)',
-        'gains? life equal to',
-        'greatest (power|toughness) among',
-        'he or she attacks',
-        'his or her (control|graveyard|hand|library|mana pool)',
-        'if a player would',
-        'if a source',
-        'if [\w ]+ is an enchantment',
-        'in addition to its other types',
-        'in addition to their other types',
-        'instant and sorcery',
-        'instant or sorcery',
-        'into your graveyard',
-        'in your graveyard',
-        'in your opening hand',
-        'is a (forest|island|mountain|plains|swamp)',
-        'is tapped for mana',
-        'it has trample',
-        'its (controller|text box)',
-        "its owner's (control|library)",
-        'leaves the battlefield',
-        'legendary (creature|spell)s?',
-        '^Level \d',
-        'lifelink',
-        'life total',
-        'loses? flying',
-        'loses x life',
-        'mana abilities',
-        'mana cost',
-        'maximum hand size',
-        'may cast this (card|spell)',
-        '\(Melds with ',
-        'multikicker',
-        'named card',
-        'next (end step|untap step|upkeep)',
-        'non(basic|black|blue|blocking|creature|green|instant|land|red|snow|sorcery|token|white)',
-        'number of cards',
-        'number of( \w+)? permanents',
-        'of each upkeep',
-        'on each of your turns',
-        '(one|two|three|four|five|six|seven|eight|nine|ten) or fewer cards in your hand',
-        '(one|two|three|four|five|six|seven|eight|nine|ten) or more (counters|creatures)',
-        'ongoing scheme',
-        'only (as a sorcery|during combat)',
-        "on top of their owner's libraries",
-        'onto the battlefield',
-        'on your turn',
-        'opponent gains life',
-        "opponents can't",
-        "(opponent's|that player's|your) library",
-        'paired with another',
-        'pay [1-9X] life',
-        '(permanent|revealed) card',
-        '(plains|island|swamp|mountain|forest)walk',
-        "players can't ",
-        'players other than ',
-        'players vote secretly',
-        'play with the top card',
-        'planar die',
-        'poison counter',
-        'Pony, Pegasus, and Unicorn creatures',
-        'power [1-9X] or less',
-        'power and toughness',
-        'power (less|greater) than or equal to',
-        'prevent all (combat )?damage',
-        'prevent that damage',
-        '^Proliferate',
-        'put any number of them',
-        'put a \w+ counter',
-        'put into (a graveyard|exile)',
-        'put it into your hand',
-        'puts that many cards',
-        'put this card into your hand',
-        r'\+1/\+1 counter',
-        r'^affinity for ',
-        r'any number of \w+ cards',
-        r'attacking creature\b',
-        r'\bcounter all (white|blue|black|red|green) spells',
-        r"\bX is that",
-        r'creatures? without flying',
-        r'^\d+, ',
-        r'^\d+/\d+$',
-        r'\d damage',
-        r'destroy target \w+',
-        r'\d or greater',
-        r'draw a card.$',
-        r'\d: (Sacrifice|Scry|Tap)',
-        r'^\d+[WUBRG]+: ',
-        r'^\d+[WUBRG]+\b, ',
-        r'each land is a (plains|island|swamp|mountain|forest)',
-        'regenerate (it|target)',
-        r'enchanted creature\.$',
-        'replacing all instances of',
-        r'^Equip \(?[\dWUBRG]+\)?$',
-        'return all (creatures|land cards)',
-        'return (her|him|it) to the battlefield',
-        'Reveal (a creature card|your hand)',
-        'reveal (this|that) card',
-        r'(gain|lose)s? (\d+|that much) life',
-        r'gains \w+ until',
-        r'gets? (\+|-)\d+/(\+|-)\d+',
-        r'(has|have) (deathtouch|equip |first strike|flying|haste|hexproof|indestructible|menace|partner\b|split second|the abilities of each|trample)',
-        r'if .+ was kicked',
-        r'^Kicker',
-        r'(one|two|three|four|five|six|seven|eight|nine|ten) mana\b',
-        r', proliferate\.',
-        r'remove all (creatures|damage|\w+ counters)',
-        r'shuffles it\b',
-        r'^\w+ \(.*\.\)$',
-        r'^[WUBRG]+\b, ',
-        r'^[WUBRG]+\b: ',
-        r'^((\w+)( \w+)*)((,|;) (\w+)( \w+)*)*$',
-        r'you may pay [\dwubrg]+',
-        'sacrifice it',
-        'sacrifices? (a|an|another|this) (artifact|creature|Forest|Island|land|Mountain|permanent|Plains|Swamp)',
-        'sacrifices permanents',
-        '^Sacrifice [\w ]+:',
-        'Scry [1-9X]',
-        'search any number of',
-        'set a scheme in motion',
-        'set this scheme in motion',
-        'shuffle (their libraries|your library)',
-        'since his or or her last turn',
-        'skips his or her',
-        'spells? (and|or) abilit(y|ies)',
-        'spells you cast',
-        'spell this turn',
-        '^Suspend ',
-        '^T, ',
-        '^T: ',
-        'take an extra turn',
-        'tap (any number of|each creature|target|up to)',
-        'tapped creature',
-        'target( black| blue| green| red| white| wordy)? (artifact|attacking|card|creature|enchanted|enchantment|land|opponent|permanent|player|spell)',
-        "that creature's owner",
-        'that player (controls|discards|loses|sacrifices)',
-        "that's a copy of",
-        'the chosen creatures',
-        'the chosen names?',
-        "their owners' libraries",
-        "to its owner's hand",
-        'top card of (any library|their libraries)',
-        'top card of your',
-        '(top|up to) (two|three|four|five|six|seven|eight|nine|ten) cards',
-        "to their owner'?s'? hands",
-        'to your mana pool',
-        'transform it',
-        'triggered abilities',
-        '(two|three|four|five|six|seven) target lands',
-        'unattach all',
-        "under its owner's control",
-        'unless [\w ]+ pays \d',
-        'unspent mana',
-        'untap',
-        'until end of turn',
-        'upkeep step',
-        'when a player casts',
-        'whenever a creature would ',
-        'whenever an opponent casts',
-        'Whenever a player',
-        'whenever enchanted creature ',
-        'whenever you (crank|sacrifice)',
-        'When you cast (a|this) spell',
-        'When you control no( .+)? (creatures|Forests|Islands|Mountains|Plains|Swamps)',
-        'where X is',
-        'without paying its mana cost',
-        'would be destroyed',
-        'would deal( combat)? damage',
-        '^X, ',
-        'You become the monarch.',
-        "You can't cast more than ",
-        'you cast a spell,',
-        'you choose which creatures',
-        'you get two additional votes',
-        'you may attach',
-        'you may cast it for',
-        'you may pay an additional',
-        'you may play an additional',
-        '^You may spend ',
-        'you or a planeswalker',
-        'your opponents (control|play)',
-        "your opponents' graveyards",
-    ]
-
-    for pattern in patterns:
+    for pattern in rules_text_patterns:
         if re.search(pattern, string, re.IGNORECASE):
             return True
     return False

@@ -1,3 +1,9 @@
+## 1.14.0
+* Updated Friendship is Card Games up to "Friendship is Forever Card Games: Deep Tissue Memories".
+* Updated the FICG parser to use a data file for rules text input.
+* Fixed a bug with parsing Adventure cards.
+* Updated the PonyMTG logo to a cleaner, more modern style.
+
 ## 1.13.1
 * Updated Friendship is Card Games up to "Friendship is Card Games: My Little Pony Comics & Quiz (Japanese Manga)".
 * Updated FICG tokens list.

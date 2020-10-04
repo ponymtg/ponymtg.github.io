@@ -1,0 +1,309 @@
+-1/-1 counter
+1 plus the
+activated abilit(y|ies)
+activat(e|es|ing) (an|this) ability
+add an amount of
+after attackers are declared
+all cards with that name
+all creatures able to
+all permanents
+Alternative costs
+any number of creatures
+any player may
+any time you could cast
+(are|is) all colors
+artifact (card|creature)
+as a copy of
+As an additional cost
+as it resolves
+as long as you control
+Assemble a Contraption
+assigns combat damage
+as though (it had|they had) (flash|reach)
+as though it weren't blocked
+as you cast this spell
+at (end|the beginning) of (combat|your upkeep)
+attacked with a creature
+attackers are declared
+attacking (creatures|player)
+attacks? or blocks?
+(attacks?|attacks? this turn|blocked|each turn|next combat|this combat|this turn) (as though|if able)
+attacks (each|this) combat
+at the beginning of the upkeep
+(aura|commanders|creature|Dragons|enchantment|Forest|Island|land|Mountain|permanent|Plains|planeswalker|source|Swamp|token)s? you control
+auras attached to
+^Awaken \d
+becomes attached to a creature
+becomes (blocked|tapped)
+becomes the target of a spell
+block(ed|ing) creatures?
+block or be blocked
+block this turn
+both creatures have
+can block (an additional|creatures|up to)
+can only attack alone
+can't attack (alone|unless)
+can't be (activated|blocked|countered|equipped|exiled|targeted|tapped|the target of|triggered)
+can't block( creatures| this turn| unless|\.$)
+can't cast( creature)? spells
+can't have or gain
+(can't|would) (gain|lose) life
+card to the battlefield
+change its text
+change the targets
+^Chaotic 
+choose a (creature|target) at random
+choose a planeswalker card
+Choose both if
+choose( new)? targets
+Choose one( or both)? *—
+choosing targets
+color of your choice
+combat phase
+Contraption deck
+control an? (artifact|Forest|enchantment|Island|Mountain|Plains|Swamp)
+converted mana cost
+copy target
+cost \d less
+cost .+ more to cast
+costs? \d (less|more) to (activate|cast)
+costs \d to cast
+counter on it
+Counters can't be
+counter target( \w+)? spell
+creates? a .+ token
+create .+ tokens
+creatures can't block
+creatures on the battlefield
+creatures with flying
+creatures (you|you don't|your opponents) control
+creature (token|type|spell)s?
+creature would be destroyed
+damage can\'t be prevented
+damage that would be dealt
+deals( combat)? damage (equal to|to target)
+deals damage to
+deals (\d|X) damage
+deal(s|t) combat damage
+dealt damage
+dealt to a player
+dealt to you instead
+declare blockers
+defending player
+(destroy|exile)( at least)? (all|each|one|two|three|four|five|six|seven|eight|nine|ten)( black| blue| green| red| white)? (artifact|aura|card|creature|enchantment|permanent)s?
+died this turn
+discard cards
+(discard|draw)s?( up to)? (a|one|two|three|four|five|six|seven|this|that many)( or more)? cards?
+draw cards equal to
+draw step
+draw X cards
+during your turn
+each combat
+each creature blocking
+each opponent
+each other (creature|player)
+each player (abandons|can't|chooses|draws|may|puts|sacrifices)
+each player's upkeep
+(each|the|your) end step
+^Enchanted creature 
+enchanted creature (has|is)
+enchanted (creature|permanent|player)('s)?
+entered the battlefield (this turn|under)
+enter(ing|s) the battlefield
+enters? the battlefield as
+Entwine \d
+equal to its (power|toughness)
+equal to the difference
+equipped creature
+except it's still
+^exile 
+exiled card
+exile it instead
+exile (it|target)
+face( |-)down
+for each card
+from all graveyards
+from (their|your) graveyard
+gains? control of (it|all)
+gains? life equal to
+greatest (power|toughness) among
+he or she attacks
+his or her (control|graveyard|hand|library|mana pool)
+if a player would
+if a source
+if [\w ]+ is an enchantment
+in addition to its other types
+in addition to their other types
+instant and sorcery
+instant or sorcery
+into your graveyard
+in your graveyard
+in your opening hand
+is a (forest|island|mountain|plains|swamp)
+is tapped for mana
+it has trample
+its (controller|text box)
+its owner's (control|library)
+leaves the battlefield
+legendary (creature|spell)s?
+^Level \d
+lifelink
+life total
+loses? flying
+loses x life
+mana abilities
+mana cost
+maximum hand size
+may cast this (card|spell)
+\(Melds with 
+multikicker
+named card
+next (end step|untap step|upkeep)
+non(basic|black|blue|blocking|creature|green|instant|land|red|snow|sorcery|token|white)
+number of cards
+number of( \w+)? permanents
+of each upkeep
+on each of your turns
+(one|two|three|four|five|six|seven|eight|nine|ten) or fewer cards in your hand
+(one|two|three|four|five|six|seven|eight|nine|ten) or more (counters|creatures)
+ongoing scheme
+only (as a sorcery|during combat)
+on top of their owner's libraries
+onto the battlefield
+on your turn
+opponent gains life
+opponents can't
+(opponent's|that player's|your) library
+paired with another
+pay [1-9X] life
+(permanent|revealed) card
+(plains|island|swamp|mountain|forest)walk
+players can't 
+players other than 
+players vote secretly
+play with the top card
+planar die
+poison counter
+Pony, Pegasus, and Unicorn creatures
+power [1-9X] or less
+power and toughness
+power (less|greater) than or equal to
+prevent all (combat )?damage
+prevent that damage
+^Proliferate
+put any number of them
+put a \w+ counter
+put into (a graveyard|exile)
+put it into your hand
+puts that many cards
+put this card into your hand
+\+1/\+1 counter
+^affinity for 
+any number of \w+ cards
+attacking creature\b
+\bcounter all (white|blue|black|red|green) spells
+\bX is that
+creatures? without flying
+^\d+, 
+^\d+/\d+$
+\d damage
+destroy target \w+
+\d or greater
+draw a card.$
+\d: (Sacrifice|Scry|Tap)
+^\d+[WUBRG]+: 
+^\d+[WUBRG]+\b, 
+each land is a (plains|island|swamp|mountain|forest)
+regenerate (it|target)
+enchanted creature\.$
+replacing all instances of
+^Equip \(?[\dWUBRG]+\)?$
+return all (creatures|land cards)
+return (her|him|it) to the battlefield
+Reveal (a creature card|your hand)
+reveal (this|that) card
+(gain|lose)s? (\d+|that much) life
+gains \w+ until
+gets? (\+|-)\d+/(\+|-)\d+
+(has|have) (deathtouch|equip |first strike|flying|haste|hexproof|indestructible|menace|partner\b|split second|the abilities of each|trample)
+if .+ was kicked
+^Kicker
+(one|two|three|four|five|six|seven|eight|nine|ten) mana\b
+, proliferate\.
+remove a counter
+remove all (creatures|damage|\w+ counters)
+shuffles it\b
+^\w+ \(.*\.\)$
+^[WUBRG]+\b, 
+^[WUBRG]+\b: 
+^((\w+)( \w+)*)((,|;) (\w+)( \w+)*)*$
+you may pay [\dwubrg]+
+sacrifice it
+sacrifices? (a|an|another|this) (artifact|creature|Forest|Island|land|Mountain|permanent|Plains|Swamp)
+sacrifices permanents
+^Sacrifice [\w ]+:
+Scry [1-9X]
+search any number of
+set a scheme in motion
+set this scheme in motion
+shuffle (their libraries|your library)
+since his or or her last turn
+skips his or her
+spells? (and|or) abilit(y|ies)
+spells you cast
+spell this turn
+^Suspend 
+^T, 
+^T: 
+take an extra turn
+tap (any number of|each creature|target|up to)
+tapped creature
+target( black| blue| green| red| white| wordy)? (artifact|attacking|card|creature|enchanted|enchantment|land|opponent|permanent|player|spell)
+that creature's owner
+that player (controls|discards|loses|sacrifices)
+that's a copy of
+the chosen creatures
+the chosen names?
+their owners' libraries
+to its owner's hand
+top card of (any library|their libraries)
+top card of your
+(top|up to) (two|three|four|five|six|seven|eight|nine|ten) cards
+to their owner'?s'? hands
+to your mana pool
+transform it
+triggered abilities
+(two|three|four|five|six|seven) target lands
+unattach all
+under its owner's control
+unless [\w ]+ pays \d
+unspent mana
+untap
+until end of turn
+upkeep step
+when a player casts
+whenever a creature would 
+whenever an opponent casts
+Whenever a player
+whenever enchanted creature 
+whenever you (crank|sacrifice|tap)
+When you cast (a|this) spell
+When you control no( .+)? (creatures|Forests|Islands|Mountains|Plains|Swamps)
+where X is
+without paying its mana cost
+would be destroyed
+would deal( combat)? damage
+^X, 
+You become the monarch.
+You can't cast more than 
+you cast a spell,
+you choose which creatures
+you get two additional votes
+you may attach
+you may cast it for
+you may pay an additional
+you may play an additional
+^You may spend 
+you or a planeswalker
+your opponents (control|play)
+your opponents' graveyards
