@@ -105,7 +105,8 @@ card_properties = [
     'pt',
     'loyalty',
     'transformsInto',
-    'transformsFrom'
+    'transformsFrom',
+    'otherSideOf'
 ]
 
 # Turn the dictionary of card data entries into a Javascript JSON variable, and

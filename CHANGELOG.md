@@ -1,3 +1,7 @@
+## 1.14.1
+* Updated Friendship is Card Games up to "Pony Life, Week 6".
+* Updated the FICG parser to simplify how transformation is handled, and to add support for modal double-faced cards (MDFC).
+
 ## 1.14.0
 * Updated Friendship is Card Games up to "Friendship is Forever Card Games: Deep Tissue Memories".
 * Updated the FICG parser to use a data file for rules text input.

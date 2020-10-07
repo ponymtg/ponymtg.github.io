@@ -2590,3 +2590,4 @@ Whenever you tap a Forest for mana, add an additional W, U, B, or R.
 Whenever Voidfang Drifter deals damage to a creature or player, you may remove a counter from that creature or player.
 UR: Counter target spell or ability that targets Killer Flashbees.
 Killer Flashbees deals 2 damage to that spell or ability’s controller.
+Each player who controls three or more artifacts can’t cast artifact spells. The same is true for creatures, enchantments, and planeswalkers.

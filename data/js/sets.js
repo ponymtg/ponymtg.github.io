@@ -210,7 +210,31 @@ var SETS = {
     "Spicy Cards": {
         "path": "spicy-cards/cards",
         "url": "https://spicy-cards.tumblr.com/",
-        "notes": "A collection of pony cards found on a Tumblr dating back to 2014."
-    }
+        "notes": "A collection of pony cards found on a Tumblr dating back to 2014.",
+    },
+    '1st Edition': {
+        "path": "bbsartboutique/1st Edition/cards",
+        "creator": "bbsartboutique",
+        "url": "https://www.patreon.com/bbsartboutique",
+        "notes": "A collection of 20 convention badges designed in the style of MtG cards.",
+    },
+    'Flipside': {
+        "path": "bbsartboutique/Flipside/cards",
+        "creator": "bbsartboutique",
+        "url": "https://www.patreon.com/bbsartboutique",
+        "notes": "A collection of 20 convention badges designed in the style of MtG cards.",
+    },
+    'Gatejump': {
+        "path": "bbsartboutique/Gatejump/cards",
+        "creator": "bbsartboutique",
+        "url": "https://www.patreon.com/bbsartboutique",
+        "notes": "A collection of 25 convention badges designed in the style of MtG cards.",
+    },
+//    '2nd Edition': {
+//        "path": "bbsartboutique/2nd Edition/cards",
+//        "creator": "bbsartboutique",
+//        "url": "https://www.patreon.com/bbsartboutique",
+//        "notes": "A collection of 25 convention badges designed in the style of MtG cards.",
+//    },
 };
 

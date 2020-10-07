@@ -33,6 +33,7 @@ FACTIONS = {
 META = {}
 META['previous_card_data_entry'] = None
 META['previous_card_was_a_transformer'] = False
+META['previous_card_was_a_mdfc'] = False
 META['previous_card_was_reverse_side'] = False
 
 ################################################################################
@@ -236,6 +237,7 @@ def is_type_line(line):
     # - "Sorcery" must be preceded by "Tribal".
     # - "Sorcery" must be preceded by "Snow".
     # - The line must be exactly "Sorcery — Arcane".
+    # - The line must be exactly "Sorcery — Adventure".
     # - The line must also contain a double slash (//), which indicates that
     #   this is a split card for which one of the halves is a Sorcery.
     if 'Sorcery' in line:
@@ -244,6 +246,7 @@ def is_type_line(line):
             and 'Tribal Sorcery' not in line
             and 'Snow Sorcery' not in line
             and line != 'Sorcery — Arcane'
+            and line != 'Sorcery — Adventure'
             and '//' not in line
         ):
             return False
@@ -505,7 +508,7 @@ def split_type_line(type_line):
 
 # Given two card data entries, join them together into a single split card.
 def join_card_halves(first_card, second_card):
-    joined_card = {}
+    joined_card = {key:first_card[key] for key in first_card}
     joined_card['name'] = '{} // {}'.format(
         first_card['name'],
         second_card['name']
@@ -543,6 +546,15 @@ def join_card_halves(first_card, second_card):
         second_card['name'],
         second_card['text']
     )
+
+    flavor_texts = []
+    if 'flavorText' in first_card:
+        flavor_texts.append(f'{first_card["flavorText"]}')
+    if 'flavorText' in second_card:
+        flavor_texts.append(f'{second_card["flavorText"]}')
+
+    if len(flavor_texts) > 0:
+        joined_card['flavorText'] = '\n---\n'.join(flavor_texts)
 
     # Note that as per the convention established by Adventure cards, if the
     # first card has a P/T value, the joined card has that same P/T value.
@@ -699,32 +711,64 @@ def parse_individual_card_dump_into_card_data_entry(
             card_data_entry['cost2'] = name_and_cost_line_properties['cost2']
 
     # META CASE: If the card before this one made reference to "transforming"
-    # itself, then we can surmise that this card is the transformed version of
-    # it; that is, it is the reverse side of a double-sided card. Reverse sides
-    # of double-sided cards generally do not have a mana cost, which means we
-    # should take the entirety of the name-and-cost line to be the card's name.
+    # itself, it is possible that this card may be the transformed version of
+    # the previous card. If we can confirm that it is, we disregard this card's
+    # mana cost, as transformed cards don't have them.
     if META['previous_card_was_a_transformer']:
-        # There is one exception to this meta case: if we were able to identify
-        # the _previous_ card as being a reverse side (as well as one that
-        # wants to transform itself), then this card is _not_ the reverse side
-        # of that card. What's happened there is that the previous card is able
-        # to transform back to its original form, so any references it makes to
-        # transformation do not apply to this card.
-        if not META['previous_card_was_reverse_side']:
-            # Since this is the reverse side of a double-sided card, disregard
-            # the mana cost.
+        # To be sure that this card is the transformed version of the previous
+        # card, we need to examine the previous card to see if it transformed
+        # from something else. If it did, then this card can't be the
+        # transformed version of that card (since cards can only transform into
+        # one other card).
+        if 'transformsFrom' not in META['previous_card_data_entry']:
+            # Since we now know this is the transformed version of the previous
+            # card, we don't expect it to have a mana cost. We'll disregard
+            # whatever cost we already assumed and take the whole name-and-cost
+            # line as the name.
             card_data_entry['name'] = name_and_cost_line
             if 'cost' in card_data_entry:
                 del card_data_entry['cost']
-            # We can also record which card this actually transforms from,
-            # since we know what the previous card was.  We should be more
-            # specific than just the card name (as that is not guaranteed to be
-            # unique), but for now we'll just use the name.
+
+            # Record which card this transformed from.
             card_data_entry['transformsFrom'] = META['previous_card_data_entry']['name']
 
+            # Also record that this card is the other side of the previous card,
+            # since this is always true for transformers (they are always
+            # double-faced).
+    
+    # META CASE: If the card before this one contained an MDFC marker (`<`), it
+    # was a modal double-faced card (MDFC) and that will have been recorded in
+    # the meta dictionary. We can now use that information to determine if this
+    # card is the other side of that card.
+    if META['previous_card_was_a_mdfc']:
+        # If the other side of the previous card is already known, then this
+        # card can't be the other side.
+        if 'otherSideOf' not in META['previous_card_data_entry']:
+            card_data_entry['otherSideOf'] = META['previous_card_data_entry']['name']
+    
     # We can now use the supertype and subtype to make some further decisions
     # about where the text is on this card, and what the fields below the text
     # are.
+    if re.match('^< ', card_dump_lines[-1]):
+        # If the last line of the card begins with a `<` character, this
+        # indicates a modal double-faced card (MDFC). Modal double-faced cards
+        # were introduced in Zendikar Rising - they are similar to split cards
+        # in that they can be played as either of their two faces. I asked
+        # FanOfMostEverything if he could add an indicator for these cards,
+        # since otherwise I can't tell when two consecutive cards in the dump
+        # are two faces of the same card.
+        #
+        # Note that modal double-faced cards are not "transformers".
+        # Transformation is an ability. MDFCs do not transform; they simply are
+        # whatever side you choose to play them as.
+        #
+        # Anyway, to deal with MDFCs, we delete the last line if it begins with
+        # `<`, and record in the meta dictionary that the previous card is a
+        # MDFC.
+        card_dump_lines = card_dump_lines[:-1]
+        META['previous_card_was_a_mdfc'] = True
+    else:
+        META['previous_card_was_a_mdfc'] = False
     if 'Creature' in card_data_entry['supertype']:
         # If the card is a creature, we expect that the last line in the dump
         # will be the creature's power/toughness, and everything else will be
@@ -787,6 +831,8 @@ def parse_individual_card_dump_into_card_data_entry(
         # that everything after the first two lines is card text.
         text_lines = card_dump_lines[2:]
         
+    # Now that we have determined which part of the card is the text section, we
+    # can further split that into rules text and flavor text.
     rules_and_flavor_text = separate_rules_text_and_flavor_text(
         '\n'.join(text_lines),
         rules_text_patterns
@@ -824,10 +870,10 @@ def parse_individual_card_dump_into_card_data_entry(
     if first_word_of_card_name[-1] == ',':
         first_word_of_card_name = first_word_of_card_name[0:-1]
 
-    # Detect if the card is capable of transforming into another card (ie. it's
-    # double-sided. This is a bit difficult to do reliably, since there are lots
-    # of ways to express the notion of transformation. Just having the word
-    # "transform" in its rules text isn't enough to be sure.
+    # Detect if the card is capable of transforming into another card. This is a
+    # bit difficult to do reliably, since there are lots # of ways to express
+    #the notion of transformation. Just having the word "transform" in its rules
+    # text isn't enough to be sure.
     if (
         'text' in card_data_entry
         and (
@@ -841,29 +887,11 @@ def parse_individual_card_dump_into_card_data_entry(
             )
         )
     ):
-        if META['previous_card_was_a_transformer']:
-            if not META['previous_card_was_reverse_side']:
-                # If this card is a transformer, and the previous card was
-                # _also_ a transformer, _and_ the previous card wasn't a
-                # reverse side, then we can safely say that this card is the
-                # reverse side of the previous card.  The next card needs to
-                # know that, because otherwise it will think that _it_ is the
-                # reverse side of _this_ card (which isn't possible; a card
-                # only has 2 sides).
-                META['previous_card_was_reverse_side'] = True
-            else:
-                # If this card is a transformer, and the previous card was also
-                # a transformer, but we know that the previous card was the
-                # reverse side of the card before it, then we can safely say
-                # that this card is _not_ a reverse side (it's the front side).
-                # The next card needs to know that.
-                META['previous_card_was_reverse_side'] = False
         META['previous_card_was_a_transformer'] = True
     else:
         # If this card didn't make any reference to transformation, then it's
         # not a transformer, and it's not the reverse side of anything.
         META['previous_card_was_a_transformer'] = False
-        META['previous_card_was_reverse_side'] = False
 
     return card_data_entry
 
@@ -973,6 +1001,17 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump, rules_text_patterns):
                 i -= 1
         i += 1
         
+    # Fifth pass: If we identified that this card is the other side of a modal
+    # double-faced card, we can mark the reciprocal relation on the card's other
+    # side.
+    otherSideDict = {}
+    for card_data_entry in card_data_entries:
+        if 'otherSideOf' in card_data_entry:
+            otherSideDict[card_data_entry['otherSideOf']] = card_data_entry['name']
+    for card_data_entry in card_data_entries:
+        if card_data_entry['name'] in otherSideDict:
+            card_data_entry['otherSideOf'] = otherSideDict[card_data_entry['name']]
+
     return card_data_entries
 
 # Given a list of card data entries (dicts), return a string containing a

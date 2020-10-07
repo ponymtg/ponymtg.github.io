@@ -45,7 +45,7 @@ can only attack alone
 can't attack (alone|unless)
 can't be (activated|blocked|countered|equipped|exiled|targeted|tapped|the target of|triggered)
 can't block( creatures| this turn| unless|\.$)
-can't cast( creature)? spells
+can't cast( creature| artifact)? spells
 can't have or gain
 (can't|would) (gain|lose) life
 card to the battlefield

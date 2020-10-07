@@ -27,6 +27,7 @@ class test_parse_ficg_functions(unittest.TestCase):
         self.assertTrue(is_type_line('Sorcery // Instant'))
         self.assertTrue(is_type_line('Instant//Instant'))
         self.assertTrue(is_type_line('Sorcery'))
+        self.assertTrue(is_type_line('Sorcery — Adventure'))
         self.assertTrue(is_type_line('Legendary Sorcery'))
         self.assertTrue(is_type_line('Snow Sorcery'))
         self.assertTrue(is_type_line('Tribal Sorcery — Hydra'))
@@ -92,6 +93,70 @@ class test_parse_ficg_functions(unittest.TestCase):
         self.assertFalse(is_type_line('Planeswalker'))
         self.assertFalse(is_type_line('Example Phenomenon'))
         self.assertFalse(is_type_line('Phenomenon Example'))
+
+    def test_parse_individual_card_dump_into_card_data_entry(self):
+        with open('data/rules-text-patterns.txt') as rules_text_patterns_file:
+            rules_text_patterns = [
+                line.strip('\n') for line in rules_text_patterns_file
+            ]
+
+        dump_side_a = """Frosted Familiar 4BB
+Creature — Horror
+Flash
+When Frosted Familiar enters the battlefield, create a Food token for each creature that died this turn. (They’re artifacts with “T, Sacrifice this artifact: You gain 3 life.”)
+“I miss my brother.”
+—Pinkie Pie, Bearer of Laughter
+4/4
+< Land T: Add B."""
+
+        dump_side_b = """Frosted Cottage
+Land
+Frosted Cottage enters the battlefield tapped.
+T: Add B.
+“I told him those peppermint accents spelled trouble, but did he listen to me?”
+—Pinkie Pie, Bearer of Laughter
+< Horror 4BB"""
+
+        card_side_a = parse_individual_card_dump_into_card_data_entry(
+            dump_side_a,
+            rules_text_patterns
+        )
+
+        self.assertIn('name', card_side_a)
+        self.assertIn('cost', card_side_a)
+        self.assertIn('supertype', card_side_a)
+        self.assertIn('subtype', card_side_a)
+        self.assertIn('text', card_side_a)
+        self.assertIn('flavorText', card_side_a)
+        self.assertIn('pt', card_side_a)
+
+        self.assertEqual('Frosted Familiar', card_side_a['name'])
+        self.assertEqual('4BB', card_side_a['cost'])
+        self.assertEqual('Creature', card_side_a['supertype'])
+        self.assertEqual('Horror', card_side_a['subtype'])
+        self.assertEqual('Flash\n\nWhen Frosted Familiar enters the battlefield, create a Food token for each creature that died this turn. (They’re artifacts with "T, Sacrifice this artifact: You gain 3 life.")', card_side_a['text'])
+        self.assertEqual('"I miss my brother."\n—Pinkie Pie, Bearer of Laughter', card_side_a['flavorText'])
+        self.assertEqual('4/4', card_side_a['pt'])
+
+        card_side_b = parse_individual_card_dump_into_card_data_entry(
+            dump_side_b,
+            rules_text_patterns
+        )
+
+        self.assertIn('name', card_side_b)
+        self.assertNotIn('cost', card_side_b)
+        self.assertIn('supertype', card_side_b)
+        self.assertNotIn('subtype', card_side_b)
+        self.assertIn('text', card_side_b)
+        self.assertIn('flavorText', card_side_b)
+        self.assertNotIn('pt', card_side_b)
+        self.assertIn('otherSideOf', card_side_b)
+
+        self.assertEqual('Frosted Cottage', card_side_b['name'])
+        self.assertEqual('Land', card_side_b['supertype'])
+        self.assertEqual('Frosted Cottage enters the battlefield tapped.\n\nT: Add B.', card_side_b['text'])
+        self.assertEqual('"I told him those peppermint accents spelled trouble, but did he listen to me?"\n—Pinkie Pie, Bearer of Laughter', card_side_b['flavorText'])
+        self.assertEqual('Frosted Familiar', card_side_b['otherSideOf'])
 
     def test_separate_rules_text_and_flavor_text(self):
         with open('data/rules-text-patterns.txt') as rules_text_patterns_file:

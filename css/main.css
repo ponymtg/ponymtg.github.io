@@ -90,7 +90,7 @@ body {
  */
 a.logo-small {
     display: block;
-    background-image: url(../images/ponymtg_logo.png);
+    background-image: url(../images/ponymtg-logo.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
