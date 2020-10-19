@@ -513,6 +513,8 @@ var global = {
 /**
  * Initiate a search and display the results. This function is called when you
  * press Enter in the search field, or click the "Search" button.
+ *
+ * @param {boolean} isExactSearch
  */
 function initiateSearch(isExactSearch) {
     var searchString = global.elements.searchField.value;
@@ -528,7 +530,9 @@ function initiateSearch(isExactSearch) {
     var searchRegex = new RegExp(searchString, 'i');
     global.search.results = getSearchResults(searchRegex, CARDS);
     global.pagination.currentPage = 0;
-    global.pagination.numberOfPages = Math.ceil(global.search.results.length/global.pagination.cardsPerPage);
+    global.pagination.numberOfPages = Math.ceil(
+        global.search.results.length/global.pagination.cardsPerPage
+    );
     displayResults(global.search.results);
 }
 
@@ -985,7 +989,8 @@ function getCardsFilteredByManaType(cards, manaTypes, manaTypeSearchType) {
             // (this does not contain blue), "4UU" (this does not contain
             // white), "5WUB" (this contains white and blue, but also black).
             case 'allExclusive':
-                if (cardContainsOnlySelectedManaTypes && cardContainsAllSelectedManaTypes) {
+                if (cardContainsOnlySelectedManaTypes
+                    && cardContainsAllSelectedManaTypes) {
                     cardSatisfiesFilterByManaTypeSearch = true;
                 }
                 break;
@@ -1095,7 +1100,8 @@ function displayResults(cards) {
     //global.elements.tagline.parentNode.removeChild(global.elements.tagline);
 
     // Display the new results.
-    // Before the results table, add a quick message to say how many results were found.
+    // Before the results table, add a quick message to say how many results
+    // were found.
     var foundCardsMessageElement = document.createElement('span');
     foundCardsMessageElement.id = 'foundCardsMessagePanel';
     foundCardsMessageElement.style.display = 'inline-block';
@@ -1119,8 +1125,10 @@ function displayResults(cards) {
     // application is keeping track of which page the user is on, so we just
     // need to figure out what subset of the results should be on the current
     // page, generate a table for those only, and display it.
-    var indexOfFirstCardOnPage = global.pagination.currentPage * global.pagination.cardsPerPage;
-    var indexOfLastCardOnPage = indexOfFirstCardOnPage + global.pagination.cardsPerPage;
+    var indexOfFirstCardOnPage = global.pagination.currentPage
+        * global.pagination.cardsPerPage;
+    var indexOfLastCardOnPage = indexOfFirstCardOnPage
+        + global.pagination.cardsPerPage;
     var currentPageOfCards = cards.slice(
         indexOfFirstCardOnPage,
         indexOfLastCardOnPage
@@ -1444,16 +1452,19 @@ function getCardMonocolor(card) {
 }
 
 /**
- * Examine the choices made by the user in the "Search by" section of the advanced options, and return an array of card
- * property names.
+ * Examine the choices made by the user in the "Search by" section of the
+ * advanced options, and return an array of card property names.
+ *
+ * @return {string[]}
  */
 function getSearchByChoices() {
     var choices = [];
 
     for (var i=0; i < global.lists.searchableCardProperties.length; i++) {
         var cardPropertyName = global.lists.searchableCardProperties[i]; 
-        var checkboxId = global.advancedSearchIdPrefix+'_searchByCardProperty_'+cardPropertyName;
-        var checkbox = document.querySelector('#'+checkboxId);
+        var checkboxId = global.advancedSearchIdPrefix
+            + '_searchByCardProperty_' + cardPropertyName;
+        var checkbox = document.querySelector('#' + checkboxId);
         if (checkbox.checked) {
             choices.push(cardPropertyName);
         }
@@ -2163,9 +2174,13 @@ function generateCardTableElement(cards, propertiesToDisplay) {
 }
 
 /**
- * Return the (relative) path to the directory containing the specified card. For cards that have a defined `set`, this
- * should be the set path defined in the global config. For cards that don't have a set, this is the miscellany path,
- * also defined in the global config.
+ * Return the (relative) path to the directory containing the specified card.
+ * For cards that have a defined `set`, this should be the set path defined in
+ * the global config. For cards that don't have a set, this is the miscellany
+ * path, also defined in the global config.
+ *
+ * @param {Object} card
+ * @return {string}
  */
 function getCardImageDirPath(card) {
     if (card.set !== undefined) {
@@ -2176,16 +2191,22 @@ function getCardImageDirPath(card) {
 }
 
 /**
- * Quick function to construct the (relative) path to a card's image, if needed. This assumes that the card actually has
- *an `image` property defined.
+ * Quick function to construct the (relative) path to a card's image, if
+ * needed. This assumes that the card actually has an `image` property defined.
+ *
+ * @param {Object} card
+ * @return {string}
  */
 function getCardImageUrl(card) {
     return getCardImageDirPath(card) + '/' +card.image;
 }
 
 /**
- * Reads the `printSheetCards` local storage variable and parses it into an object. If the variable doesn't exist in
- * local storage (perhaps the user hasn't started a print sheet yet, for example), an empty object is returned.
+ * Reads the `printSheetCards` local storage variable and parses it into an
+ * object. If the variable doesn't exist in local storage (perhaps the user
+ * hasn't started a print sheet yet, for example), an empty object is returned.
+ *
+ * @return {Object}
  */
 function getPrintSheetCards() {
     var printSheetCardsString = localStorage.getItem('printSheetCards');
@@ -2201,15 +2222,19 @@ function clearPrintSheet() {
 }
 
 /**
- * Stringifies `object` and stores it in the local storage variable `printSheetCards`. `object` should be an object
- * containing card hashes associated to quantities; that is, it stores how many of each card should be on the print
- * sheet.
+ * Stringifies `object` and stores it in the local storage variable
+ * `printSheetCards`. `object` should be an object containing card hashes
+ * associated to quantities; that is, it stores how many of each card should be
+ * on the print sheet.
+ *
+ * @param {Object} printSheetCardsObject
  */
 function putPrintSheetCards(printSheetCardsObject) {
     localStorage.setItem('printSheetCards', JSON.stringify(printSheetCardsObject));
 }
 
 /**
+ * @param {string} hash
  */
 function addCardToPrintSheet(hash) {
     var printSheetCardsObject = getPrintSheetCards();
@@ -2222,6 +2247,7 @@ function addCardToPrintSheet(hash) {
 }
 
 /**
+ * @param {string} hash
  */
 function removeCardFromPrintSheet(hash) {
     var printSheetCardsObject = getPrintSheetCards();
@@ -2235,6 +2261,9 @@ function removeCardFromPrintSheet(hash) {
     putPrintSheetCards(printSheetCardsObject);
 }
 
+/**
+ * @param {string} hash
+ */
 function removeAllCardsWithHashFromPrintSheet(hash) {
     var printSheetCardsObject = getPrintSheetCards();
     if (printSheetCardsObject[hash] !== undefined) {
@@ -2244,6 +2273,9 @@ function removeAllCardsWithHashFromPrintSheet(hash) {
     putPrintSheetCards(printSheetCardsObject);
 }
 
+/**
+ * @return {number}
+ */
 function getNumberOfCardsInPrintSheet() {
     var printSheetCards = getPrintSheetCards();
     var printSheetCardHashes = Object.keys(printSheetCards);
@@ -2255,24 +2287,39 @@ function getNumberOfCardsInPrintSheet() {
     }
     return numberOfCardsInPrintSheet;
 }
+
 /**
- * Using the global standard card dimensions defined in the config, determine the aspect ratio of a standard Magic card,
- * and use it to calculate the height of a card of width `cardWidth`
+ * Using the global standard card dimensions defined in the config, determine
+ * the aspect ratio of a standard Magic card, and use it to calculate the
+ * height of a card of width `cardWidth`.
+ *
+ * @param {number} cardWidth
+ * @return {number}
  */
 function getCardHeightFromCardWidth(cardWidth) {
-    // Use the global standard card dimensions to determine the card's aspect ratio, and thus the height of the proxy.
-    var cardAspectRatio = global.dimensions.standardCard.px.height/global.dimensions.standardCard.px.width;
-    return cardWidth*cardAspectRatio;
-
+    // Use the global standard card dimensions to determine the card's aspect
+    // ratio, and thus the height of the proxy.
+    var cardAspectRatio = global.dimensions.standardCard.px.height
+        / global.dimensions.standardCard.px.width;
+    return cardWidth * cardAspectRatio;
 }
+
 /**
- * Using the properties listed in `cardProperties`, generate a "proxy card": a DOM object representing a Magic card. The
- * resulting element will be `cardWidth` pixels in width.
+ * Using the properties listed in `cardProperties`, generate a "proxy card": a
+ * DOM object representing a Magic card. The resulting element will be
+ * `cardWidth` pixels in width.
  *
- * `textGenerosity` is an optional parameter which is used to decide how "generous" to make the font size estimation for
- * the card text. It takes a value between 0 and 1. This value is intended to represent the proportion of vertical space
- * on the card that we are allowing for the card text. If not given, it defaults to the value set in
+ * `textGenerosity` is an optional parameter which is used to decide how
+ * "generous" to make the font size estimation for the card text. It takes a
+ * value between 0 and 1. This value is intended to represent the proportion of
+ * vertical space on the card that we are allowing for the card text. If not
+ * given, it defaults to the value set in
  * `global.values.proxyTextGenerosity.display`.
+ *
+ * @param {Object} cardProperties
+ * @param {number} cardWidth
+ * @param {number} textGenerosity
+ * @return {Element}
  */
 function generateProxyElement(
     cardProperties,
@@ -2290,28 +2337,35 @@ function generateProxyElement(
     // Determine the card's height.
     var cardHeight = getCardHeightFromCardWidth(cardWidth);
 
-    // Although we now have the width and height of the proxy, (ie. the desired dimensions of the fully-assembled,
-    // displayed proxy card), this is not the width and height of the proxy _element_ which we're about to create (ie.
-    // the container of the card text, details, etc). That will be slightly smaller. The reason for this is that we have
-    // to add a border, padding, etc., and in HTML, these are not considered part of a div's width and height.
-    // Therefore, we have to account for those separately, and ensure that the total combined dimensions of all those
-    // things adds up to the desired card width and height.
+    // Although we now have the width and height of the proxy, (ie. the desired
+    // dimensions of the fully-assembled, displayed proxy card), this is not
+    // the width and height of the proxy _element_ which we're about to create
+    // (ie.  the container of the card text, details, etc). That will be
+    // slightly smaller. The reason for this is that we have to add a border,
+    // padding, etc., and in HTML, these are not considered part of a div's
+    // width and height.  Therefore, we have to account for those separately,
+    // and ensure that the total combined dimensions of all those things adds
+    // up to the desired card width and height.
 
-    // We'll account for the border first. Borders on Magic cards are usually black, and of uniform thickness. We know
-    // the border thickness of the global standard card, so we can work out how big the border needs to be for our
-    // proxy.
+    // We'll account for the border first. Borders on Magic cards are usually
+    // black, and of uniform thickness. We know the border thickness of the
+    // global standard card, so we can work out how big the border needs to be
+    // for our proxy.
 
     var proxyBorderThickness = calculateCardBorderThickness(cardWidth);
 
-    // We also need to take padding into account. This is simply a small gap between the contents of the proxy container
-    // (ie. the card name, text, etc.) and the border. There is no Magic standard for this; we're just adding it to make
-    // the proxy look a little better. The padding is uniform thickness all the way round.
+    // We also need to take padding into account. This is simply a small gap
+    // between the contents of the proxy container (ie. the card name, text,
+    // etc.) and the border. There is no Magic standard for this; we're just
+    // adding it to make the proxy look a little better. The padding is uniform
+    // thickness all the way round.
 
     var proxyPadding = global.dimensions.proxy.padding;
 
-    // Now we can determine the width and height of the proxy element, by subtracting the border and padding from the
-    // desired card width and height. We have to subtract two lots of border and padding, as the card is bordered and
-    // padded on all four sides.
+    // Now we can determine the width and height of the proxy element, by
+    // subtracting the border and padding from the desired card width and
+    // height. We have to subtract two lots of border and padding, as the card
+    // is bordered and padded on all four sides.
 
     var proxyElementWidth = (cardWidth - (2 * proxyBorderThickness)) - (2 * proxyPadding);
     var proxyElementHeight = (cardHeight - (2 * proxyBorderThickness)) - (2 * proxyPadding);
@@ -2321,37 +2375,52 @@ function generateProxyElement(
     proxyElement.style.borderWidth = proxyBorderThickness+'px';
     proxyElement.style.padding = proxyPadding+'px';
 
-    // Determine the proxy's color scheme. Generally, this is determined by its mana cost.
+    // Determine the proxy's color scheme. Generally, this is determined by its
+    // mana cost.
     var proxyColorScheme = undefined;
-    if (cardProperties.colorIndicator !== undefined) {
-        // If the card has a color indicator, then the color indicator is the authoritative determinant of the card's
-        // color identity, overriding all other sources of color such as mana cost.
 
-        // In card data, color indicators are represented by a string of mana symbols (ie. W, U, B, R, G) enclosed in
-        // parentheses. Although a color indicator is not the same thing as a mana cost, we can treat it as such for the
-        // purposes of determining a color scheme.
+    if (cardProperties.colorIndicator !== undefined) {
+        // If the card has a color indicator, then the color indicator is the
+        // authoritative determinant of the card's color identity, overriding
+        // all other sources of color such as mana cost.
+
+        // In card data, color indicators are represented by a string of mana
+        // symbols (ie. W, U, B, R, G) enclosed in parentheses. Although a
+        // color indicator is not the same thing as a mana cost, we can treat
+        // it as such for the purposes of determining a color scheme.
 
         // Remove any parentheses from the color indicator.
-        var colorIndicatorManaSymbols = cardProperties.colorIndicator.replace(/\(/g, '').replace(/\)/g, '');
+        var colorIndicatorManaSymbols = cardProperties.colorIndicator
+            .replace(/\(/g, '')
+            .replace(/\)/g, '');
+
         proxyColorScheme = getCardColorSchemeFromManaCost(colorIndicatorManaSymbols);
-    }
-    else {
-        // If there's no color indicator (which is the norm), derive a color scheme from the card's mana cost.
+    } else {
+        // If there's no color indicator (which is the norm), derive a color
+        // scheme from the card's mana cost.
         proxyColorScheme = getCardColorSchemeFromManaCost(cardProperties.cost);
     }
 
-    // Special case: if this card is a token, we use slightly different mappings to get the color scheme (which favors
-    // hybrid color schemes if it's a two-colored card).
+    // Special case: if this card is a token, we use slightly different
+    // mappings to get the color scheme (which favors hybrid color schemes if
+    // it's a two-colored card).
     if (cardProperties.cardType === 'token') {
-        if (cardProperties.colorIndicator !== undefined && global.mappings.colorIndicatorsToCardColorSchemes[cardProperties.colorIndicator] !== undefined) {
-            proxyColorScheme = global.mappings.colorIndicatorsToCardColorSchemes[cardProperties.colorIndicator];
+        if (cardProperties.colorIndicator !== undefined
+            && global.mappings.colorIndicatorsToCardColorSchemes[
+                cardProperties.colorIndicator
+            ] !== undefined) {
+            proxyColorScheme = global.mappings.colorIndicatorsToCardColorSchemes[
+                cardProperties.colorIndicator
+            ];
         }
     }
         
-    // Apply an appropriate color scheme class to the proxy element, in accordance with its color scheme. (This will
-    // change the proxy's background color).
+    // Apply an appropriate color scheme class to the proxy element, in
+    // accordance with its color scheme. (This will change the proxy's
+    // background color).
     if (proxyColorScheme !== undefined) {
-        proxyElement.className += ' '+global.mappings.cardColorSchemesToCssClasses[proxyColorScheme];
+        proxyElement.className += ' '
+            + global.mappings.cardColorSchemesToCssClasses[proxyColorScheme];
     }
     
     // If the card is marked as being a foil card, give the proxy a `foil`
@@ -2375,8 +2444,8 @@ function generateProxyElement(
     }
 
     if (cardProperties.supertype2 !== undefined) {
-        // If this card has a second supertype, then we'll concatenate it (and the subtype, if it has one) to the type
-        // line HTML.
+        // If this card has a second supertype, then we'll concatenate it (and
+        // the subtype, if it has one) to the type line HTML.
         typeLineHtml += ' // ';
         typeLineHtml += cardProperties.supertype2;
 
@@ -2393,25 +2462,33 @@ function generateProxyElement(
     var cardText = cardProperties.text;
 
     if (cardText) { 
-        // If we've got flavor text as well, add it in, italicizing it appropriately.
+        // If we've got flavor text as well, add it in, italicizing it
+        // appropriately.
         if (cardProperties.flavorText !== undefined) {
             cardText += '\n\n<i>' + cardProperties.flavorText + '</i>';
         }
 
-        // Since this is HTML, we need to replace line break characters with HTML breaks.
+        // Since this is HTML, we need to replace line break characters with
+        // HTML breaks.
         cardText = cardText.replace(/\n/g, '<br />');
 
-        // Process the text to apply Magic-like styling to any recognized Magic card markup (eg. "T" for the tap symbol).
+        // Process the text to apply Magic-like styling to any recognized Magic
+        // card markup (eg. "T" for the tap symbol).
         cardText = applyMagicStylingToText(cardText);
 
         proxyTextElement.className = 'card-text';
-        // If this is a planeswalker card, add a secondary style to the card text box to make it look more interesting.
+        // If this is a planeswalker card, add a secondary style to the card
+        // text box to make it look more interesting.
         if (cardProperties.supertype.toLowerCase().indexOf('planeswalker') !== -1) {
             proxyTextElement.className += ' card-text-planeswalker';
         }
         proxyTextElement.innerHTML = cardText;
 
-        proxyTextElement.style.fontSize = estimateProxyCardTextFontSize(cardText, cardWidth, textGenerosity)+'px';
+        proxyTextElement.style.fontSize = estimateProxyCardTextFontSize(
+            cardText,
+            cardWidth,
+            textGenerosity
+        ) + 'px';
     }
 
     proxyTypeLineElement.className = 'card-type-line';
@@ -2419,13 +2496,15 @@ function generateProxyElement(
 
     if (cardProperties.cost !== undefined) {
         if (cardProperties.cost2 !== undefined) {
-            // If the cost has two costs, we assume this is a split card. We render these a little differently.
-            // First, split the name up into two names.
+            // If the cost has two costs, we assume this is a split card. We
+            // render these a little differently.  First, split the name up
+            // into two names.
             var cardNames = cardProperties.name.split('//')
             cardNames[0] = cardNames[0].trim()
             cardNames[1] = cardNames[1].trim()
 
-            // Instead of just one name and one cost on the name-and-cost line, it'll be like this:
+            // Instead of just one name and one cost on the name-and-cost line,
+            // it'll be like this:
             //
             //     name cost // name2 cost2
             proxyNameElement.innerHTML = cardNames[0]; 
@@ -2453,7 +2532,8 @@ function generateProxyElement(
             
         }
         else { 
-            // This is not a split card, so just add the name and cost as normal.
+            // This is not a split card, so just add the name and cost as
+            // normal.
             proxyNameElement.innerHTML = cardProperties.name;
             proxyNameAndCostLineElement.appendChild(proxyNameElement);
             proxyCostElement.innerHTML = applyManaStyling(cardProperties.cost);
@@ -2467,26 +2547,30 @@ function generateProxyElement(
     }
     
     if (['token', 'emblem'].indexOf(cardProperties.cardType) !== -1) {
-        // If the card is a token or emblem, we use a more fancy-looking style for the card name.
+        // If the card is a token or emblem, we use a more fancy-looking style
+        // for the card name.
         proxyNameAndCostLineElement.className = 'card-name-token';
         proxyNameElement.className = '';
     }
 
     if (cardProperties.cardType === 'emblem') {
-        // For emblems, even if they've been given a name, we just display "Emblem" as the card name.
+        // For emblems, even if they've been given a name, we just display
+        // "Emblem" as the card name.
         proxyNameElement.innerHTML = cardProperties.supertype;
     }
 
-    // Add a `<div style="clear:both">` inside the name-and-cost line, so that it expands to fit its contents even when
-    // those contents are floated. I hate this fix, but that's just how things go with CSS floats.
+    // Add a `<div style="clear:both">` inside the name-and-cost line, so that
+    // it expands to fit its contents even when those contents are floated. I
+    // hate this fix, but that's just how things go with CSS floats.
     var clearDiv = document.createElement('div');
     clearDiv.style.clear = "both";
 
     proxyNameAndCostLineElement.appendChild(clearDiv);
 
-    // Assemble all the card parts into the main card container. We use a simple table layout to ensure the proportions
-    // of the card parts stay roughly constant. Note that this table layout is dependent on the Bootstrap CSS; it
-    // doesn't look quite right without it.
+    // Assemble all the card parts into the main card container. We use a
+    // simple table layout to ensure the proportions of the card parts stay
+    // roughly constant. Note that this table layout is dependent on the
+    // Bootstrap CSS; it doesn't look quite right without it.
 
     var proxyTable = document.createElement('table');
     var proxyNameAndCostRow = document.createElement('tr');
@@ -2544,20 +2628,29 @@ function generateProxyElement(
 }
 
 /**
- * Idea borrowed from StackOverflow. In HTML, there is no direct way to determine whether text is overflowing its
- * container or not, but there is a really clever trick we can use.
+ * Idea borrowed from StackOverflow. In HTML, there is no direct way to
+ * determine whether text is overflowing its container or not, but there is a
+ * really clever trick we can use.
  *
- * The trick works by creating an invisible dummy container with similar properties to the one we're interested in, but
- * we make it so that it will expand with the more text we put into it.
+ * The trick works by creating an invisible dummy container with similar
+ * properties to the one we're interested in, but we make it so that it will
+ * expand with the more text we put into it.
  *
- * Then, we pick a really small font size, put our text into the container with that font size, and measure the
- * container's size. If the container is still at an acceptable size, we try again with a larger font size, and we keep
- * trying until the container goes beyond our desired size. At that point, we will know which font size is just right
- * for the container.
+ * Then, we pick a really small font size, put our text into the container with
+ * that font size, and measure the container's size. If the container is still
+ * at an acceptable size, we try again with a larger font size, and we keep
+ * trying until the container goes beyond our desired size. At that point, we
+ * will know which font size is just right for the container.
  *
- * `generosity` is the proportion of the card's height that we expect the card text box to take up. For example, a
- * generosity value of 0.5 means that we expect the card text to take up half of the card's height (in most cases, a
+ * `generosity` is the proportion of the card's height that we expect the card
+ * text box to take up. For example, a generosity value of 0.5 means that we
+ * expect the card text to take up half of the card's height (in most cases, a
  * pessimistic estimate for these proxies, but not always).
+ *
+ * @param {string} html
+ * @param {number} cardWidth
+ * @param {number} generosity
+ * @return {number}
  */
 function estimateProxyCardTextFontSize(html, cardWidth, generosity) {
     var dummyElement = document.createElement('div');
@@ -2574,15 +2667,21 @@ function estimateProxyCardTextFontSize(html, cardWidth, generosity) {
 
     // Estimate the dimensions of the dummy element.
 
-    // It is very important that we try to make the dummy element's width as close as possible to the usable width of
-    // the card text box. Height doesn't matter so much because we are "choosing" how much height we allow for the text,
-    // but the width needs to be precise because it affects how the text wraps (and therefore, how many lines the text
-    // will take up). Even a few pixels of difference can throw off the estimation here.
+    // It is very important that we try to make the dummy element's width as
+    // close as possible to the usable width of the card text box. Height
+    // doesn't matter so much because we are "choosing" how much height we
+    // allow for the text, but the width needs to be precise because it affects
+    // how the text wraps (and therefore, how many lines the text will take
+    // up). Even a few pixels of difference can throw off the estimation here.
 
-    // Account for the padding on the card text box. (This is usually defined in the CSS for the `card-text` class;
-    // since there's no easy way to get that information, we're hardcoding it here).
+    // Account for the padding on the card text box. (This is usually defined
+    // in the CSS for the `card-text` class; since there's no easy way to get
+    // that information, we're hardcoding it here).
     var textBoxPadding = 8;
-    var dummyElementWidth = cardWidth - (2 * calculateCardBorderThickness(cardWidth)) - (2 * global.dimensions.proxy.padding) - (2 * textBoxPadding);
+    var dummyElementWidth = cardWidth
+        - (2 * calculateCardBorderThickness(cardWidth))
+        - (2 * global.dimensions.proxy.padding)
+        - (2 * textBoxPadding);
     var dummyElementHeight = cardHeight * generosity;
     dummyElement.style.width = dummyElementWidth+'px';
     dummyElement.innerHTML = html;
@@ -2601,17 +2700,24 @@ function estimateProxyCardTextFontSize(html, cardWidth, generosity) {
     }
 
     document.querySelector(attachmentSelector).removeChild(dummyElement);
+
     return bestFontSize;
 }
 
+/**
+ * @param {number} cardWidth
+ * @return {number}
+ */
 function calculateCardBorderThickness(cardWidth) {
-    var relativeBorderThickness = global.dimensions.standardCard.px.borderThickness/global.dimensions.standardCard.px.width;
+    var relativeBorderThickness = global.dimensions.standardCard.px.borderThickness / global.dimensions.standardCard.px.width;
     var proxyBorderThickness = cardWidth * relativeBorderThickness;
     return proxyBorderThickness;
 }
 
 /**
  * Shortcut function to clear out a container element.
+ *
+ * @param {Element} element
  */
 function emptyElement(element) {
     while (element.firstChild) {
@@ -2945,26 +3051,35 @@ function getCardColorSchemeFromManaCost(cost) {
 }
 
 /**
- * Determines the "mass" of html `html`. By "mass", we mean "how much of it there is", according to a custom metric.
- * This is relevant for proxy cards; the amount of text that can appear on them is variable, and if there's too much,
- * the text will spill off the bottom of the card. We can't resize the card to fix the text, because all cards need to
- * be the same size. Therefore, we'll use the mass of the html to figure out if there's too much of it, and shrink the
- * text if we fear that it would otherwise be too much for the card.
+ * Determines the "mass" of html `html`. By "mass", we mean "how much of it
+ * there is", according to a custom metric.
+ *
+ * This is relevant for proxy cards; the amount of text that can appear on them
+ * is variable, and if there's too much, the text will spill off the bottom of
+ * the card. We can't resize the card to fix the text, because all cards need
+ * to be the same size. Therefore, we'll use the mass of the html to figure out
+ * if there's too much of it, and shrink the text if we fear that it would
+ * otherwise be too much for the card.
+ *
+ * @param {string} html
+ * @return {number}
  */
 function calculateHtmlMass(html) {
     // Count the number of characters in the html.
     var numberOfCharacters = html.length;
-    // Count the number of newlines. Nice trick for this: split the string on newlines, and count the number of pieces
-    // that result.
+    // Count the number of newlines. Nice trick for this: split the string on
+    // newlines, and count the number of pieces that result.
 
     var numberOfNewlines = html.split('<br />').length - 1;
 
     // Might as well be precise about what we're counting.
-    var numberOfCharactersNotIncludingNewlines = numberOfCharacters - numberOfNewlines;
+    var numberOfCharactersNotIncludingNewlines = numberOfCharacters
+        - numberOfNewlines;
 
-    // Add up the combined masses of the characters and newlines. (Newlines have greater mass. The masses are defined in
-    // the global configuration).
-    return (numberOfCharactersNotIncludingNewlines*global.values.textMasses.character) + (numberOfNewlines*global.values.textMasses.newline);
+    // Add up the combined masses of the characters and newlines. (Newlines
+    // have greater mass. The masses are defined in the global configuration).
+    return (numberOfCharactersNotIncludingNewlines * global.values.textMasses.character)
+        + (numberOfNewlines * global.values.textMasses.newline);
 }
 
 /**
@@ -2981,14 +3096,12 @@ function generateSetCode(setName) {
         setCode = setNameWords[0].substring(0, 1)
             + setNameWords[1].substring(0, 1)
             + setNameWords[2].substring(0, 1); 
-    }
-    else if (setNameWords.length === 2) {
+    } else if (setNameWords.length === 2) {
         // Otherwise, if the set name has two words, take the first letter of
         // the first word, and the first two letters of the second word.
         setCode = setNameWords[0].substring(0, 1)
             + setNameWords[1].substring(0, 2);
-    }
-    else {
+    } else {
         // Otherwise, if it's just one word, take the first 3 letters of that
         // word.
         setCode = setNameWords[0].substring(0, 3);
@@ -3132,9 +3245,11 @@ function getUniqueCardNames(sets) {
                     // card's name is unique.
                     var incrementedName = uniqueCardName;
                     var trailingNumber = 1;
-                    while (uniqueCardNamesBySet[card.set].indexOf(incrementedName) !== -1) {
+                    while (uniqueCardNamesBySet[card.set].indexOf(incrementedName)
+                        !== -1) {
                         trailingNumber++;
-                        incrementedName = uniqueCardName + ' ('+trailingNumber+')';
+                        incrementedName = uniqueCardName + ' (' + trailingNumber
+                            + ')';
                     }
                     uniqueCardName = incrementedName;
                 }
@@ -3151,6 +3266,10 @@ function getUniqueCardNames(sets) {
     return uniqueCardNamesBySet;
 }
 
+/**
+ * @param {string} text
+ * @return {Element}
+ */
 function generateTipPanel(text) {
     var tipPanel = document.createElement('div');
     tipPanel.className = 'panel panel-info';
@@ -3177,6 +3296,9 @@ function generateTipPanel(text) {
 
 /**
  * Return a random integer from 0 to `max`-1.
+ *
+ * @param {number} max
+ * @return {number}
  */
 function rnd(max) {
     return Math.floor(Math.random() * max);
@@ -3184,6 +3306,9 @@ function rnd(max) {
 
 /**
  * Given a string `string`, return its reverse.
+ *
+ * @param {string} string
+ * @return {string}
  */
 function reverseString(string) {
     var reversedString = '';
@@ -3195,6 +3320,9 @@ function reverseString(string) {
 
 /**
  * Escape any regex metacharacters in `string`.
+ *
+ * @param {string} string
+ * @return {string}
  */
 function escapeRegex(string) {
     var escapedString = string;
@@ -3208,11 +3336,18 @@ function escapeRegex(string) {
     return escapedString;
 }
 
+/**
+ * @return {Object}
+ */
 function getUrlParameters() {
     var parametersString = window.location.search.substr(1);
     return transformToAssociativeArray(parametersString);
 }
 
+/**
+ * @param {string} parametersString
+ * @return {Object}
+ */
 function transformToAssociativeArray(parametersString) {
     if (!parametersString)
         return {};
@@ -3230,29 +3365,38 @@ function transformToAssociativeArray(parametersString) {
 }
 
 /**
- * Given a collection of objects `objects`, returns the collection sorted alphabetically by the values of the specified
- * object properties.
+ * Given a collection of objects `objects`, returns the collection sorted
+ * alphabetically by the values of the specified object properties.
  *
- * Example: Suppose we have a collection of objects `cards`, in which each object is known to have a `name` property and
- * a * `set` property. We could sort the collection by name and secondarily by set by calling:
+ * Example: Suppose we have a collection of objects `cards`, in which each
+ * object is known to have a `name` property and a `set` property. We could
+ * sort the collection by name and secondarily by set by calling:
  *
  *    sortByProperties(cards, ['name', 'set']);
  *
- * If `ignoreCase` is true, the function will treat all property values as if they were lowercase.
+ * If `ignoreCase` is true, the function will treat all property values as if
+ * they were lowercase.
+ *
+ * @param {Object[]} objects
+ * @param {string[]} properties
+ * @param {boolean} ignoreCase
+ * @return {Object[]}
  */
 function sortByProperties(objects, properties, ignoreCase) {
     return objects.sort(
         function(objectA, objectB) {
             for (var i=0; i < properties.length; i++) {
-                // Go through each of the listed properties, and attempt to compare objectA and objectB by each
-                // property. If any property comparison yields a definite "this is smaller" or "this is larger" answer,
-                // then we return that. If it determines that the two properties are the same, it moves on and tries to
-                // compare the next property.
+                // Go through each of the listed properties, and attempt to
+                // compare objectA and objectB by each property. If any
+                // property comparison yields a definite "this is smaller" or
+                // "this is larger" answer, then we return that. If it
+                // determines that the two properties are the same, it moves on
+                // and tries to compare the next property.
                 var property = properties[i];
                 var comparisonResult = undefined;
 
-                // If the object does not have the specified property, assume the value of that property to be the empty
-                // string.
+                // If the object does not have the specified property, assume
+                // the value of that property to be the empty string.
                 var objectPropertyA = '';
                 var objectPropertyB = '';
 
@@ -3264,7 +3408,8 @@ function sortByProperties(objects, properties, ignoreCase) {
                 }
 
                 if (ignoreCase) {
-                    // If set to ignore case, treat both object properties as if they were lowercase.
+                    // If set to ignore case, treat both object properties as
+                    // if they were lowercase.
                     objectPropertyA = objectPropertyA.toLowerCase();
                     objectPropertyB = objectPropertyB.toLowerCase();
                 }
@@ -3277,16 +3422,20 @@ function sortByProperties(objects, properties, ignoreCase) {
                 }
                 
                 if (comparisonResult !== undefined) {
-                    // If we determined that the two properties are definitely different, we return the comparison
-                    // result (smaller or larger). 
+                    // If we determined that the two properties are definitely
+                    // different, we return the comparison result (smaller or
+                    // larger). 
                     return comparisonResult;
                 }
 
-                // Otherwise, we move on to try comparing the next property in the list.
+                // Otherwise, we move on to try comparing the next property in
+                // the list.
             }
 
-            // If after comparing every property, we still couldn't definitely determine an ordering, the two objects
-            // must have exactly the same values for all properties that we're interested in, so return 0.
+            // If after comparing every property, we still couldn't definitely
+            // determine an ordering, the two objects must have exactly the
+            // same values for all properties that we're interested in, so
+            // return 0.
             return 0;
         }
     );

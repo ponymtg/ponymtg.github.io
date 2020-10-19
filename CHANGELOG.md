@@ -1,3 +1,6 @@
+## 1.14.2
+* Performed some minor refactoring on the `main.js` script.
+
 ## 1.14.1
 * Updated Friendship is Card Games up to "Pony Life, Week 6".
 * Updated the FICG parser to simplify how transformation is handled, and to add support for modal double-faced cards (MDFC).
