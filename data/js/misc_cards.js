@@ -2194,4 +2194,15 @@ var MISC_CARDS = [
         "sourceUrl": "https://www.fimfiction.net/blog/873423/mlp-magic-cards",
         "notes": "One of 5 cards created in a blog post by Thought Prism, inspired by the official Ponies: The Gathering set."
     },
+    {
+        "name": "CelestAI, Omnisatisfier",
+        "creator": "FanOfMostEverything",
+        "cost": "4UU",
+        "supertype": "Legendary Artifact Creature",
+        "subtype": "Avatar",
+        "text": "Alicorn (This card is also a Pony Pegasus Unicorn.)\n\nFlying\n\n8UU: Gain control of target creature. This ability costs 1 less to activate for each artifact you control. Activate it only any time you could cast a sorcery.",
+        "pt": "4/4",
+        "sourceUrl": "https://www.fimfiction.net/story/493666/1/friendship-is-optimal-type-conversion/any-sufficiently-analyzed-magic-is-indistinguishable-from-friendship",
+        "notes": "A card created by FanOfMostEverything for his story Friendship is Optimal: Type Conversion."
+    },
 ];

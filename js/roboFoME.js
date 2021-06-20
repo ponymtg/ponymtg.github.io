@@ -4,10 +4,10 @@
  */
 
 // If true, `log` messages will be shown in the console.
-var showLogMessages = true;
+const showLogMessages = true;
 
 // Define some convenient references to elements that we'd like to update.
-var elementIds = [
+const elementIds = [
     'statusPanel',
     'statusMessage',
     'progressBar',
@@ -15,91 +15,10 @@ var elementIds = [
 
 var elements = {};
 
-for (var i=0; i < elementIds.length; i++) {
-    var elementId = elementIds[i];
+for (let i=0; i < elementIds.length; i++) {
+    const elementId = elementIds[i];
     elements[elementId] = document.querySelector('#'+elementId);
 }
-
-// To prevent the browser from hanging while all the intensive frequency
-// analysis is going on, we offload the processing onto a web worker, so that
-// it's done in the background. The worker will send back status updates to let
-// us know how it's progressing with the analysis, and eventually will return
-// the frequency data so that we can start generating cards.
-
-var worker = new Worker('js/roboFoME_worker.js');
-
-// Create a message handler to receive messages from the web worker and act on
-// them appropriately.
-worker.addEventListener(
-    'message',
-    function(e) {
-        var message = e.data;
-        // All messages from the worker should be wrapped in an object which
-        // tells us the context (ie. what the message
-        // is for).
-        switch(message.context) {
-            case 'status':
-                // We expect `status` messages to contain a `statusMessage`
-                // string and a `progressPercentage` integer.  These will allow
-                // us to display to the user what's going on and update the
-                // progress bar.
-                elements.statusMessage.innerHTML = message.content.statusMessage;
-                elements.progressBar.style.width = message.content.progressPercentage+'%';
-            break;
-            case 'frequencyData':
-                // Eventually, the worker should send back all the frequency
-                // data that we need, which is our cue to generate a card.
-
-                // The status panel isn't needed any longer, so empty it out.
-                emptyElement(elements.statusPanel);
-                var generateCardButton = document.createElement('button');
-                var frequencyData = message.content;
-                log(frequencyData);
-                generateCardButton.id = 'generateCardButton';
-                generateCardButton.className = 'btn btn-primary btn-lg';
-                generateCardButton.innerHTML = 'Generate a card';
-                generateCardButton.style.margin = '16px';
-                generateCardButton.onclick = function(e) {
-                    emptyElement(elements.generatedCard);
-                    generateCard(frequencyData);
-                    elements.generateCardButton.innerHTML = 'Generate another card';
-                };
-
-                elements.generateCardButton = generateCardButton;
-                elements.statusPanel.appendChild(elements.generateCardButton);
-
-                elements.generatedCard = document.createElement('div');
-                elements.generatedCard.id = 'generatedCard';
-                elements.statusPanel.appendChild(elements.generatedCard);
-
-                // As a visual cue for where the generated card will be
-                // displayed, add in an empty proxy.
-                var emptyCardData = {
-                    'name': '&nbsp;',
-                    'supertype': '&nbsp;',
-                }
-                var emptyProxyElement = generateProxyElement(emptyCardData, global.dimensions.standardCard.px.width);
-                elements.generatedCard.appendChild(emptyProxyElement);
-                
-                // Clear out the innards of the proxy (even an empty one will
-                // put in some panels for the name and type lines, which looks
-                // ugly; we just want the outline of the card).
-                emptyElement(emptyProxyElement);
-
-                // Stick a big "?" on the empty card.
-                emptyProxyText = document.createElement('div');
-                emptyProxyText.style.margin = (global.dimensions.standardCard.px.height / 2)+' auto 0 auto';
-                emptyProxyText.style.fontSize = (global.dimensions.standardCard.px.width * 0.75)+'px';
-                emptyProxyText.innerHTML = '?';
-
-                emptyProxyElement.appendChild(emptyProxyText);
-
-                
-            break;
-        }
-    },
-    false
-);
 
 // Define the generation settings. We generate each property of the card
 // separately, by collecting frequency data for that property from the corpus
@@ -107,7 +26,7 @@ worker.addEventListener(
 // which controls how deep the frequency data collection will go; greater
 // depths are more accurate but take longer to collect. For some properties,
 // it's appropriate to go a bit deeper.
-var SETTINGS = {
+const SETTINGS = {
     'cards': FICG_CARDS,
     'propertyGeneration': {
         'name': {
@@ -145,47 +64,190 @@ var SETTINGS = {
     },
 };
 
-// Post the generation settings to the worker, so that it can start collecting
-// and analysing frequency data.
-worker.postMessage(SETTINGS);
+/**
+ * Given a set of frequency data, create the card generation interface.
+ *
+ * @param {Object} frequencyData
+ */
+const createCardGenerationInterface = function createCardGenerationInterface(frequencyData) {
+    // Add the "Generate another card" button.
+    const generateCardButton = document.createElement('button');
 
+    generateCardButton.id = 'generateCardButton';
+    generateCardButton.className = 'btn btn-primary btn-lg';
+    generateCardButton.innerHTML = 'Generate a card';
+    generateCardButton.style.margin = '16px';
+
+    generateCardButton.onclick = (clickEvent) => {
+        emptyElement(elements.generatedCard);
+        generateCard(frequencyData);
+        elements.generateCardButton.innerHTML = 'Generate another card';
+    };
+
+    elements.generateCardButton = generateCardButton;
+    elements.statusPanel.appendChild(elements.generateCardButton);
+
+    // Add the "Copy card to clipboard" button.
+    // Disabled for now since this functionality doesn't work properly yet.
+    const copyCardButton = document.createElement('button');
+
+    copyCardButton.id = 'generateCardButton';
+    copyCardButton.className = 'btn btn-primary btn-lg';
+    copyCardButton.innerHTML = 'Copy card to clipboard';
+    copyCardButton.style.margin = '16px';
+
+    copyCardButton.onclick = (clickEvent) => {
+        const generatedCardContainer = document.querySelector(
+            '#generatedCard'
+        );
+        const cardHtml = generatedCardContainer.innerHTML;
+        navigator.clipboard.writeText(cardHtml).then(
+            () => {},
+            (err) => {
+                console.error(
+                    `Could not copy card to clipboard; ${err}`
+                );
+            }
+        );
+    };
+
+    elements.copyCardButton = copyCardButton;
+    //elements.statusPanel.appendChild(elements.copyCardButton);
+
+    elements.generatedCard = document.createElement('div');
+    elements.generatedCard.id = 'generatedCard';
+    elements.statusPanel.appendChild(elements.generatedCard);
+
+    // As a visual cue for where the generated card will be displayed,
+    // add in an empty proxy.
+    const emptyCardData = {
+        'name': '&nbsp;',
+        'supertype': '&nbsp;',
+    }
+    const emptyProxyElement = generateProxyElement(
+        emptyCardData,
+        global.dimensions.standardCard.px.width
+    );
+    elements.generatedCard.appendChild(emptyProxyElement);
+    
+    // Clear out the innards of the proxy (even an empty one will put
+    // in some panels for the name and type lines, which looks ugly; we
+    // just want the outline of the card).
+    emptyElement(emptyProxyElement);
+
+    // Stick a big "?" on the empty card.
+    emptyProxyText = document.createElement('div');
+    emptyProxyText.style.margin = (global.dimensions.standardCard.px.height / 2)
+        + ' auto 0 auto';
+    emptyProxyText.style.fontSize = (global.dimensions.standardCard.px.width * 0.75)
+        + 'px';
+    emptyProxyText.innerHTML = '?';
+
+    emptyProxyElement.appendChild(emptyProxyText);
+};
+
+/**
+ * Handle a message received (as an event) from the worker.
+ *
+ * @param {Event} messageEvent
+ */
+const handleWorkerMessage = function handleWorkerMessage(messageEvent) {
+    const message = messageEvent.data;
+
+    // All messages from the worker should be wrapped in an object which tells
+    // us the context (ie. what the message is for).
+    switch(message.context) {
+        case 'status':
+            // We expect `status` messages to contain a `statusMessage` string
+            // and a `progressPercentage` integer.  These will allow us to
+            // display to the user what's going on and update the progress bar.
+            elements.statusMessage.innerHTML = message.content.statusMessage;
+            elements.progressBar.style.width = message.content.progressPercentage
+                + '%';
+        break;
+        case 'frequencyData':
+            // Eventually, the worker should send back all the frequency data
+            // that we need, which is our cue to generate a card.
+
+            // The status panel isn't needed any longer, so empty it out.
+            emptyElement(elements.statusPanel);
+            const frequencyData = message.content;
+            log(frequencyData);
+            createCardGenerationInterface(frequencyData);
+        break;
+    }
+};
+
+/**
+ *
+ * @param {ClipboardEvent} copyEvent
+ */
+function copyHandler(copyEvent) {
+    const selection = document.getSelection();
+    console.log(selection);
+    console.log(selection.getRangeAt(0));
+    copyEvent.clipboardData.setData('text/html', selection.toString());
+    copyEvent.preventDefault();
+}
+
+/**
+ * Generate a new random card from a set of supplied frequency data suites, and
+ * display it in the DOM (in the `#generatedCard` div).
+ *
+ * @param {Object} frequencyDataSuites
+ */
 function generateCard(frequencyDataSuites) {
     log(frequencyDataSuites);
-    var cardPropertyNames = Object.keys(frequencyDataSuites);
+    const cardPropertyNames = Object.keys(frequencyDataSuites);
 
-    // Generate a set of properties for a new card, by using frequency data
-    // with an appropriate generation function.
+    // Generate a set of properties for a new card, by using frequency data with
+    // an appropriate generation function.
     var generatedProperties = {};
 
-    for (var i=0; i < cardPropertyNames.length; i++) {
-        var cardPropertyName = cardPropertyNames[i];
-        var propertyGenerationSettings = SETTINGS.propertyGeneration[cardPropertyName];
-        log('----------------');
-        log('Generating '+cardPropertyName+' property');
-        log('----------------');
-        generatedProperties[cardPropertyName] = window[propertyGenerationSettings.generator](frequencyDataSuites[cardPropertyName], propertyGenerationSettings.depth);
-    }
+    cardPropertyNames.forEach(
+        propertyName => {
+            const propGenerationSettings = SETTINGS.propertyGeneration[propertyName];
+
+            log('----------------');
+            log(`Generating ${propertyName} property`);
+            log('----------------');
+
+            const dataSuite = frequencyDataSuites[propertyName];
+            const depth = propGenerationSettings.depth;
+
+            generatedProperties[propertyName] = window[propGenerationSettings.generator](
+                dataSuite,
+                depth
+            );
+        }
+    );
 
     // Copy the generated properties onto a new card. At this point, we'll do a
     // few checks to at least make sure the card uses appropriate properties if
     // it's managed to create a meaningful supertype (ie. only Creatures should
     // have a power/toughness, Instants generally shouldn't have a subtype,
     // etc).
-    var generatedCard = {};
-    var generatedPropertyNames = Object.keys(generatedProperties);
-    for (var i=0; i < generatedPropertyNames.length; i++) {
-        var generatedPropertyName = generatedPropertyNames[i];
-        var generatedProperty = generatedProperties[generatedPropertyName];
-        if (generatedPropertyName === 'pt' && generatedProperties['supertype'].indexOf('Creature') === -1) {
-            // Only Creatures need to have a power/toughness.
-            continue;
+    const generatedCard = {};
+    const generatedPropertyNames = Object.keys(generatedProperties);
+
+    generatedPropertyNames.forEach(
+        propertyName => {
+            const generatedProperty = generatedProperties[propertyName];
+            if (propertyName === 'pt'
+                && generatedProperties['supertype'].indexOf('Creature') === -1) {
+                // Only Creatures need to have a power/toughness.
+                return;
+            }
+
+            if (propertyName === 'loyalty'
+                && generatedProperties['supertype'].indexOf('Planeswalker') === -1) {
+                // Only Planeswalkers need to have a loyalty.
+                return;
+            }
+            generatedCard[propertyName] = generatedProperty;
         }
-        if (generatedPropertyName === 'loyalty' && generatedProperties['supertype'].indexOf('Planeswalker') === -1) {
-            // Only Planeswalkers need to have a loyalty.
-            continue;
-        }
-        generatedCard[generatedPropertyName] = generatedProperty;
-    }
+    );
+
     if (generatedCard['supertype'].indexOf('Instant') !== -1
         || generatedCard['supertype'].indexOf('Sorcery') !== -1) {
         // If the card has supertype "Instant" or "Sorcery", remove its
@@ -197,8 +259,11 @@ function generateCard(frequencyDataSuites) {
     log(generatedCard);
 
     // Create a displayable proxy for the generated card.
-    var generatedCardContainer = document.querySelector('#generatedCard');
-    var generatedCardElement = generateProxyElement(generatedCard, global.dimensions.standardCard.px.width);
+    const generatedCardContainer = document.querySelector('#generatedCard');
+    const generatedCardElement = generateProxyElement(
+        generatedCard,
+        global.dimensions.standardCard.px.width
+    );
 
     // Display the generated card.
     generatedCardContainer.appendChild(generatedCardElement);
@@ -765,3 +830,26 @@ function log(object) {
         console.log(object);
     }
 }
+
+// To prevent the browser from hanging while all the intensive frequency
+// analysis is going on, we offload the processing onto a web worker, so that
+// it's done in the background. The worker will send back status updates to let
+// us know how it's progressing with the analysis, and eventually will return
+// the frequency data so that we can start generating cards.
+const worker = new Worker('js/roboFoME_worker.js');
+
+// Create a message handler to receive messages from the web worker and act on
+// them appropriately.
+worker.addEventListener('message', handleWorkerMessage, false);
+
+function initialize() {
+    // Post the generation settings to the worker, so that it can start
+    // collecting and analysing frequency data.
+    worker.postMessage(SETTINGS);
+
+    // Overwrite what is being copied to the clipboard.
+    const html = document.querySelector('html');
+    html.addEventListener('copy', copyHandler);
+}
+
+window.onload = initialize;

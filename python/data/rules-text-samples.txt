@@ -2591,3 +2591,32 @@ Whenever Voidfang Drifter deals damage to a creature or player, you may remove a
 UR: Counter target spell or ability that targets Killer Flashbees.
 Killer Flashbees deals 2 damage to that spell or ability’s controller.
 Each player who controls three or more artifacts can’t cast artifact spells. The same is true for creatures, enchantments, and planeswalkers.
+Destroy X target Auras.
+Whenever a spell you’ve cast is countered, add RR.
+Creatures with power less than Arrogant Infiltrator’s power can’t block it.
+2S, T: Move any number of counters from The Cold Vacuum onto target snow creature.
+Humans you own can be the targets of spells with mutate as though they weren’t Humans.
+Your party can include a creature of the chosen type. (You need a creature of that type to have a full party.)
+When an opponent becomes the monarch, transform Ceremonial Guard.
+Whenever another creature is exiled from the battlefield, you may have Royal Impersonator become a copy of that creature, except it has this ability.
+During each of your turns, you may play a card exiled with Diamondback’s Hoard.
+When Patient Cragadile blocks, remove a defender counter from it.
+You may play cards exiled with The Razor of Dreams and may spend mana as though it were mana of any type to cast those cards.
+Frankenstag’s Monster’s power is equal to the total power of cards exiled with it, and its toughness is equal to the total toughness of those cards.
+When Hauler Dragon dies, return all cards exiled with it to their owner’s hand.
+Hoofcraft — If you control three or more Ponies, Pegasi, and/or Unicorns, put up to two of those cards into your hand instead of one.
+During extra turns, you control the active player. (You see all cards that player could see and make all decisions for the player.)
+Each player shuffles into their library all cards in their graveyard that were put there from their library this turn, then returns all other cards put into their graveyard this turn to their hand. Exile Take Two.
+If an opponent would begin an extra turn, that player skips that turn instead.
+Equip (2w)(2u)
+Glamorous Plunderer’s power is equal to the number of Treasures you control.
+When the fourth spell of a turn is cast, transform Gloriosa, Who Has This.
+Destroy all non-Pony, non-Pegasus, non-Unicorn creatures.
+When no creatures not named Magus of the Laugh are on the battlefield, sacrifice Magus of the Laugh.
+You may cast Void Veteran from exile.
+Heavyweight Contender has double strike as long as it’s renowned.
+Landfall — If you had a land enter the battlefield under your control this turn, repeat this process once.
+Players can cast spells and activate abilities only during their own turns.
+If an effect would remove one or more time counters from a permanent or suspended card, it removes that many time counters plus one from it instead.
+When a player pays Capering Figment’s ward cost, sacrifice Capering Figment.
+Creatures can't attack.

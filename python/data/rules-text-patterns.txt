@@ -1,14 +1,19 @@
+\*/\*
+\*/\d
+\d/\*
 -1/-1 counter
 1 plus the
+activate abilities
 activated abilit(y|ies)
 activat(e|es|ing) (an|this) ability
 add an amount of
+add [WUBRG]+\b
 after attackers are declared
 all cards with that name
 all creatures able to
 all permanents
 Alternative costs
-any number of creatures
+any number of (counters|creatures)
 any player may
 any time you could cast
 (are|is) all colors
@@ -33,6 +38,7 @@ at the beginning of the upkeep
 (aura|commanders|creature|Dragons|enchantment|Forest|Island|land|Mountain|permanent|Plains|planeswalker|source|Swamp|token)s? you control
 auras attached to
 ^Awaken \d
+become a copy of
 becomes attached to a creature
 becomes (blocked|tapped)
 becomes the target of a spell
@@ -40,6 +46,7 @@ block(ed|ing) creatures?
 block or be blocked
 block this turn
 both creatures have
+can be the target
 can block (an additional|creatures|up to)
 can only attack alone
 can't attack (alone|unless)
@@ -48,7 +55,11 @@ can't block( creatures| this turn| unless|\.$)
 can't cast( creature| artifact)? spells
 can't have or gain
 (can't|would) (gain|lose) life
+cards into your hand
+cards? exiled with
 card to the battlefield
+cast those cards
+cast [\w\s]+ from exile
 change its text
 change the targets
 ^Chaotic 
@@ -62,7 +73,9 @@ color of your choice
 combat phase
 Contraption deck
 control an? (artifact|Forest|enchantment|Island|Mountain|Plains|Swamp)
+control three or more
 converted mana cost
+copy of that creature
 copy target
 cost \d less
 cost .+ more to cast
@@ -73,11 +86,13 @@ Counters can't be
 counter target( \w+)? spell
 creates? a .+ token
 create .+ tokens
-creatures can't block
+creatures can't (attack|block)
 creatures on the battlefield
 creatures with flying
+creatures with power less than
 creatures (you|you don't|your opponents) control
 creature (token|type|spell)s?
+creature of the chosen type
 creature would be destroyed
 damage can\'t be prevented
 damage that would be dealt
@@ -91,53 +106,63 @@ dealt to you instead
 declare blockers
 defending player
 (destroy|exile)( at least)? (all|each|one|two|three|four|five|six|seven|eight|nine|ten)( black| blue| green| red| white)? (artifact|aura|card|creature|enchantment|permanent)s?
+destroy all [\w\s,-]+ creatures
+destroy up to
 died this turn
 discard cards
 (discard|draw)s?( up to)? (a|one|two|three|four|five|six|seven|this|that many)( or more)? cards?
 draw cards equal to
 draw step
 draw X cards
+during each of your turns
+during extra turns
+during their own turns
 during your turn
 each combat
 each creature blocking
 each opponent
 each other (creature|player)
-each player (abandons|can't|chooses|draws|may|puts|sacrifices)
+each player (abandons|can't|chooses|draws|may|puts|sacrifices|shuffles)
 each player's upkeep
 (each|the|your) end step
+effect would remove
 ^Enchanted creature 
 enchanted creature (has|is)
 enchanted (creature|permanent|player)('s)?
 entered the battlefield (this turn|under)
 enter(ing|s) the battlefield
-enters? the battlefield as
+enters? the battlefield (as|under)
 Entwine \d
 equal to its (power|toughness)
 equal to the difference
+equal to the number of
 equipped creature
+except it has this ability
 except it's still
 ^exile 
 exiled card
+exiled from the battlefield
 exile it instead
 exile (it|target)
 face( |-)down
 for each card
 from all graveyards
-from (their|your) graveyard
+from (their|your) (graveyard|library)
 gains? control of (it|all)
 gains? life equal to
+graveyard this turn
 greatest (power|toughness) among
 he or she attacks
 his or her (control|graveyard|hand|library|mana pool)
-if a player would
+if (a player|an opponent) would
 if a source
+if an effect
 if [\w ]+ is an enchantment
 in addition to its other types
 in addition to their other types
 instant and sorcery
 instant or sorcery
-into your graveyard
-in your graveyard
+(in|into) (your|their) graveyard
 in your opening hand
 is a (forest|island|mountain|plains|swamp)
 is tapped for mana
@@ -153,6 +178,7 @@ loses? flying
 loses x life
 mana abilities
 mana cost
+mana of any type
 maximum hand size
 may cast this (card|spell)
 \(Melds with 
@@ -161,7 +187,7 @@ named card
 next (end step|untap step|upkeep)
 non(basic|black|blue|blocking|creature|green|instant|land|red|snow|sorcery|token|white)
 number of cards
-number of( \w+)? permanents
+number of( \w+)? (permanents|you control)
 of each upkeep
 on each of your turns
 (one|two|three|four|five|six|seven|eight|nine|ten) or fewer cards in your hand
@@ -171,12 +197,14 @@ only (as a sorcery|during combat)
 on top of their owner's libraries
 onto the battlefield
 on your turn
+opponent becomes the monarch
 opponent gains life
 opponents can't
 (opponent's|that player's|your) library
 paired with another
 pay [1-9X] life
-(permanent|revealed) card
+(permanent|revealed|suspended) card
+permanents can't
 (plains|island|swamp|mountain|forest)walk
 players can't 
 players other than 
@@ -195,6 +223,7 @@ put any number of them
 put a \w+ counter
 put into (a graveyard|exile)
 put it into your hand
+put up to two
 puts that many cards
 put this card into your hand
 \+1/\+1 counter
@@ -207,7 +236,7 @@ creatures? without flying
 ^\d+, 
 ^\d+/\d+$
 \d damage
-destroy target \w+
+destroy (X )?target \w+
 \d or greater
 draw a card.$
 \d: (Sacrifice|Scry|Tap)
@@ -217,7 +246,7 @@ each land is a (plains|island|swamp|mountain|forest)
 regenerate (it|target)
 enchanted creature\.$
 replacing all instances of
-^Equip \(?[\dWUBRG]+\)?$
+^Equip \(?[\dWUBRG]+\)?
 return all (creatures|land cards)
 return (her|him|it) to the battlefield
 Reveal (a creature card|your hand)
@@ -225,13 +254,14 @@ reveal (this|that) card
 (gain|lose)s? (\d+|that much) life
 gains \w+ until
 gets? (\+|-)\d+/(\+|-)\d+
-(has|have) (deathtouch|equip |first strike|flying|haste|hexproof|indestructible|menace|partner\b|split second|the abilities of each|trample)
+(has|have) (deathtouch|equip |first strike|double strike|flying|haste|hexproof|indestructible|menace|partner\b|split second|the abilities of each|trample)
 if .+ was kicked
 ^Kicker
 (one|two|three|four|five|six|seven|eight|nine|ten) mana\b
 , proliferate\.
-remove a counter
+remove a (defender )?counter
 remove all (creatures|damage|\w+ counters)
+remove one or more
 shuffles it\b
 ^\w+ \(.*\.\)$
 ^[WUBRG]+\b, 
@@ -249,27 +279,31 @@ set this scheme in motion
 shuffle (their libraries|your library)
 since his or or her last turn
 skips his or her
+skips that turn
 spells? (and|or) abilit(y|ies)
 spells you cast
 spell this turn
+(first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth) spell of a turn
 ^Suspend 
 ^T, 
 ^T: 
 take an extra turn
 tap (any number of|each creature|target|up to)
 tapped creature
-target( black| blue| green| red| white| wordy)? (artifact|attacking|card|creature|enchanted|enchantment|land|opponent|permanent|player|spell)
+target( black| blue| green| red| snow| white| wordy)? (artifact|aura|attacking|card|creature|enchanted|enchantment|land|opponent|permanent|player|spell)
 that creature's owner
 that player (controls|discards|loses|sacrifices)
 that's a copy of
 the chosen creatures
 the chosen names?
 their owners' libraries
+time counters
 to its owner's hand
 top card of (any library|their libraries)
 top card of your
+total toughness
 (top|up to) (two|three|four|five|six|seven|eight|nine|ten) cards
-to their owner'?s'? hands
+to their owner'?s'? hands?
 to your mana pool
 transform it
 triggered abilities
@@ -281,10 +315,13 @@ unspent mana
 untap
 until end of turn
 upkeep step
-when a player casts
+ward cost
+when a player (casts|pays)
+when no creatures
 whenever a creature would 
 whenever an opponent casts
 Whenever a player
+Whenever a spell you've cast
 whenever enchanted creature 
 whenever you (crank|sacrifice|tap)
 When you cast (a|this) spell
@@ -303,7 +340,10 @@ you may attach
 you may cast it for
 you may pay an additional
 you may play an additional
+you may play a card
+you may play cards
 ^You may spend 
 you or a planeswalker
+you control the active player
 your opponents (control|play)
 your opponents' graveyards

@@ -65,6 +65,8 @@ class test_parse_ficg_functions(unittest.TestCase):
         self.assertTrue(is_type_line('Legendary Snow Creature — Spirit'))
         self.assertTrue(is_type_line('Phenomenon'))
         self.assertTrue(is_type_line('Sorcery — Arcane'))
+        self.assertTrue(is_type_line('Instant — Lesson'))
+        self.assertTrue(is_type_line('Sorcery — Lesson'))
 
         self.assertFalse(is_type_line('Legendary'))
         self.assertFalse(is_type_line('Legendary Example'))
@@ -93,6 +95,7 @@ class test_parse_ficg_functions(unittest.TestCase):
         self.assertFalse(is_type_line('Planeswalker'))
         self.assertFalse(is_type_line('Example Phenomenon'))
         self.assertFalse(is_type_line('Phenomenon Example'))
+        self.assertFalse(is_type_line('Basic Calisthenics 2'))
 
     def test_parse_individual_card_dump_into_card_data_entry(self):
         with open('data/rules-text-patterns.txt') as rules_text_patterns_file:
@@ -134,7 +137,7 @@ T: Add B.
         self.assertEqual('4BB', card_side_a['cost'])
         self.assertEqual('Creature', card_side_a['supertype'])
         self.assertEqual('Horror', card_side_a['subtype'])
-        self.assertEqual('Flash\n\nWhen Frosted Familiar enters the battlefield, create a Food token for each creature that died this turn. (They’re artifacts with "T, Sacrifice this artifact: You gain 3 life.")', card_side_a['text'])
+        self.assertEqual('Flash\n\nWhen Frosted Familiar enters the battlefield, create a Food token for each creature that died this turn. (They\'re artifacts with "T, Sacrifice this artifact: You gain 3 life.")', card_side_a['text'])
         self.assertEqual('"I miss my brother."\n—Pinkie Pie, Bearer of Laughter', card_side_a['flavorText'])
         self.assertEqual('4/4', card_side_a['pt'])
 

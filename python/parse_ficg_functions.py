@@ -206,6 +206,7 @@ def is_type_line(line):
     # - "Instant" must be preceded by "Tribal".
     # - "Instant" must be preceded by "Snow".
     # - "Instant" must be followed by a long dash.
+    # - The line must be exactly "Instant — Lesson".
     # - The line must begin with a bracket, which means that it begins with a
     #   color indicator.
     # - The line must contain only the words "Trope Instant". ("Trope" is a
@@ -227,6 +228,7 @@ def is_type_line(line):
             and 'Tribal Instant' not in line
             and 'Snow Instant' not in line
             and not re.search(r'Instant\b', line)
+            and line != 'Instant — Lesson'
         ):
             return False
 
@@ -238,6 +240,7 @@ def is_type_line(line):
     # - "Sorcery" must be preceded by "Snow".
     # - The line must be exactly "Sorcery — Arcane".
     # - The line must be exactly "Sorcery — Adventure".
+    # - The line must be exactly "Sorcery — Lesson".
     # - The line must also contain a double slash (//), which indicates that
     #   this is a split card for which one of the halves is a Sorcery.
     if 'Sorcery' in line:
@@ -247,6 +250,7 @@ def is_type_line(line):
             and 'Snow Sorcery' not in line
             and line != 'Sorcery — Arcane'
             and line != 'Sorcery — Adventure'
+            and line != 'Sorcery — Lesson'
             and '//' not in line
         ):
             return False
@@ -340,7 +344,13 @@ def is_type_line(line):
     if 'Planeswalker' in line:
         if 'Planeswalker —' not in line:
             return False
-            
+
+    # If the line contains the word "Basic", it must also contain the word
+    # "Land".
+    if 'Basic' in line:
+        if 'Land' not in line:
+            return False
+
     # At this point, we're reasonably sure that we're ruled out a lot of false
     # positives, so we will identify this as a type line.
     return True
@@ -639,6 +649,8 @@ def parse_individual_card_dump_into_card_data_entry(
     # (”) with regular ones ("). Just to keep things consistent.
     card_dump = card_dump.replace('”', '"')
     card_dump = card_dump.replace('“', '"')
+
+    card_dump = card_dump.replace('’', "'")
 
     # Split the individual dump into lines.
     card_dump_lines = card_dump.split('\n')
