@@ -1,8 +1,5 @@
-window.onload = initialize;
-function initialize() {
-    CARDS = CARDS.concat(FICG_CARDS);
-    CARDS = CARDS.concat(IPU_CARDS);
-    CARDS = CARDS.concat(MISC_CARDS);
+const initialize = async function initialize() {
+    CARDS = await loadAllCards();
 
     global.elements.printSheetCardsContainer = document.querySelector('#printSheetCardsContainer');
 
@@ -98,3 +95,5 @@ function getPxToMmRatio() {
     var pxToMmRatio = dummyElementHeightInMm / dummyElementHeightInPx;
     return pxToMmRatio;
 }
+
+window.onload = initialize;

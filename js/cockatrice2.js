@@ -1,8 +1,5 @@
-window.onload = initialize;
-
-function initialize() {
-    CARDS = CARDS.concat(FICG_CARDS);
-    CARDS = CARDS.concat(IPU_CARDS);
+const initialize = async function initialize() {
+    CARDS = await loadAllCards();
 
     const information = getInformation(CARDS);
     const setsSelect = document.querySelector('#sets');
@@ -52,3 +49,4 @@ function initialize() {
     }
 }
 
+window.onload = initialize;

@@ -3,6 +3,14 @@
  * frequency data, and using it as the basis for probabalistic text generation.
  */
 
+// TODO: RoboFoME relies on a global variable `FICG_CARDS` which it expects to
+// contain the entire Friendship is Card Games set. However, with the recent
+// card loader upgrade, this is no longer available - instead, cards are now
+// loaded directly from JSON files.
+//
+// We could fudge in some backwards compatibility by loading the cards here
+// first and setting the `FICG_CARDS` global manually.
+
 // If true, `log` messages will be shown in the console.
 const showLogMessages = true;
 
@@ -20,14 +28,20 @@ for (let i=0; i < elementIds.length; i++) {
     elements[elementId] = document.querySelector('#'+elementId);
 }
 
-// Define the generation settings. We generate each property of the card
-// separately, by collecting frequency data for that property from the corpus
-// and applying an appropriate generation algorithm. `depth` is a parameter
-// which controls how deep the frequency data collection will go; greater
-// depths are more accurate but take longer to collect. For some properties,
-// it's appropriate to go a bit deeper.
+// Define a set of generation settings. These will be sent to the worker process
+// which actually does all of the number crunching to collect the frequency data
+// which we'll then use to generate each property of the card.
+//
+// `depth` is a parameter which controls how deep the
+// frequency data collection will go; greater depths are more accurate but take
+// longer to collect. For some properties, it's appropriate to go a bit deeper.
+//
+// The settings also include the cards from which the frequency data will be
+// obtained, although this is initially undefined as we haven't yet loaded the
+// cards at this point. That will be done by the `initialize` function once the
+// page has fully loaded.
 const SETTINGS = {
-    'cards': FICG_CARDS,
+    'cards': undefined,
     'propertyGeneration': {
         'name': {
             'depth': 6,
@@ -65,7 +79,9 @@ const SETTINGS = {
 };
 
 /**
- * Given a set of frequency data, create the card generation interface.
+ * Given a set of frequency data, create the card generation interface. This
+ * method is called by the worker process when it has finished analyzing FICG's
+ * frequency data.
  *
  * @param {Object} frequencyData
  */
@@ -78,6 +94,8 @@ const createCardGenerationInterface = function createCardGenerationInterface(fre
     generateCardButton.innerHTML = 'Generate a card';
     generateCardButton.style.margin = '16px';
 
+    // Add a button which, when clicked, generates a new card from the frequency
+    // data.
     generateCardButton.onclick = (clickEvent) => {
         emptyElement(elements.generatedCard);
         generateCard(frequencyData);
@@ -196,13 +214,13 @@ function copyHandler(copyEvent) {
  *
  * @param {Object} frequencyDataSuites
  */
-function generateCard(frequencyDataSuites) {
+const generateCard = function generateCard(frequencyDataSuites) {
     log(frequencyDataSuites);
     const cardPropertyNames = Object.keys(frequencyDataSuites);
 
     // Generate a set of properties for a new card, by using frequency data with
     // an appropriate generation function.
-    var generatedProperties = {};
+    let generatedProperties = {};
 
     cardPropertyNames.forEach(
         propertyName => {
@@ -842,7 +860,24 @@ const worker = new Worker('js/roboFoME_worker.js');
 // them appropriately.
 worker.addEventListener('message', handleWorkerMessage, false);
 
-function initialize() {
+/**
+ * Conveniently, since we already have a progress bar for the frequency data
+ * analysis, we can hijack it for the initial card loading as well, just to
+ * indicate that something is happening.
+ */
+const cardsLoadProgress = function cardsLoadProgress(bytesRead, contentLength) {
+    const progressPercentage = Math.floor((bytesRead / contentLength) * 100);
+    elements.progressBar.style.width = progressPercentage + '%';
+    elements.statusMessage.innerHTML = `Loading FICG cards (${progressPercentage}%)...`;
+};
+
+const initialize = async function initialize() {
+    FICG_CARDS = await loadCards('/data/json/ficg_cards.json', cardsLoadProgress);
+
+    // Now that the cards have been loaded, include these in the generation
+    // settings so that the worker has some data to process.
+    SETTINGS.cards = FICG_CARDS;
+
     // Post the generation settings to the worker, so that it can start
     // collecting and analysing frequency data.
     worker.postMessage(SETTINGS);
@@ -850,6 +885,6 @@ function initialize() {
     // Overwrite what is being copied to the clipboard.
     const html = document.querySelector('html');
     html.addEventListener('copy', copyHandler);
-}
+};
 
 window.onload = initialize;

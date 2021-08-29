@@ -5,44 +5,78 @@
 // The entry point for the main search page of the application.               //
 //                                                                            //
 ////////////////////////////////////////////////////////////////////////////////
-window.onload = initialize;
+
+const cardsLoadProgress = function cardsLoadProgress(
+    bytesRead,
+    contentLength,
+    url,
+    cardGroupLabel
+) {
+    global.elements.progressBarStatus.innerHTML = `Loading ${cardGroupLabel}...`;
+    const progressPercentage = Math.floor((bytesRead / contentLength) * 100);
+    global.elements.progressBar.style.width = progressPercentage + '%';
+};
 
 /**
  * Application setup.
  */
-function initialize() {
-    // Prepare the cards database, which should have been loaded into a
-    // variable already in a separate script.  For the moment, we're keeping
-    // the Friendship is Card Games set in a separate variable for ease of
-    // updating, and appending it to the main database.
-    CARDS = CARDS.concat(FICG_CARDS);
-
-    // We're also keeping Sorden's IPU set separate for now.
-    CARDS = CARDS.concat(IPU_CARDS);
-
-    // Add the Miscellany cards.
-    CARDS = CARDS.concat(MISC_CARDS);
-
+const initialize = async function initialize() {
     // Get any parameters passed in the URL.
     global.urlParameters = getUrlParameters();
 
     // Get references to various page elements.
-    var elementIds = [
+    const elementIds = [
         'advancedSearch',
         'container',
         'menuBar',
         'printSheetLink',
         'results',
+        'searchBar',
         'searchField',
         'searchButton',
         'tagline',
         'title',
     ];
+
     for (var i=0; i < elementIds.length; i++) {
         global.elements[elementIds[i]] = document.querySelector(
             '#' + elementIds[i]
         );
     }
+
+    // Set up the panel containing the loading progress bar, which should be one
+    // of the first things the user sees on starting the site.
+    const progressPanel = document.createElement('div');
+    progressPanel.id = 'progressPanel';
+    
+    const progressBarContainer = document.createElement('div');
+    progressBarContainer.className = 'progress';
+    progressBarContainer.style.margin = '32px auto';
+    progressBarContainer.style.width = '75%';
+
+    const progressBar = document.createElement('div');
+    progressBar.id = 'progressBar';
+    progressBar.className = 'progress-bar progress-bar-striped active';
+    progressBar.role = 'progressbar';
+    progressBar.style.width = '0%';
+
+    const progressBarStatus = document.createElement('div');
+    progressBarStatus.id = 'progressBarStatus';
+
+    progressBarContainer.appendChild(progressBar);
+    progressPanel.appendChild(progressBarContainer);
+    progressPanel.appendChild(progressBarStatus);
+    global.elements.container.appendChild(progressPanel);
+
+    global.elements.progressBar = progressBar;
+    global.elements.progressBarStatus = progressBarStatus;
+
+    CARDS = await loadAllCards(cardsLoadProgress);
+
+    // Assuming that the cards all loaded successfully, remove the loading
+    // progress panel, and show the search bar.
+    progressPanel.parentNode.removeChild(progressPanel);
+    global.elements.searchBar.style.display = '';
 
     if (!global.urlParameters.noSort) {
         // Sort the entire database alphabetically by set, then name.
@@ -52,7 +86,7 @@ function initialize() {
     // For every card, there may be certain additional properties that we can
     // derive from the information supplied, such as the card's colors. These
     // are useful for refining searches.
-    for (var i=0; i < CARDS.length; i++) {
+    for (let i=0; i < CARDS.length; i++) {
         CARDS[i].derivedProperties = getDerivedCardProperties(CARDS[i]);
 
         // For the card's hash, we'll also put this directly on the card
@@ -223,4 +257,6 @@ function initialize() {
             );
         }
     }
-}
+};
+
+window.onload = initialize;

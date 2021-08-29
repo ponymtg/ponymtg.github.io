@@ -1,12 +1,5 @@
-window.onload = initialize;
-
-function initialize() {
-    // Prepare the cards database, which should have been loaded into a variable already in a separate script.
-    // For the moment, we're keeping the Friendship is Card Games set in a separate variable for ease of updating, and
-    // appending it to the main database.
-    CARDS = CARDS.concat(FICG_CARDS);
-    CARDS = CARDS.concat(IPU_CARDS);
-    CARDS = CARDS.concat(MISC_CARDS);
+const initialize = async function initialize() {
+    CARDS = await loadAllCards();
 
     for (var i=0; i < CARDS.length; i++) {
         // A little trick here: in order to be able to filter these cards by their hashes (which isn't a stored property
@@ -224,3 +217,5 @@ function addSetToPrintSheet(setName) {
         addCardToPrintSheet(card.hash);
     }
 }
+
+window.onload = initialize;

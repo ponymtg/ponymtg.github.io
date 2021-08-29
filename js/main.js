@@ -4,11 +4,21 @@
  *  up all global variables used by the application.
  */
 
+var CARDS = [];
+
 /**
  * Global object that can be used by all functions. Configuration and common
  * definitions are stored here.
  */
 var global = {
+    'urls' : {
+        'cards': {
+            'main': '/data/json/cards.json',
+            'ficg': '/data/json/ficg_cards.json',
+            'ipu': '/data/json/ipu_cards.json',
+            'misc': '/data/json/misc_cards.json',
+        },
+    },
     'paths': {
         /** Path to the directory containing all the card sets. */
         'sets': 'data/sets',
@@ -508,6 +518,31 @@ var global = {
     'information': {},
     /** Any URL parameters passed to the application. */
     'urlParameters': {}
+};
+
+/**
+ * For each card group for which PonyMTG has a data URL, load the card data.
+ * Return a flat array containing all the cards loaded this way. If any card
+ * group could not be loaded successfully, throw an error.
+ */
+const loadAllCards = async function loadAllCards(progressFunc) {
+    let cards = [];
+
+    // TODO: Add better error handling here - currently the application will
+    // simply stall. It would be better to give a proper error message to the
+    // user, or even allow them to continue with some of the sets missing.
+    for (const cardGroup in global.urls.cards) {
+        const cardsUrl = global.urls.cards[cardGroup];
+        const loadedCards = await loadCards(cardsUrl, progressFunc, cardGroup);
+
+        if (loadedCards === null) {
+            throw new Error(`Could not load cards from ${cardsUrl}`);
+        }
+            
+        cards = cards.concat(loadedCards);
+    }
+
+    return cards;
 };
 
 /**
@@ -3195,8 +3230,6 @@ function generateUniqueSetCodes(sets) {
  * @param {Object}
  */
 function getUniqueCardNames(sets) {
-    var sets = information.sets;
-
     // Now obtain a list of unique set codes for these sets. (Some will be
     // defined, others generated).
     var setCodes = generateUniqueSetCodes(sets);

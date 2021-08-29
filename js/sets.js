@@ -1,13 +1,16 @@
-window.onload = initialize;
-
-function initialize() {
-    CARDS = CARDS.concat(FICG_CARDS);
-    CARDS = CARDS.concat(IPU_CARDS);
+const initialize = async function initialize() {
+    const cardGroups = ['main', 'ficg', 'ipu', 'misc'];
+    for (const group of cardGroups) {
+        const cardsUrl = global.urls.cards[group];
+        const cards = await loadCards(cardsUrl);
+        CARDS = CARDS.concat(cards);
+    }
 
     global.information = getInformation(CARDS);
-    var container = document.querySelector('#container');
+
+    const container = document.querySelector('#container');
     container.appendChild(getSetsTableElement(global.information.sets));
-}
+};
 
 /**
  * Given a list of set names, returns a table populated with information that the application is able to obtain on those
@@ -98,3 +101,5 @@ function getSetsTableElement(sets) {
     tableElement.appendChild(tableBodyElement);
     return tableElement;
 }
+
+window.onload = initialize;

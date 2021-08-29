@@ -1,11 +1,8 @@
-window.onload = initialize;
-
 /**
  * Application setup.
  */
-function initialize() {
-    CARDS = CARDS.concat(FICG_CARDS);
-    CARDS = CARDS.concat(IPU_CARDS);
+const initialize = async function initialize() {
+    CARDS = await loadAllCards();
 
     const htmlElement = document.querySelector('html');
     htmlElement.style.fontFamily = 'monospace';
@@ -478,3 +475,5 @@ function escapeXml(string) {
 
     return escapedString;
 }
+
+window.onload = initialize;

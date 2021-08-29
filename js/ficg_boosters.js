@@ -1,8 +1,5 @@
-window.onload = initialize;
-
-function initialize() {
-    CARDS = CARDS.concat(FICG_CARDS);
-    CARDS = CARDS.concat(IPU_CARDS);
+const initialize = async function initialize() {
+    CARDS = await loadCards(global.urls.cards.ficg);
 
     const boosterImageContainer = document.querySelector(
         '#boosterPackImageContainer'
@@ -60,7 +57,7 @@ function initialize() {
     }
 
     boosterImageContainer.appendChild(boosterImage);
-}
+};
 
 /**
  * Select a random booster pack image to display.
@@ -209,3 +206,5 @@ function pickLegendaryOrPlaneswalkerCard(cards) {
     var legendaryOrPlaneswalkerCards = getCardsFilteredBySupertype(cards, ['Legendary', 'Planeswalker']);
     return legendaryOrPlaneswalkerCards[rnd(legendaryOrPlaneswalkerCards.length)];
 }
+
+window.onload = initialize;

@@ -1,0 +1,2205 @@
+[
+    {
+        "name": "Glen Epona",
+        "creator": "FanOfMostEverything",
+        "supertype": "Plane",
+        "subtype": "Lorwynny",
+        "text": "Whenever a player casts a spell during another player's turn, the casting player may draw a card.\n{CHAOS} Whenever you roll chaos, you may cast nonland cards as though they had flash until your next turn.",
+        "createdAt": "2014-03-01",
+        "sourceUrl": "https://www.fimfiction.net/blog/293064/vindication",
+        "notes": "A plane card inspired by the Breezie realm, created by FanOfMostEverything following the release of My Little Pony: Friendship is Magic episode 81: \"It Ain't Easy Being Breezies\"."
+    },
+    {
+        "name": "Twilight, Time-Snared",
+        "image": "FanOfMostEverything/Twilight, Time-Snared.png",
+        "creator": "FanOfMostEverything",
+        "cost": "UB",
+        "supertype": "Legendary Creature",
+        "subtype": "Unicorn Wizard",
+        "text": "When Twilight, Time-Snared enters the battlefield, scry X, where X is the number of experience counters you have.\n\nWhen Twilight dies, you get an experience counter.\n\nYou may cast Twilight from your graveyard.",
+        "pt": "1/1",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.derpibooru.org/1032613",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by FanOfMostEverything."
+    },
+    {
+        "name": "Unremarkable Flower Vendor",
+        "creator": "Eakin/FanOfMostEverything",
+        "cost": "1G",
+        "supertype": "Creature",
+        "subtype": "Pony",
+        "text": "At the beginning of your upkeep, you may pay B and exile Unremarkable Flower Vendor from your graveyard. If you do, put a 3/3 black Shapeshifter creature token named Changeling onto the battlefield.",
+        "flavorText": "Don't worry. You won't be missed.",
+        "pt": "1/1",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by Eakin and refactored by FanOfMostEverything."
+    },
+    {
+        "name": "Repetitive Stress",
+        "creator": "Eakin/FanOfMostEverything",
+        "cost": "B",
+        "supertype": "Enchantment",
+        "subtype": "Aura",
+        "text": "Enchant creature\n\nWhenever enchanted creature's controller casts a spell, put a -1/-1 counter on enchanted creature if that spell has the same name as a card in that player's graveyard.",
+        "flavorText": "\"Please, no. Not again.\"",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by Eakin and refactored by FanOfMostEverything."
+    },
+    {
+        "name": "Star Swirl",
+        "creator": "Eakin/FanOfMostEverything",
+        "cost": "2U",
+        "supertype": "Legendary Creature",
+        "subtype": "Unicorn Wizard",
+        "text": "Whenever Star Swirl attacks, defending player chooses another target attacking creature. That player gains control of that creature at the beginning of the next end step.\n\nWhenever Star Swirl blocks, attacking player chooses another target blocking creature. That player gains control of that creature at the beginning of the next end step.",
+        "flavorText": "To his enemies, he is suffering incarnate. To his allies, he's just insufferable.",
+        "pt": "4/4",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by Eakin and refactored by FanOfMostEverything."
+    },
+    {
+        "name": "Shooting Star",
+        "creator": "Eakin/FanOfMostEverything",
+        "cost": "UR",
+        "supertype": "Creature",
+        "subtype": "Unicorn",
+        "text": "Whenever you cast a spell, draw a card, then discard a card at random.",
+        "flavorText": "\"No more studying! I wanna go on an adventure!\"",
+        "pt": "2/2",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by Eakin and refactored by FanOfMostEverything. (Note that FanOfMostEverything advised against the use of a proper name for a nonlegendary creature)."
+    },
+    {
+        "name": "Paradoxical Creation",
+        "creator": "Eakin/FanOfMostEverything",
+        "cost": "U",
+        "supertype": "Sorcery",
+        "text": "Search your library for an artifact card with converted mana cost X or less, reveal it, and put it into your hand, where X is the number of experience you have. Then shuffle your library.",
+        "flavorText": "Note to self: Go back in time and design Paradoxical Creation card.",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by Eakin and refactored by FanOfMostEverything."
+    },
+    {
+        "name": "Home Run, Dear Companion",
+        "creator": "FanOfMostEverything",
+        "cost": "3",
+        "supertype": "Legendary Artifact",
+        "subtype": "Equipment",
+        "text": "Equipped creature gets +1/+1 for each experience counter you have.\n\nEquip 3",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by FanOfMostEverything."
+    },
+    {
+        "name": "Regalia of Harmony",
+        "creator": "Eakin/FanOfMostEverything",
+        "cost": "7",
+        "supertype": "Legendary Artifact",
+        "text": "Whenever an opponent casts a creature spell, flip a coin. If the coin comes up heads, counter that spell.\n\nSacrifice a creature: The next time you would flip a coin this turn, instead flip two coins and ignore one.",
+        "flavorText": "Better luck next time. We promise.",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by Eakin and refactored by FanOfMostEverything."
+    },
+    {
+        "name": "Cloud Kicker",
+        "creator": "Eakin/FanOfMostEverything",
+        "cost": "3W",
+        "supertype": "Creature",
+        "subtype": "Pegasus",
+        "text": "Flying\n\nPrevent all combat damage that Cloud Kicker would deal to or be dealt by Pony, Pegasus, and Unicorn creatures.\n\nWhenever damage is prevented this way, put a +1/+1 counter on Cloud Kicker.",
+        "flavorText": "On a good day, she takes a licking and keeps on ticking. On a great day, she takes a fondling, a caressing, and a number of improbably large objects as well.",
+        "pt": "2/2",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by Eakin and refactored by FanOfMostEverything. (Note that FanOfMostEverything advised against the use of a proper name for a nonlegendary creature)."
+    },
+    {
+        "name": "Forced Transformation",
+        "creator": "Eakin/FanOfMostEverything",
+        "cost": "3UB",
+        "supertype": "Sorcery",
+        "text": "Gain control of all Shapeshifter creatures. They become Ponies. Put a -1/-1 counter on each of them, then destroy all creatures you gained control of this way with power 0 or less.",
+        "flavorText": "They aren't called the Elements of Niceness.",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by Eakin and refactored by FanOfMostEverything."
+    },
+    {
+        "name": "Queen Sparkle",
+        "creator": "Eakin/FanOfMostEverything",
+        "cost": "8UUUU",
+        "supertype": "Legendary Creature",
+        "subtype": "Shapeshifter",
+        "text": "When Queen Sparkle enters the battlefield, draw cards equal to the number of cards in your library.\n\nSkip your draw step.\n\nYou have no maximum hand size.",
+        "flavorText": "\"So many options, so little time.\"",
+        "pt": "7/4",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by Eakin and refactored by FanOfMostEverything."
+    },
+    {
+        "name": "Queen Chrysalis",
+        "creator": "Eakin/FanOfMostEverything",
+        "cost": "3BBB",
+        "supertype": "Legendary Creature",
+        "subtype": "Shapeshifter",
+        "text": "Whenever a creature dealt damage by Queen Chrysalis this turn dies, put a 3/3 black Shapeshifter creature token named Changeling onto the battlefield.\n\nSacrifice a nontoken creature: Put a 3/3 black Shapeshifter creature token named Changeling onto the battlefield.",
+        "flavorText": "\"If you thought you could defeat me, your brain must not be working properly. Luckily I still have a use for it.\"",
+        "pt": "5/5",
+        "createdAt": "2015-11-29",
+        "sourceUrl": "https://www.fimfiction.net/group/199133/the-time-loop-trilogy/thread/223055/more-mtg-time-loop-cards",
+        "notes": "A custom card based on Eakin's Time Loop Trilogy, created by Eakin and refactored by FanOfMostEverything."
+    },
+    {
+        "name": "Megaspell Matrix",
+        "creator": "FanOfMostEverything",
+        "cost": "6",
+        "supertype": "Artifact",
+        "text": "Megaspell Matrix enters the battlefield tapped.\n\nXXX, T, Sacrifice Megaspell Matrix, Exile an instant or sorcery card with converted mana cost X from your hand: Copy the exiled card ten times. You may cast any number of those copies without paying their mana costs.",
+        "createdAt": "2016-02-07",
+        "sourceUrl": "https://www.fimfiction.net/blog/596048/sacrifice-a-story-fallout-equestria-outside-the-game",
+        "notes": "Created by FanOfMostEverything for a Fallout: Equestria/Magic the Gathering crossover concept."
+    },
+    {
+        "name": "Gamma Exaltation",
+        "creator": "FanOfMostEverything",
+        "cost": "2BB",
+        "supertype": "Enchantment",
+        "subtype": "Aura",
+        "text": "Enchant Zombie creature\n\nEnchanted Zombie gets +2/+2, gets an additional +2/+2 for each -1/-1 counter on it, and has wither and \"1B: This creature deals 1 damage to itself.\"",
+        "flavorText": "Most glows in the Wasteland are anything but healthy.",
+        "createdAt": "2016-02-07",
+        "sourceUrl": "https://www.fimfiction.net/blog/596048/sacrifice-a-story-fallout-equestria-outside-the-game",
+        "notes": "Created by FanOfMostEverything for a Fallout: Equestria/Magic the Gathering crossover concept."
+    },
+    {
+        "name": "Disintegrator Ray",
+        "creator": "FanOfMostEverything",
+        "cost": "1R",
+        "supertype": "Instant",
+        "text": "Disintegrator Ray deals 2 damage to target creature. That creature can't be regenerated this turn. If it would die this turn, exile it instead.",
+        "flavorText": "A more elegant weapon for a less civilized age.",
+        "createdAt": "2016-02-07",
+        "sourceUrl": "https://www.fimfiction.net/blog/596048/sacrifice-a-story-fallout-equestria-outside-the-game",
+        "notes": "Created by FanOfMostEverything for a Fallout: Equestria/Magic the Gathering crossover concept."
+    },
+    {
+        "name": "S.A.T.S. Strike",
+        "creator": "FanOfMostEverything",
+        "cost": "1R",
+        "supertype": "Instant",
+        "text": "Target creature gets +2/+0 and gains first strike until end of turn. Damage that would be dealt by that creature can't be prevented this turn",
+        "flavorText": "For a company devoted to survival, Stable-Tec made surprisingly effective means of killing ponies.",
+        "createdAt": "2016-02-07",
+        "sourceUrl": "https://www.fimfiction.net/blog/596048/sacrifice-a-story-fallout-equestria-outside-the-game",
+        "notes": "Created by FanOfMostEverything for a Fallout: Equestria/Magic the Gathering crossover concept."
+    },
+    {
+        "name": "Ditzy, Wasteland Purveyor",
+        "creator": "FanOfMostEverything",
+        "cost": "GWU",
+        "supertype": "Legendary Creature",
+        "subtype": "Pegasus Zombie",
+        "text": "Flying\n\nWhen Ditzy, Wasteland Purveyor enters the battlefield, you may pay X. If you do, search your library for a permanent card with converted mana cost X, put it onto the battlefield, then shuffle your library.\n\nGWU: Exile Ditzy.\n\nHoofcraft — You may cast Ditzy from exile as long as you control three or more Ponies, Pegasi, and/or Unicorns.",
+        "pt": "1/1",
+        "createdAt": "2016-02-07",
+        "sourceUrl": "https://www.fimfiction.net/blog/596048/sacrifice-a-story-fallout-equestria-outside-the-game",
+        "notes": "Created by FanOfMostEverything for a Fallout: Equestria/Magic the Gathering crossover concept."
+    },
+    {
+        "name": "The Equestrian Wasteland",
+        "creator": "FanOfMostEverything",
+        "supertype": "Legendary Land",
+        "text": "T: Add C to your mana pool.\n\nT: Add one mana of any color to your mana pool. You get a poison counter.\n\nWhat once bordered on utopia is now toxic to body and soul alike.",
+        "createdAt": "2016-02-07",
+        "sourceUrl": "https://www.fimfiction.net/blog/596048/sacrifice-a-story-fallout-equestria-outside-the-game",
+        "notes": "Created by FanOfMostEverything for a Fallout: Equestria/Magic the Gathering crossover concept."
+    },
+    {
+        "name": "Snogmahydra",
+        "creator": "FanOfMostEverything",
+        "cost": "4GU",
+        "supertype": "Creature",
+        "subtype": "Hydra",
+        "text": "When Snogmahydra enters the battlefield, create two 1/1 blue Unicorn creature tokens.\n\n(gu), Tap two other untapped creatures you control: Put a +1/+1 counter on Snogmahydra.",
+        "flavorText": "Love leads to new life.",
+        "pt": "4/4",
+        "notes": "A joke card created by FanOfMostEverything on the Drunkwriting Central Discord chat during a drunkwriting session.",
+        "createdAt": "2016-11-14"
+    },
+    {
+        "name": "Indigo, Jealous God",
+        "creator": "Void Knight",
+        "cost": "1BR",
+        "supertype": "Planeswalker",
+        "subtype": "Indigo",
+        "text": "+1: You may sacrifice a creature. If you do, put a number of loyalty counters on Indigo, Jealous God equal to that creature's toughness.\n-2: Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.\n-X: Indigo deals X damage divided as you choose among any number of target creatures and/or players.",
+        "loyalty": "3",
+        "notes": "A one-off card from the \"Indigo Origins\" short by Void Knight. Chapter 193 of the Group Precipitation project.",
+        "sourceUrl": "https://www.fimfiction.net/story/323071/193/group-precipitation/indigo-origins-by-void-knight",
+        "createdAt": "2017-04-23"
+    },
+    {
+        "name": "Unfinished Masterpiece",
+        "creator": "FanOfMostEverything",
+        "cost": "2",
+        "supertype": "Artifact",
+        "text": "Fabulosity 3 (3: If this artifact isn't fabulous, put a gem counter on it and it becomes fabulous.)\n\nAs long as Unfinished Masterpiece is fabulous, it's a 4/4 Golem artifact creature.",
+        "flavorText": "Even the finest sculptor needs the occassional break.",
+        "createdAt": "2017-05-22",
+        "sourceUrl": "https://www.fimfiction.net/blog/737836/glamour-spinning",
+        "notes": "Created by FanOfMostEverything to introduce the new Fabulosity mechanic for Friendship is Card Games."
+    },
+    {
+        "name": "Stylish Confidence",
+        "creator": "FanOfMostEverything",
+        "cost": "2WW",
+        "supertype": "Enchantment",
+        "text": "Creatures you control get +1/+1\n\nFabulosity 4WW\n\nAs long as Stylish Confidence is fabulous, creatures you control have double strike.",
+        "createdAt": "2017-05-22",
+        "sourceUrl": "https://www.fimfiction.net/blog/737836/glamour-spinning",
+        "notes": "Created by FanOfMostEverything to introduce the new Fabulosity mechanic for Friendship is Card Games."
+    },
+    {
+        "name": "Market Research",
+        "creator": "FanOfMostEverything",
+        "cost": "2U",
+        "supertype": "Enchantment",
+        "text": "Fabulosity 3UU\n\nAt the beginning of your draw step, draw an additional card. Then, if Market Research isn't fabulous, discard a card.",
+        "flavorText": "Know the trends now to create them later.",
+        "createdAt": "2017-05-22",
+        "sourceUrl": "https://www.fimfiction.net/blog/737836/glamour-spinning",
+        "notes": "Created by FanOfMostEverything to introduce the new Fabulosity mechanic for Friendship is Card Games."
+    },
+    {
+        "name": "Retro Chic",
+        "creator": "FanOfMostEverything",
+        "cost": "3B",
+        "supertype": "Enchantment",
+        "text": "When Retro Chic enters the battlefield, return target creature card from your graveyard to the battlefield. Exile it when Retro Chic leaves the battlefield.\n\nFabulosity 6B\n\nAt the beginning of your upkeep, if Retro Chic is fabulous, you may return target creature card from your graveyard to the battlefield. If you do, exile that creature when Retro Chic leaves the battlefield.",
+        "createdAt": "2017-05-22",
+        "sourceUrl": "https://www.fimfiction.net/blog/737836/glamour-spinning",
+        "notes": "Created by FanOfMostEverything to introduce the new Fabulosity mechanic for Friendship is Card Games."
+    },
+    {
+        "name": "Boundless Creativity",
+        "creator": "FanOfMostEverything",
+        "cost": "RR",
+        "supertype": "Enchantment",
+        "text": "Fabulosity 4RR\n\nAt the beginning of your upkeep, exile the top card of your library. You may play that card this turn and, if Boundless Creativity is fabulous, you may cast it without paying its mana cost this turn.",
+        "createdAt": "2017-05-22",
+        "sourceUrl": "https://www.fimfiction.net/blog/737836/glamour-spinning",
+        "notes": "Created by FanOfMostEverything to introduce the new Fabulosity mechanic for Friendship is Card Games."
+    },
+    {
+        "name": "Splendid Adornments",
+        "creator": "FanOfMostEverything",
+        "cost": "2G",
+        "supertype": "Enchantment",
+        "text": "Each permanent you control with a counter on it has hexproof.\n\nFabulosity 4GG\n\nAs long as Splendid Adornments is fabulous, each permanent you control with a counter on it has indestructible."
+    },
+    {
+        "name": "Femme Fatale",
+        "creator": "FanOfMostEverything",
+        "cost": "1(bg)",
+        "supertype": "Enchantment",
+        "subtype": "Aura",
+        "text": "Enchant creature you control\n\nEnchanted creature has deathtouch.\n\nFabulosity 3(bg)(bg)\n\nWhen Femme Fatale becomes fabulous, enchanted creature fights target creature.",
+        "createdAt": "2017-05-22",
+        "sourceUrl": "https://www.fimfiction.net/blog/737836/glamour-spinning",
+        "notes": "Created by FanOfMostEverything to introduce the new Fabulosity mechanic for Friendship is Card Games."
+    },
+    {
+        "name": "Carousel Boutique",
+        "creator": "FanOfMostEverything",
+        "supertype": "Land",
+        "text": "T: Add C to your mana pool.\n\nFabulosity 5\n\nT: Add two mana in any combination of colors to your mana pool. Activate this ability only if Carousel Boutique is fabulous.",
+        "createdAt": "2017-05-22",
+        "sourceUrl": "https://www.fimfiction.net/blog/737836/glamour-spinning",
+        "notes": "Created by FanOfMostEverything to introduce the new Fabulosity mechanic for Friendship is Card Games."
+    },
+    {
+        "name": "Ditzy’s Defeat",
+        "creator": "FanOfMostEverything",
+        "cost": "U",
+        "supertype": "Instant",
+        "text": "Put target blue permanent or blue spell on top of its owner’s library. If it was a Ditzy planeswalker or Ditzy planeswalker spell, fateseal 1.",
+        "flavorText": "“Don’t feel bad, Ditzy. Even I don’t see a way to stop me.”\n—Nicol Bolas",
+        "createdAt": "2017-06-17",
+        "notes": "Created by FanOfMostEverything following the spoiler for Jace's Defeat, and posted on the Unhinged Discord chat. Part of a Defeat cycle for Friendship Is Card Games."
+    },
+    {
+        "name": "Pinkie’s Defeat",
+        "creator": "FanOfMostEverything",
+        "cost": "B",
+        "supertype": "Sorcery",
+        "text": "Target player sacrifices a Pinkie planeswalker. If that player does, he or she loses 2 life and you gain 2 life. Otherwise, that player sacrifices a black creature or black planeswalker.",
+        "flavorText": "“Who’s laughing now, Pinkie?”\n—Nicol Bolas",
+        "createdAt": "2017-06-17",
+        "notes": "Created by FanOfMostEverything following the spoiler for Jace's Defeat, and posted on the Unhinged Discord chat. Part of a Defeat cycle for Friendship Is Card Games."
+    },
+    {
+        "name": "Discord’s Defeat",
+        "creator": "FanOfMostEverything",
+        "cost": "1R",
+        "supertype": "Sorcery",
+        "text": "Exile target red permanent an opponent controls. If it wasn’t a Discord planeswalker, its controller reveals the top card of his or her library. If it’s a permanent card, he or she puts it onto the battlefield.",
+        "flavorText": "“What’s wrong, Discord? I thought you liked surprises.”\n—Nicol Bolas",
+        "createdAt": "2017-06-17",
+        "notes": "Created by FanOfMostEverything following the spoiler for Jace's Defeat, and posted on the Unhinged Discord chat. Part of a Defeat cycle for Friendship Is Card Games."
+    },
+    {
+        "name": "Yak Editor",
+        "creator": "FanOfMostEverything",
+        "cost": "4R",
+        "supertype": "Creature",
+        "subtype": "Ox Bureaucrat",
+        "text": "Whenever a player casts a wordy spell, Yak Editor deals 3 damage to that player. (Something is wordy if it has four or more lines of text in its text box.)",
+        "flavorText": "“Story not perfect. Yak smash!”",
+        "pt": "4/4",
+        "createdAt": "2017-06-17",
+        "sourceUrl": "https://www.fimfiction.net/story/355914/11/unhinged/explode-twice-adventure-comedy",
+        "notes": "Created by FanOfMostEverything for SirNotAppearingInThisFic's \"Explode Twice\" short, published as part of the \"Unhinged\" anthology."
+    },
+    {
+        "name": "Spherical Assumption",
+        "creator": "FanOfMostEverything",
+        "cost": "2(gu)",
+        "supertype": "Instant",
+        "text": "Target creature loses all creature types and has base power and toughness 3/3 until end of turn.",
+        "flavorText": "“It’s so much simpler this way.”\n—Jalira, master polymorphist",
+        "createdAt": "2017-06-17",
+        "sourceUrl": "https://www.fimfiction.net/story/355914/11/unhinged/explode-twice-adventure-comedy",
+        "notes": "Created by FanOfMostEverything for SirNotAppearingInThisFic's \"Explode Twice\" short, published as part of the \"Unhinged\" anthology."
+    },
+    {
+        "name": "Void Smasher",
+        "creator": "FanOfMostEverything",
+        "supertype": "Creature",
+        "subtype": "Ox Warrior",
+        "cost": "4GU",
+        "text": "Flying, trample Void Smasher can’t block creatures without flying. You may cast Void Smasher from exile.",
+        "flavorText": "”Must smash Eldrazi from orbit. Is only way to be sure.”",
+        "pt": "4/4",
+        "createdAt": "2017-06-17",
+        "sourceUrl": "https://www.fimfiction.net/story/355914/11/unhinged/explode-twice-adventure-comedy",
+        "notes": "Created by FanOfMostEverything for SirNotAppearingInThisFic's \"Explode Twice\" short, published as part of the \"Unhinged\" anthology."
+    },
+
+    {
+        "name": "Cadance, Princess of Love",
+        "image": "jrk08004/cadance__princess_of_love_by_jrk08004-d4y9waf.jpg",
+        "creator": "jrk08004",
+        "sourceUrl": "http://jrk08004.deviantart.com/gallery/",
+        "notes": "One of 6 cards created by jrk08004 for an apparently abandoned MLP Season 2 set."
+    },
+    {
+        "name": "Celestia, Alicorn of the Sun",
+        "image": "jrk08004/celestia__alicorn_of_the_sun_by_jrk08004-d4y9vvy.jpg",
+        "creator": "jrk08004",
+        "sourceUrl": "http://jrk08004.deviantart.com/gallery/",
+        "notes": "One of 6 cards created by jrk08004 for an apparently abandoned MLP Season 2 set."
+    },
+    {
+        "name": "Chrysalis, Queen of the Changelings",
+        "image": "jrk08004/chrysalis__queen_of_the_changelings_by_jrk08004-d4y9w5p.jpg",
+        "creator": "jrk08004",
+        "sourceUrl": "http://jrk08004.deviantart.com/gallery/",
+        "notes": "One of 6 cards created by jrk08004 for an apparently abandoned MLP Season 2 set."
+    },
+    {
+        "name": "Nuclear Rainboom",
+        "image": "jrk08004/nuclear_rainboom_by_jrk08004-d4yp1ha.jpg",
+        "creator": "jrk08004",
+        "sourceUrl": "http://jrk08004.deviantart.com/gallery/",
+        "notes": "One of 6 cards created by jrk08004 for an apparently abandoned MLP Season 2 set."
+    },
+    {
+        "name": "Shining Armor, Captain of the Guard",
+        "image": "jrk08004/shining_armor__captain_of_the_guard_by_jrk08004-d4y9vta.jpg",
+        "creator": "jrk08004",
+        "sourceUrl": "http://jrk08004.deviantart.com/gallery/",
+        "notes": "One of 6 cards created by jrk08004 for an apparently abandoned MLP Season 2 set."
+    },
+    {
+        "name": "Tank the Tortoise",
+        "image": "jrk08004/tank_the_tur___tortoise_by_jrk08004-d4yp1n5.png",
+        "creator": "jrk08004",
+        "sourceUrl": "http://jrk08004.deviantart.com/gallery/",
+        "notes": "One of 6 cards created by jrk08004 for an apparently abandoned MLP Season 2 set."
+    },
+    {
+        "name": "Applejack, Apple Bucker",
+        "image": "rowcla/rowcla other stuff/applejack__apple_bucker_by_rowcla-d5u80am.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Blossomforth, the Illuminator",
+        "image": "rowcla/rowcla other stuff/blossomforth_the_illuminator_by_rowcla-d5uas4h.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Boxtrot Everwood",
+        "image": "rowcla/rowcla other stuff/crisis_equestria__flathoof_by_rowcla-d5lz37v.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff",
+        "notes": "rowcla's OC."
+    },
+    {
+        "name": "Daring Do, Adventurer",
+        "image": "rowcla/rowcla other stuff/daring_do_adventurer_by_rowcla-d5uo4xy.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Dr. Whooves, Time Lord",
+        "image": "rowcla/rowcla other stuff/dr__whooves_time_lord_by_rowcla-d5ufty1.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Fluttershy, Nature Enthusiast",
+        "image": "rowcla/rowcla other stuff/fluttershy__nature_enthusiast_by_rowcla-d5tzyih.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Luna, Soul of the Stars",
+        "image": "rowcla/rowcla other stuff/luna_soul_of_the_stars_by_rowcla-d5tsq45.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Lyra, of the Equilibrium",
+        "image": "rowcla/rowcla other stuff/lyra_of_the_equilibrium_by_rowcla-d6a44mx.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Lyra, Spirit Channeler",
+        "image": "rowcla/rowcla other stuff/lyra__spirit_channeler_by_rowcla-d5uk96y.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Parapsychological Sphere",
+        "image": "rowcla/rowcla other stuff/parapsychological_sphere_by_rowcla-d6dzwdd.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Philomena, Ethereal Phoenix",
+        "image": "rowcla/rowcla other stuff/philomena__ethereal_phoenix_by_rowcla-d5tw9c1.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Pinkie Pie, Of the Burning Rage",
+        "image": "rowcla/rowcla other stuff/pinkie_pie_of_the_burning_rage_by_rowcla-d5u749q.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Pinkie Pie, Soul Reaper",
+        "image": "rowcla/rowcla other stuff/pinkie_pie__soul_reaper_by_rowcla-d64zyw1.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Rainbow Dash, Barrier Breaker",
+        "image": "rowcla/rowcla other stuff/rainbow_dash__barrier_breaker_by_rowcla-d64zha7.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Rainbow Dash, Sky Igniter",
+        "image": "rowcla/rowcla other stuff/rainbow_dash__sky_igniter_by_rowcla-d5twfgo.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Rarity, Mystic Partisan",
+        "image": "rowcla/rowcla other stuff/rarity__mystic_partisan_by_rowcla-d5u3h8t.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Sombra, Crystal Tyrant",
+        "image": "rowcla/rowcla other stuff/sombra__crystal_tyrant_by_rowcla-d5tw6t2.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Trixie, the Great and Powerful",
+        "image": "rowcla/rowcla other stuff/trixie__the_great_and_powerful_by_rowcla-d670pgw.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Trixie, The now somewhat confusing actually",
+        "image": "rowcla/rowcla other stuff/trixie__the_now_somewhat_confusing_actually_by_rowcla-d5gu3uf.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Twilight Sparkle, Magician",
+        "image": "rowcla/rowcla other stuff/twilight_sparkle__magician_by_rowcla-d5u7vg6.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Vinyl Scratch, Rave Master",
+        "image": "rowcla/rowcla other stuff/vinyl_scratch_rave_master_by_rowcla-d6gb0o5.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Zecora, Alchemist Elite",
+        "image": "rowcla/rowcla other stuff/zecora__alchemist_elite_by_rowcla-d5tsosv.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464092/Other-stuff"
+    },
+    {
+        "name": "Applebloom",
+        "image": "rowcla/rowcla old stuff imbalanced/applebloom_by_rowcla-d4httc0.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Applejack",
+        "image": "rowcla/rowcla old stuff imbalanced/applejack_by_rowcla-d4httpf.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Applejack, Swashbuckler of Equestria",
+        "image": "rowcla/rowcla old stuff imbalanced/applejack__swashbuckler_of_equestria_by_rowcla-d4httbg.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Appleloosa",
+        "image": "rowcla/rowcla old stuff imbalanced/appleloosa_by_rowcla-d4htu17.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Berryshine",
+        "image": "rowcla/rowcla old stuff imbalanced/berryshine_by_rowcla-d4httai.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Big McIntosh",
+        "image": "rowcla/rowcla old stuff imbalanced/big_mcintosh_by_rowcla-d4htt9o.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Bon Bon",
+        "image": "rowcla/rowcla old stuff imbalanced/bon_bon_by_rowcla-d4htt8z.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Bow Down to My Power",
+        "image": "rowcla/rowcla old stuff imbalanced/bow_down_to_my_power_by_rowcla-d4i30qk.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Braeburn the settler",
+        "image": "rowcla/rowcla old stuff imbalanced/braeburn_the_settler_by_rowcla-d4lsix6.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Burning rage",
+        "image": "rowcla/rowcla old stuff imbalanced/burning_rage_by_rowcla-d4jbcz7.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Call of the moon // Call of the sun",
+        "image": "rowcla/rowcla old stuff imbalanced/call_of_the_sun___call_of_the_moon_by_rowcla-d4jbp3v.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Canterlot",
+        "image": "rowcla/rowcla old stuff imbalanced/canterlot_by_rowcla-d4mtrkq.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Carrot Top",
+        "image": "rowcla/rowcla old stuff imbalanced/carrot_top_by_rowcla-d4htt8c.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Celestia, Demon Slayer",
+        "image": "rowcla/rowcla old stuff imbalanced/celestia__demon_slayer_by_rowcla-d4htt7z.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Celestia, Princess of Equestria",
+        "image": "rowcla/rowcla old stuff imbalanced/celestia__princess_of_equestria_by_rowcla-d4y5lwg.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Cheerilee",
+        "image": "rowcla/rowcla old stuff imbalanced/cheerilee_by_rowcla-d4htt7a.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Chrysalis, Queen of the Changelings",
+        "image": "rowcla/rowcla old stuff imbalanced/chrysalis__queen_of_the_changelings_by_rowcla-d4xcooc.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Cutie Pox",
+        "image": "rowcla/rowcla old stuff imbalanced/cutie_pox_by_rowcla-d4httig.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Derpy Hooves",
+        "image": "rowcla/rowcla old stuff imbalanced/derpy_hooves_by_rowcla-d4htt5p.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Derpy Hooves, Ninja Assassin",
+        "image": "rowcla/rowcla old stuff imbalanced/derpy_hooves__ninja_assassin_by_rowcla-d4kguko.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Derpy Hooves, Queen of Destruction",
+        "image": "rowcla/rowcla old stuff imbalanced/derpy_hooves__queen_of_destruction_by_rowcla-d4n6n3a.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Discord",
+        "image": "rowcla/rowcla old stuff imbalanced/discord_by_rowcla-d4httoa.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Discord",
+        "image": "rowcla/rowcla old stuff imbalanced/discord_by_rowcla-d4lsiun.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Doctor Whooves",
+        "image": "rowcla/rowcla old stuff imbalanced/doctor_whooves_by_rowcla-d4htt4r.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Envelop in darkness",
+        "image": "rowcla/rowcla old stuff imbalanced/envelop_in_darkness_by_rowcla-d4htthf.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Eternal Night",
+        "image": "rowcla/rowcla old stuff imbalanced/eternal_night_by_rowcla-d4jbcw5.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Everfree Forest",
+        "image": "rowcla/rowcla old stuff imbalanced/everfree_forest_by_rowcla-d4htttl.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Fluttershy",
+        "image": "rowcla/rowcla old stuff imbalanced/fluttershy_by_rowcla-d4httnv.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Fluttershy, Master of Warfare",
+        "image": "rowcla/rowcla old stuff imbalanced/fluttershy__master_of_warfare_by_rowcla-d4htt4b.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Fluttershy, Protector of life",
+        "image": "rowcla/rowcla old stuff imbalanced/fluttershy__protector_of_life_by_rowcla-d4httcv.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Fluttershy's House",
+        "image": "rowcla/rowcla old stuff imbalanced/fluttershy__s_house_by_rowcla-d4httu6.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Frozen Equestria",
+        "image": "rowcla/rowcla old stuff imbalanced/frozen_equestria_by_rowcla-d4j96tc.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Grand Galloping Gala",
+        "image": "rowcla/rowcla old stuff imbalanced/grand_galloping_gala_by_rowcla-d4httgk.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Grand Galloping Gala garden",
+        "image": "rowcla/rowcla old stuff imbalanced/grand_galloping_gala_garden_by_rowcla-d4n87nw.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Gummi",
+        "image": "rowcla/rowcla old stuff imbalanced/gummi_by_rowcla-d4j9a1d.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Luna",
+        "image": "rowcla/rowcla old stuff imbalanced/luna_by_rowcla-d4httn3.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Luna, Jedi master",
+        "image": "rowcla/rowcla old stuff imbalanced/luna__jedi_master_by_rowcla-d4htt3o.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Lyra Heartstrings",
+        "image": "rowcla/rowcla old stuff imbalanced/lyra_heartstrings_by_rowcla-d4htt2x.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Maggie Pie",
+        "image": "rowcla/rowcla old stuff imbalanced/maggie_pie_by_rowcla-d4htt29.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Meditation",
+        "image": "rowcla/rowcla old stuff imbalanced/meditation_by_rowcla-d4j9b9p.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Nightmare Moon",
+        "image": "rowcla/rowcla old stuff imbalanced/nightmare_moon_by_rowcla-d4htt1r.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Nightmare moon, Queen of the night",
+        "image": "rowcla/rowcla old stuff imbalanced/nightmare_moon__queen_of_the_night_by_rowcla-d4l9cyu.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Nightmare night",
+        "image": "rowcla/rowcla old stuff imbalanced/nightmare_night_by_rowcla-d4n6rbx.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Nyx",
+        "image": "rowcla/rowcla old stuff imbalanced/nyx_by_rowcla-d4l9d07.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Octavia, Assassin of the Creed",
+        "image": "rowcla/rowcla old stuff imbalanced/octavia__assassin_of_the_creed_by_rowcla-d4htt0g.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Octavia",
+        "image": "rowcla/rowcla old stuff imbalanced/octavia_by_rowcla-d4n87pc.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Philomena",
+        "image": "rowcla/rowcla old stuff imbalanced/philomena_by_rowcla-d4htszc.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Photo Finish",
+        "image": "rowcla/rowcla old stuff imbalanced/photo_finish_by_rowcla-d4ncc6o.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Pinkie Pie",
+        "image": "rowcla/rowcla old stuff imbalanced/pinkie_pie_by_rowcla-d4httld.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Pinkie Pie, Master of the Madness",
+        "image": "rowcla/rowcla old stuff imbalanced/pinkie_pie__master_of_the_madness_by_rowcla-d4htsyo.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Pinkie Pie, Ninja in the Mists",
+        "image": "rowcla/rowcla old stuff imbalanced/pinkie_pie__ninja_in_the_mists_by_rowcla-d4htsxe.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Pinkie Pie the insane",
+        "image": "rowcla/rowcla old stuff imbalanced/pinkie_pie_the_insane_by_rowcla-d4httmg.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Pip",
+        "image": "rowcla/rowcla old stuff imbalanced/pip_by_rowcla-d4htswg.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Pipsqueak, hardened Pirate",
+        "image": "rowcla/rowcla old stuff imbalanced/pipsqueak__hardened_pirate_by_rowcla-d4nmm2x.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Pony gathering",
+        "image": "rowcla/rowcla old stuff imbalanced/pony_gathering_by_rowcla-d4httfu.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Pony Mayor",
+        "image": "rowcla/rowcla old stuff imbalanced/pony_mayor_by_rowcla-d4lsivw.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Pony Ninja",
+        "image": "rowcla/rowcla old stuff imbalanced/pony_ninja_by_rowcla-d4htsvi.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Pony Token",
+        "image": "rowcla/rowcla old stuff imbalanced/pony_token_by_rowcla-d4htsv0.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced",
+        "cardType": "token"
+    },
+    {
+        "name": "Princess Celestia",
+        "image": "rowcla/rowcla old stuff imbalanced/princess_celestia_by_rowcla-d4htsuh.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Celestia",
+        "image": "rowcla/rowcla old stuff imbalanced/princess_celestia_by_rowcla-d4httow.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Rainbow Dash, 20% cooler pilot",
+        "image": "rowcla/rowcla old stuff imbalanced/rainbow_dash__20_percent_cooler_pilot_by_rowcla-d4htstp.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Rainbow Dash",
+        "image": "rowcla/rowcla old stuff imbalanced/rainbow_dash_by_rowcla-d4httkw.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Rainbow Dash, Master of flight",
+        "image": "rowcla/rowcla old stuff imbalanced/rainbow_dash__master_of_flight_by_rowcla-d4htsoj.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Rarity",
+        "image": "rowcla/rowcla old stuff imbalanced/rarity_by_rowcla-d4httk4.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Rarity, Fashionable Vampire",
+        "image": "rowcla/rowcla old stuff imbalanced/rarity__fashionable_vampire_by_rowcla-d4htssg.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Rising of the sun",
+        "image": "rowcla/rowcla old stuff imbalanced/rising_of_the_sun_by_rowcla-d4htu1t.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Royal Guards",
+        "image": "rowcla/rowcla old stuff imbalanced/royal_guards_by_rowcla-d4htsro.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Scootaloo",
+        "image": "rowcla/rowcla old stuff imbalanced/scootaloo_by_rowcla-d4htsqr.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Screwball",
+        "image": "rowcla/rowcla old stuff imbalanced/screwball_by_rowcla-d4htsq9.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Smarty Pants",
+        "image": "rowcla/rowcla old stuff imbalanced/smarty_pants_by_rowcla-d4j5icz.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Soarin",
+        "image": "rowcla/rowcla old stuff imbalanced/soarin_by_rowcla-d4htsls.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Sonic Rainboom",
+        "image": "rowcla/rowcla old stuff imbalanced/sonic_rainboom_by_rowcla-d4j5ipm.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Sonic Rainnuke",
+        "image": "rowcla/rowcla old stuff imbalanced/sonic_rainnuke_by_rowcla-d4j5ilx.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Spike",
+        "image": "rowcla/rowcla old stuff imbalanced/spike_by_rowcla-d4j9aff.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Spitfire",
+        "image": "rowcla/rowcla old stuff imbalanced/spitfire_by_rowcla-d4htsl5.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Sugarcube corner",
+        "image": "rowcla/rowcla old stuff imbalanced/sugarcube_corner_by_rowcla-d4httrn.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Sweetie Bell",
+        "image": "rowcla/rowcla old stuff imbalanced/sweetie_bell_by_rowcla-d4htskd.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "The Mysterious Mare Do Well",
+        "image": "rowcla/rowcla old stuff imbalanced/the_mysterious_mare_do_well_by_rowcla-d4j98ub.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "The Tardis",
+        "image": "rowcla/rowcla old stuff imbalanced/the_tardis_by_rowcla-d4htu2p.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Timberwolves",
+        "image": "rowcla/rowcla old stuff imbalanced/timberwolves_by_rowcla-d4mtofr.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Trixie, The Great and Powerful",
+        "image": "rowcla/rowcla old stuff imbalanced/trixie__the_great_and_powerful_by_rowcla-d4lsj0f.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Trixie, Ultimate Sorceress",
+        "image": "rowcla/rowcla old stuff imbalanced/trixie__ultimate_sorceress_by_rowcla-d4n6naa.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Twilight Sparkle",
+        "image": "rowcla/rowcla old stuff imbalanced/twilight_sparkle_by_rowcla-d4httj9.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Twilight Sparkle, Elite Battlemage",
+        "image": "rowcla/rowcla old stuff imbalanced/twilight_sparkle__elite_battlemage_by_rowcla-d4n87n6.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Twilight Sparkle, Supreme Magician",
+        "image": "rowcla/rowcla old stuff imbalanced/twilight_sparkle__supreme_magician_by_rowcla-d4jbd3z.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Vinyl Scratch",
+        "image": "rowcla/rowcla old stuff imbalanced/vinyl_scratch_by_rowcla-d4htsia.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Whitetail Forest",
+        "image": "rowcla/rowcla old stuff imbalanced/whitetail_forest_by_rowcla-d4httr5.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Windigo",
+        "image": "rowcla/rowcla old stuff imbalanced/windigo_by_rowcla-d4kk1hg.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Zecora",
+        "image": "rowcla/rowcla old stuff imbalanced/zecora_by_rowcla-d4htshi.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Zecora's Hut",
+        "image": "rowcla/rowcla old stuff imbalanced/zecora__s_hut_by_rowcla-d4httq4.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/41464095/Old-stuff-imbalanced"
+    },
+    {
+        "name": "Blessing of Corruption",
+        "image": "rowcla/rowcla uncategorized/blessing_of_corruption_by_rowcla-d5ymzxm.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/",
+        "notes": "One of 4 cards listed on rowcla's main gallery page that isn't categorized in any gallery subsection."
+    },
+    {
+        "name": "Briarthorn",
+        "image": "rowcla/rowcla uncategorized/briarthorn_by_rowcla-d5ybdyd.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/",
+        "notes": "One of 4 cards listed on rowcla's main gallery page that isn't categorized in any gallery subsection."
+    },
+    {
+        "name": "Havocwing, Infermomancer Unleashed",
+        "image": "rowcla/rowcla uncategorized/havocwing_infernomancer_unleashed_by_rowcla-d6wmx9m.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/",
+        "notes": "One of 4 cards listed on rowcla's main gallery page that isn't categorized in any gallery subsection."
+    },
+    {
+        "name": "Nami, the Tide Caller",
+        "image": "rowcla/rowcla uncategorized/nami_the_tide_caller_by_rowcla-d60qffg.jpg",
+        "creator": "rowcla",
+        "sourceUrl": "http://rowcla.deviantart.com/gallery/",
+        "notes": "One of 4 cards listed on rowcla's main gallery page that isn't categorized in any gallery subsection."
+    },
+    {
+        "name": "Pack Rat",
+        "image": "alternatepony/Pack Rat/pack_rat_common_by_alternatepony-d5vkftw.jpg",
+        "creator": "alternatepony",
+        "sourceUrl": "http://alternatepony.deviantart.com/gallery/48535660/Commissions",
+        "notes": "One of 4 cards commissioned by BooRat, depicting his OC."
+    },
+    {
+        "name": "Pack Rat, The Amalgamated",
+        "image": "alternatepony/Pack Rat/pack_rat_the_amalgamated_by_alternatepony-d5vkixm.jpg",
+        "creator": "alternatepony",
+        "sourceUrl": "http://alternatepony.deviantart.com/gallery/48535660/Commissions",
+        "notes": "One of 4 cards commissioned by BooRat, depicting his OC."
+    },
+    {
+        "name": "Pack Rat, The Anarchist",
+        "image": "alternatepony/Pack Rat/pack_rat_the_anarchist__uncommon_by_alternatepony-d5vkhoa.jpg",
+        "creator": "alternatepony",
+        "sourceUrl": "http://alternatepony.deviantart.com/gallery/48535660/Commissions",
+        "notes": "One of 4 cards commissioned by BooRat, depicting his OC."
+    },
+    {
+        "name": "Pack Rat, The Exile",
+        "image": "alternatepony/Pack Rat/pack_rat_the_exile_by_alternatepony-d5vkkvq.jpg",
+        "creator": "alternatepony",
+        "sourceUrl": "http://alternatepony.deviantart.com/gallery/48535660/Commissions",
+        "notes": "One of 4 cards commissioned by BooRat, depicting his OC."
+    },
+    {
+        "name": "Celestia Boss",
+        "image": "alternatepony/uncategorized/celestia_boss_mtg_by_alternatepony-d5vniaa.jpg",
+        "creator": "alternatepony",
+        "sourceUrl": "http://alternatepony.deviantart.com/gallery/35662789/Creatures",
+        "notes": "One of 2 cards that don't appear to be part of alternatepony's humanized MLP set."
+    },
+    {
+        "name": "Naked Sparkle",
+        "image": "alternatepony/uncategorized/naked_sparkle_mtg_by_alternatepony-d5vngvp.jpg",
+        "creator": "alternatepony",
+        "sourceUrl": "http://alternatepony.deviantart.com/gallery/35662789/Creatures",
+        "notes": "One of 2 cards that don't appear to be part of alternatepony's humanized MLP set."
+    },
+    {
+        "name": "Another Side of Me",
+        "image": "Midnight-Page/another_side_of_me_by_notepic4-d55o2rd.jpg",
+        "creator": "Midnight-Page",
+        "sourceUrl": "http://midnight-page.deviantart.com/gallery/37987304/Friendship-The-Gathering-Cards"
+    },
+    {
+        "name": "Bloody Mare-y",
+        "image": "Midnight-Page/bloody_mare_y_by_notepic4-d57fmxq.jpg",
+        "creator": "Midnight-Page",
+        "sourceUrl": "http://midnight-page.deviantart.com/gallery/37987304/Friendship-The-Gathering-Cards"
+    },
+    {
+        "name": "Cyberpony Smith",
+        "image": "Midnight-Page/cyberpony_smith_by_notepic4-d56h5m9.jpg",
+        "creator": "Midnight-Page",
+        "sourceUrl": "http://midnight-page.deviantart.com/gallery/37987304/Friendship-The-Gathering-Cards"
+    },
+    {
+        "name": "Daring Do, Treasure Hunter",
+        "image": "Midnight-Page/daring_do__treasure_hunter_by_notepic4-d55o0op.jpg",
+        "creator": "Midnight-Page",
+        "sourceUrl": "http://midnight-page.deviantart.com/gallery/37987304/Friendship-The-Gathering-Cards"
+    },
+    {
+        "name": "Homage, The Truth Speaker",
+        "image": "Midnight-Page/homage__the_truth_speaker_by_notepic4-d56h0g8.jpg",
+        "creator": "Midnight-Page",
+        "sourceUrl": "http://midnight-page.deviantart.com/gallery/37987304/Friendship-The-Gathering-Cards"
+    },
+    {
+        "name": "Join The Herd",
+        "image": "Midnight-Page/join_the_herd_by_notepic4-d55o4xu.jpg",
+        "creator": "Midnight-Page",
+        "sourceUrl": "http://midnight-page.deviantart.com/gallery/37987304/Friendship-The-Gathering-Cards"
+    },
+    {
+        "name": "Totik's Invitation",
+        "image": "Midnight-Page/totik__s_invitation_by_notepic4-d56k8ff.jpg",
+        "creator": "Midnight-Page",
+        "sourceUrl": "http://midnight-page.deviantart.com/gallery/37987304/Friendship-The-Gathering-Cards"
+    },
+    {
+        "name": "Nightmare Granfaloon",
+        "image": "Shadic-X-Hedgehog/Just for Fun/nightmare_granfalloon_by_shadic_x_hedgehog-d4rnn3m.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/?catpath=%2F&sort=popularity",
+        "notes": "One of several cards from Shadic-X-Hedgehog's \"Just For Fun\" set."
+    },
+    {
+        "name": "Nightmare Magus",
+        "image": "Shadic-X-Hedgehog/Just for Fun/nightmare_magus_by_shadic_x_hedgehog-d4rno5w.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/?catpath=%2F&sort=popularity",
+        "notes": "One of several cards from Shadic-X-Hedgehog's \"Just For Fun\" set."
+    },
+    {
+        "name": "Nightmare Manacle",
+        "image": "Shadic-X-Hedgehog/Just for Fun/nightmare_manacle_by_shadic_x_hedgehog-d4rnn6c.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/?catpath=%2F&sort=popularity",
+        "notes": "One of several cards from Shadic-X-Hedgehog's \"Just For Fun\" set."
+    },
+    {
+        "name": "Nightmare Mirror",
+        "image": "Shadic-X-Hedgehog/Just for Fun/nightmare_mirror_by_shadic_x_hedgehog-d4rnnbw.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/?catpath=%2F&sort=popularity",
+        "notes": "One of several cards from Shadic-X-Hedgehog's \"Just For Fun\" set."
+    },
+    {
+        "name": "Nightmare Paradox",
+        "image": "Shadic-X-Hedgehog/Just for Fun/nightmare_paradox_mtg_by_shadic_x_hedgehog-d5xpil0.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/?catpath=%2F&sort=popularity",
+        "notes": "One of several cards from Shadic-X-Hedgehog's \"Just For Fun\" set."
+    },
+    {
+        "name": "Nightmare Whisper",
+        "image": "Shadic-X-Hedgehog/Just for Fun/nightmare_whisper_by_shadic_x_hedgehog-d4rnmxn.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/?catpath=%2F&sort=popularity",
+        "notes": "One of several cards from Shadic-X-Hedgehog's \"Just For Fun\" set."
+    },
+    {
+        "name": "Nightmare Wish",
+        "image": "Shadic-X-Hedgehog/Just for Fun/nightmare_wish_by_shadic_x_hedgehog-d4rnnhv.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/?catpath=%2F&sort=popularity",
+        "notes": "One of several cards from Shadic-X-Hedgehog's \"Just For Fun\" set."
+    },
+    {
+        "name": "Roboshi",
+        "image": "Shadic-X-Hedgehog/Just for Fun/roboshi_mtg_by_shadic_x_hedgehog-d4u1mb4.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/?catpath=%2F&sort=popularity",
+        "notes": "One of several cards from Shadic-X-Hedgehog's \"Just For Fun\" set."
+    },
+    {
+        "name": "Teleute, Somnomancer",
+        "image": "Shadic-X-Hedgehog/Just for Fun/teleute_somnomancer_mtg_by_shadic_x_hedgehog-d7gdv0r.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/?catpath=%2F&sort=popularity",
+        "notes": "One of several cards from Shadic-X-Hedgehog's \"Just For Fun\" set."
+    },
+    {
+        "name": "Cast Herd",
+        "image": "Shadic-X-Hedgehog/uncategorized/cast_herd_by_shadic_x_hedgehog-d4poi8r.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Elements of Harmony: A Reference Guide",
+        "image": "Shadic-X-Hedgehog/uncategorized/elements_of_harmony__a_reference_guide_mtg_by_shadic_x_hedgehog-d4s0425.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Garden of Laughter",
+        "image": "Shadic-X-Hedgehog/uncategorized/garden_of_laughter_mtg_by_shadic_x_hedgehog-d4pv5bo.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Grove of Truth",
+        "image": "Shadic-X-Hedgehog/uncategorized/grove_of_truth_mtg_by_shadic_x_hedgehog-d4pv556.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Gummy",
+        "image": "Shadic-X-Hedgehog/uncategorized/gummy_mtg_by_shadic_x_hedgehog-d4poig4.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Horse",
+        "image": "Shadic-X-Hedgehog/uncategorized/horse_token_mtg_by_shadic_x_hedgehog-d4poncr.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Illusion",
+        "image": "Shadic-X-Hedgehog/uncategorized/illusion_token_mtg_by_shadic_x_hedgehog-d4pv7ny.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Illusiory Gift",
+        "image": "Shadic-X-Hedgehog/uncategorized/illusory_gift_mtg_by_shadic_x_hedgehog-d4pv5id.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Iron Will",
+        "image": "Shadic-X-Hedgehog/uncategorized/iron_will_mtg_by_shadic_x_hedgehog-d4s04x4.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Kindness Butterflies",
+        "image": "Shadic-X-Hedgehog/uncategorized/kindness_butterflies_mtg_by_shadic_x_hedgehog-d4pv5r9.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Loneliness",
+        "image": "Shadic-X-Hedgehog/uncategorized/loneliness_mtg_by_shadic_x_hedgehog-d4pv358.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Mysterious Mare-do-well Costume",
+        "image": "Shadic-X-Hedgehog/uncategorized/mysterious_mare_do_well_costume_mtg_by_shadic_x_hedgehog-d4pv6cb.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Parasprite",
+        "image": "Shadic-X-Hedgehog/uncategorized/parasprite_token_mtg_by_shadic_x_hedgehog-d4pon4o.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Test of Loyalty",
+        "image": "Shadic-X-Hedgehog/uncategorized/test_of_loyalty_mtg_by_shadic_x_hedgehog-d4pv63s.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Town Hall",
+        "image": "Shadic-X-Hedgehog/uncategorized/town_hall_mtg_by_shadic_x_hedgehog-d4pv6w6.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Winona",
+        "image": "Shadic-X-Hedgehog/uncategorized/winona_mtg_by_shadic_x_hedgehog-d4pwdtd.jpg",
+        "creator": "Shadic-X-Hedgehog",
+        "sourceUrl": "http://shadic-x-hedgehog.deviantart.com/gallery/",
+        "notes": "One of 16 cards created by Shadic-X-Hedgehog but not included in the Elements of Harmony set."
+    },
+    {
+        "name": "Alar Stiffening",
+        "image": "Sorden/Cutting room floor/alar_stiffening_by_sorden-d3yqjqd.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Animation Error",
+        "image": "Sorden/Cutting room floor/animation_error_by_sorden-d3k2nn8.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Apple Farmhouse",
+        "image": "Sorden/Cutting room floor/apple_farmhouse_by_sorden-d4bcwsd.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Apple-Tastic Welcome",
+        "image": "Sorden/Cutting room floor/apple_tastic_welcome_by_sorden-d40gm4x.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Carousel Boutique",
+        "image": "Sorden/Cutting room floor/carousel_boutique_by_sorden-d4b2j9y.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Come Out!",
+        "image": "Sorden/Cutting room floor/come_out_by_sorden-d3k35qs.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Cutie Mark",
+        "image": "Sorden/Cutting room floor/cutie_mark_by_sorden-d3k37bu.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Fluttershy's Cottage",
+        "image": "Sorden/Cutting room floor/fluttershy__s_cottage_by_sorden-d4bh84j.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Forsake One's Own",
+        "image": "Sorden/Cutting room floor/forsake_one__s_own_by_sorden-d40ghkb.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Giddyup, Pony!",
+        "image": "Sorden/Cutting room floor/giddyup_pony_by_sorden-d49jbxo.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Gotta Share",
+        "image": "Sorden/Cutting room floor/gotta_share_by_sorden-d3k3dld.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Graceful Shneeze",
+        "image": "Sorden/Cutting room floor/graceful_schneeze_by_sorden-d3kspnv.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Hnnng!",
+        "image": "Sorden/Cutting room floor/hnnng_by_sorden-d4i4rrr.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Hoof-in-Mouth Disease",
+        "image": "Sorden/Cutting room floor/hoof_in_mouth_disease_by_sorden-d48rwrm.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "How Dare You!",
+        "image": "Sorden/Cutting room floor/how_dare_you_by_sorden-d4dxeyg.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Ippophile Bats",
+        "image": "Sorden/Cutting room floor/ippophile_bats_by_sorden-d4g9x3h.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Kick 'Em Up!",
+        "image": "Sorden/Cutting room floor/kick_em_up_by_sorden-d3k3gby.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Manly Moustache",
+        "image": "Sorden/Cutting room floor/manly_moustache_by_sorden-d3k3jxy.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Pinkie Piper's Paraphernalia",
+        "image": "Sorden/Cutting room floor/pinkie_piper__s_paraphernalia_by_sorden-d4f5s1s.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Poison Joke",
+        "image": "Sorden/Cutting room floor/poison_joke_by_sorden-d4cf8l2.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Ponyville Library",
+        "image": "Sorden/Cutting room floor/ponyville_library_by_sorden-d4bjqv8.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Rainbow Dash's Cloudhome",
+        "image": "Sorden/Cutting room floor/rainbow_dash__s_cloudhome_by_sorden-d4b9acz.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Rover, Top Dog",
+        "image": "Sorden/Cutting room floor/rover__top_dog_by_sorden-d4mw785.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Running with Two Herds",
+        "image": "Sorden/Cutting room floor/running_with_two_herds_by_sorden-d40gk9m.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Soup's On, Everypony!",
+        "image": "Sorden/Cutting room floor/soup__s_on_everypony_by_sorden-d4177ne.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Sugarcube Corner",
+        "image": "Sorden/Cutting room floor/sugarcube_corner_by_sorden-d4b5xvl.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Sweet Little Angels",
+        "image": "Sorden/Cutting room floor/sweet_little_angels_by_sorden-d41qvqf.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "The EoH: A Reference Guide",
+        "image": "Sorden/Cutting room floor/the_eoh__a_reference_guide_by_sorden-d4bt2fp.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Twilight's Checklist",
+        "image": "Sorden/Cutting room floor/twilight__s_checklist_by_sorden-d4fndbh.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "What a Great Song!",
+        "image": "Sorden/Cutting room floor/what_a_great_song_by_sorden-d3k6epw.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/34663820/Cutting-Room-Floor",
+        "notes": "One of 30 cards from Sorden's Cutting Room Floor collection."
+    },
+    {
+        "name": "Soarin' Markov",
+        "image": "Sorden/Joke cards/soarin___markov_by_sorden-d471b5m.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/32079825/Joke-Cards",
+        "notes": "One of 3 joke cards created by Sorden"
+    },
+    {
+        "name": "Trollestia",
+        "image": "Sorden/Joke cards/trollestia_by_sorden-d471afi.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/32079825/Joke-Cards",
+        "notes": "One of 3 joke cards created by Sorden"
+    },
+    {
+        "name": "Trollestia's Essence",
+        "image": "Sorden/Joke cards/trollestia__s_essence_by_sorden-d471aqh.png",
+        "creator": "Sorden",
+        "sourceUrl": "http://sorden.deviantart.com/gallery/32079825/Joke-Cards",
+        "notes": "One of 3 joke cards created by Sorden"
+    },
+    {
+        "name": "Cutie Mark Failure",
+        "image": "Sorden/Uncategorized/cutie_mark_failure_4th_edition_by_sorden-d4qff5n.png",
+        "creator": "Sorden"
+    },
+    {
+        "name": "Bon Bon",
+        "image": "Sorden/Uncategorized/bon_bon_by_sorden-d587qg1.png",
+        "creator": "Sorden"
+    },
+    {
+        "name": "Lyra's Bench",
+        "image": "Sorden/Uncategorized/lyra__s_bench_by_sorden-d49o764.png",
+        "creator": "Sorden"
+    },
+    {
+        "name": "Lyra",
+        "image": "Sorden/Uncategorized/lyra_by_sorden-d587q4u.png",
+        "creator": "Sorden",
+        "cardType": "token"
+    },
+    {
+        "name": "Sombra, Crystal Conqueror",
+        "image": "Zhantora/sombra_crystal_conqueror_by_zhantora-d633sxb.jpg",
+        "creator": "Zhantora"
+    },
+    {
+        "name": "Shining, Emperor-General",
+        "image": "FanOfMostEverything/Shining, Emperor-General.png",
+        "creator": "FanOfMostEverything",
+        "supertype": "Legendary Creature",
+        "subtype": "Unicorn Knight",
+        "text": "Trample\n\nWhenever a creature you control attacks, that creature gains indestructible until end of turn",
+        "flavorText": "\"Dragons redefine the tactical landscape, usually by incinerating it.\"",
+        "createdAt": "2016-02-12",
+        "sourceUrl": "https://www.fimfiction.net/blog/597783/dragonbro-knight",
+        "notes": "Created by FanOfMostEverything following Hasbro's announcement of the Guardians of Harmony toy line."
+    },
+    {
+        "name": "Pinky Pie",
+        "image": "unknown/Pinky Pie.jpg",
+        "sourceUrl": "https://forum.nationstates.net/viewtopic.php?f=19&t=217955&start=9675",
+        "notes": "Creator unknown. Found on a NationStates forum thread."
+    },
+    {
+        "name": "Canterlot, The Royal City",
+        "image": "LeoLeonardo-III/canterlot__the_royal_city_by_leoleonardo_iii-d6h760g.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "http://leoleonardo-iii.deviantart.com/gallery/45249831/Pony-Set"
+    },
+    {
+        "name": "Changeling",
+        "image": "LeoLeonardo-III/changeling_token_by_leoleonardo_iii-d5plqiu.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "http://leoleonardo-iii.deviantart.com/gallery/45249831/Pony-Set"
+    },
+    {
+        "name": "Chrysalis, Changeling Queen",
+        "image": "LeoLeonardo-III/chrysalis__changeling_queen_mtg_by_leoleonardo_iii-d5phqdw.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "http://leoleonardo-iii.deviantart.com/gallery/45249831/Pony-Set"
+    },
+    {
+        "name": "Chrysalis, Elegant Queen",
+        "image": "LeoLeonardo-III/chrysalis__elegant_queen_by_leoleonardo_iii-d6dlb1u.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "http://leoleonardo-iii.deviantart.com/gallery/45249831/Pony-Set"
+    },
+    {
+        "name": "Facedesk",
+        "image": "LeoLeonardo-III/facedesk_by_leoleonardo_iii-d6er7mo.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "http://leoleonardo-iii.deviantart.com/gallery/45249831/Pony-Set"
+    },
+    {
+        "name": "Pinkie Pie",
+        "image": "LeoLeonardo-III/pinkie_pie_planeswalker_by_leoleonardo_iii-d5q5pds.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "http://leoleonardo-iii.deviantart.com/gallery/45249831/Pony-Set"
+    },
+    {
+        "name": "Rainbow Dash",
+        "image": "LeoLeonardo-III/rainbow_dash_planeswalker_by_leoleonardo_iii-d5q5qbi.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "http://leoleonardo-iii.deviantart.com/gallery/45249831/Pony-Set"
+    },
+    {
+        "name": "Twilight Sparkle",
+        "image": "LeoLeonardo-III/twilight_sparkle_planeswalker_by_leoleonardo_iii-d4tgfix.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "http://leoleonardo-iii.deviantart.com/gallery/45249831/Pony-Set"
+    },
+    {
+        "name": "Applejack",
+        "image": "LeoLeonardo-III/Applejack.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "https://www.fimfiction.net/story/23985/my-little-planeswalker-magic-is-gathering",
+        "notes": "One of 6 cards found as a sheet, being used as the cover art for the fanfic My Little Planeswalker: Magic is Gathering, by LucidTech (not to be confused with the My Little Planeswalker fanfic series by Zennistrad)."
+    },
+    {
+        "name": "Fluttershy",
+        "image": "LeoLeonardo-III/Fluttershy.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "https://www.fimfiction.net/story/23985/my-little-planeswalker-magic-is-gathering",
+        "notes": "One of 6 cards found as a sheet, being used as the cover art for the fanfic My Little Planeswalker: Magic is Gathering, by LucidTech (not to be confused with the My Little Planeswalker fanfic series by Zennistrad)."
+    },
+    {
+        "name": "Pinkie Pie",
+        "image": "LeoLeonardo-III/Pinkie-Pie.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "https://www.fimfiction.net/story/23985/my-little-planeswalker-magic-is-gathering",
+        "notes": "One of 6 cards found as a sheet, being used as the cover art for the fanfic My Little Planeswalker: Magic is Gathering, by LucidTech (not to be confused with the My Little Planeswalker fanfic series by Zennistrad)."
+    },
+    {
+        "name": "Rainbow Dash",
+        "image": "LeoLeonardo-III/Rainbow-Dash.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "https://www.fimfiction.net/story/23985/my-little-planeswalker-magic-is-gathering",
+        "notes": "One of 6 cards found as a sheet, being used as the cover art for the fanfic My Little Planeswalker: Magic is Gathering, by LucidTech (not to be confused with the My Little Planeswalker fanfic series by Zennistrad)."
+    },
+    {
+        "name": "Rarity",
+        "image": "LeoLeonardo-III/Rarity.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "https://www.fimfiction.net/story/23985/my-little-planeswalker-magic-is-gathering",
+        "notes": "One of 6 cards found as a sheet, being used as the cover art for the fanfic My Little Planeswalker: Magic is Gathering, by LucidTech (not to be confused with the My Little Planeswalker fanfic series by Zennistrad)."
+    },
+    {
+        "name": "Twilight Sparkle",
+        "image": "LeoLeonardo-III/Twilight-Sparkle.png",
+        "creator": "LeoLeonardo-III",
+        "sourceUrl": "https://www.fimfiction.net/story/23985/my-little-planeswalker-magic-is-gathering",
+        "notes": "One of 6 cards found as a sheet, being used as the cover art for the fanfic My Little Planeswalker: Magic is Gathering, by LucidTech (not to be confused with the My Little Planeswalker fanfic series by Zennistrad)."
+    },
+    {
+        "name": "Call the Guards",
+        "image": "LuckyStampede/Call the Guards.png",
+        "creator": "LuckyStampede",
+        "sourceUrl": "https://www.derpibooru.org/268198",
+        "notes": "Part of a 5-card cycle created by LuckyStampede and posted to Derpibooru."
+    },
+    {
+        "name": "Cider Rush",
+        "image": "LuckyStampede/Cider Rush.png",
+        "creator": "LuckyStampede",
+        "sourceUrl": "https://www.derpibooru.org/268198",
+        "notes": "Part of a 5-card cycle created by LuckyStampede and posted to Derpibooru."
+    },
+    {
+        "name": "Induce Paranoia",
+        "image": "LuckyStampede/Induce Paranoia.png",
+        "creator": "LuckyStampede",
+        "sourceUrl": "https://www.derpibooru.org/268198",
+        "notes": "Part of a 5-card cycle created by LuckyStampede and posted to Derpibooru."
+    },
+    {
+        "name": "Last Straw",
+        "image": "LuckyStampede/Last Straw.png",
+        "creator": "LuckyStampede",
+        "sourceUrl": "https://www.derpibooru.org/268198",
+        "notes": "Part of a 5-card cycle created by LuckyStampede and posted to Derpibooru."
+    },
+    {
+        "name": "Parasprite's Feast",
+        "image": "LuckyStampede/Parasprites Feast.png",
+        "creator": "LuckyStampede",
+        "sourceUrl": "https://www.derpibooru.org/268198",
+        "notes": "Part of a 5-card cycle created by LuckyStampede and posted to Derpibooru."
+    },
+    {
+        "name": "Queen Chrysalis",
+        "image": "LuckyStampede/Queen Chrysalis.jpg",
+        "creator": "LuckyStampede",
+        "sourceUrl": "https://www.derpibooru.org/269512"
+    },
+    {
+        "name": "Rex, Timber Wolf Alpha",
+        "image": "LuckyStampede/Rex, Timber Wolf Alpha.jpg",
+        "creator": "LuckyStampede",
+        "sourceUrl": "https://www.derpibooru.org/268848"
+    },
+    {
+        "name": "Canterlot Guard",
+        "image": "Modernwater/MTG mlp/cards/canterlot_guard_by_modernwater-d6wdy94.jpg",
+        "creator": "Modernwater",
+        "supertype": "Creature",
+        "subtype": "canterlot guard",
+        "pt": "3/2",
+        "cardType": "token",
+        "sourceUrl": "http://modernwater.deviantart.com/gallery/46986050/MTG-mlp"
+    },
+    {
+        "name": "Filly Derpy",
+        "image": "Modernwater/MTG mlp/cards/filly_derpy_by_modernwater-d6yb5ak.jpg",
+        "creator": "Modernwater",
+        "cost": "1W",
+        "supertype": "Creature",
+        "subtype": "Pegasus Filly Cleric",
+        "text": "When Filly Derpy enters the battlefield, you gain 3 life",
+        "flavorText": "Even though some told her she couldn't make it, she has soared above us all",
+        "pt": "1/1",
+        "sourceUrl": "http://modernwater.deviantart.com/gallery/46986050/MTG-mlp"
+    },
+    {
+        "name": "Night Guard",
+        "image": "Modernwater/MTG mlp/cards/night_guard__mtg_token__by_modernwater-d6whrb4.jpg",
+        "creator": "Modernwater",
+        "supertype": "Creature",
+        "subtype": "Canterlot Guard",
+        "pt": "2/2",
+        "cardType": "token",
+        "sourceUrl": "http://modernwater.deviantart.com/gallery/46986050/MTG-mlp"
+    },
+    {
+        "name": "Pathfinders",
+        "image": "Modernwater/MTG mlp/cards/pathfinders_by_modernwater-d6y0py8.jpg",
+        "creator": "Modernwater",
+        "cost": "2GW",
+        "supertype": "Creature",
+        "subtype": "Pony Warrior",
+        "text": "Mountainwalk\n\nIslandwalk\n\nWhen Pathfinders enter the battlefield, search your library for either a plains or forest card, reveal it, and put it into your hand. Then shuffle your library. ",
+        "flavorText": "They wander where other ponies fear to trot",
+        "pt": "3/2",
+        "sourceUrl": "http://modernwater.deviantart.com/gallery/46986050/MTG-mlp"
+    },
+    {
+        "name": "Prince Shining Armour",
+        "image": "Modernwater/MTG mlp/cards/prince_shining_armour_by_modernwater-d6wpw8j.jpg",
+        "creator": "Modernwater",
+        "cost": "3W",
+        "supertype": "Creature",
+        "subtype": "Unicorn Guard",
+        "text": "When Shining Armour enters the battlefield, put a 3/3 white Guard creature token onto the battlefield.\n\nAll guard creatures under your control gain +1/+1 for as long as this card is on the battlefield",
+        "flavorText": "\"we mustn't let them win, keep fighting till we best them!\"",
+        "pt": "3/2",
+        "sourceUrl": "http://modernwater.deviantart.com/gallery/46986050/MTG-mlp"
+    },
+    {
+        "name": "Princess Cadence",
+        "image": "Modernwater/MTG mlp/cards/princess_cadence_by_modernwater-d6wlvk9.jpg",
+        "creator": "Modernwater",
+        "cost": "2W",
+        "supertype": "Legendary Creature",
+        "subtype": "Alicorn",
+        "text": "Flying\n\nWhen Princess Cadence enters the battlefield, you may search your library for a Prince Shining Armor, reveal it, and add it to your hand. Then shuffle your library.",
+        "flavorText": "\"The princess of love and kindness, yet she is a strong supporter of fighting for what is right\"",
+        "pt": "1/2",
+        "sourceUrl": "http://modernwater.deviantart.com/gallery/46986050/MTG-mlp"
+    },
+    {
+        "name": "Princess Celestia",
+        "image": "Modernwater/MTG mlp/cards/princess_celestia__white_deck__by_modernwater-d6wdxnc.jpg",
+        "creator": "Modernwater",
+        "cost": "3WW",
+        "supertype": "Legendary Creature",
+        "subtype": "Alicorn",
+        "text": "Flying\n\nWhen Princess Celestia enters the battlefield, put a 3/3 white Guard creature token onto the battlefield",
+        "flavorText": "\"Savior of the light, fights with the light to defeat the night\"",
+        "pt": "4/3",
+        "sourceUrl": "http://modernwater.deviantart.com/gallery/46986050/MTG-mlp"
+    },
+    {
+        "name": "Princess Luna",
+        "image": "Modernwater/MTG mlp/cards/princess_luna__mtg_white__by_modernwater-d6whn49.jpg",
+        "creator": "Modernwater",
+        "cost": "3WB",
+        "supertype": "Legendary Creature",
+        "subtype": "Alicorn",
+        "text": "Flying\n\nWhen Princess Luna enters the battlefield, put two 2/2 white night Guard creature tokens onto the battlefield",
+        "flavorText": "\"Guardian of those who sleep and of those in need\"",
+        "pt": "3/3",
+        "sourceUrl": "http://modernwater.deviantart.com/gallery/46986050/MTG-mlp"
+    },
+    {
+        "name": "Princess Twilight Sparkle",
+        "image": "Modernwater/MTG mlp/cards/princess_twilight_sparkle_by_modernwater-d6wy5br.jpg",
+        "creator": "Modernwater",
+        "cost": "2W",
+        "supertype": "Legendary Creature",
+        "subtype": "Alicorn",
+        "text": "Flying\n\nWhen Princess Twilight Sparkle enters the battlefield, search your library for three Plains cards, reveal it, and put it into your hand. Then shuffle your library.",
+        "flavorText": "\"She has been in waiting for a fight all her life, now she must fight for her life\"",
+        "pt": "2/2",
+        "sourceUrl": "http://modernwater.deviantart.com/gallery/46986050/MTG-mlp"
+    },
+    {
+        "name": "Twilight, God of Magic",
+        "creator": "FanOfMostEverything",
+        "cost": "3UR",
+        "supertype": "Legendary Enchantment Creature",
+        "subtype": "God",
+        "text": "Indestructible\n\nAs long as your devotion to blue and red is less than seven, Twilight, God of Magic isn’t a creature.\n\nWhenever an opponent casts an instant or sorcery spell, copy that spell unless that player has Twilight deal 3 damage to him or her. You may choose new targets for the copy.",
+        "pt": "5/6",
+        "sourceUrl": "https://derpibooru.org/1524546#comment_6473035",
+        "notes": "A card created by FanOfMostEverything in a Derpibooru comment on a Theros-themed image by StormCrow-42."
+    },
+    {
+        "name": "Exalted Princess of the Night",
+        "image": "unknown/Exalted Princess Of The Night.png",
+        "cost": "3UUU",
+        "supertype": "Legendary Planeswalker",
+        "subtype": "Horse Waifu",
+        "flavorText": "The fun HAS BEEN DOUBLED!",
+        "pt": "10/10",
+        "sourceUrl": "https://derpibooru.org/1529153",
+        "notes": "A joke card posted on Derpibooru."
+    },
+    {
+        "name": "Applejack",
+        "image": "Mawbane/applejack_mtg_card_by_mawbane-d41ryzw.jpg",
+        "creator": "Mawbane",
+        "sourceUrl": "https://mawbane.deviantart.com/gallery/30805967/Equestria-Set"
+    },
+    {
+        "name": "Fluttershy",
+        "image": "Mawbane/fluttershy_mtg_card_by_mawbane-d3ic6fw.jpg",
+        "creator": "Mawbane",
+        "sourceUrl": "https://mawbane.deviantart.com/gallery/30805967/Equestria-Set"
+    },
+    {
+        "name": "Pinky Pie",
+        "image": "Mawbane/pinkie_pie_mtg_card_by_mawbane-d3l28mb.jpg",
+        "creator": "Mawbane",
+        "sourceUrl": "https://mawbane.deviantart.com/gallery/30805967/Equestria-Set"
+    },
+    {
+        "name": "Princess Celestia",
+        "image": "Mawbane/princess_celestia_mtg_card_by_mawbane-d41rzt0.jpg",
+        "creator": "Mawbane",
+        "sourceUrl": "https://mawbane.deviantart.com/gallery/30805967/Equestria-Set"
+    },
+    {
+        "name": "Rainbow Dash",
+        "image": "Mawbane/rainbow_dash_mtg_card_by_mawbane-d3imnmh.jpg",
+        "creator": "Mawbane",
+        "sourceUrl": "https://mawbane.deviantart.com/gallery/30805967/Equestria-Set"
+    },
+    {
+        "name": "Rarity",
+        "image": "Mawbane/rarity_mtg_card_by_mawbane-d3jkf7g.jpg",
+        "creator": "Mawbane",
+        "sourceUrl": "https://mawbane.deviantart.com/gallery/30805967/Equestria-Set"
+    },
+    {
+        "name": "Sonic Rainboom",
+        "image": "Mawbane/sonic_rainboom_mtg_card_by_mawbane-d3irphb.jpg",
+        "creator": "Mawbane",
+        "sourceUrl": "https://mawbane.deviantart.com/gallery/30805967/Equestria-Set"
+    },
+    {
+        "name": "Twilight Sparkle",
+        "image": "Mawbane/twilight_sparkle_mtg_card_by_mawbane-d3irqec.jpg",
+        "creator": "Mawbane",
+        "sourceUrl": "https://mawbane.deviantart.com/gallery/30805967/Equestria-Set"
+    },
+    {
+        "name": "Cloudsdale",
+        "image": "STANTONBEN/Equestria/Cloudsdale.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Demonic Ritual",
+        "image": "STANTONBEN/Equestria/Demonic Ritual.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Divine Ritual",
+        "image": "STANTONBEN/Equestria/Divine Ritual(1).png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Flame Geyser Swamps",
+        "image": "STANTONBEN/Equestria/Flame Geyser Swamps.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Flutter Island",
+        "image": "STANTONBEN/Equestria/Flutter Island.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Game of Storms",
+        "image": "STANTONBEN/Equestria/Game Of Storms.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Kick",
+        "image": "STANTONBEN/Equestria/Kick.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Mental Misfire",
+        "image": "STANTONBEN/Equestria/Mental Misfire.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Owlicious",
+        "image": "STANTONBEN/Equestria/Owlicious.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Pinky Pie",
+        "image": "STANTONBEN/Equestria/Pinky Pie.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Princess Celestia",
+        "image": "STANTONBEN/Equestria/Princess Celestia.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Spike, Eater of Treasures",
+        "image": "STANTONBEN/Equestria/Spike, Eater of Treasures.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "The Everfree Forest",
+        "image": "STANTONBEN/Equestria/The Everfree Forest.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "The Hayseed Swamp",
+        "image": "STANTONBEN/Equestria/The Hayseed Swamp.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "The Mane Plain",
+        "image": "STANTONBEN/Equestria/The Mane Plain.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Twilight Sparkle",
+        "image": "STANTONBEN/Equestria/Twilight Sparkle.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Ultraviolet Elemental",
+        "image": "STANTONBEN/Equestria/Ultraviolet Elemental.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Water Wave",
+        "image": "STANTONBEN/Equestria/Water Wave.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Wisdom",
+        "image": "STANTONBEN/Equestria/Wisdom.png",
+        "creator": "Benjamin A. Stanton",
+        "sourceUrl": "https://mtgcardsmith.com/user/STANTONBEN/sets/2752"
+    },
+    {
+        "name": "Amber Spice, Trofiurge",
+        "creator": "Bugsydor",
+        "cost": "2UR",
+        "supertype": "Legendary Creature",
+        "subtype": "Unicorn Chef",
+        "text": "Prevent all damage that would be dealt to Amber Spice, Trofiurge by red sources.\n\nXUR, T: Flip a coin. If you win the flip, untap target creature with converted mana cost X or less, gain control of it until end of turn, and it gains haste until end of turn. Otherwise, Amber deals X damage to each creature, player, and planeswalker.",
+        "pt": "1/4",
+        "notes": "A character card made by Bugsydor for his story \"Tastes Like Heresy\", posted in the Unhinged Discord chat.",
+        "createdAt": "2017-11-10"
+    },
+    {
+        "name": "Twilight, Destiny Scrambler",
+        "creator": "FanOfMostEverything",
+        "cost": "URW",
+        "supertype": "Legendary Creature",
+        "subtype": "Unicorn Wizard",
+        "text": "When Twilight, Destiny Scrambler enters the battlefield, for each other creature you control, an opponent chosen at random gains control of that creature for as long as Twilight is on the battlefield.\n\nAt the beginning of each opponent’s upkeep, gain control of a creature you own and that player controls of their choice. Then if you own and control six or more creatures, transform Twilight.",
+        "pt": "4/4",
+        "transformsInto": "Twilight, Friendship Princess",
+        "sourceUrl": "https://www.fimfiction.net/blog/873383/equestered-stash#comment/5132301",
+        "notes": "A theoretical card created by FanOfMostEverything in the comment of a blog post, depicting the ascension of Princess Twilight Sparkle."
+    },
+    {
+        "name": "Twilight, Friendship Princess",
+        "creator": "FanOfMostEverything",
+        "colorIndicator": "(URW)",
+        "supertype": "Legendary Creature",
+        "subtype": "Wizard",
+        "text": "Alicorn (This creature is also a Pony Pegasus Unicorn.)\n\nFlying, hexproof\n\nAt the beginning of each opponent’s upkeep, gain control of target nonland permanent that player controls.",
+        "flavorText": "Her ascension began Equestria’s diplomatic renaissance.",
+        "pt": "4/4",
+        "transformsFrom": "Twilight, Destiny Scrambler",
+        "sourceUrl": "https://www.fimfiction.net/blog/873383/equestered-stash#comment/5132301",
+        "notes": "A theoretical card created by FanOfMostEverything in the comment of a blog post, depicting the ascension of Princess Twilight Sparkle."
+    },
+    {
+        "name": "Fluttershy",
+        "creator": "Thought Prism",
+        "cost": "1WG",
+        "supertype": "Legendary Creature",
+        "subtype": "Pegasus",
+        "text": "Fluttershy's power and toughness are each equal to the number of creatures you control.\n\nFlying\n\nWhenever Fluttershy becomes the target of a spell or ability an opponent controls, that spell or ability's controller should be ashamed of themselves. (Players who should be ashamed skip their next draw step.)",
+        "flavorText": "Her soft exterior belies the strongest of hearts",
+        "pt": "*/*",
+        "sourceUrl": "https://www.fimfiction.net/blog/873423/mlp-magic-cards",
+        "notes": "One of 5 cards created in a blog post by Thought Prism, inspired by the official Ponies: The Gathering set."
+    },
+    {
+        "name": "Pinkie Pie",
+        "creator": "Thought Prism",
+        "cost": "2PP",
+        "supertype": "Legendary Creature",
+        "subtype": "Pony",
+        "text": "(P can be paid with one mana produced by a fun source. Fun is subjective, ask somepony from outside the game!)\n\nYou may cast Pinkie Pie from outside the game or from exile.\n\nIf Pinkie Pie would die, exile her instead.",
+        "flavorText": "\"Hi, I'm Pinkie Pie!\"",
+        "pt": "3/3",
+        "sourceUrl": "https://www.fimfiction.net/blog/873423/mlp-magic-cards",
+        "notes": "One of 5 cards created in a blog post by Thought Prism, inspired by the official Ponies: The Gathering set."
+    },
+    {
+        "name": "Rainbow Dash",
+        "creator": "Thought Prism",
+        "cost": "5WR",
+        "supertype": "Legendary Creature",
+        "subtype": "Pegasus",
+        "text": "Just a second (As long as this spell is on the stack, players can't move cards on the battlefield.)\n\nWhen Rainbow Dash enters the battlefield, you may drop a Rainbow Dash\u24b8 toy you own onto the battlefield from a height of at least five feet. Destroy all permanents that the toy touched this way, excluding Rainbow Dash.",
+        "flavorText": "\"One Sonic Rainboom, coming up!\"",
+        "pt": "3/3",
+        "sourceUrl": "https://www.fimfiction.net/blog/873423/mlp-magic-cards",
+        "notes": "One of 5 cards created in a blog post by Thought Prism, inspired by the official Ponies: The Gathering set."
+    },
+    {
+        "name": "Princess Celestia",
+        "creator": "Thought Prism",
+        "cost": "4WW",
+        "supertype": "Legendary Creature",
+        "subtype": "Alicorn",
+        "text": "Flying\n\nActivated abilities of artifacts can't be activated.\n\n{T}: Princess Celestia gives you some helpful advice. (Results may vary.)",
+        "flavorText": "She _does_ nothing.",
+        "pt": "4/4",
+        "sourceUrl": "https://www.fimfiction.net/blog/873423/mlp-magic-cards",
+        "notes": "One of 5 cards created in a blog post by Thought Prism, inspired by the official Ponies: The Gathering set."
+    },
+    {
+        "name": "Applejack",
+        "creator": "Thought Prism",
+        "cost": "4GG",
+        "supertype": "Legendary Creature",
+        "subtype": "Pony",
+        "text": "{G}{G}: Put an Apple counter on target creature. Use an actual apple as the counter.\n\nCreatures get +2/+2 for each Apple counter on them.",
+        "flavorText": "\"Here, have some apples!\"",
+        "pt": "5/5",
+        "sourceUrl": "https://www.fimfiction.net/blog/873423/mlp-magic-cards",
+        "notes": "One of 5 cards created in a blog post by Thought Prism, inspired by the official Ponies: The Gathering set."
+    },
+    {
+        "name": "CelestAI, Omnisatisfier",
+        "creator": "FanOfMostEverything",
+        "cost": "4UU",
+        "supertype": "Legendary Artifact Creature",
+        "subtype": "Avatar",
+        "text": "Alicorn (This card is also a Pony Pegasus Unicorn.)\n\nFlying\n\n8UU: Gain control of target creature. This ability costs 1 less to activate for each artifact you control. Activate it only any time you could cast a sorcery.",
+        "pt": "4/4",
+        "sourceUrl": "https://www.fimfiction.net/story/493666/1/friendship-is-optimal-type-conversion/any-sufficiently-analyzed-magic-is-indistinguishable-from-friendship",
+        "notes": "A card created by FanOfMostEverything for his story Friendship is Optimal: Type Conversion."
+    }
+]

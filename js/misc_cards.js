@@ -1,22 +1,22 @@
-window.onload = initialize;
-function initialize() {
+const initialize = async function initialize() {
+    let miscCards = await loadCards(global.urls.cards.misc);
     global.urlParameters = getUrlParameters();
 
     if (!global.urlParameters.noSort) {
         // Sort the cards alphabetically by name.
-        MISC_CARDS = sortByProperties(MISC_CARDS, ['name'], true);
+        miscCards = sortByProperties(miscCards, ['name'], true);
     }
-    for (var i=0; i < MISC_CARDS.length; i++) {
-        MISC_CARDS[i].derivedProperties = getDerivedCardProperties(MISC_CARDS[i]);
-        MISC_CARDS[i].hash = MISC_CARDS[i].derivedProperties.hash;
+    for (var i=0; i < miscCards.length; i++) {
+        miscCards[i].derivedProperties = getDerivedCardProperties(miscCards[i]);
+        miscCards[i].hash = miscCards[i].derivedProperties.hash;
     }
 
-    var cardsToDisplay = MISC_CARDS;
+    var cardsToDisplay = miscCards;
 
     // If a `hash` parameter is passed in the URL, display only the card that matches that hash.
     if (Object.keys(global.urlParameters).length > 0) {
         if (global.urlParameters.hash !== undefined) {
-            cardsToDisplay = getCardsFilteredByProperties(MISC_CARDS, { 'hash': global.urlParameters.hash } );
+            cardsToDisplay = getCardsFilteredByProperties(miscCards, { 'hash': global.urlParameters.hash } );
             // Also hide the title and intro.
             document.querySelector('#miscCardsHeader').style.display = 'none';
         }
@@ -25,4 +25,6 @@ function initialize() {
     var propertiesToDisplay = global.lists.cardPropertiesToDisplay;
     var containerElement = document.querySelector('#container');
     containerElement.appendChild(generateCardTableElement(cardsToDisplay, propertiesToDisplay));
-}
+};
+
+window.onload = initialize;
