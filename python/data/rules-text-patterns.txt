@@ -13,6 +13,7 @@ all cards with that name
 all creatures able to
 all permanents
 Alternative costs
+amass \d
 any number of (counters|creatures)
 any player may
 any time you could cast
@@ -111,6 +112,7 @@ destroy up to
 died this turn
 discard cards
 (discard|draw)s?( up to)? (a|one|two|three|four|five|six|seven|this|that many)( or more)? cards?
+discards all cards
 draw cards equal to
 draw step
 draw X cards
@@ -118,15 +120,16 @@ during each of your turns
 during extra turns
 during their own turns
 during your turn
+during an opponent's turn
 each combat
 each creature blocking
 each opponent
 each other (creature|player)
-each player (abandons|can't|chooses|draws|may|puts|sacrifices|shuffles)
+each player (abandons|can't|chooses|discards|draws|may|puts|sacrifices|shuffles)
 each player's upkeep
 (each|the|your) end step
 effect would remove
-^Enchanted creature 
+^Enchanted (creature|land)
 enchanted creature (has|is)
 enchanted (creature|permanent|player)('s)?
 entered the battlefield (this turn|under)
@@ -157,6 +160,7 @@ his or her (control|graveyard|hand|library|mana pool)
 if (a player|an opponent) would
 if a source
 if an effect
+if you roll a 1
 if [\w ]+ is an enchantment
 in addition to its other types
 in addition to their other types
@@ -213,6 +217,7 @@ play with the top card
 planar die
 poison counter
 Pony, Pegasus, and Unicorn creatures
+postcombat
 power [1-9X] or less
 power and toughness
 power (less|greater) than or equal to
@@ -259,6 +264,7 @@ if .+ was kicked
 ^Kicker
 (one|two|three|four|five|six|seven|eight|nine|ten) mana\b
 , proliferate\.
+protection from everything
 remove a (defender )?counter
 remove all (creatures|damage|\w+ counters)
 remove one or more
@@ -338,6 +344,7 @@ you choose which creatures
 you get two additional votes
 you may attach
 you may cast it for
+you may pay E+\b
 you may pay an additional
 you may play an additional
 you may play a card

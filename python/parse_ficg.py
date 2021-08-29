@@ -37,28 +37,18 @@ SPELLING_CORRECTIONS['Aritfact'] = 'Artifact'
 
 # Read command line arguments.
 if len(sys.argv) < 2:
-    print(
-        "python {} JS_VAR_NAME [SET_NAME]".format(
-            sys.argv[0]
-        )
-    )
+    print(f'python {sys.argv[0]} SET_NAME')
+    print()
     print("""
 Given an input stream of raw card data in FanOfMostEverything's textual format,
 parse it into structured JSON of the form accepted by PonyMTG, and output the
 result.
 
-JS_VAR_NAME    The name of the variable which will contain the JSON string.
-               (This doesn't really matter; it can be anything).
-
-SET_NAME       The name of the set. If given, this will populate the `set` field
-               on every output card.
+SET_NAME: The name of the set. This will populate the `set` field on every card.
 """)
     sys.exit()
 
-js_variable_name = sys.argv[1]
-set_name = None
-if len(sys.argv) >= 2:
-    set_name = sys.argv[2]
+set_name = sys.argv[1]
 
 ficg_raw_dump = sys.stdin.read()
 
@@ -112,9 +102,5 @@ card_properties = [
 # Turn the dictionary of card data entries into a Javascript JSON variable, and
 # output it.
 sys.stdout.write(
-    convert_card_data_entries_to_js(
-        card_data_entries,
-        card_properties,
-        js_variable_name
-    )
+    convert_card_data_entries_to_json(card_data_entries, card_properties)
 )

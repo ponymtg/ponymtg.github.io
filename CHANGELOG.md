@@ -1,3 +1,6 @@
+## 1.16.0
+* Updated Friendship is Card Games up to "Friendship is Card Games: Pony Life, Season 2, Week 7".
+
 ## 1.15.0
 * Added new asynchronous card loader to replace old method of loading cards via included script file. Card data is now stored in JSON files and loaded when appropriate.
 

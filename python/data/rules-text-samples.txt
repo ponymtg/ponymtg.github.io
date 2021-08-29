@@ -2620,3 +2620,10 @@ Players can cast spells and activate abilities only during their own turns.
 If an effect would remove one or more time counters from a permanent or suspended card, it removes that many time counters plus one from it instead.
 When a player pays Capering Figment’s ward cost, sacrifice Capering Figment.
 Creatures can't attack.
+Whenever you cast a spell during an opponent's turn, that player mills three cards.
+If you roll a 1 on a die, you may treat it as that die's highest natural result instead.
+Whenever Capacitor Raiders attacks, you may pay EE. If you do, amass 1.
+You and Voice of Generosity have protection from everything you own but don't control.
+Enchanted land is an Island.
+At the beginning of your postcombat main phase, add C for each creature that attacked this turn.
+Choose left or right. Each player discards all cards from their hand, then draws cards equal to the number discarded by the next player in the chosen direction.

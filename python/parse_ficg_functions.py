@@ -286,6 +286,7 @@ def is_type_line(line):
     # - "Artifact" is preceded by the word "World".
     # - "Artifact" is succeeded by a long dash.
     # - "Artifact" is succeeded by the word "Creature".
+    # - "Artifact" is succeeded by the word "Land".
     if 'Artifact' in line:
         if (
             line != 'Artifact'
@@ -294,6 +295,7 @@ def is_type_line(line):
             and 'Artifact Creature' not in line
             and 'Enchantment Artifact' not in line
             and 'World Artifact' not in line
+            and 'Artifact Land' not in line
             and 'Artifact —' not in line
         ):
             return False
@@ -1026,21 +1028,17 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump, rules_text_patterns):
 
     return card_data_entries
 
-# Given a list of card data entries (dicts), return a string containing a
-# JavaScript variable definition for an array containing those card data
-# entries as objects.
+# Given a list of card data entries (dicts), return a JSON encoding for an array
+# containing those card data entries as objects.
 #
-# Note that this is not JSON output (although it is very close). In fact, we are
-# using Python's `json` module to do most of the work of converting the objects
-# to JS.
+# To produce more consistent output, we go a little further than simply encoding
+# the JSON - we also specify the exact ordering of properties in each card data
+# entry, and also manually encode the JSON to UTF-8 to make it a little more
+# readable (otherwise it encodes non-ASCII characters with escape sequences)
 #
 # A list of `properties` must be given to define what properties will appear in
 # each card data entry (and their ordering).
-def convert_card_data_entries_to_js(
-    card_data_entries,
-    properties,
-    variable_name
-):
+def convert_card_data_entries_to_json(card_data_entries: list, properties: list) -> str:
     ordered_dicts = []
     for entry in card_data_entries:
         ordered_dict = OrderedDict()
@@ -1052,13 +1050,10 @@ def convert_card_data_entries_to_js(
     # Convert the set of card data entries to JSON. We need to explicitly
     # suspend ASCII encoding and manually encode it to UTF-8 - this is a bit
     # more human-readable than the default Unicode-escaping behavior.
-    js = json.dumps(ordered_dicts, indent = 4, ensure_ascii = False)
-    js = 'var '+variable_name+' = ' + js + ';'
-    js = re.sub(r'}$', '},', js, flags = re.MULTILINE)
-    js = re.sub(r'"$', '",', js, flags = re.MULTILINE)
-    js = js.encode('utf-8')
+    card_data_json = json.dumps(ordered_dicts, indent = 4, ensure_ascii = False)
+    card_data_json = card_data_json.encode('utf-8')
 
-    return js.decode()
+    return card_data_json.decode()
 
 # Given a piece of card text that may contain a combination of both rules text
 # and flavor text, return a 2-tuple containing the rules text and the flavor

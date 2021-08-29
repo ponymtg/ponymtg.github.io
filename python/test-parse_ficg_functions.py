@@ -67,6 +67,7 @@ class test_parse_ficg_functions(unittest.TestCase):
         self.assertTrue(is_type_line('Sorcery — Arcane'))
         self.assertTrue(is_type_line('Instant — Lesson'))
         self.assertTrue(is_type_line('Sorcery — Lesson'))
+        self.assertTrue(is_type_line('Artifact Land — Treasure Island'))
 
         self.assertFalse(is_type_line('Legendary'))
         self.assertFalse(is_type_line('Legendary Example'))
