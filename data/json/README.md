@@ -1,0 +1,1 @@
+`unused_cards.json`: This class contains data for cards that are currently being left out of the database for various reasons - usually because they're beta versions of other cards, and including them would be redundant.

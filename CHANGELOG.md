@@ -1,3 +1,10 @@
+## 1.15.0
+* Added new asynchronous card loader to replace old method of loading cards via included script file. Card data is now stored in JSON files and loaded when appropriate.
+
+## 1.14.3
+* Updated Friendship is Card Games up to "Friendship is Card Games and Witchcraft: Horse Women".
+* Fixed some type line detection bugs.
+
 ## 1.14.2
 * Performed some minor refactoring on the `main.js` script.
 

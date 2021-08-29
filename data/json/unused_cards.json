@@ -1,62 +1,57 @@
-/**
- * This class contains data for cards that are currently being left out of the
- * database for various reasons; usually because they're beta versions of other
- * cards, and including them would be redundant.
- */
-var UNUSED_CARDS = [
+[
     {
         "name": "Fluttershy",
         "image": "Sorden/Uncategorized/Mcv5h.jpg",
         "creator": "Sorden",
-        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set.",
+        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set."
     },
     {
         "name": "Rarity",
         "image": "Sorden/Uncategorized/ojiCJ.jpg",
         "creator": "Sorden",
-        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set.",
+        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set."
     },
     {
         "name": "Pinkie Pie",
         "image": "Sorden/Uncategorized/T0xQt.jpg",
         "creator": "Sorden",
-        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set.",
+        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set."
     },
     {
         "name": "20% Cooler Dress",
         "image": "Sorden/Uncategorized/TIIyP.jpg",
         "creator": "Sorden",
-        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set.",
+        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set."
     },
     {
         "name": "Celestia, Princess of Equestria",
         "image": "Sorden/Uncategorized/uwKbi.jpg",
         "creator": "Sorden",
-        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set.",
+        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set."
     },
     {
         "name": "Applejack",
         "image": "Sorden/Uncategorized/vGt9f.jpg",
         "creator": "Sorden",
-        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set.",
+        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set."
     },
     {
         "name": "Artful Dress",
         "image": "Sorden/Uncategorized/VlhqM.jpg",
         "creator": "Sorden",
-        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set.",
+        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set."
     },
     {
         "name": "Rainbow Dash",
         "image": "Sorden/Uncategorized/VzMmq.jpg",
         "creator": "Sorden",
-        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set.",
+        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set."
     },
     {
         "name": "Twilight Sparkle",
         "image": "Sorden/Uncategorized/y4wgg.jpg",
         "creator": "Sorden",
-        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set.",
+        "notes": "One of several cards found on an old NEOGAF thread. These appear to be earlier versions of the cards that would eventually be finalized in Sorden's \"Friendship is Magic the Gathering\" set."
     },
     {
         "name": "Gattai!",
@@ -65,7 +60,7 @@ var UNUSED_CARDS = [
         "supertype": "Enchantment",
         "text": "Whenever one or more Vehicles you control crew another Vehicle, the crewed Vehicle gets +3/+3 and gains trample until end of turn.",
         "notes": "A combining-mecha-themed joke card released by FanOfMostEverything in the Unhinged Discord chat.",
-        "createdAt": "2017-11-12",
+        "createdAt": "2017-11-12"
     },
     {
         "name": "Fluttershy, Keeper of Fauna",
@@ -77,7 +72,7 @@ var UNUSED_CARDS = [
         "flavorText": "\"Don't worry little ones, I'll take care of you.\"",
         "pt": "1/5",
         "sourceUrl": "https://www.fimfiction.net/blog/761109/mane-6-minus-twilight-as-magic-cards",
-        "notes": "A My Little Planeswalker-related card from a card blog post by Zennistrad. This appears to be the original version of what would eventually become Fluttershy, Fauna Keeper.",
+        "notes": "A My Little Planeswalker-related card from a card blog post by Zennistrad. This appears to be the original version of what would eventually become Fluttershy, Fauna Keeper."
     },
     {
         "name": "Luna’s Defeat",
@@ -87,7 +82,7 @@ var UNUSED_CARDS = [
         "text": "Put target creature on top of its owner’s library. If a creature named Luna of the Night is put on top of a library this way, its controller then puts the top eleven cards of his or her library into his or her graveyard.",
         "flavorText": "“Don’t worry, this is all just a dream. You’ll disappear when I wake up.”\n— Sunset the Exiled",
         "sourceUrl": "https://www.fimfiction.net/story/387331/my-little-planeswalker-shattered-sunset",
-        "notes": "A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad. This is the old version, before it was later amended in a blog post.",
+        "notes": "A chapter card from the fic My Little Planeswalker: Shattered Sunset, by Zennistrad. This is the old version, before it was later amended in a blog post."
     },
     {
         "name": "Celestia of the Dawn",
@@ -99,7 +94,7 @@ var UNUSED_CARDS = [
         "text": "Alicorn (This card is a Horse, Pegasus, and Unicorn in addition to its other creature types.)\n\nFlying, vigilance\n\nOther Horses, Unicorns, and Pegasi you control get +1/+1 and have vigilance.\n\n2WW, T: Exile target attacking creature. Its controller creates a colorless land token named Lunar Prison with \"T: Add C to your mana pool.\"",
         "pt": "4/5",
         "sourceUrl": "https://www.fimfiction.net/blog/762878/more-mlp-characters-as-magic-cards",
-        "notes": "This appears to be an early version of the card that would later appear in My Little Planeswalker: Sideboard Stories.",
+        "notes": "This appears to be an early version of the card that would later appear in My Little Planeswalker: Sideboard Stories."
     },
     {
         "name": "Luna of the Night",
@@ -111,7 +106,7 @@ var UNUSED_CARDS = [
         "text": "Alicorn (This card is a Horse, Pegasus, and Unicorn in addition to its other creature types.)\n\nFlying, hexproof\n\nWhen Luna of the Night deals combat damage to a player, that player puts the top X cards of his or her library into his or her graveyard and you draw X cards, where X is the number of tapped creatures that player controls.\n\n2U, T: Tap target creature. It doesn't untap during its controller's next untap step.",
         "pt": "3/4",
         "sourceUrl": "https://www.fimfiction.net/blog/762878/more-mlp-characters-as-magic-cards",
-        "notes": "This appears to be an early version of the card that would later appear in My Little Planeswalker: Sideboard Stories.",
+        "notes": "This appears to be an early version of the card that would later appear in My Little Planeswalker: Sideboard Stories."
     },
     {
         "name": "Rainbow Dash, Wonderbolt",
@@ -124,7 +119,7 @@ var UNUSED_CARDS = [
         "flavorText": "\"I'll always have your back. That's what makes me the awesomest!\"",
         "pt": "4/2",
         "sourceUrl": "https://www.fimfiction.net/blog/761109/mane-6-minus-twilight-as-magic-cards",
-        "notes": "One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Sideboard Stories.",
+        "notes": "One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Sideboard Stories."
     },
     {
         "name": "Pinkie Pie, Joyful Hedonist",
@@ -137,7 +132,7 @@ var UNUSED_CARDS = [
         "flavorText": "\"All right, partygoers! Are you ready to go KA-RAZY!?\"",
         "pt": "4/1",
         "sourceUrl": "https://www.fimfiction.net/blog/761109/mane-6-minus-twilight-as-magic-cards",
-        "notes": "One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Sideboard Stories.",
+        "notes": "One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Sideboard Stories."
     },
     {
         "name": "Sunset as One",
@@ -150,7 +145,7 @@ var UNUSED_CARDS = [
         "text": "+1: Sunset as One deals 2 damage to target player and you gain 2 life.\n-2: Target creature gets +2/+0 and gains first strike and deathtouch until your next turn.\n-8: Create a legendary 8/8 white, black, and red Avatar creature token with flying, first strike, haste, vigilance, deathtouch, lifelink, and indestructible named Sunset Equinox.",
         "loyalty": "4",
         "sourceUrl": "https://www.fimfiction.net/blog/797686/my-little-planeswalker-but-the-planeswalkers-are-actual-cards",
-        "notes": "One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Shattered Sunset.",
+        "notes": "One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Shattered Sunset."
     },
     {
         "name": "Sunset as One",
@@ -163,7 +158,7 @@ var UNUSED_CARDS = [
         "text": "+1: Sunset as One deals 2 damage to target player and you gain 2 life.\n-2: Target creature gets +2/+0 and gains first strike and deathtouch until your next turn.\n-8: Create Sunset Equinox, a legendary 8/8 red, white, and black Avatar creature token with flying, first strike, haste, vigilance, deathtouch, lifelink, and indestructible.",
         "loyalty": "4",
         "sourceUrl": "https://www.fimfiction.net/blog/817451/my-little-planeswalker-cards-take-2",
-        "notes": "One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Shattered Sunset.",
+        "notes": "One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Shattered Sunset."
     },
     {
         "name": "Twilight, Alicorn Ascendant",
@@ -176,7 +171,7 @@ var UNUSED_CARDS = [
         "text": "+1: Twilight deals 1 damage to up to one target creature. Up to one other target creature gains prowess until end of turn.\n-1: Discard a card, then draw two cards.\n-6: You get an emblem with “Whenever you cast an instant or sorcery spell from your hand, return that card to your hand as it resolves” and “You have no maximum hand size.”",
         "loyalty": "3",
         "sourceUrl": "https://www.fimfiction.net/blog/817451/my-little-planeswalker-cards-take-2",
-        "notes": "One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Twilight's Spark.",
+        "notes": "One of 5 My Little Planeswalker-related cards from a card blog post by Zennistrad. A refined version of this card later appeared in My Little Planeswalker: Twilight's Spark."
     },
     {
         "name": "Sunset, Apotheon",
@@ -189,6 +184,6 @@ var UNUSED_CARDS = [
         "text": "+2: Add three mana in any combination of colors.\n-3: Exile target permanent.\n-4: Reveal the top seven cards of your library. You may cast a nonland card from among them without paying its mana cost. Put the rest on the bottom of your library in a random order.\n-21: You win the game.",
         "loyalty": "7",
         "sourceUrl": "https://www.fimfiction.net/blog/817451/my-little-planeswalker-cards-take-2",
-        "notes": "This card was originally posted on Zennistrad's blog as a spoiler for a future My Little Planeswalker story. A refined version of this card later appeared in My Little Planeswalker: Glimmering Oil.",
-    },
-];
+        "notes": "This card was originally posted on Zennistrad's blog as a spoiler for a future My Little Planeswalker story. A refined version of this card later appeared in My Little Planeswalker: Glimmering Oil."
+    }
+]

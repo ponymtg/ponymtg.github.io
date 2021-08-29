@@ -1,5 +1,17 @@
 const initialize = async function initialize() {
-    CARDS = await loadCards(global.urls.cards.ficg);
+    const cardDataUrls = [
+        global.urls.cards.ficg,
+        'data/json/ficg_basic_land_cards.json',
+        'data/json/ficg_tokens.json',
+        'data/json/ficg_emblems.json',
+    ];
+        
+    CARDS = [];
+
+    for (let i=0; i < cardDataUrls.length; i++) {
+        const url = cardDataUrls[i];
+        CARDS = CARDS.concat(await loadCards(url));
+    }
 
     const boosterImageContainer = document.querySelector(
         '#boosterPackImageContainer'
