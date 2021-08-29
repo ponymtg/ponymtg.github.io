@@ -1,3 +1,6 @@
+## 1.16.1
+* Fixed a bug with the FICG booster generator due to the new asynchronous card loader.
+
 ## 1.16.0
 * Updated Friendship is Card Games up to "Friendship is Card Games: Pony Life, Season 2, Week 7".
 
