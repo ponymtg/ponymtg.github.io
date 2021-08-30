@@ -1,17 +1,9 @@
 const initialize = async function initialize() {
-    const cardDataUrls = [
-        global.urls.cards.ficg,
-        'data/json/ficg_basic_land_cards.json',
-        'data/json/ficg_tokens.json',
-        'data/json/ficg_emblems.json',
-    ];
+    CARDS = await loadCards(global.urls.cards.ficg);
+    FICG_BASIC_LAND_CARDS = await loadCards('data/json/ficg_basic_land_cards.json');
+    FICG_TOKENS = await loadCards('data/json/ficg_tokens.json');
+    FICG_EMBLEMS = await loadCards('data/json/ficg_emblems.json');
         
-    CARDS = [];
-
-    for (let i=0; i < cardDataUrls.length; i++) {
-        const url = cardDataUrls[i];
-        CARDS = CARDS.concat(await loadCards(url));
-    }
 
     const boosterImageContainer = document.querySelector(
         '#boosterPackImageContainer'
