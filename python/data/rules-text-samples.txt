@@ -2627,3 +2627,4 @@ You and Voice of Generosity have protection from everything you own but don't co
 Enchanted land is an Island.
 At the beginning of your postcombat main phase, add C for each creature that attacked this turn.
 Choose left or right. Each player discards all cards from their hand, then draws cards equal to the number discarded by the next player in the chosen direction.
+Perseverance Elemental can't be sacrificed.

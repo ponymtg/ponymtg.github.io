@@ -1,3 +1,7 @@
+## 1.16.2
+* Updated Friendship is Card Games up to "Friendship is Card Games: Twilight Sparkle and the Crystal Heart Spell".
+* Added new set: AndyManX
+
 ## 1.16.1
 * Fixed a bug with the FICG booster generator due to the new asynchronous card loader.
 

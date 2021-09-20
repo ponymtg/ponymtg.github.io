@@ -51,7 +51,7 @@ can be the target
 can block (an additional|creatures|up to)
 can only attack alone
 can't attack (alone|unless)
-can't be (activated|blocked|countered|equipped|exiled|targeted|tapped|the target of|triggered)
+can't be (activated|blocked|countered|equipped|exiled|sacrificed|targeted|tapped|the target of|triggered)
 can't block( creatures| this turn| unless|\.$)
 can't cast( creature| artifact)? spells
 can't have or gain

@@ -236,5 +236,11 @@ var SETS = {
 //        "url": "https://www.patreon.com/bbsartboutique",
 //        "notes": "A collection of 25 convention badges designed in the style of MtG cards.",
 //    },
+    'AndyManX': {
+        "path": "AndyManX/cards",
+        "creator": "AndyManX",
+        "url": "https://www.reddit.com/r/mylittlepony/comments/2l9g1r/magic_the_gathering_custom_cards_main_6/",
+        "notes": "A collection of 21 cards posted on Reddit's r/mylittlepony group in 2014."
+    },
 };
 

@@ -894,6 +894,7 @@ def parse_individual_card_dump_into_card_data_entry(
             'transform '+card_data_entry['name'].lower() in card_data_entry['text'].lower()
             or 'transform '+first_word_of_card_name.lower() in card_data_entry['text'].lower()
             or 'transform it' in card_data_entry['text']
+            or 'transforms it' in card_data_entry['text']
             or re.search(
                 r'(put|return)( .+)? to the battlefield( .+)? transformed',
                 card_data_entry['text'],
