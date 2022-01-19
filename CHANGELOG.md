@@ -1,3 +1,6 @@
+## 1.16.3
+* Updated Friendship is Card Games up to "Friendship is Card Games: The Journal of the Two Sisters".
+
 ## 1.16.2
 * Updated Friendship is Card Games up to "Friendship is Card Games: Twilight Sparkle and the Crystal Heart Spell".
 * Added new set: AndyManX

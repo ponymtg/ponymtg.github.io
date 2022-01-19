@@ -2628,3 +2628,12 @@ Enchanted land is an Island.
 At the beginning of your postcombat main phase, add C for each creature that attacked this turn.
 Choose left or right. Each player discards all cards from their hand, then draws cards equal to the number discarded by the next player in the chosen direction.
 Perseverance Elemental can't be sacrificed.
+Forecast — U, Reveal Behold the Cosmos from your hand: If it's neither day nor night, it becomes day. (Activate only during your upkeep and only once each turn.)
+Pay EEEEEE: Transform Unblinking Mutt.
+1-9 | Return those cards to your hand.\n10-20 | Return one of those cards to the battlefield tapped and the other to your hand.
+-5: Discard all the cards in your hand. Exile that many cards from the top of each player's library. You may play those cards for as long as they remain exiled.
+Addendum — If you cast this spell during your main phase, instead that permanent's owner puts it on the top or bottom of their library.
+Pasture Thrasher can't attack, block, or crew Vehicles alone.
+Whenever you gain life, venture into the dungeon. This ability triggers only once each turn. (To venture into the dungeon, enter the first room or advance to the next room.)
+Masked Fencer has ward 1 as long as it's attacking or blocking. (Each instance of ward triggers separately.)
+1-9 | 2/3 Spider with reach.\n10-19 | 3/3 Elephant with trample.\n20 | 5/5 Beast with trample and haste.

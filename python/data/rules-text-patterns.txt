@@ -32,7 +32,9 @@ at (end|the beginning) of (combat|your upkeep)
 attacked with a creature
 attackers are declared
 attacking (creatures|player)
+attacking or blocking
 attacks? or blocks?
+attack, block
 (attacks?|attacks? this turn|blocked|each turn|next combat|this combat|this turn) (as though|if able)
 attacks (each|this) combat
 at the beginning of the upkeep
@@ -56,9 +58,9 @@ can't block( creatures| this turn| unless|\.$)
 can't cast( creature| artifact)? spells
 can't have or gain
 (can't|would) (gain|lose) life
-cards into your hand
+cards (in)?to your hand
 cards? exiled with
-card to the battlefield
+cards? to the battlefield
 cast those cards
 cast [\w\s]+ from exile
 change its text
@@ -95,6 +97,7 @@ creatures (you|you don't|your opponents) control
 creature (token|type|spell)s?
 creature of the chosen type
 creature would be destroyed
+crew Vehicles
 damage can\'t be prevented
 damage that would be dealt
 deals( combat)? damage (equal to|to target)
@@ -110,6 +113,7 @@ defending player
 destroy all [\w\s,-]+ creatures
 destroy up to
 died this turn
+discard all the cards
 discard cards
 (discard|draw)s?( up to)? (a|one|two|three|four|five|six|seven|this|that many)( or more)? cards?
 discards all cards
@@ -119,13 +123,15 @@ draw X cards
 during each of your turns
 during extra turns
 during their own turns
-during your turn
+during your (upkeep|turn)
+during your main phase
 during an opponent's turn
 each combat
 each creature blocking
 each opponent
 each other (creature|player)
 each player (abandons|can't|chooses|discards|draws|may|puts|sacrifices|shuffles)
+each player's library
 each player's upkeep
 (each|the|your) end step
 effect would remove
@@ -143,6 +149,7 @@ equipped creature
 except it has this ability
 except it's still
 ^exile 
+exile that many cards
 exiled card
 exiled from the battlefield
 exile it instead
@@ -150,7 +157,7 @@ exile (it|target)
 face( |-)down
 for each card
 from all graveyards
-from (their|your) (graveyard|library)
+from (their|your) (graveyard|hand|library)
 gains? control of (it|all)
 gains? life equal to
 graveyard this turn
@@ -201,12 +208,14 @@ only (as a sorcery|during combat)
 on top of their owner's libraries
 onto the battlefield
 on your turn
+only once each turn
 opponent becomes the monarch
 opponent gains life
 opponents can't
 (opponent's|that player's|your) library
 paired with another
 pay [1-9X] life
+pay E+:
 (permanent|revealed|suspended) card
 permanents can't
 (plains|island|swamp|mountain|forest)walk
@@ -254,6 +263,7 @@ replacing all instances of
 ^Equip \(?[\dWUBRG]+\)?
 return all (creatures|land cards)
 return (her|him|it) to the battlefield
+return those cards
 Reveal (a creature card|your hand)
 reveal (this|that) card
 (gain|lose)s? (\d+|that much) life
@@ -274,6 +284,7 @@ shuffles it\b
 ^[WUBRG]+\b: 
 ^((\w+)( \w+)*)((,|;) (\w+)( \w+)*)*$
 you may pay [\dwubrg]+
+you may play those cards
 sacrifice it
 sacrifices? (a|an|another|this) (artifact|creature|Forest|Island|land|Mountain|permanent|Plains|Swamp)
 sacrifices permanents
@@ -297,7 +308,7 @@ take an extra turn
 tap (any number of|each creature|target|up to)
 tapped creature
 target( black| blue| green| red| snow| white| wordy)? (artifact|aura|attacking|card|creature|enchanted|enchantment|land|opponent|permanent|player|spell)
-that creature's owner
+that (creature|permanent)'s owner
 that player (controls|discards|loses|sacrifices)
 that's a copy of
 the chosen creatures
@@ -307,6 +318,7 @@ time counters
 to its owner's hand
 top card of (any library|their libraries)
 top card of your
+top or bottom of their library
 total toughness
 (top|up to) (two|three|four|five|six|seven|eight|nine|ten) cards
 to their owner'?s'? hands?
@@ -321,7 +333,9 @@ unspent mana
 untap
 until end of turn
 upkeep step
+\bventure into the dungeon
 ward cost
+ward \d
 when a player (casts|pays)
 when no creatures
 whenever a creature would 
@@ -329,10 +343,11 @@ whenever an opponent casts
 Whenever a player
 Whenever a spell you've cast
 whenever enchanted creature 
-whenever you (crank|sacrifice|tap)
+whenever you (crank|gain life|sacrifice|tap)
 When you cast (a|this) spell
 When you control no( .+)? (creatures|Forests|Islands|Mountains|Plains|Swamps)
 where X is
+with (reach|trample)
 without paying its mana cost
 would be destroyed
 would deal( combat)? damage
