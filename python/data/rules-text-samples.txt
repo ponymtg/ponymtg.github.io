@@ -2637,3 +2637,5 @@ Pasture Thrasher can't attack, block, or crew Vehicles alone.
 Whenever you gain life, venture into the dungeon. This ability triggers only once each turn. (To venture into the dungeon, enter the first room or advance to the next room.)
 Masked Fencer has ward 1 as long as it's attacking or blocking. (Each instance of ward triggers separately.)
 1-9 | 2/3 Spider with reach.\n10-19 | 3/3 Elephant with trample.\n20 | 5/5 Beast with trample and haste.
+(Note: Same room layout as Lost Mine of Phandelver)
+First Queen's Legacy has protection from each mana value among cards your opponents own in exile.
