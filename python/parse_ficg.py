@@ -29,11 +29,13 @@ SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 # uses that line to determine where a card starts and ends. For this reason, we
 # are going to perform simple text correction of some known typos before
 # processing the dump.
-SPELLING_CORRECTIONS = {}
-SPELLING_CORRECTIONS['Enchatment'] = 'Enchantment'
-SPELLING_CORRECTIONS['Enchantent'] = 'Enchantment'
-SPELLING_CORRECTIONS['Sorcey'] = 'Sorcery'
-SPELLING_CORRECTIONS['Aritfact'] = 'Artifact'
+SPELLING_CORRECTIONS = {
+    'Aritfact': 'Artifact',
+    'Creaure': 'Creature',
+    'Enchatment': 'Enchantment',
+    'Enchantent': 'Enchantment',
+    'Sorcey': 'Sorcery',
+}
 
 # Read command line arguments.
 if len(sys.argv) < 2:

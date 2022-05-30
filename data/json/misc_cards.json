@@ -2201,5 +2201,15 @@
         "pt": "4/4",
         "sourceUrl": "https://www.fimfiction.net/story/493666/1/friendship-is-optimal-type-conversion/any-sufficiently-analyzed-magic-is-indistinguishable-from-friendship",
         "notes": "A card created by FanOfMostEverything for his story Friendship is Optimal: Type Conversion."
+    },
+    {
+        "name": "Anywhere But Here",
+        "creator": "FanOfMostEverything",
+        "cost": "2",
+        "supertype": "Sorcery",
+        "text": "Planeswalk. You can't roll the planar die until your next turn.",
+        "flavorText": "Any planeswalker can cast the spell. Few are ever desperate enough to do so.",
+        "sourceUrl": "https://www.fimfiction.net/story/385911/19/my-little-planeswalker-sideboard-stories/thick-as-thieves-part-1#comment/10591868",
+        "notes": "A joke card created by FanOfMostEverything, inspired by the story My Little Planeswalker: Sideboard Stories by Zennistrad."
     }
 ]

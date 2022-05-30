@@ -24803,6 +24803,38 @@
         "notes": "A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad."
     },
     {
+        "name": "Exactly as I Foresaw It",
+        "set": "My Little Planeswalker",
+        "creator": "Zennistrad",
+        "supertype": "Scheme",
+        "text": "When you set this scheme in motion, look at the top seven cards of your library. Put two of them into your hand and the rest on the bottom of your library in any order.",
+        "flavorText": "“This isn’t one of your pulp novels, planeswalker. Did you think I’d allow you to stand before me if you held the slightest chance of hindering my masterstroke?”",
+        "sourceUrl": "https://www.fimfiction.net/story/389896/my-little-planeswalker-glimmering-oil",
+        "notes": "A chapter card from the fic My Little Planeswalker: Glimmering Oil, by Zennistrad."
+    },
+    {
+        "name": "Diverted Summoning",
+        "set": "My Little Planeswalker",
+        "creator": "Zennistrad",
+        "cost": "WWU",
+        "supertype": "Enchantment",
+        "text": "Flash\n\nWhen Diverted Summoning enters the battlefield, exile target creature or creature spell.\n\nWhen Diverted Summoning leaves the battlefield, return the exiled card to its owner’s hand.",
+        "flavorText": "Sometimes the best way to solve a problem is to send it somewhere else.",
+        "sourceUrl": "https://www.fimfiction.net/story/392671/my-little-planeswalker-shards-of-concordia",
+        "notes": "A chapter card from the fic My Little Planeswalker: Shards of Concordia, by Zennistrad."
+    },
+    {
+        "name": "Pact of Destiny",
+        "set": "My Little Planeswalker",
+        "creator": "Zennistrad",
+        "cost": "0",
+        "colorIndicator": "(UW)",
+        "supertype": "Sorcery",
+        "text": "Search your library for a historic card, reveal it, put it into your hand, then shuffle your library. (Artifacts, legendaries, and Sagas are historic.)\n\nAt the beginning of your next upkeep, pay 2UW. If you don’t, you lose the game.",
+        "sourceUrl": "https://www.fimfiction.net/story/392671/my-little-planeswalker-shards-of-concordia",
+        "notes": "A chapter card from the fic My Little Planeswalker: Shards of Concordia, by Zennistrad."
+    },
+    {
         "name": "Rarity, Gem Weaver",
         "creator": "Zennistrad",
         "set": "My Little Planeswalker",
@@ -25066,6 +25098,106 @@
         "notes": "A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad."
     },
     {
+        "name": "Verko, Crimelord of Klugetown",
+        "set": "My Little Planeswalker",
+        "creator": "Zennistrad",
+        "cost": "3BB",
+        "supertype": "Legendary Creature",
+        "subtype": "Rat Rogue",
+        "text": "Assassins, Mercenaries, and other Rogues you control get +1/+1.\n\nWhenever another creature you control deals combat damage to a player, that player discards a card.",
+        "flavorText": "Every lowlife, knave, and villain south of Equestria answers to him.",
+        "pt": "3/3",
+        "sourceUrl": "https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories",
+        "notes": "A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad."
+    },
+    {
+        "name": "Nargus Cugio",
+        "creator": "Zennistrad",
+        "set": "My Little Planeswalker",
+        "cost": "1UB",
+        "supertype": "Legendary Creature",
+        "subtype": "Drake Rogue",
+        "text": "Flash; first strike\n\nWhen Nargus Cugio enters the battlefield, put a bounty counter on target creature an opponent controls.\n\nWhenever a creature with a bounty counter on it leaves the battlefield, draw a card.\n\n1UB, Pay 2 life: Return Nargus Cugio to its owner’s hand.",
+        "pt": "2/2",
+        "sourceUrl": "https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories",
+        "notes": "A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad."
+    },
+    {
+        "name": "Kusha Irongale",
+        "creator": "Zennistrad",
+        "set": "My Little Planeswalker",
+        "cost": "2UR",
+        "supertype": "Legendary Creature",
+        "subtype": "Dragon Spellshaper",
+        "text": "Flying\n\n1U, T, Discard a card: Counter target noncreature spell unless its controller pays 2.\n\n2R, T, Discard a card: Kusha Irongale deals 3 damage to any target.",
+        "flavorText": "Seeking purpose in life, Kusha left the frigid Southern Continent in search of adventure",
+        "pt": "3/3",
+        "sourceUrl": "https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories",
+        "notes": "A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad."
+    },
+    {
+        "name": "Cull the Rich",
+        "creator": "Zennistrad",
+        "set": "My Little Planeswalker",
+        "cost": "2BG",
+        "supertype": "Enchantment",
+        "text": "Your opponents can’t create or sacrifice Treasure tokens.\n\nAt the beginning of your end step, each player with more life than you sacrifices a creature unless they lose 3 life.",
+        "flavorText": "The most ambitious members of the Golgari Swarm see wealth as a weakness — to obsess over mere riches is to be left at the mercy of those with far greater power.",
+        "sourceUrl": "https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories",
+        "notes": "A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad."
+    },
+    {
+        "name": "Quetzalcoatl, Lord of Wind",
+        "creator": "Zennistrad",
+        "set": "My Little Planeswalker",
+        "cost": "2RGW",
+        "supertype": "Legendary Creature",
+        "subtype": "Snake Avatar",
+        "text": "Flying\n\nWhenever Quetzalcoatl attacks, you may pay XGG. If you do, Quetzalcoatl deals X damage to each other creature with flying.",
+        "flavorText": "The might and majesty of a gale-force wind.",
+        "pt": "4/4",
+        "sourceUrl": "https://www.fimfiction.net/blog/790146/the-four-elemental-lords"
+    },
+    {
+        "name": "",
+        "creator": "Zennistrad",
+        "set": "My Little Planeswalker",
+        "cost": "",
+        "supertype": "Legendary Creature",
+        "subtype": "",
+        "text": "",
+        "flavorText": "",
+        "pt": "",
+        "sourceUrl": "https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories",
+        "notes": "A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad."
+    },
+    {
+        "name": "",
+        "creator": "Zennistrad",
+        "set": "My Little Planeswalker",
+        "cost": "",
+        "supertype": "Legendary Creature",
+        "subtype": "",
+        "text": "",
+        "flavorText": "",
+        "pt": "",
+        "sourceUrl": "https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories",
+        "notes": "A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad."
+    },
+    {
+        "name": "",
+        "creator": "Zennistrad",
+        "set": "My Little Planeswalker",
+        "cost": "",
+        "supertype": "Legendary Creature",
+        "subtype": "",
+        "text": "",
+        "flavorText": "",
+        "pt": "",
+        "sourceUrl": "https://www.fimfiction.net/story/385911/my-little-planeswalker-sideboard-stories",
+        "notes": "A chapter card from the fic My Little Planeswalker: Sideboard Stories, by Zennistrad."
+    },
+    {
         "name": "Pinkie, Joyful Hedonist",
         "creator": "Zennistrad",
         "set": "My Little Planeswalker",
@@ -25269,42 +25401,6 @@
         "sourceUrl": "https://www.fimfiction.net/blog/804984/mlplaneswalker-side-characters"
     },
     {
-        "name": "Nargus Cugio",
-        "creator": "Zennistrad",
-        "set": "My Little Planeswalker",
-        "cost": "1UB",
-        "supertype": "Legendary Creature",
-        "subtype": "Cat Bird Rogue",
-        "text": "When Nargus Cugio enters the battlefield, put a mark counter on target creature you don’t control.\n\nWhenever a creature with a mark counter on it leaves the battlefield, draw a card.\n\n1UB: Return Nargus Cugio to its owner’s hand.",
-        "flavorText": "“A hit job, eh? Not my usual fare, but I can pull it off.”",
-        "pt": "2/2",
-        "sourceUrl": "https://www.fimfiction.net/blog/799614/a-couple-characters-who-may-appear-in-a-sideboard-stories-chapter-or-two-in-the-future"
-    },
-    {
-        "name": "Kusha Irongale",
-        "creator": "Zennistrad",
-        "set": "My Little Planeswalker",
-        "cost": "2UR",
-        "supertype": "Legendary Creature",
-        "subtype": "Dragon Spellshaper",
-        "text": "Flying\n\nUU, T, Discard a card: Counter target spell, activated ability, or triggered ability that targets a permanent you control.\n\n2R, T, Discard a card: Kusha Irongale deals 3 damage to target creature or player.",
-        "flavorText": "“I’ll do my best, Mister Verko!”",
-        "pt": "2/3",
-        "sourceUrl": "https://www.fimfiction.net/blog/799614/a-couple-characters-who-may-appear-in-a-sideboard-stories-chapter-or-two-in-the-future"
-    },
-    {
-        "name": "Quetzalcoatl, Lord of Wind",
-        "creator": "Zennistrad",
-        "set": "My Little Planeswalker",
-        "cost": "2RGW",
-        "supertype": "Legendary Creature",
-        "subtype": "Snake Avatar",
-        "text": "Flying\n\nWhenever Quetzalcoatl attacks, you may pay XGG. If you do, Quetzalcoatl deals X damage to each other creature with flying.",
-        "flavorText": "The might and majesty of a gale-force wind.",
-        "pt": "4/4",
-        "sourceUrl": "https://www.fimfiction.net/blog/790146/the-four-elemental-lords"
-    },
-    {
         "name": "Huitzilopochtli, Lord of Fire",
         "creator": "Zennistrad",
         "set": "My Little Planeswalker",
@@ -25350,19 +25446,6 @@
         "text": "Flying; menace; changeling (This card is every creature type.)\n\n4U, T: Create a token that's a copy of target creature an opponent controls, except it has \"1G, T: This creature fights another target creature with the same name as this creature.\"",
         "flavorText": "Her army deserted, her authority shattered, and her dignity in tatters, Chrysalis still looked in the mirror and saw only perfection.",
         "pt": "4/4",
-        "sourceUrl": "https://www.fimfiction.net/blog/825264/friendship-the-gathering-villains-edition",
-        "notes": "One of 4 villain cards, from a card blog post by Zennistrad."
-    },
-    {
-        "name": "Verko, Crimelord of Klugetown",
-        "set": "My Little Planeswalker",
-        "creator": "Zennistrad",
-        "cost": "3BB",
-        "supertype": "Legendary Creature",
-        "subtype": "Rat Rogue",
-        "text": "Assassins, Mercenaries, and other Rogues you control get +1/+1 and have menace.\n\nWhenever a creature you control deals combat damage to a player, that player discards a card.",
-        "flavorText": "Every crook, thug, and scoundrel south of Equestria answers to him.",
-        "pt": "3/3",
         "sourceUrl": "https://www.fimfiction.net/blog/825264/friendship-the-gathering-villains-edition",
         "notes": "One of 4 villain cards, from a card blog post by Zennistrad."
     },

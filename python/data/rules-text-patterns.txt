@@ -11,7 +11,7 @@
 (has|have) (deathtouch|equip |first strike|double strike|flying|haste|hexproof|indestructible|menace|partner\b|split second|the abilities of each|trample)
 (in|into) (your|their) graveyard
 (one|two|three|four|five|six|seven|eight|nine|ten) mana\b
-(one|two|three|four|five|six|seven|eight|nine|ten) or fewer cards in your hand
+(one|two|three|four|five|six|seven|eight|nine|ten|twenty) or fewer cards in (it|your hand)
 (one|two|three|four|five|six|seven|eight|nine|ten) or more (counters|creatures)
 (opponent's|that player's|your) library
 (permanent|revealed|suspended) card
@@ -19,6 +19,7 @@
 (top|up to) (two|three|four|five|six|seven|eight|nine|ten) cards
 (two|three|four|five|six|seven) target lands
 , proliferate\.
+\d+-\d+ \|
 -1/-1 counter
 1 plus the
 Alternative costs
@@ -28,6 +29,7 @@ Choose both if
 Choose one( or both)? *—
 Contraption deck
 Counters can't be
+Damage causes loss of life
 Entwine \d
 Pony, Pegasus, and Unicorn creatures
 Reveal (a creature card|your hand)
@@ -45,20 +47,20 @@ You can't cast more than
 \bX is that
 \bcounter all (white|blue|black|red|green) spells
 \bventure into the dungeon
-\d damage
+\d damage\b
 \d or greater
 \d/\*
 \d: (Sacrifice|Scry|Tap)
 ^((\w+)( \w+)*)((,|;) (\w+)( \w+)*)*$
 ^Awaken \d
-^Chaotic 
+^Chaotic \d
 ^Enchanted (creature|land)
 ^Equip \(?[\dWUBRG]+\)?
 ^Kicker
 ^Level \d
-^Proliferate
+^Proliferate\b
 ^Sacrifice [\w ]+:
-^Suspend 
+^Suspend\b 
 ^T, 
 ^T: 
 ^X, 
@@ -71,7 +73,7 @@ You can't cast more than
 ^\d+[WUBRG]+\b, 
 ^\w+ \(.*\.\)$
 ^affinity for 
-^exile 
+^exile\b
 activat(e|es|ing) (an|this) ability
 activate abilities
 activated abilit(y|ies)
@@ -130,7 +132,7 @@ cast those cards
 change its text
 change the targets
 choose a (creature|target) at random
-choose a planeswalker card
+choose a (background|planeswalker card)
 choose( new)? targets
 choosing targets
 color of your choice
@@ -179,7 +181,7 @@ discards all cards
 draw X cards
 draw a card.$
 draw cards equal to
-draw step
+\bdraw step\b
 during an opponent's turn
 during each of your turns
 during extra turns
@@ -191,7 +193,7 @@ each creature blocking
 each land is a (plains|island|swamp|mountain|forest)
 each opponent
 each other (creature|player)
-each player (abandons|can't|chooses|discards|draws|may|puts|sacrifices|shuffles)
+each player (abandons|can't|chooses|discards|draws|may|mills|puts|sacrifices|shuffles)
 each player's library
 each player's upkeep
 effect would remove
@@ -216,6 +218,7 @@ face( |-)down
 for each card
 from (their|your) (graveyard|hand|library)
 from all graveyards
+gain or lose life
 gains \w+ until
 gains? control of (it|all)
 gains? life equal to
@@ -227,8 +230,7 @@ his or her (control|graveyard|hand|library|mana pool)
 if (a player|an opponent) would
 if .+ was kicked
 if [\w ]+ is an enchantment
-if a source
-if an effect
+if an? (effect|library|source)
 if you roll a 1
 in addition to its other types
 in addition to their other types
@@ -249,6 +251,7 @@ loses? flying
 mana (abilities|cost|of any type|value)
 maximum hand size
 may cast this (card|spell)
+mills that many cards
 multikicker
 named card
 next (end step|untap step|upkeep)
@@ -337,22 +340,23 @@ unattach all
 under its owner's control
 unless [\w ]+ pays \d
 unspent mana
-untap
+\buntap
 until end of turn
 upkeep step
-ward \d
-ward cost
+\bward \d
+\bward cost
 when a player (casts|pays)
 when no creatures
 whenever a creature would 
 whenever an opponent casts
 whenever enchanted creature 
-whenever you (crank|gain life|sacrifice|tap)
+whenever you (crank|gain life|gain or lose life|sacrifice|tap)
 where X is
 with (reach|trample)
 without paying its mana cost
 would be destroyed
 would deal( combat)? damage
+\bX is (one|two|three)
 you cast a spell,
 you choose which creatures
 you control the active player

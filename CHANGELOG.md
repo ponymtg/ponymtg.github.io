@@ -1,3 +1,6 @@
+## 1.16.5
+* Updated Friendship is Card Games up to "Friendship is Card Games: d20 Pony, Ch. 8, Pt. 2".
+
 ## 1.16.4
 * Updated Friendship is Card Games up to "Friendship is Card Games: d20 Pony, Ch. 7, Pt. 2".
 

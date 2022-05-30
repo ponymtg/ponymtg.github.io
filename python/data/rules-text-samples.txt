@@ -2639,3 +2639,6 @@ Masked Fencer has ward 1 as long as it's attacking or blocking. (Each instance o
 1-9 | 2/3 Spider with reach.\n10-19 | 3/3 Elephant with trample.\n20 | 5/5 Beast with trample and haste.
 (Note: Same room layout as Lost Mine of Phandelver)
 First Queen's Legacy has protection from each mana value among cards your opponents own in exile.
+Whenever you gain or lose life, each player mills that many cards. Then if a library has twenty or fewer cards in it, transform A Hundred Fathoms Deep. (Damage causes loss of life.)
+Choose a Background (You can have a Background as a second commander.)
+1-9 | X is one.\n10-19 | X is two.\n20 | X is three.
