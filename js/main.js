@@ -1944,6 +1944,298 @@ function generateCheckboxListElement(idPrefix, data, optionWidth, addSelectAll) 
 }
 
 /**
+ * Generate a panel containing either the image for a card, or a proxy generated
+ * from the card's properties if an image isn't available.
+ *
+ * @param {Object} card
+ * @return {Element}
+ */
+const generateCardImagePanel = function generateCardImagePanel(card) {
+    const cardImagePanel = document.createElement('div');
+    cardImagePanel.className = 'col-md-5';
+
+    // Check to see if we have an image for this card.
+    let cardImageLinkElement = undefined;
+    let cardImageElement = undefined;
+    let cardProxyElement = undefined;
+
+    const isCardImageLocatable = card.image !== undefined;
+    if (isCardImageLocatable) {
+        // If a card image is available, create the card image element and
+        // set its source to the appropriate image URL.
+        const cardImageUrl = getCardImageUrl(card);
+
+        cardImageElement = document.createElement('img');
+        cardImageElement.src = cardImageUrl;
+
+        cardImageLinkElement = document.createElement('a');
+        cardImageLinkElement.href = cardImageUrl;
+        cardImageLinkElement.target = '_blank';
+
+        // Make all card images the same width (it looks better in results).
+        cardImageElement.style.width = global.dimensions.displayCard.width
+            + 'px';
+        cardImageLinkElement.appendChild(cardImageElement);
+    } else {
+        // If a card image is not available, generate a "proxy" image from
+        // the available card information. This will be a div, but should
+        // have the same dimensions as a card image.
+        cardProxyElement = generateProxyElement(
+            card,
+            global.dimensions.displayCard.width
+        );
+    }
+
+    if (cardImageLinkElement !== undefined) {
+        cardImagePanel.appendChild(cardImageLinkElement);
+    }
+    else if (cardProxyElement !== undefined) {
+        cardImagePanel.appendChild(cardProxyElement);
+    }
+
+    return cardImagePanel;
+};
+
+/**
+ * Generate a panel containing a summary of information on a card, plus buttons
+ * to add the card to a print sheet or to view the card on its own.
+ *
+ * @param {Object} card
+ * @param {string[]} propertiesToDisplay
+ * @return {Element}
+ */
+const generateCardInfoPanel = function generateCardInfoPanel(
+    card,
+    propertiesToDisplay
+) {
+    const cardInfoPanelContainer = document.createElement('div');
+    cardInfoPanelContainer.className = 'col-md-7';
+    cardInfoPanelContainer.style.minHeight = getCardHeightFromCardWidth(
+        global.dimensions.displayCard.width
+    ) + 'px';
+    cardInfoPanelContainer.style.marginBottom = '4px';
+
+    const cardInfoPanel = document.createElement('div');
+    cardInfoPanel.className = 'panel panel-default';
+    cardInfoPanel.style.boxShadow = '2px 2px 4px rgba(0,0,0,0.25)';
+
+    // Assemble relevant properties of the card into an information table.
+    const cardInfoPanelHeading = document.createElement('div');
+    cardInfoPanelHeading.className = 'panel-heading';
+    cardInfoPanelHeading.innerHTML = card.name;
+
+    const cardInfoPanelBody = document.createElement('div');
+    cardInfoPanelBody.className = 'panel-body';
+
+    // Create a description list for this property.
+    const cardPropertiesDescriptionList = document.createElement('dl');
+
+    // Use the Bootstrap `dl-horizontal` class to make it a two-column
+    // list, with titles on the left and descriptions on the right. This is
+    // a quick and easy way to list out property names and their values in
+    // a nice-looking format.
+    cardPropertiesDescriptionList.className = 'dl-horizontal';
+    
+    for (let j=0; j < propertiesToDisplay.length; j++) {
+        const cardPropertyName = propertiesToDisplay[j];
+        let cardPropertyValue = card[cardPropertyName];
+
+        // If the card doesn't have a value defined for this property, skip
+        // this property.
+        if (cardPropertyValue === undefined) {
+            // One exception to this is sets; if the card has no set, we
+            // will display that (as "(no set)").
+            if (cardPropertyName !== 'set') {
+                continue;
+            }
+        }
+
+        // Check to see if this card property is one that we want to
+        // display. If it isn't, skip this property.
+        if (propertiesToDisplay.indexOf(cardPropertyName) === -1) {
+            continue;
+        }
+
+        // Attempt to get a more human-readable display name for this
+        // property, if one is available.
+        let cardPropertyDisplayName = cardPropertyName;
+        if (global.mappings.cardPropertiesToDisplayNames[cardPropertyName]
+            !== undefined) {
+            cardPropertyDisplayName
+                = global.mappings.cardPropertiesToDisplayNames[
+                    cardPropertyName
+                ];
+        }
+
+        const cardPropertyNameElement = document.createElement('dt');
+        const cardPropertyValueElement = document.createElement('dd');
+
+        cardPropertyNameElement.innerHTML = cardPropertyDisplayName+':';
+        if (cardPropertyValue) {
+            cardPropertyValue = cardPropertyValue.replace(/\n/g, '<br />');
+        }
+        cardPropertyValueElement.style.textAlign = 'left';
+        cardPropertyValueElement.innerHTML = cardPropertyValue;
+        if (cardPropertyName === 'set') {
+            if (cardPropertyValue === undefined) {
+                cardPropertyValueElement.innerHTML = '<i>(no set)</i>';
+            }
+            // Special case for "set" property: We do have descriptions for
+            // some sets, which we can add as a title property, allowing
+            // the user to mouse over to find out information about the
+            // set.
+            if (SETS[cardPropertyValue] !== undefined
+                && SETS[cardPropertyValue].notes !== undefined) {
+                cardPropertyValueElement.title = SETS[
+                    cardPropertyValue
+                ].notes;
+            }
+        }
+        // Special case for "flavorText" property: We'd like that to be
+        // italicized.
+        if (cardPropertyName === 'flavorText') {
+            cardPropertyValueElement.style.fontStyle = 'italic';
+        }
+        // Special case for "sourceUrl" property: This is a URL, so we
+        // hyperlink it.
+        if (cardPropertyName === 'sourceUrl') {
+            cardPropertyValueElement.innerHTML = '';
+            cardSourceHyperlink = document.createElement('a');
+            cardSourceHyperlink.href = cardPropertyValue;
+            cardSourceHyperlink.target = '_blank';
+            cardSourceHyperlink.style.textAlign = 'left';
+            cardSourceHyperlink.innerHTML = cardPropertyValue;
+            cardPropertyValueElement.appendChild(cardSourceHyperlink);
+        }
+
+        cardPropertiesDescriptionList.appendChild(cardPropertyNameElement);
+        cardPropertiesDescriptionList.appendChild(cardPropertyValueElement);
+    }
+    cardInfoPanelBody.appendChild(cardPropertiesDescriptionList);
+
+    const cardInfoPanelFooter = document.createElement('div');
+
+    const cardHyperlinkUrl = window.location.pathname + '?hash= '
+        + card.derivedProperties.hash;
+    cardInfoPanelFooter.className = 'panel-footer';
+    cardInfoPanelFooter.style.textAlign = 'right';
+
+    // Create the "Add to print sheet" button. For this button, we would
+    // like to include some indication of whether or not the user has
+    // already added the card to the print sheet (and how many they have
+    // added). Therefore, we will obtain the print sheet object from local
+    // storage and check to see if this card is on it.
+    const printSheetCardsObject = getPrintSheetCards();
+    let printSheetCardQuantity = printSheetCardsObject[
+        card.derivedProperties.hash
+    ];
+    if (printSheetCardQuantity === undefined) {
+        printSheetCardQuantity = 0;
+    }
+
+    const addToPrintSheetButton = document.createElement('button');
+    addToPrintSheetButton.className = 'btn btn-default';
+    const addToPrintSheetButtonText = '<span' +
+        ' class="glyphicon glyphicon-file"></span> Add to print sheet'; 
+    addToPrintSheetButton.innerHTML = addToPrintSheetButtonText;
+    if (printSheetCardQuantity > 0) {
+        addToPrintSheetButton.innerHTML += ' <span class="badge">'
+            + printSheetCardQuantity + '</span>'; 
+    }
+    addToPrintSheetButton.ponymtg = {};
+    addToPrintSheetButton.ponymtg.hash = card.derivedProperties.hash;
+    addToPrintSheetButton.ponymtg.quantity = printSheetCardQuantity;
+    addToPrintSheetButton.onclick = function(e) {
+        // Add the card to the print sheet and increment the number on the
+        // button's badge.
+        //
+        // NOTE: Use `currentTarget`, not `target`! `target` identifies the
+        // element that was clicked on; however, this is not _necessarily_
+        // the button itself. Buttons can contain child elements such as
+        // images and icons; if you happened to click on the 'icon' part of
+        // a button, then `target` will be set to that, not the button
+        // itself!
+        //
+        // Instead, use `currentTarget`, which identifies the element that
+        // actually has the event on it (in this case, `onclick`).
+        addCardToPrintSheet(e.currentTarget.ponymtg.hash);
+        e.currentTarget.ponymtg.quantity++;
+        e.currentTarget.innerHTML = addToPrintSheetButtonText
+            + ' <span class="badge">' + e.currentTarget.ponymtg.quantity
+            + '</span>';
+
+        // Also increment the number on the main print sheets button in the
+        // navbar (if the navbar is on the page).
+        const printSheetCountBadge = document.querySelector(
+            '#printSheetCountBadge'
+        );
+        if (printSheetCountBadge !== null) {
+            printSheetCountBadge.innerHTML = getNumberOfCardsInPrintSheet();
+        }
+    };
+
+    const cardImageLink = document.createElement('a');
+    cardImageLink.className = 'btn btn-default';
+
+    const isCardImageLocatable = card.image !== undefined;
+    if (isCardImageLocatable) {
+        cardImageLink.href = getCardImageUrl(card); 
+        cardImageLink.target = '_blank'; 
+        cardImageLink.innerHTML = '<span'
+            + ' class="glyphicon glyphicon-picture"></span>'
+            + ' View card image'; 
+    }
+
+    const cardLink = document.createElement('a');
+    cardLink.className = 'btn btn-default';
+    cardLink.href = cardHyperlinkUrl; 
+    cardLink.target = '_blank'; 
+    cardLink.innerHTML = '<span class="glyphicon glyphicon-link"></span>'
+        + ' Link'; 
+
+    cardInfoPanelFooter.appendChild(addToPrintSheetButton);
+    if (isCardImageLocatable) {
+        cardInfoPanelFooter.appendChild(cardImageLink);
+    }
+
+    cardInfoPanelFooter.appendChild(cardLink);
+
+    cardInfoPanel.appendChild(cardInfoPanelHeading);
+    cardInfoPanel.appendChild(cardInfoPanelBody);
+    cardInfoPanel.appendChild(cardInfoPanelFooter);
+
+    cardInfoPanelContainer.appendChild(cardInfoPanel);
+
+    return cardInfoPanelContainer;
+};
+
+/**
+ * Generate a panel containing a search result for a single card. The panel is
+ * split into 2 sides; card image or proxy on the left, card info box on the right.
+ *
+ * @param {Object} card
+ * @param {string[]} propertiesToDisplay
+ * @return {Element}
+ */
+const generateCardSearchResult = function generateCardSearchResult(
+    card,
+    propertiesToDisplay
+) {
+    // Create a row for this card result. Card image on the left, card
+    // information on the right.
+    const cardSearchResult = document.createElement('div');
+    cardSearchResult.className = 'row panel panel-default';
+    cardSearchResult.style.padding = '16px';
+
+    const cardImagePanel = generateCardImagePanel(card);
+    const cardInfoPanel = generateCardInfoPanel(card, propertiesToDisplay);
+    cardSearchResult.appendChild(cardImagePanel);
+    cardSearchResult.appendChild(cardInfoPanel);
+
+    return cardSearchResult;
+};
+
+/**
  * Given a set of card data objects `cards`, generate a table of those cards,
  * which displays an image (if available) and known, relevant properties of the
  * card. If `propertiesToDisplay` is given, only those properties will be
@@ -1952,7 +2244,10 @@ function generateCheckboxListElement(idPrefix, data, optionWidth, addSelectAll) 
  * @param {Object[]} cards
  * @param {string[]} propertiesToDisplay
  */
-function generateCardTableElement(cards, propertiesToDisplay) {
+const generateCardTableElement = function generateCardTableElement(
+    cards,
+    propertiesToDisplay
+) {
     if (propertiesToDisplay === undefined) {
         propertiesToDisplay = global.lists.cardPropertiesToDisplay;
     }
@@ -1960,249 +2255,11 @@ function generateCardTableElement(cards, propertiesToDisplay) {
     var cardPanel = document.createElement('div');
     cardPanel.className = 'container-fluid';
 
-    for (var i=0; i < cards.length; i++) {
-        var card = cards[i];
+    for (let i=0; i < cards.length; i++) {
+        const card = cards[i];
 
-        // Create a row for this card result. Card image on the left, card
-        // information on the right.
-        var cardPanelRow = document.createElement('div');
-        cardPanelRow.className = 'row';
-
-        var cardImagePanel = document.createElement('div');
-        cardImagePanel.className = 'col-md-5';
-
-        var cardInfoPanelContainer = document.createElement('div');
-        cardInfoPanelContainer.className = 'col-md-7';
-        cardInfoPanelContainer.style.minHeight = getCardHeightFromCardWidth(
-            global.dimensions.displayCard.width
-        ) + 'px';
-        cardInfoPanelContainer.style.marginBottom = '4px';
-
-        var cardInfoPanel = document.createElement('div');
-        cardInfoPanel.className = 'panel panel-default';
-        cardInfoPanel.style.boxShadow = '2px 2px 4px rgba(0,0,0,0.25)';
-
-        // Check to see if we have an image for this card.
-        var cardImageLinkElement = undefined;
-        var cardImageElement = undefined;
-        var cardProxyElement = undefined;
-        var isCardImageLocatable = card.image !== undefined;
-        if (isCardImageLocatable) {
-            // If a card image is available, create the card image element and
-            // set its source to the appropriate image URL.
-            var cardImageLinkElement = document.createElement('a');
-            var cardImageElement = document.createElement('img');
-            var cardImageUrl = getCardImageUrl(card);
-
-            cardImageElement.src = cardImageUrl;
-            cardImageLinkElement.href = cardImageUrl;
-            cardImageLinkElement.target = '_blank';
-
-            // Make all card images the same width (it looks better in results).
-            cardImageElement.style.width = global.dimensions.displayCard.width
-                + 'px';
-            cardImageLinkElement.appendChild(cardImageElement);
-        } else {
-            // If a card image is not available, generate a "proxy" image from
-            // the available card information. This will be a div, but should
-            // have the same dimensions as a card image.
-            cardProxyElement = generateProxyElement(
-                card,
-                global.dimensions.displayCard.width
-            );
-        }
-
-        // Assemble relevant properties of the card into an information table.
-        var cardInfoPanelHeading = document.createElement('div');
-        cardInfoPanelHeading.className = 'panel-heading';
-        cardInfoPanelHeading.innerHTML = card.name;
-
-        var cardInfoPanelBody = document.createElement('div');
-        cardInfoPanelBody.className = 'panel-body';
-
-        // Create a description list for this property.
-        var cardPropertiesDescriptionList = document.createElement('dl');
-
-        // Use the Bootstrap `dl-horizontal` class to make it a two-column
-        // list, with titles on the left and descriptions on the right. This is
-        // a quick and easy way to list out property names and their values in
-        // a nice-looking format.
-        cardPropertiesDescriptionList.className = 'dl-horizontal';
-        
-        for (var j=0; j < propertiesToDisplay.length; j++) {
-            var cardPropertyName = propertiesToDisplay[j];
-            var cardPropertyValue = card[cardPropertyName];
-
-            // If the card doesn't have a value defined for this property, skip
-            // this property.
-            if (cardPropertyValue === undefined) {
-                // One exception to this is sets; if the card has no set, we
-                // will display that (as "(no set)").
-                if (cardPropertyName !== 'set') {
-                    continue;
-                }
-            }
-
-            // Check to see if this card property is one that we want to
-            // display. If it isn't, skip this property.
-            if (propertiesToDisplay.indexOf(cardPropertyName) === -1) {
-                continue;
-            }
-
-            // Attempt to get a more human-readable display name for this
-            // property, if one is available.
-            var cardPropertyDisplayName = cardPropertyName;
-            if (global.mappings.cardPropertiesToDisplayNames[cardPropertyName]
-                !== undefined) {
-                cardPropertyDisplayName
-                    = global.mappings.cardPropertiesToDisplayNames[
-                        cardPropertyName
-                    ];
-            }
-
-            var cardPropertyNameElement = document.createElement('dt');
-            var cardPropertyValueElement = document.createElement('dd');
-
-            cardPropertyNameElement.innerHTML = cardPropertyDisplayName+':';
-            if (cardPropertyValue) {
-                cardPropertyValue = cardPropertyValue.replace(/\n/g, '<br />');
-            }
-            cardPropertyValueElement.style.textAlign = 'left';
-            cardPropertyValueElement.innerHTML = cardPropertyValue;
-            if (cardPropertyName === 'set') {
-                if (cardPropertyValue === undefined) {
-                    cardPropertyValueElement.innerHTML = '<i>(no set)</i>';
-                }
-                // Special case for "set" property: We do have descriptions for
-                // some sets, which we can add as a title property, allowing
-                // the user to mouse over to find out information about the
-                // set.
-                if (SETS[cardPropertyValue] !== undefined
-                    && SETS[cardPropertyValue].notes !== undefined) {
-                    cardPropertyValueElement.title = SETS[
-                        cardPropertyValue
-                    ].notes;
-                }
-            }
-            // Special case for "flavorText" property: We'd like that to be
-            // italicized.
-            if (cardPropertyName === 'flavorText') {
-                cardPropertyValueElement.style.fontStyle = 'italic';
-            }
-            // Special case for "sourceUrl" property: This is a URL, so we
-            // hyperlink it.
-            if (cardPropertyName === 'sourceUrl') {
-                cardPropertyValueElement.innerHTML = '';
-                cardSourceHyperlink = document.createElement('a');
-                cardSourceHyperlink.href = cardPropertyValue;
-                cardSourceHyperlink.target = '_blank';
-                cardSourceHyperlink.style.textAlign = 'left';
-                cardSourceHyperlink.innerHTML = cardPropertyValue;
-                cardPropertyValueElement.appendChild(cardSourceHyperlink);
-            }
-
-            cardPropertiesDescriptionList.appendChild(cardPropertyNameElement);
-            cardPropertiesDescriptionList.appendChild(cardPropertyValueElement);
-        }
-        cardInfoPanelBody.appendChild(cardPropertiesDescriptionList);
-
-        var cardInfoPanelFooter = document.createElement('div');
-
-        var cardHyperlinkUrl = window.location.pathname + '?hash= '
-            + card.derivedProperties.hash;
-        cardInfoPanelFooter.className = 'panel-footer';
-        cardInfoPanelFooter.style.textAlign = 'right';
-
-        // Create the "Add to print sheet" button. For this button, we would
-        // like to include some indication of whether or not the user has
-        // already added the card to the print sheet (and how many they have
-        // added). Therefore, we will obtain the print sheet object from local
-        // storage and check to see if this card is on it.
-        var printSheetCardsObject = getPrintSheetCards();
-        var printSheetCardQuantity = printSheetCardsObject[
-            card.derivedProperties.hash
-        ];
-        if (printSheetCardQuantity === undefined) {
-            printSheetCardQuantity = 0;
-        }
-
-        var addToPrintSheetButton = document.createElement('button');
-        addToPrintSheetButton.className = 'btn btn-default';
-        var addToPrintSheetButtonText = '<span' +
-            ' class="glyphicon glyphicon-file"></span> Add to print sheet'; 
-        addToPrintSheetButton.innerHTML = addToPrintSheetButtonText;
-        if (printSheetCardQuantity > 0) {
-            addToPrintSheetButton.innerHTML += ' <span class="badge">'
-                + printSheetCardQuantity + '</span>'; 
-        }
-        addToPrintSheetButton.ponymtg = {};
-        addToPrintSheetButton.ponymtg.hash = card.derivedProperties.hash;
-        addToPrintSheetButton.ponymtg.quantity = printSheetCardQuantity;
-        addToPrintSheetButton.onclick = function(e) {
-            // Add the card to the print sheet and increment the number on the
-            // button's badge.
-            //
-            // NOTE: Use `currentTarget`, not `target`! `target` identifies the
-            // element that was clicked on; however, this is not _necessarily_
-            // the button itself. Buttons can contain child elements such as
-            // images and icons; if you happened to click on the 'icon' part of
-            // a button, then `target` will be set to that, not the button
-            // itself!
-            //
-            // Instead, use `currentTarget`, which identifies the element that
-            // actually has the event on it (in this case, `onclick`).
-            addCardToPrintSheet(e.currentTarget.ponymtg.hash);
-            e.currentTarget.ponymtg.quantity++;
-            e.currentTarget.innerHTML = addToPrintSheetButtonText
-                + ' <span class="badge">' + e.currentTarget.ponymtg.quantity
-                + '</span>';
-
-            // Also increment the number on the main print sheets button in the
-            // navbar (if the navbar is on the page).
-            var printSheetCountBadge = document.querySelector(
-                '#printSheetCountBadge'
-            );
-            if (printSheetCountBadge !== null) {
-                printSheetCountBadge.innerHTML = getNumberOfCardsInPrintSheet();
-            }
-        };
-
-        var cardImageLink = document.createElement('a');
-        cardImageLink.className = 'btn btn-default';
-        if (isCardImageLocatable) {
-            cardImageLink.href = getCardImageUrl(card); 
-            cardImageLink.target = '_blank'; 
-            cardImageLink.innerHTML = '<span'
-                + ' class="glyphicon glyphicon-picture"></span>'
-                + ' View card image'; 
-        }
-
-        var cardLink = document.createElement('a');
-        cardLink.className = 'btn btn-default';
-        cardLink.href = cardHyperlinkUrl; 
-        cardLink.target = '_blank'; 
-        cardLink.innerHTML = '<span class="glyphicon glyphicon-link"></span>'
-            + ' Link'; 
-
-        cardInfoPanelFooter.appendChild(addToPrintSheetButton);
-        if (isCardImageLocatable) {
-            cardInfoPanelFooter.appendChild(cardImageLink);
-        }
-        cardInfoPanelFooter.appendChild(cardLink);
-
-        if (cardImageLinkElement !== undefined) {
-            cardImagePanel.appendChild(cardImageLinkElement);
-        }
-        else if (cardProxyElement !== undefined) {
-            cardImagePanel.appendChild(cardProxyElement);
-        }
-        cardPanelRow.appendChild(cardImagePanel);
-        cardInfoPanel.appendChild(cardInfoPanelHeading);
-        cardInfoPanel.appendChild(cardInfoPanelBody);
-        cardInfoPanel.appendChild(cardInfoPanelFooter);
-        cardInfoPanelContainer.appendChild(cardInfoPanel);
-        cardPanelRow.appendChild(cardInfoPanelContainer);
-        cardPanel.appendChild(cardPanelRow);
+        const cardSearchResult = generateCardSearchResult(card, propertiesToDisplay);
+        cardPanel.appendChild(cardSearchResult);
     }
 
     return cardPanel;

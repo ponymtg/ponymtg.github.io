@@ -1,3 +1,6 @@
+## 1.17.0
+* Small refactoring of card info panel.
+
 ## 1.16.3
 * Updated Friendship is Card Games up to "Friendship is Card Games: The Journal of the Two Sisters".
 
