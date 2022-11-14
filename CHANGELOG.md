@@ -1,5 +1,10 @@
+## 1.17.0
+* Fixed a broken link for the Nightfall in Equestria card "Look! A Distraction".
+* Updated the Cockatrice XML generator to automatically assume card rarities for cards which lack them.
+
 ## 1.16.5
 * Updated Friendship is Card Games up to "Friendship is Card Games: d20 Pony, Ch. 8, Pt. 2".
+* Added some additional chapter cards for "My Little Planeswalker".
 
 ## 1.16.4
 * Updated Friendship is Card Games up to "Friendship is Card Games: d20 Pony, Ch. 7, Pt. 2".

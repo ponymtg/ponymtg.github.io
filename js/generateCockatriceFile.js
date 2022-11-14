@@ -1,7 +1,8 @@
 /**
  * Application setup.
  */
-const initialize = async function initialize() {
+const initialize = async function initialize()
+{
     CARDS = await loadAllCards();
 
     const htmlElement = document.querySelector('html');
@@ -65,7 +66,8 @@ const initialize = async function initialize() {
     }
 }
 
-function getCockatriceXml(sets) {
+function getCockatriceXml(sets)
+{
     const cockatriceDbVersion = '4';
 
     // Get a list of set codes (a set code is the short, usually three-letter
@@ -297,21 +299,39 @@ function getCockatriceXml(sets) {
                 'contents': [setCode]
             };
 
+            const setSpecAttributes = {};
+
             if (card.image !== undefined) {
                 let baseUrl = window.location.origin;
-                baseUrl += window.location.pathname
-                    .split('/')
-                    .slice(0, -1)
-                    .join('/');
+                baseUrl += window.location.pathname.split('/').slice(0, -1).join('/');
 
                 if (SETS[card.set] !== undefined) {
                     if (SETS[card.set].path !== undefined) {
-                        picUrl = baseUrl + '/' + global.paths.sets + '/'
-                            + SETS[card.set].path+'/'+card.image;
-
-                        setSpec.attributes = {'picurl': picUrl};
+                        picUrl = `${baseUrl}/${global.paths.sets}/${SETS[card.set].path}/${card.image}`;
+                        setSpecAttributes['picurl'] = picUrl;
                     }
                 }
+            }
+
+            // Assign a rarity to the card. While the Cockatrice XML schema says
+            // this is optional, a user pointed out that some sites such as
+            // <https://dr4ft.info> require it.
+            //
+            // Most cards in PonyMTG do not have a defined rarity - we will
+            // assume they are common.
+            let cardRarity = 'common';
+            if (card.rarity !== undefined) {
+                let cardRarity = card.rarity;
+            }
+
+            if (cardRarity == 'mythic rare') {
+                cardRarity = 'mythic';
+            }
+
+            setSpecAttributes['rarity'] = cardRarity;
+
+            if (Object.keys(setSpecAttributes).length > 0) {
+                setSpec.attributes = setSpecAttributes;
             }
 
             cardSpec.contents.push(propSpec);
