@@ -39,8 +39,9 @@ META['previous_card_was_reverse_side'] = False
 ################################################################################
 # FUNCTIONS
 
-# Return True if we can identify `line` as being a card's type line.
 def is_type_line(line):
+    """Return True if we can identify `line` as being a card's type line."""
+
     # Replace the en dash with an em dash, if it's in the type line. That way we
     # only have to check for one kind of dash.
     line = re.sub(EN_DASH, EM_DASH, line)
@@ -716,6 +717,13 @@ def parse_individual_card_dump_into_card_data_entry(
                 True
             )
             
+        if 'subtype' in card_data_entry and card_data_entry['subtype'] == 'Attraction':
+            # Special case: As with Contraptions, Attractions don't always have costs
+            name_and_cost_line_properties = split_name_and_cost_line(
+                name_and_cost_line,
+                True
+            )
+            
         card_data_entry['name'] = name_and_cost_line_properties['name']
         if 'cost' in name_and_cost_line_properties:
             card_data_entry['cost'] = name_and_cost_line_properties['cost']
@@ -1081,8 +1089,22 @@ def convert_card_data_entries_to_json(card_data_entries: list, properties: list)
 def separate_rules_text_and_flavor_text(text, rules_text_patterns):
     lines = text.split('\n')
 
+    num_post_flavor_lines = 0
+
     for i in range(len(lines)-1, -1, -1):
         line = lines[i]
+
+        # Special case: Attractions may have "(N lights)" after the flavor text,
+        # where N is a number from 1 to 6. This is a nonstandard card property -
+        # it's not really recognized by the MtG rules at all. I've decided to
+        # treat this as rules text, but it unfortunately violates our assumption
+        # that rules text always precedes flavor text. To get around this, we
+        # will simply skip this line if it occurs, but record it and add it to
+        # the rules text.
+        if re.match(r'\([1-6] lights?\)', line):
+            num_post_flavor_lines += 1
+            continue
+
         if is_rules_text(line, rules_text_patterns):
             break
 
@@ -1096,6 +1118,12 @@ def separate_rules_text_and_flavor_text(text, rules_text_patterns):
 
     rules_lines = lines[:i+1]
     flavor_lines = lines[i+1:]
+
+    # Move any lines that happened to come after the flavor text to the rules
+    # text.
+    if num_post_flavor_lines > 0:
+        rules_lines.extend(flavor_lines[0-num_post_flavor_lines:])
+        flavor_lines = flavor_lines[:0-num_post_flavor_lines]
 
     rules_lines = [line for line in rules_lines if len(line) > 0]
 

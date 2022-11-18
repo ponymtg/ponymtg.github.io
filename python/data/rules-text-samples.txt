@@ -2642,3 +2642,16 @@ First Queen's Legacy has protection from each mana value among cards your oppone
 Whenever you gain or lose life, each player mills that many cards. Then if a library has twenty or fewer cards in it, transform A Hundred Fathoms Deep. (Damage causes loss of life.)
 Choose a Background (You can have a Background as a second commander.)
 1-9 | X is one.\n10-19 | X is two.\n20 | X is three.
+Whenever this creature mutates, attach up to one target Equipment to it. (Control of the Equipment doesn't change.
+Cirrostratan Statue is a 4/3 Pegasus Golem creature with flying as long as you have the city's blessing.
+The monarch can't cast more than one spell each turn.
+Adamant — If at least three black mana was spent to cast this spell, that player sacrifice all of those permanents instead.
+Destroy all historic permanents. (Artifacts, legendaries, and Sagas are historic.)
+You may look at the top card of each library any time.
+Finale — When you sacrifice a Song, transform Twilight's Student.
+Investigate.
+Whenever a ward ability you control triggers, copy that ability.
+As Spontaneous Sculpture enter the battlefield, choose another creature. Spontaneous Sculpture's power becomes equal to that creature's power and its toughness becomes equal to that creature's toughness.
+When you control no permanents other than Magus of the Cheese and have no cards in hand, you win the game.
+If tapped for mana this turn, Plains produce G, Swamps produce W, Mountains produce B, Forests produce R, and lands with no basic land types produce C instead of any other type.
+Where every night is Amateur Night.\n(2 lights)"

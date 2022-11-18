@@ -1,3 +1,8 @@
+## 1.18.0
+* Increased the font size slightly on all pages.
+* Updated the FiCG parser to correctly parse Attraction cards that have "(N lights)" after the flavor text.
+* Updated Friendship is Card Games up to "Friendship is Card Games: Hoof Done It?".
+
 ## 1.17.0
 * Fixed a broken link for the Nightfall in Equestria card "Look! A Distraction".
 * Updated the Cockatrice XML generator to automatically assume card rarities for cards which lack them.
