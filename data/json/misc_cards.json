@@ -2211,5 +2211,15 @@
         "flavorText": "Any planeswalker can cast the spell. Few are ever desperate enough to do so.",
         "sourceUrl": "https://www.fimfiction.net/story/385911/19/my-little-planeswalker-sideboard-stories/thick-as-thieves-part-1#comment/10591868",
         "notes": "A joke card created by FanOfMostEverything, inspired by the story My Little Planeswalker: Sideboard Stories by Zennistrad."
+    },
+    {
+        "name": "Spellfire Goggles",
+        "creator": "FanOfMostEverything",
+        "cost": "UR",
+        "supertype": "Enchantment",
+        "subtype": "Aura",
+        "text": "Enchant creature\n\nWhen Spellfire Goggles enters the battlefield, scry 1 and enchanted creature gets +1/+1 until end of turn.\n\nEnchanted creature has prowess and \"Whenever you cast a noncreature spell, scry 1.\"",
+        "sourceUrl": "https://www.fimfiction.net/story/521072/merge-request#comment/11325065",
+        "notes": "A card created by FanOfMostEverything in the comments of his story Merge Request."
     }
 ]

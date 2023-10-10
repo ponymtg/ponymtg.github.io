@@ -1,37 +1,37 @@
-const initialize = async function initialize() {
-    const cardGroups = ['main', 'ficg', 'ipu', 'misc'];
-    for (const group of cardGroups) {
-        const cardsUrl = global.urls.cards[group];
-        const cards = await loadCards(cardsUrl);
-        CARDS = CARDS.concat(cards);
-    }
+const initialize = async function initialize()
+{
+    const allCards = await loadAllCards();
 
-    global.information = getInformation(CARDS);
+    global.information = getInformation(allCards);
 
     const container = document.querySelector('#container');
-    container.appendChild(getSetsTableElement(global.information.sets));
+    const setsTable = await getSetsTableElement(global.information.sets);
+    container.appendChild(setsTable);
 };
 
 /**
  * Given a list of set names, returns a table populated with information that the application is able to obtain on those
  * sets.
+ *
+ * @param {string[]} setNames
  */
-function getSetsTableElement(sets) {
-    var tableElement = document.createElement('table');
+const getSetsTableElement = async function getSetsTableElement(setNames)
+{
+    const tableElement = document.createElement('table');
     tableElement.id = 'setsTable';
     tableElement.className = 'table table-bordered table-hover';
     //tableElement.style.width = '75%';
     //tableElement.style.margin = '2.5% auto';
     //tableElement.style.borderSpacing = '0';
 
-    var tableHeadElement = document.createElement('thead');
-    var tableBodyElement = document.createElement('tbody');
-    var tableHeaderRowElement = document.createElement('tr');
-    var nameTableHeaderCellElement = document.createElement('th');
-    var creatorTableHeaderCellElement = document.createElement('th');
-    var numberOfCardsTableHeaderCellElement = document.createElement('th');
-    var notesTableHeaderCellElement = document.createElement('th');
-    var cockatriceTableHeaderCellElement = document.createElement('th');
+    const tableHeadElement = document.createElement('thead');
+    const tableBodyElement = document.createElement('tbody');
+    const tableHeaderRowElement = document.createElement('tr');
+    const nameTableHeaderCellElement = document.createElement('th');
+    const creatorTableHeaderCellElement = document.createElement('th');
+    const numberOfCardsTableHeaderCellElement = document.createElement('th');
+    const notesTableHeaderCellElement = document.createElement('th');
+    const cockatriceTableHeaderCellElement = document.createElement('th');
 
     nameTableHeaderCellElement.innerHTML = 'Set';
     creatorTableHeaderCellElement.innerHTML = 'Creator';
@@ -48,28 +48,30 @@ function getSetsTableElement(sets) {
 
     tableElement.appendChild(tableHeadElement);
 
-    for (var i=0; i < sets.length; i++) {
-        var setName = sets[i];
-        if (SETS[setName] === undefined) {
+    const sets = await loadSets(global.urls.sets)
+
+    for (let i=0; i < setNames.length; i++) {
+        const setName = setNames[i];
+        const setDetails = sets[setName];
+        if (setDetails === undefined) {
             // If we can't find any details for a set by this name in `SETS`, ignore it and skip to the next one.
             continue;
         }
-        var setDetails = SETS[setName];
-        var tableRowElement = document.createElement('tr');
+        const tableRowElement = document.createElement('tr');
 
-        var nameTableCellElement = document.createElement('td');
+        const nameTableCellElement = document.createElement('td');
         nameTableCellElement.style.width = '20%';
 
-        var creatorTableCellElement = document.createElement('td');
+        const creatorTableCellElement = document.createElement('td');
         creatorTableCellElement.style.width = '20%';
 
-        var numberOfCardsTableCellElement = document.createElement('td');
+        const numberOfCardsTableCellElement = document.createElement('td');
         numberOfCardsTableCellElement.style.width = '5%';
         numberOfCardsTableCellElement.style.textAlign = 'center';
 
-        var notesTableCellElement = document.createElement('td');
+        const notesTableCellElement = document.createElement('td');
 
-        var cockatriceTableCellElement = document.createElement('td');
+        const cockatriceTableCellElement = document.createElement('td');
         cockatriceTableCellElement.style.width = '15%';
 
         nameTableCellElement.innerHTML = '<em>'+setName+'</em>';
@@ -98,7 +100,9 @@ function getSetsTableElement(sets) {
         tableBodyElement.appendChild(tableRowElement);
         
     }
+
     tableElement.appendChild(tableBodyElement);
+
     return tableElement;
 }
 

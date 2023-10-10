@@ -1,3 +1,6 @@
+## 1.19.0
+* Removed several instances of the global CARDS variable and replaced them with injected dependencies.
+
 ## 1.18.0
 * Increased the font size slightly on all pages.
 * Updated the FiCG parser to correctly parse Attraction cards that have "(N lights)" after the flavor text.

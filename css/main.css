@@ -7,7 +7,7 @@ html {
 
 body {
     /* Set the font-size here to override the default Bootstrap font size. */
-    font-size: 1.5em;
+    font-size: 1.75em;
     /*height: 90%;*/
     /*margin: 0px;*/
     /*padding: 0px;*/
@@ -57,7 +57,7 @@ body {
  * The tagline that appears under the logoon the home screen.
  */
 #tagline {
-    font-size: 0.9em;
+    font-size: 1em;
     margin: 4px 4px 64px 4px;
     text-align: center;
 }
@@ -128,46 +128,58 @@ a.logo-small {
 }
 
 /**
- * A container for a faux-Magic card. Emulates the thick rounded border of a Magic card. We have to be very specific in
- * our style definitions for this class, especially when it comes to fonts and dimensions. If we're not, then it's
- * possible that other browsers or stylesheets will make the proxy use their style choices instead, and we don't want
- * that; we want proxies to look practically the same across all browsers and devices.
+ * A container for a faux-Magic card. Emulates the thick rounded border of a
+ * Magic card. We have to be very specific in our style definitions for this
+ * class, especially when it comes to fonts and dimensions. If we're not, then
+ * it's possible that other browsers or stylesheets will make the proxy use
+ * their style choices instead, and we don't want that; we want proxies to look
+ * practically the same across all browsers and devices.
  */
 .proxy {
     /* font-family: "Times New Roman", Times, serif; */
-    /** Use the loaded proxyFont that we defined earlier, to ensure that all browsers use the same font. */
+    /** Use the loaded proxyFont that we defined earlier, to ensure that all
+ * browsers use the same font. */
     font-family: proxyFont;
     margin: 0 auto;
     /**
-     * Give the proxy a dark, rounded border. The actual thickness of the border will be decided when the proxy is
-     * generated, as it depends on the scale that the proxy is generated at.
+     * Give the proxy a dark, rounded border. The actual thickness of the
+     * border will be decided when the proxy is generated, as it depends on the
+     * scale that the proxy is generated at.
      */
     border: solid #202020;
     border-radius: 16px;
     /**
-     * Default to a light gray background. This will be overridden with an appropriate card color by the proxy
-     * generator.
+     * Default to a light gray background. This will be overridden with an
+     * appropriate card color by the proxy generator.
      */
     background-color: #e0e0e0;
     color: #101010;
     /**
-     * If the card contents would overflow off the bottom of the page, we have to simply cut them off; we can't resize
-     * the proxy as it has to meet specific card dimension criteria, and we can't add a scroll bar because these cards
-     * need to be printable.
+     * If the card contents would overflow off the bottom of the page, we have
+     * to simply cut them off; we can't resize the proxy as it has to meet
+     * specific card dimension criteria, and we can't add a scroll bar because
+     * these cards need to be printable.
      */
     overflow: hidden;
-    /** Default the line height to normal, so that it can't be overridden by other styles (eg. Bootstrap). */
+    /** Default the line height to normal, so that it can't be overridden by
+     * other styles (eg. Bootstrap).
+     */
     line-height: normal;
     /**
-     * Default the box sizing to `content-box`. `box-sizing` is a CSS style which changes the way browsers interpret the
-     * width and height of a block element; specifically, it deals with whether or not borders and padding are included
-     * in the width and height. By default, it is `content-box` (don't include borders and padding), which is what the
-     * app expects (that's why, when generating the proxy, we calculate the width and height ourselves by adding up the
-     * dimensions of content, borders, and padding).
+     * Default the box sizing to `content-box`. `box-sizing` is a CSS style
+     * which changes the way browsers interpret the width and height of a block
+     * element; specifically, it deals with whether or not borders and padding
+     * are included in the width and height. By default, it is `content-box`
+     * (don't include borders and padding), which is what the app expects
+     * (that's why, when generating the proxy, we calculate the width and
+     * height ourselves by adding up the dimensions of content, borders, and
+     * padding).
      *
-     * However, for some reason Bootstrap prefers to set this to `border-box`, which _does_ include borders and padding.
-     * Presumably Bootstrap needs that in order to work, but it messes up the dimensions of displayed proxies (which
-     * must have fixed dimensions). Therefore, we explicitly set this style to its default for proxies.
+     * However, for some reason Bootstrap prefers to set this to `border-box`,
+     * which _does_ include borders and padding.  Presumably Bootstrap needs
+     * that in order to work, but it messes up the dimensions of displayed
+     * proxies (which must have fixed dimensions). Therefore, we explicitly set
+     * this style to its default for proxies.
      */
     box-sizing: content-box;
 }
@@ -393,8 +405,9 @@ a.logo-small {
 }
 
 /**
- * The next set of styles change the background and foreground colors of something to look like a mana symbol. The color
- * values are taken directly from the official mana symbols.
+ * The next set of styles change the background and foreground colors of
+ * something to look like a mana symbol. The color values are taken directly
+ * from the official mana symbols.
  */
 .manaDecorationWhite {
     background-color: #fffcd6;
@@ -460,7 +473,8 @@ a.logo-small {
 }
 
 /**
- * The name-and-cost line of a proxy card (usually appears at the top of a Magic card).
+ * The name-and-cost line of a proxy card (usually appears at the top of a
+ * Magic card).
  */
 .card-name-cost-line {
     background-color: rgba(240, 240, 240, 0.75);
@@ -473,7 +487,8 @@ a.logo-small {
 }
 
 /**
- * The name of a proxy card (appears within the name-and-cost line, floated to the left).
+ * The name of a proxy card (appears within the name-and-cost line, floated to
+ * the left).
  */
 .card-name {
     color: #101010;
@@ -482,7 +497,8 @@ a.logo-small {
 }
 
 /**
- * The name of a proxy card if it's a token. This is styled a little more fancily than a regular card's name.
+ * The name of a proxy card if it's a token. This is styled a little more
+ * fancily than a regular card's name.
  */
 .card-name-token {
     color: #ffd010;
@@ -495,7 +511,8 @@ a.logo-small {
 }
 
 /**
- * The mana cost of a proxy card (appears within the name-and-cost line, floated to the right).
+ * The mana cost of a proxy card (appears within the name-and-cost line,
+ * floated to the right).
  */
 .card-cost {
     text-align: right;
@@ -503,8 +520,9 @@ a.logo-small {
 }
 
 /**
- * The type line of a proxy card, which contains the supertype and subtype, as well as (usually) a set symbol, which
- * will be colored according to the card's rarity.
+ * The type line of a proxy card, which contains the supertype and subtype, as
+ * well as (usually) a set symbol, which will be colored according to the
+ * card's rarity.
  */
 
 .card-type-line {
@@ -542,8 +560,9 @@ a.logo-small {
 
 
 /**
- * The power and toughness box for a proxy card. This is usually a small rounded box containing something like "1/1",
- * which appears in the bottom-right of a creature card.
+ * The power and toughness box for a proxy card. This is usually a small
+ * rounded box containing something like "1/1", which appears in the
+ * bottom-right of a creature card.
  */
 .card-power-toughness {
     background-color: rgba(240, 240, 240, 0.75);
@@ -559,8 +578,9 @@ a.logo-small {
 }
 
 /**
- * The loyalty box for a proxy card. This is usually a dark, angular box containing an integer, which appears in the
- * bottom right of a planeswalker card.
+ * The loyalty box for a proxy card. This is usually a dark, angular box
+ * containing an integer, which appears in the bottom right of a planeswalker
+ * card.
  */
 .card-loyalty {
     background-color: rgba(16, 16, 16, 1);
@@ -577,7 +597,8 @@ a.logo-small {
 }
 
 /**
- * A hover style to make the booster packs pop out a bit when you hover over them.
+ * A hover style to make the booster packs pop out a bit when you hover over
+ * them.
  */
 #boosterPackImage: hover {
     transform: scale(1.05);
@@ -631,16 +652,19 @@ pre.test {
     border: 1px solid rgba(128, 128, 255, 0.5);
     padding: 0.5em;
 }
-/***********************************************************************************************************************
+/*******************************************************************************
  * Bootstrap tweaks
  *
- * Sometimes Bootstrap's default style conflicts with our desired layout, so in certain cases, we will tweak Bootstrap
- * styles to work a little better with our intended design.
-***********************************************************************************************************************/
+ * Sometimes Bootstrap's default style conflicts with our desired layout, so in
+ * certain cases, we will tweak Bootstrap styles to work a little better with
+ * our intended design.
+ *
+ ******************************************************************************/
 
 /**
- * By default, the `dt` element in a description list is 160px wide, which is a bit too wide when we use it inside the
- * card results table. So, we shrink it a little.
+ * By default, the `dt` element in a description list is 160px wide, which is a
+ * bit too wide when we use it inside the card results table. So, we shrink it
+ * a little.
  */
 /*
 #results dl.dl-horizontal dt {
@@ -648,8 +672,8 @@ pre.test {
 }
 */
 /**
- * Since we shrunk the `dt` element above, we also have to decrease the left margin on the `dd` element so that it still
- * lines up correctly.
+ * Since we shrunk the `dt` element above, we also have to decrease the left
+ * margin on the `dd` element so that it still lines up correctly.
  */
 /*
 #results dl.dl-horizontal dd {

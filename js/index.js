@@ -71,7 +71,8 @@ const initialize = async function initialize() {
     global.elements.progressBar = progressBar;
     global.elements.progressBarStatus = progressBarStatus;
 
-    CARDS = await loadAllCards(cardsLoadProgress);
+    let CARDS = await loadAllCards(cardsLoadProgress);
+    let sets = await loadAllSets();
 
     // Assuming that the cards all loaded successfully, remove the loading
     // progress panel, and show the search bar.
@@ -130,13 +131,13 @@ const initialize = async function initialize() {
     // Enter is pressed.
     global.elements.searchField.onkeypress = function(event) {
         if (event.keyCode == 13) {
-            initiateSearch();
+            initiateSearch(CARDS, sets);
         }
     };
 
     // Also set up the search button to perform searches when clicked.
     global.elements.searchButton.onclick = function(event) {
-        initiateSearch();
+        initiateSearch(CARDS, sets);
     };
     
     // Set a placeholder message inside the search field to prompt the user to
@@ -245,7 +246,7 @@ const initialize = async function initialize() {
             global.pagination.numberOfPages = Math.ceil(
                 global.search.results.length / global.pagination.cardsPerPage
             );
-            displayResults(global.search.results);
+            displayResults(global.search.results, sets);
 
             // Since this is an auto-search from which we only ever expect to
             // get one result, don't show the "found X cards" message.

@@ -1,5 +1,6 @@
 const initialize = async function initialize() {
-    CARDS = await loadAllCards();
+    const CARDS = await loadAllCards();
+    const SETS = await loadSets(global.urls.sets);
 
     const information = getInformation(CARDS);
     const setsSelect = document.querySelector('#sets');

@@ -4,20 +4,30 @@
  *  up all global variables used by the application.
  */
 
-var CARDS = [];
-
 /**
  * Global object that can be used by all functions. Configuration and common
  * definitions are stored here.
  */
 var global = {
-    'urls' : {
+    /** Storage for loaded data. */
+    'loaded': {
+        'cards': [],
+        'sets': [],
+    },
+    /** URLs for data to be loaded. */
+    'urls': {
         'cards': {
             'main': '/data/json/cards.json',
             'ficg': '/data/json/ficg_cards.json',
             'ipu': '/data/json/ipu_cards.json',
             'misc': '/data/json/misc_cards.json',
         },
+        'sets': '/data/json/sets.json',
+    },
+    /** Global storage for loaded data. */
+    'loadedData': {
+        'cards': undefined,
+        'sets': undefined,
     },
     'paths': {
         /** Path to the directory containing all the card sets. */
@@ -521,6 +531,57 @@ var global = {
 };
 
 /**
+ * Load cards from a JSON file containing card data. This is simply a wrapper
+ * around `streamUrl`, which does the actual fetching - it then decodes the JSON
+ * into the expected array of card objects and returns it.
+ *
+ * If a progress function is supplied, progress updates will be periodically
+ * sent to this function, allowing the application to indicate how far the load
+ * has progressed.
+ *
+ * A label can also be supplied to indicate what group of cards is being
+ * uploaded, which will be passed to the progress function. This allows the UI
+ * to give better information about what exactly it is loading.
+ *
+ * This function returns the loaded card data, but also automatically stores it
+ * in the `global` object in case any other script needs it.
+ *
+ * @param {string} url
+ * @param {function} progressFunc
+ * @param {string} cardGroupLabel
+ * @return {Object[]}
+ */
+
+const loadCards = async function loadCards(url, progressFunc, cardGroupLabel) {
+    const cardsData = await streamUrl(url, progressFunc, cardGroupLabel);
+    if (cardsData) {
+        const cards = JSON.parse(cardsData);
+        global.loaded.cards = cards;
+        return cards;
+    }
+
+    return null;
+};
+
+/**
+ * Load set data from a JSON file.
+ *
+ * @param {string} url
+ * @param {function} progressFunc
+ * @return {Object[]}
+ */
+const loadSets = async function loadSets(url, progressFunc) {
+    const setsData = await streamUrl(url, progressFunc);
+    if (setsData) {
+        const sets = JSON.parse(setsData);
+        global.loaded.sets = sets;
+        return sets;
+    }
+
+    return null;
+};
+
+/**
  * For each card group for which PonyMTG has a data URL, load the card data.
  * Return a flat array containing all the cards loaded this way. If any card
  * group could not be loaded successfully, throw an error.
@@ -546,13 +607,32 @@ const loadAllCards = async function loadAllCards(progressFunc) {
 };
 
 /**
+ * For each card group for which PonyMTG has a data URL, load the card data.
+ * Return a flat array containing all the cards loaded this way. If any card
+ * group could not be loaded successfully, throw an error.
+ */
+const loadAllSets = async function loadAllSets(progressFunc) {
+    let sets = [];
+
+    const loadedSets = await loadSets(global.urls.sets, progressFunc);
+
+    if (loadedSets === null) {
+        throw new Error(`Could not load sets from ${global.urls.sets}`);
+    }
+
+    return loadedSets;
+};
+
+/**
  * Initiate a search and display the results. This function is called when you
  * press Enter in the search field, or click the "Search" button.
  *
+ * @param {Object[]} cards
  * @param {boolean} isExactSearch
  */
-function initiateSearch(isExactSearch) {
-    var searchString = global.elements.searchField.value;
+const initiateSearch = function initiateSearch(cards, sets, isExactSearch)
+{
+    let searchString = global.elements.searchField.value;
     // We do actually want to do a string search and not a regex search, so we
     // need to escape any regex characters that the user may have entered.
     searchString = escapeRegex(searchString);
@@ -562,14 +642,17 @@ function initiateSearch(isExactSearch) {
         // a whole string match.
         searchString = '^'+searchString+'$';
     }
-    var searchRegex = new RegExp(searchString, 'i');
-    global.search.results = getSearchResults(searchRegex, CARDS);
+
+    const searchRegex = new RegExp(searchString, 'i');
+    global.search.results = getSearchResults(searchRegex, cards);
+
     global.pagination.currentPage = 0;
     global.pagination.numberOfPages = Math.ceil(
         global.search.results.length/global.pagination.cardsPerPage
     );
-    displayResults(global.search.results);
-}
+
+    displayResults(global.search.results, sets);
+};
 
 /**
  * Given an array of card data entries, return some statistics about the cards,
@@ -1083,7 +1166,8 @@ function getCardsFilteredByManaType(cards, manaTypes, manaTypeSearchType) {
  *
  * @param {Object[]} cards
  */
-function displayResults(cards) {
+const displayResults = function displayResults(cards, sets)
+{
     // Normally, if we were about to refresh the contents of a container
     // element, we would empty it out first by deleting all its child nodes.
     // However, our application happens to utilize a particular behavior that
@@ -1124,9 +1208,9 @@ function displayResults(cards) {
     // because that is a live collection, which changes when we change the DOM.
     // We want a static record of the result element's contents at this very
     // specific time.
-    var resultsChildNodes = [];
-    for (var i=0; i < global.elements.results.childNodes.length; i++) {
-        var resultsChildNode = global.elements.results.childNodes[i];
+    const resultsChildNodes = [];
+    for (let i = 0; i < global.elements.results.childNodes.length; i++) {
+        const resultsChildNode = global.elements.results.childNodes[i];
         resultsChildNodes.push(resultsChildNode);
     }
     
@@ -1137,11 +1221,12 @@ function displayResults(cards) {
     // Display the new results.
     // Before the results table, add a quick message to say how many results
     // were found.
-    var foundCardsMessageElement = document.createElement('span');
+    const foundCardsMessageElement = document.createElement('span');
     foundCardsMessageElement.id = 'foundCardsMessagePanel';
     foundCardsMessageElement.style.display = 'inline-block';
     foundCardsMessageElement.className = 'alert alert-warning';
-    var foundCardsMessage = global.text.search.noResults+'.';
+
+    let foundCardsMessage = global.text.search.noResults + '.';
     if (cards.length > 0) {
         foundCardsMessageElement.className = 'alert alert-success';
         foundCardsMessage = global.text.search.foundResults.replace(
@@ -1160,11 +1245,11 @@ function displayResults(cards) {
     // application is keeping track of which page the user is on, so we just
     // need to figure out what subset of the results should be on the current
     // page, generate a table for those only, and display it.
-    var indexOfFirstCardOnPage = global.pagination.currentPage
+    const indexOfFirstCardOnPage = global.pagination.currentPage
         * global.pagination.cardsPerPage;
-    var indexOfLastCardOnPage = indexOfFirstCardOnPage
+    const indexOfLastCardOnPage = indexOfFirstCardOnPage
         + global.pagination.cardsPerPage;
-    var currentPageOfCards = cards.slice(
+    const currentPageOfCards = cards.slice(
         indexOfFirstCardOnPage,
         indexOfLastCardOnPage
     );
@@ -1173,12 +1258,12 @@ function displayResults(cards) {
     if (cards.length > 0) {
         if (global.pagination.numberOfPages > 1) {
             global.elements.results.appendChild(
-                generatePaginationControlElement('paginationControlTop')
+                generatePaginationControlElement('paginationControlTop', null, sets)
             );
         }
 
         global.elements.results.appendChild(
-            generateCardTableElement(currentPageOfCards)
+            generateCardTableElement(currentPageOfCards, sets)
         );
 
         if (global.pagination.numberOfPages > 1) {
@@ -1187,7 +1272,8 @@ function displayResults(cards) {
             global.elements.results.appendChild(
                 generatePaginationControlElement(
                     'paginationControlBottom',
-                    'paginationControlTop'
+                    'paginationControlTop',
+                    sets
                 )
             );
         }
@@ -1197,7 +1283,7 @@ function displayResults(cards) {
     for (var i=0; i < resultsChildNodes.length; i++) {
         global.elements.results.removeChild(resultsChildNodes[i]);
     }
-}
+};
 
 /**
  * Given an object containing the properties of a single card, analyze them to
@@ -1569,7 +1655,7 @@ function getFilterByManaTypeChoices() {
  * @param {string} scrollToElementId
  * @return {Element}
  */
-function generatePaginationControlElement(id, scrollToElementId) {
+function generatePaginationControlElement(id, scrollToElementId, sets) {
     var navElement = document.createElement('nav');
     var navListElement = document.createElement('ul');
     navListElement.className = 'panel panel-default pager';
@@ -1593,8 +1679,8 @@ function generatePaginationControlElement(id, scrollToElementId) {
             global.pagination.currentPage = 0;
         }
             
-        displayResults(global.search.results);
-        if (scrollToElementId !== undefined) {
+        displayResults(global.search.results, sets);
+        if (scrollToElementId) {
             var scrollToElement = document.querySelector('#'+scrollToElementId);
             scrollToElement.scrollIntoView(true);
         }
@@ -1615,8 +1701,8 @@ function generatePaginationControlElement(id, scrollToElementId) {
         if (global.pagination.currentPage >= global.pagination.numberOfPages) {
             global.pagination.currentPage = global.pagination.numberOfPages - 1;
         }
-        displayResults(global.search.results);
-        if (scrollToElementId !== undefined) {
+        displayResults(global.search.results, sets);
+        if (scrollToElementId) {
             var scrollToElement = document.querySelector('#'+scrollToElementId);
             scrollToElement.scrollIntoView(true);
         }
@@ -1946,13 +2032,19 @@ function generateCheckboxListElement(idPrefix, data, optionWidth, addSelectAll) 
 /**
  * Given a set of card data objects `cards`, generate a table of those cards,
  * which displays an image (if available) and known, relevant properties of the
- * card. If `propertiesToDisplay` is given, only those properties will be
+ * card.
+ *
+ * If a collection of set data `sets` is provided, it may be used to provide
+ * additional information for the `set` property.
+ *
+ * If `propertiesToDisplay` is given, only those properties will be
  * shown; otherwise, it will use the global defaults.
  *
  * @param {Object[]} cards
+ * @param {Object[]} sets
  * @param {string[]} propertiesToDisplay
  */
-function generateCardTableElement(cards, propertiesToDisplay) {
+function generateCardTableElement(cards, sets, propertiesToDisplay) {
     if (propertiesToDisplay === undefined) {
         propertiesToDisplay = global.lists.cardPropertiesToDisplay;
     }
@@ -2077,9 +2169,9 @@ function generateCardTableElement(cards, propertiesToDisplay) {
                 // some sets, which we can add as a title property, allowing
                 // the user to mouse over to find out information about the
                 // set.
-                if (SETS[cardPropertyValue] !== undefined
-                    && SETS[cardPropertyValue].notes !== undefined) {
-                    cardPropertyValueElement.title = SETS[
+                if (sets[cardPropertyValue] !== undefined
+                    && sets[cardPropertyValue].notes !== undefined) {
+                    cardPropertyValueElement.title = sets[
                         cardPropertyValue
                     ].notes;
                 }
@@ -2219,7 +2311,7 @@ function generateCardTableElement(cards, propertiesToDisplay) {
  */
 function getCardImageDirPath(card) {
     if (card.set !== undefined) {
-        return global.paths.sets + '/' + SETS[card.set].path;
+        return `${global.paths.sets}/${global.loaded.sets[card.set].path}`;
     }
 
     return global.paths.misc;
@@ -2233,7 +2325,7 @@ function getCardImageDirPath(card) {
  * @return {string}
  */
 function getCardImageUrl(card) {
-    return getCardImageDirPath(card) + '/' +card.image;
+    return `${getCardImageDirPath(card)}/${card.image}`;
 }
 
 /**
@@ -2243,18 +2335,22 @@ function getCardImageUrl(card) {
  *
  * @return {Object}
  */
-function getPrintSheetCards() {
-    var printSheetCardsString = localStorage.getItem('printSheetCards');
-    var printSheetCardsObject = {};
+const getPrintSheetCards = function getPrintSheetCards()
+{
+    const printSheetCardsString = localStorage.getItem('printSheetCards');
+    let printSheetCardsObject = {};
+
     if (printSheetCardsString !== null) {
         printSheetCardsObject = JSON.parse(printSheetCardsString);
     }
-    return printSheetCardsObject;
-}
 
-function clearPrintSheet() {
+    return printSheetCardsObject;
+};
+
+const clearPrintSheet = function clearPrintSheet()
+{
     localStorage.removeItem('printSheetCards');
-}
+};
 
 /**
  * Stringifies `object` and stores it in the local storage variable
@@ -2264,37 +2360,46 @@ function clearPrintSheet() {
  *
  * @param {Object} printSheetCardsObject
  */
-function putPrintSheetCards(printSheetCardsObject) {
-    localStorage.setItem('printSheetCards', JSON.stringify(printSheetCardsObject));
-}
+const putPrintSheetCards = function putPrintSheetCards(printSheetCardsObject)
+{
+    localStorage.setItem(
+        'printSheetCards',
+        JSON.stringify(printSheetCardsObject)
+    );
+};
 
 /**
  * @param {string} hash
  */
-function addCardToPrintSheet(hash) {
-    var printSheetCardsObject = getPrintSheetCards();
+const addCardToPrintSheet = function addCardToPrintSheet(hash)
+{
+    const printSheetCardsObject = getPrintSheetCards();
+
     if (printSheetCardsObject[hash] === undefined) {
         printSheetCardsObject[hash] = 0;
     }
 
     printSheetCardsObject[hash]++;
     putPrintSheetCards(printSheetCardsObject);
-}
+};
 
 /**
  * @param {string} hash
  */
-function removeCardFromPrintSheet(hash) {
-    var printSheetCardsObject = getPrintSheetCards();
+const removeCardFromPrintSheet = function removeCardFromPrintSheet(hash)
+{
+    const printSheetCardsObject = getPrintSheetCards();
+
     if (printSheetCardsObject[hash] !== undefined) {
         printSheetCardsObject[hash]--;
+
         if (printSheetCardsObject[hash] <= 0) {
             delete printSheetCardsObject[hash];
         }
     }
 
     putPrintSheetCards(printSheetCardsObject);
-}
+};
 
 /**
  * @param {string} hash
@@ -3160,23 +3265,24 @@ function generateSetCode(setName) {
  * Given an array of set names, return an array of unique 3-letter codes that
  * can be used as abbreviations for the sets.
  *
- * @param {string[]} sets
+ * @param {string[]} setNames
+ * @param {Object[]} setData
  * @return {string[]}
  */
-function generateUniqueSetCodes(sets) {
-    var setCodes = [];
-    for (let i=0; i < sets.length; i++) {
+function generateUniqueSetCodes(setNames, setData) {
+    const setCodes = [];
+    for (let i = 0; i < setNames.length; i++) {
         // It's possible that the set name may be `undefined` (this is a
         // special set used for miscellany cards that otherwise don't belong to
         // a defined set). We can't deal with those, so we'll ignore them.
-        if (sets[i] === undefined) {
+        if (setNames[i] === undefined) {
             continue;
         }
 
         // Some sets have pre-set codes, but if they don't, we'll generate one
         // based on the set's name.
-        const setName = sets[i];
-        let setCode = SETS[setName].code;
+        const setName = setNames[i];
+        let setCode = setData[setName].code;
         if (!setCode) {
             setCode = generateSetCode(setName);
             // Perform some checking to ensure that the set code is unique. If
@@ -3196,9 +3302,9 @@ function generateUniqueSetCodes(sets) {
 }
 
 /**
- * Given a list of set names `sets`, return an object containing lists of card
- * names for each set in which each card name has been modified to make it
- * unique in both its set, and the collection of cards as a whole.
+ * Given a list of cards and a list of set names, return an object containing
+ * lists of card names for each set in which each card name has been modified
+ * to make it unique in both its set, and the collection of cards as a whole.
  *
  * For example, suppose we have a set "AAA" containing cards named "Card 1",
  * "Card 2", and a set "BBB" containing cards named "Card 2", "Card 2". We
@@ -3226,34 +3332,35 @@ function generateUniqueSetCodes(sets) {
  * based on the same source material), the only way around this is to give the
  * cards unique names.
  *
- * @param {string[]} sets
+ * @param {string[]} setNames
+ * @param {Object} setData
  * @param {Object}
  */
-function getUniqueCardNames(sets) {
+function getUniqueCardNames(cards, setNames, setData) {
     // Now obtain a list of unique set codes for these sets. (Some will be
     // defined, others generated).
-    var setCodes = generateUniqueSetCodes(sets);
+    const setCodes = generateUniqueSetCodes(setNames, setData);
 
     // Create a set-to-set-code mapping.
-    var setsToSetCodes = {};
-    for (var i=0; i < sets.length; i++) {
-        setsToSetCodes[sets[i]] = setCodes[i];
+    const setsToSetCodes = {};
+    for (let i=0; i < setNames.length; i++) {
+        setsToSetCodes[setNames[i]] = setCodes[i];
     }
 
     // Initialize a collection of cards categorized by set.
-    var uniqueCardNamesBySet = {};
-    for (var i=0; i < sets.length; i++) {
-        uniqueCardNamesBySet[sets[i]] = [];
+    const uniqueCardNamesBySet = {};
+    for (let i=0; i < setNames.length; i++) {
+        uniqueCardNamesBySet[setNames[i]] = [];
     }
 
     // Go through all cards and collect a list of unique card names, performing
     // modifications as appropriate to ensure the list stays unique.
-    var uniqueCardNames = [];
-    for (var i=0; i < sets.length; i++) {
-        var cards = getCardsFilteredBySet(CARDS, [sets[i]]);
-        for (var j=0; j < cards.length; j++) {
-            var card = cards[j];
-            var uniqueCardName = card.name;
+    const uniqueCardNames = [];
+    for (let i=0; i < setNames.length; i++) {
+        const filteredCards = getCardsFilteredBySet(cards, [setNames[i]]);
+        for (let j=0; j < filteredCards.length; j++) {
+            const card = filteredCards[j];
+            let uniqueCardName = card.name;
             while (uniqueCardNames.indexOf(uniqueCardName) !== -1) {
                 // If we already recorded a card with this name, we'll have to
                 // rename it so that it's unique.  First, find out if the card
@@ -3265,7 +3372,7 @@ function getUniqueCardNames(sets) {
                     // different set. To distinguish it from that card, we
                     // append this card with the code of the set to which it
                     // belongs.
-                    var setCode = setsToSetCodes[card.set];
+                    const setCode = setsToSetCodes[card.set];
                     if (setCode) {
                         uniqueCardName += ' ('+setCode+')';
                     }
@@ -3276,8 +3383,8 @@ function getUniqueCardNames(sets) {
                     // same name. In this situation, we eppend a digit to the
                     // end of the card's name, and increment it until the
                     // card's name is unique.
-                    var incrementedName = uniqueCardName;
-                    var trailingNumber = 1;
+                    let incrementedName = uniqueCardName;
+                    let trailingNumber = 1;
                     while (uniqueCardNamesBySet[card.set].indexOf(incrementedName)
                         !== -1) {
                         trailingNumber++;
@@ -3473,3 +3580,50 @@ function sortByProperties(objects, properties, ignoreCase) {
         }
     );
 }
+
+/**
+ * Stream string data asynchronously from a URL and return a Promise for the
+ * result.
+ *
+ * If `label` is supplied, this is used as a label for the stream being
+ * read - this gets passed to the progress function, and can be used by the UI
+ * to recognize what is being loaded.
+ *
+ * If an optional `progressFunc(bytesRead, contentLength, url, identifier)` is
+ * supplied, it is called each time the stream reads a new chunk of data and
+ * can be used to update UI elements with information about the ongoing data
+ * transfer.
+ *
+ * @param {string} url
+ * @param {function} progressFunc
+ * @return {Promise}
+ */
+const streamUrl = async function streamUrl(url, progressFunc, label) {
+    const response = await fetch(url);
+    const contentLength = response.headers.get('Content-Length');
+    const reader = response.body.getReader();
+
+    let bytes = new Uint8Array()
+
+    while (true) {
+        const result = await reader.read();
+        if (result.value == undefined) {
+            break;
+        }
+
+        const bytesRead = result.value;
+        const newBytes = new Uint8Array(bytes.length + bytesRead.length);
+        newBytes.set(bytes);
+        newBytes.set(bytesRead, bytes.length);
+        bytes = newBytes;
+
+        if (progressFunc) {
+            progressFunc(bytes.length, contentLength, url, label);
+        }
+    }
+
+    const utf8Decoder = new TextDecoder();
+    const text = utf8Decoder.decode(bytes);
+
+    return text;
+};

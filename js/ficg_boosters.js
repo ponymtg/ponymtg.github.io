@@ -3,7 +3,6 @@ const initialize = async function initialize() {
     FICG_BASIC_LAND_CARDS = await loadCards('data/json/ficg_basic_land_cards.json');
     FICG_TOKENS = await loadCards('data/json/ficg_tokens.json');
     FICG_EMBLEMS = await loadCards('data/json/ficg_emblems.json');
-        
 
     const boosterImageContainer = document.querySelector(
         '#boosterPackImageContainer'

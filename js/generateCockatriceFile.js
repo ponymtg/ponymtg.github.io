@@ -3,38 +3,38 @@
  */
 const initialize = async function initialize()
 {
-    CARDS = await loadAllCards();
+    const CARDS = await loadAllCards();
 
     const htmlElement = document.querySelector('html');
     htmlElement.style.fontFamily = 'monospace';
-    let sets = undefined;
     const allSetsName = '[All PonyMTG sets]';
 
     information = getInformation(CARDS);
 
+    let setNames = undefined;
     global.urlParameters = getUrlParameters();
     if (Object.keys(global.urlParameters).length > 0) {
         if (global.urlParameters.set !== undefined) {
             if (information.sets.indexOf(global.urlParameters.set) !== -1) {
-                sets = [global.urlParameters.set];
+                setNames = [global.urlParameters.set];
             }
             else if (global.urlParameters.set === allSetsName) {
-                sets = information.sets;
+                setNames = information.sets;
             }
         }
     }
 
-    if (sets !== undefined) {
+    if (setNames !== undefined) {
         let setName = undefined;
-        if (sets.length === 1) {
-            setName = sets[0];
+        if (setNames.length === 1) {
+            setName = setNames[0];
         }
         else if (global.urlParameters.set === allSetsName) {
             setName = allSetsName;
         }
 
         let cockatriceXml = '';
-        cockatriceXml += getCockatriceXml(sets);
+        cockatriceXml += await getCockatriceXml(setNames);
 
         let headerComment = '';
         headerComment += '<!--\n';
@@ -66,13 +66,16 @@ const initialize = async function initialize()
     }
 }
 
-function getCockatriceXml(sets)
+const getCockatriceXml = async function getCockatriceXml(setNames)
 {
     const cockatriceDbVersion = '4';
 
+    const CARDS = await loadAllCards();
+    const SETS = await loadAllSets();
+
     // Get a list of set codes (a set code is the short, usually three-letter
     // code that can be used to refer to the set, eg. "AWW".
-    const setCodes = generateUniqueSetCodes(sets);
+    const setCodes = generateUniqueSetCodes(setNames, SETS);
 
     // Get a list of unique card names categorized by set. Cockatrice currently
     // has a deficiency whereby it cannot display different images for cards
@@ -88,11 +91,11 @@ function getCockatriceXml(sets)
     // card name to unique name by the index at which each appear in their
     // respective sets. If the ordering is _not_ the same, then cards will be
     // matched to the wrong unique names.
-    const uniqueCardNamesBySet = getUniqueCardNames(sets);
+    const uniqueCardNamesBySet = getUniqueCardNames(CARDS, setNames, SETS);
 
     const setSpecs = [];
-    for (let i=0; i < sets.length; i++) {
-        const setName = sets[i];
+    for (let i=0; i < setNames.length; i++) {
+        const setName = setNames[i];
         const setCode = setCodes[i];
         const setSpec = {
             'tag': 'set',
@@ -116,8 +119,8 @@ function getCockatriceXml(sets)
     }
 
     const cardSpecs = [];
-    for (let i=0; i < sets.length; i++) {
-        const setName = sets[i];
+    for (let i=0; i < setNames.length; i++) {
+        const setName = setNames[i];
         const setCode = setCodes[i];
         const cards = getCardsFilteredBySet(CARDS, [setName]);
 
