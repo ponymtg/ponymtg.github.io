@@ -1,24 +1,25 @@
-# Friendship is Card Games text dump parser
-#
-# Given a text file containing a dump of card text from FanOfMostEverything's
-# Friendship is Card Games posts, this script will attempt to parse it into a
-# structured format and output the result as JSON. A "dump of card text", in
-# this case, is a direct copy-paste of card listings from FanOfMostEverything's
-# card blog posts.
-#
-# Example card dump:
-#
-#     Rainbow Dash 2RWU
-#     Legendary Creature — Pegasus
-#     Players other than Rainbow Dash's owner can't control it.
-#     Flying, haste, double strike
-#     Awesome, cool, and radical enough to distinguish the three.
-#     2/3
-#
-# Because copy-pasting doesn't preserve formatting such as italics, there is
-# no foolproof way to distinguish flavor text from rules text. The parser uses
-# a detection algorithm to perform the separation automatically, although it
-# isn't perfect and sometimes mistakes lines of rules text for flavor text.
+"""Friendship is Card Games text dump parser
+
+Given a text file containing a dump of card text from FanOfMostEverything's
+Friendship is Card Games posts, this script will attempt to parse it into a
+structured format and output the result as JSON. A "dump of card text", in this
+case, is a direct copy-paste of card listings from FanOfMostEverything's card
+blog posts.
+
+Example card dump:
+
+    Rainbow Dash 2RWU
+    Legendary Creature — Pegasus
+    Players other than Rainbow Dash's owner can't control it.
+    Flying, haste, double strike
+    Awesome, cool, and radical enough to distinguish the three.
+    2/3
+
+Because copy-pasting doesn't preserve formatting such as italics, there is no
+foolproof way to distinguish flavor text from rules text. The parser uses a
+detection algorithm to perform the separation automatically, although it isn't
+perfect and sometimes mistakes lines of rules text for flavor text.
+"""
 
 import os, sys
 from parse_ficg_functions import *

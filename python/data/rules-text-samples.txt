@@ -2654,4 +2654,17 @@ Whenever a ward ability you control triggers, copy that ability.
 As Spontaneous Sculpture enter the battlefield, choose another creature. Spontaneous Sculpture's power becomes equal to that creature's power and its toughness becomes equal to that creature's toughness.
 When you control no permanents other than Magus of the Cheese and have no cards in hand, you win the game.
 If tapped for mana this turn, Plains produce G, Swamps produce W, Mountains produce B, Forests produce R, and lands with no basic land types produce C instead of any other type.
-Where every night is Amateur Night.\n(2 lights)"
+You can cast spells only during your own turn.
+Whenever you open an Attraction for the first time each turn, open an additional Attraction.
+Your opponents reveal cards as they draw them. They can't play cards revealed this way this turn.
+Add seven R. If you don't control a Dragon, spend that mana only to cast Dragon spells.
+As long as Skyscraper Stalk is monstrous, it has vigilance.
+Counter target activated or triggered ability. If that ability's source is a permanent, tap that permanent. It loses all abilities for as long as it remains tapped.
+If you would roll one or more dice, instead roll that many dice plus one and ignore the lowest.
+If you would flip one or more coins, instead flip that many coins plus one and ignore one.
+3(up): Transform Crystal Conductor ((up) can be paid with either U or 2 life.)
+6 | Incubate 2.
+When you draw your fifth card in a turn, abandon this scheme.
+Set two schemes in motion. Skip your next turn.
+Creatures the monarch doesn't control enter the battlefield tapped.
+Will of the council — Starting with you, each player votes for a creature card in a graveyard. Return each card with the most votes or tied for most votes to the battlefield under your control.

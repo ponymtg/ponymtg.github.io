@@ -35,6 +35,8 @@ META['previous_card_data_entry'] = None
 META['previous_card_was_a_transformer'] = False
 META['previous_card_was_a_mdfc'] = False
 META['previous_card_was_reverse_side'] = False
+META['previous_card_was_daybound'] = False
+META['previous_card_was_nightbound'] = False
 
 ################################################################################
 # FUNCTIONS
@@ -576,9 +578,10 @@ def join_card_halves(first_card, second_card):
 
     return joined_card
 
-# Given a dump `dump` of raw FICG data, break it into a list of sub-dumps, each
-# of which should represent a single card.
-def split_ficg_dump_into_individual_card_dumps(dump):
+def split_ficg_dump_into_individual_card_dumps(dump: str) -> list:
+    """Given a dump `dump` of raw FICG data, break it into a list of sub-dumps,
+    each of which should represent a single card.
+    """
     # Replace all occurrences of the en dash with the em dash, which is the one
     # that seems to be used officially on Magic cards.
     dump = re.sub(EN_DASH, EM_DASH, dump)
@@ -640,12 +643,13 @@ def split_ficg_dump_into_individual_card_dumps(dump):
 
     return sub_dumps
 
-# Given a dump of text which represents a single FICG card, extract and return a
-# dictionary of the card's properties.
 def parse_individual_card_dump_into_card_data_entry(
-    card_dump,
-    rules_text_patterns
-):
+    card_dump: str,
+    rules_text_patterns: list
+) -> dict:
+    """Given a dump of text which represents a single FICG card, extract and
+    return a dictionary of the card's properties.
+    """
     card_data_entry = {}
 
     # Before starting, perform a replacement to replace decorative double quotes
@@ -724,6 +728,13 @@ def parse_individual_card_dump_into_card_data_entry(
                 True
             )
             
+        if 'Daybound' in card_dump or 'Nightbound' in card_dump:
+            # Special case: If the card text contains "Daybound" or "Nightbound", use strict checking, as these cards are double-sided and sometimes one of the sides doesn't have a cost.
+            name_and_cost_line_properties = split_name_and_cost_line(
+                name_and_cost_line,
+                True
+            )
+            
         card_data_entry['name'] = name_and_cost_line_properties['name']
         if 'cost' in name_and_cost_line_properties:
             card_data_entry['cost'] = name_and_cost_line_properties['cost']
@@ -771,7 +782,7 @@ def parse_individual_card_dump_into_card_data_entry(
     # We can now use the supertype and subtype to make some further decisions
     # about where the text is on this card, and what the fields below the text
     # are.
-    if re.match('^< ', card_dump_lines[-1]):
+    if re.match('^<', card_dump_lines[-1]):
         # If the last line of the card begins with a `<` character, this
         # indicates a modal double-faced card (MDFC). Modal double-faced cards
         # were introduced in Zendikar Rising - they are similar to split cards
@@ -865,17 +876,26 @@ def parse_individual_card_dump_into_card_data_entry(
     if rules_and_flavor_text[1]:
         card_data_entry['flavorText'] = rules_and_flavor_text[1]
 
+    # NETA CASE: If the card before this one was recorded as being Daybound, and
+    # this card is Nightbound, then this card is the other side of the preceding card.
+    rules_text_lines = card_data_entry['text'].split('\n') if 'text' in card_data_entry else []
+    daybound_lines = [line for line in rules_text_lines if re.match('Daybound', line)]
+    nightbound_lines = [line for line in rules_text_lines if re.match('Nightbound', line)]
+    is_daybound = len(daybound_lines) > 0
+    is_nightbound = len(nightbound_lines) > 0
+    if META['previous_card_was_daybound'] and is_nightbound:
+        card_data_entry['otherSideOf'] = META['previous_card_data_entry']['name']
+
+    # Similarly, if the previous card was Nightbound and this card is Daybound,
+    # this is the other side of the preceding card.
+    if META['previous_card_was_nightbound'] and is_daybound:
+        card_data_entry['otherSideOf'] = META['previous_card_data_entry']['name']
+
     # Finally, add the creator attribution; the set and creator will be the
     # same in all cases.
     if 'set_name' in META:
         card_data_entry['set'] = META['set_name']
     card_data_entry['creator'] = 'FanOfMostEverything'
-
-    # Sometimes, the card after this one will need to refer back to it, because
-    # it's related to it in some way (usually, by being the transformed version
-    # of it). We store any such meta-information in the global `META`
-    # dictionary.
-    META['previous_card_data_entry'] = card_data_entry
 
     # If this card referred to "transforming" itself, store that in the meta
     # dictionary. The next card will need to know about that, because it's
@@ -891,6 +911,12 @@ def parse_individual_card_dump_into_card_data_entry(
     # Light in the Dark"). This needs to be removed if present.
     if first_word_of_card_name[-1] == ',':
         first_word_of_card_name = first_word_of_card_name[0:-1]
+
+    # Sometimes, the card after this one will need to refer back to it, because
+    # it's related to it in some way (usually, by being the transformed version
+    # of it). We store any such meta-information in the global `META`
+    # dictionary.
+    META['previous_card_data_entry'] = card_data_entry
 
     # Detect if the card is capable of transforming into another card. This is a
     # bit difficult to do reliably, since there are lots # of ways to express
@@ -916,9 +942,17 @@ def parse_individual_card_dump_into_card_data_entry(
         # not a transformer, and it's not the reverse side of anything.
         META['previous_card_was_a_transformer'] = False
 
+    # If the rules text of the card contains a line beginning with the word
+    # "Daybound", record this card in the meta dictionary as a Daybound card.
+    META['previous_card_was_daybound'] = is_daybound
+    META['previous_card_was_nightbound'] = is_nightbound
+
     return card_data_entry
 
-def parse_ficg_dump_into_card_data_entries(ficg_dump, rules_text_patterns):
+def parse_ficg_dump_into_card_data_entries(
+    ficg_dump: str,
+    rules_text_patterns: list
+) -> list:
     # Break up the dump into a number of sub-dumps, each of which (we hope) is
     # a chunk of text that represents a single card.
     individual_card_dumps = split_ficg_dump_into_individual_card_dumps(
@@ -1037,17 +1071,22 @@ def parse_ficg_dump_into_card_data_entries(ficg_dump, rules_text_patterns):
 
     return card_data_entries
 
-# Given a list of card data entries (dicts), return a JSON encoding for an array
-# containing those card data entries as objects.
-#
-# To produce more consistent output, we go a little further than simply encoding
-# the JSON - we also specify the exact ordering of properties in each card data
-# entry, and also manually encode the JSON to UTF-8 to make it a little more
-# readable (otherwise it encodes non-ASCII characters with escape sequences)
-#
-# A list of `properties` must be given to define what properties will appear in
-# each card data entry (and their ordering).
-def convert_card_data_entries_to_json(card_data_entries: list, properties: list) -> str:
+def convert_card_data_entries_to_json(
+    card_data_entries: list,
+    properties: list
+) -> str:
+    """Given a list of card data entries (dicts), return a JSON encoding for an
+    array containing those card data entries as objects.
+    
+    To produce more consistent output, we go a little further than simply
+    encoding the JSON - we also specify the exact ordering of properties in each
+    card data entry, and also manually encode the JSON to UTF-8 to make it a
+    little more readable (otherwise it encodes non-ASCII characters with escape
+    sequences).
+
+    A list of `properties` must be given to define what properties will appear
+    in each card data entry (and their ordering).
+    """
     ordered_dicts = []
     for entry in card_data_entries:
         ordered_dict = OrderedDict()
@@ -1064,29 +1103,33 @@ def convert_card_data_entries_to_json(card_data_entries: list, properties: list)
 
     return card_data_json.decode()
 
-# Given a piece of card text that may contain a combination of both rules text
-# and flavor text, return a 2-tuple containing the rules text and the flavor
-# text.
-#
-# If the text does not contain rules text and/or flavor text, the tuple will
-# contain empty strings for whichever is missing.
-#
-# This function makes several assumptions about the input text:
-#
-# - that the text consists only of rules text and/or flavor text
-# - that flavor text, if present, always comes after rules text, if present
-# - that the card text consists of a number of lines separated by line breaks
-# - that it is possible to determine whether a given line is rules text or not.
-#
-# The function works by examining each line of the text, starting with the last
-# line and going backward until it encounters a line that it can definitively
-# identify as rules text. Once it finds one, it classifies all lines after that
-# as flavor text and the rest as rules text.
-#
-# Because the function for identifying rules text is not 100% reliable, it is
-# possible for this function to misidentify one or more line of rules text as
-# flavor text.
-def separate_rules_text_and_flavor_text(text, rules_text_patterns):
+def separate_rules_text_and_flavor_text(
+    text: str,
+    rules_text_patterns: list
+) -> tuple:
+    """Given a piece of card text that may contain a combination of both rules
+    text and flavor text, return a 2-tuple containing the rules text and the
+    flavor text.
+    
+    If the text does not contain rules text and/or flavor text, the tuple will
+    contain empty strings for whichever is missing.
+   
+    This function makes several assumptions about the input text:
+    
+    - that the text consists only of rules text and/or flavor text
+    - that flavor text, if present, always comes after rules text, if present
+    - that the card text consists of a number of lines separated by line breaks
+    - that it is possible to determine whether a given line is rules text or not
+    
+    The function works by examining each line of the text, starting with the
+    last line and going backward until it encounters a line that it can
+    definitively identify as rules text. Once it finds one, it classifies all
+    lines after that as flavor text and the rest as rules text.
+    
+    Because the function for identifying rules text is not 100% reliable, it is
+    possible for this function to misidentify one or more line of rules text as
+    flavor text.
+    """
     lines = text.split('\n')
 
     num_post_flavor_lines = 0
@@ -1137,14 +1180,15 @@ def separate_rules_text_and_flavor_text(text, rules_text_patterns):
 
     return (rules_text, flavor_text)
 
-# Return true if a given string can be identified as being a line of Magic: the
-# Gathering rules text (as opposed to flavor text).
-#
-# This function uses a large list of regular expressions designed to match
-# phrases that are commonly used in rules text, but not in flavor text. The list
-# is not exhaustive and may give false negatives if it is unable to match a
-# legitimate piece of rules text.
-def is_rules_text(string, rules_text_patterns):
+def is_rules_text(string: str, rules_text_patterns: list) -> bool:
+    """Return true if a given string can be identified as being a line of Magic:
+    the Gathering rules text (as opposed to flavor text).
+
+    This function uses a large list of regular expressions designed to match
+    phrases that are commonly used in rules text, but not in flavor text. The
+    list is not exhaustive and may give false negatives if it is unable to match
+    a legitimate piece of rules text.
+    """
     string = re.sub("’", "'", string)
 
     for pattern in rules_text_patterns:

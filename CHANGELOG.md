@@ -1,3 +1,7 @@
+## 1.20.0
+* Updated the FiCG parser to correctly handle Daybound and Nightbound cards.
+* Updated Friendship is Card Games up to "Friendship is Card Games: Father of the Bridlewood".
+
 ## 1.19.0
 * Removed several instances of the global CARDS variable and replaced them with injected dependencies.
 
