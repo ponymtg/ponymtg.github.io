@@ -63,6 +63,7 @@ var global = {
             'rarity': 'Rarity',
             'transformsInto': 'Transforms into',
             'transformsFrom': 'Transforms from',
+            'otherSideOf': 'Other side of',
             'artist': 'Artist',
             'createdAt': 'Date',
             'sourceUrl': 'Source URL',
@@ -338,6 +339,7 @@ var global = {
             'rarity',
             'transformsInto',
             'transformsFrom',
+            'otherSideOf',
             'artist',
             'notes',
             'sourceUrl',
@@ -362,6 +364,7 @@ var global = {
             'rarity',
             'transformsInto',
             'transformsFrom',
+            'otherSideOf',
             'artist',
         ],
         /**

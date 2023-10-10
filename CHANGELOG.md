@@ -1,3 +1,6 @@
+## 1.20.1
+* Added the "otherSideOf" property to the list of displayed properties in card search results.
+
 ## 1.20.0
 * Updated the FiCG parser to correctly handle Daybound and Nightbound cards.
 * Updated Friendship is Card Games up to "Friendship is Card Games: Father of the Bridlewood".
