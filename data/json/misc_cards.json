@@ -2221,5 +2221,25 @@
         "text": "Enchant creature\n\nWhen Spellfire Goggles enters the battlefield, scry 1 and enchanted creature gets +1/+1 until end of turn.\n\nEnchanted creature has prowess and \"Whenever you cast a noncreature spell, scry 1.\"",
         "sourceUrl": "https://www.fimfiction.net/story/521072/merge-request#comment/11325065",
         "notes": "A card created by FanOfMostEverything in the comments of his story Merge Request."
+    },
+    {
+        "name": "Danger, Vestige of Flame",
+        "creator": "DangerDean",
+        "cost": "3RW",
+        "supertype": "Legendary Creature",
+        "subtype": "Pegasus Spirit",
+        "text": "Whenever Danger, Vestige of Flame deals combat damage to a player, create three 1/1 white Pegasus Soldier creatures tokens with flying and vigilance\n\n1RW: Danger, Vestige of Flame gets +1/+1 until end of turn\n\n Disturb 6RW (You may cast this card from your graveyard transformed for its disturb cost.)",
+        "pt": "3/5",
+        "transformsInto": "Inscription of Flame",
+        "sourceUrl": "https://www.fimfiction.net/blog/1009158/friendship-is-card-games-the-basaltic-breakdown#comment/5716741",
+        "notes": "A personal card made by DangerDean."
+    },
+    {
+        "name": "Inscription of Flame",
+        "creator": "DangerDean",
+        "supertype": "Enchantment",
+        "text": "Whenever one of more creatures you control attacks, attacking creatures you control gets +1/+1 until end of turn.",
+        "sourceUrl": "https://www.fimfiction.net/blog/1009158/friendship-is-card-games-the-basaltic-breakdown#comment/5716741",
+        "notes": "A personal card made by DangerDean."
     }
 ]

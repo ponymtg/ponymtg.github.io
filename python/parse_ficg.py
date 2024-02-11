@@ -97,6 +97,7 @@ card_properties = [
     'watermark',
     'pt',
     'loyalty',
+    'defense',
     'transformsInto',
     'transformsFrom',
     'otherSideOf'

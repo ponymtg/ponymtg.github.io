@@ -60,6 +60,7 @@ var global = {
             'watermark': 'Watermark',
             'pt': 'Power/Toughness',
             'loyalty': 'Loyalty',
+            'defense': 'Defense',
             'rarity': 'Rarity',
             'transformsInto': 'Transforms into',
             'transformsFrom': 'Transforms from',
@@ -336,6 +337,7 @@ var global = {
             'watermark',
             'pt',
             'loyalty',
+            'defense',
             'rarity',
             'transformsInto',
             'transformsFrom',
@@ -361,6 +363,7 @@ var global = {
             'watermark',
             'pt',
             'loyalty',
+            'defense',
             'rarity',
             'transformsInto',
             'transformsFrom',
@@ -2473,12 +2476,12 @@ function generateProxyElement(
         textGenerosity = global.values.proxyTextGenerosity.display;
     }
 
-    var proxyElement = document.createElement('div');
+    const proxyElement = document.createElement('div');
     proxyElement.className = 'proxy';
     proxyElement.style.fontSize = global.dimensions.proxy.fontSize+'px';
 
     // Determine the card's height.
-    var cardHeight = getCardHeightFromCardWidth(cardWidth);
+    const cardHeight = getCardHeightFromCardWidth(cardWidth);
 
     // Although we now have the width and height of the proxy, (ie. the desired
     // dimensions of the fully-assembled, displayed proxy card), this is not
@@ -2495,7 +2498,7 @@ function generateProxyElement(
     // global standard card, so we can work out how big the border needs to be
     // for our proxy.
 
-    var proxyBorderThickness = calculateCardBorderThickness(cardWidth);
+    const proxyBorderThickness = calculateCardBorderThickness(cardWidth);
 
     // We also need to take padding into account. This is simply a small gap
     // between the contents of the proxy container (ie. the card name, text,
@@ -2503,15 +2506,15 @@ function generateProxyElement(
     // adding it to make the proxy look a little better. The padding is uniform
     // thickness all the way round.
 
-    var proxyPadding = global.dimensions.proxy.padding;
+    const proxyPadding = global.dimensions.proxy.padding;
 
     // Now we can determine the width and height of the proxy element, by
     // subtracting the border and padding from the desired card width and
     // height. We have to subtract two lots of border and padding, as the card
     // is bordered and padded on all four sides.
 
-    var proxyElementWidth = (cardWidth - (2 * proxyBorderThickness)) - (2 * proxyPadding);
-    var proxyElementHeight = (cardHeight - (2 * proxyBorderThickness)) - (2 * proxyPadding);
+    const proxyElementWidth = (cardWidth - (2 * proxyBorderThickness)) - (2 * proxyPadding);
+    const proxyElementHeight = (cardHeight - (2 * proxyBorderThickness)) - (2 * proxyPadding);
 
     proxyElement.style.width = proxyElementWidth+'px';
     proxyElement.style.height = proxyElementHeight+'px';
@@ -2520,7 +2523,7 @@ function generateProxyElement(
 
     // Determine the proxy's color scheme. Generally, this is determined by its
     // mana cost.
-    var proxyColorScheme = undefined;
+    let proxyColorScheme = undefined;
 
     if (cardProperties.colorIndicator !== undefined) {
         // If the card has a color indicator, then the color indicator is the
@@ -2533,7 +2536,7 @@ function generateProxyElement(
         // it as such for the purposes of determining a color scheme.
 
         // Remove any parentheses from the color indicator.
-        var colorIndicatorManaSymbols = cardProperties.colorIndicator
+        const colorIndicatorManaSymbols = cardProperties.colorIndicator
             .replace(/\(/g, '')
             .replace(/\)/g, '');
 
@@ -2573,14 +2576,13 @@ function generateProxyElement(
     }
 
     // Create the elements that will contain the various sections of the card.
-    var proxyNameElement = document.createElement('p');
-    var proxyNameAndCostLineElement = document.createElement('div');
-    var proxyNameElement = document.createElement('div');
-    var proxyCostElement = document.createElement('div');
-    var proxyTypeLineElement = document.createElement('div');
-    var proxyTextElement = document.createElement('div');
+    const proxyNameAndCostLineElement = document.createElement('div');
+    const proxyNameElement = document.createElement('div');
+    const proxyCostElement = document.createElement('div');
+    const proxyTypeLineElement = document.createElement('div');
+    const proxyTextElement = document.createElement('div');
 
-    var typeLineHtml = cardProperties.supertype;
+    let typeLineHtml = cardProperties.supertype;
 
     if (cardProperties.subtype !== undefined) {
         typeLineHtml += ' &mdash; '+cardProperties.subtype;
@@ -2602,7 +2604,7 @@ function generateProxyElement(
     proxyCostElement.className = 'card-cost';
 
     // Get the card text.
-    var cardText = cardProperties.text;
+    let cardText = cardProperties.text;
 
     if (cardText) { 
         // If we've got flavor text as well, add it in, italicizing it
@@ -2642,7 +2644,7 @@ function generateProxyElement(
             // If the cost has two costs, we assume this is a split card. We
             // render these a little differently.  First, split the name up
             // into two names.
-            var cardNames = cardProperties.name.split('//')
+            const cardNames = cardProperties.name.split('//')
             cardNames[0] = cardNames[0].trim()
             cardNames[1] = cardNames[1].trim()
 
@@ -2654,14 +2656,14 @@ function generateProxyElement(
             proxyCostElement.innerHTML = applyManaStyling(cardProperties.cost);
             proxyCostElement.style.cssFloat = 'left';
             proxyCostElement.style.margin = '0 8px';
-            var proxySplitElement = document.createElement('div');
+            const proxySplitElement = document.createElement('div');
             proxySplitElement.innerHTML = '//';
             proxySplitElement.className = 'card-name';
             proxySplitElement.style.margin = '0 8px';
-            var proxyName2Element = document.createElement('div');
+            const proxyName2Element = document.createElement('div');
             proxyName2Element.className = 'card-name';
             proxyName2Element.innerHTML = cardNames[1]
-            var proxyCost2Element = document.createElement('div');
+            const proxyCost2Element = document.createElement('div');
             proxyCost2Element.className = 'card-cost';
             proxyCost2Element.style.cssFloat = 'left';
             proxyCost2Element.style.margin = '0 8px';
@@ -2715,15 +2717,15 @@ function generateProxyElement(
     // roughly constant. Note that this table layout is dependent on the
     // Bootstrap CSS; it doesn't look quite right without it.
 
-    var proxyTable = document.createElement('table');
-    var proxyNameAndCostRow = document.createElement('tr');
-    var proxyNameAndCostCell = document.createElement('td');
-    var proxyTypeRow = document.createElement('tr');
-    var proxyTypeCell = document.createElement('td');
-    var proxyTextRow = document.createElement('tr');
-    var proxyTextCell = document.createElement('td');
-    var proxyPowerAndToughnessRow = document.createElement('tr');
-    var proxyPowerAndToughnessCell = document.createElement('td');
+    const proxyTable = document.createElement('table');
+    const proxyNameAndCostRow = document.createElement('tr');
+    const proxyNameAndCostCell = document.createElement('td');
+    const proxyTypeRow = document.createElement('tr');
+    const proxyTypeCell = document.createElement('td');
+    const proxyTextRow = document.createElement('tr');
+    const proxyTextCell = document.createElement('td');
+    const proxyPowerAndToughnessRow = document.createElement('tr');
+    const proxyPowerAndToughnessCell = document.createElement('td');
 
     proxyTable.style.width = '100%';
     proxyTable.style.height = '100%';
@@ -2736,21 +2738,28 @@ function generateProxyElement(
     }
 
     if (cardProperties.pt !== undefined) {
-        var proxyPowerAndToughnessElement = document.createElement('div');
-        var powerAndToughnessHtml = cardProperties.pt;
+        const proxyPowerAndToughnessElement = document.createElement('div');
+        const powerAndToughnessHtml = cardProperties.pt;
         proxyPowerAndToughnessElement.className = 'card-power-toughness';
         proxyPowerAndToughnessElement.innerHTML = powerAndToughnessHtml;
         proxyPowerAndToughnessCell.appendChild(proxyPowerAndToughnessElement);
     }
     else if (cardProperties.loyalty !== undefined) {
-        var proxyLoyaltyElement = document.createElement('div');
-        var loyaltyHtml = cardProperties.loyalty;
+        const proxyLoyaltyElement = document.createElement('div');
+        const loyaltyHtml = cardProperties.loyalty;
         proxyLoyaltyElement.className = 'card-loyalty';
         proxyLoyaltyElement.innerHTML = loyaltyHtml;
         proxyPowerAndToughnessCell.appendChild(proxyLoyaltyElement);
     }
+    else if (cardProperties.defense !== undefined) {
+        const proxyDefenseElement = document.createElement('div');
+        const defenseHtml = cardProperties.defense;
+        proxyDefenseElement.className = 'card-defense';
+        proxyDefenseElement.innerHTML = defenseHtml;
+        proxyPowerAndToughnessCell.appendChild(proxyDefenseElement);
+    }
     else {
-        var emptyDiv = document.createElement('div');
+        const emptyDiv = document.createElement('div');
         emptyDiv.innerHTML = '&nbsp;';
         proxyPowerAndToughnessCell.appendChild(emptyDiv);
     }

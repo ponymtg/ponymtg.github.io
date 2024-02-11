@@ -2668,3 +2668,10 @@ When you draw your fifth card in a turn, abandon this scheme.
 Set two schemes in motion. Skip your next turn.
 Creatures the monarch doesn't control enter the battlefield tapped.
 Will of the council — Starting with you, each player votes for a creature card in a graveyard. Return each card with the most votes or tied for most votes to the battlefield under your control.
+When a player controls no lands, sacrifice Ecological Collapse.
+If another creature would explore, Scourge of Cartographers explores instead.
+Whenever Irate Minotaur becomes the target of an ability of a creature an opponent controls, Irate Minotaur fights that creature.
+Sacrifice any number of artifacts. Creative Destruction deals that much damage to any target.
+Ninja swap 2 (2: Exchange this artifact with a Ninja card in your hand.)
+Learn.
+• Target suspected creature is no longer suspected.

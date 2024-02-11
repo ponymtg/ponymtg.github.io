@@ -57,7 +57,7 @@ basic land
 become a copy of
 becomes attached to a creature
 becomes (blocked|tapped)
-becomes the target of a spell
+becomes the target of (a spell|an ability)
 block(ed|ing) creatures?
 block or be blocked
 block this turn
@@ -80,6 +80,7 @@ can't have or gain
 card in a graveyard
 cards? exiled with
 cards (in)?to your hand
+card in your hand
 cards revealed this way
 cards? to the battlefield
 cast more than one spell
@@ -100,6 +101,7 @@ combat phase
 Contraption deck
 control an? (artifact|Forest|enchantment|Island|Mountain|Plains|Swamp)
 control three or more
+controls no lands
 converted mana cost
 copy of that creature
 copy target
@@ -110,6 +112,7 @@ costs? \d (less|more) to (activate|cast)
 costs \d to cast
 creates? a .+ token
 create .+ tokens
+creature an opponent controls
 creature of the chosen type
 creatures can't (attack|block)
 creatures on the battlefield
@@ -118,7 +121,7 @@ creatures? without flying
 creatures with power less than
 creatures (you|you don't|your opponents) control
 creature (token|type|spell)s?
-creature would be destroyed
+creature would (be destroyed|explore)
 crew Vehicles
 \*/\d
 \d/\*
@@ -133,6 +136,7 @@ deals( combat)? damage (equal to|to target)
 deals damage to
 deals (\d|X) damage
 deal(s|t) combat damage
+deals that much damage
 dealt damage
 dealt to a player
 dealt to you instead
@@ -186,13 +190,16 @@ equal to the number of
 equipped creature
 except it has this ability
 except it's still
+exchange this artifact
 ^exile\b
 exiled card
 exiled from the battlefield
 exile it instead
 exile (it|target)
 exile that many cards
+explores instead
 face( |-)down
+fights that creature
 (first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth) spell of a turn
 flip one or more coins
 flip that many coins
@@ -213,6 +220,7 @@ he or she attacks
 his or her (control|graveyard|hand|library|mana pool)
 historic permanent
 if an? (effect|library|source)
+if another creature would
 if (a player|an opponent) would
 if .+ was kicked
 if [\w ]+ is an enchantment
@@ -231,6 +239,7 @@ it has (trample|vigilance)
 its (controller|text box)
 its owner's (control|library)
 ^Kicker
+^Learn\.$
 leaves the battlefield
 legendaries
 legendary (creature|spell)s?
@@ -248,6 +257,7 @@ mills that many cards
 multikicker
 named card
 next (end step|untap step|upkeep)
+Ninja swap \d
 no cards in hand
 non(basic|black|blue|blocking|creature|green|instant|land|red|snow|sorcery|token|white)
 (Note: Same room layout as Lost Mine of Phandelver)
@@ -312,6 +322,7 @@ Reveal (a creature card|your hand)
 reveal (this|that) card
 roll one or more dice
 roll that many dice
+sacrifice any number of
 sacrifice it
 sacrifices? (a|an|another|this) (artifact|creature|Forest|Island|land|Mountain|permanent|Plains|Swamp)
 sacrifices permanents
@@ -331,6 +342,7 @@ spells you cast
 spell this turn
 spend that mana only
 spent to cast
+suspected creature
 ^Suspend\b 
 ^T, 
 ^T: 
@@ -339,6 +351,7 @@ tap (any number of|each creature|target|that permanent|up to)
 tapped creature
 tapped for mana
 target( black| blue| green| red| snow| white| wordy)? (artifact|aura|attacking|card|creature|enchanted|enchantment|equipment|land|opponent|permanent|player|spell)
+target suspected
 that (creature|permanent)'s owner
 that player (controls|discards|loses|sacrifices)
 that's a copy of
@@ -347,6 +360,7 @@ the chosen names?
 their owners' libraries
 tied for most votes
 time counters
+to any target
 to its owner's hand
 top card of (any library|each library|their libraries)
 top card of your
@@ -367,7 +381,7 @@ until end of turn
 upkeep step
 ^\w+ \(.*\.\)$
 ward ability
-when a player (casts|pays)
+when a player (casts|controls|pays)
 whenever a creature would 
 whenever an opponent casts
 Whenever a player

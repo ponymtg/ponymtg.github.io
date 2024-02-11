@@ -59,6 +59,8 @@ def is_type_line(line):
         'Artifact',
         'Artifact — Equipment',
         'Basic Land',
+        'Battle',
+        'Battle — Siege',
         'Enchantment',
         'Enchantment — Aura',
         'World Enchantment',
@@ -81,6 +83,7 @@ def is_type_line(line):
     type_words = [
         'Artifact',
         'Basic',
+        'Battle',
         'Creature',
         'Enchantment',
         'Instant',
@@ -156,6 +159,7 @@ def is_type_line(line):
     # - "Snow" is succeeded by the word "Land".
     # - "Snow" is succeeded by the word "Sorcery".
     # - "Snow" is succeeded by the word "Instant".
+    # - "Snow" is succeeded by the word "Battle".
     if 'Snow' in line:
         if (
             'Snow Creature' not in line
@@ -164,6 +168,7 @@ def is_type_line(line):
             and 'Snow Land' not in line
             and 'Snow Sorcery' not in line
             and 'Snow Instant' not in line
+            and 'Snow Battle' not in line
         ):
             return False
             
@@ -241,6 +246,7 @@ def is_type_line(line):
     # - The line must contain only the words "Legendary Sorcery".
     # - "Sorcery" must be preceded by "Tribal".
     # - "Sorcery" must be preceded by "Snow".
+    # - "Sorcery" must be preceded by "Kindred".
     # - The line must be exactly "Sorcery — Arcane".
     # - The line must be exactly "Sorcery — Adventure".
     # - The line must be exactly "Sorcery — Lesson".
@@ -251,6 +257,7 @@ def is_type_line(line):
             line not in ['Sorcery', 'Legendary Sorcery']
             and 'Tribal Sorcery' not in line
             and 'Snow Sorcery' not in line
+            and 'Kindred Sorcery' not in line
             and line != 'Sorcery — Arcane'
             and line != 'Sorcery — Adventure'
             and line != 'Sorcery — Lesson'
@@ -340,6 +347,21 @@ def is_type_line(line):
             and 'Basic Land' not in line
             and 'Snow Land' not in line
             and 'Land —' not in line
+        ):
+            return False
+
+    # If the line contains the word "Battle", then it must meet one of the
+    # following conditions:
+    # - The line contains only the word "Battle" and nothing else.
+    # - "Battle" is preceded by the word "Legendary".
+    # - "Battle" is preceded by the word "Snow".
+    # - "Battle" is succeeded by a long dash.
+    if 'Battle' in line:
+        if (
+            line != 'Battle'
+            and 'Legendary Battle' not in line
+            and 'Snow Battle' not in line
+            and 'Battle —' not in line
         ):
             return False
 
@@ -818,6 +840,19 @@ def parse_individual_card_dump_into_card_data_entry(
             # for the card.
             del card_data_entry['pt']
             text_lines = card_dump_lines[2:]
+    elif 'Battle' in card_data_entry['supertype']:
+        # If the card is a battle, we expect that the last line in the dump will
+        # be the battle's defense, and everything else will be card text.
+        card_data_entry['defense'] = card_dump_lines[-1]
+        text_lines = card_dump_lines[2:-1]
+
+        # SPECIAL CASE: "Discord Released" has no loyalty box, due to a quirk
+        # of it being the reverse side of a double-sided card. For this card,
+        # all lines after the first two are the card text, and we won't set a
+        # loyalty.
+        if card_data_entry['name'] == 'Discord Released':
+            del card_data_entry['loyalty']
+            text_lines = card_dump_lines[2:]
     elif 'Planeswalker' in card_data_entry['supertype']:
         # If the card is a planeswalker, we expect that the last line in the
         # dump will be the planeswalker's loyalty, and everything else will be
@@ -920,8 +955,8 @@ def parse_individual_card_dump_into_card_data_entry(
 
     # Detect if the card is capable of transforming into another card. This is a
     # bit difficult to do reliably, since there are lots # of ways to express
-    #the notion of transformation. Just having the word "transform" in its rules
-    # text isn't enough to be sure.
+    # the notion of transformation. Just having the word "transform" in its
+    # rules text isn't enough to be sure.
     if (
         'text' in card_data_entry
         and (
@@ -929,6 +964,8 @@ def parse_individual_card_dump_into_card_data_entry(
             or 'transform '+first_word_of_card_name.lower() in card_data_entry['text'].lower()
             or 'transform it' in card_data_entry['text']
             or 'transforms it' in card_data_entry['text']
+            or 'return this card transformed' in card_data_entry['text'].lower()
+            or 'cast it transformed' in card_data_entry['text'].lower()
             or re.search(
                 r'(put|return)( .+)? to the battlefield( .+)? transformed',
                 card_data_entry['text'],
