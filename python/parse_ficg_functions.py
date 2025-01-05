@@ -30,16 +30,22 @@ FACTIONS = {
 # Use a global dictionary to keep track of meta-information about the set. There
 # are some things, such as which cards transform into which others, that we can
 # only determine by keeping track of previously-seen cards.
-META = {}
-META['previous_card_data_entry'] = None
-META['previous_card_was_a_transformer'] = False
-META['previous_card_was_a_mdfc'] = False
-META['previous_card_was_reverse_side'] = False
-META['previous_card_was_daybound'] = False
-META['previous_card_was_nightbound'] = False
+META = {
+    "previous_card_data_entry": None,
+    "previous_card_was_a_transformer": False,
+    "previous_card_was_a_mdfc": False,
+    "previous_card_was_reverse_side": False,
+    "previous_card_was_daybound": False,
+    "previous_card_was_nightbound": False,
+    "previous_card_was_a_flip_card": False,
+}
 
 ################################################################################
 # FUNCTIONS
+
+def err(*args):
+    """Print to error stream, for monitoring."""
+    print(*args, file=sys.stderr)
 
 def is_type_line(line):
     """Return True if we can identify `line` as being a card's type line."""
@@ -61,6 +67,7 @@ def is_type_line(line):
         'Basic Land',
         'Battle',
         'Battle — Siege',
+        'Dungeon',
         'Enchantment',
         'Enchantment — Aura',
         'World Enchantment',
@@ -122,7 +129,7 @@ def is_type_line(line):
     # color indicator from our deliberations if we find one.
 
     color_indicator_regex = r'^\([WUBRG]+\) '
-    line = re.sub(color_indicator_regex, '', line, 1, re.IGNORECASE)
+    line = re.sub(color_indicator_regex, '', line, count=1, flags=re.IGNORECASE)
 
     # If the first word is "Legendary", then it must be followed by one of a
     # small set of strings. If it doesn't, this is not a type line.
@@ -551,7 +558,12 @@ def join_card_halves(first_card, second_card):
         second_card['name']
     )
     joined_card['cost'] = first_card['cost']
-    joined_card['cost2'] = second_card['cost']
+
+    # The second card sometimes doesn't have a cost (for example, if it's the
+    # flipped version of a flip card).
+    if 'cost' in second_card:
+        joined_card['cost2'] = second_card['cost']
+
     joined_card['supertype'] = first_card['supertype']
     joined_card['supertype2'] = second_card['supertype']
 
@@ -610,6 +622,9 @@ def split_ficg_dump_into_individual_card_dumps(dump: str) -> list:
 
     # Split the dump into lines.
     dump_lines = dump.split('\n')
+
+    # Ignore lines that begin with "(Note: " (these are notes from FoME)
+    dump_lines = [line for line in dump_lines if not line.startswith('(Note: ')]
 
     # Because text files often end with a newline, this means that `dump_lines`
     # ends up with one empty string as the last element. We don't want that, so
@@ -699,14 +714,15 @@ def parse_individual_card_dump_into_card_data_entry(
         card_data_entry[property_name] = type_line_properties[property_name]
     
     # Now that we have the supertype, check what kind of card this is. If it's a
-    # land, scheme, conspiracy, phenomenon, or plane, we will assume that the
-    # card has no cost for us to extract, and just take the entirety of the
-    # name-and-cost line to be the card's name.
+    # land, scheme, conspiracy, phenomenon, dungeon, or plane, we will assume
+    # that the card has no cost for us to extract, and just take the entirety of
+    # the name-and-cost line to be the card's name.
     if (
         'Land' in card_data_entry['supertype']
         or 'Scheme' in card_data_entry['supertype']
         or 'Conspiracy' in card_data_entry['supertype']
         or 'Phenomenon' in card_data_entry['supertype']
+        or 'Dungeon' in card_data_entry['supertype']
         or (
             'Plane' in card_data_entry['supertype']
             and 'Planeswalker' not in card_data_entry['supertype']
@@ -790,6 +806,15 @@ def parse_individual_card_dump_into_card_data_entry(
             # Also record that this card is the other side of the previous card,
             # since this is always true for transformers (they are always
             # double-faced).
+    
+    # META CASE: If the previous card was a flip card, assume this is the
+    # flipped version of it. As far as I can tell, flipped versions of cards
+    # don't have costs, so take the whole name and cost line as the name, and
+    # delete any assumed cost.
+    if META['previous_card_was_a_flip_card']:
+        card_data_entry['name'] = name_and_cost_line
+        if 'cost' in card_data_entry:
+            del card_data_entry['cost']
     
     # META CASE: If the card before this one contained an MDFC marker (`<`), it
     # was a modal double-faced card (MDFC) and that will have been recorded in
@@ -954,7 +979,7 @@ def parse_individual_card_dump_into_card_data_entry(
     META['previous_card_data_entry'] = card_data_entry
 
     # Detect if the card is capable of transforming into another card. This is a
-    # bit difficult to do reliably, since there are lots # of ways to express
+    # bit difficult to do reliably, since there are lots of ways to express
     # the notion of transformation. Just having the word "transform" in its
     # rules text isn't enough to be sure.
     if (
@@ -979,6 +1004,15 @@ def parse_individual_card_dump_into_card_data_entry(
         # not a transformer, and it's not the reverse side of anything.
         META['previous_card_was_a_transformer'] = False
 
+    # If the rules text refers to flipping the card by name, identify this as a
+    # flip card. A flip card is two cards in one - rotating the card 180 degrees
+    # turns it into the other card. As of Jan 2025, there has only been one flip
+    # card in FiCG: "Her, Earthen", which becomes "Her, Winged" when flipped.
+    if 'text' in card_data_entry and 'flip '+card_data_entry['name'].lower() in card_data_entry['text'].lower():
+        META["previous_card_was_a_flip_card"] = True
+    else:
+        META['previous_card_was_a_flip_card'] = False
+
     # If the rules text of the card contains a line beginning with the word
     # "Daybound", record this card in the meta dictionary as a Daybound card.
     META['previous_card_was_daybound'] = is_daybound
@@ -990,32 +1024,74 @@ def parse_ficg_dump_into_card_data_entries(
     ficg_dump: str,
     rules_text_patterns: list
 ) -> list:
+    err('Parsing raw FiCG dump...')
     # Break up the dump into a number of sub-dumps, each of which (we hope) is
     # a chunk of text that represents a single card.
+    err('* Splitting raw dump into individual card dumps...')
     individual_card_dumps = split_ficg_dump_into_individual_card_dumps(
         ficg_dump
     )
+    err(f'* Splitting complete. {len(individual_card_dumps)} individual card dumps found.')
 
+    err('* Pass 1: Extracting card data from raw card dumps...')
     card_data_entries = []
     for individual_card_dump in individual_card_dumps:
         card_data_entry = parse_individual_card_dump_into_card_data_entry(
             individual_card_dump,
             rules_text_patterns
         )
+        err(f'  * Processed card "{card_data_entry["name"]}"')
         card_data_entries.append(card_data_entry)
 
-    # Before we return it, we can do a second pass on this data; if we
-    # identified any "transformsFrom" properties, we
-    # can now also add "transformsInto" on the cards that they transform from.
+    err(f'* Data pass 1 complete. {len(card_data_entries)} card data entries extracted.')
+
+    # Perform a second pass to deal with flip cards. These are two separate card
+    # entries that need to be combined into one card, as they both appear on the
+    # same face.
+    err('* Pass 2: Flip cards')
+    i = 0
+    while i < len(card_data_entries):
+        card_data_entry = card_data_entries[i]
+        if 'text' in card_data_entry and '//' not in card_data_entry['name']:
+            # Check to see if the card is a flip card.
+            if 'flip '+card_data_entry['name'].lower() in card_data_entry['text'].lower():
+                # This card is a flip card, so assume the following card is the
+                # flipped version, and join the two halves together.
+                first_card_half = card_data_entries[i]
+                second_card_half = card_data_entries[i+1]
+
+                joined_card = join_card_halves(first_card_half, second_card_half)
+                err(f'  * Joined cards "{first_card_half["name"]}" and "{second_card_half["name"]}" into a single flip card.')
+
+                # Delete the following card, as it's now been incorporated into
+                # this one, and replace the current card with the joined version.
+                # preceding card (the first card half) with the joined version.
+                del card_data_entries[i+1]
+                card_data_entries[i] = joined_card
+
+                # If the card we just deleted was a transformer, we need to
+                # update the card that follows it, as that card's transformsFrom
+                # property will be pointing to a now-deleted card. Change it to
+                # point to the new joined card instead.
+                if "transformsFrom" in card_data_entries[i+1]:
+                    card_data_entries[i+1]["transformsFrom"] = joined_card["name"]
+
+        i += 1
+
+    # Third pass: if we identified any "transformsFrom" properties, we can now
+    # also add "transformsInto" on the cards that they transform from.
+    err('* Pass 3: Transforming cards')
     transformsIntoDict = {}
     for card_data_entry in card_data_entries:
         if 'transformsFrom' in card_data_entry:
             transformsIntoDict[card_data_entry['transformsFrom']] = card_data_entry['name']
     for card_data_entry in card_data_entries:
         if card_data_entry['name'] in transformsIntoDict:
+            err(f'  * "{card_data_entry["name"]}" transforms into "{transformsIntoDict[card_data_entry["name"]]}"')
             card_data_entry['transformsInto'] = transformsIntoDict[card_data_entry['name']]
 
-    # A third pass is required to deal with "Aftermath" cards. These are a kind
+    err('* Pass 4: Aftermath cards')
+    # A fourth pass is required to deal with "Aftermath" cards. These are a kind
     # of split card (two cards on the same face). In the raw FICG dump,
     # FanOfMostEverything formats these like this:
     #
@@ -1046,6 +1122,7 @@ def parse_ficg_dump_into_card_data_entries(
                 second_card_half = card_data_entries[i]
 
                 joined_card = join_card_halves(first_card_half, second_card_half)
+                err(f'  * Joined cards "{first_card_half["name"]}" and "{second_card_half["name"]}" into a single Aftermath card.')
 
                 # Delete this card (the second card half), and replace the
                 # preceding card (the first card half) with the
@@ -1058,7 +1135,8 @@ def parse_ficg_dump_into_card_data_entries(
                 i -= 1
         i += 1
         
-    # Fourth pass: Adventure cards. These are similar to "Aftermath" cards; they
+    err('* Pass 5: Adventure cards')
+    # Fifth pass: Adventure cards. These are similar to "Aftermath" cards; they
     # are basically a mini-card bolted on to another one. FanOfMostEverything
     # formats Adventure cards like this:
     # 
@@ -1087,6 +1165,7 @@ def parse_ficg_dump_into_card_data_entries(
 
                 # Join the two cards and replace them with the joined version.
                 joined_card = join_card_halves(first_card_half, second_card_half)
+                err(f'  * Joined cards "{first_card_half["name"]}" and "{second_card_half["name"]}" into a single Adventure card.')
                 del card_data_entries[i]
                 card_data_entries[i-1] = joined_card
 
@@ -1095,7 +1174,8 @@ def parse_ficg_dump_into_card_data_entries(
                 i -= 1
         i += 1
         
-    # Fifth pass: If we identified that this card is the other side of a modal
+    err('* Pass 6: Modal double-faced cards')
+    # Sixth pass: If we identified that this card is the other side of a modal
     # double-faced card, we can mark the reciprocal relation on the card's other
     # side.
     otherSideDict = {}
@@ -1105,6 +1185,9 @@ def parse_ficg_dump_into_card_data_entries(
     for card_data_entry in card_data_entries:
         if card_data_entry['name'] in otherSideDict:
             card_data_entry['otherSideOf'] = otherSideDict[card_data_entry['name']]
+            err(f'  * "{card_data_entry["name"]}" is the other side of "{otherSideDict[card_data_entry["name"]]}"')
+
+    err(f'Finished parsing raw FiCG dump. {len(card_data_entries)} card entries were produced.')
 
     return card_data_entries
 
@@ -1130,6 +1213,7 @@ def convert_card_data_entries_to_json(
         for prop in properties:
             if prop in entry:
                 ordered_dict[prop] = entry[prop]
+
         ordered_dicts.append(ordered_dict)
 
     # Convert the set of card data entries to JSON. We need to explicitly

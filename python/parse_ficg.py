@@ -36,6 +36,7 @@ SPELLING_CORRECTIONS = {
     'Enchatment': 'Enchantment',
     'Enchantent': 'Enchantment',
     'Sorcey': 'Sorcery',
+    'instant': 'Instant',
 }
 
 # Read command line arguments.
@@ -76,6 +77,23 @@ card_data_entries = parse_ficg_dump_into_card_data_entries(
     ficg_raw_dump,
     rules_text_patterns
 )
+
+# For each card, calculate its "text length factor", define as how much it
+# exceeds the average card text length. Cards which exceed the average length by
+# an excessive amount may be the result of a failure to detect a card's name
+# line, which has caused two cards to merge as a result.
+
+card_entries_with_text = [c for c in card_data_entries if 'text' in c]
+avg_text_length = sum([len(c['text']) for c in card_entries_with_text]) / len(card_entries_with_text)
+text_len_factor = lambda t: len(t) / avg_text_length
+max_text_len_factor = 3
+max_text_len_factor_violations = [c for c in card_entries_with_text if text_len_factor(c['text']) > max_text_len_factor]
+
+if len(max_text_len_factor_violations) > 0:
+    err(f'WARNING: {len(max_text_len_factor_violations)} card entries have unusually long card texts:')
+
+    for c in max_text_len_factor_violations:
+        err(f'* {c["name"]}')
 
 # Define the fields (and their ordering) which will be put into the JSON.
 # (Python dictionaries don't have an ordering by default, so we have to impose

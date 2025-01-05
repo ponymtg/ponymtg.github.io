@@ -45,6 +45,13 @@ body {
 }
 
 /**
+ * Add some space around the title logo.
+ */
+#title img {
+    padding: 1em 8em;
+}
+
+/**
  * The clickable "reference" on the home screen (the asterisk).
  */
 #titleReference {
@@ -54,7 +61,7 @@ body {
 }
 
 /**
- * The tagline that appears under the logoon the home screen.
+ * The tagline that appears under the logo on the home screen.
  */
 #tagline {
     font-size: 1em;

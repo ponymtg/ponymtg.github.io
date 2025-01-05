@@ -2,7 +2,7 @@
 * Added a few more cases to the FiCG parser to detect transforming cards correctly.
 * Updated the FiCG parser to handle the new Battle supertype.
 * Added the new "defense" property for Battle cards.
-* Updated Friendship is Card Games up to "Friendship is Card Games: Tell Your Tale, Season 2, Part 1".
+* Updated Friendship is Card Games up to "Friendship is Card Games: Beyond Equestria: Pinkie Pie Steps Up ".
 
 ## 1.20.1
 * Added the "otherSideOf" property to the list of displayed properties in card search results.

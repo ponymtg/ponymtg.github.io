@@ -1,4 +1,5 @@
 \*/\*
+10 or more life
 -1/-1 counter
 \+1/\+1 counter
 1 plus the
@@ -17,12 +18,14 @@ all permanents
 Alternative costs
 amass \d
 among cards
+amount of colored mana
+an additional time this turn
 any number of (counters|creatures)
 any number of \w+ cards
 any player may
 any time you could cast
 (are|is) all colors
-artifact (card|creature)
+artifact (card|creature|spell)
 as a copy of
 As an additional cost
 as it resolves
@@ -32,7 +35,7 @@ assigns combat damage
 as though (it had|they had) (flash|reach)
 as though it weren't blocked
 as you cast this spell
-at (end|the beginning) of (combat|your upkeep)
+at end of combat
 attach up to one
 attack, block
 attacked with a creature
@@ -43,6 +46,7 @@ attacking or blocking
 (attacks?|attacks? this turn|blocked|each turn|next combat|this combat|this turn) (as though|if able)
 attacks (each|this) combat
 attacks? or blocks?
+at the beginning of combat|your upkeep|your opponents'
 at the beginning of the upkeep
 (aura|commanders|creature|Dragons|enchantment|Forest|Island|land|Mountain|permanent|Plains|planeswalker|source|Swamp|token)s? you control
 auras attached to
@@ -51,6 +55,7 @@ basic land
 \bcounter all (white|blue|black|red|green) spells
 \bcounter on it
 \bCounters can't be
+\bCounters remain on
 \bcounter target
 \bcounter target( \w+)? (spell|ability)
 \bdraw step\b
@@ -78,9 +83,10 @@ can't cast( creature| artifact)? spells
 can't have or gain
 (can't|would) (gain|lose) life
 card in a graveyard
-cards? exiled with
-cards (in)?to your hand
 card in your hand
+cards? exiled with
+cards in graveyards
+cards (in)?to your hand
 cards revealed this way
 cards? to the battlefield
 cast more than one spell
@@ -100,19 +106,21 @@ color of your choice
 combat phase
 Contraption deck
 control an? (artifact|Forest|enchantment|Island|Mountain|Plains|Swamp)
-control three or more
 controls no lands
+control three or more
 converted mana cost
+Copies become tokens
 copy of that creature
 copy target
 copy that ability
 cost \d less
 cost .+ more to cast
-costs? \d (less|more) to (activate|cast)
 costs \d to cast
+costs? (\d|WUBRG) (less|more) to (activate|cast)
 creates? a .+ token
 create .+ tokens
 creature an opponent controls
+creature (card|token|type|spell)s?
 creature of the chosen type
 creatures can't (attack|block)
 creatures on the battlefield
@@ -120,7 +128,6 @@ creatures? with flying
 creatures? without flying
 creatures with power less than
 creatures (you|you don't|your opponents) control
-creature (token|type|spell)s?
 creature would (be destroyed|explore)
 crew Vehicles
 \*/\d
@@ -143,7 +150,7 @@ dealt to you instead
 declare blockers
 defending player
 destroy all [\w\s,-]+ creatures
-(destroy|exile)( at least)? (all|each|one|two|three|four|five|six|seven|eight|nine|ten)( black| blue| green| red| white)? (artifact|aura|card|creature|enchantment|permanent)s?
+(destroy|exile)( at least)? (all|each|one|two|three|four|five|six|seven|eight|nine|ten)( black| blue| green| red| white)? (artifact|aura|card|creature|enchantment|nonenchantment|permanent)s?
 destroy up to
 destroy (X )?target \w+
 died this turn
@@ -177,7 +184,7 @@ effect would remove
 enchanted creature\.$
 enchanted creature (has|is)
 ^Enchanted (creature|land)
-enchanted (creature|permanent|player)('s)?
+enchanted (creature|permanent|planeswalker|player)('s)?
 entered the battlefield (this turn|under)
 enter(ing|s|) the battlefield( tapped)?
 enters? the battlefield (as|under)
@@ -213,9 +220,11 @@ gains? control of (it|all)
 gains? life equal to
 gains \w+ until
 gets? (\+|-)\d+/(\+|-)\d+
+graveyards to the battlefield
 graveyard this turn
 greatest (power|toughness) among
-(has|have) (deathtouch|equip |first strike|double strike|flying|haste|hexproof|indestructible|menace|partner\b|split second|the abilities of each|trample)
+hand or library
+(has|have) (deathtouch|equip |first strike|double strike|flying|haste|hexproof|indestructible|menace|partner\b|split second|the abilities of each|trample|replicate)
 he or she attacks
 his or her (control|graveyard|hand|library|mana pool)
 historic permanent
@@ -224,20 +233,19 @@ if another creature would
 if (a player|an opponent) would
 if .+ was kicked
 if [\w ]+ is an enchantment
-if you roll a 1
+if you (roll a 1|win the flip)
 in addition to its other types
 in addition to their other types
 Incubate \d.
 (in|into) (your|their) graveyard
-instant and sorcery
-instant or sorcery
+instant (and|or|and/or) sorcery
 Investigate.
 in your opening hand
 is a (forest|island|mountain|plains|swamp)
 is tapped for mana
 it has (trample|vigilance)
 its (controller|text box)
-its owner's (control|library)
+(its|their) owner's (control|library)
 ^Kicker
 ^Learn\.$
 leaves the battlefield
@@ -249,17 +257,21 @@ life total
 loses all abilities
 loses? flying
 loses x life
+loyalty abilit(y|ies)
 mana (abilities|cost|of any type|value)
 maximum hand size
 may cast this (card|spell)
 \(Melds with 
+milled this way
+Mill (one|two|three|four|five|six|seven|eight|nine|ten) cards
 mills that many cards
+moves to any zone
 multikicker
 named card
 next (end step|untap step|upkeep)
 Ninja swap \d
 no cards in hand
-non(basic|black|blue|blocking|creature|green|instant|land|red|snow|sorcery|token|white)
+non(basic|black|blue|blocking|creature|enchantment|green|instant|land|red|snow|sorcery|token|white)
 (Note: Same room layout as Lost Mine of Phandelver)
 number of cards
 number of( \w+)? (permanents|you control)
@@ -279,6 +291,7 @@ opponent becomes the monarch
 opponent gains life
 opponents can't
 (opponent's|that player's|your) library
+other than a player's hand
 paired with another
 pay [1-9X] life
 pay E+:
@@ -290,6 +303,7 @@ players can't
 players other than 
 players vote secretly
 play with the top card
+^Plot [WUBRG]+\b
 poison counter
 Pony, Pegasus, and Unicorn creatures
 postcombat
@@ -315,6 +329,7 @@ remove a (defender )?counter
 remove all (creatures|damage|\w+ counters)
 remove one or more
 replacing all instances of
+replicate cost
 return all (creatures|land cards)
 return (her|him|it) to the battlefield
 return those cards
@@ -338,7 +353,7 @@ skips his or her
 skips that turn
 skip your next turn
 spells? (and|or) abilit(y|ies)
-spells you cast
+spells? you cast
 spell this turn
 spend that mana only
 spent to cast
@@ -360,6 +375,7 @@ the chosen names?
 their owners' libraries
 tied for most votes
 time counters
+times X
 to any target
 to its owner's hand
 top card of (any library|each library|their libraries)
@@ -379,6 +395,7 @@ unspent mana
 until end of turn
 \(up\) can be paid
 upkeep step
+up to X
 ^\w+ \(.*\.\)$
 ward ability
 when a player (casts|controls|pays)
@@ -388,13 +405,14 @@ Whenever a player
 Whenever a spell you've cast
 whenever enchanted creature 
 whenever this creature mutates
-whenever you (crank|gain life|gain or lose life|sacrifice|tap)
+whenever you (activate|crank|gain life|gain or lose life|sacrifice|tap)
 when no creatures
 When you cast (a|this) spell
 When you control no( .+)? (creatures|permanents|Forests|Islands|Mountains|Plains|Swamps)
 when you draw your (first|second|third|fourth|fifth) card
 when you sacrifice a\b
 where X is
+^While voting, you can choose
 without paying its mana cost
 with (reach|trample)
 would be destroyed
@@ -403,9 +421,11 @@ would deal( combat)? damage
 ^[WUBRG]+\b: 
 ^((\w+)( \w+)*)((,|;) (\w+)( \w+)*)*$
 ^X, 
+X cards
 You become the monarch.
 You can't cast more than 
 you cast a spell,
+you cast each turn
 you choose which creatures
 you control the active player
 you get two additional votes
@@ -421,5 +441,6 @@ you may play cards
 you may play those cards
 ^You may spend 
 you or a planeswalker
+your hand revealed
 your opponents (control|own|play|reveal)
-your opponents' graveyards
+your opponents' (end step|graveyards)

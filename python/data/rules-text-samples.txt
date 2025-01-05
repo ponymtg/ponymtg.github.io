@@ -2675,3 +2675,15 @@ Sacrifice any number of artifacts. Creative Destruction deals that much damage t
 Ninja swap 2 (2: Exchange this artifact with a Ninja card in your hand.)
 Learn.
 • Target suspected creature is no longer suspected.
+Mill three times X cards. Return up to X instant and/or sorcery cards milled this way to your hand.
+Counters remain on Anticipation Builder as it moves to any zone other than a player's hand or library.\nPlot G(ub)",
+• Mill three cards.
+The first spell you cast each turn that's one or more colors costs WUBRG less to cast. This effect reduces only the amount of colored mana you pay.
+Whenever you activate a loyalty ability of enchanted planeswalker, flip a coin. If you win the flip, you may activate one of their loyalty abilities an additional time this turn.
+While voting, you can choose to abstain.
+Destroy all nonenchantment permanents.
+At the beginning of your opponents' end step, if you lost 10 or more life this turn, abandon this scheme.
+Play with your hand revealed.
+Return all creature cards in graveyards to the battlefield under their owners' control.
+Plot G(ub)
+Each artifact spell you cast has replicate 2. (When you cast it, copy it for each time you paid its replicate cost. Copies become tokens.)
