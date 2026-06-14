@@ -257,6 +257,7 @@ def is_type_line(line):
     # - The line must be exactly "Sorcery — Arcane".
     # - The line must be exactly "Sorcery — Adventure".
     # - The line must be exactly "Sorcery — Lesson".
+    # - The line must be exactly "Sorcery — Omen".
     # - The line must also contain a double slash (//), which indicates that
     #   this is a split card for which one of the halves is a Sorcery.
     if 'Sorcery' in line:
@@ -268,6 +269,7 @@ def is_type_line(line):
             and line != 'Sorcery — Arcane'
             and line != 'Sorcery — Adventure'
             and line != 'Sorcery — Lesson'
+            and line != 'Sorcery — Omen'
             and '//' not in line
         ):
             return False
@@ -550,14 +552,18 @@ def split_type_line(type_line):
 
     return type_line_parts
 
-# Given two card data entries, join them together into a single split card.
+
 def join_card_halves(first_card, second_card):
+    """Given two card data entries, join them together into a single card."""
     joined_card = {key:first_card[key] for key in first_card}
     joined_card['name'] = '{} // {}'.format(
         first_card['name'],
         second_card['name']
     )
-    joined_card['cost'] = first_card['cost']
+
+    # The first card sometimes doesn't have a cost (for example, if it's a land)
+    if 'cost' in first_card:
+        joined_card['cost'] = first_card['cost']
 
     # The second card sometimes doesn't have a cost (for example, if it's the
     # flipped version of a flip card).

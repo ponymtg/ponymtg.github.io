@@ -812,15 +812,6 @@
         "cardType": "token"
     },
     {
-        "name": "Skeleton",
-        "colorIndicator": "(B)",
-        "supertype": "Token Creature",
-        "subtype": "Skeleton",
-        "text": "B: Regenerate this creature.",
-        "pt": "1/1",
-        "cardType": "token"
-    },
-    {
         "name": "Bear",
         "colorIndicator": "(G)",
         "supertype": "Token Creature",
@@ -1338,6 +1329,777 @@
         "supertype": "Token Creature",
         "subtype": "Spirit",
         "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Wastes",
+        "supertype": "Basic Land",
+        "text": "T: Add C.",
+        "cardType": "token"
+    },
+    {
+        "name": "Pony Reveler",
+        "colorIndicator": "(R)",
+        "supertype": "Token Creature",
+        "subtype": "Pony Reveler",
+        "text": "Trample, haste",
+        "pt": "2/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Ooze",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Ooze",
+        "pt": "0/0",
+        "cardType": "token"
+    },
+    {
+        "name": "Elemental",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Elemental",
+        "text": "This creature's power and toughness are each equal to the number of lands you control.",
+        "pt": "*/*",
+        "cardType": "token"
+    },
+    {
+        "name": "Bird",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Bird",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Nightmare",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Nightmare",
+        "text": "Whenever you lose life for the first time each turn, put a +1/+1 counter on this creature.",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Peasant",
+        "colorIndicator": "(R)",
+        "supertype": "Token Creature",
+        "subtype": "Peasant",
+        "text": "Haste",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Germ",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Germ",
+        "pt": "0/0",
+        "cardType": "token"
+    },
+    {
+        "name": "Insect",
+        "colorIndicator": "(W)",
+        "supertype": "Token Creature",
+        "subtype": "Insect",
+        "text": "Flying",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Construct",
+        "supertype": "Token Artifact Creature",
+        "subtype": "Construct",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Ditzy, the Infinite",
+        "colorIndicator": "(UR)",
+        "supertype": "Token Planeswalker",
+        "subtype": "Ditzy",
+        "text": "+1: Add U or R.\n\n-3: Create a token that's a copy of Ditzy, the Infinite, except she's not legendary and her starting loyalty is 1.\n\n-7: Exile the top seven cards of your library. You may cast any number of nonland cards exiled this way without paying their mana costs.",
+        "loyalty": "1",
+        "cardType": "token"
+    },
+    {
+        "name": "Bunny Buddies",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Rabbit",
+        "text": "Bunny Buddies can't be blocked by creatures with power less than or equal to the number of Rabbits you control.\n\nWhenever Bunny Buddies deals combat damage to a player, create a token that's a copy of Bunny Buddies.",
+        "pt": "2/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Pegasus",
+        "colorIndicator": "(WR)",
+        "supertype": "Token Creature",
+        "subtype": "Pegasus",
+        "text": "Flying, haste",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Hyena Warrior",
+        "colorIndicator": "(BR)",
+        "supertype": "Token Creature",
+        "subtype": "Hyena Warrior",
+        "text": "Menace",
+        "pt": "3/3",
+        "cardType": "token"
+    },
+    {
+        "name": "Drone Army",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Drone Army",
+        "pt": "0/0",
+        "cardType": "token"
+    },
+    {
+        "name": "Elemental Monkey",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Elemental Monkey",
+        "pt": "2/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Cooing Tribble",
+        "colorIndicator": "(WG)",
+        "supertype": "Token Creature",
+        "subtype": "Pest",
+        "text": "When Cooing Tribble enters the battlefield, you gain 2 life.\n\nAt the beginning of your upkeep, pay (gw). If you do, create a token that's a copy of Cooing Tribble. Otherwise, sacrifice Cooing Tribble.",
+        "flavorText": "Born pregnant and eager to fix that.",
+        "pt": "2/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Insect",
+        "colorIndicator": "(G)",
+        "supertype": "Token Snow Creature",
+        "subtype": "Insect",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Unicorn Soldier",
+        "colorIndicator": "(W)",
+        "supertype": "Token Creature",
+        "subtype": "Unicorn Soldier",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Gnome",
+        "supertype": "Token Artifact Creature",
+        "subtype": "Gnome",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Construct",
+        "supertype": "Token Artifact Creature",
+        "subtype": "Construct",
+        "pt": "0/0",
+        "cardType": "token"
+    },
+    {
+        "name": "Fractal",
+        "colorIndicator": "(UG)",
+        "supertype": "Token Creature",
+        "subtype": "Fractal",
+        "pt": "0/0",
+        "cardType": "token"
+    },
+    {
+        "name": "Shapeshifter",
+        "colorIndicator": "(U)",
+        "supertype": "Token Creature",
+        "subtype": "Shapeshifter",
+        "text": "Changeling",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Avatar",
+        "colorIndicator": "(BR)",
+        "supertype": "Token Creature",
+        "subtype": "Avatar",
+        "text": "Haste\n\nWhenever this creature attacks, it deals 3 damage to each opponent.",
+        "pt": "3/6",
+        "cardType": "token"
+    },
+    {
+        "name": "The World",
+        "colorIndicator": "(BR)",
+        "supertype": "Legendary Token Creature",
+        "subtype": "Avatar Warrior",
+        "text": "Trample",
+        "pt": "6/6",
+        "cardType": "token"
+    },
+    {
+        "name": "Dog Soldier",
+        "colorIndicator": "(WB)",
+        "supertype": "Token Creature",
+        "subtype": "Dog Soldier",
+        "text": "Menace",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Dog",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Dog",
+        "text": "Lifelink",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Orb",
+        "colorIndicator": "(U)",
+        "supertype": "Token Creature",
+        "subtype": "Orb",
+        "text": "Flying\n\nWhen this creature dies, you may put a permanent card from your hand onto the battlefield.",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Demon",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Demon",
+        "text": "Flying",
+        "pt": "5/5",
+        "cardType": "token"
+    },
+    {
+        "name": "Dragon",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Dragon",
+        "text": "Flying",
+        "pt": "4/4",
+        "cardType": "token"
+    },
+    {
+        "name": "Memory of Anugypt",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Zombie Cat Spirit",
+        "text": "When Memory of Anugypt enters the battlefield, draw a card.\n\nEternalize 4GG (4GG, Exile this card from your graveyard: Create a token that's a copy of it, except it's a 4/4 black Zombie Cat Spirit with no mana cost. Eternalize only as a sorcery.)",
+        "pt": "4/4",
+        "cardType": "token"
+    },
+    {
+        "name": "Robot Army",
+        "colorIndicator": "(B)",
+        "supertype": "Token Artifact Creature",
+        "subtype": "Robot Army",
+        "pt": "0/0",
+        "cardType": "token"
+    },
+    {
+        "name": "Mouse",
+        "colorIndicator": "(W)",
+        "supertype": "Token Creature",
+        "subtype": "Mouse",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Faerie Dragon",
+        "colorIndicator": "(WU)",
+        "supertype": "Token Creature",
+        "subtype": "Faerie Dragon",
+        "text": "Flying",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Elf Warrior",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Elf Warrior",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Autobot Combiner",
+        "colorIndicator": "(W)",
+        "supertype": "Token Artifact Creature",
+        "subtype": "Autobot Combiner",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Crowned Glorifier",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Zombie Unicorn Angel",
+        "text": "Flying\n\nWhen Crowned Glorifier enters the battlefield, put a +1/+1 counter on each Angel you control.\n\nEternalize 5WW (5WW, Exile this card from your graveyard: Create a token that's a copy of it, except it's a 4/4 black Zombie Unicorn Angel with no mana cost. Eternalize only as a sorcery.)",
+        "pt": "4/4",
+        "cardType": "token"
+    },
+    {
+        "name": "Bird Illusion",
+        "colorIndicator": "(U)",
+        "supertype": "Token Creature",
+        "subtype": "Bird Illusion",
+        "text": "Flying",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Wall",
+        "supertype": "Token Creature",
+        "subtype": "Wall",
+        "text": "Defender",
+        "pt": "0/4",
+        "cardType": "token"
+    },
+    {
+        "name": "Harpy",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Harpy",
+        "text": "Flying",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Knight",
+        "colorIndicator": "(W)",
+        "supertype": "Token Creature",
+        "subtype": "Knight",
+        "text": "Vigilance",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Bat Pegasus",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Bat Pegasus",
+        "text": "Flying",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Zombie",
+        "colorIndicator": "(B)",
+        "supertype": "Token Snow Creature",
+        "subtype": "Zombie",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Dragon",
+        "colorIndicator": "(R)",
+        "supertype": "Token Creature",
+        "subtype": "Dragon",
+        "text": "Flying, haste",
+        "pt": "3/3",
+        "cardType": "token"
+    },
+    {
+        "name": "Pegasus",
+        "colorIndicator": "(U)",
+        "supertype": "Token Creature",
+        "subtype": "Pegasus",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Blood",
+        "supertype": "Token Artifact",
+        "text": "1, T, Discard a card, Sacrifice this artifact: Draw a card.",
+        "cardType": "token"
+    },
+    {
+        "name": "Skeleton",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Skeleton",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Flocking Pigeons",
+        "colorIndicator": "(U)",
+        "supertype": "Creature",
+        "subtype": "Bird",
+        "text": "Flying\n\nWhen Flocking Pigeons enters the battlefield, if mana from a Gate was spent to cast it, create a token that's a copy of it.",
+        "flavorText": "A city without pigeons is no city at all.",
+        "pt": "2/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Spider",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Spider",
+        "text": "Reach",
+        "pt": "2/3",
+        "cardType": "token"
+    },
+    {
+        "name": "Elephant",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Elephant",
+        "text": "Trample",
+        "pt": "3/3",
+        "cardType": "token"
+    },
+    {
+        "name": "Beast",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Beast",
+        "text": "Trample, haste",
+        "pt": "5/5",
+        "cardType": "token"
+    },
+    {
+        "name": "Zombie",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Zombie",
+        "text": "Decayed",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Demon",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Demon",
+        "text": "Flying, trample",
+        "pt": "6/6",
+        "cardType": "token"
+    },
+    {
+        "name": "Monkey Golem",
+        "supertype": "Token Artifact Creature",
+        "subtype": "Monkey Golem",
+        "text": "Trample",
+        "pt": "3/3",
+        "cardType": "token"
+    },
+    {
+        "name": "Pirate",
+        "colorIndicator": "(R)",
+        "supertype": "Token Creature",
+        "subtype": "Pirate",
+        "text": "Menace",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Eldrazi Scion",
+        "supertype": "Token Creature",
+        "subtype": "Eldrazi Scion",
+        "text": "Sacrifice this creature: Add C.",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Vertical Farming",
+        "colorIndicator": "(G)",
+        "supertype": "Token Enchantment",
+        "subtype": "Aura",
+        "text": "Enchant land\n\nWhenever enchanted land is tapped for mana, its controller adds an additional G.\n\n3G: Create a token that's a copy of Vertical Farming.",
+        "flavorText": "The Undercity's greenhall makes the most of the resources at hoof.",
+        "cardType": "token"
+    },
+    {
+        "name": "Feather",
+        "colorIndicator": "(R)",
+        "supertype": "Token Artifact",
+        "text": "1, Sacrifice Feather: Return target Phoenix card from your graveyard to the battlefield tapped.",
+        "cardType": "token"
+    },
+    {
+        "name": "Unicorn Knight",
+        "colorIndicator": "(W)",
+        "supertype": "Token Creature",
+        "subtype": "Unicorn Knight",
+        "text": "Vigilance",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Amethyst Broodmate",
+        "colorIndicator": "(UR)",
+        "supertype": "Token Creature",
+        "subtype": "Dragon",
+        "text": "When you cast this spell, copy it. (The copy becomes a token.)\n\nFlying, trample\n\nAmethyst Broodmate's power and toughness are each equal to the greatest mana value among Instant and sorcery cards in your graveyard.",
+        "pt": "*/*",
+        "cardType": "token"
+    },
+    {
+        "name": "Bountiful Bunnicorn",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Rabbit Unicorn",
+        "text": "2G: Adapt 1. (If this creature has no +1/+1 counters on it, put a +1/+1 counter on it.)\n\nWhenever Bountiful Bunnicorn adapts, create a token that's a copy of it.",
+        "flavorText": "The best results replicate themselves.",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Phyrexian Germ",
+        "supertype": "Token Creature",
+        "subtype": "Phyrexian Germ",
+        "pt": "0/0",
+        "cardType": "token"
+    },
+    {
+        "name": "Horror",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Horror",
+        "pt": "3/3",
+        "cardType": "token"
+    },
+    {
+        "name": "Wild Bunch Gang",
+        "colorIndicator": "(R)",
+        "supertype": "Creature",
+        "subtype": "Pony Rogue",
+        "text": "First strike\n\nMyriad (Whenever this creature attacks, for each opponent other than defending player, you may create a token that's a copy of this creature that's tapped and attacking that player or a planeswalker they control. Exile the tokens at end of combat.)",
+        "pt": "3/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Elemental",
+        "supertype": "Token Creature",
+        "subtype": "Elemental",
+        "pt": "5/4",
+        "cardType": "token"
+    },
+    {
+        "name": "Wall",
+        "colorIndicator": "(U)",
+        "supertype": "Token Creature",
+        "subtype": "Wall",
+        "text": "Defender",
+        "pt": "0/*",
+        "cardType": "token"
+    },
+    {
+        "name": "Vampire",
+        "colorIndicator": "(WB)",
+        "supertype": "Token Creature",
+        "subtype": "Vampire",
+        "text": "Lifelink",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Raccoon",
+        "colorIndicator": "(R)",
+        "supertype": "Token Creature",
+        "subtype": "Raccoon",
+        "text": "Menace",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Beast",
+        "colorIndicator": "(WR)",
+        "supertype": "Token Creature",
+        "subtype": "Beast",
+        "text": "Vigilance, haste",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Elemental",
+        "colorIndicator": "(WR)",
+        "supertype": "Token Creature",
+        "subtype": "Elemental",
+        "text": "Flying, trample, lifelink, haste",
+        "pt": "*/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Dog",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Dog",
+        "text": "Vigilance",
+        "pt": "3/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Insect",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Insect",
+        "pt": "3/3",
+        "cardType": "token"
+    },
+    {
+        "name": "Unicorn Wizard",
+        "colorIndicator": "(U)",
+        "supertype": "Token Creature",
+        "subtype": "Unicorn Wizard",
+        "pt": "3/3",
+        "cardType": "token"
+    },
+    {
+        "name": "Ooze",
+        "colorIndicator": "(G)",
+        "supertype": "Token Creature",
+        "subtype": "Ooze",
+        "pt": "*/*",
+        "cardType": "token"
+    },
+    {
+        "name": "Nightmare",
+        "colorIndicator": "(B)",
+        "supertype": "Token Enchantment Creature",
+        "subtype": "Nightmare",
+        "text": "Menace",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Powerstone",
+        "supertype": "Token Artifact",
+        "text": "T: Add C. This mana can't be spent to cast a nonartifact spell.",
+        "cardType": "token"
+    },
+    {
+        "name": "Beast",
+        "colorIndicator": "(RG)",
+        "supertype": "Token Creature",
+        "subtype": "Beast",
+        "pt": "3/3",
+        "cardType": "token"
+    },
+    {
+        "name": "Glowpaz Polisher",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Zombie Unicorn Artificer",
+        "text": "When Glowpaz Polisher enters the battlefield, create a tapped Powerstone token. (It's an artifact with \"T: Add C. This mana can't be spent to cast a nonartifact spell.\")\n\nEternalize 6W (6W, Exile this card from your graveyard: Create a token that's a copy of it, except it's a 4/4 black Zombie Unicorn Artificer with no mana cost. Eternalize only as a sorcery.)",
+        "pt": "4/4",
+        "cardType": "token"
+    },
+    {
+        "name": "Illusion",
+        "colorIndicator": "(U)",
+        "supertype": "Token Creature",
+        "subtype": "Illusion",
+        "pt": "2/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Dryad Forest",
+        "colorIndicator": "(G)",
+        "supertype": "Token Land Creature",
+        "subtype": "Dryad Forest",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Phyrexian Germ",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Phyrexian Germ",
+        "pt": "0/0",
+        "cardType": "token"
+    },
+    {
+        "name": "Preservation Hobbyist",
+        "cost": "(W)",
+        "supertype": "Token Creature",
+        "subtype": "Zombie Pony Citizen",
+        "text": "When Preservation Hobbyist enters the battlefield, you may search your library for a card named Preservation Hobbyist, put it into your graveyard, then shuffle.\n\nEmbalm 2W (2W, Exile this card from your graveyard: Create a token that's a copy of it, except it's a white Zombie Pony Citizen with no mana cost. Embalm only as a sorcery.)",
+        "pt": "3/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Capricious Audience",
+        "cost": "4RR",
+        "supertype": "Token Creature",
+        "subtype": "Chimera Citizen",
+        "text": "Storm (When you cast this spell, copy it for each spell cast before it this turn. Copies become tokens.)\n\nHaste\n\nAt the beginning of the end step, if Capricious Audience is a token, exile it.",
+        "flavorText": "Great love of drama. Brief attention spans.",
+        "pt": "3/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Construct",
+        "supertype": "Token Artifact Creature",
+        "subtype": "Construct",
+        "text": "Flying, haste\n\nThis creature gets +1/+1 for each artifact you control.",
+        "pt": "0/0",
+        "cardType": "token"
+    },
+    {
+        "name": "Elemental",
+        "colorIndicator": "(U)",
+        "supertype": "Token Creature",
+        "subtype": "Elemental",
+        "text": "Flying",
+        "pt": "*/*",
+        "cardType": "token"
+    },
+    {
+        "name": "Peasant",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Peasant",
+        "pt": "1/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Horror Army",
+        "colorIndicator": "(B)",
+        "supertype": "Token Creature",
+        "subtype": "Horror Army",
+        "pt": "0/0",
+        "cardType": "token"
+    },
+    {
+        "name": "Inkling",
+        "colorIndicator": "(WB)",
+        "supertype": "Token Creature",
+        "subtype": "Inkling",
+        "text": "Flying",
+        "pt": "2/1",
+        "cardType": "token"
+    },
+    {
+        "name": "Spirit",
+        "colorIndicator": "(WR)",
+        "supertype": "Token Creature",
+        "subtype": "Spirit",
+        "pt": "3/2",
+        "cardType": "token"
+    },
+    {
+        "name": "Paradox Engineers",
+        "colorIndicator": "U",
+        "supertype": "Token Creature",
+        "subtype": "Unicorn Wizard",
+        "text": "Assist (Another player can pay up to 5 of this spell's cost.)\n\nWard 2 (Whenever this creature becomes the target of a spell or ability an opponent controls, counter it unless that player pays 2.)\n\nWhen Paradox Engineers enters the battlefield, if it was cast with assistance, the assisting player creates a token that's a copy of it.",
+        "pt": "4/4",
+        "cardType": "token"
+    },
+    {
+        "name": "Wall",
+        "supertype": "Token Artifact Creature",
+        "subtype": "Wall",
+        "text": "Defender",
+        "pt": "0/4",
         "cardType": "token"
     }
 ]

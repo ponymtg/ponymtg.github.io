@@ -37,6 +37,7 @@ SPELLING_CORRECTIONS = {
     'Enchantent': 'Enchantment',
     'Sorcey': 'Sorcery',
     'instant': 'Instant',
+    'Partner —Harmony': 'Partner—Harmony',
 }
 
 # Read command line arguments.

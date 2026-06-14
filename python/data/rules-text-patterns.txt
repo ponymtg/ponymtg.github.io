@@ -20,11 +20,13 @@ amass \d
 among cards
 amount of colored mana
 an additional time this turn
+and enters prepared
 any number of (counters|creatures)
 any number of \w+ cards
 any player may
 any time you could cast
 (are|is) all colors
+are exiled with it
 artifact (card|creature|spell)
 as a copy of
 As an additional cost
@@ -36,6 +38,7 @@ as though (it had|they had) (flash|reach)
 as though it weren't blocked
 as you cast this spell
 at end of combat
+attach any number
 attach up to one
 attack, block
 attacked with a creature
@@ -89,11 +92,13 @@ cards in graveyards
 cards (in)?to your hand
 cards revealed this way
 cards? to the battlefield
+card you own
 cast more than one spell
 cast those cards
 cast [\w\s]+ from exile
 change its text
 change the targets
+Chapter ability
 ^Chaotic \d
 choose a (background|planeswalker card)
 choose a (creature|target) at random
@@ -121,8 +126,10 @@ creates? a .+ token
 create .+ tokens
 creature an opponent controls
 creature (card|token|type|spell)s?
+creature enters prepared
 creature of the chosen type
-creatures can't (attack|block)
+creature has reach
+creatures? can't (attack|block)
 creatures on the battlefield
 creatures? with flying
 creatures? without flying
@@ -158,6 +165,7 @@ discard all the cards
 discard cards
 (discard|draw)s?( up to)? (a|one|two|three|four|five|six|seven|this|that many)( or more)? cards?
 discards all cards
+discover \d
 \d or greater
 draw a card.$
 draw cards equal to
@@ -176,7 +184,7 @@ each creature blocking
 each land is a (plains|island|swamp|mountain|forest)
 each opponent
 each other (creature|player)
-each player (abandons|can't|chooses|discards|draws|may|mills|puts|sacrifices|shuffles|votes)
+each player (abandons|can't|chooses|discards|draws|exiles|may|mills|puts|sacrifices|shuffles|votes)
 each player's library
 each player's upkeep
 (each|the|your) end step
@@ -185,6 +193,9 @@ enchanted creature\.$
 enchanted creature (has|is)
 ^Enchanted (creature|land)
 enchanted (creature|permanent|planeswalker|player)('s)?
+enchantment or Nightmare spells
+energy counter
+entered this turn
 entered the battlefield (this turn|under)
 enter(ing|s|) the battlefield( tapped)?
 enters? the battlefield (as|under)
@@ -195,6 +206,7 @@ equal to the difference
 equal to the number of
 ^Equip \(?[\dWUBRG]+\)?
 equipped creature
+^Evoke \(?[\dWUBRG]+\)?
 except it has this ability
 except it's still
 exchange this artifact
@@ -204,12 +216,15 @@ exiled from the battlefield
 exile it instead
 exile (it|target)
 exile that many cards
+exile all graveyards
 explores instead
 face( |-)down
 fights that creature
 (first|second|third|fourth|fifth|sixth|seventh|eighth|ninth|tenth) spell of a turn
+flip a coin or roll a die
 flip one or more coins
 flip that many coins
+^Flying,
 for each card
 for the first time each turn
 from all graveyards
@@ -224,21 +239,25 @@ graveyards to the battlefield
 graveyard this turn
 greatest (power|toughness) among
 hand or library
-(has|have) (deathtouch|equip |first strike|double strike|flying|haste|hexproof|indestructible|menace|partner\b|split second|the abilities of each|trample|replicate)
+(has|have) (deathtouch|equip |first strike|double strike|flying|haste|hexproof|indestructible|menace|partner\b|split second|the abilities of each|trample|vigilance|replicate)
 he or she attacks
 his or her (control|graveyard|hand|library|mana pool)
 historic permanent
 if an? (effect|library|source)
 if another creature would
 if (a player|an opponent) would
+if both have this ability
 if .+ was kicked
 if [\w ]+ is an enchantment
 if you (roll a 1|win the flip)
+if you would flip a coin
+ignore one of those results
 in addition to its other types
 in addition to their other types
 Incubate \d.
 (in|into) (your|their) graveyard
 instant (and|or|and/or) sorcery
+instead do so twice
 Investigate.
 in your opening hand
 is a (forest|island|mountain|plains|swamp)
@@ -272,12 +291,13 @@ next (end step|untap step|upkeep)
 Ninja swap \d
 no cards in hand
 non(basic|black|blue|blocking|creature|enchantment|green|instant|land|red|snow|sorcery|token|white)
+non-Dragon
 (Note: Same room layout as Lost Mine of Phandelver)
 number of cards
 number of( \w+)? (permanents|you control)
 of each upkeep
 on each of your turns
-(one|two|three|four|five|six|seven|eight|nine|ten) or more (counters|creatures)
+(one|two|three|four|five|six|seven|eight|nine|ten) or more (counters|creatures|targets)
 (one|two|three|four|five|six|seven|eight|nine|ten|twenty) or fewer cards in (it|your hand)
 (one|two|three|four|five|six|seven|eight|nine|ten) (white |blue |black |red |green |colorless )?mana\b
 ongoing scheme
@@ -286,6 +306,7 @@ only once each turn
 on top of their owner's libraries
 onto the battlefield
 on your turn
+one or more colors
 open an( additional)? Attraction
 opponent becomes the monarch
 opponent gains life
@@ -293,10 +314,12 @@ opponents can't
 (opponent's|that player's|your) library
 other than a player's hand
 paired with another
+Partner—Harmony
 pay [1-9X] life
 pay E+:
 (permanent|revealed|suspended) card
 permanents can't
+permanents they control
 (plains|island|swamp|mountain|forest)walk
 planar die
 players can't 
@@ -315,9 +338,10 @@ prevent all (combat )?damage
 prevent that damage
 , proliferate\.
 ^Proliferate\b
-protection from (each|everything)
+protection from (each|everything|non-)
 put any number of them
 put a \w+ counter
+^Put a card
 put into (a graveyard|exile)
 put it into your hand
 puts that many cards
@@ -328,6 +352,7 @@ remains tapped
 remove a (defender )?counter
 remove all (creatures|damage|\w+ counters)
 remove one or more
+reselect its targets
 replacing all instances of
 replicate cost
 return all (creatures|land cards)
@@ -339,9 +364,10 @@ roll one or more dice
 roll that many dice
 sacrifice any number of
 sacrifice it
-sacrifices? (a|an|another|this) (artifact|creature|Forest|Island|land|Mountain|permanent|Plains|Swamp)
+sacrifices? (a|an|another|this) (artifact|Aura|creature|enchantment|Forest|Island|land|Mountain|permanent|Plains|Swamp)
 sacrifices permanents
 ^Sacrifice [\w ]+:
+Saga you control
 Scry [1-9X]
 search any number of
 set (a scheme|two schemes) in motion
@@ -367,12 +393,14 @@ tapped creature
 tapped for mana
 target( black| blue| green| red| snow| white| wordy)? (artifact|aura|attacking|card|creature|enchanted|enchantment|equipment|land|opponent|permanent|player|spell)
 target suspected
+that ability triggers
 that (creature|permanent)'s owner
 that player (controls|discards|loses|sacrifices)
 that's a copy of
 the chosen creatures
 the chosen names?
 their owners' libraries
+three or more cards
 tied for most votes
 time counters
 times X
@@ -386,8 +414,10 @@ total toughness
 to their owner'?s'? hands?
 to your mana pool
 transform it
+triggers an additional time
 triggered abilit(y|ies)
 (two|three|four|five|six|seven) target lands
+two permanents
 unattach all
 under its owner's control
 unless [\w ]+ pays \d
@@ -407,6 +437,7 @@ whenever enchanted creature
 whenever this creature mutates
 whenever you (activate|crank|gain life|gain or lose life|sacrifice|tap)
 when no creatures
+when this creature enters
 When you cast (a|this) spell
 When you control no( .+)? (creatures|permanents|Forests|Islands|Mountains|Plains|Swamps)
 when you draw your (first|second|third|fourth|fifth) card
@@ -423,11 +454,14 @@ would deal( combat)? damage
 ^X, 
 X cards
 You become the monarch.
+You can have two commanders
 You can't cast more than 
+You can't cast enchantment
 you cast a spell,
 you cast each turn
 you choose which creatures
 you control the active player
+You get E\b
 you get two additional votes
 you have the city's blessing
 you may attach

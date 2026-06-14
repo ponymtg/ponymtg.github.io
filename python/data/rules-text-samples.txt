@@ -2687,3 +2687,28 @@ Play with your hand revealed.
 Return all creature cards in graveyards to the battlefield under their owners' control.
 Plot G(ub)
 Each artifact spell you cast has replicate 2. (When you cast it, copy it for each time you paid its replicate cost. Copies become tokens.)
+III — Exile all graveyards.
+When this creature enters, attach any number of Equipment that improvised this creature to it.
+Each player exiles two permanents they control that are one or more colors, then sacrifices the rest.
+You can't cast enchantment or Nightmare spells.
+If a chapter ability of a Saga you control would trigger, that ability triggers an additional time.
+If you would flip a coin or roll a die, instead do so twice and ignore one of those results.
+When this creature enters or dies, surveil 1.
+When you sacrifice this Aura, discover 3.
+When a creature attacks, sacrifice this enchantment.
+This creature has vigilance and trample as long as three or more cards are exiled with it.
+Partner—Harmony (You can have two commanders if both have this ability.)
+Partner—Harmony
+• You get E (an energy counter).
+Evoke (bg)(bg)
+Evoke (gw)(gw)
+Evoke (wu)(wu)
+Evoke (ur)(ur)
+Evoke (br)(br)
+Flying, vigilance, protection from non-Dragon sources
+Put a card you own from outside the game into your hand.
+This creature can't block and enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+This creature enters prepared. (While it's prepared, you may cast a copy of its spell. Doing so unprepares it.)
+This creature enters prepared.
+This creature has reach and indestructible as long as it entered this turn.
+Whenever you cast a spell with one or more targets, reselect its targets at random. (Select from among all legal targets.)

@@ -1,3 +1,9 @@
+## 1.21.0
+* Added Omen sorcery type to the FiCG parser.
+* Updated FiCG parser to allow Adventure cards where the first card doesn't have a cost.
+* Changed Friendship is Card Games to use hardcoded set code "FCG", to avoid clashing with the canon set "Final Fantasy Commander" (FIC).
+* Updated Friendship is Card Games up to "Friendship is Card Games: G1 Abridged, Part 3".
+
 ## 1.20.2
 * Added a few more cases to the FiCG parser to detect transforming cards correctly.
 * Updated the FiCG parser to handle the new Battle supertype.
